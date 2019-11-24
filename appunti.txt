@@ -1,0 +1,55 @@
+ROADMAP:
+1)struttura DB
+2)Layout pagine (Balsamiq, Wireframe, cms wordpress)
+
+
+####################################################################################################################
+Funzionalità offerte:
+	visualizzare ricette 
+	votare ricette
+	commentare le ricette
+	salvare ricette nei preferiti
+	amicizia tra utenti 
+	Possibilità di livellare 
+
+*differenze utente (iscritto, guest, admin)
+
+Tipi di Layout Pagine:
+	Home
+	Ricerca
+	Utente (pubblica/privata)
+	Ricetta
+	About
+	Admin panel
+	Registrazione/log in
+*Per ognuna va la versione mobile
+
+
+Gerarchia sito:
+home
+	|_Antipasti
+	|_Primi		
+	    |_Pasta
+	    |_Zuppe
+	    |_Risotti
+	|_Secondi
+	    |_Carne
+	    |_Pesce
+	|_Contorni
+	|_Dolci
+	    |_Torte
+	    |_Gelati
+	    |_Biscotti
+	|_Utenti
+	    |_utente admin
+	        |_admin panel
+	    |_utente iscritto
+	|_about
+	|_registrazione/log in
+	|_ricerca	
+	
+Specifiche livellamento:	
+	votazione commenti (con icone)
+	interazione con la community
+	log in giornaliero
+	5 livelli di "esperienza" con annesso titolo. Gli utenti piu' meritevoli vanno in homepage
