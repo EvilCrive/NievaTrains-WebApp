@@ -1,0 +1,34 @@
+GERARCHIA
+Home
+	Primi
+		Pasta
+		Zuppe
+		Risotti
+	Secondi
+		Carne
+		Pesce
+	Antipasti
+	Dolci	
+	About
+	Registrazione/Log in
+	Ricerca
+
+LAYOUT
+	Home
+	Ricerca
+	Pagine intermedie
+	Utente (pubblico/privato)
+	Ricetta
+	About
+	Admin Panel
+	Registrazione/log in
+
+GERARCHIA DB (tabelle)
+	users
+	pages
+	comments
+	preferiti 
+	voti
+	relazioni utenti
+	
+	
