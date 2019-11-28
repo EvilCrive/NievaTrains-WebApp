@@ -32,3 +32,16 @@ GERARCHIA DB (tabelle)
 	relazioni utenti
 	
 	
+Header
+	logo titolo pulsante(relativo all'utente)
+Breadcrumb
+	appena sotto l'header, in tutte le pagine del sito, (l'ultimo link e'solo testo per evitare link circolari)
+Body
+	immagine+testo per desrivere le ricette
+
+Pagina Home
+	prima pagina visualizzata dall'utente, c'é sia una barra di ricerca per cercare una ricetta particolare,
+	sia le ricette piú popolari per dare un idea generale,
+	volendo si possono anche visualizzare tutte le ricette divise per categorie.
+	
+	
