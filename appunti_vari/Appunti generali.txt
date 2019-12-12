@@ -1,30 +1,23 @@
-ROADMAP:
-1)struttura DB
-2)Layout pagine (Balsamiq, Wireframe, cms wordpress)
-
-
-####################################################################################################################
-Funzionalità offerte:
+Funzionalità offerte all'utente:
 	visualizzare ricette 
 	votare ricette
 	commentare le ricette
+	votare commenti
 	salvare ricette nei preferiti
 	amicizia tra utenti 
 	Possibilità di livellare 
 
-*differenze utente (iscritto, guest, admin)
+Funzionalità offerte all'admin:
+	eliminazione commenti
+	eliminazione utenti
+	eliminazione ricette
 
-Tipi di Layout Pagine:
-	Home
-	Ricerca
-	Utente (pubblica/privata)
-	Ricetta
-	About
-	Admin panel
-	Registrazione/log in
-*Per ognuna va la versione mobile
-
-
+Specifiche livellamento:	
+	votazione commenti (con icone)
+	interazione con la community (commenti)
+	log in giornaliero (con un contatore)
+	5 livelli di "esperienza" con annesso titolo. Gli utenti piu' meritevoli vanno in homepage (classifica)
+####################################################################################################################
 Gerarchia sito:
 home
 	|_Antipasti
@@ -41,15 +34,25 @@ home
 	    |_Gelati
 	    |_Biscotti
 	|_Utenti
-	    |_utente admin
-	        |_admin panel
 	    |_utente iscritto
 	|_about
+	    |_Cuoco1
+  	    |_Cuoco2
 	|_registrazione/log in
-	|_ricerca	
+	|_ricerca
+
+Tipi di Layout Pagine:
+	Home
+	Ricerca
+	Utente 
+	Ricetta
+	About
+	Presentazione cuoco
+	Registrazione/log in
+*Ognuna avrà la versione guest, iscritto e admin
+*Ognuna dovrà avere i formati: stampa, 480px[cellulari], 1024px e 1200px[desktop]
+
+
 	
-Specifiche livellamento:	
-	votazione commenti (con icone)
-	interazione con la community
-	log in giornaliero
-	5 livelli di "esperienza" con annesso titolo. Gli utenti piu' meritevoli vanno in homepage
+	
+
