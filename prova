@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+<head>
+	<!-- Specifico il charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!-- Titolo -->
+	<title>About &amp Contatti - Nomedelsito</title>
+	<!-- Titolo esteso dentro un meta -->
+	<meta name="title" content="About, chi siamo e contatti - Nomedelsito" />
+	<!-- Descrizione del sito -->
+	<meta name="description" content="" /><!--manca la descrizione-->
+	<!-- Keyword principali del sito -->
+	<meta name="keywords" content="nomedelsito, contatti, about, informazioni, redazione" />
+</head>
+
+<body>
+
+	<div id="header">
+
+	</div>
+
+	<div id="content">
+			<h1>Chi siamo</h1>
+			<div id="desc_chi_siamo">
+				<p>Nomedelsito.it nasce dall’amore per la cucina dei redattori e dall’esigenza di voler creare un canale che faciliti l’incontro e la condivisione di idee ed emozioni tra chi è mosso da questa stessa magnifica passione.</p>
+				<p>In nomedelsito.it potrete trovare i più disparati tipi di ricette, da quelle più semplici – casalinghe, tipiche e tradizionali – ma gustose, a quelle ricercate di celebri chef stellati con cui stupire i vostri commensali.</p>
+			</div>
+			<h2>La redazione</h2>
+			<div id="desc_redazione">
+				<p>La nostra redazione è formata da quattro ragazzi, Alberto, Francesco, Marco e Matteo che hanno colto l’occasione presentatasi all’università per sviluppare nomedelsito.it come progetto per il corso universitario di Tecnologie Web della facoltà di Informatica.</p>
+			</div>
+			<h1>Contatti</h1>
+			<div id="desc_contatti">
+				<p>Per contattarci scrivere a <a href="mailto:info@nomedelsito.it">info@nomedelsito.it</a></p>
+				<p>Ci puoi trovare anche su:</p>
+				<p><a href="linkfacebookpage">La nostra pagina Facebook</a></p>
+				<p><a href="linkinstagrampage">La nostra pagina Instagram</a></p>
+			</div>
+	</div>
+
+	<div id="footer">
+		<img id="imgValidCode" src="" alt="XHTML valido" /><!--manca il path dell'immagine-->
+        <img id="imgValidCSS" src="" alt="CSS valido" /><!--manca il path dell'immagine-->
+        <a href="">Chi siamo</a><!--manca il link-->
+		
+	</div>
+</body>
+</html>
