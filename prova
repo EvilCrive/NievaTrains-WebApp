@@ -17,7 +17,11 @@
 <body>
 
 	<div id="header">
+		
+	</div>
 
+	<div id="breadcrumb">
+		<p><a href="index.html">Home</a> -> About</p>		
 	</div>
 
 	<div id="content">
@@ -32,10 +36,12 @@
 			</div>
 			<h1>Contatti</h1>
 			<div id="desc_contatti">
-				<p>Per contattarci scrivere a <a href="mailto:info@nomedelsito.it">info@nomedelsito.it</a></p>
-				<p>Ci puoi trovare anche su:</p>
-				<p><a href="linkfacebookpage">La nostra pagina Facebook</a></p>
-				<p><a href="linkinstagrampage">La nostra pagina Instagram</a></p>
+				<ul>
+					<li>Per contattarci scrivere a <a href="mailto:info@nomedelsito.it">info@nomedelsito.it</a></li>
+					<li>Ci puoi trovare anche su:</li>
+					<li><a href="linkfacebookpage">La nostra pagina Facebook</a></li>
+					<li><a href="linkinstagrampage">La nostra pagina Instagram</a></li>
+				</ul>
 			</div>
 	</div>
 
