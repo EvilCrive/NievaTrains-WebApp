@@ -24,12 +24,12 @@ LAYOUT
 	Registrazione/log in
 
 GERARCHIA DB (tabelle)
-	users
-	pages
-	comments
-	preferiti 
-	voti
-	relazioni utenti
+	users (ID, username, nome, cognome, birthdate, email, paswd, is_admin)
+	ricette&intermedi (Immagine, Testo, ricettaOintermedio, [voti], [preferiti])
+	comments (data, testo, autore)
+	preferiti (ID, bool)
+	voti (ID, voto)
+	relazioni utenti (meh)
 	
 	
 Header
