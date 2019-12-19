@@ -18,39 +18,6 @@ Specifiche livellamento:
 	log in giornaliero (con un contatore)
 	5 livelli di "esperienza" con annesso titolo. Gli utenti piu' meritevoli vanno in homepage (classifica)
 ####################################################################################################################
-Gerarchia sito:
-home
-	|_Antipasti
-	|_Primi		
-	    |_Pasta
-	    |_Zuppe
-	    |_Risotti
-	|_Secondi
-	    |_Carne
-	    |_Pesce
-	|_Contorni
-	|_Dolci
-	    |_Torte
-	    |_Gelati
-	    |_Biscotti
-	|_Utenti
-	    |_utente iscritto
-	|_about
-	    |_Cuoco1
-  	    |_Cuoco2
-	|_registrazione/log in
-	|_ricerca
-
-Tipi di Layout Pagine:
-	Home
-	Ricerca
-	Utente 
-	Ricetta
-	About
-	Presentazione cuoco
-	Registrazione/log in
-*Ognuna avrà la versione guest, iscritto e admin
-*Ognuna dovrà avere i formati: stampa, 480px[cellulari], 1024px e 1200px[desktop]
 
 
 	

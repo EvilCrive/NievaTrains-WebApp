@@ -1,19 +1,4 @@
-GERARCHIA
-Home
-	Primi
-		Pasta
-		Zuppe
-		Risotti
-	Secondi
-		Carne
-		Pesce
-	Antipasti
-	Dolci	
-	About
-	Registrazione/Log in
-	Ricerca
-
-LAYOUT
+LAYOUT NECESSARI
 	Home
 	Ricerca
 	Pagine intermedie
@@ -23,25 +8,38 @@ LAYOUT
 	Admin Panel
 	Registrazione/log in
 
-GERARCHIA DB (tabelle)
-	users
-	pages
-	comments
-	preferiti 
-	voti
-	relazioni utenti
-	
-	
-Header
-	logo titolo pulsante(relativo all'utente)
-Breadcrumb
-	appena sotto l'header, in tutte le pagine del sito, (l'ultimo link e'solo testo per evitare link circolari)
-Body
-	immagine+testo per desrivere le ricette
+Gerarchia sito:
+home
+	|_Antipasti
+	|_Primi		
+	    |_Pasta
+	    |_Zuppe
+	    |_Risotti
+	|_Secondi
+	    |_Carne
+	    |_Pesce
+	|_Contorni
+	|_Dolci
+	|_Utenti
+	    |_utente iscritto
+	|_about
+	    |_Cuoco1
+  	    |_Cuoco2
+	|_registrazione/log in
+	|_ricerca
 
-Pagina Home
-	prima pagina visualizzata dall'utente, c'é sia una barra di ricerca per cercare una ricetta particolare,
-	sia le ricette piú popolari per dare un idea generale,
-	volendo si possono anche visualizzare tutte le ricette divise per categorie.
+Tipi di Layout Pagine:
+	Home
+	Ricerca
+	Utente 
+	Ricetta
+	About
+	Presentazione cuoco
+	Registrazione/log in
+	Log in admin
+*Ognuna avrà la versione guest, iscritto e admin
+*Ognuna dovrà avere i formati: stampa, 480px[cellulari], 1024px e 1200px[desktop]
+	
+
 	
 	
