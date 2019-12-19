@@ -6,7 +6,7 @@ LAYOUT NECESSARI
 	Ricetta
 	About
 	Admin Panel
-	Registrazione/log in
+	Registrazione Log in
 
 Gerarchia sito:
 home
@@ -23,22 +23,10 @@ home
 	|_Utenti
 	    |_utente iscritto
 	|_about
-	    |_Cuoco1
-  	    |_Cuoco2
 	|_registrazione/log in
 	|_ricerca
-
-Tipi di Layout Pagine:
-	Home
-	Ricerca
-	Utente 
-	Ricetta
-	About
-	Presentazione cuoco
-	Registrazione/log in
-	Log in admin
 *Ognuna avrà la versione guest, iscritto e admin
-*Ognuna dovrà avere i formati: stampa, 480px[cellulari], 1024px e 1200px[desktop]
+*Ognuna dovrà avere i formati (almeno): Stampa, Mobile e Desktop
 	
 
 	
