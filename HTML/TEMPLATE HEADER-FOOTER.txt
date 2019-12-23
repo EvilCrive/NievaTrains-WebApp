@@ -36,3 +36,16 @@
 	<img id="htmlvalid" src="" alt="HTML valido" />
 	<img id="cssvalid" src="" alt="CSS3 valido" />
 </div>
+<!---->
+  <div class="ricette_correlate">
+    <div class="ricetta_correlata">
+    <img src="#" alt="asd">
+    <h3>Riso</h3>
+    <p>del riso</p>
+    </div>
+    <div class="ricetta_correlata">
+    <img src="#" alt="asd">
+    <h3>Pasta</h3>
+    <p>della pasta</p>
+    </div>
+  </div>
