@@ -19,7 +19,7 @@ Specifiche livellamento:
 	5 livelli di "esperienza" con annesso titolo. Gli utenti piu' meritevoli vanno in homepage (classifica)
 ####################################################################################################################
 
-
+*La ricerca dovrà essere sulle ricette, sulle pagine e sugli utenti
 	
 	
 
