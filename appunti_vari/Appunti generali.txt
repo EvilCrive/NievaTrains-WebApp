@@ -20,6 +20,8 @@ Specifiche livellamento:
 ####################################################################################################################
 
 *La ricerca dovrà essere sulle ricette, sulle pagine e sugli utenti
+*modifica della bio
+*bottoni amministratore
 	
 	
 
