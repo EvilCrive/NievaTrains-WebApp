@@ -16,10 +16,10 @@ JS bellissimi
 ##################################################################################################################
 
 -Cosmetica
-	color palette
+	color palette (FRANCESCO)
 -HTML
-	keyword, titoli, meta 
-	id e classi
+	keyword, titoli, meta (/)
+	id e classi (MATTEO)
 -CSS
 	tutto
 -PHP
