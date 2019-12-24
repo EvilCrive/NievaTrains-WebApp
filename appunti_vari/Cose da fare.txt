@@ -1,0 +1,17 @@
+COSE PROBLEMATICHE
+ricerca (su amici ricette e pagine intermedie)
+vari js dei menu
+
+COSE DA FARE
+bottoni modifica della bio
+bottoni amministratore
+Ampliamento db (calorie, dosi, costo, introduzione, ingredienti, passo passo)
+Pagine 404
+freccia su	
+
+COSE BELLE, DIFFICILI E NON NECESSARIE
+tags
+Commenti
+JS bellissimi
+	
+	 

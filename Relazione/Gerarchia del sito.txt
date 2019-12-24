@@ -1,5 +1,5 @@
 LAYOUT NECESSARI
-	Home
+	Home				
 	Ricerca
 	Pagine intermedie
 	Utente (pubblico/privato)
@@ -7,24 +7,32 @@ LAYOUT NECESSARI
 	About
 	Admin Panel
 	Registrazione Log in
-
+######################################################################################################################
 Gerarchia sito:
 home
 	|_Antipasti
+		|_(Crocchette)
 	|_Primi		
-	    |_Pasta
+	    |_Pasta	
+		|_Pasta alla griccia
 	    |_Zuppe
+		
 	    |_Risotti
+		|_Risotto alla cantonese
+		|_Risotto di zucca
 	|_Secondi
 	    |_Carne
+		|_Filetto di maiale in crosta
 	    |_Pesce
-	|_Contorni
+		|_Branzino al forno
 	|_Dolci
+		|_Tiramisu
 	|_Utenti
 	    |_utente iscritto
 	|_about
 	|_registrazione/log in
 	|_ricerca
+
 *Ognuna avrà la versione guest, iscritto e admin
 *Ognuna dovrà avere i formati (almeno): Stampa, Mobile e Desktop
 	
