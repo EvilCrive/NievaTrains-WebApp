@@ -13,5 +13,29 @@ COSE BELLE, DIFFICILI E NON NECESSARIE
 tags
 Commenti
 JS bellissimi
-	
-	 
+##################################################################################################################
+
+-Cosmetica
+	color palette
+-HTML
+	keyword, titoli, meta 
+	id e classi
+-CSS
+	tutto
+-PHP
+	identificare le parti che necessitano php
+	scrivere gli html.txt da importare nel php
+	scrivere le query per il db
+	scrivere il php per le varie pagine
+------------------------------------------------------
+-JS
+	menu
+	controlli
+-Finalizzazione
+	verifica accessibilità
+	test generale
+	preparazione account consegna
+	relazione
+
+
+
