@@ -1,0 +1,44 @@
+ABOUT
+/
+
+LOGIN
+/
+
+UTENTE
+<breadcrumb />
+<avatar />
+<name />
+<badges />
+<listaFollowes />
+<followesButton />
+<bio />
+<ricetteBox />
+
+RICERCA
+<ricercaText />
+<risultati />
+<ricetteData />
+
+INTERMEDIE
+<ricetteData />
+
+RICETTA
+<breadcrumb />
+<nome />
+<likes_preferiti />
+<immagine />
+<riassunto />
+<presentazione />
+<ingredienti />
+<passopasso />
+<ricettaEstesa />
+<commenti />
+<ricetteData />
+
+INDEX
+<ricetteData />
+
+
+*Dentro ricetteData ci sarà sempre un ciclo for che mostrerà le ricette richieste (che cambiano a seconda della 
+pagina). In breve sarà una lista di ricettaBox. ricettaBox è un modo standard tra tutte le pagine del sito per 
+mostrare una ricetta in versione ristretta
