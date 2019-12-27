@@ -38,12 +38,10 @@
 			</div>
 		</div>
 	<!--breadcrumb-->
-	<!--PHP start-->
 	<div id="breadcrumb">
-	  <p>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; Utenti -&gt; MATTEO BROSOLO</p>
+		<breadcrumbPhp />
 	</div>
 </div>
-<!--PHP end-->
 <!--END TOP OF THE PAGE-->
 
 <!--Bottone arrow up-->
@@ -52,38 +50,22 @@
 <!--START PAGE CONTENT-->
 <div id="content">
 	<!--PHP start-->
-  <img src="#" alt="immagine matteo">
-  <h1>MATTEO BROSOLO</h1>
-  <button type="button" name="button">+Follow</button>
-  <div id="badgeLivello">
-    <p>Lv 100</p>
-  </div>
-  <div id="badgeFan">
-    <p>Crive</p>
-  </div>
+<avatarPhp />
+<namePhp />
+<followersButtonPhp />
+<badgesPhp />
   <div id="biografia">
     <h2>Bio</h2>
-    <p>bla bla bla bla</p>
+    <bioPhp />
   </div>
   <div id="ricetteData">
     <h2>Ricette Preferite:</h2>
-    <div class="ricettaBox">
-    <img src="#" alt="asd">
-    <h3>Riso</h3>
-    <p>del riso</p>
-    </div>
-    <div class="ricettaBox">
-    <img src="#" alt="asd">
-    <h3>Pasta</h3>
-    <p>della pasta</p>
-    </div>
+    <ricetteBoxPhp />
     <p>Vedi Tutte</p>
   </div>
   <div id="followersData">
     <h2>Followers</h2>
-    <div class="followerBox">
-      <img src="" alt="crive">
-      <p>Alberto Crivellari</p>
+<listaFollowesPhp />
     </div>
     <div class="followerBox">
       <img src="" alt="crive2">

@@ -5,13 +5,13 @@
 	<!-- Specifico il charset -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<!-- Titolo -->
-	<title> Home &amp; - OrangeTango</title>
+	<title> Primi - OrangeTango</title>
 	<!-- Titolo esteso dentro un meta -->
-	<meta name="title" content="Home, pagina iniziale di OrangeTango" />
+	<meta name="title" content="Primi piatti - OrangeTango" />
 	<!-- Descrizione del sito -->
-	<meta name="description" content="Ricette per ogni tipologia, con descrizione e riassunto...veloci e adatte a tutti." />
+	<meta name="description" content="Tutte le ricette tra i Primi " />
 	<!-- Keyword principali del sito -->
-	<meta name="keywords" content="OrangeTango, home, cucina, inizio, ricette" />
+	<meta name="keywords" content="OrangeTango, informazioni, primi, riso, pasta" />
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 		  <div id="hrow_2">
 				<ul>
 				<li><a href="" target="_top">Antipasti</a></li>
-				<li><a href="" target="_top">Primi</a></li>
+				<li class="active"><a href="" target="_top">Primi</a></li>
 				<li><a href="" target="_top">Secondi</a></li>
 				<li><a href="" target="_top">Dolci</a></li>
 				<li><a href="" target="_top">About</a></li>
@@ -40,8 +40,8 @@
 		</div>
 	<!--breadcrumb-->
 	<div id="breadcrumb">
-		<p>Ti trovi in: <span xml:lang="en">Home</span></p>
-		<a href="">Vai al contenuto</a>
+		<p>Ti trovi in: <span xml:lang="en">Home</span> -&gt; Primi -&gt; Zuppe</p>
+		<a href="#">Vai al contenuto</a>
 	</div>
 	<!--END TOP OF THE PAGE-->
 
@@ -49,40 +49,13 @@
 <img src="#" alt="arrow_up" href="#" />
 
 	<!--START PAGE CONTENT-->
-	<div id="content">
-		<div id=in_evidenza>
-			<img id="img_home" src="#" alt="big pasta al sugo" />
-			<h1>PASTA AL SUGO</h1>
-			<p>5/5</p>
-			<img id="star_voto" src="#" alt="star" />
-			<p id="didascalia">Una pasta buonissima</p>
-		</div>
-		<!--PHP start-->
-		<div id="topnav">
-			<input type="text" placeholder="Cerca">
-		</div>
-		<!--PHP end-->
-		<!--PHP start-->
-			<div id="ricetteData">
-				<div class="ricettaBox">
-					<img src="" alt="" />
-					<div class="ricettaText">
-						<h2>PASTA AL PESTO</h2>
-						<p>pasta buonissima col pesto</p>
-					</div>
-				</div>
-				<!--PHP end-->
-
-			<div id="funzionalita">
-				<a href="#">Cibi da ogni parte del mondo</a>
-				<a href="#">follow</a>
-				<a href="#">likes e preferiti</a>
-				<a href="#">livelli</a>
-				<a href="#">accessibilita</a>
-				<a href="#">sezione passo passo</a>
-			</div>
-		</div>
-	</div>
+  <div id="content">
+    <h1>ZUPPE e MINESTRE</h1>
+    <p>Per zuppa (o minestra) s'intende un cibo di solito che nei pasti (pranzi o cene) formali è servito dopo un antipasto nel caso sia a base asciutta (pastasciutta o altro), o come prima portata nel caso sia una
+			pietanza liquida (in brodo). Ciò ha valore nella normale alimentazione giornaliera in famiglia o al ristorante rappresenta – in genere – il primo piatto del pasto meridiano o serale o di entrambi. Nell'accezione
+			più comune del termine, nella gran parte delle zone d'Italia, per "minestra" s'intendono i primi piatti a base liquida.</p>
+			<ricetteDataPhp />
+  </div>
 
 	<div id="footer">
 		<img src="" alt="logo azienda" id="logo-img" />
@@ -94,4 +67,5 @@
 		<img id="cssvalid" src="" alt="CSS3 valido" />
 	</div>
 </body>
+
 </html>

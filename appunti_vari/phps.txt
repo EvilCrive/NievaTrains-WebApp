@@ -5,38 +5,38 @@ LOGIN
 /
 
 UTENTE
-<breadcrumb />			aggiungere il nome dell'utente
-<avatar />			chiedere al db l'immagine del profilo
-<name />			chiedere al db il nome
-<badges />			chiedere al db i vari badges
-<listaFollowes />		chiedere al db i followers
-<followesButton />		chiedere al db la quantità di followes
-<bio />				chiedere al db la bio
-<ricetteBox />			chiedere al db tutte le ricette che hanno il preferito
+<breadcrumbPhp />		aggiungere il nome dell'utente
+<avatarPhp />			chiedere al db l'immagine del profilo
+<namePhp />			chiedere al db il nome
+<badgesPhp />			chiedere al db i vari badges
+<listaFollowesPhp />		chiedere al db i followers
+<followersButtonPhp />		chiedere al db la quantità di followes
+<bioPhp />			chiedere al db la bio
+<ricetteBoxPhp />		chiedere al db tutte le ricette che hanno il preferito
 
 RICERCA
-<ricercaText />			mostrare la stringa di ricerca
-<risultati />			mostrare la quantità di ricette/utenti trovati
-<ricetteData />			chiedere al db le ricette che hanno in uno dei vari campi la stringa ricercata
+<ricercaTextPhp />		mostrare la stringa di ricerca
+<nrisultatiPhp />		mostrare la quantità di ricette/utenti trovati
+<ricetteDataPhp />		chiedere al db le ricette che hanno in uno dei vari campi la stringa ricercata
 
 INTERMEDIE
-<ricetteData />			chiedere al db le ricette che corrispondono alla categoria della pagina intermedia
+<ricetteDataPhp />		chiedere al db le ricette che corrispondono alla categoria della pagina intermedia
 
 RICETTA
-<breadcrumb />			chiedere al db le varie categorie
-<nome />			cheidere al db il nome
-<likes_preferiti />		chiedere al db la quantità di likes e preferiti
-<immagine />			chiedere al db l'immagine della ricetta
-<riassunto />			chiedere al db le varie parti del riassunto
-<presentazione />		chiedere al db la breve introduzione
-<ingredienti />			chiedere al db la lista di ingredienti
-<passopasso />			chiedere al db la lista dei passo passo
-<ricettaEstesa />		chiedere al db la ricetta estesa
-<commenti />			chiedere al db i commenti associati a quella ricetta
-<ricetteData />			chiedere al db le ricette legate a quella ricetta
+<breadcrumbPhp />		chiedere al db le varie categorie
+<nomePhp />			cheidere al db il nome
+<likes_preferitiPhp />		chiedere al db la quantità di likes e preferiti
+<immaginePhp />			chiedere al db l'immagine della ricetta
+<riassuntoPhp />		chiedere al db le varie parti del riassunto
+<presentazionePhp />		chiedere al db la breve introduzione
+<ingredientiPhp />		chiedere al db la lista di ingredienti
+<passopassoPhp />		chiedere al db la lista dei passo passo
+<ricettaEstesaPhp />		chiedere al db la ricetta estesa
+<commentiPhp />			chiedere al db i commenti associati a quella ricetta
+<ricetteDataPhp />		chiedere al db le ricette legate a quella ricetta
 
 INDEX
-<ricetteData />			chiedere al db delle ricette
+<ricetteDataPhp />		chiedere al db delle ricette
 
 
 *Dentro ricetteData ci sarà sempre un ciclo for che mostrerà le ricette richieste (che cambiano a seconda della 

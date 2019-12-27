@@ -44,19 +44,9 @@
 
 <!--START PAGE CONTENT-->
 <div id="content">
-	<!--PHP start-->
-	<div id="ricercatext"></div>
-  <div id="nrisultati"></div>
-  <div id="ricetteData">
-		<div class="ricettaBox">
-			<img src="#" alt="asd">
-			<h2>Titolo</h2>
-			<p>Breve descrizione</p>
-			<p>Scopri di più...</p>
-		</div>
-	</div>
-  </div>
-	<!--PHP end-->
+<ricercaTextPhp />
+<nrisultatiPhp />
+<ricetteDataPhp />
 </div>
 
 <div id="footer">

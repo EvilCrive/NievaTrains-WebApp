@@ -38,12 +38,7 @@
 			</div>
 		</div>
 	<!--breadcrumb-->
-	<!--PHP start-->
-	<div id="breadcrumb">
-	  <p>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; Primi  -&gt; Pasta  -&gt; Pasta al sugo</p>
-	</div>
-	<!--PHP end-->
-</div>
+<breadcrumbPhp />
 <!--END TOP OF THE PAGE-->
 
 <!--Bottone arrow up-->
@@ -51,87 +46,37 @@
 
 <!--START PAGE CONTENT-->
 <div id="content">
-  <h1>PASTA AL POMODORO</h1>
-	<!--PHP start-->
-	<div id="like">
-    <p>100 Likes</p>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="preferiti">
-    <p>100 preferiti</p>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="presentazione">
-    <img src="#" alt="immagine della pasta al pomodoro">
+  <nomePhp />
+	<likes_preferitiPhp />
+	<div id="presentazione">
+    <immaginePhp />
     <div id="riassunto">
-      <p>Calorie: 10</p>
-      <p>Dosi: 10</p>
-      <p>Costo: 10</p>
-      <p>Durata: 10</p>
-      <p>Difficoltà: 10</p>
+      <riassuntoPhp />
     </div>
   </div>
-	<!--PHP end-->
-	<!--PHP start-->
   <div id="intro">
     <h2>Presentazione</h2>
-    <p>bla bla bla</p>
+    <presentazionePhp />
   </div>
-	<!--PHP start-->
   <div id="ingredienti">
-      <ul>
-        <li>sale</li>
-        <li>pepe</li>
-        <li>sugo</li>
-      </ul>
+		<ingredientiPhp />
   </div>
-	<!--PHP end-->
-	<!--PHP start-->
   <div id="passopasso">
     <h2>Passo Passo:</h2>
-    <ul>
-      <li>far bollire l'acqua</li>
-      <li>salare l'acqua</li>
-      <li>gustare</li>
-    </ul>
+		<passopassoPhp />
   </div>
-	<!--PHP end-->
-	<!--PHP start-->
   <div id="ricetta">
-    <h2>Ricetta estesa</h2>
-    <p>bla bla bla bla bla bla</p>
+    <h2>Ricetta estesa:</h2>
+		<ricettaEstesaPhp />
   </div>
-	<!--PHP end-->
-	<!--PHP start-->
   <div id="commentiData">
-    <h2>COMMENTI</h2>
-    <div class="commentoBox">
-      <h3>@tizio</h3>
-      <p>buono</p>
-    </div>
-    <div class="commentoBox">
-      <h3>@caio</h3>
-      <p>buonissimo</p>
-    </div>
+    <h2>COMMENTI:</h2>
+    <commentiPhp />
   </div>
-	<!--PHP end-->
-	<!--PHP start-->
   <div id="ricetteData">
     <h2>Ricette Simili:</h2>
-    <div class="ricettaBox">
-    <img src="#" alt="asd">
-    <h3>Riso</h3>
-    <p>del riso</p>
-    </div>
-    <div class="ricettaBox">
-    <img src="#" alt="asd">
-    <h3>Pasta</h3>
-    <p>della pasta</p>
-    </div>
+    <ricetteDataPhp />
   </div>
-	<!--PHP end-->
 </div>
 
 <div id="footer">

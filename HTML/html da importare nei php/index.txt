@@ -57,21 +57,10 @@
 			<img id="star_voto" src="#" alt="star" />
 			<p id="didascalia">Una pasta buonissima</p>
 		</div>
-		<!--PHP start-->
 		<div id="topnav">
 			<input type="text" placeholder="Cerca">
 		</div>
-		<!--PHP end-->
-		<!--PHP start-->
-			<div id="ricetteData">
-				<div class="ricettaBox">
-					<img src="" alt="" />
-					<div class="ricettaText">
-						<h2>PASTA AL PESTO</h2>
-						<p>pasta buonissima col pesto</p>
-					</div>
-				</div>
-				<!--PHP end-->
+		<ricetteDataPhp />
 
 			<div id="funzionalita">
 				<a href="#">Cibi da ogni parte del mondo</a>
