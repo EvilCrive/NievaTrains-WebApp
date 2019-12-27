@@ -5,38 +5,38 @@ LOGIN
 /
 
 UTENTE
-<breadcrumb />
-<avatar />
-<name />
-<badges />
-<listaFollowes />
-<followesButton />
-<bio />
-<ricetteBox />
+<breadcrumb />			aggiungere il nome dell'utente
+<avatar />			chiedere al db l'immagine del profilo
+<name />			chiedere al db il nome
+<badges />			chiedere al db i vari badges
+<listaFollowes />		chiedere al db i followers
+<followesButton />		chiedere al db la quantità di followes
+<bio />				chiedere al db la bio
+<ricetteBox />			chiedere al db tutte le ricette che hanno il preferito
 
 RICERCA
-<ricercaText />
-<risultati />
-<ricetteData />
+<ricercaText />			mostrare la stringa di ricerca
+<risultati />			mostrare la quantità di ricette/utenti trovati
+<ricetteData />			chiedere al db le ricette che hanno in uno dei vari campi la stringa ricercata
 
 INTERMEDIE
-<ricetteData />
+<ricetteData />			chiedere al db le ricette che corrispondono alla categoria della pagina intermedia
 
 RICETTA
-<breadcrumb />
-<nome />
-<likes_preferiti />
-<immagine />
-<riassunto />
-<presentazione />
-<ingredienti />
-<passopasso />
-<ricettaEstesa />
-<commenti />
-<ricetteData />
+<breadcrumb />			chiedere al db le varie categorie
+<nome />			cheidere al db il nome
+<likes_preferiti />		chiedere al db la quantità di likes e preferiti
+<immagine />			chiedere al db l'immagine della ricetta
+<riassunto />			chiedere al db le varie parti del riassunto
+<presentazione />		chiedere al db la breve introduzione
+<ingredienti />			chiedere al db la lista di ingredienti
+<passopasso />			chiedere al db la lista dei passo passo
+<ricettaEstesa />		chiedere al db la ricetta estesa
+<commenti />			chiedere al db i commenti associati a quella ricetta
+<ricetteData />			chiedere al db le ricette legate a quella ricetta
 
 INDEX
-<ricetteData />
+<ricetteData />			chiedere al db delle ricette
 
 
 *Dentro ricetteData ci sarà sempre un ciclo for che mostrerà le ricette richieste (che cambiano a seconda della 
