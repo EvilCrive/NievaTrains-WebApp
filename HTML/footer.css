@@ -1,0 +1,39 @@
+* {
+  margin: 0em;
+  padding: 0;
+}
+html{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+  max-width: 1400px;
+  vertical-align: middle;
+  margin: auto;
+}
+
+#footer{
+  position: absolute;
+  overflow: hidden;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-align: center;
+  background-color: #f7962e;
+  top: 100%;
+  width: 100%;
+  max-width: 1400px;
+}
+#LogoFooter{
+  float: left;
+  margin-left: 1em;
+  display: inline-block;
+}
+#footer ul{
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+}
+#htmlvalid{
+  display: block;
+  float: right;
+}
+#cssvalid{
+  float: right;
+}
