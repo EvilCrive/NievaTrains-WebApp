@@ -32,49 +32,49 @@
   	<head>
   		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   		<title>Vellutati di Zucca - Primi</title>
-    	<meta name="title" content="Vellutati di Zucca - Primi - OrangeTango" />
-    	<meta name="description" content="Ricetta di Vellutati di Zucca, Primi Piatti " />
-    	<meta name="keywords" content="OrangeTango, informazioni, primi, vellutati, zucca" />
-    	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-    	<meta charset="UTF-8" />
+    		<meta name="title" content="Vellutati di Zucca - Primi - OrangeTango" />
+    		<meta name="description" content="Ricetta di Vellutati di Zucca, Primi Piatti " />
+    		<meta name="keywords" content="OrangeTango, informazioni, primi, vellutati, zucca" />
+    		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+    		<meta charset="UTF-8" />
   	</head>
 -Primi Risotto alla cantonese
   	<head>
    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    	<title>Risotto alla Cantonese - Primi</title>
-    	<meta name="title" content="Risotto alla Cantonese - Primi - OrangeTango" />
-    	<meta name="description" content="Ricetta di Risotto alla Cantonese, Primi Piatti " />
-    	<meta name="keywords" content="OrangeTango, informazioni, primi, risotto, cantonese" />
-    	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-    	<meta charset="UTF-8" />
+    		<title>Risotto alla Cantonese - Primi</title>
+    		<meta name="title" content="Risotto alla Cantonese - Primi - OrangeTango" />
+    		<meta name="description" content="Ricetta di Risotto alla Cantonese, Primi Piatti " />
+    		<meta name="keywords" content="OrangeTango, informazioni, primi, risotto, cantonese" />
+    		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+    		<meta charset="UTF-8" />
   	</head>
 -Primi Risotto zucca e gorgonzola
   	<head>
-    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    	<title>Risotto di Zucca e Gorgonzola - Primi</title>
-    	<meta name="title" content="Risotto di Zucca e Gorgonzola - Primi - OrangeTango" />
-    	<meta name="description" content="Ricetta del Risotto di Zucca e Gorgonzola, Primi Piatti " />
-    	<meta name="keywords" content="OrangeTango, informazioni, primi, risotto, zucca, gorgonzola" />
-    	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-    	<meta charset="UTF-8" />
+    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    		<title>Risotto di Zucca e Gorgonzola - Primi</title>
+    		<meta name="title" content="Risotto di Zucca e Gorgonzola - Primi - OrangeTango" />
+    		<meta name="description" content="Ricetta del Risotto di Zucca e Gorgonzola, Primi Piatti " />
+    		<meta name="keywords" content="OrangeTango, informazioni, primi, risotto, zucca, gorgonzola" />
+    		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+    		<meta charset="UTF-8" />
   	</head>
 -Primi Pasta all gricia
   	<head>
-    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    	<title>Pasta alla Gricia - Primi</title>
-    	<meta name="title" content="Pasta alla Gricia - Primi - OrangeTango" />
-    	<meta name="description" content="Ricetta di Pasta alla Gricia, Primi Piatti " />
-    	<meta name="keywords" content="OrangeTango, informazioni, primi, pasta, gricia" />
-    	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-    	<meta charset="UTF-8" />
+    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    		<title>Pasta alla Gricia - Primi</title>
+    		<meta name="title" content="Pasta alla Gricia - Primi - OrangeTango" />
+    		<meta name="description" content="Ricetta di Pasta alla Gricia, Primi Piatti " />
+    		<meta name="keywords" content="OrangeTango, informazioni, primi, pasta, gricia" />
+    		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+    		<meta charset="UTF-8" />
   	</head>
 -Dolci Tiramisu
   	<head>
-    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    	<title>Tiramis&ugrave; - Dolci</title>
-    	<meta name="title" content="Tiramis&ugrave; - Dolci - OrangeTango" />
-    	<meta name="description" content="Ricetta del Tiramis&ugrave;, Dolci  " />
-    	<meta name="keywords" content="OrangeTango, informazioni, primi, tiramisu, dolci, tiramis&ugrave" />
-    	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-    	<meta charset="UTF-8" />
+    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    		<title>Tiramis&ugrave; - Dolci</title>
+    		<meta name="title" content="Tiramis&ugrave; - Dolci - OrangeTango" />
+    		<meta name="description" content="Ricetta del Tiramis&ugrave;, Dolci  " />
+    		<meta name="keywords" content="OrangeTango, informazioni, primi, tiramisu, dolci, tiramis&ugrave" />
+    		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+    		<meta charset="UTF-8" />
   	</head>
