@@ -5,14 +5,17 @@
 	<!-- Specifico il charset -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<!-- Titolo -->
-	<title> Primi - OrangeTango</title>
+	<title> Secondi - OrangeTango</title>
 	<!-- Titolo esteso dentro un meta -->
-	<meta name="title" content="Primi piatti - OrangeTango" />
+	<meta name="title" content="Secondi di Pesce - OrangeTango" />
 	<!-- Descrizione del sito -->
-	<meta name="description" content="Tutte le ricette tra i Primi " />
+	<meta name="description" content="Tutte le ricette riguardante Piatti di Pesce. " />
 	<!-- Keyword principali del sito -->
-	<meta name="keywords" content="OrangeTango, informazioni, primi, riso, pasta" />
+	<meta name="keywords" content="OrangeTango, informazioni, secondi, pesci" />
+	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	<meta charset="UTF-8" />
 </head>
+
 
 <body>
 	<!--header-->
