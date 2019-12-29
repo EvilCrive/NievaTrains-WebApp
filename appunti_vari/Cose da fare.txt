@@ -15,18 +15,19 @@ Commenti
 JS bellissimi
 ##################################################################################################################
 
--Cosmetica
-	color palette (FRANCESCO)
 -HTML
-	keyword, titoli, meta (ALBERTO)
-	id e classi (MATTEO)
+
 -CSS
-	tutto
+	header (FRANCESCO)
+	about (MATTEO, ALBERTO)
+	altre (MATTEO, ALBERTO, FRANCESCO)
+	Utente
+	Ricetta
+-SQL
+	scrivere le query per il db (MARCO)
 -PHP
-	identificare le parti che necessitano php
-	scrivere gli html.txt da importare nel php
-	scrivere le query per il db
 	scrivere il php per le varie pagine
+	scrivere php per ricerche e form
 ------------------------------------------------------
 -JS
 	menu
