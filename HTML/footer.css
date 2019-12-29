@@ -12,20 +12,21 @@ html{
 #footer{
   position: absolute;
   overflow: hidden;
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding-bottom: 15px;
+  padding-top: 15px;
   text-align: center;
   background-color: #faa74d;
   top: 100%;
   width: 100%;
   max-width: 1400px;
+  max-height: 45px;
 }
 #LogoFooter{
   float: left;
   overflow: hidden;
   height: 50px;
   width: 250px;
-  margin-left: 1em;
+  margin-left: 10px;
   display: inline-block;
 }
 #footer ul{
@@ -34,12 +35,9 @@ html{
   text-align: center;
 }
 #footer ul li{
-  margin: 10px;
+  margin: 5px;
 }
-#htmlvalid{
-  display: block;
+#validity{
   float: right;
-}
-#cssvalid{
-  float: right;
+  width: 250px;
 }
