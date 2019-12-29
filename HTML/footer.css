@@ -15,13 +15,16 @@ html{
   padding-bottom: 1em;
   padding-top: 1em;
   text-align: center;
-  background-color: #f7962e;
+  background-color: #faa74d;
   top: 100%;
   width: 100%;
   max-width: 1400px;
 }
 #LogoFooter{
   float: left;
+  overflow: hidden;
+  height: 50px;
+  width: 250px;
   margin-left: 1em;
   display: inline-block;
 }
@@ -29,6 +32,9 @@ html{
   display: inline-block;
   list-style: none;
   text-align: center;
+}
+#footer ul li{
+  margin: 10px;
 }
 #htmlvalid{
   display: block;
