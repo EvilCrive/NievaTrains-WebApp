@@ -9,10 +9,50 @@ html{
   margin: auto;
 }
 /*HEADER*/
+#header{
+background-color: #faa74d;
+}
+#hamburger{
+  display: inline;
+  max-width: 40px;
+  margin-left: 0.5em;
+  margin-top: 2px;
+}
+#logo_head{
+  display: inline;
+  margin-left: 0.5em;
+  height: 35px;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+#user_logo{
+  display: inline-block;
+  float: right;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  max-width: 40px;
+  margin-top: 2px;
+}
+#topnav{
+  margin-top: 5px;
+  display: inline-block;
+  float: right;
 
+}
 
-
-
+#hrow_2{
+  padding: 8px;
+  font-size: 120%;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+#hrow_2 li{
+  display: inline;
+  margin-left: 5px
+}
+#about{
+  float: right;
+}
 
 
 
