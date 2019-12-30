@@ -116,7 +116,7 @@ WHERE C.Id_Ricetta='$Id_Ricetta';
 -- chiedere al db le ricette legate a quella ricetta
 SELECT Nome, Nome_Immagine, Introduzione
 FROM Ricetta
-WHERE Macro_Categoria='$Macro_Categoria' AND Categoria='$Categoria';
+WHERE Macro_Categoria='$Macro_Categoria' AND Categoria='$Categoria' AND Id_Ricetta<>'$Id_Ricetta';
 
 
 
