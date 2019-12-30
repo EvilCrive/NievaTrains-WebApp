@@ -104,12 +104,3 @@ PRIMARY KEY(Id_Utente,Id_Ricetta),
 FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
 FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
-
-CREATE TABLE Correlati
-(
-Id_Ricetta integer,
-Id_Ricetta_Correlata integer,
-PRIMARY KEY(Id_Ricetta,Id_Ricetta_Correlata),
-FOREIGN KEY(Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE,
-FOREIGN KEY(Id_Ricetta_Correlata) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
-)ENGINE=InnoDB;
