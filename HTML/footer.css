@@ -16,7 +16,7 @@ background-color: #faa74d;
   display: inline;
   max-width: 40px;
   margin-left: 0.5em;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 #logo_head{
   display: inline;
@@ -30,7 +30,8 @@ background-color: #faa74d;
   float: right;
   margin-right: 0.5em;
   margin-left: 0.5em;
-  max-width: 40px;
+  padding-top: 4px;
+  max-width: 35px;
   margin-top: 2px;
 }
 #topnav{
@@ -40,17 +41,29 @@ background-color: #faa74d;
 
 }
 
-#hrow_2{
-  padding: 8px;
-  font-size: 120%;
-  border-top: solid black 1px;
-  border-bottom: solid black 1px;
+#menuList {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #444;
 }
-#hrow_2 li{
-  display: inline;
-  margin-left: 5px
+#menuList li {
+    float: left;
 }
-#about{
+#menuList li a {
+    display: inline-block;
+    color: #faa74d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#menuList li a:hover:not(.active) {
+    background-color: #555;
+}
+#menuList li a.active {
+    background-color: #333;
+}
+li#rightList{
   float: right;
 }
 
