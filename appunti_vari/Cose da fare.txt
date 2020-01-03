@@ -18,13 +18,12 @@ JS bellissimi
 -HTML
 
 -CSS
-	header (FRANCESCO)
-	about (MATTEO, ALBERTO)
-	altre (MATTEO, ALBERTO, FRANCESCO)
+	trovare uno stile decente di css per l'about (MATTEO, ALBERTO, FRANCESCO)
+	altre pagine html
 	Utente
 	Ricetta
 -SQL
-	scrivere le query per il db (MARCO)
+	testare il db
 -PHP
 	scrivere il php per le varie pagine
 	scrivere php per ricerche e form
