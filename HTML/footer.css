@@ -9,12 +9,8 @@ html{
   margin: auto;
 }
 /*HEADER*/
-#header{
-background-color: #F7A46D;
-}
 #hrow_1{
-
-  background-color: #F7A46D;
+  background-color: #f2eee5; /*#F7A46D;*/
   position: fixed;
   width: 100%;
   max-width: 1400px;
@@ -120,7 +116,6 @@ padding-top:48px;
 
 /*FOOTER*/
 #footer{
-  position: absolute;
   overflow: hidden;
   padding-bottom: 15px;
   padding-top: 15px;
