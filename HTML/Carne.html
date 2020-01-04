@@ -14,37 +14,40 @@
 	<meta name="keywords" content="OrangeTango, informazioni, secondi, carne" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
-</head>
 
+	<link rel="stylesheet" type="text/css" href="#" />
+</head>
 <body>
 	<!--header-->
 		<div id="header">
 			<!--prima riga header-->
 			<div id="hrow_1">
-				<img id="hamburger" src="#" alt="menu hamburger"/>
-				<img id="logo_head" src="#" alt="logo orange wasabi"/>
+				<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger"/>
+				<img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/>
+				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
 				<div class="topnav">
-		 			<input type="text" placeholder="Ho voglia di qualcosa di buono....">
-					<button type="button" name="cerca">Cerca</button>
+		 			<input type="text" placeholder="Cerca tra le ricette">
+					<button class="button" name="cerca">Cerca</button>
 				</div>
-				<img id="user_logo" src="#" alt="user logo"/>
 			</div>
 				<!--seconda riga header-->
 		  <div id="hrow_2">
-				<ul>
+				<ul id="menuList">
 				<li><a href="" target="_top">Antipasti</a></li>
 				<li><a href="" target="_top">Primi</a></li>
 				<li class="active"><a href="" target="_top">Secondi</a></li>
 				<li><a href="" target="_top">Dolci</a></li>
-				<li><a href="" target="_top">About</a></li>
+				<li class="stayright"><a href="" target="_top">About</a></li>
 				<ul>
 			</div>
 		</div>
-	<!--breadcrumb-->
-	<div id="breadcrumb">
-		<p>Ti trovi in: <span xml:lang="en">Home</span> -&gt; Secondi -&gt; Carne</p>
-		<a href="#">Vai al contenuto</a>
-	</div>
+		<!--breadcrumb-->
+			<div id="breadcrumb">
+				<ul>
+					<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; Secondi -&gt; Carne</li>
+					<li class="stayright"><a href="#">Vai al Contenuto</a></li>
+				</ul>
+			</div>
 	<!--END TOP OF THE PAGE-->
 
 	<!--Bottone arrow up-->
@@ -72,16 +75,25 @@
     </div>
 		<!--PHP end-->
   </div>
+	<!--END PAGE CONTENT-->
+<!--Bottone arrow up-->
+<div id="tornasu">
+	<img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" href="#" />
+</div>
+<div id="footer">
 
-	<div id="footer">
-		<img src="" alt="logo azienda" id="logo-img" />
+	<div id="LogoFooter">
+		<img src="../immagini/logo.png" alt="logo orange tango" id="logoImg" />
+	</div>
 		<ul>
 			<li>&copy; 2019 Orange Tango Inc.</li>
 			<li><a href="" lang="en">Facebook</a><span>&nbsp;</span><a href="" lang="en">Instagram</a><span>&nbsp;</span><a href="" lang="en">About</a></li>
 		</ul>
-		<img id="htmlvalid" src="" alt="HTML valido" />
-		<img id="cssvalid" src="" alt="CSS3 valido" />
+	<div id="validity">
+		<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
+		<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
 	</div>
+</div>
 </body>
 
 </html>
