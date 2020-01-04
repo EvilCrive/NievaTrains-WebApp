@@ -135,16 +135,16 @@ html{
   margin-left: 10%;
   margin-bottom: 10%;
   margin-top: 5%;
-  background-color: #A9A9A9;
-  border: 20px solid #A9A9A9;
+  background-color: rgba(246,173,123,0.2);
+  border: 20px solid rgba(246,173,123,0.2);
 }
 #logInBox{
   float: right;
   margin-right: 10%;
   margin-top: 5%;
   margin-bottom: 10%;
-  background-color: #A9A9A9;
-  border: 20px solid #A9A9A9;
+  background-color: rgba(246,173,123,0.2);
+  border: 20px solid rgba(246,173,123,0.2);
 }
 #logtext{
  font-size: 50%;
@@ -155,25 +155,8 @@ html{
 .form{
   width: 100%;
 }
-#loginbutton{
-  background-color: #4169E1;
-  border-radius: 15px;
-  color: white;
-  height: 40px;
-  width: 100%;
-  margin-top: 10%;
-}
-#regbutton{
-  background-color: #228B22;
-  border-radius: 15px;
-  color: white;
-  height: 40px;
-  width: 100%;
-  margin-top: 10%;
-}
+
 #box{
-  background-color: rgba(246,173,123,0.2);
-  border-left: 8px solid #f6ad7b;
   height:700px;
   width: 900px;
   margin: auto;
