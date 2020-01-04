@@ -4,30 +4,32 @@
 }
 html{
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  max-width: 1400px;
+  max-width: 1800px;
   vertical-align: middle;
   margin: auto;
+  color: #222;
 }
 /*HEADER*/
 #hrow_1{
-  background-color: #f2eee5; /*#F7A46D;*/
+  background-color: #fff; /*#F7A46D;*/
   position: fixed;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
+  height: 60px;
+  border-bottom: 5px solid #f6ad7b; 
 
 }
 #hamburger{
   display: inline;
-  max-width: 40px;
+  max-width: 50px;
   margin-left: 0.5em;
-  margin-top: 4px;
+  margin-bottom: 0.5em;
 }
 #logo_head{
   display: inline;
-  margin-left: 0.5em;
-  height: 35px;
+  margin: auto;
+  height: 50px;
   overflow: hidden;
-  margin-bottom: 2px;
 }
 #user_logo{
   display: inline-block;
@@ -45,7 +47,7 @@ html{
 
 }
 #hrow_2{
-padding-top:48px;
+  padding-top:60px;
 }
 #menuList {
     list-style-type: none;
@@ -64,16 +66,17 @@ padding-top:48px;
     font-weight: bolder;
 }
 #menuList li a:hover:not(.active) {
-    background-color:  #C2E8CE;
+    background-color:  rgba(246,173,123,0.4);
 }
 #menuList li a.active {
-    background-color:  #f2eee5;
+    background-color:  rgba(246,173,123,0.4);
 }
 #menuList li.stayright{
   float: right;
 }
 #breadcrumb ul{
-  background-color: #C2E8CE;
+  /*background-color: #f2eee5;*/
+  background-color: rgba(246,173,123,0.4);
   list-style-type: none;
 }
 #breadcrumb li.stayright{
@@ -92,27 +95,33 @@ padding-top:48px;
   margin-right: 2em;
   margin-top: 1em;
   font-size: 150%;
+
 }
 #content h1{
   padding: 5px;
 }
-#desc_who{
-  background-color: #f2eee5;
-  padding: 20px;
-  border-radius: 30px 10px;
+.style_content{
+  background-color: rgba(246,173,123,0.2);
+  border-left: 8px solid #f6ad7b;
+}
 
+#desc_who{
+  padding: 20px;
 }
 #desc_contatti ul{
-  background-color: #f2eee5;
   list-style-type: none;
   padding: 20px;
   border-radius: 30px 10px;
-
 }
 
 
-
-
+#logo_freccia{
+  height: 40px;
+  width: auto;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}
 
 /*FOOTER*/
 #footer{
@@ -123,8 +132,9 @@ padding-top:48px;
   background-color: #F7A46D;
   top: 100%;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
   max-height: 45px;
+  margin-top: 40px;
 }
 #LogoFooter{
   float: left;
