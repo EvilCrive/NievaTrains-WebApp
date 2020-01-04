@@ -131,20 +131,20 @@ html{
   text-align: center;
 }
 #regisBox{
-  float: left;
-  margin-left: 10%;
-  margin-bottom: 10%;
-  margin-top: 5%;
-  background-color: rgba(246,173,123,0.2);
-  border: 20px solid rgba(246,173,123,0.2);
-}
-#logInBox{
   float: right;
   margin-right: 10%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  background-color: rgba(246,173,123,0.4);
+  border: 20px solid rgba(246,173,123,0.0);
+}
+#logInBox{
+  float: left;
+  margin-left: 10%;
   margin-top: 5%;
   margin-bottom: 10%;
-  background-color: rgba(246,173,123,0.2);
-  border: 20px solid rgba(246,173,123,0.2);
+  background-color: rgba(246,173,123,0.4);
+  border: 20px solid rgba(246,173,123,0.0);
 }
 #logtext{
  font-size: 50%;
