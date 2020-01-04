@@ -156,10 +156,14 @@ html{
 
 
 #logo_freccia{
-  height: 60px;
+
+  height: 30px;
   width: auto;
-  bottom: 1em;
-  right: 1em;
+  padding: 8px;
+  border: 4px solid rgba(246,173,123,0.4);
+  border-radius: 10px;
+  bottom: 2em;
+  right: 2em;
   position: fixed;
 }
 
