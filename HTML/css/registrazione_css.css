@@ -132,7 +132,7 @@ html{
 }
 #regisBox{
   float: left;
-  margin-left: 20%;
+  margin-left: 10%;
   margin-bottom: 10%;
   margin-top: 5%;
   background-color: #A9A9A9;
@@ -140,7 +140,7 @@ html{
 }
 #logInBox{
   float: right;
-  margin-right: 20%;
+  margin-right: 10%;
   margin-top: 5%;
   margin-bottom: 10%;
   background-color: #A9A9A9;
@@ -175,5 +175,6 @@ html{
   background-color: rgba(246,173,123,0.2);
   border-left: 8px solid #f6ad7b;
   height:700px;
-  width:auto;
+  width: 900px;
+  margin: 5%;
 }
