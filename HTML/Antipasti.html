@@ -15,7 +15,7 @@
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link rel="stylesheet" type="text/css" href="#" />
+	<link rel="stylesheet" type="text/css" href="./intermedia_css_v1.css" />
 </head>
 <body>
 	<!--header-->
@@ -32,12 +32,12 @@
 			</div>
 				<!--seconda riga header-->
 		  <div id="hrow_2">
-				<ul>
+				<ul id="menuList">
 				<li class="active"><a href="" target="_top">Antipasti</a></li>
 				<li><a href="" target="_top">Primi</a></li>
 				<li><a href="" target="_top">Secondi</a></li>
 				<li><a href="" target="_top">Dolci</a></li>
-				<li><a href="" target="_top">About</a></li>
+				<li class="stayright"><a href="" target="_top">About</a></li>
 				<ul>
 			</div>
 		</div>
@@ -53,20 +53,24 @@
 	<!--START PAGE CONTENT-->
   <div id="content">
     <h1>ANTIPASTI</h1>
-    <p>L'antipasto è una portata consumata all'inizio del pasto e che precede i primi piatti. Corrisponde grosso modo all'hors d'œuvre o entrée francesi e allo starter inglese.
+    <p class="style_content">L'antipasto è una portata consumata all'inizio del pasto e che precede i primi piatti. Corrisponde grosso modo all'hors d'œuvre o entrée francesi e allo starter inglese.
 			Si tratta di una preparazione veloce proposta per placare il senso di fame in attesa delle portate principali e quindi probabilisticamente ridurre le porzioni delle stesse. </p>
 <!--PHP start-->
-		<div id="ricetteData">
-			<h2>Ricette Simili:</h2>
+		<h2>Ricette Simili:</h2>
+		<div class="flex-ricette">
       <div class="ricettaBox">
-      <img src="#" alt="asd">
-      <h3>Riso</h3>
-      <p>del riso</p>
+      <img src="../Database/Ricette/antipasto_crocchette.jpg" alt="asd">
+			<div class="textwrapper">
+				<h3>Antipasti</h3>
+				<p>Crocchette di Patate</p>
+			</div>
       </div>
       <div class="ricettaBox">
       <img src="#" alt="asd">
-      <h3>Pasta</h3>
-      <p>della pasta</p>
+			<div class="textwrapper">
+				<h3>Riso</h3>
+				<p>del riso</p>
+			</div>
       </div>
     </div>
 		<!--PHP end-->

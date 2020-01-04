@@ -114,13 +114,13 @@ html{
   padding: 5px;
   text-decoration: none;
 }
+
 /*CONTENUTO*/
 #content{
   margin-left: 2em;
   margin-right: 2em;
   margin-top: 1em;
-  font-size: 150%;
-
+  font-size: 120%;
 }
 #content h1{
   padding: 5px;
@@ -128,32 +128,43 @@ html{
 .style_content{
   background-color: rgba(246,173,123,0.2);
   border-left: 8px solid #f6ad7b;
-}
-
-#desc_who{
-  padding: 20px;
-}
-
-#desc_who h2{
-  margin-top: 1em;
-}
-#desc_contatti {
-  list-style-type: none;
-  padding: 20px;
-}
-
-#desc_contatti p{
-  margin-bottom: 1em;
-}
-
-#desc_contatti ul{
-  list-style-type: none;
-  margin: 1em;
-}
-#desc_contatti ul li{
   padding: 5px;
+  margin-bottom: 30px;
 }
-
+/*RICETTE CONSIGLIATE*/
+#content > h2{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.flex-ricette{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.ricettaBox{
+  flex-basis: 450px;
+  border: 5px solid #f6ad7b;
+  height: 200px;
+  margin-bottom: 40px;
+}
+.ricettaBox img{
+  padding: 4px;
+  width: 192px;
+  height: 192px;
+}
+.ricettaBox h3{
+  vertical-align: top;
+  margin: 10px 25px;
+  font-size: 30px;
+}
+.ricettaBox p{
+  font-size: 20px;
+  margin: 10px 15px;
+}
+.textwrapper{
+  display: inline-block;
+  vertical-align: top;
+}
 /*FOOTER*/
 #logo_freccia{
 
