@@ -26,6 +26,17 @@ html{
   margin-left: 0.5em;
   max-width: 50px;
 }
+.dropdown_menu{
+  display: none;
+  background-color: black;
+  padding: 10px;
+  position: absolute;
+  width: 20%;
+  height: auto;
+}
+.dropdown_menu ul li{
+  padding: 10px;
+}
 #logo_head{
   height: 50px;
   margin-top: 10px;
