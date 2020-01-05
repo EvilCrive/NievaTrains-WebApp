@@ -5,6 +5,7 @@
 html{
   font-family: Verdana, Arial, Helvetica, sans-serif;
   max-width: 1800px;
+  min-width: 360px;
   vertical-align: middle;
   margin: auto;
   color: #222;
@@ -16,6 +17,7 @@ html{
   position: fixed;
   width: 100%;
   max-width: 1800px;
+  min-width: 360px;
   height: 60px;
   border-bottom: 5px solid #f6ad7b;
 
@@ -29,7 +31,7 @@ html{
   max-width: 50px;
 }
 #logo_head{
-  height: 50px;
+  height: 45px;
   margin-top: 10px;
 }
 #user_logo{

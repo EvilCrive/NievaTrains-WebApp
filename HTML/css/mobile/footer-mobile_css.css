@@ -5,6 +5,7 @@
 html{
   font-family: Verdana, Arial, Helvetica, sans-serif;
   max-width: 1800px;
+  min-width: 360px;
   vertical-align: middle;
   margin: auto;
   color: #222;
@@ -23,6 +24,7 @@ html{
   top: 100%;
   width: 100%;
   max-width: 1800px;
+  min-width: 360px;
   max-height: 95px;
   margin-top: 40px;
 }
@@ -42,18 +44,7 @@ html{
 #footer ul li{
   margin: 5px;
 }
-#footer{
-  overflow: hidden;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  text-align: center;
-  background-color: #F7A46D;
-  top: 100%;
-  width: 100%;
-  max-width: 1800px;
-  max-height: 190px;
-  margin-top: 40px;
-}
+
 
 #validity{
   margin: 0 auto;

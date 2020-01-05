@@ -5,6 +5,7 @@
 html{
   font-family: Verdana, Arial, Helvetica, sans-serif;
   max-width: 1800px;
+  min-width: 360px;
   vertical-align: middle;
   margin: auto;
   color: #222;
@@ -32,6 +33,7 @@ html{
   width: 100%;
   max-width: 1800px;
   max-height: 45px;
+  min-width: 360px;  
   margin-top: 40px;
 }
 #LogoFooter{
