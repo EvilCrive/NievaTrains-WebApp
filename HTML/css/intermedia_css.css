@@ -176,9 +176,9 @@ html{
   justify-content: flex-start;
 }
 .ricettaBox{
-  flex-basis: 500px;
+  flex-basis: 490px;
   border: 5px solid #f6ad7b;
-  margin-right: 40px;
+  margin-right: 30px;
   margin-left: 40px;
   height: 200px;
   margin-bottom: 40px;
