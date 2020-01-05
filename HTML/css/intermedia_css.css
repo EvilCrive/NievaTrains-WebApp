@@ -122,11 +122,13 @@ html{
 }
 #content h1{
   padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 25px;
 }
 .style_content{
   background-color: rgba(246,173,123,0.2);
   border-left: 8px solid #f6ad7b;
-  padding: 5px;
+  padding: 20px;
   margin-bottom: 30px;
 }
 /*SOTTOCATEGORIE*/
@@ -161,6 +163,7 @@ html{
   border-color: #f6ad7b;
 }
 
+
 /*RICETTE CONSIGLIATE*/
 #content > h2{
   padding: 10px;
@@ -174,6 +177,7 @@ html{
 .ricettaBox{
   flex-basis: 450px;
   border: 5px solid #f6ad7b;
+  margin-right: 20px;
   height: 200px;
   margin-bottom: 40px;
 }
@@ -186,10 +190,12 @@ html{
   vertical-align: top;
   margin: 10px 25px;
   font-size: 30px;
+  overflow: visible;
 }
 .ricettaBox p{
   font-size: 20px;
   margin: 10px 15px;
+  overflow: visible;
 }
 .textwrapper{
   display: inline-block;
