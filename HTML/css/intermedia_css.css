@@ -167,17 +167,19 @@ html{
 /*RICETTE CONSIGLIATE*/
 #content > h2{
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 .flex-ricette{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 .ricettaBox{
-  flex-basis: 450px;
+  flex-basis: 550px;
   border: 5px solid #f6ad7b;
-  margin-right: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
   height: 200px;
   margin-bottom: 40px;
 }
