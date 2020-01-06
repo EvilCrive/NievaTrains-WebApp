@@ -224,10 +224,7 @@ html{
   display: table;
   border-spacing: 10px;
   margin-top: 20px;
-}
-
-#flex-funzionalita h2 {
-  margin-bottom: 20px;
+  margin: 0 auto;
 }
 
 .funzionalitaBox {
@@ -253,6 +250,7 @@ html{
   flex-basis: 0;
   text-align: center;
 }
+
 
 
 /*FOOTER*/

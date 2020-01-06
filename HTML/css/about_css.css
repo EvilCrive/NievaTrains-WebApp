@@ -26,21 +26,68 @@ html{
   margin-left: 0.5em;
   max-width: 50px;
 }
+/*dropdown*/
 .dropdown_menu{
   display: none;
-  background-color: black;
-  padding: 10px;
+  background-color: white;
+  padding: 15px;
   position: absolute;
-  width: 20%;
+  width:350px;
   height: auto;
+  border-left: 3px solid orange;
+  border-right: 3px solid orange;
+  border-bottom: 3px solid orange;
+
+}
+.dropdown_menu ul{
+    list-style-type: none;
 }
 .dropdown_menu ul li{
   padding: 10px;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.dropdown_menu ul li a{
+text-decoration: none;
+font-weight: bolder;
+}
+.dropdown_menu ul li:hover:not(#nohover){
+  background-color: #f6ad7b;
+}
+#logoinsta{
+  width: 25px;
+  height: auto;
+  float: left;
+}
+#logotwitter{
+  width: 25px;
+  height: auto;
+  float: right;
+  vertical-align: top;
+}
+#logofb{
+  width: 12px;
+  height: auto;
 }
 #logo_head{
   height: 50px;
   margin-top: 10px;
 }
+.instawrapper{
+  display: inline-block;
+  float: left;
+}
+.twitterwrapper{
+  display: inline-block;
+  float: right;
+}
+.fbwrapper{
+  display: inline-block;
+  margin-left: 127px;
+}
+/*dropdown end*/
 #user_logo{
   display: inline-block;
   float: right;
