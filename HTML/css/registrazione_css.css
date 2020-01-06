@@ -117,50 +117,52 @@ html{
 /*fine HEADER*/
 
 /*CONTENUTO*/
-#content{
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-top: 1em;
+#content h3{
+  padding-bottom: 15px;
   font-size: 150%;
-
 }
-#content h1{
-  padding: 5px;
+#content p{
+  padding: 15px 0px;
 }
-#titolologreg{
-  text-align: center;
-}
-#regisBox{
-  float: right;
-  margin-right: 10%;
-  margin-bottom: 10%;
-  margin-top: 5%;
-  background-color: rgba(246,173,123,0.4);
-  border: 20px solid rgba(246,173,123,0.0);
+#boxwrapper{
+  height:690px;
+  width: 710px;
+  margin: 10px auto;
+  border: 5px solid rgb(246,173,123);
 }
 #logInBox{
-  float: left;
-  margin-left: 10%;
-  margin-top: 5%;
-  margin-bottom: 10%;
-  background-color: rgba(246,173,123,0.4);
-  border: 20px solid rgba(246,173,123,0.0);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 15px;
+  height: 600px;
 }
-#logtext{
- font-size: 50%;
+#logInBox:hover{
+    background-color: rgba(246,173,123,0.4);
 }
-#regtext{
-  font-size: 50%;
+#regisBox{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px;
+  margin-right: 30px;
+  height: 600px;
 }
-.form{
-  width: 100%;
+#regisBox:hover{
+    background-color: rgba(246,173,123,0.4);
+}
+.inputbar{
+  width: 90%;
+}
+.button{
+  margin-top: 15px;
 }
 
-#box{
-  height:700px;
-  width: 900px;
-  margin: auto;
-}
 
 /*FOOTER*/
 #logo_freccia{
