@@ -16,6 +16,7 @@ html{
   display: none;
 }
 #footer{
+  font-size: 150%;
   overflow: hidden;
   padding-bottom: 15px;
   padding-top: 15px;
