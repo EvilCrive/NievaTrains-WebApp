@@ -15,49 +15,107 @@
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link rel="stylesheet" type="text/css" href="#" />
+	<link rel="stylesheet" type="text/css" href="css/header_css.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer_css.css" />
+	<link rel="stylesheet" type="text/css" href="css/utente_css.css" />
 </head>
 <body>
-	<!--header-->
-		<div id="header">
-			<!--prima riga header-->
-			<div id="hrow_1">
-				<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger"/>
-				<img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/>
-				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
-				<div class="topnav">
-		 			<input type="text" placeholder="Cerca tra le ricette">
-					<button class="button" name="cerca">Cerca</button>
-				</div>
-			</div>
-				<!--seconda riga header-->
-		  <div id="hrow_2">
-				<ul id="menuList">
-				<li><a href="" target="_top">Antipasti</a></li>
-				<li><a href="" target="_top">Primi</a></li>
-				<li><a href="" target="_top">Secondi</a></li>
-				<li><a href="" target="_top">Dolci</a></li>
-				<li class="stayright"><a href="" target="_top">About</a></li>
-				<ul>
+
+<!--header-->
+	<div id="header">
+		<!--prima riga header-->
+		<div id="hrow_1">
+			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger"/>
+			<img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/>
+			<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
+			<div class="topnav">
+	 			<input type="text" placeholder="Cerca tra le ricette">
+				<button class="button" name="cerca">Cerca</button>
 			</div>
 		</div>
-	<!--PHP start-->
-	<!--breadcrumb-->
-		<div id="breadcrumb">
+			<!--seconda riga header-->
+	  <div id="hrow_2">
+			<ul id="menuList">
+			<li><a href="" target="_top">Antipasti</a></li>
+			<li><a href="" target="_top">Primi</a></li>
+			<li><a href="" target="_top">Secondi</a></li>
+			<li><a href="" target="_top">Dolci</a></li>
+			<li class="stayright"><a  class="active" href="" target="_top">About</a></li>
 			<ul>
-				<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; Utenti -&gt; MATTEO BROSOLO</li>
-				<li class="stayright"><a href="#">Vai al Contenuto</a></li>
-			</ul>
 		</div>
-<!--PHP end-->
-<!--END TOP OF THE PAGE-->
+	</div>
+<!--breadcrumb-->
+	<div id="breadcrumb">
+		<ul>
+			<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; About</li>
+			<li class="stayright"><a href="#">Vai al Contenuto</a></li>
+		</ul>
+	</div>
+	<!--END TOP OF THE PAGE-->
 
-<!--Bottone arrow up-->
-<img src="#" alt="arrow_up" href="#" />
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div class="fakeimg" style="height:200px;">
+      	<img id="user" src="../immagini/account.png" alt="user logo"/>
+      </div>
+      <button class="button2">Badge Livello</button>
+	  <button class="button2">Top Fan Badge</button>
 
-<!--START PAGE CONTENT-->
+    </div>
+    <div class="card">
+      <h2>Lista Followers</h2>
+		<button class="button2">Marco</button>
+	  	<button class="button2">Matteo</button>
+	  	<button class="button2">Alberto</button> 
+	  	<a href="#">Vedi tutti...</a>     
+  	</div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Franciesco Bugno</h2>
+      <p>@kus96</p>
+      <form>
+  		<textarea>Bio...</textarea>
+	  </form>
+    </div>
+    <div class="card">
+      <h2>Ricette Preferite </h2>
+      <div class="row">
+		<div class="responsive">
+  			<div class="gallery">
+    			<a target="_blank" href="img_5terre.jpg">
+      			<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Cinque Terre" width="600" height="400">
+    			</a>
+    		<div class="desc">Risotto radicchio e salsiccia</div>
+  			</div>
+		</div>
+
+	<div class="responsive">
+  		<div class="gallery">
+    		<a target="_blank" href="img_forest.jpg">
+      		<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
+    		</a>
+    		<div class="desc">Risotto alla zucca</div>
+  		</div>
+	</div>
+
+	<div class="responsive">
+  		<div class="gallery">
+    		<a target="_blank" href="img_forest.jpg">
+      		<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
+    		</a>
+    		<div class="desc">Risotto alla zucca</div>
+  		</div>
+	</div>
+
+    </div>
+    <a href="#">Vedi tutte...</a>
+  </div>
+</div>
+</div>
+<!-- 
 <div id="content">
-	<!--PHP start-->
   <img src="#" alt="immagine matteo">
   <h1>MATTEO BROSOLO</h1>
   <button type="button" name="button">+Follow</button>
@@ -97,9 +155,8 @@
     </div>
     <p>Vedi Tutti</p>
   </div>
-	<!--PHP end-->
 </div>
-
+-->
 <!--END PAGE CONTENT-->
 <!--Bottone arrow up-->
 <div id="tornasu">
