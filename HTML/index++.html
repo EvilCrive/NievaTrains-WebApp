@@ -15,7 +15,7 @@
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link rel="stylesheet" type="text/css" href="#" />
+	<link rel="stylesheet" type="text/css" href="css/home_css.css" />
 </head>
 <body>
 	<!--header-->
@@ -42,11 +42,10 @@
 			</div>
 		</div>
 	<!--breadcrumb-->
-	<!--breadcrumb-->
 		<div id="breadcrumb">
 			<ul>
 				<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span></li>
-				<li class="stayright"><a href="#">Vai al Contenuto</a></li>
+				<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
 			</ul>
 		</div>
 	<!--END TOP OF THE PAGE-->
@@ -64,29 +63,46 @@
 			<p id="didascalia">Una pasta buonissima</p>
 		</div>
 		<!--PHP start-->
-		<div id="topnav">
-			<input type="text" placeholder="Cerca">
+		<div id="search">
+			<input type="text" placeholder="Cerca tra le ricette">
+			<button class="button" name="cerca">Cerca</button>
 		</div>
 		<!--PHP end-->
 		<!--PHP start-->
-			<div id="ricetteData">
-				<div class="ricettaBox">
-					<img src="" alt="" />
-					<div class="ricettaText">
-						<h2>PASTA AL PESTO</h2>
-						<p>pasta buonissima col pesto</p>
-					</div>
-				</div>
-				<!--PHP end-->
+		<h2>Lasciati ispirare</h2>
 
-			<div id="funzionalita">
-				<a href="#">Cibi da ogni parte del mondo</a>
-				<a href="#">follow</a>
-				<a href="#">likes e preferiti</a>
-				<a href="#">livelli</a>
-				<a href="#">accessibilita</a>
-				<a href="#">sezione passo passo</a>
-			</div>
+		<div class="flex-ricette">
+		      <div class="ricettaBox">
+		      <img src="../Database/Ricette/antipasto_crocchette.jpg" alt="asd">
+					<div class="textwrapper">
+						<h3>Antipasti</h3>
+						<p>Crocchette di Patate</p>
+					</div>
+		      </div>
+		      <div class="ricettaBox">
+		      <img src="#" alt="asd">
+					<div class="textwrapper">
+						<h3>Riso</h3>
+						<p>del riso</p>
+					</div>
+		      </div>
+		      <br />
+		      <a href="#">Scopri di più..</a>
+		  </div>
+		  
+		  <!--PHP end-->
+		  <div id="flex-funzionalita">
+		  	<h3>In Orange Tango puoi..</h3>
+		  	<ul class="funzionalitaBox">
+		  		<li><a href="#">Trova ricette di cibi da ogni parte del mondo</a></li>
+		    	<li><a href="#">Segui gli altri utenti e sfidali a chi ha più punti</a></li>
+		    	<li><a href="#">Vota le ricette per farci sapere quali preferisci</a></li>
+		    </ul>
+		    <ul class="funzionalitaBox">
+		    	<li><a href="#">Metti mi piace ai commenti degli altri utenti</a></li>
+		    	<li><a href="#">Segui i tuoi amici: basta cliccare sul tasto "Segui"</a></li>
+		    	<li><a href="#">Scala la classifica e diventa uno dei Top Fan</a></li>
+		    </ul>
 		</div>
 	</div>
 	<!--END PAGE CONTENT-->
