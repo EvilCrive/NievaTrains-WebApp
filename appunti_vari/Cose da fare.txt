@@ -18,11 +18,10 @@ JS bellissimi
 -HTML
 
 -CSS
-	trovare uno stile decente di css per l'about (MATTEO, ALBERTO, FRANCESCO)
-	altre pagine html
-	Utente
-	Ricetta
+	css mobile (alberto)
+	css altre pagine (matteo, francesco)
 -SQL
+	finire di scrivere tutto ciò che concerne le ricette
 	testare il db
 -PHP
 	scrivere il php per le varie pagine
