@@ -29,7 +29,8 @@
 	max-width: 1400px;
 	height: auto;
 	margin: auto;
-
+	display: flex;
+  	flex-wrap: wrap;
 }
 .gallery {
   /*border: 1px solid #ccc;*/
