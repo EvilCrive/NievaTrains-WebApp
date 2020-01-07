@@ -1,3 +1,3 @@
 Progetto Tecnologie Web 2019/2020 UniPD
 
-mancano css mobile di utente ricetta
+	- finire css mobile e desktop di utente ricetta home
