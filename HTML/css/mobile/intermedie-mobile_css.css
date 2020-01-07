@@ -1,0 +1,270 @@
+* {
+  margin: 0em;
+  padding: 0;
+}
+html{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  max-width: 1800px;
+  min-width: 360px;
+  vertical-align: middle;
+  margin: auto;
+  color: #222;
+  height: 100%;
+}
+/*HEADER*/
+#header{
+  width: 100%;
+  height: 150px;
+}
+#hrow_1{
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  max-width: 1800px;
+  min-width: 360px;
+  height: 150px;
+  border-bottom: 5px solid #f6ad7b;
+
+}
+#hamburger{
+  display: inline-block;
+  float: right;
+  padding-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 15%;
+}
+#logo_head{
+  height:130px;
+  max-width: 60%;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#user_logo{
+  display: inline-block;
+  float: right;
+  margin-right: 0em;
+  margin-left: 0em;
+  padding-top: 4px;
+  max-width: 11%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.topnav{
+  margin-top: 5px;
+  display: none;
+  float: right;
+}
+.button{
+  background-color: white;
+  border: 2px solid #f6ad7b;
+  color: black;
+  padding: 5px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #f6ad7b
+}
+.topnav input[type=text] {
+  padding: 9px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  border-left: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+  border-right: 1px solid #ccc;
+}
+#hrow_2{
+  padding-top:60px;
+
+}
+#menuList {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #f6ad7b;
+    display:none;
+}
+#menuList li {
+    float: left;
+}
+#menuList li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#menuList li a:hover:not(.active) {
+    background-color:  rgba(246,173,123,0.2);
+}
+#menuList li a.active {
+    background-color:  rgba(246,173,123,0.4); /*#f6ad7b*/
+}
+#menuList li.stayright{
+  float: right;
+}
+#breadcrumb{
+  height:100px;
+}
+#breadcrumb ul{
+  /*background-color: #f2eee5;*/
+
+  height:100%;
+  font-size:150%;
+  background-color: rgba(246,173,123,0.4);
+  list-style-type: none;
+}
+#breadcrumb li.stayright{
+  float: right;
+  display: none;
+}
+#breadcrumb li {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  text-decoration:none;
+  margin-top: 20px;
+}
+
+/*CONTENUTO*/
+#content{
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  font-size: 120%;
+}
+#content h1{
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+.style_content{
+  background-color: rgba(246,173,123,0.2);
+  border-left: 8px solid #f6ad7b;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+/*SOTTOCATEGORIE*/
+#sottocategoriaData{
+  background-color: rgba(246,173,123,0.4);
+  padding: 20px;
+  border-radius: 20px;
+}
+#sottocategoriaData h2{
+  margin-bottom: 20px;
+}
+#sottocategoriaData ul{
+  margin-left: 20px;
+  list-style-type: none;
+}
+#sottocategoriaData ul li{
+  margin-bottom: 15px;
+  border-left: 8px solid white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#sottocategoriaData h3{
+  margin-bottom: 5px;
+  padding: 10px;
+}
+#sottocategoriaData p{
+  margin-left: 10px;
+  padding: 5px;
+}
+#sottocategoriaData ul li:hover{
+  background-color: rgba(246,173,123,0.6);
+  border-color: #f6ad7b;
+}
+
+
+/*RICETTE CONSIGLIATE*/
+#content > h2{
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.flex-ricette{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.ricettaBox{
+  flex-basis: 490px;
+  border: 5px solid #f6ad7b;
+  margin-right: 30px;
+  margin-left: 40px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+.ricettaBox img{
+  padding: 4px;
+  width: 192px;
+  height: 192px;
+}
+.ricettaBox h3{
+  vertical-align: top;
+  margin: 10px 25px;
+  font-size: 30px;
+  overflow: visible;
+}
+.ricettaBox p{
+  font-size: 20px;
+  margin: 10px 15px;
+  overflow: visible;
+}
+.textwrapper{
+  display: inline-block;
+  vertical-align: top;
+}
+/*FOOTER*/
+#logo_freccia{
+  display: none;
+}
+#footer{
+  font-size: 150%;
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #F7A46D;
+  top: 100%;
+  width: 100%;
+  max-width: 1800px;
+  min-width: 360px;
+  max-height: 200px;
+  margin-top: 40px;
+}
+#LogoFooter{
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#footer ul{
+  width:100%;
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+#footer ul li{
+  margin: 5px;
+}
+
+
+#validity{
+  width:100%;
+  margin: 0 auto;
+}
