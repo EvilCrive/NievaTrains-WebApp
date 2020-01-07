@@ -15,9 +15,12 @@
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link rel="stylesheet" type="text/css" href="css/header_css.css" />
-	<link rel="stylesheet" type="text/css" href="css/footer_css.css" />
+	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/header_css.css" />
+	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/footer_css.css" />
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/about_css.css" />
+
+	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" rel="stylesheet" type="text/css" href="css/mobile/header-mobile_css.css" />
+	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" rel="stylesheet" type="text/css" href="css/mobile/footer-mobile_css.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" rel="stylesheet" type="text/css" href="css/mobile/about-mobile_css.css" />
 </head>
 <body>
@@ -26,9 +29,10 @@
 		<!--prima riga header-->
 		<div id="hrow_1">
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger"/>
-			<img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/>
+			<a href=""><img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/></a>	
 			<div class="dropdown_menu">
 				<ul>
+					<li><a href="" target="_top">Home</a></li>
 					<li><a href="" target="_top">Antipasti</a></li>
 					<li><a href="" target="_top">Primi</a></li>
 					<li><a href="" target="_top">Secondi</a></li>
@@ -58,11 +62,12 @@
 			<!--seconda riga header-->
 	  <div id="hrow_2">
 			<ul id="menuList">
-			<li><a href="" target="_top">Antipasti</a></li>
-			<li><a href="" target="_top">Primi</a></li>
-			<li><a href="" target="_top">Secondi</a></li>
-			<li><a href="" target="_top">Dolci</a></li>
-			<li class="stayright"><a  class="active" href="" target="_top">About</a></li>
+				<li><a href="" target="_top">Home</a></li>
+				<li><a href="" target="_top">Antipasti</a></li>
+				<li><a href="" target="_top">Primi</a></li>
+				<li><a href="" target="_top">Secondi</a></li>
+				<li><a href="" target="_top">Dolci</a></li>
+				<li class="stayright"><a  class="active" href="" target="_top">About</a></li>
 			<ul>
 		</div>
 	</div>
