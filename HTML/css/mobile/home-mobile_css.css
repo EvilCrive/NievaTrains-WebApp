@@ -43,95 +43,31 @@
   font-size: 1em;
 }
 
-/*RICETTA IN EVIDENZA*/
-#flexEvidenza {
+/*FUNZIONALITA*/
+#flex-funzionalita {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-
-.evidenzaBox {
-  flex-grow: 1;
-  flex-shrink: 1;
-  margin: 10px;
-  border: 8px solid #f6ad7b;
-}
-
-.evidenzaBox img {
-  margin:5px;
-  float: left;
-}
-
-.evidenzaBox h2 {
-  margin-top: 10px;
-  margin-left: 25px;
-  margin-bottom: ;
-  padding: 5px;
-}
-
-.evidenzaBox p {
-  margin-left: 25px;
-}
-
-.flex-ricette{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.ricettaBox{
-  flex-basis: 450px;
-  border: 5px solid #f6ad7b;
-  height: 200px;
-  margin-bottom: 40px;
-}
-.ricettaBox img{
-  padding: 4px;
-  width: 192px;
-  height: 192px;
-}
-.ricettaBox h3{
-  vertical-align: top;
-  margin: 10px 25px;
-  font-size: 30px;
-}
-.ricettaBox p{
-  font-size: 20px;
-  margin: 10px 15px;
-}
-.textwrapper{
-  display: inline-block;
-  vertical-align: top;
-}
-
-/*FUNZIONALITA*/
-#flex-funzionalita {
-  display: table;
-  border-spacing: 10px;
-  margin-top: 20px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .funzionalitaBox {
   margin-bottom: 25px;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.funzionalitaBox li {
+  padding: 10px;
+  width: 250px;
+  height: 100px;
   background-color: #f6ad7b;
-  border: 2px solid #ff6666;
-  padding: 1em;
   margin-left: 10px;
   margin-right: 10px;
-  border-spacing: 5px;
-  border-radius: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
   text-align: center;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.funzionalitaBox:hover{
+  color: white;
+  background-color: #444;
+}
+.funzionalitaBox p{
+  margin-top: 6%;
 }
