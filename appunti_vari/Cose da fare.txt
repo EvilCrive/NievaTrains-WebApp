@@ -5,7 +5,6 @@ vari js dei menu
 COSE DA FARE
 bottoni modifica della bio
 bottoni amministratore
-Ampliamento db (calorie, dosi, costo, introduzione, ingredienti, passo passo)
 Pagine 404
 freccia su	
 
@@ -13,28 +12,24 @@ COSE BELLE, DIFFICILI E NON NECESSARIE
 tags
 Commenti
 JS bellissimi
-##################################################################################################################
 
--HTML
+###################################################################################################################
 
--CSS
-	css mobile (alberto)
-	css altre pagine (matteo, francesco)
--SQL
-	finire di scrivere tutto ciò che concerne le ricette
-	testare il db
--PHP
-	scrivere il php per le varie pagine
-	scrivere php per ricerche e form
-------------------------------------------------------
--JS
-	menu
-	controlli
--Finalizzazione
-	verifica accessibilità
-	test generale
-	preparazione account consegna
-	relazione
+SITUAZIONE PAGINE (Cosa manca)
+*)Per tutte			Stile generale | menu a tendina | Mettere a posto id e classi | rifare gli html.txt | fare i .php | mettere le nuove ricette box
+1)About				\
+2)Intermedie			\ | mobile
+3)Registrazione			\ | mobile | php speciale
+4)Ricetta			- | mobile | php speciale
+5)Home				- | mobile 
+6)Ricerca			\ | mobile
+7)Utente			- | mobile | php speciale
 
+SITUAZIONE DB
+Popolamento, Test query(query di ricerca solo sul nome o sulla categoria), Trigger, connessione al db in php
 
+JS
+controlli
 
+FINALIZZAZIONE
+verifica accessibilità, relazione
