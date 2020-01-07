@@ -1,19 +1,5 @@
-* {
-  margin: 0em;
-  padding: 0;
-}
-html{
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  max-width: 1800px;
-  min-width: 360px;
-  vertical-align: middle;
-  margin: auto;
-  color: #222;
-  height: 100%;
-}
 /*FOOTER*/
 #logo_freccia{
-
   height: 30px;
   width: auto;
   padding: 8px;
@@ -32,7 +18,6 @@ html{
   top: 100%;
   width: 100%;
   max-width: 1800px;
-  max-height: 45px;
   margin-top: 40px;
 }
 #LogoFooter{
