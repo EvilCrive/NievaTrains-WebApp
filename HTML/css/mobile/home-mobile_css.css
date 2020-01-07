@@ -147,64 +147,81 @@ html{
 }
 #content h1{
   padding: 5px;
-  margin-bottom: 20px;
-  margin-top: 25px;
 }
+
 .style_content{
   background-color: rgba(246,173,123,0.2);
   border-left: 8px solid #f6ad7b;
-  padding: 20px;
+  padding: 5px;
   margin-bottom: 30px;
 }
-/*SOTTOCATEGORIE*/
-#sottocategoriaData{
-  background-color: rgba(246,173,123,0.4);
-  padding: 20px;
-  border-radius: 20px;
-}
-#sottocategoriaData h2{
-  margin-bottom: 20px;
-}
-#sottocategoriaData ul{
-  margin-left: 20px;
-  list-style-type: none;
-}
-#sottocategoriaData ul li{
-  margin-bottom: 15px;
-  border-left: 8px solid white;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-#sottocategoriaData h3{
-  margin-bottom: 5px;
-  padding: 10px;
-}
-#sottocategoriaData p{
-  margin-left: 10px;
-  padding: 5px;
-}
-#sottocategoriaData ul li:hover{
-  background-color: rgba(246,173,123,0.6);
-  border-color: #f6ad7b;
-}
 
+/*CONTENT*/
 
-/*RICETTE CONSIGLIATE*/
 #content > h2{
   padding: 10px;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+#content > a {
+  margin-left: 10px;
+}
+
+/*BARRA DI RICERCA*/
+#search {
+  margin: 5% 5% 5% 5%;
+}
+#search input[type="text"] {
+  width: 75%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+#search button {
+  width: 15%;
+  padding: 12px;
+  font-size: 1em;
+}
+
+/*RICETTA IN EVIDENZA*/
+#flexEvidenza {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.evidenzaBox {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 10px;
+  border: 8px solid #f6ad7b;
+}
+
+.evidenzaBox img {
+  margin:5px;
+  float: left;
+}
+
+.evidenzaBox h2 {
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-bottom: ;
+  padding: 5px;
+}
+
+.evidenzaBox p {
+  margin-left: 25px;
+}
+
 .flex-ricette{
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
+
 .ricettaBox{
-  flex-basis: 490px;
+  flex-basis: 450px;
   border: 5px solid #f6ad7b;
-  margin-right: 30px;
-  margin-left: 40px;
   height: 200px;
   margin-bottom: 40px;
 }
@@ -217,23 +234,55 @@ html{
   vertical-align: top;
   margin: 10px 25px;
   font-size: 30px;
-  overflow: visible;
 }
 .ricettaBox p{
   font-size: 20px;
   margin: 10px 15px;
-  overflow: visible;
 }
 .textwrapper{
   display: inline-block;
   vertical-align: top;
 }
+
+/*FUNZIONALITA*/
+#flex-funzionalita {
+  display: table;
+  border-spacing: 10px;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+.funzionalitaBox {
+  margin-bottom: 25px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.funzionalitaBox li {
+  background-color: #f6ad7b;
+  border: 2px solid #ff6666;
+  padding: 1em;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-spacing: 5px;
+  border-radius: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+
 /*FOOTER*/
 #logo_freccia{
   display: none;
 }
 #footer{
-  font-size: 150%;
+  font-size:150%;
   overflow: hidden;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -250,7 +299,7 @@ html{
   overflow: hidden;
   width: 100%;
   height: auto;
-  display: inline-block;
+  display: block;
   margin: 0 auto;
 }
 
@@ -263,9 +312,7 @@ html{
 #footer ul li{
   margin: 5px;
 }
-
-
 #validity{
-  width:100%;
+  width: 100%;
   margin: 0 auto;
 }
