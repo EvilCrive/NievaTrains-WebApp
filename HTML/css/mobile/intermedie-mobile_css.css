@@ -115,6 +115,7 @@ html{
 }
 #breadcrumb{
   height:100px;
+  display: none;
 }
 #breadcrumb ul{
   /*background-color: #f2eee5;*/
