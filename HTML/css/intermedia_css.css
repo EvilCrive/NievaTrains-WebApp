@@ -55,36 +55,3 @@
   margin-top: 25px;
   margin-bottom: 20px;
 }
-.flex-ricette{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-}
-.ricettaBox{
-  flex-basis: 490px;
-  border: 5px solid #f6ad7b;
-  margin-right: 30px;
-  margin-left: 40px;
-  height: 200px;
-  margin-bottom: 40px;
-}
-.ricettaBox img{
-  padding: 4px;
-  width: 192px;
-  height: 192px;
-}
-.ricettaBox h3{
-  vertical-align: top;
-  margin: 10px 25px;
-  font-size: 30px;
-  overflow: visible;
-}
-.ricettaBox p{
-  font-size: 20px;
-  margin: 10px 15px;
-  overflow: visible;
-}
-.textwrapper{
-  display: inline-block;
-  vertical-align: top;
-}
