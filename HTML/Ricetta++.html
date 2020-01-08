@@ -14,8 +14,12 @@
 	<meta name="keywords" content="OrangeTango, pasta, ricetta, sugo, primo" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/header_css.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer_css.css" />
+	<link rel="stylesheet" type="text/css" href="css/ricetta_css.css" />
+	<script src="https://kit.fontawesome.com/c79e35231d.js" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="#" />
 </head>
 <body>
 	<!--header-->
@@ -23,7 +27,7 @@
 			<!--prima riga header-->
 			<div id="hrow_1">
 				<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger"/>
-				<a href=""><img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/></a>
+				<img id="logo_head" src="../immagini/logo_senzabackground.png" alt="logo orange tango"/>
 				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
 				<div class="topnav">
 		 			<input type="text" placeholder="Cerca tra le ricette">
@@ -33,12 +37,11 @@
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="" target="_top">Home</a></li>
-					<li><a href="" target="_top">Antipasti</a></li>
-					<li><a href="" target="_top">Primi</a></li>
-					<li><a href="" target="_top">Secondi</a></li>
-					<li><a href="" target="_top">Dolci</a></li>
-					<li class="stayright"><a href="" target="_top">About</a></li>
+				<li><a href="" target="_top">Antipasti</a></li>
+				<li><a href="" target="_top">Primi</a></li>
+				<li><a href="" target="_top">Secondi</a></li>
+				<li><a href="" target="_top">Dolci</a></li>
+				<li class="stayright"><a href="" target="_top">About</a></li>
 				<ul>
 			</div>
 		</div>
@@ -51,96 +54,95 @@
 			</ul>
 		</div>
 	<!--PHP end-->
-</div>
 <!--END TOP OF THE PAGE-->
 
-<!--Bottone arrow up-->
-<img src="#" alt="arrow_up" href="#" />
 
-<!--START PAGE CONTENT-->
-<div id="content">
-  <h1>PASTA AL POMODORO</h1>
-	<!--PHP start-->
-	<div id="like">
-    <p>100 Likes</p>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="preferiti">
-    <p>100 preferiti</p>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="presentazione">
-    <img src="#" alt="immagine della pasta al pomodoro">
-    <div id="riassunto">
-      <p>Calorie: 10</p>
-      <p>Dosi: 10</p>
-      <p>Costo: 10</p>
-      <p>Durata: 10</p>
-      <p>Difficoltà: 10</p>
-    </div>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="intro">
-    <h2>Presentazione</h2>
-    <p>bla bla bla</p>
-  </div>
-	<!--PHP start-->
-  <div id="ingredienti">
-      <ul>
-        <li>sale</li>
-        <li>pepe</li>
-        <li>sugo</li>
-      </ul>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="passopasso">
-    <h2>Passo Passo:</h2>
-    <ul>
-      <li>far bollire l'acqua</li>
-      <li>salare l'acqua</li>
-      <li>gustare</li>
-    </ul>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="ricetta">
-    <h2>Ricetta estesa</h2>
-    <p>bla bla bla bla bla bla</p>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="commentiData">
-    <h2>COMMENTI</h2>
-    <div class="commentoBox">
-      <h3>@tizio</h3>
-      <p>buono</p>
-    </div>
-    <div class="commentoBox">
-      <h3>@caio</h3>
-      <p>buonissimo</p>
-    </div>
-  </div>
-	<!--PHP end-->
-	<!--PHP start-->
-  <div id="ricetteData">
-    <h2>Ricette Simili:</h2>
-    <div class="ricettaBox">
-    <img src="#" alt="asd">
-    <h3>Riso</h3>
-    <p>del riso</p>
-    </div>
-    <div class="ricettaBox">
-    <img src="#" alt="asd">
-    <h3>Pasta</h3>
-    <p>della pasta</p>
-    </div>
-  </div>
-	<!--PHP end-->
+<div id="main">
+	<div id="intro" class="clear">
+		<h2 class="color">Titolo della Ricetta</h2>
+			<button class="button1 likes">Likes</button>
+			<button class="button1 prefe">Preferiti</button>
+	</div>
+	<div id="row" class="clear">
+			<div id="col_sx">
+				<img id="img_ricetta"src="../Database/Ricette/dolci_tiramisu.jpg" alt="tiramisu" />
+			</div>
+			<div id="col_dx">
+				<ul>
+					<li><i class="fas fa-euro-sign"> Difficoltà : Bassa</i></li>
+					<li><i class="fas fa-euro-sign"> Preparazione : 20 minuti</i></li>
+					<li><i class="fas fa-euro-sign"> Dosi per : 4 persone</i></li>
+					<li><i class="fas fa-euro-sign"> Costo : Medio</i></li>
+					<li><i class="fas fa-euro-sign"> Calorie : 199</i></li>
+				</ul>
+			</div>
+	</div>
+	<div id="row">
+		<h3> Introduzione </h3>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	</div>
+	<div id="row" class="clear">
+			<div id="col_sx">
+				<h3> Ingredienti : </h3>
+				<ul>
+					<li>Ingrediente 1</li>
+					<li>Ingrediente 2</li>
+					<li>Ingrediente 3</li>
+					<li>Ingrediente 4</li>
+					<li>Ingrediente 5</li>
+				</ul>
+			</div>
+			<div id="col_dx">
+				<h3>Passo Passo</h3>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>		
+			</div>
+	</div>
+	<div id="row">
+		<h3> Ricetta Estesa </h3>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	</div>
+	<form>
+  		<textarea>Commenta...</textarea>
+	</form>
+
+	<h3>Ricette Correlate :</h3>
+	<div id="card" class="clear">
+		<div class="responsive">
+  			<div class="gallery">
+    			<a target="_blank" href="img_5terre.jpg">
+      				<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Cinque Terre" width="600" height="400">
+    			</a>
+    		<div class="desc">Risotto radicchio e salsiccia</div>
+  			</div>
+		</div>
+		<div class="responsive">
+  			<div class="gallery">
+    			<a target="_blank" href="img_forest.jpg">
+      				<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
+    			</a>
+    			<div class="desc">Risotto alla zucca</div>
+  			</div>
+		</div>
+		<div class="responsive">
+  			<div class="gallery">
+    			<a target="_blank" href="img_forest.jpg">
+      				<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
+    			</a>
+    			<div class="desc">Risotto alla zucca</div>
+  			</div>
+		</div>
+		<div class="responsive">
+  			<div class="gallery">
+    			<a target="_blank" href="img_forest.jpg">
+      				<img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
+    			</a>
+    			<div class="desc">Risotto alla zucca</div>
+  			</div>
+		</div>
+	</div>
+
 </div>
+
 
 <!--END PAGE CONTENT-->
 <!--Bottone arrow up-->
