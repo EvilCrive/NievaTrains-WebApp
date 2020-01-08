@@ -15,6 +15,11 @@
   border-left: 8px solid #f6ad7b;
   padding: 20px;
   margin-bottom: 30px;
+
+}
+.style_content:hover{
+  background-color: rgba(246,173,123,0.8);
+  border-left: 8px solid #444;
 }
 /*SOTTOCATEGORIE*/
 #sottocategoriaData{

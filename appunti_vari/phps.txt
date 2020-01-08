@@ -38,6 +38,10 @@ RICETTA
 INDEX
 <ricetteDataPhp />		chiedere al db delle ricette
 
+/				Aggiungere commento
+/				Aggiungere utente
+/				Cambiare bio
+
 
 *Dentro ricetteData ci sarà sempre un ciclo for che mostrerà le ricette richieste (che cambiano a seconda della 
 pagina). In breve sarà una lista di ricettaBox. ricettaBox è un modo standard tra tutte le pagine del sito per 

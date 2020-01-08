@@ -13,11 +13,12 @@ html{
 }
 /*HEADER*/
 #hrow_1{
+  z-index: 1;
   background-color: #fff;
   position: fixed;
   width: 100%;
   max-width: 1800px;
-  height: 60px;
+  height: 70px;
   border-bottom: 5px solid #f6ad7b;
 
 }
@@ -131,7 +132,7 @@ font-weight: bolder;
   border-right: 1px solid #ccc;
 }
 #hrow_2{
-  padding-top:60px;
+  padding-top:70px;
 }
 #menuList {
     list-style-type: none;
