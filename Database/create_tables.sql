@@ -23,7 +23,7 @@ Password varchar(60) not null,
 Bio varchar(250) not null,
 Like_Ricevuti integer default 0,
 Commenti_Scritti integer default 0,
-Livello tinyint,
+Livello tinyint default 0,,
 Top_Fan boolean default false,
 is_Admin boolean default false,
 Nome_Immagine varchar(250) not null,
@@ -35,7 +35,7 @@ Descrizione_Immagine varchar(250) not null
 CREATE TABLE Commento
 (
 Id_Commento integer auto_increment PRIMARY KEY,
-Testo varchar(300) not null unique,
+Testo varchar(150) not null unique,
 Data datetime not null,
 Numero_Like integer default 0,
 FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
