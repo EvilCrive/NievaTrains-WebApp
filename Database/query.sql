@@ -189,6 +189,8 @@ END |
 DELIMITER ;
 
 -- eliminare un utente
+DROP PROCEDURE IF EXISTS Elimina_Utente
+
 DELIMITER |
 CREATE PROCEDURE Elimina_Utente($Id_Utente integer)
 BEGIN
