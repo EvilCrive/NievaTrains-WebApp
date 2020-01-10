@@ -1,6 +1,6 @@
 
 
-#content{
+#content{/**/
   max-width: 1400px; /*più stretto del body che è 1800px max*/
   margin: auto;
   margin-top:20px;
@@ -9,14 +9,14 @@
   background-color:#f1f1f1!important;
 }
 
-#intro{
+#intro{/**/
   max-width: 100%;
   background-color: #f1f1f1;
   margin: auto;
   border-left: 4px solid rgba(246,173,123,1);
 }
 
-#intro h2{
+#intro h2{/**/
   font-size: 1.6em;
   float: left;
   padding: 10px 10px;
@@ -46,7 +46,7 @@
    margin-left: 20px;
 }
 
-#row{
+.row{/**/
   width: 100%;
   height: auto;
   margin: auto;
@@ -97,7 +97,7 @@ h3{
   height: auto;
 }
 
-#row p{
+.row p{
   padding: 20px;
 }
 
@@ -120,33 +120,27 @@ textarea:focus{
   border: 3px solid rgba(246,173,123,1);
 }
 
-.gallery {
+.gallery {/**/
   /*border: 1px solid #ccc;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.gallery:hover {
+.gallery:hover {/**/
  box-shadow: 0 4px 8px 0 rgba(246,173,123,0.8), 0 6px 20px 0 rgba(246,173,123,1);
 }
 
-.gallery img {
+.gallery img {/**/
   width: 100%;
   height: auto;
 }
 
-.desc {
+.desc {/**/
   padding: 15px;
   text-align: center;
 }
 
-.responsive {
+.responsive {/**/
   padding:10px 10px;
   float: left;
   width: 25%;
-}
-
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
 }

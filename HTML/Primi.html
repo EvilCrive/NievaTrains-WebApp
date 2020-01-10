@@ -15,10 +15,8 @@
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/header_css.css" />
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/footer_css.css" />
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/intermedia_css.css" />
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/ricetteData_css.css" />
+	<link media="handheld,screen" rel="stylesheet" type="text/css" href="./css/cssmaximo.css" />
+
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="css/mobile/header-mobile_css.css"/>
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="css/mobile/footer-mobile_css.css"/>
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="css/mobile/intermedie-mobile_css.css"/>
@@ -60,30 +58,36 @@
 	<!--END TOP OF THE PAGE-->
 	<!--START PAGE CONTENT-->
   <div id="content">
-    <h1>Primi</h1>
-		<h2>Qualcosa in più:</h2>
-    <p class="style_content">Un primo piatto è un piatto in genere a base di riso o pasta che viene consumato all'inizio del pasto, ma che può essere, a volte, preceduto da uno o più antipasti. Non necessariamente la portata che costituisce
-			il primo piatto è asciutta, anzi spesso vengono servite come primo preparazioni brodose quali zuppe o minestre, da consumarsi con il cucchiaio ed in genere basate in tutto o in parte su legumi e verdure</p>
-    <div id="sottocategoriaData">
-      <h2>SOTTOCATEGORIE:</h2>
-			<ul>
-  			<li>
-					<h3>Pasta</h3>
-					<p>La pasta, intesa come pasta alimentare, è un prodotto a base di farina di diversa estrazione, tipico delle varie cucine regionali d'Italia, divisa in piccole forme regolari destinate alla cottura in acqua... <a href="#">Scopri di più</a></p>
-				</li>
-				<li>
-					<h3>Risotti</h3>
-					<p>Il risotto è un primo piatto tipico della cucina italiana, originario della Lombardia poi diffusosi in tutto il nord Italia e oggi diffuso in numerose versioni in tutto il paese. La sua caratteristica principale... <a href="#">Scopri di più</a></p>
-				<li>
-					<h3>Zuppe</h3>
-					<p>Per "zuppe" si intendono minestre in brodo preparate con ingredienti e in modi molto varî, ma servite per lo più con fette o pezzetti di pane tostati o fritti (messi a cuocere insieme o aggiunti all’ultimo... <a href="#">Scopri di più</a></p>
-				</li>
-  		</ul>
-    </div>
+		<div id="intro" class="clear">
+			<h2>Primi</h2>
+		</div>
+		<div class="row clear">
+			<h3>Qualcosa in più:</h3>
+			<p>Un primo piatto è un piatto in genere a base di riso o pasta che viene consumato all'inizio del pasto, ma che può essere, a volte, preceduto da uno o più antipasti. Non necessariamente la portata che costituisce
+				il primo piatto è asciutta, anzi spesso vengono servite come primo preparazioni brodose quali zuppe o minestre, da consumarsi con il cucchiaio ed in genere basate in tutto o in parte su legumi e verdure</p>
+			</div>
+			<div id="sottocategoriaData" class="row clear">
+				<h3>SOTTOCATEGORIE:</h3>
+					<ul>
+						<li>
+							<h4>Pasta</h4>
+							<p>La pasta, intesa come pasta alimentare, è un prodotto a base di farina di diversa estrazione, tipico delle varie cucine regionali d'Italia, divisa in piccole forme regolari destinate alla cottura in acqua... <a href="#">Scopri di più</a></p>
+						</li>
+						<li>
+							<h4>Risotti</h4>
+							<p>Il risotto è un primo piatto tipico della cucina italiana, originario della Lombardia poi diffusosi in tutto il nord Italia e oggi diffuso in numerose versioni in tutto il paese. La sua caratteristica principale... <a href="#">Scopri di più</a></p>
+						</li>
+						<li>
+							<h4>Zuppe</h4>
+							<p>Per "zuppe" si intendono minestre in brodo preparate con ingredienti e in modi molto varî, ma servite per lo più con fette o pezzetti di pane tostati o fritti (messi a cuocere insieme o aggiunti all’ultimo... <a href="#">Scopri di più</a></p>
+						</li>
+					</ul>
+				</div>
+
 		<!--PHP start-->
-			<h2>Ricette Simili:</h2>
+			<h3>Ricette Simili:</h3>
 			<!--Tutto questo è per testare come viene mostrata ogni ricetta, non sono impazzito-->
-			<div class="row clearfix">
+			<div class="rowconsigliate clear">
 			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="img_5terre.jpg">
@@ -102,7 +106,7 @@
 			  </div>
 			</div>
 
-			<div class="responsive ">
+			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="img_lights.jpg">
 			      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Northern Lights" width="600" height="400">
@@ -120,7 +124,7 @@
 			  </div>
 			</div>
 			</div>
-			<div class="row clearfix">
+			<div class="rowconsigliate clear">
 			<div class="responsive">
 			  <div class="gallery">
 			    <a target="_blank" href="img_5terre.jpg">

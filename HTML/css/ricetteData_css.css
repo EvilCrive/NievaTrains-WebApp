@@ -1,4 +1,4 @@
-.row{
+.rowconsigliate{
 	max-width: 1400px;
 	height: auto;
 	margin: auto;
@@ -12,6 +12,7 @@
 .gallery:hover {
  	box-shadow: 0 4px 8px 0 rgba(246,173,123,0.8), 0 6px 20px 0 rgba(246,173,123,1);
 }
+
 .gallery img {
   width: 100%;
   height: auto;
@@ -23,8 +24,9 @@
 .responsive {
   padding: 10px 10px;
   float: left;
-  width: 24.99999%;
+  width: 25%;
 }
+
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
@@ -36,11 +38,7 @@
     width: 100%;
   }
 }
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* non so a cosa servano
 .center{
 	text-align: center;
 	margin-top: 20px;
@@ -61,3 +59,4 @@
 .pagination a:hover:not(.active) {
 	background-color: rgba(246,173,123,0.5);
 }
+*/
