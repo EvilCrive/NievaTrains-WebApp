@@ -45,12 +45,12 @@ html{
 #user_logo{
   display: inline-block;
   float: right;
-  margin-right: 0em;
-  margin-left: 0em;
   padding-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
   max-width: 11%;
-  margin-top: auto;
-  margin-bottom: auto;
+
 }
 .topnav{
   margin-top: 5px;
