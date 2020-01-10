@@ -4,12 +4,16 @@
   padding: 0;
 }
 html{
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: sans-serif; /*Verdana, Arial, Helvetica*/
   max-width: 1800px;
   vertical-align: middle;
   margin: auto;
-  color: #222;
   height: 100%;
+}
+.clear::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 /*HEADER*/
 #hrow_1{
@@ -53,8 +57,8 @@ html{
   font-weight: bolder;
 }
 .dropdown_menu ul li a{
-text-decoration: none;
-font-weight: bolder;
+  text-decoration: none;
+  font-weight: bolder;
 }
 .dropdown_menu ul li:hover:not(#nohover){
   background-color: #f6ad7b;
@@ -87,6 +91,7 @@ font-weight: bolder;
   margin-left: 127px;
 }
 /*dropdown end*/
+
 #logo_head{
   height: 50px;
   margin-bottom: 5px;
