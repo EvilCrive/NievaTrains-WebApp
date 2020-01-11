@@ -1,10 +1,10 @@
 * {
+  box-sizing: border-box;
   margin: 0em;
   padding: 0;
 }
 html{
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  max-width: 1800px;
+  font-family: sans-serif; /*Verdana, Arial, Helvetica*/
   min-width: 360px;
   vertical-align: middle;
   margin: auto;
@@ -85,7 +85,6 @@ html{
 }
 #hrow_2{
   padding-top:60px;
-
 }
 #menuList {
     list-style-type: none;
