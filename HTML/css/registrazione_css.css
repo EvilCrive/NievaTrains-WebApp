@@ -1,16 +1,17 @@
 /*CONTENUTO*/
-#content h3{
+#boxwraper h3{
   padding-bottom: 15px;
   font-size: 150%;
 }
-#content p{
+#boxwrapper p{
   padding: 15px 0px;
 }
 #boxwrapper{
   height:690px;
-  width: 720px;
-  margin: 10px auto;
+  width: 721px;
+  margin: 30px auto;
   border: 5px solid rgb(246,173,123);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #logInBox{
   -webkit-transition-duration: 0.4s; /* Safari */

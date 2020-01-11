@@ -1,4 +1,4 @@
-.row{
+.rowUtente{
   max-width: 1400px;
   margin: auto;
   padding: 20px;
@@ -18,7 +18,7 @@
   padding-left: 20px;
 }
 
-#user{
+#userImg{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -61,7 +61,7 @@
 }
 
 /* Clear floats after the columns */
-.row:after {
+.row:after {/**/
   content: "";
   display: table;
   clear: both;
@@ -76,18 +76,18 @@
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {/**/
   .topnav a {
     float: none;
     width: 100%;
   }
 }
 
-h2{
+h2{/**/
   margin-bottom: 20px;
 }
 
-textarea {
+textarea {/**/
   width: 100%;
   height: 300px;
   margin-top: 20px;
@@ -101,8 +101,10 @@ textarea {
   transition: 0.5s;
   outline: none;
 }
-
-textarea:focus{
+#bio{
+  height: 300px;
+}
+textarea:focus{/**/
   border: 3px solid rgba(246,173,123,1);
 }
 .gallery {

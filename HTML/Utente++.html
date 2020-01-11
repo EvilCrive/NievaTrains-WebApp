@@ -15,10 +15,13 @@
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
+	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/cssmaximo.css" />
+
+<!--
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/header_css.css" />
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/footer_css.css" />
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="css/utente_css.css" />
-
+-->
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="css/mobile/header-mobile_css.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="css/mobile/footer-mobile_css.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="css/mobile/utente-mobile_css.css" />
@@ -59,11 +62,11 @@
 	</div>
 	<!--END TOP OF THE PAGE-->
 
-<div class="row">
+<div class="rowUtente clear">
   <div class="leftcolumn">
     <div class="card">
       <div class="fakeimg" style="height:200px;">
-      	<img id="user" src="../immagini/account.png" alt="user logo"/>
+      	<img id="userImg" src="../immagini/account.png" alt="user logo"/>
       </div>
       <button class="button2">Badge Livello</button>
 	  <button class="button2">Top Fan Badge</button>
@@ -82,12 +85,12 @@
       <h2>Franciesco Bugno</h2>
       <p>@kus96</p>
       <form>
-  		<textarea>Bio...</textarea>
+  		<textarea id="bio">Bio...</textarea>
 	  </form>
     </div>
     <div class="card">
       <h2>Ricette Preferite </h2>
-      <div class="row">
+      <div class="rowUtente clear">
 		<div class="responsive">
   			<div class="gallery">
     			<a target="_blank" href="img_5terre.jpg">
