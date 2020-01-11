@@ -6,7 +6,7 @@ class DBAccess
   const pass = '';
   const db_name = 'tecwebs';
 
-  public $connection;
+  public $connection=null;
 
 	/* Apre una connessione con il db con le variabili impostate precedentemente */
   public function openConnection()
