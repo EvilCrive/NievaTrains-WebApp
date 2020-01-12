@@ -17,7 +17,7 @@
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="./css/css_desktop.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="./css/css_mobile.css"/>
-
+	<script src="js/menu_hamburger.js"></script>
 
 </head>
 <body>
@@ -25,7 +25,19 @@
 		<div id="header">
 			<!--prima riga header-->
 			<div id="hrow_1">
-				<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger"/>
+				<!--MENU -->
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Antipasti</a></li>
+						<li><a href="#">Primi</a></li>
+						<li><a href="#">Secondi</a></li>
+						<li><a href="#">Dolci</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+			</div>
+			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
 				<a href=""><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
 				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
 				<div class="topnav">
