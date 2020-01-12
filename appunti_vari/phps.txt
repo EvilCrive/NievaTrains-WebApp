@@ -1,48 +1,46 @@
+GENERALE
+	gestione sessione
+	ricerca header
+	alcuni breadcrumb			<breadcrumbPhp />
 ABOUT
 /
-
 LOGIN
-/
-
-UTENTE
-<breadcrumbPhp />		aggiungere il nome dell'utente
-<avatarPhp />			chiedere al db l'immagine del profilo
-<namePhp />			chiedere al db il nome
-<badgesPhp />			chiedere al db i vari badges
-<listaFollowesPhp />		chiedere al db i followers
-<followersButtonPhp />		chiedere al db la quantità di followes
-<bioPhp />			chiedere al db la bio
-<ricetteBoxPhp />		chiedere al db tutte le ricette che hanno il preferito
-
+	controllo input
+	creazione utente
 RICERCA
-<ricercaTextPhp />		mostrare la stringa di ricerca
-<nrisultatiPhp />		mostrare la quantità di ricette/utenti trovati
-<ricetteDataPhp />		chiedere al db le ricette che hanno in uno dei vari campi la stringa ricercata
-
-INTERMEDIE
-<ricetteDataPhp />		chiedere al db le ricette che corrispondono alla categoria della pagina intermedia
-
+	messaggio di errore
+	costruzione ricette consigliate		<ricetteDataPhp />
+	quantità di risultati			<nrisultatiPhp />
+	parola cercata				<ricercaTextPhp />
+INTERMEDIA
+	costruzione ricette consigliate		<ricetteBoxPhp />
+HOME
+	costruzione ricette consigliate		<ricetteBoxPhp />
+	ricerca
+UTENTE
+	mostra nome e alias			<NomePhp />
+	mostra bio/modifica bio			<bioPhp />
+	mostra badges				<badgesPhp />
+	mostra followers			<listaFollowesPhp />
+	mostra pulsante follow			<followersButtonPhp />
+	costruzione ricette consigliate		<ricetteBoxPhp />
+	immagine				<avatarPhp />
+	comparsa pulsante elimina		<AdminUtente />
 RICETTA
-<breadcrumbPhp />		chiedere al db le varie categorie
-<nomePhp />			cheidere al db il nome
-<likes_preferitiPhp />		chiedere al db la quantità di likes e preferiti
-<immaginePhp />			chiedere al db l'immagine della ricetta
-<riassuntoPhp />		chiedere al db le varie parti del riassunto
-<presentazionePhp />		chiedere al db la breve introduzione
-<ingredientiPhp />		chiedere al db la lista di ingredienti
-<passopassoPhp />		chiedere al db la lista dei passo passo
-<ricettaEstesaPhp />		chiedere al db la ricetta estesa
-<commentiPhp />			chiedere al db i commenti associati a quella ricetta
-<ricetteDataPhp />		chiedere al db le ricette legate a quella ricetta
-
-INDEX
-<ricetteDataPhp />		chiedere al db delle ricette
-
-/				Aggiungere commento
-/				Aggiungere utente
-/				Cambiare bio
+	mostra nome				<TitoloPhp />
+	mostra preferiti e likes		<likes_preferitiPhp />
+	mostra intro				<riassuntoPhp />
+	mostra immagine				<immagineRicPhp />	
+	mostra ingredienti e passo passo	<ingredienti_PassoPassoPhp />
+	mostra ricetta estesa			<ricettaEstesaPhp />
+	mostra commenti				<commentiPhp /> <AdminCommento />
+	inserisci commento
+	costruzione ricette consigliate		<ricetteBoxPhp />
 
 
-*Dentro ricetteData ci sarà sempre un ciclo for che mostrerà le ricette richieste (che cambiano a seconda della 
-pagina). In breve sarà una lista di ricettaBox. ricettaBox è un modo standard tra tutte le pagine del sito per 
-mostrare una ricetta in versione ristretta
+
+
+
+
+
+
