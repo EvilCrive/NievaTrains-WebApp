@@ -42,7 +42,7 @@
 }
 
 /* MENU A DESTRA */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .sidenav {
     left:auto;
     right: 0;
