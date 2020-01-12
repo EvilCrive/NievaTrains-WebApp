@@ -9,7 +9,6 @@ cat pwd_db-1920.txt
 
 ./tweb1920.sh
 
-http://tecweb.studenti.math.unipd.it/phpmyadmin
-
+#########################################################################################################
 ssh paolotti.studenti.math.unipd.it -l mbrosolo -L8080:tecweb:80 -L8443:tecweb:443 -L8022:tecweb:22
 http://localhost:8080/phpmyadmin
