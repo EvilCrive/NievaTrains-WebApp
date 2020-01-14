@@ -16,7 +16,7 @@ class DBAccess
     if (!$this->connection) {
       return false;
     }
-    
+
     return true;
   }
   public function openConnection()
@@ -25,7 +25,7 @@ class DBAccess
     if (!$this->connection) {
       return false;
     }
-    
+
     return true;
   }
   private function getQuery($query)
@@ -43,7 +43,10 @@ class DBAccess
   }
 }
 
+public function getRicette($stringaCercata){
+  $query="SELECT * WHERE titolo=$stringaCercata FROM ricette;";
+  $risultati=getQuery($query);
+  return $risultati;
+}
 
 ?>
-
-

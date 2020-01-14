@@ -1,3 +1,16 @@
+<?php
+require_once "connection.php";
+$connection = new DBAccess();
+$connection->openConnection();
+
+$ricettecercate = $connection->getRicette($_POST['stringaCercata'])
+
+
+$nrisultati=10;
+?>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
@@ -70,10 +83,34 @@
 	  			<?php echo "<p> {$_POST['stringaCercata']} </p>" ?>
 	  		</div>
 	  		<div id="nrisultati">
-	  			<p> 450 risultati </p>
+	  			<?php echo "<p> $nrisultati" ?> risultati </p>
 	  		</div>
 	</div>
+<?php
+	$i=0;
+	echo '<div class="rowconsigliate clear">';
+	foreach ($ricettecercate as $valore) {
+		$i++;
+		if($i==4){
+			echo '</div>';
+			echo '<div class="rowconsigliate clear">';
+			$i=0;
+		}
+		echo '<div class="responsive">';
+		echo '	<div class="gallery">';
+		echo '		<a target="_blank" href="../Database/Ricette/{$valore['nome_immagine']}">';
+		echo '			<img src="../Database/Ricette/{$valore['nome_immagine']}" alt="{$valore['Descrizione_Immagine']}" width="600" height="400">';
+		echo '		</a>';
+		echo '		<div class="desc">{$valore['Nome']}</div>';
+		echo '		</div>';
+		echo '	</div>';
+	}
+	echo '</div>';
 
+
+
+
+ ?>
 <div class="rowconsigliate clear">
 <div class="responsive">
   <div class="gallery">
