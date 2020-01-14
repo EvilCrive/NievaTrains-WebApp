@@ -233,6 +233,8 @@ h2 {
 /*paragrafi*/
 .row{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   height: auto;
   margin: auto;
   margin-top: 20px;
@@ -261,6 +263,9 @@ h4{
 }
 .row li{
   padding: 2px;
+}
+i{
+    word-wrap: break-word;
 }
 
 /*ricette consigliate*/
@@ -309,6 +314,7 @@ h4{
 /*ricetta*/
 .button1 {
   max-width: 20%;
+  min-width: 90px;
   padding: 15px 32px;
   text-align: center;
   border: none;
@@ -330,10 +336,11 @@ h4{
 #col_sx{
   float: left;
   width: 30%;
+  min-width: 100px;
 }
 #col_dx{
-  float: left;
   width: 70%;
+  min-width: 500px;
 }
 #col_dx ul {
   list-style-type: none;
