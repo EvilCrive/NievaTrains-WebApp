@@ -1,7 +1,7 @@
 <?php
 require_once "connection.php";
 $connection = new DBAccess();
-$connection->openConnection();
+$connection->openConnectionlocal();
 
 $ricettecercate = $connection->getRicette($_POST['stringaCercata']);
 
@@ -98,10 +98,10 @@ $nrisultati=10;
 		}
 		echo '<div class="responsive">';
 		echo '	<div class="gallery">';
-		echo '		<a target="_blank" href="../Database/Ricette/{$valore['Nome_immagine']}">';
-		echo '			<img src="../Database/Ricette/{$valore['Nome_immagine']}" alt="{$valore['Descrizione_Immagine']}" width="600" height="400">';
+		echo '		<a target="_blank" href="../Database/Ricette/'.$valore['Nome_immagine'].'">';
+		echo '			<img src="../Database/Ricette/'.$valore['Nome_immagine'].'" alt="'.$valore['Descrizione_Immagine'].'" width="600" height="400">';
 		echo '		</a>';
-		echo '		<div class="desc">{$valore['Nome']}</div>';
+		echo '		<div class="desc">'.$valore['Nome'].'</div>';
 		echo '		</div>';
 		echo '	</div>';
 	}
