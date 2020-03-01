@@ -1,12 +1,8 @@
 <?php
 require_once "connection.php";
-$connection = new DBAccess();
-$connection->openConnectionlocal();
-
-$ricettecercate = $connection->getRicette($_POST['stringaCercata']);
-
-
-$nrisultati=10;
+require_once "stampe.php";
+$ConnessioneAttiva = new DBAccess();
+$var=$ConnessioneAttiva->openConnectionlocal();
 ?>
 
 
@@ -22,10 +18,9 @@ $nrisultati=10;
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="./css/css_mobile.css"/>
+	<link media="handheld,screen" rel="stylesheet" type="text/css" href="./CSS/css_desktop.css" />
+	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="./CSS/css_mobile.css"/>
 	<script src="js/menu_hamburger.js"></script>
-
 </style>
 
 </head>
@@ -76,116 +71,27 @@ $nrisultati=10;
 <!--END TOP OF THE PAGE-->
 
 <div id="content">
-
+<?php
+	$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta;");
+ 	$nrisultati=sizeof($result);
+ ?>
 	<div id="infoBox" class="clear row">
 	  		<div id="ricercatext">
 	  			<h3>Ricerca per :</h3>
-	  			<?php echo "<p> {$_POST['stringaCercata']} </p>" ?>
+	  			<?php 
+					if(isset($_POST["stringaCercata"])) echo '<p>'.$_POST["stringaCercata"].'</p>'; 
+					else echo 'Prova con sku sku zucca';
+				?> 
 	  		</div>
 	  		<div id="nrisultati">
-	  			<?php echo "<p> $nrisultati" ?> risultati </p>
+	  			<?php echo '<p>'.$nrisultati; ?> risultati </p>
 	  		</div>
 	</div>
+<!-- Prova magica della ricerca -->
 <?php
-	$i=0;
-	echo '<div class="rowconsigliate clear">';
-	foreach ($ricettecercate as $valore) {
-		$i++;
-		if($i==4){
-			echo '</div>';
-			echo '<div class="rowconsigliate clear">';
-			$i=0;
-		}
-		echo '<div class="responsive">';
-		echo '	<div class="gallery">';
-		echo '		<a target="_blank" href="../Database/Ricette/'.$valore['Nome_immagine'].'">';
-		echo '			<img src="../Database/Ricette/'.$valore['Nome_immagine'].'" alt="'.$valore['Descrizione_Immagine'].'" width="600" height="400">';
-		echo '		</a>';
-		echo '		<div class="desc">'.$valore['Nome'].'</div>';
-		echo '		</div>';
-		echo '	</div>';
-	}
-	echo '</div>';
+	stampaRicerca($result);
+?>
 
-
-
-
- ?>
-<div class="rowconsigliate clear">
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc">Risotto radicchio e salsiccia</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Risotto alla zucca</div>
-  </div>
-</div>
-
-<div class="responsive ">
-  <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">Risotto allo zafferano</div>
-  </div>
-</div>
-
-<div class="responsive ">
-  <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Risotto con i funghi</div>
-  </div>
-</div>
-</div>
-<div class="rowconsigliate clear">
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc">Risotto di mare</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Risotto alla quaglia</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">Risotto al risotto</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="../Database/Ricette/dolci_tiramisu.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Risotto zucchine e gamberetti</div>
-  </div>
-</div>
-</div>
-</div>
 <!--END PAGE CONTENT-->
 <!--Bottone arrow up-->
 <div id="tornasu">
