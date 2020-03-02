@@ -72,7 +72,8 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 
 <div id="content">
 <?php
-	$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta;");
+	$stringa=$_POST["stringaCercata"];
+	$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome like '%$stringa%';");
  	$nrisultati=sizeof($result);
  ?>
 	<div id="infoBox" class="clear row">
