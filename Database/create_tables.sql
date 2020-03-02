@@ -637,7 +637,7 @@ Olio extravergine d''oliva 40 g',
 'Per preparare la vellutata di zucca, cominciate pulendo il porro e tagliandolo a rondelle. Scaldate l’olio in una casseruola capiente, quindi unitevi il porro e fatelo soffriggere per qualche minuto, a fuoco non troppo basso, facendo attenzione che non si bruci ma facendolo tuttavia rosolare bene: questo soffritto conferirà un buon retrogusto arrostito alla vellutata. Se necessario, sfumate con poco brodo vegetale.
 Intanto pulite la zucca e tagliatela a cubetti. Aggiungetela nella casseruola e fatela insaporire qualche minuto, quindi aggiungete il brodo vegetale caldo in modo che le verdure ne risultino coperte, e portate a cottura mescolando spesso. Dopo 25-30 minuti la zucca dovrebbe risultare molto morbida e quasi sfatta: insaporite con la noce moscata e regolate di sale e di pepe a piacere. Unite quindi la panna, tenendone da parte una parte per la guarnizione finale dei piatti, e frullate accuratamente con il mixer a immersione.
 Avrete ottenuto una crema piuttosto liscia, ma per renderla vellutata come da manuale dovete setacciarla passandola attraverso un colino a maglie strette. Distribuitela infine nei piatti, guarnite con la restante panna e gustate la vostra vellutata di zucca ben calda!',
-'zuppa_vellutata_di_zucca','Vellutata di zucca','Vellutata di zucca');
+'zuppa_vellutata_di_zucca_quadrato','Vellutata di zucca','Vellutata di zucca');
 
 CREATE TABLE Commento
 (
