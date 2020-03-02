@@ -585,25 +585,12 @@ display: flex;
     margin-bottom: 35px;
     margin-top: 20px;
     flex-wrap: wrap;
-}
-.comment.commentA{
-    color:  #505050;
-}
-.comment.commentB{
-    color:  #505050;
-    justify-content: flex-start;
+	color:  #505050;
 }
 /* User and time info */
-
 .comment .info{
     width: auto;
-}
-.comment.commentA .info{
-    order: 3;
-    text-align: left;
-}
-.comment.commentB .info{
-    order: 3;
+	order: 3;
 }
 .comment .info a{	/* User name */
     display: block;
@@ -624,18 +611,12 @@ display: flex;
     position: relative;
     word-wrap: break-word;
 }
-.comment.commentA p{
+.comment p{
     order: 1;
     background-color:  rgba(246,173,123,0.2);
-    border-right: 3px solid rgba(246,173,123,1);
+	border-left: 3px solid rgba(246,173,123,1);
 }
-.comment.commentB p{
-    background-color:  rgba(246,173,123,0.3);
-    border-left: 3px solid rgba(246,173,123,1);
-    order: 1;
-}
-.comment.commentA p:after,
-.comment.commentB p:after{
+.comment p:after{
     width: 12px;
     height: 12px;
     top: initial;
