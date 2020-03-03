@@ -109,7 +109,7 @@ FROM Ricetta
 WHERE Id_Ricetta=$Id_Ricetta;
 
 -- chiedere al db i commenti associati a quella ricetta
-SELECT U.Nome, U.Cognome, U.Nome_Immagine, C.Testo, C.Data, C.Numero_Like
+SELECT U.id U.Nome, U.Cognome, U.Nome_Immagine, C.Testo, C.Data, C.Numero_Like
 FROM Commento as C JOIN Utente AS U ON C.Id_Utente=U.Id_Utente
 WHERE C.Id_Ricetta=$Id_Ricetta;
 
