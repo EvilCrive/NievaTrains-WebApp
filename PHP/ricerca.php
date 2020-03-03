@@ -18,8 +18,8 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
 
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="./CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="./CSS/css_mobile.css"/>
+	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
+	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="js/menu_hamburger.js"></script>
 </style>
 
@@ -73,7 +73,8 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 <div id="content">
 <?php
 	$stringa=$_POST["stringaCercata"];
-	$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome like '%$stringa%';");
+	$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome like '%$stringa%' OR Categoria='$stringa';");
+
  	$nrisultati=sizeof($result);
  ?>
 	<div id="infoBox" class="clear row">
