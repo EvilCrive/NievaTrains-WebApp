@@ -89,9 +89,6 @@ $risultati=$result[0];
     <div class="card">
       <h2>Lista Followers</h2>
 	  <?php stampaFollowers($ConnessioneAttiva,$risultati["Id_Utente"]);?>
-		<button class="button2">Marco</button>
-	  	<button class="button2">Matteo</button>
-	  	<button class="button2">Alberto</button>
 	  	<a href="#">Vedi tutti...</a>
   	</div>
   </div>
