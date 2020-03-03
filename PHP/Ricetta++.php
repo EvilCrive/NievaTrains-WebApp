@@ -88,7 +88,7 @@ $risultati=$result[0];
 	<div class="row clear">
 			<div id="col_sx">
 			<!--php Immagine-->
-				<img id="img_ricetta"src="../Database/Ricette/dolci_tiramisu_quadrato.jpg" alt="tiramisu" />
+				<img id="img_ricetta" <?php echo 'src="../Database/Ricette/'.$risultati["Nome_Immagine"].'.jpg" alt="'.$risultati["Descrizione_Immagine"].'"'?> />
 			</div>
 			<div id="col_dx">
 				<ul>
@@ -143,7 +143,10 @@ $risultati=$result[0];
 	Query per le correlate
 	stampa correlate
 	-->
-	
+	<?php
+	$stessaCategoria=$ConnessioneAttiva->getQuery("SELECT * FROM Ricetta WHERE Categoria='Antipasti';");
+	stampaRicerca($stessaCategoria);
+	?>
 
 </div>
 
