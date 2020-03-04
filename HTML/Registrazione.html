@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
@@ -75,27 +76,29 @@
 	  	<div class="Box">
 	    	<h3>Log In</h3>
 				<p>Email address</p>
-	    	<input class="inputbar" type="text">
+	    	<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
 	    	<p>Password</p>
-				<input class="inputbar" type="text">
+				<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
 	    	<button class="button" name="Accedi">Accedi</button>
 	  	</div>
-	  	<div class="Box">
-				<h3>Registrazione</h3>
-	    	<p>Email address</p>
-	    	<input class="inputbar" type="text">
-	    	<p>Nome</p>
-	    	<input class="inputbar" type="text">
-	    	<p>Cognome</p>
-	    	<input class="inputbar" type="text">
-	    	<p>Username</p>
-	    	<input class="inputbar" type="text">
-	    	<p>Password</p>
-	    	<input class="inputbar" type="text">
-	    	<p>Ripeti Password</p>
-	    	<input class="inputbar" type="text">
-				<button class="button" name="Registrati">Registrati</button>
-	  	</div>
+		<form action="../PHP/Registrazione++.php" method="post">	
+			<div class="Box">
+					<h3>Registrazione</h3>
+				<p>Email address</p>
+				<input class="inputbar" type="text" name="Mail" id="Mail" placeholder="Email Address">
+				<p>Nome</p>
+				<input class="inputbar" type="text" name="Nome" id="Nome" placeholder="Nome">
+				<p>Cognome</p>
+				<input class="inputbar" type="text" name="Cognome" id="Cognome" placeholder="Cognome">
+				<p>Username</p>
+				<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
+				<p>Password</p>
+				<input class="inputbar" type="text" name="Password" id="Password" placeholder="Password">
+				<p>Ripeti Password</p>
+				<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm PassWord">
+				<input type="submit" name="create" class="button" value="Registrati">
+			</div>
+		</form>
 		</div>
 	</div>
 
