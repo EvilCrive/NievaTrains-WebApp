@@ -73,14 +73,16 @@
 	<!--START PAGE CONTENT-->
 	<div id="content">
 		<div id="boxwrapper">
-	  	<div class="Box">
-	    	<h3>Log In</h3>
-				<p>Email address</p>
-	    	<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
-	    	<p>Password</p>
-				<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
-	    	<button class="button" name="Accedi">Accedi</button>
-	  	</div>
+		<form action="../PHP/login.php" method="post">	
+			<div class="Box">
+				<h3>Log In</h3>
+					<p>Email address</p>
+					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
+					<p>Password</p>
+					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
+				<input class="button" name="login" type="submit" value="Accedi">
+			</div>
+		</form>
 		<form action="../PHP/Registrazione++.php" method="post">	
 			<div class="Box">
 					<h3>Registrazione</h3>
