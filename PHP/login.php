@@ -26,7 +26,7 @@ echo $password, " ", $email, " ";
 			print_r($_SESSION['nome']);
 			print_r($_SESSION['cognome']);
 			
-  header( "refresh:4; url=indexx.php" ); 
+  header( "Location=../index.php" ); 
 		}
 	}else{
 		echo "Completa i campi.";
