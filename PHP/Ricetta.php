@@ -1,7 +1,7 @@
 <?php
 //redirect se il parametro di ricerca della query in GET non è settato
 require_once "connection.php";
-require_once "stampe.php";
+require_once "stampeOggetti.php";
 $ConnessioneAttiva = new DBAccess();
 $var=$ConnessioneAttiva->openConnectionlocal();
 

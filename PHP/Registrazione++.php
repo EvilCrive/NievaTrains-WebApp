@@ -10,7 +10,7 @@ $email=$_POST['Mail'];
 echo $username," ", $password, " ", $nome, " ", $cognome, " ", $email;
 	//errori
 	if(!empty($username) || !empty($password) || !empty($nome) || !empty($cognome) 
-		|| !empty($email)){
+		|| !empty($email)) {
 		
 		if($var)
 		{
