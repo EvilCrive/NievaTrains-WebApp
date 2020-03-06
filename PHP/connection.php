@@ -21,7 +21,7 @@ class DBAccess{
 	public function getQuery($query) {
 		$result =$this->connection->query($query);
         if(!$result) {
-            throw new Exception("errore query");
+            throw new Exception("errore getQuery");
         }
         $lista_return = [];
         if($result->num_rows > 0) {
@@ -34,7 +34,10 @@ class DBAccess{
             return null;
     }
 	
-	
+	public function exeQuery($query) {
+		$result=connection->query($query);
+		if(!$result)	throw new Exception("errore executeQuery");		
+	}
 
 }
 
