@@ -46,7 +46,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 			</div>
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
 				<a href=""><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
-				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
+				<a href="../HTML/Registrazione.html"><img id="user_logo" src="../immagini/account.png" alt="user logo"/></a>
 				<form class="topnav" action="../PHP/ricerca.php" method="post">
 		 			<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata">
 					<button class="button" name="cerca">Cerca</button>

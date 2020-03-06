@@ -18,7 +18,7 @@ echo $username," ", $password, " ", $nome, " ", $cognome, " ", $email;
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
 			
 
-			$ConnessioneAttiva->getQuery($query);
+			$ConnessioneAttiva->exeQuery($query);
 			echo "Fantastico!","La tua iscrizione è avvenuta con successo. Tra qualche secondo ti mando alla Home.";
 			session_start();
 			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
