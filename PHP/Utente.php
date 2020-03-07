@@ -26,7 +26,7 @@ $finale = file_get_contents("../txt/Utente.html");
 
 //sostituzioni:
 $finale=str_replace("%%Nome",stampaUsername($utente),$finale); 
-$finale=str_replace("%%Immagine",stampaImmagine($utente),$finale);
+$finale=str_replace("%%Immagine",stampaImmagineUtente($utente),$finale);
 $finale=str_replace("%%LivelloTopFan",stampaLivelloTopFan($utente),$finale);
 $finale=str_replace("%%CognomeUsernameBio",stampaNomeCognomeUsernameBio($utente),$finale);
 $finale=str_replace("%%Followers",stampaFollowers($followers),$finale);

@@ -52,8 +52,11 @@ function stampaUsername($results) {
 function stampaNome($results) {
 	return $results[0]["Nome"];
 }
-function stampaImmagine($results) {
-	return '<img id="userImg" src="../immagini/'.$results[0]["Nome_Immagine"].'" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+function stampaImmagineUtente($results) {
+	return '<img id="userImg" src="../immagini/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+}
+function stampaImmagineRicetta($results) {
+	return '<img id="img_ricetta" src="../Database/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
 function stampaLivelloTopFan($results) {
 	$var= '<button class="button2">Livello: '.$results[0]["Livello"].'</button>';
