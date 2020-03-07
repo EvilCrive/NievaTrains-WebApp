@@ -14,6 +14,7 @@ class DBAccess{
 		}
 		return true;
 	}
+	
 	public function closeConnection() {
 		if ($this->connectionOpen) mysqli_close($this->connection);
     }
@@ -21,7 +22,7 @@ class DBAccess{
 	public function getQuery($query) {
 		$result =$this->connection->query($query);
         if(!$result) {
-            throw new Exception("errore getQuery");
+            throw new Exception("errore query");
         }
         $lista_return = [];
         if($result->num_rows > 0) {
@@ -34,10 +35,7 @@ class DBAccess{
             return null;
     }
 	
-	public function exeQuery($query) {
-		$result=$this->connection->query($query);
-		if(!$result)	throw new Exception("errore executeQuery");		
-	}
+	
 
 }
 
