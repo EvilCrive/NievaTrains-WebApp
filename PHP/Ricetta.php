@@ -18,7 +18,7 @@ $commenti=$connessione->getQuery("SELECT U.Nome, U.Cognome, U.Nome_Immagine, C.T
 //getquery correlate(categoria)
 $cat=$ricetta[0]['Macro_Categoria'];
 $correlate=$connessione->getQuery("SELECT * FROM ricetta WHERE Macro_Categoria='$cat';");
-
+$connessione->closeConnection();
 //file html
 $finale = file_get_contents("../txt/Ricetta.html");
 

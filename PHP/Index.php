@@ -10,6 +10,7 @@ $consigliate=$connessione->getQuery("SELECT R.Descrizione_Immagine, R.Nome_Immag
 								FROM Ricetta AS R JOIN Voto AS V ON R.Id_Ricetta=V.Id_Ricetta
 								GROUP BY R.Nome
 								ORDER BY Numero_Voti DESC;");
+$connessione->closeConnection();
 //generazione numero random
 $num=rand(0,sizeof($consigliate)-1);
 

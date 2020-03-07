@@ -20,7 +20,7 @@ $followers=$connessione->getQuery("SELECT U.Username
 $preferite=$connessione->getQuery("SELECT R.Nome, R.Introduzione, R.Nome_Immagine, R.Descrizione_Immagine
 			FROM Preferiti AS P JOIN Ricetta AS R ON P.Id_Ricetta=R.Id_Ricetta
 			WHERE P.Id_Utente=$ID;");
-
+$connessione->closeConnection();
 //file html	
 $finale = file_get_contents("../txt/Utente.html");
 

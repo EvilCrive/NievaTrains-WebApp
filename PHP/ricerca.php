@@ -15,7 +15,7 @@ else {
 }
 //getquery ricerca(stringa cercata)
 $ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa';");
-
+$connessione->closeConnection();
 //file html	
 $finale = file_get_contents("../txt/Ricerca.html");
 

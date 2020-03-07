@@ -16,7 +16,7 @@ class DBAccess{
 	}
 	
 	public function closeConnection() {
-		if ($this->connectionOpen) mysqli_close($this->connection);
+		if ($this->connection) mysqli_close($this->connection);
     }
 	
 	public function getQuery($query) {
