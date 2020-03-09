@@ -2,15 +2,19 @@
 require_once "connection.php";
 $ConnessioneAttiva = new DBAccess();
 $var=$ConnessioneAttiva->openConnectionlocal();
-$username=$_POST['Username'];
 $password=$_POST['password'];
-$nome=$_POST['Nome'];
-$cognome=$_POST['Cognome'];
 $email=$_POST['email'];
+$tmp=0;
+if($_POST['button']=="Accedi") $tmp=0;
+if($_POST['button']=="Registrati") $tmp=1;
 	//errori
 if($var){
-	if(!empty($password) || !empty($email)){
-		if(!empty($username) || !empty($password) || !empty($nome) || !empty($cognome) || !empty($email)) {	
+	if($tmp){
+		//registrazione
+		$nome=$_POST['Nome'];
+		$cognome=$_POST['Cognome'];
+		$username=$_POST['Username'];
+		if(!empty($username) && !empty($password) && !empty($nome) && !empty($cognome) && !empty($email)) {	
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
 			$ConnessioneAttiva->exeQuery($query);
 			echo "Fantastico!","La tua iscrizione è avvenuta con successo. Tra qualche secondo ti mando alla Home.";
@@ -22,14 +26,17 @@ if($var){
 			$_SESSION['username'] = $username;
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:4; url=../../index.php" ); 	
+			header( "refresh:10; url=../../index.php" ); 	
 		}else{
 			echo "Completa i campi.";
 			die();
 		}
-	
-			$query = "SELECT* FROM utente WHERE Mail='$email' AND Password='$password';";
-			$r=$ConnessioneAttiva->getQuery($query);
+	}else{
+		//login
+		$query = "SELECT* FROM utente WHERE Mail='$email' AND Password='$password';";
+		$r=$ConnessioneAttiva->getQuery($query);
+		if($r){
+			//echo "nice";
 			session_start();
 			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
 			$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome FROM Utente WHERE Mail='$email'");
@@ -38,17 +45,14 @@ if($var){
 			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			
-			print_r($_SESSION['nome']);
-			print_r($_SESSION['cognome']);
-			
-			header( "Location=../index.php" ); 
-		
-	}else{
+			header( "refresh:10 url=../index.php" );
+		}else{
+			//echo "rip";
+			header("refresh:10; url=../index.php");
+		}
+	}		
+}else{
 		echo "Completa i campi.";
 		die();
-	}
 }	
-
-
 ?>
