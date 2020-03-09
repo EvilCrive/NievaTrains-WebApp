@@ -7,8 +7,6 @@ $password=$_POST['password'];
 $nome=$_POST['Nome'];
 $cognome=$_POST['Cognome'];
 $email=$_POST['email'];
-if(!$password)	$password=$_POST['Password'];
-if(!$email)		$email=$_POST['Mail'];
 	//errori
 if($var){
 	if(!empty($password) || !empty($email)){

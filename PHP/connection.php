@@ -34,7 +34,11 @@ class DBAccess{
         else
             return null;
     }
-	
+	public function exeQuery($query) {
+		$result=$this->connection->query($query);
+		if(!$result)	throw new Exception("errore executeQuery");		
+	}
+
 	
 
 }
