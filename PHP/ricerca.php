@@ -2,32 +2,36 @@
 require_once "connection.php";
 require_once "stampe.php";
 
-//apertura connessione
-$connessione=new DBAccess();
-if(!$connessione->openConnectionLocal()) echo 'errore';
-
-//estrazioni variabili dalla post(stringa cercata)
-$passaggio=true;
-if(isset($_POST["stringaCercata"])) $stringa=$_POST["stringaCercata"];
-else {
-	$stringa="";
-	$passaggio=false;
-}
-//getquery ricerca(stringa cercata)
-$ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa';");
-$connessione->closeConnection();
-//file html	
 $finale = file_get_contents("../txt/Ricerca.html");
 
-//sostituzioni:
-// %%HeaderRicerca(ricerca)
-$finale=str_replace("%%HeaderRicerca",stampaHeaderRicerca($ricerca,$stringa),$finale);
-// %%Ricette(ricerca)
-$finale=str_replace("%%Ricette",stampaRicette($ricerca),$finale);
-// %%Utenti(ricerca)
-$finale=str_replace("%%Utenti",stampaUtenti($ricerca),$finale);
+//apertura connessione
+$connessione=new DBAccess();
+try{
+	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
-//echo dell'html finale
-echo $finale;
+	//estrazioni variabili dalla post(stringa cercata)
+	$passaggio=true;
+	if(isset($_POST["stringaCercata"])) $stringa=$_POST["stringaCercata"];
+	else $stringa="";
+	$ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa';");
+	$connessione->closeConnection();
 
+
+	//sostituzioni:
+	if(!$ricerca){
+		$finale=str_replace("%%HeaderRicerca","",$finale);
+		$finale=str_replace("%%Ricette",stampaInfoBox("Ricette"),$finale);
+		$finale=str_replace("%%Utenti",stampaInfoBox("Utenti"),$finale);
+	}
+	else {
+		if($stringa==="") $finale=str_replace("%%HeaderRicerca",stampaHeaderRicerca($ricerca,$stringa),$finale);
+		else $finale=str_replace("%%HeaderRicerca",stampaHeaderRicerca($ricerca,$stringa),$finale);
+		$finale=str_replace("%%Ricette",stampaRicette($ricerca),$finale);
+		$finale=str_replace("%%Utenti",stampaUtenti($ricerca),$finale);
+	}
+	echo $finale;
+}catch(Exception $eccezione){
+	echo $eccezione;
+	$connessione->closeConnection();
+}
 ?>

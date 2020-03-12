@@ -4,10 +4,11 @@ require_once "stampe.php";
 
 //apertura connessione
 $connessione=new DBAccess();
-if(!$connessione->openConnectionLocal()) echo 'errore';
+try{
+if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
 
-if(isset($_GET["Id_Ricetta"])) {
+if(isset($_GET["Id_Utente"])) {
 //estrazioni variabili dalla get(id utente)
 	$ID=$_GET["Id_Utente"];
 //getquery utente(id)
@@ -38,4 +39,8 @@ else {
 	header( "refresh:0; url=./Ricerca.php" );
 }
 $connessione->closeConnection();
+}catch(Exception $eccezione){
+	echo $eccezione;
+	$connessione->closeConnection();
+}
 ?>

@@ -35,14 +35,18 @@ function stampaSpeciale($result) {
 	return $var;
 }
 function stampaHeaderRicerca($results,$stringa) {
-	$var= '<div id="ricercatext">';
-	$var.= '	<h3>Ricerca per: '.$stringa.'</h3>';
-	$var.= '	<p></p> ';
+	$var='<div id="infoBox" class="clear row">';
+	$var.= '<div id="ricercatext">';
+	if(!$stringa=="") {
+		$var.= '	<h3>Ricerca per: </h3>';
+		$var.= '	<p>'.$stringa.'</p> ';
+	}
+	else $var.= '	<h3>Tutte le ricette</h3>';
 	$var.= '</div>';
 	$var.= '<div id="nrisultati">';
 	$var.= '	<p>'.sizeof($results).' risultati </p>';
 	$var.= '</div>';
-	
+	$var.='</div>';
 	return $var;
 }
 
@@ -128,6 +132,15 @@ function stampaCommenti($results) {
 	
 	return $var;
 }
+
+function stampaInfoBox($testo){
+	$var='<div id="infoBox" class="clear row">';
+	$var.='	<h2>Non ci sono '.$testo.' corrispondenti ai parametri di ricerca</h2>';
+	$var.='</div>';
+	
+	return $var;
+}
+
 function stampaIngredienti($results) { return 'ingredienti';}
 function stampaUtenti($results) {} //da fare
 ?>
