@@ -206,3 +206,73 @@ SET Bio=$Bio
 WHERE Id_Utente=$Id_Utente;
 END |
 DELIMITER ;
+
+
+-- TRIGGER
+
+-- il voto di una ricetta viene aggiornato dopo l'assegnamento del voto di un utente
+DROP TRIGGER IF EXISTS Calcolo_Voto;
+
+DELIMITER |
+CREATE TRIGGER Calcolo_Voto
+BEFORE INSERT ON Voto
+FOR EACH ROW
+BEGIN 
+DECLARE aux decimal(2,1);
+SELECT Voto INTO aux FROM Ricetta WHERE Id_Ricetta=new.Id_Ricetta;
+IF (aux IS NULL OR aux=0)
+THEN
+UPDATE Ricetta
+SET Ricetta.Voto=new.Voto
+WHERE Ricetta.Id_Ricetta=new.Id_Ricetta;
+ELSE
+UPDATE Ricetta
+SET Ricetta.Voto=(Ricetta.Voto+new.Voto)/2
+WHERE Ricetta.Id_Ricetta=new.Id_Ricetta;
+END IF;
+END |
+DELIMITER ;
+
+-- il numero di like di un commento viene incrementato di uno dopo l'assegnamento di un mi piace al commento da parte di un utente
+DROP TRIGGER IF EXISTS Aggiungi_Like_C;
+
+DELIMITER |
+CREATE TRIGGER Aggiungi_Like_C
+AFTER INSERT ON Likes
+FOR EACH ROW
+BEGIN
+UPDATE Commento
+SET Commento.Numero_Like=Commento.Numero_Like+1
+WHERE Commento.Id_Commento=new.Id_Commento;
+END |
+DELIMITER ;
+
+-- il numero di like ricevuti da un utente viene incrementato di uno dopo l'assegnamento di un mi piace ad uno dei suoi commenti
+DROP TRIGGER IF EXISTS Aggiungi_Like_U;
+
+DELIMITER |
+CREATE TRIGGER Aggiungi_Like_U
+AFTER INSERT ON Likes
+FOR EACH ROW
+BEGIN
+DECLARE aux integer;
+SELECT C.Id_Utente INTO aux from Commento as C WHERE C.Id_Commento=new.Id_Commento;
+UPDATE Utente
+SET Utente.Like_Ricevuti=Utente.Like_Ricevuti+1
+WHERE Utente.Id_Utente=aux;
+END |
+DELIMITER ;
+
+-- il numero di commenti scritti da un utente viene incrementato di uno dopo che l'utente ha scritto un nuovo commento
+DROP TRIGGER IF EXISTS Incrementa_Commenti_Utente
+
+DELIMITER |
+CREATE TRIGGER Incrementa_Commenti_Utente
+AFTER INSERT ON Commento
+FOR EACH ROW
+BEGIN 
+UPDATE Utente
+SET Commenti_Scritti=Commenti_Scritti+1
+WHERE Utente.Id_Utente=new.Id_Utente;
+END |
+DELIMITER ;
