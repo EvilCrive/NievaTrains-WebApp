@@ -41,7 +41,7 @@ Id_Ricetta integer auto_increment PRIMARY KEY,
 Macro_Categoria varchar(20) not null,
 Categoria varchar(20) not null,
 Nome varchar(30) not null,
-Voto decimal(2,1) default 0,
+Voto decimal(2,1) default NULL,
 Calorie integer not null,
 Difficoltà varchar(20) not null,
 Tempo_Preparazione smallint not null,
@@ -691,7 +691,7 @@ CREATE TABLE Voto
 (
 Id_Utente integer,
 Id_Ricetta integer,
-Voto tinyint,
+Voto decimal(2,1),
 PRIMARY KEY(Id_Utente,Id_Ricetta),
 FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
 FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
