@@ -220,7 +220,7 @@ FOR EACH ROW
 BEGIN 
 DECLARE aux decimal(2,1);
 SELECT Voto INTO aux FROM Ricetta WHERE Id_Ricetta=new.Id_Ricetta;
-IF (aux IS NULL OR aux=0)
+IF (aux IS NULL)
 THEN
 UPDATE Ricetta
 SET Ricetta.Voto=new.Voto
