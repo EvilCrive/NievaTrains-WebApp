@@ -516,6 +516,9 @@ display: flex;
 .button{
   margin-top: 15px;
 }
+#errors p{
+	text-align: center;
+}
 /*utente*/
 .rowUtente{
   max-width: 1400px;

@@ -67,6 +67,9 @@
   margin: 0 auto;
   margin: 30px;
 }
+#errors p{
+	text-align: center;
+}
 /*dropdown*/
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
