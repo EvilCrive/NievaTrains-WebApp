@@ -1,6 +1,7 @@
 <?php
 require_once "connection.php";
 require_once "stampe.php";
+session_start();
 //apertura connessione
 //$connessione=new DBAccess();
 //if(!$connessione->openConnectionLocal()) echo 'errore';
@@ -13,11 +14,15 @@ require_once "stampe.php";
 
 //file html	
 $finale = file_get_contents("../txt/Registrazione.html");
-	
+if($_SESSION['Fail']){}
+$a="" .$_SESSION['fail']. "";
+$b="" .$_SESSION['Fail']. "";
 //sostituzioni:
-//$finale=str_replace("%%Speciale",stampaSpeciale($consigliate[$num]),$finale);
-//$finale=str_replace("%%Ricette",stampaRicette($consigliate),$finale);
+
+$finale=str_replace("%b",$a,$finale);
+$finale=str_replace("%a",$b,$finale);
 
 //echo dell'html finale
-echo $finale
+echo $finale;
+if($a=="Errore Login")	echo $a;
 ?>

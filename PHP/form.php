@@ -26,10 +26,14 @@ if($var){
 			$_SESSION['username'] = $username;
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:10; url=../../index.php" ); 	
+			header( "refresh:10; url=../../Index.php" ); 	
 		}else{
 			echo "Completa i campi.";
-			die();
+			
+			header("refresh:1; url=../PHP/Registrazione.php");
+			session_start();
+			$_SESSION['Fail']="Errore registrazione";
+			$_SESSION['fail']="";
 		}
 	}else{
 		//login
@@ -45,10 +49,14 @@ if($var){
 			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:10 url=../index.php" );
+			header( "refresh:10 url=./Index.php" );
 		}else{
 			//echo "rip";
-			header("refresh:10; url=../index.php");
+			header("refresh:1; url=./Registrazione.php");
+			session_start();
+			$_SESSION['fail']="Errore login";
+			$_SESSION['Fail']="";
+			
 		}
 	}		
 }else{

@@ -23,7 +23,7 @@ try{
 	$finale=str_replace("%%Ricette",stampaRicette($consigliate),$finale);
 
 	//echo dell'html finale
-	echo $finale
+	echo $finale;
 }catch(Exception $eccezione){
 	echo $eccezione;
 	$connessione->closeConnection();
