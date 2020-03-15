@@ -69,6 +69,7 @@
 }
 #errors p{
 	text-align: center;
+	color: red;
 }
 /*dropdown*/
 @media screen and (max-height: 450px) {

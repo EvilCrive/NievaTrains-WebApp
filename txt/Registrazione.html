@@ -81,7 +81,9 @@
 					<p>Password</p>
 					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
 				<input class="button" name="button" type="submit" value="Accedi">
-				<p>%b</p>
+				<div id="errors">
+					<p>%b</p>
+				</div>
 			</div>
 		</form>
 		<form action="../PHP/form.php" method="post">	
@@ -100,7 +102,9 @@
 				<p>Ripeti Password</p>
 				<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm PassWord">
 				<input type="submit" name="button" class="button" value="Registrati">
+				<div id="errors">
 				<p>%a</p>
+				</div>
 			</div>
 		</form>
 		</div>
