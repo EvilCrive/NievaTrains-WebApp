@@ -8,3 +8,4 @@ Cose da fare:
 	-bottoni per l'admin
 	-css delle stampe
 	-pagina 404
+	-sistemare link vari
