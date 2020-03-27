@@ -14,10 +14,21 @@ session_start();
 
 //file html	
 $finale = file_get_contents("../txt/Registrazione.html");
-if($_SESSION['Fail']){}
-$b="" .$_SESSION['fail']. "";
-$a="" .$_SESSION['Fail']. "";
-$c="" .$_SESSION['errors']. "";
+if(isset($_SESSION['Fail'])){
+	$a="" .$_SESSION['Fail']. "";
+}else{
+	$a="";
+}
+if(isset($_SESSION['fail'])){
+	$b="" .$_SESSION['fail']. "";
+}else{
+	$b="";
+}
+if(isset($_SESSION['errors'])){
+	$c="" .$_SESSION['errors']. "";
+}else{
+	$c="";
+}
 //sostituzioni:
 
 $finale=str_replace("%b",$b,$finale);
