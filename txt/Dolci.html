@@ -29,39 +29,39 @@
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Antipasti</a></li>
-						<li><a href="#">Primi</a></li>
-						<li><a href="#">Secondi</a></li>
-						<li><a href="#">Dolci</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="../txt/Index.html">Home</a></li>
+						<li><a href="../txt/Antipasti.html">Antipasti</a></li>
+						<li><a href="../txt/Primi.html">Primi</a></li>
+						<li><a href="../txt/Secondi.html">Secondi</a></li>
+						<li><a href="../txt/Dolci.html">Dolci</a></li>
+						<li><a href="../txt/about.html">About</a></li>
 					</ul>
 			</div>
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
-				<a href=""><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
-				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
+				<a href="../txt/Index.html"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
+				<a href="../PHP/Utente.php"><img id="user_logo" src="../immagini/account.png" alt="user logo"/></a>
 				<form class="topnav" action="../PHP/ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata">
+					<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
 				</form>
 			</div>
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="" target="_top">Home</a></li>
-					<li><a href="" target="_top">Antipasti</a></li>
-					<li><a href="" target="_top">Primi</a></li>
-					<li><a href="" target="_top">Secondi</a></li>
-					<li class="active"><a href="" target="_top">Dolci</a></li>
-					<li class="stayright"><a href="" target="_top">About</a></li>
+					<li><a href="../txt/Index.html" target="_top">Home</a></li>
+					<li><a href="../txt/Antipasti.html" target="_top">Antipasti</a></li>
+					<li><a href="../txt/Primi.html" target="_top">Primi</a></li>
+					<li><a href="../txt/Secondi.html" target="_top">Secondi</a></li>
+					<li class="active"><a href="../txt/Dolci.html" target="_top">Dolci</a></li>
+					<li class="stayright"><a href="../txt/about.html" target="_top">About</a></li>
 				<ul>
 			</div>
 		</div>
 	<!--breadcrumb-->
 		<div id="breadcrumb">
 			<ul>
-				<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span>-&gt; Dolci</li>
-				<li class="stayright"><a href="#">Vai al Contenuto</a></li>
+				<li>Ti trovi in: <span xml:lang="en"><a href="../txt/Index.html">Home</a></span> -&gt; <a href="../txt/Dolci.html">Dolci</a></li>
+				<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
 			</ul>
 		</div>
 <div id="content">
@@ -83,7 +83,7 @@
 	<!--END PAGE CONTENT-->
 <!--Bottone arrow up-->
 <div id="tornasu">
-	<img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" href="#" />
+	<a href="#content"><img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" /></a>
 </div>
 <div id="footer">
 
@@ -92,7 +92,7 @@
 	</div>
 		<ul>
 			<li>&copy; 2019 Orange Tango Inc.</li>
-			<li><a href="" lang="en">Facebook</a><span>&nbsp;</span><a href="" lang="en">Instagram</a><span>&nbsp;</span><a href="" lang="en">About</a></li>
+			<li><a href="http://www.facebook.com" lang="en">Facebook</a><span>&nbsp;</span><a href="http://wwww.instagram.com" lang="en">Instagram</a><span>&nbsp;</span><a href="../txt/about.html" lang="en">About</a></li>
 		</ul>
 	<div id="validity">
 		<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
