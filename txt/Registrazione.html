@@ -30,39 +30,39 @@
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Antipasti</a></li>
-						<li><a href="#">Primi</a></li>
-						<li><a href="#">Secondi</a></li>
-						<li><a href="#">Dolci</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="../txt/Index.html">Home</a></li>
+						<li><a href="../txt/Antipasti.html">Antipasti</a></li>
+						<li><a href="../txt/Primi.html">Primi</a></li>
+						<li><a href="../txt/Secondi.html">Secondi</a></li>
+						<li><a href="../txt/Dolci.html">Dolci</a></li>
+						<li><a href="../txt/about.html">About</a></li>
 					</ul>
 			</div>
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
-				<a href=""><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
-				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
+				<a href="../txt/Index.html"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
+				<a href="../PHP/Utente.php"><img id="user_logo" src="../immagini/account.png" alt="user logo"/></a>
 				<form class="topnav" action="../PHP/ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata">
+		 			<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
 				</form>
 			</div>
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="" target="_top">Home</a></li>
-					<li><a href="" target="_top">Antipasti</a></li>
-					<li><a href="" target="_top">Primi</a></li>
-					<li><a href="" target="_top">Secondi</a></li>
-					<li><a href="" target="_top">Dolci</a></li>
-					<li class="stayright"><a  class="active" href="" target="_top">About</a></li>
+					<li><a href="../txt/Index.html" target="_top">Home</a></li>
+					<li><a href="../txt/Antipasti.html" target="_top">Antipasti</a></li>
+					<li><a href="../txt/Primi.html" target="_top">Primi</a></li>
+					<li><a href="../txt/Secondi.html" target="_top">Secondi</a></li>
+					<li><a href="../txt/Dolci.html" target="_top">Dolci</a></li>
+					<li class="stayright"><a href="../txt/about.html" target="_top">About</a></li>
 				<ul>
 			</div>
 		</div>
 	<!--breadcrumb-->
 		<div id="breadcrumb">
 			<ul>
-				<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; About</li>
-				<li class="stayright"><a href="#">Vai al Contenuto</a></li>
+				<li>Ti trovi in: <span xml:lang="en"><a href="../txt/Index.html">Home</a></span> -&gt; <a href="../txt/Registrazione.html">Registrazione &amp; Login</a></li>
+				<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
 			</ul>
 		</div>
 		<!--END TOP OF THE PAGE-->
@@ -73,38 +73,38 @@
 	<!--START PAGE CONTENT-->
 	<div id="content">
 		<div id="boxwrapper">
-		<form action="../PHP/form.php" method="post">	
+		<form action="../PHP/form.php" method="post">
 			<div class="Box">
 				<h3>Log In</h3>
-					<p>Email address</p>
+					<p>Email</p>
 					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
 					<p>Password</p>
 					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
-				<input class="button" name="button" type="submit" value="Accedi">
-				<div id="errors">
-					<p>%b</p>
-				</div>
+					<input class="button" name="button" type="submit" value="Accedi">
+					<div id="errors">
+						<p>%b</p>
+					</div>
 			</div>
 		</form>
-		<form action="../PHP/form.php" method="post">	
+		<form action="../PHP/form.php" method="post">
 			<div class="Box">
 					<h3>Registrazione</h3>
-				<p>Email address</p>
-				<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
-				<p>Nome</p>
-				<input class="inputbar" type="text" name="Nome" id="Nome" placeholder="Nome">
-				<p>Cognome</p>
-				<input class="inputbar" type="text" name="Cognome" id="Cognome" placeholder="Cognome">
-				<p>Username</p>
-				<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
-				<p>Password</p>
-				<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
-				<p>Ripeti Password</p>
-				<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm PassWord">
-				<input type="submit" name="button" class="button" value="Registrati">
-				<div id="errors">
-				<p>%a</p>
-				</div>
+					<p>Email</p>
+					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
+					<p>Nome</p>
+					<input class="inputbar" type="text" name="Nome" id="Nome" placeholder="Nome">
+					<p>Cognome</p>
+					<input class="inputbar" type="text" name="Cognome" id="Cognome" placeholder="Cognome">
+					<p>Username</p>
+					<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
+					<p>Password</p>
+					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
+					<p>Conferma Password</p>
+					<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm PassWord">
+					<input type="submit" name="button" class="button" value="Registrati">
+					<div id="errors">
+						<p>%a</p>
+					</div>
 			</div>
 		</form>
 		</div>
@@ -115,7 +115,7 @@
 	<!--END PAGE CONTENT-->
 	<!--Bottone arrow up-->
 	<div id="tornasu">
-		<img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" href="#" />
+		<a href="#content"><img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" /></a>
 	</div>
 	<div id="footer">
 
@@ -124,7 +124,7 @@
 		</div>
 			<ul>
 				<li>&copy; 2019 Orange Tango Inc.</li>
-				<li><a href="" lang="en">Facebook</a><span>&nbsp;</span><a href="" lang="en">Instagram</a><span>&nbsp;</span><a href="" lang="en">About</a></li>
+				<li><a href="http://www.facebook.com" lang="en">Facebook</a><span>&nbsp;</span><a href="http://wwww.instagram.com" lang="en">Instagram</a><span>&nbsp;</span><a href="../txt/about.html" lang="en">About</a></li>
 			</ul>
 		<div id="validity">
 			<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
