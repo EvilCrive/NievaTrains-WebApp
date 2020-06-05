@@ -26,18 +26,14 @@ if($tmp){
 	if (!($_POST['confirmpassword']==$_POST['password'])){$errors.= ", Password e confermaPassword sbagliate";}
 
 }
-//$errors.=".";
+
 if($var){
 	if($tmp){
 		//registrazione
 		$controlquery="SELECT Username,Mail FROM utente WHERE Mail='$email' OR Username='$username';";
-		
-
-		echo $email;
-		echo " ";
-		echo $username;
 		if($ConnessioneAttiva->getQuery($controlquery)){
-			echo "esiste gia";
+			//controllo per utenti gia' iscritti
+			echo "Questo utente esiste gia";
 			header("refresh:1; url=../PHP/Registrazione.php");
 			$_SESSION['Fail']="Questo utente e' gia' registrato.";
 			$_SESSION['fail']="";
