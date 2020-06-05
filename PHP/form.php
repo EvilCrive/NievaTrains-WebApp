@@ -71,8 +71,8 @@ if($var){
 			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			echo "Benissimo! Hai fatto l'accesso."
-			header( "refresh:1 url=./Index.php" );
+			echo "Benissimo! Hai fatto l'accesso.";
+			header("refresh:100; url=./Index.php");
 		}else{
 			//echo "rip";
 			header("refresh:1; url=./Registrazione.php");
