@@ -3,6 +3,7 @@ require_once "connection.php";
 require_once "stampe.php";
 //apertura connessione
 $connessione=new DBAccess();
+
 try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
@@ -10,7 +11,7 @@ try{
 		$cat=$_GET["Categoria"];
 
 	//getquery correlate(categoria)
-		$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='$cat';");
+		$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='$cat' OR Categoria='$cat';");
 		if(!$consigliate) throw new Exception("Categoria sbagliata");
 	//file html	
 		$finale=file_get_contents('../txt/'.$cat.'.html');
@@ -23,11 +24,11 @@ try{
 		echo $finale;
 	}
 	else {
-		throw new Exception("No get");
+		throw new Exception("No parameter get");
 	}
 	$connessione->closeConnection();
 }catch(Exception $eccezione){
-	header( "refresh:0; url=./Ricerca.php" );
+	echo file_get_contents('../txt/ErroreCategorie.html'); 
 	$connessione->closeConnection();
 }
 ?>
