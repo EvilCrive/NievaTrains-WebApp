@@ -33,7 +33,15 @@ Descrizione_Immagine varchar(250) not null
 INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Like_Ricevuti,Commenti_Scritti,Livello,Top_Fan,is_Admin,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
 ('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini',0,0,0,false,false,'immagine_giacomino','Giacomino','Immagine profilo di Giacomo Poretti'),
 ('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante',0,0,0,false,false,'immagine_davidone','Davidone','Immagine profilo di Davide Carlet'),
-('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia',0,0,0,false,false,'immagine_chiara','chiaraperin','Immagine profilo di Chiara Perin');
+('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia',0,0,0,false,false,'immagine_chiaraperin','chiaraperin','Immagine profilo di Chiara Perin'),
+('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla cucina',0,0,0,false,false,'immagine_pippofranco','pippofranco','Immagine profilo di Pippo Franco'),
+('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Ex veterinario, ora mi diletto nel preparare ottimi piatti a mia moglie',0,0,0,false,false,'immagine_giorgioandrea','giorgioandrea','Immagine profilo di Giorgio Andrea'),
+('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione',0,0,0,false,false,'immagine_stefaniarossi','stefaniarossi','Immagine profilo di Stefania Rossi'),
+('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.',0,0,0,false,false,'immagine_giuliaverdi','giuliaverdi','Immagine profilo di Giulia Verdi'),
+('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',0,0,0,false,false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
+('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',0,0,0,false,false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
+('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',0,0,0,false,false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas');
+
 
 CREATE TABLE Ricetta
 (
@@ -646,7 +654,37 @@ INSERT INTO Commento(Testo,Data,Numero_Like,Id_Utente,Id_Ricetta) VALUES
 ('Impegnativi per un principiante ma buoni',CURRENT_TIMESTAMP,0,2,14),
 ('Con questi arancini ho stupito tutti i miei amici xd',CURRENT_TIMESTAMP,0,3,1),
 ('Il miglior tiramisù di sempre',CURRENT_TIMESTAMP,0,3,8),
-('Ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,0,3,2);
+('Ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,0,3,2),
+('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,4),
+('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,10),
+('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,17),
+('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,19),
+('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,6),
+('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,7),
+('Tiramisù fantastico',CURRENT_TIMESTAMP,0,5,8),
+('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,15),
+('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,20),
+('Top ricetta',CURRENT_TIMESTAMP,0,6,9),
+('Top ricetta',CURRENT_TIMESTAMP,0,6,13),
+('Top ricetta',CURRENT_TIMESTAMP,0,6,14),
+('Top ricetta',CURRENT_TIMESTAMP,0,6,16),
+('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,11),
+('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,15),
+('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,19),
+('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,12),
+('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,1),
+('Pizzette fantatiche',CURRENT_TIMESTAMP,0,8,5),
+('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,6),
+('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,11),
+('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,18),
+('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,4),
+('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,10),
+('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,13),
+('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,20),
+('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,7),
+('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,9),
+('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,12),
+('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,15);
 
 
 CREATE TABLE Follow
@@ -661,8 +699,24 @@ FOREIGN KEY (Id_Utente2) REFERENCES Utente(Id_Utente) ON DELETE CASCADE
 INSERT INTO Follow(Id_Utente1,Id_Utente2) VALUES
 (1,2),
 (1,3),
+(1,7),
+(1,9),
 (2,1),
-(3,1);
+(2,10),
+(3,6),
+(3,8),
+(4,5),
+(4,8),
+(5,10),
+(6,1),
+(6,7),
+(7,1),
+(7,6),
+(8,3),
+(8,4),
+(9,1),
+(10,2),
+(10,5);
 
 CREATE TABLE Likes
 (
@@ -681,7 +735,15 @@ INSERT INTO Likes(Id_Utente,Id_Commento) VALUES
 (2,1),
 (2,8),
 (3,1),
-(3,4);
+(3,4),
+(4,2),
+(4,20),
+(6,18),
+(10,26),
+(10,14),
+(5,22),
+(6,19),
+(9,17);
 
 
 CREATE TABLE Voto
@@ -739,4 +801,21 @@ INSERT INTO Preferiti(Id_Utente,Id_Ricetta) VALUES
 (2,1),
 (2,2),
 (3,2),
-(3,8);
+(3,8),
+(4,4),
+(4,7),
+(4,11),
+(4,14),
+(5,16),
+(5,20),
+(6,12),
+(6,18),
+(7,5),
+(7,6),
+(8,9),
+(8,10),
+(9,13),
+(9,15),
+(10,17),
+(10,19);
+

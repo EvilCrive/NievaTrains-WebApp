@@ -26,10 +26,20 @@ if($tmp){
 	if (!($_POST['confirmpassword']==$_POST['password'])){$errors.= ", Password e confermaPassword sbagliate";}
 
 }
-$errors.=".";
+
 if($var){
 	if($tmp){
 		//registrazione
+		$controlquery="SELECT Username,Mail FROM utente WHERE Mail='$email' OR Username='$username';";
+		if($ConnessioneAttiva->getQuery($controlquery)){
+			//controllo per utenti gia' iscritti
+			echo "Questo utente esiste gia";
+			header("refresh:1; url=../PHP/Registrazione.php");
+			$_SESSION['Fail']="Questo utente e' gia' registrato.";
+			$_SESSION['fail']="";
+			$_SESSION['errors']=$errors;
+			die();
+		}
 		if(!$errors) {	
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
 			$ConnessioneAttiva->exeQuery($query);
@@ -41,7 +51,7 @@ if($var){
 			$_SESSION['username'] = $username;
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:10; url=../../Index.php" ); 	
+			header( "refresh:2; url=../../Index.php" ); 	
 		}else{
 			header("refresh:1; url=../PHP/Registrazione.php");
 			$_SESSION['Fail']="Completa tutti i campi.";
@@ -61,7 +71,8 @@ if($var){
 			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:10 url=./Index.php" );
+			echo "Benissimo! Hai fatto l'accesso."
+			header( "refresh:1 url=./Index.php" );
 		}else{
 			//echo "rip";
 			header("refresh:1; url=./Registrazione.php");
