@@ -36,11 +36,11 @@ if(isset($_GET["Id_Utente"])) {
 	echo $finale;
 }
 else {
-	header( "refresh:0; url=./Ricerca.php" );
+	throw new Exception("No parameter get");
 }
 $connessione->closeConnection();
 }catch(Exception $eccezione){
-	echo $eccezione;
+	echo file_get_contents('../txt/ErroreUtenti.html'); 
 	$connessione->closeConnection();
 }
 ?>
