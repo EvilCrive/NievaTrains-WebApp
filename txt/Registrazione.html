@@ -19,7 +19,7 @@
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger.js"></script>
-
+	<script src="../JS/validate.js"></script>
 </head>
 <body>
 	<!--header-->
@@ -73,20 +73,19 @@
 	<!--START PAGE CONTENT-->
 	<div id="content">
 		<div id="boxwrapper">
-		<form action="../PHP/form.php" method="post">
+		<form method="POST" action="../PHP/form.php" onsubmit="return ValidateLogIn()" name="loginform">
 			<div class="Box">
 				<h3>Log In</h3>
 					<p>Email</p>
 					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
+					<div id="error_mail" hidden></div>
 					<p>Password</p>
 					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
-					<input class="button" name="button" type="submit" value="Accedi">
-					<div id="errors">
-						<p>%b</p>
-					</div>
+					<div id="error_password" hidden></div>
+					<input class="button" name="button" type="submit" value="Accedi">	
 			</div>
 		</form>
-		<form action="../PHP/form.php" method="post">
+		<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()" name="signupform">
 			<div class="Box">
 					<h3>Registrazione</h3>
 					<p>Email</p>
@@ -100,17 +99,12 @@
 					<p>Password</p>
 					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
 					<p>Conferma Password</p>
-					<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm PassWord">
+					<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
 					<input type="submit" name="button" class="button" value="Registrati">
-					<div id="errors">
-						<p>%a</p>
-					</div>
 			</div>
 		</form>
+		<div id="errors"><p></p></div> <!--errori lato server -->
 		</div>
-	</div>
-	<div id="errors">
-		<p>%c</p>
 	</div>
 	<!--END PAGE CONTENT-->
 	<!--Bottone arrow up-->

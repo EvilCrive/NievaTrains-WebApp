@@ -14,6 +14,9 @@ session_start();
 
 //file html	
 $finale = file_get_contents("../txt/Registrazione.html");
+
+/*   
+* errori comunicati tramite $_SESSION
 if(isset($_SESSION['Fail'])){
 	$a="" .$_SESSION['Fail']. "";
 }else{
@@ -29,12 +32,22 @@ if(isset($_SESSION['errors'])){
 }else{
 	$c="";
 }
-//sostituzioni:
 
-$finale=str_replace("%b",$b,$finale);
+sostituzioni:
 $finale=str_replace("%a",$a,$finale);
 $finale=str_replace("%c",$c,$finale);
+*/
+
+if(isset($_SESSION['fail'])){
+	$b="><p>" .$_SESSION['fail']. "</p></div>";
+}else{
+	$b="></div>";
+}
+
+$finale=str_replace("></div>",$b,$finale);
+
+
 //echo dell'html finale
 echo $finale;
-if($a=="Errore Login")	echo $a;
+//if($a=="Errore Login")	echo $a;
 ?>

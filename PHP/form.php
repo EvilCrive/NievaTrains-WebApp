@@ -34,9 +34,9 @@ if($var){
 		if($ConnessioneAttiva->getQuery($controlquery)){
 			//controllo per utenti gia' iscritti
 			echo "Questo utente esiste gia";
-			header("refresh:1; url=../PHP/Registrazione.php");
-			$_SESSION['Fail']="Questo utente e' gia' registrato.";
-			$_SESSION['fail']="";
+			header("refresh:0; url=../PHP/Registrazione.php");
+			$_SESSION['fail']="Questo utente e' gia' registrato.";
+			
 			$_SESSION['errors']=$errors;
 			die();
 		}
@@ -51,10 +51,10 @@ if($var){
 			$_SESSION['username'] = $username;
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:2; url=../../Index.php" ); 	
+			header( "refresh:0; url=../../Index.php" ); 	
 		}else{
-			header("refresh:1; url=../PHP/Registrazione.php");
-			$_SESSION['Fail']="Completa tutti i campi.";
+			header("refresh:0; url=../PHP/Registrazione.php");
+			
 			$_SESSION['fail']="";
 			$_SESSION['errors']=$errors;
 		}
@@ -72,12 +72,11 @@ if($var){
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
 			echo "Benissimo! Hai fatto l'accesso.";
-			header("refresh:100; url=./Index.php");
+			header("refresh:0; url=./Index.php");
 		}else{
 			//echo "rip";
-			header("refresh:1; url=./Registrazione.php");
+			header("refresh:0; url=./Registrazione.php");
 			$_SESSION['fail']="Email o Password sbagliati.";
-			$_SESSION['Fail']="";
 			$_SESSION['errors']=$errors;
 			
 		}
