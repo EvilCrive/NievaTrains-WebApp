@@ -6,7 +6,7 @@ function ValidateLogIn(){
   var errore_mail="";
   var errore_password="";
 
-
+/*
   //controllo mail
   if(!validateEmail(mail.value)){
     errore_mail="L'e-mail non e' valida.";
@@ -17,7 +17,7 @@ function ValidateLogIn(){
 
   document.getElementById("error_mail_login").textContent=errore_mail;
   document.getElementById("error_mail_login").style.color="red";
-  document.getElementById("error_mail_login").hidden=false;
+  document.getElementById("error_mail_login").hidden=false;*/
   //controllo password
   if(!validatePassword(password.value)){
     errore_password="La password non e' valida";
@@ -78,7 +78,7 @@ function ValidateSignUp(){
   if(name.value.length<3){
     error_surname="Il cognome e' troppo corto";
   }
-  if(name.value.length>16){
+  if(name.value.length>12){
     error_surname="Il cognome e' troppo lungo.";
   }
   document.getElementById("error_surname").textContent=error_surname;

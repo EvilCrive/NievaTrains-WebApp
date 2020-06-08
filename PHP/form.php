@@ -3,6 +3,7 @@ require_once "connection.php";
 $ConnessioneAttiva = new DBAccess();
 $var=$ConnessioneAttiva->openConnectionlocal();
 session_start();
+$_SESSION['first']=true;
 $_SESSION['errors']="";
 $password=$_POST['password'];
 $email=$_POST['email'];
@@ -21,8 +22,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)){$errors.="Email non valida";}	el
 if (!preg_match('/^[a-z0-9]{6,12}$/i',$password)){$errors.=", Password non valida";}	else{};
 if($tmp){
 	if (!preg_match('/^[a-z0-9]{6,12}$/i',$username)){$errors.=", Username non valido";}	else{};
-	if (!preg_match('/^[a-z0-9]{6,12}$/i',$nome)){$errors.=", Nome non valido";}	else{};
-	if (!preg_match('/^[a-z0-9]{6,12}$/i',$cognome)){$errors.=", Cognome non valido";}	else{};
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$nome)){$errors.=", Nome non valido";}	else{};
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$cognome)){$errors.=", Cognome non valido";}	else{};
 	if (!($_POST['confirmpassword']==$_POST['password'])){$errors.= ", Password e confermaPassword sbagliate";}
 
 }
@@ -33,17 +34,14 @@ if($var){
 		$controlquery="SELECT Username,Mail FROM utente WHERE Mail='$email' OR Username='$username';";
 		if($ConnessioneAttiva->getQuery($controlquery)){
 			//controllo per utenti gia' iscritti
-			echo "Questo utente esiste gia";
+			
 			header("refresh:0; url=../PHP/Registrazione.php");
 			$_SESSION['fail']="Questo utente e' gia' registrato.";
-			
-			$_SESSION['errors']=$errors;
 			die();
 		}
 		if(!$errors) {	
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
 			$ConnessioneAttiva->exeQuery($query);
-			echo "Fantastico!","La tua iscrizione è avvenuta con successo. Tra qualche secondo ti mando alla Home.";
 			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome'] = $cognome;
@@ -53,38 +51,44 @@ if($var){
 			$_SESSION['login'] = true;
 			$_SESSION['justlogged']=true;
 			$_SESSION['fail']="";
-			header( "refresh:0; url=../../Registrazione.php" ); 	
+			header( "refresh:0; url=../PHP/Registrazione.php" ); 	
 		}else{
-			header("refresh:0; url=../PHP/Registrazione.php");
 			
-			$_SESSION['fail']="";
-			$_SESSION['errors']=$errors;
+			header("refresh:0; url=../PHP/Registrazione.php");
+			$_SESSION['fail']="Ci sono stati errori, che sono sfuggiti ai controlli client side.(qualche campo non e' valido): ";
+			$_SESSION['fail'].=$errors;
 		}
+
 	}else{
 		//login
 		$query = "SELECT* FROM utente WHERE Mail='$email' AND Password='$password';";
 		$r=$ConnessioneAttiva->getQuery($query);
-		if(!$errors && $r){
-			//echo "nice";
-			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
-			$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome FROM Utente WHERE Mail='$email'");
-			$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome FROM Utente WHERE Mail='$email'");
-			$_SESSION['email'] = $email;
-			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
-			$_SESSION['password'] = $password;
-			$_SESSION['login'] = true;
-			$_SESSION['justlogged']=true;
-			header("refresh:0; url=./Registrazione.php");
+		if(!$errors ){
+			if(!$r){
+				header("refresh:0; url=./Registrazione.php");
+				$_SESSION['fail']="Email o Password sbagliati.";
+				$_SESSION['errors']=$errors;
+			}else{
+				$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
+				$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome FROM Utente WHERE Mail='$email'");
+				$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome FROM Utente WHERE Mail='$email'");
+				$_SESSION['email'] = $email;
+				$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
+				$_SESSION['password'] = $password;
+				$_SESSION['login'] = true;
+				$_SESSION['justlogged']=true;
+				$_SESSION['fail']="";
+				header("refresh:0; url=./Registrazione.php");
+			}
+
 		}else{
-			//echo "rip";
-			header("refresh:0; url=./Registrazione.php");
-			$_SESSION['fail']="Email o Password sbagliati.";
-			$_SESSION['errors']=$errors;
-			
+			header("refresh:0; url=../PHP/Registrazione.php");
+			$_SESSION['fail']="Ci sono stati errori, che sono sfuggiti ai controlli client side.(qualche campo non e' valido): ";
+			$_SESSION['fail'].=$errors;
 		}
 	}		
 }else{
-		echo "Completa i campi.";
+		$_SESSION['fail']="Problema di connessione";
 		die();
 }	
 ?>
