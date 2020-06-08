@@ -51,7 +51,9 @@ if($var){
 			$_SESSION['username'] = $username;
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			header( "refresh:0; url=../../Index.php" ); 	
+			$_SESSION['justlogged']=true;
+			$_SESSION['fail']="";
+			header( "refresh:0; url=../../Registrazione.php" ); 	
 		}else{
 			header("refresh:0; url=../PHP/Registrazione.php");
 			
@@ -71,8 +73,8 @@ if($var){
 			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
-			echo "Benissimo! Hai fatto l'accesso.";
-			header("refresh:0; url=./Index.php");
+			$_SESSION['justlogged']=true;
+			header("refresh:0; url=./Registrazione.php");
 		}else{
 			//echo "rip";
 			header("refresh:0; url=./Registrazione.php");

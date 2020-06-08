@@ -78,10 +78,10 @@
 				<h3>Log In</h3>
 					<p>Email</p>
 					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
-					<div id="error_mail" hidden></div>
+					<div id="error_mail_login" hidden></div>
 					<p>Password</p>
 					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
-					<div id="error_password" hidden></div>
+					<div id="error_password_login" hidden></div>
 					<input class="button" name="button" type="submit" value="Accedi">	
 			</div>
 		</form>
@@ -90,20 +90,26 @@
 					<h3>Registrazione</h3>
 					<p>Email</p>
 					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
+					<div id="error_mail_signup" hidden></div>
 					<p>Nome</p>
 					<input class="inputbar" type="text" name="Nome" id="Nome" placeholder="Nome">
+					<div id="error_name" hidden></div>
 					<p>Cognome</p>
 					<input class="inputbar" type="text" name="Cognome" id="Cognome" placeholder="Cognome">
+					<div id="error_surname" hidden></div>
 					<p>Username</p>
 					<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
+					<div id="error_username" hidden></div>
 					<p>Password</p>
 					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
+					<div id="error_password_signup" hidden></div>
 					<p>Conferma Password</p>
 					<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+					<div id="error_confirmpassword"></div>
 					<input type="submit" name="button" class="button" value="Registrati">
 			</div>
 		</form>
-		<div id="errors"><p></p></div> <!--errori lato server -->
+		<div id="errors" hidden>%b</div> <!--errori lato server -->
 		</div>
 	</div>
 	<!--END PAGE CONTENT-->
