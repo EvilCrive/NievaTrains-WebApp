@@ -11,6 +11,7 @@ if(!isset($_SESSION['first'])){
 	$_SESSION['fail']="";
 }
 if($_SESSION['justlogged']==true){
+	$_SESSION['justlogged']=false;
 	header("refresh:0; url=../PHP/Index.php");
 			
 }
