@@ -66,42 +66,49 @@ Descrizione_Immagine varchar(250) not null
 )ENGINE=InnoDB;
 
 INSERT INTO Ricetta(Macro_Categoria,Categoria,Nome,Voto,Calorie,Difficoltà,Tempo_Preparazione,Dose,Costo,Introduzione,Ingredienti,Passo_Passo,Preparazione,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
-('Antipasti','Antipasti','Arancini di riso',NULL,628,'Media',60,12,'Basso','Gli arancini di riso (o arancine), vanto della cucina siciliana, sono dei piccoli timballi adatti ad essere consumati sia come spuntino che come antipasto, primo piatto o addirittura piatto unico. In Sicilia si trovano ovunque e in ogni momento, sempre caldi e fragranti nelle molte friggitorie: di città in città spesso cambiano forma e dimensioni, assumendo fattezze ovali, a pera o rotonde, a seconda del ripieno. Si possono contare circa 100 varianti: dalla più classica al ragù e al prosciutto, a quelle più originali come al pistacchio e al nero di seppia! Noi oggi vi presentiamo le due classiche intramontabili, al ragù di carne di maiale e piselli e al prosciutto e mozzarella; voi quale preferite?',
-	'Ingredienti per circa 12 arancini:
-	-Zafferano 1 bustina 
-	-Burro 30 g 
-	-Riso vialone nano 500 g 
-	-Sale fino 1 pizzico 
-	-Acqua 1,2 l 
-	-Caciocavallo stagionato da grattugiare 100 g 
-	Per il ripieno al ragù:
-	-Sale fino q.b. 
-	-Pepe nero q.b. 
-	-Cipolle ½ 
-	-Burro 25 g 
-	-Maiale macinato 100 g 
-	-Olio extravergine d''oliva q.b. 
-	-Passata di pomodoro 200 ml 
-	-Pisellini 80 g 
-	-Caciocavallo fresco 50 g 
-	-Vino rosso 50 ml 
-	Per il ripieno al prosciutto:
-	-Prosciutto cotto in una sola fetta 30 g 
-	-Mozzarella 60 g
-	Per la pastella:
-	-Farina 00 200 g 
-	-Sale fino 1 pizzico 
-	-Acqua 300 ml 
-	Per impanare e friggere:
-	-Pangrattato q.b. 
-	-Olio di semi q.b.',
-	'- Cucocere il riso, aggiungere zafferano, burro e formaggio. Lasciarlo a raffreddare completamente;
-	- Stufare la cipolla, unire il macinato, sfumare col vino e aggiungere la passata di pomodoro;
-	- A metà cottura aggiungere i piselli;
-	- Preparare i ripieni (caciocavallo, prosciutto cotto, mozzarella);
-	- Formare gli arancini aggiungendo al riso il ragu (o il prosciutto) e il caciocavallo;
-	- Preparare la pastella;
-	- Friggere gli arancini.',
+('Antipasti','Antipasti','Arancini di riso',NULL,628,'Media',60,12,'Basso',
+'Gli arancini di riso (o arancine), vanto della cucina siciliana, sono dei piccoli timballi adatti ad essere consumati sia come spuntino che come antipasto, primo piatto o addirittura piatto unico. In Sicilia si trovano ovunque e in ogni momento, sempre caldi e fragranti nelle molte friggitorie: di città in città spesso cambiano forma e dimensioni, assumendo fattezze ovali, a pera o rotonde, a seconda del ripieno. Si possono contare circa 100 varianti: dalla più classica al ragù e al prosciutto, a quelle più originali come al pistacchio e al nero di seppia! 
+Noi oggi vi presentiamo le due classiche intramontabili, al ragù di carne di maiale e piselli e al prosciutto e mozzarella; voi quale preferite?',
+'$Ingredienti per circa 12 arancini:
+-Zafferano 1 bustina 
+-Burro 30 g 
+-Riso vialone nano 500 g 
+-Sale fino 1 pizzico 
+-Acqua 1,2 l 
+-Caciocavallo stagionato da grattugiare 100 g
+
+$Per il ripieno al ragù:
+-Sale fino q.b. 
+-Pepe nero q.b. 
+-Cipolle ½ 
+-Burro 25 g 
+-Maiale macinato 100 g 
+-Olio extravergine d''oliva q.b. 
+-Passata di pomodoro 200 ml 
+-Pisellini 80 g 
+-Caciocavallo fresco 50 g 
+-Vino rosso 50 ml 
+
+$Per il ripieno al prosciutto:
+-Prosciutto cotto 30 g 
+-Mozzarella 60 g
+	
+$Per la pastella:
+-Farina 00 200 g 
+-Sale fino 1 pizzico 
+-Acqua 300 ml 
+	
+$Per impanare e friggere:
+-Pangrattato q.b. 
+-Olio di semi q.b.',
+'- Cucocere il riso, aggiungere zafferano, burro e formaggio. Lasciarlo a raffreddare completamente;
+- Stufare la cipolla, unire il macinato, sfumare col vino e aggiungere la passata di pomodoro;
+- A metà cottura aggiungere i piselli;
+- Preparare i ripieni (caciocavallo, prosciutto cotto, mozzarella);
+- Formare gli arancini aggiungendo al riso il ragu (o il prosciutto) e il caciocavallo;
+- Preparare la pastella;
+- Friggere gli arancini.',
+
 'Per preparare gli arancini di riso, iniziate lessando il riso in 1,2 l di acqua bollente salata, in modo da far si che, a cottura avvenuta, l''acqua sia stata completamente assorbita (questo permetterà all''amido di rimanere tutto in pentola e otterrete un riso molto asciutto e compatto). Fate cuocere per circa 15 minuti, poi sciogliete lo zafferano in pochissima acqua calda e unitelo al riso ormai cotto . Unite anche il burro a pezzetti.
 Unite il formaggio grattugiato, mescolate bene per amalgamare il tutto, dopodiché  versate e livellate il riso su un vassoio ampio e basso e copritelo con la pellicola, per farlo rafferddare completamente, la pellicola eviterà che la superficie del riso si secchi. Lasciate riposare il riso per un paio di ore fuori dal frigorifero. 
 
@@ -120,18 +127,19 @@ Quindi tuffate gli arancini, uno ad uno, nella pastella avendo cura di ricoprirl
 In un pentolino scaldate l''olio e portatelo alla temperatura di 170°, a quel punto friggete un arancino alla volta o massimo due per non abbassare la temperatura dell''olio: quando saranno ben dorati potrete scolarli ponendoli su un vassoio foderato con carta assorbente',
 'antipasti_arancini_quadrato','Arancini di riso','Arancini di riso'),
 ('Secondi','Carne','Bollito',NULL,256,'Facile',15,4,'Medio',
-'Cottura lenta, una manciata di erbe aromatiche e una scelta accurata del taglio di carne: sono questi i segreti per realizzare un prelibato bollito. Con le sue carni tenere e saporite, il bollito è un piatto tipico intramontabile della cucina casalinga italiana, generalmente accompagnato da verdure lesse, salsine aromatiche e mostarda (in particolare nelle zone lombarde). Tra le ricette più note ricordiamo il bollito alla piemontese realizzato con carni miste e servito tradizionalmente con stuzzicanti salse a base di verdure come la salsa al cren e la salsa rubra. Il bollito si prepara lessando la carne di manzo in abbondante acqua insaporita con aromi e verdure, il risultato che si ottiene è una carne molto tenera e saporita dal gusto semplice e un brodo ricco e nutriente, ottime pietanze che non possono mancare nei menù invernali. E e state cercando un''idea gustosa per utilizzare la carne lessa avanzata, provate le nostre polpette di bollito e ricotta!',
-'Carne bovina per bollito 1 kg
-Cipolle bianche ( circa 1) 120 g 
-Sedano coste 2 
-Carote (circa 1) 110 g 
-Prezzemolo 1 ciuffo 
-Timo 1 rametto 
-Alloro 3 foglie 
-Chiodi di garofano 3 
-Pepe nero in grani 4 
-Sale grosso 15 g 
-Acqua 4 l',
+'Cottura lenta, una manciata di erbe aromatiche e una scelta accurata del taglio di carne: sono questi i segreti per realizzare un prelibato bollito. Con le sue carni tenere e saporite, il bollito è un piatto tipico intramontabile della cucina casalinga italiana, generalmente accompagnato da verdure lesse, salsine aromatiche e mostarda (in particolare nelle zone lombarde). Tra le ricette più note ricordiamo il bollito alla piemontese realizzato con carni miste e servito tradizionalmente con stuzzicanti salse a base di verdure come la salsa al cren e la salsa rubra. Il bollito si prepara lessando la carne di manzo in abbondante acqua insaporita con aromi e verdure, il risultato che si ottiene è una carne molto tenera e saporita dal gusto semplice e un brodo ricco e nutriente, ottime pietanze che non possono mancare nei menù invernali. 
+E se state cercando un''idea gustosa per utilizzare la carne lessa avanzata, provate le nostre polpette di bollito e ricotta!',
+'-Carne bovina per bollito 1 kg
+-Cipolle bianche ( circa 1) 120 g 
+-Sedano coste 2 
+-Carote (circa 1) 110 g 
+-Prezzemolo 1 ciuffo 
+-Timo 1 rametto 
+-Alloro 3 foglie 
+-Chiodi di garofano 3 
+-Pepe nero in grani 4 
+-Sale grosso 15 g 
+-Acqua 4 l',
 '- Preparare la cipolla (coi chiodi di garofano) e realizzare il mazzetto aromatico (timo, prezzemolo, alloro);
 - Preparare carota e sedano;
 - Preparare l''acqua aggiungendo le verdure preparate precedentemente e portare al bollore;
@@ -149,15 +157,17 @@ Una volta che l’acqua avrà raggiunto il bollore aggiungete la carne. Dopo qua
 Il bollore deve durare circa 3 ore ed essere leggerissimo poiché se fosse violento rovinerebbe la carne sfilacciandola e rendendola stopposa; consigliamo di controllare il livello di cottura infilzando la carne con un forchettone così da controllare la consistenza. Quando il bollito sarà cotto a puntino, scolatelo con un mestolo forato, fatelo sgocciolare e poggiatelo su di un tagliere, quindi eliminate la legatura (se l’avete fatta) e tagliatelo a fette di circa 1 cm di spessore utilizzando un coltello dalla lama liscia e lunga. Disponete le fette di carne su di un piatto da portata e servitelo con verdure lesse e se gradite della mostarda.',
 'carne_bollito_quadrato','Bollito di carne','Bollito di carne'),
 ('Dolci','Dolci','Torta tenerina',NULL,395,'Facile',55,8,'Medio',
-'La torta tenerina è un dolce tipico della città di Ferrara, che grazie alla sua golosità ha conquistato tutto il paese... nessuno infatti riesce a resistere ad una fetta di questo fantastico dolce! Sarà merito della fragrante crosticina esterna o della sua consistenza fondente che si scioglie in bocca ad ogni assaggio? Noi ci siamo innamorati di entrambi, ma una cosa è certa: il suo intenso sapore di cioccolato mette d''accordo tutti! La torta tenerina è una torta con pochi ingredienti, senza lievito che ha la particolarità di rimanere bassa e umida all''interno, proprio come il nome suggerisce: nel dialetto ferrarese veniva chiamata anche "Torta Taclenta", che in italiano significa appiccicosa. Un dessert semplice da realizzare, dal successo garantito perfetto anche per festeggiare i papà e per esaltare tutto il suo sapore provate a servirlo insieme ad una delicata crema al mascarpone, sentirete che bontà.. perfetta per ogni occasione e per la festa del papà!',
-'Ingredienti per uno stampo da 23 cm di diametro
-Cioccolato fondente 200 g 
-Burro 100 g 
-Uova medie 4 
-Zucchero 150 g 
-Farina 00 50 g 
-Per spolverizzare
-Zucchero a velo q.b.',
+'La torta tenerina è un dolce tipico della città di Ferrara, che grazie alla sua golosità ha conquistato tutto il paese... nessuno infatti riesce a resistere ad una fetta di questo fantastico dolce! Sarà merito della fragrante crosticina esterna o della sua consistenza fondente che si scioglie in bocca ad ogni assaggio? Noi ci siamo innamorati di entrambi, ma una cosa è certa: il suo intenso sapore di cioccolato mette d''accordo tutti! La torta tenerina è una torta con pochi ingredienti, senza lievito che ha la particolarità di rimanere bassa e umida all''interno, proprio come il nome suggerisce: nel dialetto ferrarese veniva chiamata anche "Torta Taclenta", che in italiano significa appiccicosa. 
+Un dessert semplice da realizzare, dal successo garantito perfetto anche per festeggiare i papà e per esaltare tutto il suo sapore provate a servirlo insieme ad una delicata crema al mascarpone, sentirete che bontà.. perfetta per ogni occasione e per la festa del papà!',
+'$Ingredienti per uno stampo da 23 cm di diametro:
+-Cioccolato fondente 200 g 
+-Burro 100 g 
+-Uova medie 4 
+-Zucchero 150 g 
+-Farina 00 50 g 
+
+$Per spolverizzare:
+-Zucchero a velo q.b.',
 '- Sciogliete a bagnomaria il cioccolato;
 - Aggiungete il burro e mescolate;
 - Separate i tuorli dagli albumi e montate questi ultimi con metà dello zucchero;
@@ -171,19 +181,22 @@ Incorporate poi gli albumi restanti questa volta mescolando delicatamente dal ba
 Una volta sfornata lasciate intiepidire la vostra torta tenerina prima di sformarla e di cospargerla di zucchero a velo.',
 'dolci_tenerina_quadrato','Torta tenerina','Torta tenerina'),
 ('Antipasti','Antipasti','Crocchette di patate',NULL,440,'Facile',75,30,'Molto basso',
-'Le crocchette di patate sono antipasti sfiziosi senza tempo, peccati di gola che ci si può concedere ogni tanto e che rientrano a pieno titolo nella grande famiglia dei finger food, protagonisti indiscussi dei buffet. Inutile dire che, una volta portate in tavola, le crocchette di patate spariscono in un lampo: con la loro panatura croccante e dorata e il ripieno morbido conquistano da sempre i palati di grandi e piccini! Come ogni grande classico della cucina, anche le crocchette hanno ispirato stuzzicanti varianti come le crocchette di patate e salmone con salsa allo yogurt, le crocchette di patate e speck o ancora le colorate crocchette di barbabietola. Le crocchette di patate sono una preparazione semplice che richiede pochi ma importanti accorgimenti, primo fra tutti la scelta delle patate: quelle rosse dalla polpa soda sono perfette per ottenere una purea asciutta che ha una resa ottimale per ogni tipo di cottura. Tutti gli altri segreti saranno svelati nella nostra ricetta di queste piccole delizie tentatrici, venite a scoprirla!',
-'Per 30 crocchette
-Patate rosse 1 kg 
-Tuorli 30 g 
-Noce moscata q.b. 
-Pepe nero q.b. 
-Sale fino q.b. 
-Parmigiano Reggiano DOP grattugiato 100 g 
-Per impanare
-Uova (2 medie) 130 g 
-Pangrattato q.b. 
-Per friggere
-Olio di semi di arachide q.b.',
+'Le crocchette di patate sono antipasti sfiziosi senza tempo, peccati di gola che ci si può concedere ogni tanto e che rientrano a pieno titolo nella grande famiglia dei finger food, protagonisti indiscussi dei buffet. Inutile dire che, una volta portate in tavola, le crocchette di patate spariscono in un lampo: con la loro panatura croccante e dorata e il ripieno morbido conquistano da sempre i palati di grandi e piccini! Come ogni grande classico della cucina, anche le crocchette hanno ispirato stuzzicanti varianti come le crocchette di patate e salmone con salsa allo yogurt, le crocchette di patate e speck o ancora le colorate crocchette di barbabietola. Le crocchette di patate sono una preparazione semplice che richiede pochi ma importanti accorgimenti, primo fra tutti la scelta delle patate: quelle rosse dalla polpa soda sono perfette per ottenere una purea asciutta che ha una resa ottimale per ogni tipo di cottura. 
+Tutti gli altri segreti saranno svelati nella nostra ricetta di queste piccole delizie tentatrici, venite a scoprirla!',
+'$Per 30 crocchette:
+-Patate rosse 1 kg 
+-Tuorli 30 g 
+-Noce moscata q.b. 
+-Pepe nero q.b. 
+-Sale fino q.b. 
+-Parmigiano Reggiano DOP grattugiato 100 g 
+
+$Per impanare:
+-Uova (2 medie) 130 g 
+-Pangrattato q.b. 
+
+$Per friggere:
+-Olio di semi di arachide q.b.',
 '- Lessate le patate senza sbucciarle;
 - Sbucciatele una volta intiepidite;
 - Passatele in un uno schiacciapatate;
@@ -198,21 +211,24 @@ Adagiate le crocchette su un vassoio rivestito con carta da forno. Una volta ter
 'antipasti_crocchette_quadrato','Crocchette di patate','Crocchette di patate'),
 
 ('Antipasti','Antipasti','Pizzette',NULL,137,'Media',40,24,'Basso',
-'Una ricetta versatile, per chi ama mettere le mani in pasta... perfetta come merenda da portare a scuola o come aperitivo rustico: l''impasto per pizza trasformato in pizzette rosse! Morbide e saporite, condite con pomodoro, origano e mozzarella; sarà una soddisfazione prepararle e un piacere gustarle ancora calde, tiepide o leggermente riscaldate! Scoprite come è semplice prepararle e mentre l''impasto delle vostre pizzette rosse sarà in lievitazione, pensate a come arricchirle o diversificare il condimento: sarà divertente realizzarle e un piacere assaggiarle tutte! E se avete amato questa ricetta perchè non provare anche le pizzelle fritte o le lingue di pizza?',
-'Ingredienti per 24 pizzette rosse
-Acqua a temperatura ambiente 250 g 
-Farina 00 500 g 
-Lievito di birra fresco 10 g 
-Zucchero 12 g 
-Olio extravergine d''oliva + q.b. per la ciotola 60 g 
-Sale fino 15 g 
-Per il condimento
-Passata di pomodoro 350 g 
-Mozzarella 250 g 
-Sale fino 1 cucchiaino 
-Pepe nero q.b. 
-Olio extravergine d''oliva 2 cucchiai 
-Origano 2 cucchiai',
+'Una ricetta versatile, per chi ama mettere le mani in pasta... perfetta come merenda da portare a scuola o come aperitivo rustico: l''impasto per pizza trasformato in pizzette rosse! Morbide e saporite, condite con pomodoro, origano e mozzarella; sarà una soddisfazione prepararle e un piacere gustarle ancora calde, tiepide o leggermente riscaldate! 
+Scoprite come è semplice prepararle e mentre l''impasto delle vostre pizzette rosse sarà in lievitazione, pensate a come arricchirle o diversificare il condimento: sarà divertente realizzarle e un piacere assaggiarle tutte! 
+E se avete amato questa ricetta perchè non provare anche le pizzelle fritte o le lingue di pizza?',
+'$Ingredienti per 24 pizzette rosse:
+-Acqua a temperatura ambiente 250 g 
+-Farina 00 500 g 
+-Lievito di birra fresco 10 g 
+-Zucchero 12 g 
+-Olio extravergine d''oliva + q.b. per la ciotola 60 g 
+-Sale fino 15 g 
+
+$Per il condimento:
+-Passata di pomodoro 350 g 
+-Mozzarella 250 g 
+-Sale fino 1 cucchiaino 
+-Pepe nero q.b. 
+-Olio extravergine d''oliva 2 cucchiai 
+-Origano 2 cucchiai',
 '- Preparare l''impasto (farina, lievito, acqua, zucchero, sale, olio), mescolare e formare una sfera;
 - Lasciare riposare l''impasto in un luogo adeguato;
 - Preparare una ciotola col pomodoro per il condimento;
@@ -234,21 +250,22 @@ Una volta sistemate, formate una conchetta al centro, lasciando circa 0,5 cm di 
 Infornate le pizzette in forno statico preriscaldato a 200°: i primi 10 minuti cuocete posizionando la teglia alla base del forno; mentre i restanti 5 minuti sul ripiano più alto. Una volta cotte, sfornate le vostre pizzette rosse e servitele calde!',
 'antipasti_pizzette_quadrato','Pizzette','Pizzette'),
 ('Secondi','Carne','Brasato al Barolo',NULL,638,'Facile',170,4,'Molto elevata',
-'Quando si parla di ricette ricche e succulenti la regione del Piemonte scende in campo sfoderando dei piatti davvero magnifici. A partire dall''intramontabile vitello tonnato ai famosissimi ravioli del plin. Passando poi per ricette come la salsa verde, irresistibile compagna di bolliti e panini. E i dolci? I migliori! Il bonet o la panna cotta, la cui consistenza non smette mai di conquistare i palati golosi di tutto il mondo. E dopo questa irresistibile carrellata di golosità, che nemmeno a farlo apposta, fanno parte del patrimonio della cucina italiana, passiamo forse al top di tutte le ricette: il brasato al barolo. Un secondo piatto ricercatissimo che si prepara proprio utilizzando l''omonimo vino rosso del Piemonte. Una ricetta ricca e succulenta da dedicarsi e da regalare agli ospiti durante le occasioni speciali, e perché no, anche per le feste natalizie.',
-'Manzo cappello del prete 1 kg 
-Barolo (1 bottiglia) 750 ml 
-Carote (circa 2 medie) 160 g 
-Sedano (circa 2 coste medie) 100 g 
-Cipolle dorate (circa 1 grossa) 180 g 
-Aglio 1 spicchio 
-Rosmarino 1 rametto 
-Alloro 2 foglie 
-Chiodi di garofano 3 
-Pepe nero in grani 4 
-Cannella in stecche 1 
-Burro 15 g 
-Olio extravergine d''oliva 50 g 
-Sale fino q.b.',
+'Quando si parla di ricette ricche e succulenti la regione del Piemonte scende in campo sfoderando dei piatti davvero magnifici. A partire dall''intramontabile vitello tonnato ai famosissimi ravioli del plin. Passando poi per ricette come la salsa verde, irresistibile compagna di bolliti e panini. E i dolci? I migliori! Il bonet o la panna cotta, la cui consistenza non smette mai di conquistare i palati golosi di tutto il mondo. E dopo questa irresistibile carrellata di golosità, che nemmeno a farlo apposta, fanno parte del patrimonio della cucina italiana, passiamo forse al top di tutte le ricette: il brasato al barolo. Un secondo piatto ricercatissimo che si prepara proprio utilizzando l''omonimo vino rosso del Piemonte. 
+Una ricetta ricca e succulenta da dedicarsi e da regalare agli ospiti durante le occasioni speciali, e perché no, anche per le feste natalizie.',
+'-Manzo cappello del prete 1 kg 
+-Barolo (1 bottiglia) 750 ml 
+-Carote (circa 2 medie) 160 g 
+-Sedano (circa 2 coste medie) 100 g 
+-Cipolle dorate (circa 1 grossa) 180 g 
+-Aglio 1 spicchio 
+-Rosmarino 1 rametto 
+-Alloro 2 foglie 
+-Chiodi di garofano 3 
+-Pepe nero in grani 4 
+-Cannella in stecche 1 
+-Burro 15 g 
+-Olio extravergine d''oliva 50 g 
+-Sale fino q.b.',
 '- Preparate un sacchettino aromatico;
 - Pulite e tagliate le verdure e mondate lo spicchio d''aglio;
 - Versate il tutto in una ciotola capiente insieme alla carne e coprite per intero con il vino;
@@ -272,17 +289,17 @@ Poi eliminate gli aromi. prima di frullare con il mixer ad immersione le verdure
 ('Secondi','Carne','Polpette di carne',NULL,393,'Facile',45,6,'Medio',
 'Le polpette al forno sono un secondo piatto gustoso e velocissimo da preparare: succulenti bocconcini di carne arricchiti con formaggio, uova e prezzemolo.
 Le polpette al forno, con il loro sapore ricco e deciso, piaceranno davvero a tutti. Accompagnatele con un purè di patate o con una bella insalata mista!',
-'Manzo macinato 400 g 
-Salsiccia 200 g 
-Aglio 1 spicchio 
-Pane raffermo 100 g 
-Pecorino da grattugiare 40 g 
-Uova 2 
-Prezzemolo 1 ciuffo 
-Grana Padano DOP 60 g 
-Sale fino q.b. 
-Pepe nero q.b. 
-Olio extravergine d''oliva 2 cucchiai',
+'-Manzo macinato 400 g 
+-Salsiccia 200 g 
+-Aglio 1 spicchio 
+-Pane raffermo 100 g 
+-Pecorino da grattugiare 40 g 
+-Uova 2 
+-Prezzemolo 1 ciuffo 
+-Grana Padano DOP 60 g 
+-Sale fino q.b. 
+-Pepe nero q.b. 
+-Olio extravergine d''oliva 2 cucchiai',
 '- Ponete il macinato e la salsiccia in una ciotola;
 - Aggiungete la mollica tritata, formaggio grattuggiato, prezzemolo e aglio tritati;
 - Aggiungete uova, sale e pepe e mescolate;
@@ -294,13 +311,14 @@ Coprite con la pellicola trasparente e lasciate riposare in frigorifero per alme
 Trascorso questo tempo formate con le mani delle polpette leggermente schiacciate della dimensione che preferite. Oliate leggermente una pirofila da forno e posatevi le polpette. Aggiungete un filo d’olio e infornate a forno statico preriscaldato 180°C per circa 40 minuti (il tempo di cottura dipenderà dalla dimensione delle polpette!), fino a che saranno ben dorate in superficie. Servite le polpette al forno calde!',
 'carne_polpette_quadrato','Polpette di carne','Polpette di carne'),
 ('Dolci','Dolci','Tiramisù',NULL,544,'Facile',40,8,'Medio',
-'Anticamente le nonne usavano preparare una colazione che oggi potremmo definire povera, ma che all’epoca era davvero ricchissima! Ancora oggi la ricetta è immutata, basta rompere in un bicchiere un uovo freschissimo e sbatterlo con dello zucchero e a piacere aggiungere caffè o latte caldo, per i più piccoli, e marsala o anice per i più grandicelli. Ed è proprio da questa portentosa crema che nasce la crema al mascarpone base del tiramisù. Il dolce italiano per eccellenza, quello più famoso e amato, ma soprattutto che ha dato vita a tantissime altre versioni!',
-'Savoiardi 300 g 
-Uova freschissime (circa 4 medie) 220 g 
-Mascarpone 500 g 
-Zucchero 100 g 
-Caffè della moka già pronto (e zuccherato a piacere) 300 g 
-Cacao amaro in polvere per la superficie q.b.',
+'Anticamente le nonne usavano preparare una colazione che oggi potremmo definire povera, ma che all’epoca era davvero ricchissima! Ancora oggi la ricetta è immutata, basta rompere in un bicchiere un uovo freschissimo e sbatterlo con dello zucchero e a piacere aggiungere caffè o latte caldo, per i più piccoli, e marsala o anice per i più grandicelli. Ed è proprio da questa portentosa crema che nasce la crema al mascarpone base del tiramisù. 
+Il dolce italiano per eccellenza, quello più famoso e amato, ma soprattutto che ha dato vita a tantissime altre versioni!',
+'-Savoiardi 300 g 
+-Uova 4
+-Mascarpone 500 g 
+-Zucchero 100 g 
+-Caffè della moka 300g (zuccherato a piacere)  
+-Cacao amaro in polvere per la superficie q.b.',
 '- Separate gli albumi dai tuorli;
 - Montate i tuorli con le fruste elettriche versando metà zucchero;
 - Aggiungete un po'' alla volta il mascarpone;
@@ -317,25 +335,30 @@ Una volta pronto, distribuite una generosa cucchiaiata di crema sul fondo di una
 Anche in questo caso dovrete livellarla accuratamente così da avere una superficie liscia. E continuate a distribuire i savoiardi imbevuti nel caffè, poi realizzate un altro strato di crema. Livellate la superficie e spolverizzatela con del cacao amaro in polvere e lasciate rassodare in frigorifero per un paio d’ore. Il vostro tiramisù è pronto per essere gustato!',
 'dolci_tiramisu_quadrato','Tiramisù','Tiramisù'),
 ('Dolci','Dolci','Zuppa inglese',NULL,657,'Media',110,4,'Medio',
-'La pasticceria è frutto di tre caratteristiche. La prima è la perfezione: la pasticceria è pura chimica. Un esempio? La torta magica, una torta che si compone di 3 strati differenti la cui magia non esisterebbe senza gli studiati equilibri. La seconda caratteristica è l''errore: dolci importantissimi come la caprese campana o la ganache francese sono nati proprio da una dimenticanza. Per finire la pasticceria è anche commistione e trasformazione di grandi classici come la Saint Honorè o il trifle, dolce inglese che probabilmente ha ispirato questa ricetta: la zuppa inglese. La zuppa inglese è un famosissimo dolce, classificato tra i prodotti di pasticceria tipici dell''Emilia Romagna e divenuto un classico italiano, con debite varianti da regione a regione. Preparare la zuppa inglese non è per niente difficile; realizzando per tempo le due basi di cui si compone, sarà facilissimo assemblarla e servirla come dessert in una giornata speciale!',
-'Ingredienti (per un pan di spagna da 18 cm)
-Uova (circa 2 medie) 110 g 
-Farina 00 30 g 
-Fecola di patate 30 g 
-Zucchero 60 g 
-Sale fino 1 pizzico 
-Baccello di vaniglia ½ 
-Per la crema pasticcera
-Latte intero 400 g 
-Panna fresca liquida 100 g 
-Tuorli (di circa 4 uova media) 72 g 
-Amido di mais (maizena) 45 g 
-Zucchero 140 g 
-Baccello di vaniglia 1 
-Cioccolato fondente 50 g 
-Per guarnire
-Alchermes 100 g 
-Cacao amaro in polvere q.b.',
+'La pasticceria è frutto di tre caratteristiche. 
+La prima è la perfezione: la pasticceria è pura chimica. Un esempio? La torta magica, una torta che si compone di 3 strati differenti la cui magia non esisterebbe senza gli studiati equilibri. La seconda caratteristica è l''errore: dolci importantissimi come la caprese campana o la ganache francese sono nati proprio da una dimenticanza. Per finire la pasticceria è anche commistione e trasformazione di grandi classici come la Saint Honorè o il trifle, dolce inglese che probabilmente ha ispirato questa ricetta: la zuppa inglese. 
+La zuppa inglese è un famosissimo dolce, classificato tra i prodotti di pasticceria tipici dell''Emilia Romagna e divenuto un classico italiano, con debite varianti da regione a regione. 
+Preparare la zuppa inglese non è per niente difficile; realizzando per tempo le due basi di cui si compone, sarà facilissimo assemblarla e servirla come dessert in una giornata speciale!',
+'$Ingredienti (per un pan di spagna da 18 cm):
+-Uova 2
+-Farina 00 30 g 
+-Fecola di patate 30 g 
+-Zucchero 60 g 
+-Sale fino 1 pizzico 
+-Baccello di vaniglia ½ 
+
+$Per la crema pasticcera:
+-Latte intero 400 g 
+-Panna fresca liquida 100 g 
+-Tuorli 4
+-Amido di mais (maizena) 45 g 
+-Zucchero 140 g 
+-Baccello di vaniglia 1 
+-Cioccolato fondente 50 g 
+
+$Per guarnire:
+-Alchermes 100 g 
+-Cacao amaro in polvere q.b.',
 '- Preparate il pan di spagna;
 - Preparate la crema pasticcera e dividitela in due ciotole;
 - Aggiungete il cioccolato in una delle due ciotole;
@@ -354,11 +377,12 @@ Recuperate il pan di spagna pronto e raffreddato, utilizzatene 70 g, tagliatelo 
 'dolci_zuppa_inglese_quadrato','Zuppa inglese','Zuppa inglese'),
 ('Primi','Pasta','Pasta alla gricia',NULL,600,'Facile',25,4,'Medio',
 'La pasta alla gricia è uno dei piatti più famosi della cucina laziale, considerata l’antenata della pasta all''amatriciana.
-In comune con la ricetta dell’amatriciana infatti c’è l’utilizzo del guanciale e del Pecorino romano. La differenza principale invece sta nel sugo di pomodoro, assente nella pasta alla gricia poiché la sua origine sarebbe addirittura antecedente all’importazione del pomodoro in Europa. Si dice la pasta alla gricia sia stata inventata dai pastori laziali, che con i pochi ingredienti che avevano a disposizione al ritorno dai pascoli preparavano un piatto così semplice ma altrettanto gustoso e sostanzioso.',
-'Rigatoni 320 g 
-Guanciale (già pepato) 250 g 
-Pecorino romano da grattugiare 60 g 
-Sale fino q.b.',
+In comune con la ricetta dell’amatriciana infatti c’è l’utilizzo del guanciale e del Pecorino romano. La differenza principale invece sta nel sugo di pomodoro, assente nella pasta alla gricia poiché la sua origine sarebbe addirittura antecedente all’importazione del pomodoro in Europa. 
+Si dice la pasta alla gricia sia stata inventata dai pastori laziali, che con i pochi ingredienti che avevano a disposizione al ritorno dai pascoli preparavano un piatto così semplice ma altrettanto gustoso e sostanzioso.',
+'-Rigatoni 320 g 
+-Guanciale 250 g (già pepato)  
+-Pecorino romano 60 g 
+-Sale fino q.b.',
 '- Fate bollire l''acqua;
 - Tagliate il guanciale a fette spesse un centimetro;
 - Separate l''eventuale cotenna;
@@ -374,18 +398,21 @@ A questo punto la pasta è cotta, scolatela direttamente nel condimento, conserv
 Mescolate e saltate ancora la pasta; noterete che si sarà creata una gustosa cremina. Potete impiattare la pasta alla gricia e guarnire ciascun piatto con il Pecorino rimasto.',
 'pasta_alla_gricia_quadrato','Pasta alla gricia','Pasta alla gricia'),
 ('Primi','Pasta','Pasta calamarata',NULL,526,'Facile',90,4,'Elevato',
-'Riconoscete questo particolare formato di pasta? Si tratta della calamarata, un formato di pasta molto comune nella cucina campana e che si presta benissimo per dei condimenti veloci e saporiti come il ragù di pesce spada. Vi state domandando se hanno qualcosa in comune con i paccheri? Beh non siete fuori strada! Infatti la calamarata, nel napoletano, è conosciuta con il nome di mezzi paccheri. Oltre ad essere un formato di pasta è però anche un condimento il cui protagonista, nemmeno a dirlo, è il calamaro. Tagliato ad anelli grossi risulta praticamente uguale al formato di pasta. Grazie al nostro modo molto originale per servire la calamarata potrebbe facilmente rappresentare un piatto delle grandi occasioni, delle feste o per sorprendere gli ospiti. Infatti il cartoccio serve a preservare i profumi che fuoriusciranno dall''involucro inebriando gli ospiti.',
-'Calamarata 400 g 
-Calamari 600 g 
-Aglio 1 spicchio 
-Peperoncino fresco 1 
-Prezzemolo da tritare 2 cucchiai 
-Sale q.b. 
-Pepe nero q.b. 
-Pomodorini ciliegino 400 g 
-Triplo concentrato di pomodoro 25 g 
-Vino bianco 60 g 
-Olio extravergine d''oliva q.b.',
+'Riconoscete questo particolare formato di pasta? 
+Si tratta della calamarata, un formato di pasta molto comune nella cucina campana e che si presta benissimo per dei condimenti veloci e saporiti come il ragù di pesce spada. Vi state domandando se hanno qualcosa in comune con i paccheri? Beh non siete fuori strada! Infatti la calamarata, nel napoletano, è conosciuta con il nome di mezzi paccheri. Oltre ad essere un formato di pasta è però anche un condimento il cui protagonista, nemmeno a dirlo, è il calamaro. Tagliato ad anelli grossi risulta praticamente uguale al formato di pasta. 
+Grazie al nostro modo molto originale per servire la calamarata potrebbe facilmente rappresentare un piatto delle grandi occasioni, delle feste o per sorprendere gli ospiti. 
+Infatti il cartoccio serve a preservare i profumi che fuoriusciranno dall''involucro inebriando gli ospiti.',
+'-Calamarata 400 g 
+-Calamari 600 g 
+-Aglio 1 spicchio 
+-Peperoncino fresco 1 
+-Prezzemolo da tritare 2 cucchiai 
+-Sale q.b. 
+-Pepe nero q.b. 
+-Pomodorini ciliegino 400 g 
+-Triplo concentrato di pomodoro 25 g 
+-Vino bianco 60 g 
+-Olio extravergine d''oliva q.b.',
 '- Pulite i calamari;
 - Mettete a bollire l''acqua per la pasta;
 - In una casseruola scaldare l''olio con aglio e peperoncino;
@@ -405,20 +432,20 @@ Su un foglio di alluminio mettete un altro foglio ma di carta forno, adagiate ne
 'pasta_calamarata_quadrato','Pasta calamarata','Pasta calamarata'),
 ('Primi','Pasta','Pasta e fagioli',NULL,748,'Molto facile',125,4,'Basso',
 'La ricetta della pasta e fagioli è un classico della cucina italiana, un primo piatto dal sapore inconfondibile che affonda le radici nella tradizione rurale. Nella sua versione più rustica viene insaporita con le cotiche di maiale, come nella pasta e fagioli alla napoletana, mentre in altre varianti i legumi vengono abbinati a molluschi che conferiscono alla pietanza un intenso sapore di mare, come nei cicatielli con cozze e fagioli. Un piatto povero ed economico, quindi, ma sempre estremamente gustoso e genuino. Proprio come la nostra versione della pasta e fagioli! Abbastanza densa da "reggere il cucchiaio in piedi" e ricca di aromi, con l''immancabile nota sapida data dall''aggiunta del lardo e del prosciutto crudo. Assaggiate la nostra pasta e fagioli e vedrete che non la lascerete più!',
-'Ditaloni Rigati 320 g 
-Fagioli borlotti secchi 200 g 
-Passata di pomodoro 250 g 
-Lardo 80 g 
-Prosciutto crudo 80 g 
-Cipolle 30 g 
-Sedano 30 g 
-Carote 30 g 
-Aglio 1 spicchio 
-Rosmarino 3 rametti 
-Alloro 2 foglie 
-Olio extravergine d''oliva 10 g 
-Pepe nero q.b. 
-Sale fino q.b.',
+'-Ditaloni Rigati 320 g 
+-Fagioli borlotti secchi 200 g 
+-Passata di pomodoro 250 g 
+-Lardo 80 g 
+-Prosciutto crudo 80 g 
+-Cipolle 30 g 
+-Sedano 30 g 
+-Carote 30 g 
+-Aglio 1 spicchio 
+-Rosmarino 3 rametti 
+-Alloro 2 foglie 
+-Olio extravergine d''oliva 10 g 
+-Pepe nero q.b. 
+-Sale fino q.b.',
 '- Lasciate i fagioli in ammollo per una notte;
 - Fateli bollire per 80 minuti in acqua con due foglie d''alloro;
 - Fate soffriggere olio, aglio e le verdure tritate in una padella;
@@ -435,19 +462,19 @@ Aggiungete i ditaloni rigati direttamente nella pentola, coprite con l’acqua d
 'pasta_e_fagioli_quadrato','Pasta e fagioli','Pasta e fagioli'),
 ('Secondi','Pesce','Branzino al forno',NULL,490,'Media',60,2,'Medio',
 'Il branzino (o spigola) al forno è un piatto molto apprezzato dai buoni intenditori di pesce, che ne riconoscono l’ottima carne bianca, pregiata e profumata, esaltata in questa ricetta, dalla cottura al forno insaporita da verdure e aromi, e ultimata con una spruzzata di buon vino bianco. Il branzino al forno è un''idea magnifica per una cena estiva!',
-'Branzino (spigola) 800 g 
-Cipolle media 1 
-Carote 1 
-Sedano 1 costa 
-Salvia 2 foglie 
-Basilico 4 foglie 
-Prezzemolo da tritare 2 cucchiai 
-Olio extravergine d''oliva 6 cucchiai 
-Aglio 1 spicchio 
-Alloro 2 foglie 
-Pepe nero q.b. 
-Vino bianco q.b. 
-Pomodorini ciliegino 250 g',
+'-Branzino (spigola) 800 g 
+-Cipolle media 1 
+-Carote 1 
+-Sedano 1 costa 
+-Salvia 2 foglie 
+-Basilico 4 foglie 
+-Prezzemolo da tritare 2 cucchiai 
+-Olio extravergine d''oliva 6 cucchiai 
+-Aglio 1 spicchio 
+-Alloro 2 foglie 
+-Pepe nero q.b. 
+-Vino bianco q.b. 
+-Pomodorini ciliegino 250 g',
 '- Pulite il branzino
 - Imbottite il ventre con salvia, alloro, aglio e sale;
 - Tagliate a quarti i pomodorini;
@@ -460,19 +487,21 @@ Sciacquate poi il branzino sotto l’acqua corrente e introducete  nel suo ventr
 Infornatelo e fatelo cuocere per 45/50 minuti, (il tempo di cottura varierà a seconda del peso e dello spessore del branzino) spruzzandolo quando serve con un po'' di vino bianco. A cottura ultimata estraete il pesce dal forno, sfilettatelo e disponetelo su di un piatto da portata irrorandolo col suo fondo di cottura.',
 'pesce_branzino_quadrato','Branzino al forno','Branzino al forno'),
 ('Secondi','Pesce','Calamari in umido',NULL,280,'Media',70,4,'Medio',
-'I calamari in umido sono un secondo piatto della tradizione casalinga, un modo semplice ma gustoso di assaporare al meglio questi teneri molluschi. Con questa ricetta proponiamo una versione in “rosso” con un vellutato sugo di pomodori pelati che avvolge con gusto le morbide striscioline di calamari. Immancabile il tocco profumato del prezzemolo, l’erba aromatica che ha un legame indissolubile con i piatti dal sapore di mare. Non vi resta quindi che iniziare ad affettare una croccante pagnotta: qui la scarpetta è d’obbligo!',
-'Ingredienti per i calamari
-Calamari 1 kg 
-Aglio 1 spicchio 
-Vino bianco 70 g 
-Olio extravergine d''oliva 30 g 
-Per il sugo
-Pomodori pelati 800 g 
-Olio extravergine d''oliva 20 g 
-Aglio 1 spicchio 
-Sale fino q.b. 
-Pepe nero q.b. 
-Prezzemolo q.b.',
+'I calamari in umido sono un secondo piatto della tradizione casalinga, un modo semplice ma gustoso di assaporare al meglio questi teneri molluschi. Con questa ricetta proponiamo una versione in “rosso” con un vellutato sugo di pomodori pelati che avvolge con gusto le morbide striscioline di calamari. Immancabile il tocco profumato del prezzemolo, l’erba aromatica che ha un legame indissolubile con i piatti dal sapore di mare. 
+Non vi resta quindi che iniziare ad affettare una croccante pagnotta: qui la scarpetta è d’obbligo!',
+'$Ingredienti per i calamari:
+-Calamari 1 kg 
+-Aglio 1 spicchio 
+-Vino bianco 70 g 
+-Olio extravergine d''oliva 30 g 
+
+$Per il sugo:
+-Pomodori pelati 800 g 
+-Olio extravergine d''oliva 20 g 
+-Aglio 1 spicchio 
+-Sale fino q.b. 
+-Pepe nero q.b. 
+-Prezzemolo q.b.',
 '- Scaldate in un tegame olio e aglio e unite i pomodori pelati;
 - Lavate e pulite i calamari;
 - Scaldate un pentolino con olio e aglio;
@@ -487,17 +516,18 @@ Lavate di nuovo i calamari accuratamente ed aiutatevi con le mani per estrarre l
 Eliminate l’aglio con una pinza da cucina e versate i calamari con tutto il condimento nel sugo di pomodoro. Salate, pepate e lasciate cuocere con un coperchio a fuoco basso per circa 10 minuti. A cottura ultimata, spegnete il fuoco, tritate il prezzemolo fresco finemente e aggiungetelo ai calamari. I vostri calamari in umido sono pronti per essere portata in tavola ben caldi!',
 'pesce_calamari_quadrato','Calamari in umido','Calamari in umido'),
 ('Secondi','Pesce','Salmone croccante',NULL,645,'Molto facile',30,4,'Medio',
-'A volte bastano poche mosse per trasformare un semplice ingrediente in un piatto di grande effetto… e il salmone croccante ne è la dimostrazione! Non dovrete fare altro che procurarvi dei filetti di pesce fresco di buona qualità, insaporirli con una fragrante panure al profumo di erbe aromatiche e infornare: il salmone croccante risulterà cotto alla perfezione e dorato al punto giusto. Accompagnato con un leggero contorno di stagione come possono essere gli agretti o la cicoria, potrete portare in tavola nel giro di mezz’ora un secondo di mare da leccarsi i baffi!',
-'Filetto di salmone (4 da 250 g l''uno) 1 kg 
-Pane 100 g 
-Prezzemolo 1 ciuffo 
-Aneto 1 ciuffo 
-Timo 4 rametti 
-Rosmarino 2 rametti 
-Scorza di limone 1 
-Olio extravergine d''oliva 50 g 
-Pepe bianco in grani 1 cucchiaino 
-Sale fino 1 cucchiaino',
+'A volte bastano poche mosse per trasformare un semplice ingrediente in un piatto di grande effetto… e il salmone croccante ne è la dimostrazione! Non dovrete fare altro che procurarvi dei filetti di pesce fresco di buona qualità, insaporirli con una fragrante panure al profumo di erbe aromatiche e infornare: il salmone croccante risulterà cotto alla perfezione e dorato al punto giusto. 
+Accompagnato con un leggero contorno di stagione come possono essere gli agretti o la cicoria, potrete portare in tavola nel giro di mezz’ora un secondo di mare da leccarsi i baffi!',
+'-Filetto di salmone (4 da 250 g l''uno) 1 kg 
+-Pane 100 g 
+-Prezzemolo 1 ciuffo 
+-Aneto 1 ciuffo 
+-Timo 4 rametti 
+-Rosmarino 2 rametti 
+-Scorza di limone 1 
+-Olio extravergine d''oliva 50 g 
+-Pepe bianco in grani 1 cucchiaino 
+-Sale fino 1 cucchiaino',
 '- Frullate il pane con il mixer, aggiungete aneto, timo, rosmarino e prezzemolo;
 - Versate l''olio, aggiungete la scorza di limone e il pepe bianco e frullate;
 - Pulite il salmone;
@@ -508,19 +538,20 @@ Ora occupatevi dei filetti di salmone: eliminate la pelle con un coltello dalla 
 Dopo aver ricoperto i filetti in modo omogeneo, cuocete in forno ventilato preriscaldato a 190° per circa 20 minuti. Trascorso il tempo di cottura, sfornate e servite il vostro salmone croccante ben caldo!',
 'pesce_salmone_croccante_quadrato','Salmone croccante','Salmone croccante'),
 ('Primi','Risotti','Risotto ai funghi',NULL,488,'Facile',70,4,'Basso',
-'Il risotto ai funghi è un primo piatto intramontabile. C''è chi preferisce il risotto con i porcini, ma questa tipologia di funghi spesso risulta difficile da reperire e a volte dato il loro gusto intenso non sempre viene apprezzato da tutti. Vi proponiamo in alternativa una versione più delicata che prevede l''utilizzo degli Champignon e dei funghi chiodini: due famiglie sicuramente più facili da trovare non solo in autunno ma anche durante il resto dell''anno! Allacciate il grembiule, prepariamo insieme questo cremoso e delizioso risotto ai funghi, mantecato a puntino!',
-'Riso Carnaroli 240 g 
-Funghi chiodini 200 g 
-Funghi champignon 200 g 
-Cipolle ½ 
-Burro 80 g 
-Parmigiano Reggiano DOP 60 g 
-Sale fino q.b. 
-Prezzemolo da tritare q.b. 
-Vino bianco 50 g 
-Acqua 1 l 
-Pepe bianco q.b. 
-Olio extravergine d''oliva q.b.',
+'Il risotto ai funghi è un primo piatto intramontabile. C''è chi preferisce il risotto con i porcini, ma questa tipologia di funghi spesso risulta difficile da reperire e a volte dato il loro gusto intenso non sempre viene apprezzato da tutti. Vi proponiamo in alternativa una versione più delicata che prevede l''utilizzo degli Champignon e dei funghi chiodini: due famiglie sicuramente più facili da trovare non solo in autunno ma anche durante il resto dell''anno! 
+Allacciate il grembiule, prepariamo insieme questo cremoso e delizioso risotto ai funghi, mantecato a puntino!',
+'-Riso Carnaroli 240 g 
+-Funghi chiodini 200 g 
+-Funghi champignon 200 g 
+-Cipolle ½ 
+-Burro 80 g 
+-Parmigiano Reggiano DOP 60 g 
+-Sale fino q.b. 
+-Prezzemolo da tritare q.b. 
+-Vino bianco 50 g 
+-Acqua 1 l 
+-Pepe bianco q.b. 
+-Olio extravergine d''oliva q.b.',
 '- Pulite e tagliate i funghi Champignon e i chiodini;
 - Preparate un brodo con gli scarti dei funghi;
 - Fate fondere 40 grammi di burro in un tegame;
@@ -541,14 +572,14 @@ Mescolate per amalgamare i sapori e regolate la densità del risotto aggiungendo
 ('Primi','Risotti','Risotto all''arancia',NULL,473,'Facile',30,4,'Basso',
 'Il risotto all''arancia è un primo piatto semplice, fresco e delicato, come il suo "cugino" al limone adatto ad una cenetta romantica e perfetto per i vegetariani.
 Il suo aroma è dovuto alle zeste di arancia in esso contenute che sprigionano un piacevole e fresco profumo; il succo d’arancia presente nel risotto da il tocco finale a questo primo piatto a base di agrumi molto particolare e gustoso.',
-'Riso Carnaroli 350 g 
-Cipolle 1 
-Burro 50 g 
-Arance biologica 1 
-Grana Padano DOP da grattugiare 30 g Vino bianco q.b. 
-Erba cipollina tritata 3 cucchiai Sale fino q.b. 
-Pepe bianco q.b. 
-Brodo vegetale 1 l',
+'-Riso Carnaroli 350 g 
+-Cipolle 1 
+-Burro 50 g 
+-Arance biologica 1 
+-Grana Padano DOP da grattugiare 30 g Vino bianco q.b. 
+-Erba cipollina tritata 3 cucchiai Sale fino q.b. 
+-Pepe bianco q.b. 
+-Brodo vegetale 1 l',
 '- Spremete l''arancia e tenete il succo da parte;
 - Tagliate a bastoncini la scorza e sbollentatela in poca acqua;
 - Tritate la cipolla nel burro fuso, unite il riso e tostatelo;
@@ -560,17 +591,19 @@ Sbucciate e tritate finemente la cipolla, fatela soffriggere nel burro fuso quin
 Sempre mescolando, portate a termine la cottura del riso aggiungendo poco brodo ogni volta che servirà. Qualche minuto prima di fine cottura, aggiungete le zeste d’arancia, l’erba cipollina e regolate eventualmente di sale e di pepe bianco macinato. Una volta spento il fuoco aggiungete il Grana Padano DOP grattugiato e una noce di burro per mantecare. Servite immediatamente guarnendo il piatto con fettine e zeste di arancia e, volendo, qualche filo di erba cipollina.',
 'risotto_all_arancia_quadrato','Risotto all''arancia','Risotto all''arancia'),
 ('Primi','Risotti','Risotto alla zucca',NULL,541,'Facile',70,4,'Basso',
-'Il risotto alla zucca è una vera e propria istituzione della cucina italiana: una primo piatto che racchiude tutto il calore delle cotture lente, dei sapori genuini, del buon profumo che sa di casa. Una pietanza di origini contadine, come molti tra i migliori piatti della nostra tradizione: solo intuizione, pratica e fantasia hanno saputo trasformare la zucca e il riso in un piatto oggi celebrato dai gastronomi e amato dagli intenditori. Cosa c’è di così speciale in un risotto alla zucca, cosa lo rende irresistibile? La sua semplicità, ci verrebbe da rispondere; una semplicità che racchiude saggezza, cura, gesti immutabili, necessari, privi di frivolezze pompose: la tostatura del riso, che ne impermeabilizza i chicchi e regala loro una straordinaria tenuta di cottura. La cottura seguita passo passo, un mestolo di brodo per volta, perché un riso lesso è diverso da un risotto. La mantecatura, quel momento in cui l’amido trasforma i rimasugli di brodo in una cremina che poi il burro rende lucida e fondente. Tanti piccoli gesti d’altri tempi, che rendono questo piatto una delizia capace di conquistare tanto i palati più raffinati quanto gli amanti dei sapori semplici e genuini.',
-'Riso Carnaroli 320 g 
-Zucca 600 g 
-Cipolle ramate 100 g 
-Brodo vegetale 1,5 l 
-Parmigiano Reggiano DOP 80 g 
-Vino bianco 60 g 
-Burro 50 g 
-Pepe nero q.b. 
-Sale fino q.b. 
-Olio extravergine d''oliva 20 g',
+'Il risotto alla zucca è una vera e propria istituzione della cucina italiana: una primo piatto che racchiude tutto il calore delle cotture lente, dei sapori genuini, del buon profumo che sa di casa. Una pietanza di origini contadine, come molti tra i migliori piatti della nostra tradizione: solo intuizione, pratica e fantasia hanno saputo trasformare la zucca e il riso in un piatto oggi celebrato dai gastronomi e amato dagli intenditori. Cosa c’è di così speciale in un risotto alla zucca, cosa lo rende irresistibile? La sua semplicità, ci verrebbe da rispondere; una semplicità che racchiude saggezza, cura, gesti immutabili, necessari, privi di frivolezze pompose: la tostatura del riso, che ne impermeabilizza i chicchi e regala loro una straordinaria tenuta di cottura. La cottura seguita passo passo, un mestolo di brodo per volta, perché un riso lesso è diverso da un risotto. 
+La mantecatura, quel momento in cui l’amido trasforma i rimasugli di brodo in una cremina che poi il burro rende lucida e fondente. 
+Tanti piccoli gesti d’altri tempi, che rendono questo piatto una delizia capace di conquistare tanto i palati più raffinati quanto gli amanti dei sapori semplici e genuini.',
+'-Riso Carnaroli 320 g 
+-Zucca 600 g 
+-Cipolle ramate 100 g 
+-Brodo vegetale 1,5 l 
+-Parmigiano Reggiano DOP 80 g 
+-Vino bianco 60 g 
+-Burro 50 g 
+-Pepe nero q.b. 
+-Sale fino q.b. 
+-Olio extravergine d''oliva 20 g',
 '- Preparate un brodo vegetale;
 - Pulite la zucca e tagliatela a dadini;
 - Soffriggete olio e cipolla, unite poi la zucca;
@@ -584,19 +617,21 @@ Tostate quindi il riso a fuoco alto fino a renderlo opalescente, girandolo spess
 Appena il risotto comincia ad asciugarsi, aggiungete un mestolo di brodo ben caldo, e proseguite via via aggiungendo il successivo solo quando il precedente sarà stato assorbito, fino al raggiungimento del giusto grado di cottura. Ci vorranno 15-20 minuti a seconda del riso utilizzato. Verso fine cottura regolate di pepe e di sale. Infine, a fuoco spento, mantecate con il burro e il parmigiano grattugiato. Amalgamate con cura, quindi aggiungete un ultimo mestolo raso di brodo se preferite un risotto più cremoso (“all’onda”). Lasciate rapprendere un minuto prima di impiattare e gustare!',
 'risotto_di_zucca_quadrato','Risotto alla zucca','Risotto alla zucca'),
 ('Primi','Zuppe','Zuppa di ceci',NULL,356,'Facile',130,4,'Basso',
-'C’è chi alle zuppe proprio non sa dire di no. Hanno il potere di scaldare le mani, il corpo e, non per ultimo, il cuore. Ognuno ha la sua preferita a partire da quella del contadino, probabilmente il classico dei classici, fino a quelle miste di legumi e cereali. Ma tra tutte quelle di terra (si perché esistono anche le zuppe di mare, come quella di cozze) ce n’è una che è sopra tutte: la zuppa di ceci. Probabilmente la più semplice, la più umile ma soprattutto la più buona. Qualcuno dice addirittura che chi cerca le coccole in realtà vuole i ceci. Quindi definire la zuppa di ceci un piatto amarcord è assolutamente corretto, siete d’accordo? Ecco la nostra ricetta, fateci sapere se anche a voi ha scaldato il cuore.',
-'Ceci secchi 300 g 
-Carote 1 
-Sedano 1 costa 
-Cipolle bianche ½ 
-Porri 1 
-Olio extravergine d''oliva 3 cucchiai 
-Rosmarino 2 rametti 
-Sale fino q.b. 
-Pepe nero q.b. 
-Alloro 2 foglie 
-Brodo vegetale 1,5 l 
-Passata di pomodoro 60 g',
+'C’è chi alle zuppe proprio non sa dire di no. 
+Hanno il potere di scaldare le mani, il corpo e, non per ultimo, il cuore. Ognuno ha la sua preferita a partire da quella del contadino, probabilmente il classico dei classici, fino a quelle miste di legumi e cereali. Ma tra tutte quelle di terra (si perché esistono anche le zuppe di mare, come quella di cozze) ce n’è una che è sopra tutte: la zuppa di ceci. Probabilmente la più semplice, la più umile ma soprattutto la più buona. Qualcuno dice addirittura che chi cerca le coccole in realtà vuole i ceci. Quindi definire la zuppa di ceci un piatto amarcord è assolutamente corretto, siete d’accordo? 
+Ecco la nostra ricetta, fateci sapere se anche a voi ha scaldato il cuore.',
+'-Ceci secchi 300 g 
+-Carote 1 
+-Sedano 1 costa 
+-Cipolle bianche ½ 
+-Porri 1 
+-Olio extravergine d''oliva 3 cucchiai 
+-Rosmarino 2 rametti 
+-Sale fino q.b. 
+-Pepe nero q.b. 
+-Alloro 2 foglie 
+-Brodo vegetale 1,5 l 
+-Passata di pomodoro 60 g',
 '- Mettete i ceci in ammollo per almeno 12 ore;
 - Preparate e scaldate il brodo vegetale;
 - Preparate un soffritto con olio, porro, sedano, cipolla e carota;
@@ -612,15 +647,16 @@ Poi unite alloro e rosmarino legati con lo spago da cucina. Coprite i ceci con i
 Mescolate e coprite con il coperchio. Lasciate cuocere a fuoco dolce per circa 2 ore o 2 ore e mezza aggiungendo brodo al bisogno. A fine cottura eliminate il mazzetto odoroso e regolate di sale e di pepe prima di servire. Ecco pronta la vostra zuppa di ceci, accompagnate con dei crostini, se preferite, e buon appetito.',
 'zuppa_di_ceci_quadrato','Zuppa di ceci','Zuppa di ceci'),
 ('Primi','Zuppe','Vellutata di zucca',NULL,205,'Facile',45,4,'Molto basso',
-'Siamo certi che la nostra vellutata di zucca vi conquisterà: delicata e confortante, con il suo profumo autunnale e la sua consistenza inconfondibile. Un primo piatto perfetto per scaldare cuori e palati nelle sere più fredde, ma grazie alla sua allure elegante e tutta francese è ideale anche per le cene più sofisticate e le occasioni più speciali. L''importante, secondo noi, è accompagnarla con dei crostini magari preparandoli con l''impasto di una pizza senza glutine, così risulteranno croccanti e perfetti per tutti!',
-'Brodo vegetale 800 g 
-Sale fino q.b. 
-Pepe nero q.b. 
-Noce moscata 1 pizzico 
-Porri 130 g 
-Zucca pulita 1 kg 
-Panna fresca liquida 100 g 
-Olio extravergine d''oliva 40 g',
+'Siamo certi che la nostra vellutata di zucca vi conquisterà: delicata e confortante, con il suo profumo autunnale e la sua consistenza inconfondibile. Un primo piatto perfetto per scaldare cuori e palati nelle sere più fredde, ma grazie alla sua allure elegante e tutta francese è ideale anche per le cene più sofisticate e le occasioni più speciali. 
+L''importante, secondo noi, è accompagnarla con dei crostini magari preparandoli con l''impasto di una pizza senza glutine, così risulteranno croccanti e perfetti per tutti!',
+'-Brodo vegetale 800 g 
+-Sale fino q.b. 
+-Pepe nero q.b. 
+-Noce moscata 1 pizzico 
+-Porri 130 g 
+-Zucca pulita 1 kg 
+-Panna fresca liquida 100 g 
+-Olio extravergine d''oliva 40 g',
 '- Fate un soffritto con olio e porro tagliato a rondelle;
 - Pulite la zucca e tagliatela a cubetti;
 - Aggiungete la zucca al soffritto e cuocete con brodo caldo per circa mezz''ora;
