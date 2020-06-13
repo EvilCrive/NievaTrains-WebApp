@@ -119,7 +119,8 @@ function stampaPassoPasso($results){
 	return trasformaStringaInLista($stringa);
 }
 function stampaCommenti($results) {
-	$nrisultati=sizeof($results);
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
 	$var='';
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<li class="comment">'."\n";
