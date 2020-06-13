@@ -109,10 +109,10 @@ function stampaInformazioni($results) {
 	return $var;
 }
 function stampaIntroduzione($results) {
-	return trasformaStringaInParagrafi($results[0]["Introduzione"]);
+	return '<p>&nbsp;</p>'.trasformaStringaInLista($results[0]["Introduzione"]);
 }
 function stampaRicettaEstesa($results) {
-	return trasformaStringaInLista( $results[0]["Preparazione"]);
+	return $results[0]["Preparazione"];
 }
 function stampaPassoPasso($results){
 	$stringa=$results[0]["Passo_Passo"];
@@ -154,7 +154,8 @@ function trasformaStringaInLista($stringa){
 	$var='';
 	$var.='<ul>';
   	foreach ($aux as $element) {
-  	$var.='<li>'.$element.'</li>';
+		if($element[0]=="$")	$var.='<li class="grassetto">'.substr($element,1).'</li>';
+		else	$var.='<li>'.$element.'</li>';
   	}
 	$var.='</ul>';
 	return $var; 
@@ -164,6 +165,8 @@ function trasformaStringaInParagrafi($stringa){
 	$aux=explode("\n",$stringa);
 	$var='';
   	foreach ($aux as $element) {
+	
+	
   	$var.='<p>'.$element.'</p>';
   	}
 	return $var; 

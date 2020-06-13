@@ -267,6 +267,9 @@ h4{
 i{
     word-wrap: break-word;
 }
+.grassetto{
+  font-weight: bold;
+}
 
 /*ricette consigliate*/
 .rowconsigliate{

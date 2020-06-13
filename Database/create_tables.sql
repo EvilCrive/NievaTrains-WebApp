@@ -1,12 +1,13 @@
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP TABLE IF EXISTS Utente;
+
+DROP TABLE IF EXISTS Preferiti;
+DROP TABLE IF EXISTS Voto;
+DROP TABLE IF EXISTS Likes;
+DROP TABLE IF EXISTS Follow;
 DROP TABLE IF EXISTS Commento;
 DROP TABLE IF EXISTS Ricetta;
-DROP TABLE IF EXISTS Follow;
-DROP TABLE IF EXISTS Likes;
-DROP TABLE IF EXISTS Voto;
-DROP TABLE IF EXISTS Preferiti;
+DROP TABLE IF EXISTS Utente;
 
 SET FOREIGN_KEY_CHECKS=1;
 
@@ -66,34 +67,34 @@ Descrizione_Immagine varchar(250) not null
 
 INSERT INTO Ricetta(Macro_Categoria,Categoria,Nome,Voto,Calorie,Difficoltà,Tempo_Preparazione,Dose,Costo,Introduzione,Ingredienti,Passo_Passo,Preparazione,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
 ('Antipasti','Antipasti','Arancini di riso',NULL,628,'Media',60,12,'Basso','Gli arancini di riso (o arancine), vanto della cucina siciliana, sono dei piccoli timballi adatti ad essere consumati sia come spuntino che come antipasto, primo piatto o addirittura piatto unico. In Sicilia si trovano ovunque e in ogni momento, sempre caldi e fragranti nelle molte friggitorie: di città in città spesso cambiano forma e dimensioni, assumendo fattezze ovali, a pera o rotonde, a seconda del ripieno. Si possono contare circa 100 varianti: dalla più classica al ragù e al prosciutto, a quelle più originali come al pistacchio e al nero di seppia! Noi oggi vi presentiamo le due classiche intramontabili, al ragù di carne di maiale e piselli e al prosciutto e mozzarella; voi quale preferite?',
-	'Ingredienti per circa 12 arancini
-	Zafferano 1 bustina 
-	Burro 30 g 
-	Riso vialone nano 500 g 
-	Sale fino 1 pizzico 
-	Acqua 1,2 l 
-	Caciocavallo stagionato da grattugiare 100 g 
-	Per il ripieno al ragù
-	Sale fino q.b. 
-	Pepe nero q.b. 
-	Cipolle ½ 
-	Burro 25 g 
-	Maiale macinato 100 g 
-	Olio extravergine d''oliva q.b. 
-	Passata di pomodoro 200 ml 
-	Pisellini 80 g 
-	Caciocavallo fresco 50 g 
-	Vino rosso 50 ml 
-	Per il ripieno al prosciutto
-	Prosciutto cotto in una sola fetta 30 g 
-	Mozzarella 60 g
-	Per la pastella
-	Farina 00 200 g 
-	Sale fino 1 pizzico 
-	Acqua 300 ml 
-	Per impanare e friggere
-	Pangrattato q.b. 
-	Olio di semi q.b.',
+	'Ingredienti per circa 12 arancini:
+	-Zafferano 1 bustina 
+	-Burro 30 g 
+	-Riso vialone nano 500 g 
+	-Sale fino 1 pizzico 
+	-Acqua 1,2 l 
+	-Caciocavallo stagionato da grattugiare 100 g 
+	Per il ripieno al ragù:
+	-Sale fino q.b. 
+	-Pepe nero q.b. 
+	-Cipolle ½ 
+	-Burro 25 g 
+	-Maiale macinato 100 g 
+	-Olio extravergine d''oliva q.b. 
+	-Passata di pomodoro 200 ml 
+	-Pisellini 80 g 
+	-Caciocavallo fresco 50 g 
+	-Vino rosso 50 ml 
+	Per il ripieno al prosciutto:
+	-Prosciutto cotto in una sola fetta 30 g 
+	-Mozzarella 60 g
+	Per la pastella:
+	-Farina 00 200 g 
+	-Sale fino 1 pizzico 
+	-Acqua 300 ml 
+	Per impanare e friggere:
+	-Pangrattato q.b. 
+	-Olio di semi q.b.',
 	'- Cucocere il riso, aggiungere zafferano, burro e formaggio. Lasciarlo a raffreddare completamente;
 	- Stufare la cipolla, unire il macinato, sfumare col vino e aggiungere la passata di pomodoro;
 	- A metà cottura aggiungere i piselli;
@@ -656,35 +657,13 @@ INSERT INTO Commento(Testo,Data,Numero_Like,Id_Utente,Id_Ricetta) VALUES
 ('Il miglior tiramisù di sempre',CURRENT_TIMESTAMP,0,3,8),
 ('Ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,0,3,2),
 ('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,4),
-('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,10),
-('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,17),
-('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,19),
 ('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,6),
-('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,7),
 ('Tiramisù fantastico',CURRENT_TIMESTAMP,0,5,8),
-('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,15),
-('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,20),
 ('Top ricetta',CURRENT_TIMESTAMP,0,6,9),
-('Top ricetta',CURRENT_TIMESTAMP,0,6,13),
-('Top ricetta',CURRENT_TIMESTAMP,0,6,14),
-('Top ricetta',CURRENT_TIMESTAMP,0,6,16),
 ('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,11),
-('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,15),
-('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,19),
-('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,12),
 ('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,1),
 ('Pizzette fantatiche',CURRENT_TIMESTAMP,0,8,5),
-('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,6),
-('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,11),
-('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,18),
-('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,4),
-('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,10),
-('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,13),
-('Ricetta esposta in modo chiaro, comodissimo il riassunto nel passo passo',CURRENT_TIMESTAMP,0,9,20),
-('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,7),
-('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,9),
-('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,12),
-('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,15);
+('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,7);
 
 
 CREATE TABLE Follow
@@ -737,12 +716,7 @@ INSERT INTO Likes(Id_Utente,Id_Commento) VALUES
 (3,1),
 (3,4),
 (4,2),
-(4,20),
-(6,18),
-(10,26),
 (10,14),
-(5,22),
-(6,19),
 (9,17);
 
 

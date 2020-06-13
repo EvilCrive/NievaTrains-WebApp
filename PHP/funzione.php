@@ -56,14 +56,10 @@ $connessione=new DBAccess();
   $ID=1;
 	//getquery ricetta(id)
 	$ricetta=$connessione->getQuery("SELECT * FROM ricetta WHERE Id_Ricetta=$ID;");
-  $stringa=stampaIntroduzione($ricetta);
+  $stringa=stampaIngredienti($ricetta);
   $aux=explode(". ",$stringa);
   echo $stringa;
-  echo '<ul>';
-  foreach ($aux as $element) {
-  	echo '<p>'.$element.'. '.'</p>';
-  }
-  echo '</ul>'
+  
   ?>
  </body>
 </html>
