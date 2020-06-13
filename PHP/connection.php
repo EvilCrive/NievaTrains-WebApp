@@ -3,7 +3,7 @@ class DBAccess{
 	const HOST_DB='localhost';
 	const user='root';
 	const pass='';
-	const db_name='db di prova';
+	const db_name='orangetangodb';
 	
 	private $connection=null;
 	
