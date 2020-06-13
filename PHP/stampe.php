@@ -109,13 +109,14 @@ function stampaInformazioni($results) {
 	return $var;
 }
 function stampaIntroduzione($results) {
-	return $results[0]["Introduzione"];
+	return trasformaStringaInParagrafi($results[0]["Introduzione"]);
 }
 function stampaRicettaEstesa($results) {
-	return $results[0]["Preparazione"];
+	return trasformaStringaInLista( $results[0]["Preparazione"]);
 }
 function stampaPassoPasso($results){
-	return $results[0]["Passo_Passo"];
+	$stringa=$results[0]["Passo_Passo"];
+	return trasformaStringaInLista($stringa);
 }
 function stampaCommenti($results) {
 	$nrisultati=sizeof($results);
@@ -141,6 +142,31 @@ function stampaInfoBox($testo){
 	return $var;
 }
 
-function stampaIngredienti($results) { return 'ingredienti';}
+function stampaIngredienti($results) { 	
+	$stringa=$results[0]["Ingredienti"];
+	return trasformaStringaInLista($stringa);
+}
 function stampaUtenti($results) {} //da fare
+
+
+function trasformaStringaInLista($stringa){
+	$aux=explode("\n",$stringa);
+	$var='';
+	$var.='<ul>';
+  	foreach ($aux as $element) {
+  	$var.='<li>'.$element.'</li>';
+  	}
+	$var.='</ul>';
+	return $var; 
+}
+
+function trasformaStringaInParagrafi($stringa){
+	$aux=explode("\n",$stringa);
+	$var='';
+  	foreach ($aux as $element) {
+  	$var.='<p>'.$element.'</p>';
+  	}
+	return $var; 
+}
+
 ?>
