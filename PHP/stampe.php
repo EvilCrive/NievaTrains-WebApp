@@ -8,7 +8,7 @@ function stampaRicette($results) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a target="_blank" href="'.$results[$i]["Nome_Immagine"].'.jpg">'."\n";
+		$var.= '		<a target="_blank" href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
 		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'" width="600" height="400">'."\n";
 		$var.= '		</a>'."\n";
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].'</div>'."\n";
@@ -87,7 +87,7 @@ function stampaNomeCognomeUsernameBio($results) {
 	return $var;
 }
 function stampaBreadcrumb($results) {
-	$var= ' -&gt; '.$results[0]["Macro_Categoria"];
+	$var= $results[0]["Macro_Categoria"];
 	if($results[0]["Categoria"]!=$results[0]["Macro_Categoria"]) $var.= ' -&gt; '.$results[0]["Categoria"].' -&gt; ';
 	$var.= ' -&gt; '.$results[0]["Nome"];
 	

@@ -11,7 +11,7 @@ try{
 		$cat=$_GET["Categoria"];
 
 	//getquery correlate(categoria)
-		$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='$cat' OR Categoria='$cat';");
+		$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Nome FROM ricetta WHERE Macro_Categoria='$cat' OR Categoria='$cat';");
 		if(!$consigliate) throw new Exception("Categoria sbagliata");
 	//file html	
 		$finale=file_get_contents('../txt/'.$cat.'.html');

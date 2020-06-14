@@ -7,7 +7,7 @@ try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
 	//getquery consigliate
-	$consigliate=$connessione->getQuery("SELECT R.Descrizione_Immagine, R.Nome_Immagine, R.Macro_Categoria, R.Nome, count(V.Voto) AS Numero_Voti
+	$consigliate=$connessione->getQuery("SELECT R.Descrizione_Immagine, R.Nome_Immagine, R.Id_Ricetta, R.Macro_Categoria, R.Nome, count(V.Voto) AS Numero_Voti
 									FROM Ricetta AS R JOIN Voto AS V ON R.Id_Ricetta=V.Id_Ricetta
 									GROUP BY R.Nome
 									ORDER BY Numero_Voti DESC;");
