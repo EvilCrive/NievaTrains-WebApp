@@ -672,11 +672,12 @@ Avrete ottenuto una crema piuttosto liscia, ma per renderla vellutata come da ma
 CREATE TABLE Commento
 (
 Id_Commento integer auto_increment PRIMARY KEY,
-Testo varchar(150) not null unique,
+Testo varchar(150) not null,
 Data datetime not null,
 Numero_Like integer default 0,
 Id_Utente integer,
 Id_Ricetta integer,
+CONSTRAINT uq_comment UNIQUE (Testo,Data),
 FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
 FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;

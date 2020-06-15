@@ -1,14 +1,3 @@
-function ValidateComment(){
-  var t=document.getElementById('controlLogged');
-  if(t.textContent==="1"){
-    return true;
-  }else{
-    alert("Non sei loggato");
-    return false;
-  }
-}
-
-
 function ValidateLogIn(){
   var login_error=document.getElementById('errors_login');
   var mail=document.forms["loginform"]["email"];

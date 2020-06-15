@@ -1,3 +1,4 @@
+
 <?php
 require_once "connection.php";
 
@@ -124,10 +125,19 @@ function stampaCommenti($results) {
 	$var='';
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<li class="comment">'."\n";
-        $var.= '	<div class="info">'."\n";
-        $var.= '  	<a href="#">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].'</a>'."\n";
-        $var.= '  </div>'."\n";
-		$var.= '	<p>'.$results[$i]["Testo"].'</p>'."\n";
+		
+		$var.= '	<div class="info">'."\n";
+		if(isset($_SESSION['login'])){
+			if($_SESSION['login']){
+				if($_SESSION['id']===$results[$i]["Id_Utente"]){
+					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="minibutton" value="Elimina"><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden></input><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden ></input></form>';
+				}
+			}
+		}
+		$var.='  	<a href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].'</a>'."\n";
+		$var.= '    <span class="data">'.$results[$i]["Data"].'</span>'."\n";
+		$var.= '  </div>'."\n";
+		$var.= '	<p>'.$results[$i]["Testo"]."\n";
 		$var.= '	</li>'."\n";
 	
 	}
@@ -174,3 +184,5 @@ function trasformaStringaInParagrafi($stringa){
 }
 
 ?>
+
+

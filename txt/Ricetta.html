@@ -19,7 +19,7 @@
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger.js"></script>
-	<script src="../JS/validate.js"></script>
+	<script src="../JS/comment.js"></script>
 
 </head>
 <body>
@@ -116,19 +116,19 @@
 	<!--php commenti-->
 	%%Commenti
 		<li class="write-new">
-			<form action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> <!-- va bene richiamare il file stampe.php qui ? -->
+			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> <!-- va bene richiamare il file stampe.php qui ? -->			
+				<textarea id="controlLogged" hidden>%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
 				<input name="idricetta" value="%%idricetta" hidden></textarea>
-				
 				<textarea placeholder="Lascia un commento qui..." name="comment"></textarea>
 					<div>
 						   <button type="submit">Invia</button>
+						   <p id="commentRequired" class="errors"></p>
    					</div>
 			</form>
 		</li>
+		
 	</ul>
-</div>
-<p id="controlLogged" hidden>%%login</p>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-<!--RICETTE CORRELATE -->
+</div><!--RICETTE CORRELATE -->
 
 	<h3>Ricette Della stessa Categoria :</h3>
 	%%Ricette

@@ -1,4 +1,21 @@
+.minibutton{
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #f6ad7b;
+  color: black;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 6px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
 /*GENERALE*/
+
 * {
   box-sizing: border-box;
   margin: 0em;
@@ -535,6 +552,9 @@ display: flex;
 	text-align: center;
 	color: red;
 }
+.errors{
+  color: red;
+}
 /*utente*/
 .rowUtente{
   max-width: 1400px;
@@ -589,6 +609,10 @@ display: flex;
   height: 300px;
 }
 /*modifiche*/
+.smallFont{
+  list-style-type: none;
+  font-size: 8px;
+}
 
 .comment-section{
     list-style: none;
@@ -606,6 +630,10 @@ display: flex;
     flex-wrap: wrap;
 	color:  #505050;
 }
+.data{
+  font-size: 0.75em;
+}
+
 /* User and time info */
 .comment .info{
     width: auto;
