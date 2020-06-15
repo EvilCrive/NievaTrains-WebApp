@@ -1,7 +1,7 @@
 <?php
 require_once "connection.php";
 require_once "stampe.php";
-
+session_start();
 //apertura connessione
 $connessione=new DBAccess();
 try{
@@ -34,6 +34,9 @@ try{
 		$finale=str_replace("%%RicettaEstesa",stampaRicettaEstesa($ricetta),$finale);
 		$finale=str_replace("%%Commenti",stampaCommenti($commenti),$finale);
 		$finale=str_replace("%%Ricette",stampaRicette($correlate),$finale);
+		$finale=str_replace("%%idricetta",$ID,$finale);
+		$finale=str_replace("%%login",$_SESSION['login'],$finale);
+		
 
 	//echo dell'html finale
 		echo $finale;

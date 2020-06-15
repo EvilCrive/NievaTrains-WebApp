@@ -1,3 +1,13 @@
+function ValidateComment(){
+  var t=document.getElementById('controlLogged');
+  if(t.textContent==="1"){
+    return true;
+  }else{
+    alert("Non sei loggato");
+    return false;
+  }
+}
+
 
 function ValidateLogIn(){
   var login_error=document.getElementById('errors_login');
@@ -6,18 +16,6 @@ function ValidateLogIn(){
   var errore_mail="";
   var errore_password="";
 
-/*
-  //controllo mail
-  if(!validateEmail(mail.value)){
-    errore_mail="L'e-mail non e' valida.";
-  }
-  else{
-    errore_mail="";
-  }
-
-  document.getElementById("error_mail_login").textContent=errore_mail;
-  document.getElementById("error_mail_login").style.color="red";
-  document.getElementById("error_mail_login").hidden=false;*/
   //controllo password
   if(!validatePassword(password.value)){
     errore_password="La password non e' valida";
@@ -37,6 +35,8 @@ function ValidateLogIn(){
   return false;
 
 }
+
+
 function ValidateSignUp(){
 
   //controllo mail
@@ -50,7 +50,6 @@ function ValidateSignUp(){
   document.getElementById("error_mail_signup").textContent=errore_mail;
   document.getElementById("error_mail_signup").style.color="red";
   document.getElementById("error_mail_signup").hidden=false;
-
 
   //controllo nome
   var name=document.forms["signupform"]["Nome"];
@@ -68,7 +67,6 @@ function ValidateSignUp(){
   document.getElementById("error_name").style.color="red";
   document.getElementById("error_name").hidden=false;
 
-
   //controllo cognome
   var surname=document.forms["signupform"]["Cognome"];
   var error_surname="";
@@ -84,7 +82,6 @@ function ValidateSignUp(){
   document.getElementById("error_surname").textContent=error_surname;
   document.getElementById("error_surname").style.color="red";
   document.getElementById("error_surname").hidden=false;
-
 
   //controllo username
   var username=document.forms["signupform"]["Username"];
@@ -102,7 +99,6 @@ function ValidateSignUp(){
   document.getElementById("error_username").style.color="red";
   document.getElementById("error_username").hidden=false;
 
-
   //controllo password
   var password=document.forms["signupform"]["password"];
   var errore_password="";
@@ -118,6 +114,7 @@ function ValidateSignUp(){
   document.getElementById("error_password_signup").textContent=errore_password;
   document.getElementById("error_password_signup").style.color="red";
   document.getElementById("error_password_signup").hidden=false;
+  
   //controllo conferma password
   var errore_confirmpassword="";
   if(password.value!==document.forms["signupform"]["confirmpassword"].value){
@@ -127,15 +124,12 @@ function ValidateSignUp(){
   document.getElementById("error_confirmpassword").style.color="red";
   document.getElementById("error_confirmpassword").hidden=false;
   
-  
   //controllo finale
-  
   if(errore_mail==="" && error_name==="" && error_surname==="" && error_username==="" && errore_password==="" && errore_confirmpassword===""){
     return true;
   }
   return false;
 }
-
 
 
 function validateEmail(mail){
@@ -145,12 +139,15 @@ function validateEmail(mail){
   }
   return (false)
 }
+
+
 function validatePassword(password){
    if(/^[A-Za-z0-9]{3,12}$/.test(password)){
     return true;
   }
   return false;
 }
+
 
 function validateName(name){
   if(/^[A-Za-z]{3,12}$/.test(name)){
