@@ -41,7 +41,7 @@ try{
 		$finale=str_replace("%%Breadcrumb",stampaBreadcrumb($ricetta),$finale);
 		$finale=str_replace("%%Titolo",stampaNome($ricetta),$finale);
 		$finale=str_replace("%%Voto",stampaVoto($ricetta),$finale);
-		$finale=str_replace("%%Preferiti",stampaPreferiti($prefe),$finale);
+		$finale=str_replace("%%Preferiti",stampaPreferiti($prefe,$ID),$finale);
 		$finale=str_replace("%%Immagine",stampaImmagineRicetta($ricetta),$finale);
 		$finale=str_replace("%%Informazioni",stampaInformazioni($ricetta),$finale);
 		$finale=str_replace("%%Ingredienti",stampaIngredienti($ricetta),$finale);

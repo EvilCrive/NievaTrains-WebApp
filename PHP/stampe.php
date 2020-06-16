@@ -105,8 +105,8 @@ function stampaBreadcrumb($results) {
 function stampaVoto($results) {
 	return '<button class="button1 likes">'.$results[0]["Voto"].'</button>';
 }
-function stampaPreferiti($results) {
-	return '<button class="button1 prefe">'.$results[0]["count(*)"].'</button>';
+function stampaPreferiti($results,$ID) {
+	return '<form action="../PHP/preferitiManage.php" method="POST"><input hidden name="idricetta" value="'.$ID.'"></input><button class="button1 prefe">'.$results[0]["count(*)"].'</button>';
 }
 function stampaInformazioni($results) {
 	$var= '<li><i>€ Difficoltà : '.$results[0]["Difficoltà"].'</i></li>'."\n";
