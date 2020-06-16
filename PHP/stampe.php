@@ -1,7 +1,7 @@
 
 <?php
 require_once "connection.php";
-session_start();
+
 function stampaRicette($results) {
 	$nrisultati=sizeof($results);
 	$var= '<div class="rowconsigliate clear">'."\n";

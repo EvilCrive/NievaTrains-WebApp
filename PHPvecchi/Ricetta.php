@@ -52,7 +52,7 @@ $risultati=$result[0];
 				<img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/>
 				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
 				<form class="topnav" action="../PHP/ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata">
+		 			<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata">
 					<button class="button" name="cerca">Cerca</button>
 				</form>
 			</div>

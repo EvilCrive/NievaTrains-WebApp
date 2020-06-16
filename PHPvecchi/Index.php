@@ -48,7 +48,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 				<a href=""><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
 				<a href="../HTML/Registrazione.html"><img id="user_logo" src="../immagini/account.png" alt="user logo"/></a>
 				<form class="topnav" action="../PHP/ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca tra le ricette" type="text" name="stringaCercata">
+		 			<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata">
 					<button class="button" name="cerca">Cerca</button>
 				</form>
 			</div>
@@ -88,7 +88,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 		<!--PHP start-->
 		<div id="searchwrapper">
 			<div id="search">
-				<input type="text" placeholder="Cerca tra le ricette">
+				<input type="text" placeholder="Cerca ricette e utenti">
 				<button class="button" name="cerca">Cerca</button>
 			</div>
 		</div>
