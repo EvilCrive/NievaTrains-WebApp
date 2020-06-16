@@ -3,7 +3,8 @@
 require_once "connection.php";
 
 function stampaRicette($results) {
-	$nrisultati=sizeof($results);
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
 	$var= '<div class="rowconsigliate clear">'."\n";
 	$contatore=1;
 	for ($i=0; $i<$nrisultati; $i++){
@@ -35,7 +36,9 @@ function stampaSpeciale($result) {
 	
 	return $var;
 }
-function stampaHeaderRicerca($results,$stringa) {
+function stampaHeaderRicerca($results,$stringa,$bool) {
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
 	$var='<div id="infoBox" class="clear row">';
 	$var.= '<div id="ricercatext">';
 	if(!$stringa=="") {
@@ -45,7 +48,11 @@ function stampaHeaderRicerca($results,$stringa) {
 	else $var.= '	<h3>Tutte le ricette</h3>';
 	$var.= '</div>';
 	$var.= '<div id="nrisultati">';
-	$var.= '	<p>'.sizeof($results).' risultati </p>';
+	if($bool){
+		$var.= '	<p>'.$nrisultati.' utenti trovati </p>';
+	}else{
+		$var.= '	<p>'.$nrisultati.' ricette trovate </p>';
+	}
 	$var.= '</div>';
 	$var.='</div>';
 	return $var;
@@ -70,7 +77,8 @@ function stampaLivelloTopFan($results) {
 	return $var;
 }
 function stampaFollowers($results) {
-	$nrisultati=sizeof($results);
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) { 
 		$var.= '<button class="button2">'.$results[$i]["Username"].'</button>'."\n";
@@ -120,7 +128,8 @@ function stampaPassoPasso($results){
 	return trasformaStringaInLista($stringa);
 }
 function stampaCommenti($results) {
-	if($results)	$nrisultati=sizeof($results);
+	if($results)	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
 	else	$nrisultati=0;
 	$var='';
 	for ($i=0; $i<$nrisultati; $i++){
@@ -157,7 +166,32 @@ function stampaIngredienti($results) {
 	$stringa=$results[0]["Ingredienti"];
 	return trasformaStringaInLista($stringa);
 }
-function stampaUtenti($results) {} //da fare
+function stampaUtenti($results) {
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var= '<div class="rowconsigliate clear">'."\n";
+	$contatore=1;
+	for ($i=0; $i<$nrisultati; $i++){
+		$var.= '<div class="responsive">'."\n";
+		$var.= '	<div class="gallery">'."\n";
+		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'."\n";
+		$var.= '			<img id="userImg" src="../immagini/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+		$var.= '		</a>'."\n";
+		$var.= '	<div class="desc">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</div>'."\n";
+		$var.= '	</div>'."\n";
+		$var.= '</div>'."\n";
+		
+		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
+			$var.= '</div>'."\n";
+			$var.= '<div class="rowconsigliate clear">'."\n";
+		}
+	$contatore++;
+	}
+	$var.= '</div>'."\n";
+	
+	return $var;
+
+} //da fare
 
 
 function trasformaStringaInLista($stringa){

@@ -34,7 +34,7 @@ if(isset($_GET["Id_Utente"])) {
 //sostituzioni:
 	$finale=str_replace("%%Nome",stampaUsername($utente),$finale); 
 	$finale=str_replace("%%Immagine",stampaImmagineUtente($utente),$finale);
-	$finale=str_replace("%%LivelloTopFan",stampaLivelloTopFan($utente),$finale);
+
 	$finale=str_replace("%%CognomeUsernameBio",stampaNomeCognomeUsernameBio($utente),$finale);
 	$finale=str_replace("%%Followers",stampaFollowers($followers),$finale);
 	$finale=str_replace("%%Ricette",stampaRicette($preferite),$finale);
