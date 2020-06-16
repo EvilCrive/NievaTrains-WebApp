@@ -43,26 +43,11 @@ if(isset($_GET["Id_Utente"])) {
 //sostituzioni:
 	$finale=str_replace("%%Nome",stampaUsername($utente),$finale); 
 	$finale=str_replace("%%Immagine",stampaImmagineUtente($utente),$finale);
-	if(isset($_SESSION['login'])){
-		if($_SESSION['login']){
-			$iduser=$_SESSION['id'];
-		}
-	}
-	if($_GET['Id_Utente']===$iduser){
-		$finale=str_replace("%%azioni",stampaEditbio(),$finale);
-	}else{
-		$id2=$_GET['Id_Utente'];
-		$query=$connessione->getQuery("SELECT * FROM follow WHERE Id_Utente1='$iduser' AND Id_Utente2='$id2'");
-		if($query){
-			$finale=str_replace("%%azioni","",$finale);
-		}else{
-			$finale=str_replace("%%azioni",stampafollow($id2),$finale);
-		}
-	}
+
 	$finale=str_replace("%%CognomeUsernameBio",stampaNomeCognomeUsernameBio($utente),$finale);
 	$finale=str_replace("%%Followers",stampaFollowers($followers),$finale);
 	$finale=str_replace("%%Ricette",stampaRicette($preferite),$finale);
-	
+
 //echo dell'html finale
 	echo $finale;
 }

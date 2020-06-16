@@ -70,7 +70,12 @@ function stampaImmagineUtente($results) {
 function stampaImmagineRicetta($results) {
 	return '<img id="img_ricetta" src="../Database/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
+function stampaLivelloTopFan($results) {
+	$var= '<button class="button2">Livello: '.$results[0]["Livello"].'</button>';
+	$var.= '<button class="button2">Top Fan: '.$results[0]["Top_Fan"].'</button>';
 
+	return $var;
+}
 function stampaFollowers($results) {
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
@@ -101,7 +106,7 @@ function stampaVoto($results) {
 	return '<button class="button1 likes">'.$results[0]["Voto"].'</button>';
 }
 function stampaPreferiti($results,$ID) {
-	return '<form action="../PHP/preferitiManage.php" method="POST"><input hidden name="idricetta" value="'.$ID.'"></input><button class="button1 prefe">'.$results[0]["count(*)"].'</button>';
+	return '<a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><button class="button1 prefe">'.$results[0]["count(*)"].'</button></a>';
 }
 function stampaInformazioni($results) {
 	$var= '<li><i>€ Difficoltà : '.$results[0]["Difficoltà"].'</i></li>'."\n";
@@ -186,14 +191,8 @@ function stampaUtenti($results) {
 	
 	return $var;
 
-} 
+} //da fare
 
-function stampaEditbio(){
-	return '<form action="../PHP/UserManage.php" method="post"><input name="bio"></input><button class="minibutton" name="submit">Modifica la BIO</button></form>';
-}
-function stampafollow($user){
-	return '<form action="../PHP/UserManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Segui</button></form>';
-}
 
 function trasformaStringaInLista($stringa){
 	$aux=explode("\n",$stringa);

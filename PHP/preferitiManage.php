@@ -1,3 +1,4 @@
+
 <?php
 require_once "connection.php";
 require_once "stampe.php";
@@ -17,7 +18,7 @@ if(isset($_SESSION['login'])){
 
 if($login){
   $idutente=$_SESSION['id'];
-  $idricetta=$_POST['idricetta'];
+  $idricetta=$_GET['idricetta'];
   $ricerca=$ConnessioneAttiva->getQuery("SELECT * FROM preferiti WHERE Id_Utente='$idutente' AND Id_Ricetta='$idricetta'");
   if(!$ricerca){
     $ConnessioneAttiva->exeQuery("INSERT INTO preferiti (Id_Utente,Id_Ricetta) VALUES('$idutente','$idricetta');");
