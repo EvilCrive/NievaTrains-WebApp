@@ -3,7 +3,6 @@ SET FOREIGN_KEY_CHECKS=0;
 
 DROP TABLE IF EXISTS Preferiti;
 DROP TABLE IF EXISTS Voto;
-DROP TABLE IF EXISTS Likes;
 DROP TABLE IF EXISTS Follow;
 DROP TABLE IF EXISTS Commento;
 DROP TABLE IF EXISTS Ricetta;
@@ -21,27 +20,24 @@ Username varchar(20) not null unique,
 Mail varchar(30) not null unique,
 Password varchar(60) not null,
 Bio varchar(250) not null,
-Like_Ricevuti integer default 0,
 Commenti_Scritti integer default 0,
-Livello tinyint default 0,
-Top_Fan boolean default false,
 is_Admin boolean default false,
 Nome_Immagine varchar(250) not null,
 Nome_Thumbnail varchar(250) not null,
 Descrizione_Immagine varchar(250) not null
 )ENGINE=InnoDB;
 
-INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Like_Ricevuti,Commenti_Scritti,Livello,Top_Fan,is_Admin,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
-('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini',0,0,0,false,false,'immagine_giacomino','Giacomino','Immagine profilo di Giacomo Poretti'),
-('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante',0,0,0,false,false,'immagine_davidone','Davidone','Immagine profilo di Davide Carlet'),
-('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia',0,0,0,false,false,'immagine_chiaraperin','chiaraperin','Immagine profilo di Chiara Perin'),
-('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla cucina',0,0,0,false,false,'immagine_pippofranco','pippofranco','Immagine profilo di Pippo Franco'),
-('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Ex veterinario, ora mi diletto nel preparare ottimi piatti a mia moglie',0,0,0,false,false,'immagine_giorgioandrea','giorgioandrea','Immagine profilo di Giorgio Andrea'),
-('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione',0,0,0,false,false,'immagine_stefaniarossi','stefaniarossi','Immagine profilo di Stefania Rossi'),
-('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.',0,0,0,false,false,'immagine_giuliaverdi','giuliaverdi','Immagine profilo di Giulia Verdi'),
-('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',0,0,0,false,false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
-('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',0,0,0,false,false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
-('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',0,0,0,false,false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas');
+INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Commenti_Scritti,is_Admin,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
+('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini',0,false,'immagine_giacomino','Giacomino','Immagine profilo di Giacomo Poretti'),
+('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante',0,false,'immagine_davidone','Davidone','Immagine profilo di Davide Carlet'),
+('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia',0,false,'immagine_chiaraperin','chiaraperin','Immagine profilo di Chiara Perin'),
+('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla cucina',0,false,'immagine_pippofranco','pippofranco','Immagine profilo di Pippo Franco'),
+('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Ex veterinario, ora mi diletto nel preparare ottimi piatti a mia moglie',0,false,'immagine_giorgioandrea','giorgioandrea','Immagine profilo di Giorgio Andrea'),
+('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione',0,false,'immagine_stefaniarossi','stefaniarossi','Immagine profilo di Stefania Rossi'),
+('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.',0,false,'immagine_giuliaverdi','giuliaverdi','Immagine profilo di Giulia Verdi'),
+('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',0,false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
+('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',0,false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
+('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',0,false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas');
 
 
 CREATE TABLE Ricetta
@@ -674,7 +670,6 @@ CREATE TABLE Commento
 Id_Commento integer auto_increment PRIMARY KEY,
 Testo varchar(150) not null,
 Data datetime not null,
-Numero_Like integer default 0,
 Id_Utente integer,
 Id_Ricetta integer,
 CONSTRAINT uq_comment UNIQUE (Testo,Data),
@@ -682,25 +677,25 @@ FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
 FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO Commento(Testo,Data,Numero_Like,Id_Utente,Id_Ricetta) VALUES
-('Consiglio a tutti questa ricetta semplice e buonissima',CURRENT_TIMESTAMP,0,1,3),
-('Questa ricetta è un evergreen',CURRENT_TIMESTAMP,0,1,5),
-('Buonissimissimo',CURRENT_TIMESTAMP,0,1,2),
-('Che dire, è il tisamisù',CURRENT_TIMESTAMP,0,2,8),
-('Grazie per avermi fatto scoprire questo dolce',CURRENT_TIMESTAMP,0,2,3),
-('Queste pizzette sono buonissime!',CURRENT_TIMESTAMP,0,2,5),
-('Impegnativi per un principiante ma buoni',CURRENT_TIMESTAMP,0,2,14),
-('Con questi arancini ho stupito tutti i miei amici xd',CURRENT_TIMESTAMP,0,3,1),
-('Il miglior tiramisù di sempre',CURRENT_TIMESTAMP,0,3,8),
-('Ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,0,3,2),
-('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,0,4,4),
-('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,0,5,6),
-('Tiramisù fantastico',CURRENT_TIMESTAMP,0,5,8),
-('Top ricetta',CURRENT_TIMESTAMP,0,6,9),
-('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,0,7,11),
-('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,0,8,1),
-('Pizzette fantatiche',CURRENT_TIMESTAMP,0,8,5),
-('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,0,10,7);
+INSERT INTO Commento(Testo,Data,Id_Utente,Id_Ricetta) VALUES
+('Consiglio a tutti questa ricetta semplice e buonissima',CURRENT_TIMESTAMP,1,3),
+('Questa ricetta è un evergreen',CURRENT_TIMESTAMP,1,5),
+('Buonissimissimo',CURRENT_TIMESTAMP,1,2),
+('Che dire, è il tisamisù',CURRENT_TIMESTAMP,2,8),
+('Grazie per avermi fatto scoprire questo dolce',CURRENT_TIMESTAMP,2,3),
+('Queste pizzette sono buonissime!',CURRENT_TIMESTAMP,2,5),
+('Impegnativi per un principiante ma buoni',CURRENT_TIMESTAMP,2,14),
+('Con questi arancini ho stupito tutti i miei amici xd',CURRENT_TIMESTAMP,3,1),
+('Il miglior tiramisù di sempre',CURRENT_TIMESTAMP,3,8),
+('Ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,3,2),
+('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,4,4),
+('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,5,6),
+('Tiramisù fantastico',CURRENT_TIMESTAMP,5,8),
+('Top ricetta',CURRENT_TIMESTAMP,6,9),
+('Finalmente ho trovato una spiegazione dettagliata di questa ricetta',CURRENT_TIMESTAMP,7,11),
+('Siete il miglior sito di cucina',CURRENT_TIMESTAMP,8,1),
+('Pizzette fantatiche',CURRENT_TIMESTAMP,8,5),
+('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,10,7);
 
 
 CREATE TABLE Follow
@@ -733,28 +728,6 @@ INSERT INTO Follow(Id_Utente1,Id_Utente2) VALUES
 (9,1),
 (10,2),
 (10,5);
-
-CREATE TABLE Likes
-(
-Id_Utente integer,
-Id_Commento integer,
-PRIMARY KEY(Id_Utente,Id_Commento),
-FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_Commento) REFERENCES Commento(Id_Commento) ON DELETE CASCADE
-)ENGINE=InnoDB;
-
-INSERT INTO Likes(Id_Utente,Id_Commento) VALUES
-(1,4),
-(1,6),
-(1,8),
-(1,9),
-(2,1),
-(2,8),
-(3,1),
-(3,4),
-(4,2),
-(10,14),
-(9,17);
 
 
 CREATE TABLE Voto
