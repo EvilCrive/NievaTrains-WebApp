@@ -45,6 +45,16 @@ if($login!=="off"){
             header("refresh:0; url=../PHP/Utente.php?Id_Utente=$iduser");
             die();
         }
+        if(isset($_POST['follow'])){
+            $ConnessioneAttiva = new DBAccess();
+            $var=$ConnessioneAttiva->openConnectionlocal();
+            $id2=$_POST['follow'];
+            $iduser=$_SESSION['id'];
+            $query="INSERT INTO follow (Id_Utente1, Id_Utente2) VALUES ('$iduser','$id2')";
+            $ConnessioneAttiva->exeQuery($query);
+            header("refresh:0; url=../PHP/Utente.php?Id_Utente=$id2");
+            die();
+        }
         //scritto male il parametro get
         header("refresh:0; url=../PHP/Index.php");    
         die();

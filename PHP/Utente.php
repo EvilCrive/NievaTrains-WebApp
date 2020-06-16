@@ -51,7 +51,13 @@ if(isset($_GET["Id_Utente"])) {
 	if($_GET['Id_Utente']===$iduser){
 		$finale=str_replace("%%azioni",stampaEditbio(),$finale);
 	}else{
-		$finale=str_replace("%%azioni",stampafollow(),$finale);
+		$id2=$_GET['Id_Utente'];
+		$query=$connessione->getQuery("SELECT * FROM follow WHERE Id_Utente1='$iduser' AND Id_Utente2='$id2'");
+		if($query){
+			$finale=str_replace("%%azioni","",$finale);
+		}else{
+			$finale=str_replace("%%azioni",stampafollow($id2),$finale);
+		}
 	}
 	$finale=str_replace("%%CognomeUsernameBio",stampaNomeCognomeUsernameBio($utente),$finale);
 	$finale=str_replace("%%Followers",stampaFollowers($followers),$finale);
