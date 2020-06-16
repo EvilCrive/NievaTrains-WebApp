@@ -6,9 +6,6 @@ $ConnessioneAttiva = new DBAccess();
 $var=$ConnessioneAttiva->openConnectionlocal();
 
 if(isset($_POST['button'])){
-  if($_POST['button']=="Modifica"){
-      
-  }
   if($_POST['button']=="Elimina"){
     $comm=$_POST['idcommento'];
     $query = "DELETE FROM commento WHERE Id_Commento='$comm';";

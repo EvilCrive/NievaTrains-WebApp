@@ -13,7 +13,7 @@ try{
 	$passaggio=true;
 	if(isset($_POST["stringaCercata"])) $stringa=$_POST["stringaCercata"];
 	else $stringa="";
-	$ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa';");
+	$ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa';");
 	$connessione->closeConnection();
 
 
