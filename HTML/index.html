@@ -17,7 +17,7 @@
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
-	<script src="../JS/menu_hamburger.js"></script>
+	<script src="../JS/menu_hamburger_utente.js"></script>
 
 </head>
 <body>
@@ -26,7 +26,7 @@
 			<!--prima riga header-->
 			<div id="hrow_1">
 				<!--MENU -->
-			<div id="mySidenav" class="sidenav">
+			<div id="mySidenav" class="sidenav" id="left0">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
 						<li><a href="#">Home</a></li>
@@ -36,6 +36,13 @@
 						<li><a href="#">Dolci</a></li>
 						<li><a href="#">About</a></li>
 					</ul>
+			</div>
+			<div id="userSidenav" class="sidenav" id="right0">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeUserNav()">&times;</a>
+				<ul>
+					<li><a href="#">Profilo</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
 			</div>
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
 				<a href=""><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>

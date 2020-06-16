@@ -53,13 +53,18 @@ html{
   max-width: 50px;
 }
 /*dropdownmenu*/
+#mySidenav{
+  left: 0;
+}
+#myUserSideNav{
+  right: 0;
+}
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 0;
   top: 70px;
-  left: 0;
   background-color: rgba(1,1,1,0.92);
   overflow-x: hidden;
   transition: 0.5s;
