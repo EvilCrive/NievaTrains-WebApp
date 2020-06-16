@@ -20,4 +20,4 @@ Progetto Tecnologie Web 2019/2020 UniPD
 * funzioni di calcolo livello e topfan
 
 # ACCESSIBILITÀ
-* Doc "controllo finale"
+* Doc "controllo finale"-
