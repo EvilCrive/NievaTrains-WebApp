@@ -36,12 +36,13 @@ if($login!=="off"){
             header("refresh:0; url=../PHP/Index.php");
         }else{
             //parametro get diverso da 1 o 2
+            header("refresh:0; url=../PHP/Index.php");
         }
     }
 
     }else{
-    
         //scritto male il parametro get
+        header("refresh:0; url=../PHP/Index.php");
     }
 }
 
