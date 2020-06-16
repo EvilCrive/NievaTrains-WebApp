@@ -43,11 +43,20 @@ if(isset($_GET["Id_Utente"])) {
 //sostituzioni:
 	$finale=str_replace("%%Nome",stampaUsername($utente),$finale); 
 	$finale=str_replace("%%Immagine",stampaImmagineUtente($utente),$finale);
-
+	if(isset($_SESSION['login'])){
+		if($_SESSION['login']){
+			$iduser=$_SESSION['id'];
+		}
+	}
+	if($_GET['Id_Utente']===$iduser){
+		$finale=str_replace("%%azioni",stampaEditbio(),$finale);
+	}else{
+		$finale=str_replace("%%azioni",stampafollow(),$finale);
+	}
 	$finale=str_replace("%%CognomeUsernameBio",stampaNomeCognomeUsernameBio($utente),$finale);
 	$finale=str_replace("%%Followers",stampaFollowers($followers),$finale);
 	$finale=str_replace("%%Ricette",stampaRicette($preferite),$finale);
-
+	
 //echo dell'html finale
 	echo $finale;
 }
