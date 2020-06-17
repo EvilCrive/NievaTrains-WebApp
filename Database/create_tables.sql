@@ -42,15 +42,12 @@ INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,is_Admin,Nome_Immagin
 CREATE TABLE Admins
 (
 Id_Admin integer auto_increment PRIMARY KEY,
-Nome varchar(20) not null,
-Cognome varchar(20) not null,
 User varchar(20) not null unique,
-Mail varchar(30) not null unique,
 Pin varchar(60) not null
 )ENGINE=InnoDB;
 
-INSERT INTO Admins(Nome,Cognome,User,Mail,Pin) VALUES
-('admin','admin','admin','admin@gmail.com','admin');
+INSERT INTO Admins(User,Pin) VALUES
+('admin','admin');
 
 CREATE TABLE Ricetta
 (
