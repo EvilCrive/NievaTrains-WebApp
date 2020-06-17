@@ -46,7 +46,12 @@ function stampaHeaderRicerca($results,$stringa,$bool) {
 		$var.= '	<h3>Ricerca per: </h3>';
 		$var.= '	<p>'.$stringa.'</p> ';
 	}
-	else $var.= '	<h3>Tutte le ricette</h3>';
+	elseif($bool){
+		$var.= '	<h3>Tutte gli utenti</h3>';
+	}else{
+		$var.= '	<h3>Tutte le ricette</h3>';
+	}
+
 	$var.= '</div>';
 	$var.= '<div id="nrisultati">';
 	if($bool){
