@@ -14,7 +14,7 @@ if(isset($_GET["Id_Utente"])) {
 //getquery utente(id)
 	$utente=$connessione->getQuery("SELECT * FROM utente WHERE Id_Utente=$ID;");
 //getquery followers(id)
-	$followers=$connessione->getQuery("SELECT U.Username
+	$followers=$connessione->getQuery("SELECT U.Username, F.Id_Utente2
 		FROM Utente AS U JOIN Follow AS F ON U.Id_Utente=F.Id_Utente2
 		WHERE F.Id_Utente1=$ID;");
 //getquery preferite(id)

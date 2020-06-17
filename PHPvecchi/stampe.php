@@ -43,7 +43,7 @@ function stampaInformazioni($Connessione, $ID) {
 		echo '<li><i>€ Costo : '.$result[0]["Costo"].'</i></li>'."\n";
 		echo '<li><i>€ Calorie : '.$result[0]["Calorie"].'</i></li>'."\n";
 }
-function stampaIngredienti($Connessione, $ID) { //dovrebbe essere una lista
+function stampaIngredienti($Connessione, $ID) { 
 	$result=$Connessione->getQuery("SELECT Ingredienti FROM Ricetta WHERE Id_Ricetta=$ID;");
 	echo $result[0]["Ingredienti"];
 }
@@ -68,12 +68,12 @@ function stampaImmagine($Connessione, $ID){
 	
 }
 function stampaFollowers($Connessione, $ID) {
-	$result=$Connessione->getQuery("SELECT U.Username
+	$result=$Connessione->getQuery("SELECT U.Username,F.Id_Utente2
 		FROM Utente AS U JOIN Follow AS F ON U.Id_Utente=F.Id_Utente2
 		WHERE F.Id_Utente1=$ID;");
 	$nrisultati=sizeof($result);
-	for($i=0; $i<$nrisultati; $i++) { //andrebbe messo un limite
-	echo '<button class="button2">'.$result[$i]["Username"].'</button>'."\n";
+	for($i=0; $i<$nrisultati; $i++) { 
+	echo '<a >prova<button class="button2">'.$result[$i]["Username"].'</button></a>'."\n";
 	}
 }
 ?>

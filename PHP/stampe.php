@@ -76,7 +76,7 @@ function stampaFollowers($results) {
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) { 
-		$var.= '<button class="button2">'.$results[$i]["Username"].'</button>'."\n";
+		$var.= '<a href="Utente.php?Id_Utente='.$results[$i]["Id_Utente2"].'"><button class="button2">'.$results[$i]["Username"].'</button></a>'."\n";
 	}
 	
 	return $var;
