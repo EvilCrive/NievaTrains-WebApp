@@ -7,7 +7,6 @@ Progetto Tecnologie Web 2019/2020 UniPD
 * migliorare interlinea e distanze in generale(ex home)
 * controllare le trasformazioni a schermo piccolo
 * admin panel
-* 404
 * registrazione, immagine
 * voti
 
