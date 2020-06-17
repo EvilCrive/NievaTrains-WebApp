@@ -8,7 +8,7 @@ try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
 	//file html	
-	$finale = file_get_contents("../txt/admin_panel.html");
+	$finale = file_get_contents("../txt/admin_panel_login.html");
 	//sidemenu user
 	$divusermenu="";
 	$ref="";
@@ -26,7 +26,6 @@ try{
 	}
 	$finale=str_replace("%%user",$ref,$finale);
 	$finale=str_replace("%%utente",$divusermenu,$finale);
-	
 	
 	//echo dell'html finale
 	echo $finale;
