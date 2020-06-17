@@ -17,14 +17,52 @@ try{
 				$finale=str_replace("%%title","Elimina utenti",$finale);
 				$finale=str_replace("%%eliminawhat",stampadeleteUtenti($utenti),$finale);
 			}
-			if($_GET['operation']==="2"){
+			elseif($_GET['operation']==="2"){
 				$finale = file_get_contents("../txt/admin_panel_remove.html");
 				$bool=0;
+				$utenti=$connessione->getQuery("SELECT * FROM commento");
+				$finale=str_replace("%%title","Elimina utenti",$finale);
+				$finale=str_replace("%%eliminawhat",stampadeleteCommenti($utenti),$finale);
 			}
-			if($_GET['operation']==="3"){
+			elseif($_GET['operation']==="3"){
 				$_SESSION=array();
 				session_destroy();
 				header( "refresh:0; url=../PHP/Index.php" ); 
+			}
+			else	header( "refresh:0; url=../PHP/Index.php" );
+		}
+		if(isset($_GET['delete'])){
+			if($_GET['delete']==="1"){
+				$finale = file_get_contents("../txt/admin_panel_remove.html");
+				$bool=0;
+				if(!isset($_GET['id']))		header( "refresh:0; url=../PHP/Index.php" );
+				if(!isset($_GET['name']))	header( "refresh:0; url=../PHP/Index.php" );
+				$elimina='<a href="../PHP/Admin_panel.php?delete=2&name='.$_GET['name'].'&id='.$_GET['id'].'"><button class=button>ELIMINA</button></a>';
+				$finale=str_replace("%%title","Elimina ".$_GET['name'],$finale);
+				$finale=str_replace("%%eliminawhat",$elimina,$finale);
+
+			}
+			elseif($_GET['delete']==="2"){
+				$finale = file_get_contents("../txt/admin_panel_remove.html");
+				$bool=0;
+				if(!isset($_GET['name']))	header( "refresh:0; url=../PHP/Index.php" );
+				if(!isset($_GET['id']))		header( "refresh:0; url=../PHP/Index.php" );
+				$elimina='<p>Eliminato ';
+				if($_GET['name']==="utente"){
+					$id=$_GET['id'];
+					$connessione->exeQuery("DELETE FROM utente WHERE Id_Utente='$id'");
+					$elimina.="l'utente!</p>"."\n";
+				}
+				elseif($_GET['name']==="commento"){
+					$id=$_GET['id'];
+					$connessione->exeQuery("DELETE FROM commento WHERE Id_Commento='$id'");
+					$elimina.="il commento!</p>"."\n";
+				}
+				$finale=str_replace("%%title","",$finale);
+				$finale=str_replace("%%eliminawhat",$elimina,$finale);
+			}
+			else{
+				header( "refresh:0; url=../PHP/Index.php" );
 			}
 		}
 		if($bool)	$finale = file_get_contents("../txt/adminpanel.html");
