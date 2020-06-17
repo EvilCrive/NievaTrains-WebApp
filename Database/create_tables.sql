@@ -20,24 +20,24 @@ Username varchar(20) not null unique,
 Mail varchar(30) not null unique,
 Password varchar(60) not null,
 Bio varchar(250) not null,
-Commenti_Scritti integer default 0,
 is_Admin boolean default false,
 Nome_Immagine varchar(250) not null,
 Nome_Thumbnail varchar(250) not null,
 Descrizione_Immagine varchar(250) not null
 )ENGINE=InnoDB;
 
-INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Commenti_Scritti,is_Admin,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
-('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini',0,false,'immagine_giacomino','Giacomino','Immagine profilo di Giacomo Poretti'),
-('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante',0,false,'immagine_davidone','Davidone','Immagine profilo di Davide Carlet'),
-('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia',0,false,'immagine_chiaraperin','chiaraperin','Immagine profilo di Chiara Perin'),
-('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla cucina',0,false,'immagine_pippofranco','pippofranco','Immagine profilo di Pippo Franco'),
-('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Ex veterinario, ora mi diletto nel preparare ottimi piatti a mia moglie',0,false,'immagine_giorgioandrea','giorgioandrea','Immagine profilo di Giorgio Andrea'),
-('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione',0,false,'immagine_stefaniarossi','stefaniarossi','Immagine profilo di Stefania Rossi'),
-('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.',0,false,'immagine_giuliaverdi','giuliaverdi','Immagine profilo di Giulia Verdi'),
-('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',0,false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
-('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',0,false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
-('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',0,false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas');
+INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,is_Admin,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
+('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini',false,'immagine_giacomino','Giacomino','Immagine profilo di Giacomo Poretti'),
+('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante',false,'immagine_davidone','Davidone','Immagine profilo di Davide Carlet'),
+('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia',false,'immagine_chiaraperin','chiaraperin','Immagine profilo di Chiara Perin'),
+('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla cucina',false,'immagine_pippofranco','pippofranco','Immagine profilo di Pippo Franco'),
+('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Ex veterinario, ora mi diletto nel preparare ottimi piatti a mia moglie',false,'immagine_giorgioandrea','giorgioandrea','Immagine profilo di Giorgio Andrea'),
+('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione',false,'immagine_stefaniarossi','stefaniarossi','Immagine profilo di Stefania Rossi'),
+('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.',false,'immagine_giuliaverdi','giuliaverdi','Immagine profilo di Giulia Verdi'),
+('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
+('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
+('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas'),
+('admin','admin','admin','admin@gmail.com','admin','Sono l admin',true,'admin','admin','admin');
 
 
 CREATE TABLE Ricetta
