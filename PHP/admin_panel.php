@@ -5,16 +5,31 @@ session_start();
 //apertura connessione
 $connessione=new DBAccess();
 try{
+	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 	$bool=1;
+
 	if(isset($_SESSION['adminlogged'])){
 		if(isset($_GET['operation'])){
-			echo "ciao";
-			die();
+			if($_GET['operation']==="1"){
+				$finale = file_get_contents("../txt/admin_panel_remove.html");
+				$bool=0;
+				$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username FROM utente");
+				$finale=str_replace("%%title","Elimina utenti",$finale);
+				$finale=str_replace("%%eliminawhat",stampadeleteUtenti($utenti),$finale);
+			}
+			if($_GET['operation']==="2"){
+				$finale = file_get_contents("../txt/admin_panel_remove.html");
+				$bool=0;
+			}
+			if($_GET['operation']==="3"){
+				$_SESSION=array();
+				session_destroy();
+				header( "refresh:0; url=../PHP/Index.php" ); 
+			}
 		}
-		$finale = file_get_contents("../txt/adminpanel.html");
+		if($bool)	$finale = file_get_contents("../txt/adminpanel.html");
 		$bool=0;
 	}
-	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 	if(isset($_POST['button'])){
 		$user=$_POST['user'];
 		$pin=$_POST['pin'];
@@ -28,6 +43,9 @@ try{
 			$_SESSION['adminlogged']=true;
 		}
 	}
+
+
+
 	if($bool){
 		$finale = file_get_contents("../txt/admin_panel_login.html");
 	}

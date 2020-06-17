@@ -82,7 +82,7 @@ function ValidateSignUp(){
     error_username="L'username e' troppo corto";
   }
   if(username.value.length>12){
-    error_username="Il nome e' troppo lungo.";
+    error_username="L'username e' troppo lungo.";
   }
   document.getElementById("error_username").textContent=error_username;
   document.getElementById("error_username").style.color="red";

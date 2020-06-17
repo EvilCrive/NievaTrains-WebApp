@@ -199,8 +199,19 @@ function stampaEditbio(){
 }
 function stampafollow($user){
 	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Segui</button></form>';
+}
 
 
+
+
+function stampadeleteUtenti($results){
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var='';
+	for($i=0; $i<$nrisultati; $i++) { 
+		$var.= '<p>'.$results[$i]["Username"].'<a href="../PHP/Admin_panel.php?delete=1?id='.$results[$i]["Id_Utente"].'"><button class="button3">X</button></a></p>'."\n";
+	}
+	return $var;
 }
 
 
