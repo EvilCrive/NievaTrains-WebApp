@@ -190,10 +190,10 @@ function stampaUtenti($results) {
 }
 
 function stampaEditbio(){
-	return '<form action="../PHP/UserManage.php" method="post"><input name="bio"></input><button class="minibutton">Modifica</button></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input name="bio"></input><button class="minibutton">Modifica</button></form>';
 }
 function stampafollow($user){
-	return '<form action="../PHP/UserManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Segui</button></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Segui</button></form>';
 
 
 }

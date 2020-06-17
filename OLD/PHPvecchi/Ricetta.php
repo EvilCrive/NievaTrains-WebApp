@@ -51,7 +51,7 @@ $risultati=$result[0];
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
 				<img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/>
 				<img id="user_logo" src="../immagini/account.png" alt="user logo"/>
-				<form class="topnav" action="../PHP/ricerca.php" method="post">
+				<form class="topnav" action="../PHP/Ricerca.php" method="post">
 		 			<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata">
 					<button class="button" name="cerca">Cerca</button>
 				</form>
