@@ -36,6 +36,7 @@ function stampaSpeciale($result) {
 	
 	return $var;
 }
+
 function stampaHeaderRicerca($results,$stringa,$bool) {
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
