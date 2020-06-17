@@ -37,7 +37,7 @@ INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,is_Admin,Nome_Immagin
 ('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
 ('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
 ('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas'),
-('admin','admin','admin','admin@gmail.com','admin','Sono l admin',true,'admin','admin','admin');
+('admin','admin','admin','admin@gmail.com','admin','Sono l''admin',true,'admin','admin','admin');
 
 
 CREATE TABLE Ricetta

@@ -171,7 +171,7 @@ function stampaUtenti($results) {
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
 		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'."\n";
-		$var.= '			<img id="userImg" src="../immagini/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+		$var.= '			<img id="userImg" src="../immagini/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
 		$var.= '		</a>'."\n";
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</div>'."\n";
 		$var.= '	</div>'."\n";
