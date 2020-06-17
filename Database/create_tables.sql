@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS Voto;
 DROP TABLE IF EXISTS Follow;
 DROP TABLE IF EXISTS Commento;
 DROP TABLE IF EXISTS Ricetta;
+DROP TABLE IF EXISTS Admins;
 DROP TABLE IF EXISTS Utente;
 
 SET FOREIGN_KEY_CHECKS=1;
@@ -36,9 +37,20 @@ INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,is_Admin,Nome_Immagin
 ('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.',false,'immagine_giuliaverdi','giuliaverdi','Immagine profilo di Giulia Verdi'),
 ('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose',false,'immagine_francescoveronese','francescoveronese','Immagine profilo di Francesco Veronese'),
 ('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”',false,'immagine_hideokojima','hideokojima','Immagine profilo di Hideo kojima'),
-('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas'),
-('admin','admin','admin','admin@gmail.com','admin','Sono l''admin',true,'admin','admin','admin');
+('Margherita','Dal Mas','margheritadalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere',false,'immagine_margheritadalmas','margheritadalmas','Immagine profilo di Margherita Dal Mas');
 
+CREATE TABLE Admins
+(
+Id_Admin integer auto_increment PRIMARY KEY,
+Nome varchar(20) not null,
+Cognome varchar(20) not null,
+User varchar(20) not null unique,
+Mail varchar(30) not null unique,
+Pin varchar(60) not null
+)ENGINE=InnoDB;
+
+INSERT INTO Admins(Nome,Cognome,User,Mail,Pin) VALUES
+('admin','admin','admin','admin@gmail.com','admin');
 
 CREATE TABLE Ricetta
 (
