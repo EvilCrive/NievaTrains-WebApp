@@ -14,11 +14,23 @@
   cursor: pointer;
 }
 
+.blackbord{
+  border: 1px solid black;
+}
+.oneem{
+  font-size: 1em;
+}
+.onemidem{
+  font-size: 1.5em;
+}
+.onetrequarteem{
+  font-size: 1.75em;
+}
 #adminpanel{
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  max-width: 500px;
+  max-width: 700px;
   min-width: 360px;
   margin: 0 auto;
   border: 5px solid rgb(246,173,123);
@@ -29,7 +41,6 @@
 
 #adminpanel p{
   padding: 15px 0px;
-  font-size: 1.5em;
 }
 #adminpanel li{
   list-style-type: none;
