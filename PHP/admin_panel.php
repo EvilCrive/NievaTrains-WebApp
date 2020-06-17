@@ -5,10 +5,21 @@ session_start();
 //apertura connessione
 $connessione=new DBAccess();
 try{
+	$bool=1;
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
-
-	//file html	
-	$finale = file_get_contents("../txt/admin_panel_login.html");
+	if(isset($_POST['button'])){
+		$user=$_POST['user'];
+		$pin=$_POST['pin'];
+		$connessione->openConnectionLocal();
+		if($connessione->getQuery("SELECT * from admins WHERE User='$user' AND Pin='$pin'")){
+			$finale = file_get_contents("../txt/adminpanel.html");
+			$bool=0;
+			$_SESSION['adminlogged']=true;
+		}
+	}
+	if($bool){
+		$finale = file_get_contents("../txt/admin_panel_login.html");
+	}
 	//sidemenu user
 	$divusermenu="";
 	$ref="";
