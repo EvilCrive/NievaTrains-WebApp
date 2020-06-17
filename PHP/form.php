@@ -42,6 +42,11 @@ if($var){
 		if(!$errors) {	
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
 			$ConnessioneAttiva->exeQuery($query);
+			if(isset($_SESSION['adminlogged'])){
+				$_SESSION=array();
+				session_destroy();
+				session_start();
+			}
 			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome'] = $cognome;
@@ -69,6 +74,11 @@ if($var){
 				$_SESSION['fail']="Email o Password sbagliati.";
 				$_SESSION['errors']=$errors;
 			}else{
+				if(isset($_SESSION['adminlogged'])){
+					$_SESSION=array();
+					session_destroy();
+					session_start();
+				}
 				$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
 				$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome FROM Utente WHERE Mail='$email'");
 				$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome FROM Utente WHERE Mail='$email'");
