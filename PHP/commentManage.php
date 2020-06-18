@@ -24,7 +24,7 @@ else{
     $date=date("Y-m-d H:i:s");
     $query = "INSERT INTO commento (Testo,Data,Id_Utente,Id_Ricetta) VALUES('$commento','$date','$idutente','$idricetta');";
     $ConnessioneAttiva->exeQuery($query);
-    header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta");
+    header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta#commentreturn");
   }
   
 }

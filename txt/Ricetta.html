@@ -113,10 +113,10 @@
 <div class="row">
 
 <h3>Commenti:</h3>
-	<ul class="comment-section">
+	<ul class="comment-section" id="commentreturn">
 	<!--php commenti-->
 	%%Commenti
-		<li class="write-new">
+		<li class="write-new" >
 			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> <!-- va bene richiamare il file stampe.php qui ? -->			
 				<textarea id="controlLogged" hidden>%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
 				<input name="idricetta" value="%%idricetta" hidden></textarea>
