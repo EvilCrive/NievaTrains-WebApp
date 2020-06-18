@@ -101,6 +101,19 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 </div>
 <div id="footer">
 
+	<div id="LogoFooter">
+		<img src="../immagini/logo.png" alt="logo orange tango" id="logoImg" />
+	</div>
+		<ul>
+			<li>&copy; 2019 Orange Tango Inc.</li>
+			<li><a href="http://www.facebook.com" lang="en">Facebook</a><span>&nbsp;</span><a href="https://www.instagram.com/?hl=it" lang="en">Instagram</a><span>&nbsp;</span><a href="../php/about.php" lang="en">About</a></li>
+		</ul>
+	<div id="validity">
+		<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
+		<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
+		<p><a href="../PHP/Admin_panel.php">AdminPanel</a></p>
+	</div>
+</div>
 <div id="LogoFooter">
 	<img src="../immagini/logo.png" alt="logo orange tango" id="logoImg" />
 </div>
