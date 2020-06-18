@@ -97,9 +97,9 @@ function stampaNomeCognomeUsernameBio($results) {
 	return $var;
 }
 function stampaBreadcrumb($results) {
-	$var= $results[0]["Macro_Categoria"];
-	if($results[0]["Categoria"]!=$results[0]["Macro_Categoria"]) $var.= ' -&gt; '.$results[0]["Categoria"].' -&gt; ';
-	$var.= ' -&gt; '.$results[0]["Nome"];
+	$var= '<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Macro_Categoria"].'</a>';
+	if($results[0]["Categoria"]!=$results[0]["Macro_Categoria"]) $var.= ' -&gt; '.'<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Categoria"].'</a> -&gt; ';
+	$var.=$results[0]["Nome"];
 	
 	return $var;
 }
