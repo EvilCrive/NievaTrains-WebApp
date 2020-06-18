@@ -28,7 +28,7 @@ function stampaRicette($results) {
 	return $var;
 }
 function stampaSpeciale($result) {
-	$var= '<img src="../Database/Ricette/immagini base/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'">';
+	$var= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'">';
 	$var.= '<div id="textGiorno">';
 	$var.= '	<h2>'.$result["Macro_Categoria"].'</h2>';
 	$var.= '	<p>'.$result["Nome"].'</p>';
