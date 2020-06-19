@@ -104,13 +104,13 @@ function stampaBreadcrumb($results) {
 	return $var;
 }
 function stampaVoto($results,$voto,$ricetta) {
-$var= '	<div class="rating-box">';
+$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post">';
 	//
 if($voto){
 	$var.=' <p>VOTO PRECEDENTE: '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 }
-$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><span id="rating-value" hidden></span>';
-$var.=	'<a href="../PHP/preferitiManage.php?idricetta='.'?voto='.'><button class="button1"> Valuta </button></a></div>';
+$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
+$var.=	'<input name="ricetta" hidden value='.$ricetta.'></input><button class="button1"> Valuta </button></a></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID) {

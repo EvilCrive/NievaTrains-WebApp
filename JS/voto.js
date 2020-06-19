@@ -21,6 +21,7 @@ for(let i=0; i<stars.length; i++){
   stars[i].addEventListener("click", function(){
     ratingValue.value=i+1;
     index=i;
+    document.getElementById("rating-value").textContent=index+1;
   })
   stars[i].addEventListener("mouseout", function(){
     for(let j=0; j<stars.length; j++){
@@ -31,7 +32,10 @@ for(let i=0; i<stars.length; i++){
       stars[j].classList.remove("fa-star-o");
       stars[j].classList.add("fa-star");
     }
-  })
+    
+  }
+  
+  )
 }
 });
 
