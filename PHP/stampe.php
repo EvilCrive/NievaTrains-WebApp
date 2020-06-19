@@ -99,7 +99,7 @@ function stampaNomeCognomeUsernameBio($results) {
 function stampaBreadcrumb($results) {
 	$var= '<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Macro_Categoria"].'</a>';
 	if($results[0]["Categoria"]!=$results[0]["Macro_Categoria"]) $var.= ' -&gt; '.'<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Categoria"].'</a>  ';
-	$var.='-&gt;'.$results[0]["Nome"];
+	$var.='-&gt; '.$results[0]["Nome"];
 	
 	return $var;
 }

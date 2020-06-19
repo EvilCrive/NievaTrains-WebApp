@@ -8,10 +8,9 @@ try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
 	//getquery consigliate
-	$consigliate=$connessione->getQuery("SELECT R.Descrizione_Immagine, R.Nome_Immagine, R.Id_Ricetta, R.Macro_Categoria, R.Nome, count(V.Voto) AS Numero_Voti
-									FROM Ricetta AS R JOIN Voto AS V ON R.Id_Ricetta=V.Id_Ricetta
-									GROUP BY R.Nome
-									ORDER BY Numero_Voti DESC
+	$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Macro_Categoria, Nome
+									FROM Ricetta 
+									GROUP BY Nome
 									LIMIT 8;");
 	$connessione->closeConnection();
 	//generazione numero random
