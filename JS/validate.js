@@ -5,15 +5,21 @@ function ValidateLogIn(){
   var errore_mail="";
   var errore_password="";
 
+    //controllo mail
+    var mail=document.forms["signupform"]["email"];
+    var errore_mail="";
+    if(!validateEmail(mail.value)){
+      errore_mail="L'e-mail non e' valida."
+    }else{
+      errore_mail="";
+    }
+    document.getElementById("error_mail_login").textContent=errore_mail;
+    document.getElementById("error_mail_login").style.color="red";
+    document.getElementById("error_mail_login").hidden=false;
+  
   //controllo password
   if(!validatePassword(password.value)){
     errore_password="La password non e' valida";
-  }
-  if(password.value.length<6){
-    errore_password="La password e' troppo corta.";
-  }
-  if(password.value.length>12){
-    errore_password="La password e' troppo lunga.";
   }
   document.getElementById("error_password_login").textContent=errore_password;
   document.getElementById("error_password_login").style.color="red";
@@ -23,6 +29,11 @@ function ValidateLogIn(){
   }
   return false;
 
+}
+
+function errori_PHP(){
+  alert("ciao");
+  return true;
 }
 
 

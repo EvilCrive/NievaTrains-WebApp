@@ -17,6 +17,9 @@ if(isset($_SESSION['justlogged'])){
 }
 $b=$_SESSION['fail'];
 $finale=str_replace("%b",$b,$finale);
+if($b!==""){
+	echo '<script>alert("'.$b.'")</script>';
+}
 	//sidemenu user
 		$divusermenu="";
 	$ref="";
