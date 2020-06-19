@@ -292,8 +292,7 @@ A questo punto potrete regolare di sale e coprire fino a metà la carne con la s
 Poi eliminate gli aromi. prima di frullare con il mixer ad immersione le verdure e il fondo di cottura, potrete raccogliere un po’ di liquido e tenerlo da parte. In questo modo potrete aggiungerlo al bisogno ottenendo la consistenza desiderata. Nel frattempo affettate la carne, cercando di ottenere 2-3 fette a persona e disponete nel piatto da portata; nappate le fette con la salsa. Il vostro brasato al barolo è pronto, buon appetito!',
 'carne_brasato_quadrato','Brasato al Barolo','Brasato al Barolo'),
 ('Secondi','Carne','Polpette di carne',NULL,393,'Facile',45,6,'Medio',
-'Le polpette al forno sono un secondo piatto gustoso e velocissimo da preparare: succulenti bocconcini di carne arricchiti con formaggio, uova e prezzemolo.
-Le polpette al forno, con il loro sapore ricco e deciso, piaceranno davvero a tutti. Accompagnatele con un purè di patate o con una bella insalata mista!',
+'Le polpette al forno sono un secondo piatto gustoso e velocissimo da preparare: succulenti bocconcini di carne arricchiti con formaggio, uova e prezzemolo.Le polpette al forno, con il loro sapore ricco e deciso, piaceranno davvero a tutti. Accompagnatele con un purè di patate o con una bella insalata mista!',
 '-Manzo macinato 400 g 
 -Salsiccia 200 g 
 -Aglio 1 spicchio 

@@ -802,3 +802,30 @@ display: flex;
 #img-404{
   width: 40%;
 }
+
+
+/* voti */
+
+.rating-box{
+  display: block;
+  float: right;
+}
+.ratings{
+  width: auto;
+  height: auto;
+  float: left;
+}
+.rating-box .ratings .fa{
+font-size: 2em;
+color: orange;
+cursor: pointer;
+
+}
+.rate li{
+  float: left;
+  list-style: none;
+}
+
+.rats{
+  float: left;
+}

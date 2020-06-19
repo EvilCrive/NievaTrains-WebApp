@@ -103,8 +103,15 @@ function stampaBreadcrumb($results) {
 	
 	return $var;
 }
-function stampaVoto($results) {
-	return '<button class="button1 likes">'.$results[0]["Voto"].'</button>';
+function stampaVoto($results,$voto,$ricetta) {
+$var= '	<div class="rating-box">';
+	//
+if($voto){
+	$var.=' <p>VOTO PRECEDENTE: '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
+}
+$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><span id="rating-value" hidden></span>';
+$var.=	'<a href="../PHP/preferitiManage.php?idricetta='.'?voto='.'><button class="button1"> Valuta </button></a></div>';
+return $var;
 }
 function stampaPreferiti($results,$ID) {
 	return '<a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><button class="button1 prefe">'.$results[0]["count(*)"].'</button></a>';

@@ -17,6 +17,7 @@ if(isset($_SESSION['login'])){
 }
 
 if($login){
+  if(isset($_GET['voto']))
   $idutente=$_SESSION['id'];
   $idricetta=$_GET['idricetta'];
   $ricerca=$ConnessioneAttiva->getQuery("SELECT * FROM preferiti WHERE Id_Utente='$idutente' AND Id_Ricetta='$idricetta'");
