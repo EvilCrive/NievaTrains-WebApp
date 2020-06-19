@@ -42,7 +42,19 @@ try{
 				if(!isset($_GET['id']))		header( "refresh:0; url=../PHP/Index.php" );
 				if(!isset($_GET['name']))	header( "refresh:0; url=../PHP/Index.php" );
 				$elimina='<a href="../PHP/Admin_panel.php?delete=2&name='.$_GET['name'].'&id='.$_GET['id'].'"><button class=button>ELIMINA</button></a>';
-				$finale=str_replace("%%title","Elimina ".$_GET['name'],$finale);
+				$elimina.='<a href="../PHP/Admin_panel.php?operation=';
+
+				if($_GET['name']==="utente"){
+					$iduser=$_GET['id'];
+					$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username FROM utente WHERE Id_Utente='$iduser';");
+					$var="l'utente @".$utenti[0]["Username"];
+					$elimina.=1;
+				}else{
+					$var="il commento";
+					$elimina.=2;
+				}
+				$elimina.='"><button class="button">TORNA INDIETRO</button></a>';
+				$finale=str_replace("%%title","Elimina ".$var,$finale);
 				$finale=str_replace("%%eliminawhat",$elimina,$finale);
 
 			}

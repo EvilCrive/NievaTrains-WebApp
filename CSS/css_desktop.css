@@ -15,7 +15,8 @@
 }
 
 .blackbord{
-  border: 1px solid black;
+  border-bottom: 1px solid orange;
+  border-top: 1px solid orange;
 }
 .oneem{
   font-size: 1em;

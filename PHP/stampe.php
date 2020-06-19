@@ -218,6 +218,7 @@ function stampadeleteUtenti($results){
 	for($i=0; $i<$nrisultati; $i++) { 
 		$var.= '<p class="onemidem">'.$results[$i]["Username"].'<a href="../PHP/Admin_panel.php?delete=1&name=utente&id='.$results[$i]["Id_Utente"].'"><button class="button3">X</button></a></p>'."\n";
 	}
+	$var.='<a href="../PHP/Admin_panel.php"><button class="button">TORNA INDIETRO</button></a>';
 	return $var;
 }
 
@@ -232,6 +233,7 @@ function stampadeleteCommenti($results){
 		$var.='<p class="oneem">Ricetta: '.$results[$i]["Nome"].'</p>';
 		$var.='<p><a href="../PHP/Admin_panel.php?delete=1&name=commento&id='.$results[$i]["Id_Commento"].'"><button class="button">ELIMINA IL COMMENTO</button></a></p></div>'."\n";
 	}
+	$var.='<a href="../PHP/Admin_panel.php"><button class="button">TORNA INDIETRO</button></a>';
 	return $var;
 }
 
