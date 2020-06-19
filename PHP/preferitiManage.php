@@ -17,9 +17,16 @@ if(isset($_SESSION['login'])){
 }
 
 if($login){
-  if(isset($_POST['ricetta'])){
-  }
-  if(isset($_POST['voto'])){ 
+  if((isset($_POST['ricetta'])) && (isset($_POST['voto']))){ 
+    $idricetta=$_POST['ricetta'];
+    $idutente=$_SESSION['id'];
+    $voto=$_POST['voto'];
+    if($ConnessioneAttiva->getQuery("SELECT * FROM voto WHERE Id_Utente='$idutente' AND Id_Ricetta='$idricetta';")){
+      $ConnessioneAttiva->exeQuery("DELETE FROM voto WHERE Id_Utente='$idutente' AND Id_Ricetta='$idricetta';");
+    }
+    $ConnessioneAttiva->exeQuery("INSERT INTO voto (Id_Utente,Id_Ricetta,Voto) VALUES('$idutente','$idricetta','$voto');");
+    header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta");
+    die();
   }
   $idutente=$_SESSION['id'];
   $idricetta=$_GET['idricetta'];
