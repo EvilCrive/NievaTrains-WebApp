@@ -229,7 +229,8 @@ html{
   top: 100%;
   width: 100%;
   max-width: 1800px;
-  margin-top: 40px;
+  position: absolute;
+  margin-top: -85px;
 }
 #LogoFooter{
   float: left;
@@ -290,6 +291,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   height: auto;
+  min-height: 100px;
   margin: auto;
   margin-top: 20px;
   background-color: #fff;
