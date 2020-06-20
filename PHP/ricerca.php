@@ -45,24 +45,10 @@ try{
 		$finale=str_replace("%%Utenti",stampaInfoBox("Utenti"),$finale);
 	}
 	else {
-			if(isset($_GET['tuttelericette'])){
-				$check=1;
-			}else{
-				$check=0;
-			}
-
-			if($check===0){
-				$finale=str_replace("%%HeaderRicerca",stampaHeaderRicerca($ricerca,$stringa,"0"),$finale);
-				$finale=str_replace("%%HeaderResearchUtenti",stampaHeaderRicerca($ricercautenti,$stringa,"1"),$finale);
-				$finale=str_replace("%%Ricette",stampaRicette($ricerca),$finale);
-				$finale=str_replace("%%Utenti",stampaUtenti($ricercautenti),$finale);
-			}
-			if($check===1){
-				$finale=str_replace("%%HeaderRicerca",stampaHeaderRicerca($ricerca,$stringa,"0"),$finale);
-				$finale=str_replace("%%HeaderResearchUtenti","",$finale);
-				$finale=str_replace("%%Ricette",stampaRicette($ricerca),$finale);
-				$finale=str_replace("%%Utenti"," ",$finale);
-			}
+		$finale=str_replace("%%HeaderRicerca",stampaHeaderRicerca($ricerca,$stringa,"0"),$finale);
+		$finale=str_replace("%%HeaderResearchUtenti",stampaHeaderRicerca($ricercautenti,$stringa,"1"),$finale);
+		$finale=str_replace("%%Ricette",stampaRicette($ricerca),$finale);
+		$finale=str_replace("%%Utenti",stampaUtenti($ricercautenti),$finale);
 	}
 	echo $finale;
 }catch(Exception $eccezione){

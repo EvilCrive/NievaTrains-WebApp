@@ -54,7 +54,7 @@ if(isset($_GET["Id_Utente"])) {
 		$id2=$_GET['Id_Utente'];
 		$query=$connessione->getQuery("SELECT * FROM follow WHERE Id_Utente1='$iduser' AND Id_Utente2='$id2'");
 		if($query){
-			$finale=str_replace("%%azioni","",$finale);
+			$finale=str_replace("%%azioni",stampaunfollow($id2),$finale);
 		}else{
 			$finale=str_replace("%%azioni",stampafollow($id2),$finale);
 		}

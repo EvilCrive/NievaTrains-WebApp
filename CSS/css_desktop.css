@@ -565,7 +565,32 @@ display: flex;
 .Box input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
+.Box input[type=email]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
 
+.Box input[type=email]:focus{
+    border-bottom: 2px solid rgb(246,173,123);
+}
+.Box input[type=password]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.Box input[type=password]:focus{
+    border-bottom: 2px solid rgb(246,173,123);
+}
 .button{
   margin-top: 15px;
 }

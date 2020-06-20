@@ -211,7 +211,10 @@ function stampaEditbio(){
 	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio"></textarea><button class="button">Modifica BIO</button></form>';
 }
 function stampafollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Segui</button></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Follow</button></form>';
+}
+function stampaunfollow($user){
+	return '<form action="../PHP/userManage.php" method="post"><input hidden name="unfollow" value="'.$user.'"></input><button class="button" name="submit">Unfollow</button></form>';
 }
 
 
@@ -259,9 +262,7 @@ function trasformaStringaInLista($stringa){
 function trasformaStringaInParagrafi($stringa){
 	$aux=explode("\n",$stringa);
 	$var='';
-  	foreach ($aux as $element) {
-	
-	
+  	foreach ($aux as $element) {	
   	$var.='<p>'.$element.'</p>';
   	}
 	return $var; 
