@@ -43,7 +43,7 @@ if($login!=="off"){
             $query="UPDATE utente SET Bio='$bio' WHERE Id_Utente='$iduser'";
             $ConnessioneAttiva->exeQuery($query);
             header("refresh:0; url=../PHP/Utente.php?Id_Utente=$iduser");
-            die();
+            
         }
         if(isset($_POST['follow'])){
             $ConnessioneAttiva = new DBAccess();
@@ -53,7 +53,17 @@ if($login!=="off"){
             $query="INSERT INTO follow (Id_Utente1, Id_Utente2) VALUES ('$iduser','$id2')";
             $ConnessioneAttiva->exeQuery($query);
             header("refresh:0; url=../PHP/Utente.php?Id_Utente=$id2");
-            die();
+            
+        }
+        if(isset($_POST['unfollow'])){
+            $ConnessioneAttiva = new DBAccess();
+            $var=$ConnessioneAttiva->openConnectionlocal();
+            $id2=$_POST['unfollow'];
+            $iduser=$_SESSION['id'];
+            $query="DELETE FROM follow WHERE Id_Utente1='$iduser' AND Id_Utente2='$id2'";
+            $ConnessioneAttiva->exeQuery($query);
+            header("refresh:0; url=../PHP/Utente.php?Id_Utente=$id2");
+            
         }
     }else{
         header("refresh:0; url=../PHP/Registrazione.php?logged=false");
