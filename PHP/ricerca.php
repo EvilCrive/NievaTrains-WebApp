@@ -13,7 +13,7 @@ try{
 	$passaggio=true;
 	if(isset($_POST["stringaCercata"])) $stringa=$_POST["stringaCercata"];
 	else $stringa="";
-	$ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa';");
+	$ricerca=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Nome FROM ricetta WHERE Nome LIKE '%$stringa%' OR Categoria='$stringa' OR Macro_Categoria='$stringa';");
 	$ricercautenti=$connessione->getQuery("SELECT Nome, Cognome, Username, Id_Utente, Nome_Immagine, Nome_Thumbnail FROM utente WHERE Username LIKE '%$stringa%' UNION SELECT Nome, Cognome, Username, Id_Utente, Nome_Immagine, Nome_Thumbnail FROM utente WHERE Nome LIKE '%$stringa%' UNION SELECT Nome, Cognome, Username, Id_Utente, Nome_Immagine, Nome_Thumbnail FROM utente WHERE Cognome LIKE '%$stringa%';");
 	$connessione->closeConnection();
 	$divusermenu="";
