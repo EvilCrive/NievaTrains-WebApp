@@ -31,11 +31,6 @@ function ValidateLogIn(){
 
 }
 
-function errori_PHP(){
-  alert("ciao");
-  return true;
-}
-
 
 function ValidateSignUp(){
 

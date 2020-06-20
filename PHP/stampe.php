@@ -227,7 +227,7 @@ function stampadeleteCommenti($results){
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) { 
-		$var.= '<div class="blackbord">';
+		$var.= '<div class="orangebord">';
 		$var.='<p class="onemidem">'.$results[$i]["Id_Commento"].")  ".$results[$i]["Testo"].'</p>';
 		$var.='<p class="oneem">Utente: '.$results[$i]["Username"].'</p><p>Data: '.$results[$i]["Data"].'</p>';
 		$var.='<p class="oneem">Ricetta: '.$results[$i]["Nome"].'</p>';

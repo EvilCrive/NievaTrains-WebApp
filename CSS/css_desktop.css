@@ -1,32 +1,5 @@
-.minibutton{
-  background-color: white;
-  border-radius: 10px;
-  border: 2px solid #f6ad7b;
-  color: black;
-  padding: 0px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 6px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
-.blackbord{
- 
-  border-top: 1px solid orange;
-}
-.oneem{
-  font-size: 1em;
-}
-.onemidem{
-  font-size: 1.5em;
-}
-.onetrequarteem{
-  font-size: 1.75em;
-}
+
 #adminpanel{
   display: flex;
   justify-content: left;
@@ -654,6 +627,23 @@ display: flex;
   transition-duration: 0.4s;
   cursor: pointer;
 }
+.minibutton{
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #f6ad7b;
+  color: black;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 6px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
 .card {
   background-color: white;
   padding: 20px;
@@ -724,6 +714,19 @@ display: flex;
     top: initial;
     left: 28px;
     bottom: -6px;
+}
+
+.orangebord{
+  border-top: 1px solid orange;
+}
+.oneem{
+  font-size: 1em;
+}
+.onemidem{
+  font-size: 1.5em;
+}
+.onetrequarteem{
+  font-size: 1.75em;
 }
 
 /* Comment form */
