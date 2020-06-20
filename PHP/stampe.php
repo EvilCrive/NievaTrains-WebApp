@@ -111,13 +111,13 @@ function stampaBreadcrumb($results) {
 	return $var;
 }
 function stampaVoto($results,$voto,$ricetta) {
-$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post">';
+$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post"><ul class="ratings">';
 	//
 if($voto){
-	$var.=' <p>VOTO MEDIO: '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
+	$var.=' <li class="rate">VOTO MEDIO: '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </li>';
 }
-$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
-$var.=	'<input name="ricetta" hidden value='.$ricetta.'></input><button class="button1"> Valuta </button></a></form>';
+$var.=	'<li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
+$var.=	'<input name="ricetta" hidden value='.$ricetta.'></input><button class="button1"> Valuta </button></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID) {
