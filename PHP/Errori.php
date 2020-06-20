@@ -23,17 +23,40 @@ try{
 	}else{
 		$ref='<img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/>';
 		
-    }
-    $errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
-    $errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
-    $errors.='<h2>Sembra tu abbia un problema riguardante gli utenti</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+	}
+	if(isset($_GET['errore'])){
+		
 
+		if($_GET['errore']==="utenti"){
+			$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
+			$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
+			$errors.='<h2>Sembra tu abbia un problema riguardante';
+			$errors.=' gli utenti';
+			$errors.='</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+		}
+		if($_GET['errore']==="categorie"){
+			$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
+			$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
+			$errors.='<h2>Sembra tu abbia un problema riguardante';
+			$errors.=" le categorie";
+			$errors.='</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+		}
+		if($_GET['errore']==="ricette"){
+			$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
+			$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
+			$errors.='<h2>Sembra tu abbia un problema riguardante';
+			$errors.=" le ricette";
+			$errors.='</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+		}
+		
+		$finale=str_replace("%%errorivari",$errors,$finale);
+	}
 	$finale=str_replace("%%user",$ref,$finale);
 	$finale=str_replace("%%utente",$divusermenu,$finale);
 	//sostituzioni:
 	// %%Ricette(correlate)
 	//echo dell'html finale
-    $finale=str_replace("%%errorivari",$errors,$finale);
+    
     echo $finale;
 	$connessione->closeConnection();
 }catch(Exception $eccezione){
@@ -41,6 +64,7 @@ try{
 //	header( "refresh:0; url=../PHP/Index.php" ); 	
 	$connessione->closeConnection();
 }
+
 ?>
 
 

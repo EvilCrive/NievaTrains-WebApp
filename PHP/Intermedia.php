@@ -44,7 +44,7 @@ try{
 	}
 	$connessione->closeConnection();
 }catch(Exception $eccezione){
-	header( "refresh:0; url=../PHP/Errori.php?errorecategorie=1" ); 	
+	header( "refresh:0; url=../PHP/Errori.php?errore=categorie" ); 	
 	$connessione->closeConnection();
 }
 ?>
