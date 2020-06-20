@@ -235,7 +235,7 @@ body{
 }
 
 #footererrori{
-  
+
 }
 /*CONTENT*/
 /*riga titolo*/
@@ -669,6 +669,7 @@ display: flex;
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
 .minibutton{
   background-color: white;
   border-radius: 10px;
@@ -769,9 +770,6 @@ display: flex;
 }
 .onetrequarteem{
   font-size: 1.75em;
-}
-form{
-	padding-top: 7px;
 }
 
 /* Comment form */
@@ -874,6 +872,7 @@ form{
 .rating-box{
   display: block;
   float: right;
+  top: 0;
 }
 .ratings{
   width: auto;
@@ -886,12 +885,10 @@ color: orange;
 cursor: pointer;
 
 }
-.rate li{
-  float: left;
+.rate{
   list-style: none;
 }
 
 .rats{
   float: left;
 }
-
