@@ -42,6 +42,9 @@ if($var){
 		if(!$errors) {	
 			$img="immagine";
 			$img.=explode(": ",$_POST['selectimg'])[1];
+			if($img==="immagine")	$img="immagineA";
+			echo $img;
+			die();
 			$bio="Io sono ".$nome." ".$cognome." ( @".$username." ) ";
 			$thumb=$username;
 			$descr="Immagine profilo di ".$nome." ".$cognome;
