@@ -71,7 +71,7 @@ function stampaNome($results) {
 	return $results[0]["Nome"];
 }
 function stampaImmagineUtente($results) {
-	return '<img id="userImg" src="../immagini/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+	return '<img id="userImg" src="../immagini/Utente/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
 function stampaImmagineRicetta($results) {
 	return '<img id="img_ricetta" src="../Database/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
