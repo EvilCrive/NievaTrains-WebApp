@@ -12,6 +12,9 @@
   background-color: #fff;
   padding: 30px;
 }
+#hamburger, #user_logo{
+cursor: pointer;
+}
 
 #adminpanel p{
   padding: 15px 0px;
