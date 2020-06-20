@@ -6,7 +6,7 @@ function ValidateLogIn(){
   var errore_password="";
 
     //controllo mail
-    var mail=document.forms["signupform"]["email"];
+    var mail=document.forms["signinform"]["email"];
     var errore_mail="";
     if(!validateEmail(mail.value)){
       errore_mail="L'e-mail non e' valida."

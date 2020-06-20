@@ -48,7 +48,6 @@ if($var){
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) 
 			VALUES('$nome','$cognome','$username','$email','$password','$bio','$img','$thumb','$descr');";
 			$ConnessioneAttiva->exeQuery($query);
-			die();
 			if(isset($_SESSION['adminlogged'])){
 				$_SESSION=array();
 				session_destroy();
