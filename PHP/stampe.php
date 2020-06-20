@@ -188,7 +188,6 @@ function stampaUtenti($results) {
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</div>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
-		
 		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
 			$var.= '</div>'."\n";
 			$var.= '<div class="rowconsigliate clear">'."\n";
