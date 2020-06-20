@@ -31,17 +31,17 @@
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
-						<li><a href="../php/Index.php">Home</a></li>
-						<li><a href="../php/Antipasti.php">Antipasti</a></li>
-						<li><a href="../php/Primi.php">Primi</a></li>
-						<li><a href="../php/Secondi.php">Secondi</a></li>
-						<li><a href="../php/Dolci.php">Dolci</a></li>
-						<li><a href="../php/about.php">About</a></li>
+						<li><a href="../PHP/Index.php">Home</a></li>
+						<li><a href="../PHP/Antipasti.php">Antipasti</a></li>
+						<li><a href="../PHP/Primi.php">Primi</a></li>
+						<li><a href="../PHP/Secondi.php">Secondi</a></li>
+						<li><a href="../PHP/Dolci.php">Dolci</a></li>
+						<li><a href="../PHP/about.php">About</a></li>
 					</ul>
 			</div>
 			%%utente
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
-				<a href="../php/Index.php"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
+				<a href="../PHP/Index.php"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
 				%%user
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
 		 			<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata" />
@@ -51,11 +51,11 @@
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="../php/Index.php" target="_top">Home</a></li>
-					<li><a href="../php/Antipasti.php" target="_top">Antipasti</a></li>
-					<li><a href="../php/Primi.php" target="_top">Primi</a></li>
-					<li><a href="../php/Secondi.php" target="_top">Secondi</a></li>
-					<li><a href="../php/Dolci.php" target="_top">Dolci</a></li>
+					<li><a href="../PHP/Index.php" target="_top">Home</a></li>
+					<li><a href="../PHP/Antipasti.php" target="_top">Antipasti</a></li>
+					<li><a href="../PHP/Primi.php" target="_top">Primi</a></li>
+					<li><a href="../PHP/Secondi.php" target="_top">Secondi</a></li>
+					<li><a href="../PHP/Dolci.php" target="_top">Dolci</a></li>
 					<li class="stayright"><a href="../php/about.php" target="_top">About</a></li>
 				<ul>
 			</div>
@@ -63,7 +63,7 @@
 	<!--breadcrumb-->
 		<div id="breadcrumb">
 			<ul>
-				<li>Ti trovi in: <span xml:lang="en"><a href="../php/Index.php">Home</a></span> -&gt; <a href="../php/Registrazione.php">Registrazione &amp; Login</a></li>
+				<li>Ti trovi in: <span xml:lang="en"><a href="../PHP/Index.php">Home</a></span> -&gt; <a href="../PHP/Registrazione.php">Registrazione &amp; Login</a></li>
 				<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
 			</ul>
 		</div>
@@ -79,10 +79,10 @@
 			<div class="Box">
 				<h3>Log In</h3>
 					<p>Email</p>
-					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
+					<input class="inputbar" type="email" name="email" id="email" placeholder="Email Address">
 					<div id="error_mail_login" hidden></div>
 					<p>Password</p>
-					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
+					<input class="inputbar" type="password" name="password" id="password" placeholder="Password">
 					<div id="error_password_login" hidden></div>
 					<input class="button" name="button" type="submit" value="Accedi">	
 			</div>
@@ -91,7 +91,7 @@
 			<div class="Box">
 					<h3>Registrazione</h3>
 					<p>Email</p>
-					<input class="inputbar" type="text" name="email" id="email" placeholder="Email Address">
+					<input class="inputbar" type="email" name="email" id="email" placeholder="Email Address">
 					<div id="error_mail_signup" hidden></div>
 					<p>Nome</p>
 					<input class="inputbar" type="text" name="Nome" id="Nome" placeholder="Nome">
@@ -103,10 +103,10 @@
 					<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
 					<div id="error_username" hidden></div>
 					<p>Password</p>
-					<input class="inputbar" type="text" name="password" id="password" placeholder="Password">
+					<input class="inputbar" type="password" name="password" id="password" placeholder="Password">
 					<div id="error_password_signup" hidden></div>
 					<p>Conferma Password</p>
-					<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+					<input class="inputbar" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
 					<div id="error_confirmpassword"></div>
 					<div id="scegli immagine">Scegli la tua immagine<p><img width="50px" height="50px" id="imga" src="../immagini/utente/immagineA.jpg" alt="A" ><img width="50px" height="50px" id="imgb" src="../immagini/utente/immagineB.jpg" alt="B"><img width="50px" height="50px" id="imgc" src="../immagini/utente/immagineC.jpg" alt="C"></p></div>
 					<p id="imgscelta">Hai scelto l'immagine:</p>

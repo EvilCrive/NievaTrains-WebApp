@@ -31,8 +31,13 @@ html{
   max-width: 1800px;
   vertical-align: middle;
   margin: auto;
-  height: 100%;
-  /*background-color: rgba(246,173,123,0.2);*/
+  /*height: 100%;*/
+  
+}
+body{
+	height: 100%;
+	min-height: 100%;
+	background-color: #f6f5f3!important;
 }
 .clear::after {
   content: "";
@@ -112,6 +117,7 @@ html{
 .topnav{
   display: block;
   float: right;
+  padding-top: 0px;
 }
 .button{
   background-color: white;
@@ -202,7 +208,9 @@ html{
   top: 100%;
   width: 100%;
   max-width: 1800px;
-  margin-top: 40px;
+  margin-top: 200px;
+  
+
 }
 #LogoFooter{
   float: left;
@@ -232,7 +240,7 @@ html{
   margin-top:20px;
   padding: 2em 2em;
   color:#000!important;
-  /*background-color: rgba(246,173,123,0.2)!important;/*#f1f1f1!important;*/
+  background-color: #f6f5f3!important;/*#f1f1f1!important*/;
 }
 #intro{
   /*max-*/width: 100%;
@@ -271,11 +279,13 @@ h2 {
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 h3{
+	width: 100%;
   margin-left:20px;
   font-size: 1.3em;
   padding-top:20px;
 }
 h4{
+	width: 100%;
   margin-top: 20px;
   margin-left:20px;
   font-size: 1em;
@@ -413,25 +423,22 @@ textarea:focus{
 }
 /*ricerca*/
 #infoBox{
-  padding-top: 15px;
+  padding: 15px;
+  display: block;
 	max-width: 1400px;
 	height: auto;
-	margin: auto;
   margin-bottom: 30px;
-}
-#ricercatext h3{
-  display: inline;
-  vertical-align: top;
+  margin-top: 20px;
+  font-size: 1.5em;
 }
 #ricercatext p{
   vertical-align: top;
-  display: inline;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding-left: 1em;
 }
 #nrisultati p{
 	font-size: 0.8em;
-	margin-left: 1.5em;
+
 }
 
 /*home*/
@@ -733,6 +740,9 @@ display: flex;
 .onetrequarteem{
   font-size: 1.75em;
 }
+form{
+	padding-top: 7px;
+}
 
 /* Comment form */
 
@@ -813,7 +823,9 @@ display: flex;
   width: 40%;
 }
 
-
+.infoRic{
+	color: #ec7421;;
+}
 
 
 

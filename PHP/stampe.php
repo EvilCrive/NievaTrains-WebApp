@@ -10,7 +10,7 @@ function stampaRicette($results) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a target="_blank" href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
+		$var.= '		<a href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
 		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'" width="600" height="400">'."\n";
 		$var.= '		</a>'."\n";
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].'</div>'."\n";
@@ -43,8 +43,15 @@ function stampaHeaderRicerca($results,$stringa,$bool) {
 	$var='<div id="infoBox" class="clear row">';
 	$var.= '<div id="ricercatext">';
 	if(!$stringa=="") {
-		$var.= '	<h3>Ricerca per: </h3>';
-		$var.= '	<p>'.$stringa.'</p> ';
+		
+	if($bool){
+		$var.= '	<h3>Risultato ricerca utenti: </h3>';
+	}else{
+		$var.= '	<h3>Risultato ricerca ricette:</h3>';
+	}
+	
+	
+		$var.= '	<p>"'.$stringa.'"</p> ';
 	}
 	elseif($bool){
 		$var.= '	<h3>Tutti gli utenti</h3>';
@@ -117,16 +124,16 @@ function stampaPreferiti($results,$ID) {
 	return '<a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><button class="button1 prefe">'.$results[0]["count(*)"].'</button></a>';
 }
 function stampaInformazioni($results) {
-	$var= '<li><i>€ Difficoltà : '.$results[0]["Difficoltà"].'</i></li>'."\n";
-	$var.= '<li><i>€ Preparazione : '.$results[0]["Tempo_Preparazione"].' minuti</i></li>'."\n";
-	$var.= '<li><i>€ Dosi per : '.$results[0]["Dose"].' persone</i></li>'."\n";
-	$var.= '<li><i>€ Costo : '.$results[0]["Costo"].'</i></li>'."\n";
-	$var.= '<li><i>€ Calorie : '.$results[0]["Calorie"].'</i></li>'."\n";
+	$var= '<li><span class="infoRic"> Difficoltà :</span> '.$results[0]["Difficoltà"].'</li>'."\n";
+	$var.= '<li><span class="infoRic"> Preparazione :</span> '.$results[0]["Tempo_Preparazione"].' minuti</li>'."\n";
+	$var.= '<li><span class="infoRic"> Dosi per :</span> '.$results[0]["Dose"].' persone</li>'."\n";
+	$var.= '<li><span class="infoRic"> Costo : </span>'.$results[0]["Costo"].'</li>'."\n";
+	$var.= '<li><span class="infoRic"> Calorie : </span>'.$results[0]["Calorie"].'</li>'."\n";
 	
 	return $var;
 }
 function stampaIntroduzione($results) {
-	return '<p>&nbsp;</p>'.trasformaStringaInLista($results[0]["Introduzione"]);
+	return '<p>&nbsp;'.$results[0]["Introduzione"].'</p>';
 }
 function stampaRicettaEstesa($results) {
 	return $results[0]["Preparazione"];
@@ -201,7 +208,7 @@ function stampaUtenti($results) {
 }
 
 function stampaEditbio(){
-	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio"></textarea><button class="minibutton">Modifica BIO</button></form>';
+	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio"></textarea><button class="button">Modifica BIO</button></form>';
 }
 function stampafollow($user){
 	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit">Segui</button></form>';
