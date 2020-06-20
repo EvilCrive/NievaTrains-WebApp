@@ -253,7 +253,7 @@ Una volta sistemate, formate una conchetta al centro, lasciando circa 0,5 cm di 
 
 Infornate le pizzette in forno statico preriscaldato a 200°: i primi 10 minuti cuocete posizionando la teglia alla base del forno; mentre i restanti 5 minuti sul ripiano più alto. Una volta cotte, sfornate le vostre pizzette rosse e servitele calde!',
 'antipasti_pizzette_quadrato','Pizzette','Pizzette'),
-('Secondi','Carne','Brasato al Barolo',NULL,638,'Facile',170,4,'Molto elevata',
+('Secondi','Carne','Brasato al Barolo',NULL,638,'Facile',170,4,'Molto elevato',
 'Quando si parla di ricette ricche e succulenti la regione del Piemonte scende in campo sfoderando dei piatti davvero magnifici. A partire dall''intramontabile vitello tonnato ai famosissimi ravioli del plin. Passando poi per ricette come la salsa verde, irresistibile compagna di bolliti e panini. E i dolci? I migliori! Il bonet o la panna cotta, la cui consistenza non smette mai di conquistare i palati golosi di tutto il mondo. E dopo questa irresistibile carrellata di golosità, che nemmeno a farlo apposta, fanno parte del patrimonio della cucina italiana, passiamo forse al top di tutte le ricette: il brasato al barolo. Un secondo piatto ricercatissimo che si prepara proprio utilizzando l''omonimo vino rosso del Piemonte. 
 Una ricetta ricca e succulenta da dedicarsi e da regalare agli ospiti durante le occasioni speciali, e perché no, anche per le feste natalizie.',
 '-Manzo cappello del prete 1 kg 
