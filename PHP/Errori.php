@@ -25,26 +25,18 @@ try{
 		
 	}
 	if(isset($_GET['errore'])){
-		
-
+		$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
+		$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
+		$errors.='<h2>Sembra tu abbia un problema riguardante';
 		if($_GET['errore']==="utenti"){
-			$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
-			$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
-			$errors.='<h2>Sembra tu abbia un problema riguardante';
 			$errors.=' gli utenti';
 			$errors.='</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
 		}
 		if($_GET['errore']==="categorie"){
-			$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
-			$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
-			$errors.='<h2>Sembra tu abbia un problema riguardante';
 			$errors.=" le categorie";
 			$errors.='</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
 		}
 		if($_GET['errore']==="ricette"){
-			$errors='<div class="parent-content"><div class="text-content"><img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />';
-			$errors.='<h1>Ops! Qualcosa e andato storto...</h1>';
-			$errors.='<h2>Sembra tu abbia un problema riguardante';
 			$errors.=" le ricette";
 			$errors.='</h2><a href="../php/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
 		}

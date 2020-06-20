@@ -17,7 +17,7 @@
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
-	<script src="../JS/menu_hamburger.js"></script>
+	<script src="../JS/menu_hamburger_utente.js"></script>
 
 </head>
 <body>
@@ -26,35 +26,35 @@
 			<!--prima riga header-->
 			<div id="hrow_1">
 				<!--MENU -->
-			<div id="mySidenav" class="sidenav">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
 						<li><a href="../PHP/Index.php">Home</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
-						<li><a href="../php/about.php">About</a></li>
+						<li><a href="../php/About.php">About</a></li>
 					</ul>
-			</div>
-			%%user
-			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
-				<a href="../php/Index.php"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
+				</div>
 				%%utente
+				<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
+				<a href="../PHP/Index.php"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
+				%%user
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
 		 			<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
 				</form>
-			</div>
+		</div>
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="../PHP/Index.php" target="_top">Home</a></li>
+					<li class="active"><a href="../PHP/Index.php" target="_top">Home</a></li>
 					<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
 					<li><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
 					<li><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
 					<li><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
-					<li class="stayright"><a href="../php/about.php" target="_top">About</a></li>
+					<li class="stayright"><a href="../PHP/About.php" target="_top">About</a></li>
 				<ul>
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 			<a href="#content"><img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" /></a>
 		</div>
 
-		<div id="footer">
+		<div id="footer footererrori">
 
 			<div id="LogoFooter">
 				<img src="../immagini/logo.png" alt="logo orange tango" id="logoImg" />

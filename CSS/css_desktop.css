@@ -209,8 +209,6 @@ body{
   width: 100%;
   max-width: 1800px;
   margin-top: 200px;
-  
-
 }
 #LogoFooter{
   float: left;
@@ -231,6 +229,10 @@ body{
 #validity{
   float: right;
   width: 250px;
+}
+
+#footererrori{
+  
 }
 /*CONTENT*/
 /*riga titolo*/

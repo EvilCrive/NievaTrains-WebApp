@@ -33,8 +33,7 @@ if($var){
 		//registrazione
 		$controlquery="SELECT Username,Mail FROM utente WHERE Mail='$email' OR Username='$username';";
 		if($ConnessioneAttiva->getQuery($controlquery)){
-			//controllo per utenti gia' iscritti
-			
+			//controllo per utenti gia' iscritti	
 			header("refresh:0; url=../PHP/Registrazione.php");
 			$_SESSION['fail']="Questo utente e' gia' registrato.";
 			die();
@@ -67,7 +66,7 @@ if($var){
 		}else{
 			
 			header("refresh:0; url=../PHP/Registrazione.php");
-			$_SESSION['fail']="Ci sono stati errori, che sono sfuggiti ai controlli client side.(qualche campo non e' valido): ";
+			$_SESSION['fail']="Ci sono stati errori, che sono sfuggiti ai controlli client side.(qualche campo non e' valido): "."\n";
 			$_SESSION['fail'].=$errors;
 		}
 
