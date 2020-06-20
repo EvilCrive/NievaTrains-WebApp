@@ -108,9 +108,10 @@
 					<p>Conferma Password</p>
 					<input class="inputbar" type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
 					<div id="error_confirmpassword"></div>
-					
-					<div id="scegli immagine">Scegli la tua immagine<p ><img width="50px" height="50px" id="imga" src="../immagini/utenti/immagineA.png" alt="A" ><img width="50px" height="50px" id="imgb" src="../immagini/utenti/immagineB.png" alt="B"><img width="50px" height="50px" id="imgc" src="../immagini/utenti/immagineC.png" alt="C"></p></div>
-					<input type="submit" name="button" class="button" value="Registrati">
+					<div id="scegli immagine">Scegli la tua immagine<p><img width="50px" height="50px" id="imga" src="../immagini/utenti/immagineA.png" alt="A" ><img width="50px" height="50px" id="imgb" src="../immagini/utenti/immagineB.png" alt="B"><img width="50px" height="50px" id="imgc" src="../immagini/utenti/immagineC.png" alt="C"></p></div>
+					<p id="imgscelta">Hai scelto l'immagine:</p>
+					<textarea name ="selectimg" hidden></textarea>
+					<input type="submit" name="button" class="button" id="proc" value="Registrati">
 			</div>
 		</form>
 		<div id="errors"><p>%b</p></div> <!--errori lato server -->

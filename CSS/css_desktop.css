@@ -566,6 +566,11 @@ display: flex;
 .errors{
   color: red;
 }
+
+.selected{
+  border: 2px solid lightblue;
+}
+
 /*utente*/
 .rowUtente{
   max-width: 1400px;

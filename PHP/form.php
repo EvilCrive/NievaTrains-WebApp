@@ -40,8 +40,15 @@ if($var){
 			die();
 		}
 		if(!$errors) {	
-			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
+			$img="immagine";
+			$img.=explode(": ",$_POST['selectimg'])[1];
+			$bio="Io sono ".$nome." ".$cognome." ( @".$username." ) ";
+			$thumb=$username;
+			$descr="Immagine profilo di ".$nome." ".$cognome;
+			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) 
+			VALUES('$nome','$cognome','$username','$email','$password','$bio','$img','$thumb','$descr');";
 			$ConnessioneAttiva->exeQuery($query);
+			die();
 			if(isset($_SESSION['adminlogged'])){
 				$_SESSION=array();
 				session_destroy();
