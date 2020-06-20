@@ -71,7 +71,7 @@ else {
 }
 $connessione->closeConnection();
 }catch(Exception $eccezione){
-	echo file_get_contents('../txt/ErroreUtenti.html'); 
+	header( "refresh:0; url=../PHP/Errori.php?erroreutenti=1" ); 	
 	$connessione->closeConnection();
 }
 ?>

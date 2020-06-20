@@ -37,10 +37,10 @@
 						<li><a href="../php/about.php">About</a></li>
 					</ul>
 			</div>
-			
+			%%user
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
 				<a href="../php/Index.php"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
-				<img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/>
+				%%utente
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
 		 			<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
@@ -66,14 +66,7 @@
 			</ul>
 		</div>
 
-		<div class="parent-content">
-    		<div class="text-content">
-					<img id="img-404" src="../immagini/img404error.png" alt="Errore 404" />
-      			<h1>Ops! Qualcosa e'andato storto...</h1>
-      	     <h2>Sembra tu abbia un problema riguardante le ricette</h2>
-						<a href="../php/Ricette.php"> Torna alle Ricette</a>
-    		</div>
-		</div>
+		%%errorivari
 
 		<div id="tornasu">
 			<a href="#content"><img id="logo_freccia" src="../immagini/tornasu.png" alt="arrow_up" /></a>

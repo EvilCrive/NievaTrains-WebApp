@@ -65,7 +65,7 @@ try{
 	}
 	$connessione->closeConnection();
 }catch(Exception $eccezione){
-	echo file_get_contents('../txt/ErroreRicette.html'); 
+	header( "refresh:0; url=../PHP/Errori.php?errorericette=1" ); 	
 	$connessione->closeConnection();
 }
 ?>

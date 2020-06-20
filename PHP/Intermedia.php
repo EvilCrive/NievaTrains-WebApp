@@ -44,7 +44,7 @@ try{
 	}
 	$connessione->closeConnection();
 }catch(Exception $eccezione){
-	echo file_get_contents('../txt/ErroreCategorie.html'); 
+	header( "refresh:0; url=../PHP/Errori.php?errorecategorie=1" ); 	
 	$connessione->closeConnection();
 }
 ?>
