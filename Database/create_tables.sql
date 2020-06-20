@@ -28,15 +28,15 @@ Descrizione_Immagine varchar(250) not null
 
 INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
 ('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini','immagineA','Giacomino','Immagine profilo di Giacomo Poretti'),
-('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante','immagineC','Davidone','Immagine profilo di Davide Carlet'),
-('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia','immagineB','chiaraperin','Immagine profilo di Chiara Perin'),
+('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante','immagineB','Davidone','Immagine profilo di Davide Carlet'),
+('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia','immagineC','chiaraperin','Immagine profilo di Chiara Perin'),
 ('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla cucina','immagineA','pippofranco','Immagine profilo di Pippo Franco'),
 ('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Ex veterinario, ora mi diletto nel preparare ottimi piatti a mia moglie','immagineA','giorgioandrea','Immagine profilo di Giorgio Andrea'),
-('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione','immagineB','stefaniarossi','Immagine profilo di Stefania Rossi'),
+('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','Cucinare non significa solo leggere una ricetta: è una questione di sensibilità, di rispetto degli ingredienti e dei tempi di preparazione','immagineC','stefaniarossi','Immagine profilo di Stefania Rossi'),
 ('Giulia','Verdi','giuliaverdi','gverdi@gmail.com','678hgDDR','Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare.','immagineC','giuliaverdi','Immagine profilo di Giulia Verdi'),
 ('Francesco','Veronese','fveronese','fveronese@gmail.com','nmk89F5','Tutto è più facile da dire in una cucina, tutto è sfumato da questa intenzione di condivisione, e l’appetito fa scorrere nuova linfa nelle cose','immagineA','fveronese','Immagine profilo di Francesco Veronese'),
 ('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”','immagineA','hideokojima','Immagine profilo di Hideo kojima'),
-('Margherita','Dal Mas','marghedalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere','immagineB','marghedalmas','Immagine profilo di Margherita Dal Mas');
+('Margherita','Dal Mas','marghedalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere','immagineC','marghedalmas','Immagine profilo di Margherita Dal Mas');
 
 CREATE TABLE Admins
 (
