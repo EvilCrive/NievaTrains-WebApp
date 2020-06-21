@@ -124,7 +124,7 @@ $var.=	'<input name="ricetta" hidden value='.$ricetta.'></input><button class="b
 return $var;
 }
 function stampaPreferiti($results,$ID) {
-	return '<a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><button class="button1 prefe" onclick="return Alertunlogged()">'.$results[0]["count(*)"].'</button></a>';
+	return '<p>Preferiti</p><a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><i class="fa fa-heart" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</i></a>';
 }
 function stampaInformazioni($results) {
 	$var= '<li><span class="infoRic"> Difficoltà :</span> '.$results[0]["Difficoltà"].'</li>'."\n";
