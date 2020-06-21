@@ -7,7 +7,7 @@ $connessione=new DBAccess();
 try{
 if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
-
+$iduser="";
 if(isset($_GET["Id_Utente"])) {
 //estrazioni variabili dalla get(id utente)
 	$ID=$_GET["Id_Utente"];

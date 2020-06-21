@@ -12,6 +12,15 @@ function ValidateComment(){
   }
 }
 
+function Alertunlogged(){
+  if(document.forms['commentform']['controlLogged'].textContent==="1"){
+    return true;
+  }else{
+    alert("Non sei loggato");
+    return false;
+  }
+}
+
 function editDelete(num){
   var nome="editdeletecomment"+num;
   if(document.getElementById(nome).hidden==true){

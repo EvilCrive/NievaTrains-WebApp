@@ -28,6 +28,7 @@ function stampaRicette($results) {
 	return $var;
 }
 function stampaSpeciale($result) {
+
 	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
 	$var.= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'">';
 	$var.='</a>';
@@ -113,7 +114,7 @@ function stampaBreadcrumb($results) {
 	return $var;
 }
 function stampaVoto($results,$voto,$ricetta) {
-$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post"><ul class="ratings">';
+$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post" onsubmit="return Alertunlogged()"><ul class="ratings">';
 	//
 if($voto){
 	$var.=' <li class="rate">VOTO MEDIO: '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </li>';
@@ -123,7 +124,7 @@ $var.=	'<input name="ricetta" hidden value='.$ricetta.'></input><button class="b
 return $var;
 }
 function stampaPreferiti($results,$ID) {
-	return '<a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><button class="button1 prefe">'.$results[0]["count(*)"].'</button></a>';
+	return '<a href="../PHP/preferitiManage.php?idricetta='.$ID.'"><button class="button1 prefe" onclick="return Alertunlogged()">'.$results[0]["count(*)"].'</button></a>';
 }
 function stampaInformazioni($results) {
 	$var= '<li><span class="infoRic"> Difficoltà :</span> '.$results[0]["Difficoltà"].'</li>'."\n";
