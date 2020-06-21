@@ -1,4 +1,6 @@
-
+a{
+	margin-top: 5px;
+}
 
 #adminpanel{
   display: flex;
@@ -238,13 +240,11 @@ body{
   width: 250px;
 }
 
-#footererrori{
-
-}
 /*CONTENT*/
 /*riga titolo*/
 #content{
   max-width: 1400px; /*più stretto del body che è 1800*/
+  min-width: 240px;
   margin: auto;
   margin-top:20px;
   padding: 2em 2em;
@@ -259,6 +259,7 @@ body{
 
 }
 h2 {
+	margin-top: 10px;
   margin-bottom: 20px;
 }
 #intro h2{
@@ -390,13 +391,16 @@ i{
 }
 #col_dx{
   width: 70%;
-  min-width: 500px;
+  min-width: 240px;
 }
 #col_dx ul {
   list-style-type: none;
+  overflow: hidden;
   margin: 20px;
+  list-style-position: inside;
 }
 #col_dx ul li {
+	display: block;
   padding: 5px;
   font-size: 1.2em;
 }
@@ -672,22 +676,6 @@ display: flex;
   display: block;
   font-size: 16px;
 
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.minibutton{
-  background-color: white;
-  border-radius: 10px;
-  border: 2px solid #f6ad7b;
-  color: black;
-  padding: 0px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 6px 2px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;

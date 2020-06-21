@@ -64,7 +64,12 @@
 <!--END TOP OF THE PAGE-->
 
 <div id="content">
-
+		<div id="searchwrapper">
+			<form id="search" action="../PHP/Ricerca.php" method="post">
+				<input type="text" placeholder="Cerca ricette e utenti" type="text" name="stringaCercata" />
+				<button class="button" name="cerca">Cerca</button>
+			</form>
+		</div>
 	%%HeaderRicerca
 	%%Ricette
 	%%HeaderResearchUtenti
