@@ -15,7 +15,7 @@ try{
 			if($_GET['operation']==="1"){
 				$finale = file_get_contents("../txt/admin_panel_remove.html");
 				$bool=0;
-				$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username FROM utente");
+				$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username from utente");
 				$finale=str_replace("%%title","Elimina utenti",$finale);
 				$finale=str_replace("%%eliminawhat",stampadeleteUtenti($utenti),$finale);
 			}
@@ -46,7 +46,7 @@ try{
 
 				if($_GET['name']==="utente"){
 					$iduser=$_GET['id'];
-					$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username FROM utente WHERE Id_Utente='$iduser';");
+					$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username from utente WHERE Id_Utente='$iduser';");
 					$var="l'utente @".$utenti[0]["Username"];
 					$elimina.=1;
 				}else{
@@ -67,7 +67,7 @@ try{
 				$elimina='<p class="onemidem">Eliminato ';
 				if($_GET['name']==="utente"){
 					$id=$_GET['id'];
-					$connessione->exeQuery("DELETE FROM utente WHERE Id_Utente='$id'");
+					$connessione->exeQuery("DELETE from utente WHERE Id_Utente='$id'");
 					$elimina.="l'utente!</p>"."\n";
 					header( "refresh:2; url=../PHP/Admin_panel.php" );
 				}

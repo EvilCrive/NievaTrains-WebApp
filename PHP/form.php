@@ -31,7 +31,7 @@ if($tmp){
 if($var){
 	if($tmp){
 		//registrazione
-		$controlquery="SELECT Username,Mail FROM utente WHERE Mail='$email' OR Username='$username';";
+		$controlquery="SELECT Username,Mail from utente WHERE Mail='$email' OR Username='$username';";
 		if($ConnessioneAttiva->getQuery($controlquery)){
 			//controllo per utenti gia' iscritti	
 			header("refresh:0; url=../PHP/Registrazione.php");
@@ -53,7 +53,7 @@ if($var){
 				session_destroy();
 				session_start();
 			}
-			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
+			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome'] = $cognome;
 			$_SESSION['email'] = $email;
@@ -72,7 +72,7 @@ if($var){
 
 	}else{
 		//login
-		$query = "SELECT* FROM utente WHERE Mail='$email' AND Password='$password';";
+		$query = "SELECT* from utente WHERE Mail='$email' AND Password='$password';";
 		$r=$ConnessioneAttiva->getQuery($query);
 		if(!$errors ){
 			if(!$r){
@@ -85,11 +85,11 @@ if($var){
 					session_destroy();
 					session_start();
 				}
-				$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
-				$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome FROM Utente WHERE Mail='$email'");
-				$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome FROM Utente WHERE Mail='$email'");
+				$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
+				$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome from utente WHERE Mail='$email'");
+				$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome from utente WHERE Mail='$email'");
 				$_SESSION['email'] = $email;
-				$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username FROM Utente WHERE Mail='$email'");
+				$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username from utente WHERE Mail='$email'");
 				$_SESSION['password'] = $password;
 				$_SESSION['login'] = true;
 				$_SESSION['justlogged']=true;

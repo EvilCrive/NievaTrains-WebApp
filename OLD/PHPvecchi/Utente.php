@@ -3,7 +3,7 @@ require_once "connection.php";
 require_once "stampe.php";
 $ConnessioneAttiva = new DBAccess();
 $var=$ConnessioneAttiva->openConnectionlocal();
-$result=$ConnessioneAttiva->getQuery("SELECT * FROM utente WHERE Id_Utente=1;");
+$result=$ConnessioneAttiva->getQuery("SELECT * from utente WHERE Id_Utente=1;");
 $risultati=$result[0];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

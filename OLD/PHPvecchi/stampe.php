@@ -69,7 +69,7 @@ function stampaImmagine($Connessione, $ID){
 }
 function stampaFollowers($Connessione, $ID) {
 	$result=$Connessione->getQuery("SELECT U.Username,F.Id_Utente2
-		FROM Utente AS U JOIN Follow AS F ON U.Id_Utente=F.Id_Utente2
+		from utente AS U JOIN Follow AS F ON U.Id_Utente=F.Id_Utente2
 		WHERE F.Id_Utente1=$ID;");
 	$nrisultati=sizeof($result);
 	for($i=0; $i<$nrisultati; $i++) { 

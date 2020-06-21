@@ -21,7 +21,7 @@ echo $username," ", $password, " ", $nome, " ", $cognome, " ", $email;
 			$ConnessioneAttiva->exeQuery($query);
 			echo "Fantastico!","La tua iscrizione è avvenuta con successo. Tra qualche secondo ti mando alla Home.";
 			session_start();
-			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID FROM Utente WHERE Mail='$email'")[0]['ID'];
+			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome'] = $cognome;
 			$_SESSION['email'] = $email;
