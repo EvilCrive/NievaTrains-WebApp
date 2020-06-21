@@ -15,7 +15,7 @@ try{
 		$prefe=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Ricetta=$ID;");
 		$voto=$connessione->getQuery("SELECT ROUND(AVG(Voto),1) FROM voto WHERE Id_Ricetta=$ID ");
 	//getquery commenti(id)
-		$commenti=$connessione->getQuery("SELECT U.Id_Utente, U.Nome, U.Cognome, U.Nome_Immagine, C.Id_Ricetta, C.Id_Commento, C.Testo, C.Data FROM commento as C JOIN Utente AS U ON C.Id_Utente=U.Id_Utente WHERE C.Id_Ricetta=$ID ORDER BY C.Data;");
+		$commenti=$connessione->getQuery("SELECT U.Id_Utente, U.Nome, U.Cognome, U.Nome_Immagine, C.Id_Ricetta, C.Id_Commento, C.Testo, C.Data FROM commento as C JOIN utente AS U ON C.Id_Utente=U.Id_Utente WHERE C.Id_Ricetta=$ID ORDER BY C.Data;");
 	//getquery correlate(categoria)
 		$cat=$ricetta[0]['Macro_Categoria'];
 		$correlate=$connessione->getQuery("SELECT * FROM ricetta WHERE Macro_Categoria='$cat';");
