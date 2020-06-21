@@ -1,0 +1,95 @@
+@import url("css_desktop.css");
+/*HEADER E FOOTER*/
+#hrow_2, #breadcrumb, .topnav{
+    display: none;
+}
+#header{
+  width: 100%;
+  height: 50px;
+}
+#hrow_1{
+    min-width: 360px;
+}
+#hamburger{
+  float: right;
+  height: 70%;
+  width: auto;
+}
+#logo_head{
+  margin:10px 0;
+}
+#user_logo{
+  height: 70%;
+  width: auto;
+  margin-right: 15px;
+}
+#logo_freccia{
+  display: none;
+}
+#LogoFooter{
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
+#footer ul{
+  display: block;
+}
+#validity{
+  width: 100%;
+  margin: 0 auto;
+}
+#footer ul li{
+  margin: 10px;
+}
+/*Ricetta*/
+#ricettaGiorno{
+  width: 100%;
+}
+#ricettaGiorno img{
+  object-fit: contain;
+  max-width: 100%;
+  margin: 0;
+}
+#textGiorno{
+  left: 5%;
+  margin-left: 0;
+}
+/*utente*/
+.leftcolumn, .rightcolumn {
+  width: 100%;
+  padding: 0;
+}
+/*registrazione*/
+#boxwrapper{
+  width: 100%;
+}
+#logInBox, #regisBox{
+  margin: 0 auto;
+  margin: 30px;
+}
+#errors p{
+	text-align: center;
+	color: red;
+}
+/*dropdown*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sidenav {
+  left:auto;
+  right: 0;
+}
+/*zona consigliate*/
+.responsive {
+  width: 49.99999%;
+  margin: 6px 0;
+}
+/*prova*/
+#col_sx{
+  width: 100%
+}
+.button1{
+  display: block;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,108 @@
+/*CONTENUTO*/
+#content{
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  font-size: 120%;
+}
+#content h1{
+  padding: 5px;
+}
+
+.style_content{
+  background-color: rgba(246,173,123,0.2);
+  border-left: 8px solid #f6ad7b;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+/*CONTENT*/
+#ricettaGiorno{
+  color: white;
+  height: 600px;
+  width: 950px;
+  margin: 0 auto;
+}
+#ricettaGiorno img{
+  height: 600px;
+  width: auto;
+}
+#textGiorno{
+  position: absolute;
+  font-size: 150%;
+  top: 250px;
+  left: 50px;
+  /*margin: 0 auto;*/
+  margin-left: 20%;
+}
+#textGiorno h2, #textGiorno p{
+  padding: 10px 20px;
+  margin: 7px;
+  background-color: rgba(0,0,0,0.7);
+}
+#content > h2{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#content > a {
+  margin-left: 10px;
+}
+
+/*BARRA DI RICERCA*/
+
+#searchwrapper{
+
+}
+#search {
+display: flex;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#search input[type="text"] {
+  flex-grow: 1;
+  border-left: 3px solid #f6ad7b;
+  border-top: 3px solid #f6ad7b;
+  border-bottom: 3px solid #f6ad7b;
+  font-size: 1em;
+  padding: 5px;
+}
+
+#search button {
+  height: 60px;
+  width: 100px;
+  margin: 0px;
+  margin-left: -3px;
+  font-size: 1em;
+  border: 3px solid #f6ad7b;
+}
+
+/*FUNZIONALITA*/
+#flex-funzionalita {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.funzionalitaBox {
+  margin: 20px;
+  padding: 30px;
+  width: 300px;
+  height: 150px;
+  background-color: #f6ad7b;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.funzionalitaBox:hover{
+  color: white;
+  background-color: #444;
+}
+.funzionalitaBox p{
+  margin-top: 10%;
+}

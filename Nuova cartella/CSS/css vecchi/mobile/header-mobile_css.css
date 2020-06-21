@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 0;
+}
+html{
+  font-family: sans-serif; /*Verdana, Arial, Helvetica*/
+  min-width: 360px;
+  vertical-align: middle;
+  margin: auto;
+  color: #222;
+  height: 100%;
+}
+/*HEADER*/
+#header{
+  width: 100%;
+  height: 150px;
+}
+#hrow_1{
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  max-width: 1800px;
+  min-width: 360px;
+  height: 150px;
+  border-bottom: 5px solid #f6ad7b;
+
+}
+#hamburger{
+  display: inline-block;
+  float: right;
+  padding-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 15%;
+}
+#logo_head{
+  height:130px;
+  max-width: 60%;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#user_logo{
+  display: inline-block;
+  float: right;
+  padding-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 11%;
+
+}
+.topnav{
+  margin-top: 5px;
+  display: none;
+  float: right;
+}
+.button{
+  background-color: white;
+  border: 2px solid #f6ad7b;
+  color: black;
+  padding: 5px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #f6ad7b
+}
+.topnav input[type=text] {
+  padding: 9px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  border-left: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+  border-right: 1px solid #ccc;
+}
+#hrow_2{
+  padding-top:60px;
+}
+#menuList {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #f6ad7b;
+    display:none;
+}
+#menuList li {
+    float: left;
+}
+#menuList li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#menuList li a:hover:not(.active) {
+    background-color:  rgba(246,173,123,0.2);
+}
+#menuList li a.active {
+    background-color:  rgba(246,173,123,0.4); /*#f6ad7b*/
+}
+#menuList li.stayright{
+  float: right;
+}
+#breadcrumb{
+  height:100px;
+  display: none;
+}
+#breadcrumb ul{
+  /*background-color: #f2eee5;*/
+
+  height:100%;
+  font-size:150%;
+  background-color: rgba(246,173,123,0.4);
+  list-style-type: none;
+}
+#breadcrumb li.stayright{
+  float: right;
+  display: none;
+}
+#breadcrumb li {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  text-decoration:none;
+  margin-top: 20px;
+}
