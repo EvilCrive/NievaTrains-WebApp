@@ -9,7 +9,7 @@ try{
 
 	//getquery consigliate
 	$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Macro_Categoria, Nome
-									FROM Ricetta 
+									FROM ricetta 
 									GROUP BY Nome
 									LIMIT 8;");
 	$connessione->closeConnection();

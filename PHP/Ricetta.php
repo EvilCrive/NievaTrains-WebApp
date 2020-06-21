@@ -12,7 +12,7 @@ try{
 		$ID=$_GET["Id_Ricetta"];
 	//getquery ricetta(id)
 		$ricetta=$connessione->getQuery("SELECT * FROM ricetta WHERE Id_Ricetta=$ID;");
-		$prefe=$connessione->getQuery("SELECT count(*) FROM Preferiti WHERE Id_Ricetta=$ID;");
+		$prefe=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Ricetta=$ID;");
 		$voto=$connessione->getQuery("SELECT ROUND(AVG(Voto),1) FROM voto WHERE Id_Ricetta=$ID ");
 	//getquery commenti(id)
 		$commenti=$connessione->getQuery("SELECT U.Id_Utente, U.Nome, U.Cognome, U.Nome_Immagine, C.Id_Ricetta, C.Id_Commento, C.Testo, C.Data FROM commento as C JOIN Utente AS U ON C.Id_Utente=U.Id_Utente WHERE C.Id_Ricetta=$ID ORDER BY C.Data;");
