@@ -28,12 +28,14 @@ function stampaRicette($results) {
 	return $var;
 }
 function stampaSpeciale($result) {
-	$var= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'">';
+	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
+	$var.= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'">';
+	$var.='</a>';
 	$var.= '<div id="textGiorno">';
 	$var.= '	<h2>'.$result["Macro_Categoria"].'</h2>';
 	$var.= '	<p>'.$result["Nome"].'</p>';
 	$var.= '</div>';
-	
+
 	return $var;
 }
 
@@ -154,7 +156,7 @@ function stampaCommenti($results) {
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
 				if($_SESSION['id']===$results[$i]["Id_Utente"]){
-					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="minibutton" value="Elimina"><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden></input><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden ></input></form>';
+					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina"><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden></input><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden ></input></form>';
 				}
 			}
 		}
