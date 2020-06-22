@@ -32,7 +32,7 @@ cursor: pointer;
   padding: 0;
 }
 html{
-  font-family: sans-serif; /*Verdana, Arial, Helvetica*/
+  font-family: Verdana, sans-serif; /*Verdana, Arial, Helvetica*/
   max-width: 1800px;
   vertical-align: middle;
   margin: auto;

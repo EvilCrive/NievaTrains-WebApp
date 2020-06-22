@@ -47,6 +47,7 @@ try{
 				if($_GET['name']==="utente"){
 					$iduser=$_GET['id'];
 					$utenti=$connessione->getQuery("SELECT Id_Utente,Nome,Cognome,Username from utente WHERE Id_Utente='$iduser';");
+					if(!$utenti)	header( "refresh:0; url=../PHP/Admin_panel.php" );	
 					$var="l'utente @".$utenti[0]["Username"];
 					$elimina.=1;
 				}else{
