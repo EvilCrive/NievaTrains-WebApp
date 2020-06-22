@@ -1,20 +1,20 @@
 SET FOREIGN_KEY_CHECKS=0;
 
 
-DROP TABLE IF EXISTS Preferiti;
-DROP TABLE IF EXISTS Voto;
-DROP TABLE IF EXISTS Follow;
-DROP TABLE IF EXISTS Commento;
-DROP TABLE IF EXISTS Ricetta;
-DROP TABLE IF EXISTS Admins;
-DROP TABLE IF EXISTS Utente;
+DROP TABLE IF EXISTS preferiti;
+DROP TABLE IF EXISTS voto;
+DROP TABLE IF EXISTS follow;
+DROP TABLE IF EXISTS commento;
+DROP TABLE IF EXISTS ricetta;
+DROP TABLE IF EXISTS admins;
+DROP TABLE IF EXISTS utente;
 
 SET FOREIGN_KEY_CHECKS=1;
 
 
-CREATE TABLE Utente
+CREATE TABLE utente
 (
-Id_Utente integer auto_increment PRIMARY KEY,
+Id_utente integer auto_increment PRIMARY KEY,
 Nome varchar(20) not null,
 Cognome varchar(20) not null,
 Username varchar(20) not null unique,
@@ -26,7 +26,7 @@ Nome_Thumbnail varchar(250) not null,
 Descrizione_Immagine varchar(250) not null
 )ENGINE=InnoDB;
 
-INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
+INSERT INTO utente(Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
 ('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Cresciuto a pane e salame! Ora che sono in pensione mi diletto nel cucinare per i miei nipotini','immagineA','Giacomino','Immagine profilo di Giacomo Poretti'),
 ('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Mi dedico alla cucina fin da piccolo e decido così di studiare in una scuola alberghiera; ora lavoro come aiuto-cuoco in un famoso ristorante','immagineB','Davidone','Immagine profilo di Davide Carlet'),
 ('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Veneziana, appassionata da sempre di dolci. Apro la mia prima pasticceria a soli 28 anni, nei successivi 10 anni il successo è tale da dover aprire altre 8 sedi in tutta Italia','immagineC','chiaraperin','Immagine profilo di Chiara Perin'),
@@ -38,23 +38,23 @@ INSERT INTO Utente(Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Th
 ('Hideo','Kojima','hideokojima','hkojima@gmail.com','Lalala89','Nella vita normale, “semplicità” è sinonimo di “facile da fare “, ma quando un cuoco usa questa parola, significa “ci vuole una vita per imparare”','immagineA','hideokojima','Immagine profilo di Hideo kojima'),
 ('Margherita','Dal Mas','marghedalmas','mdalmas@gmail.com','jijo5363','La fame esprime un bisogno: quello di essere saziati. La cucina, invece, eccede la sazietà, va oltre il necessario, ambisce a soddisfare il piacere','immagineC','marghedalmas','Immagine profilo di Margherita Dal Mas');
 
-CREATE TABLE Admins
+CREATE TABLE admins
 (
 Id_Admin integer auto_increment PRIMARY KEY,
 User varchar(20) not null unique,
 Pin varchar(60) not null
 )ENGINE=InnoDB;
 
-INSERT INTO Admins(User,Pin) VALUES
+INSERT INTO admins(User,Pin) VALUES
 ('admin','admin');
 
-CREATE TABLE Ricetta
+CREATE TABLE ricetta
 (
-Id_Ricetta integer auto_increment PRIMARY KEY,
+Id_ricetta integer auto_increment PRIMARY KEY,
 Macro_Categoria varchar(20) not null,
 Categoria varchar(20) not null,
 Nome varchar(30) not null,
-Voto decimal(2,1) default Null,
+voto decimal(2,1) default Null,
 Calorie integer not null,
 Difficoltà varchar(20) not null,
 Tempo_Preparazione smallint not null,
@@ -69,7 +69,7 @@ Nome_Thumbnail varchar(250) not null,
 Descrizione_Immagine varchar(250) not null
 )ENGINE=InnoDB;
 
-INSERT INTO Ricetta(Macro_Categoria,Categoria,Nome,Voto,Calorie,Difficoltà,Tempo_Preparazione,Dose,Costo,Introduzione,Ingredienti,Passo_Passo,Preparazione,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
+INSERT INTO ricetta(Macro_Categoria,Categoria,Nome,voto,Calorie,Difficoltà,Tempo_Preparazione,Dose,Costo,Introduzione,Ingredienti,Passo_Passo,Preparazione,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES
 ('Antipasti','Antipasti','Arancini di riso',NULL,628,'Media',60,12,'Basso',
 'Gli arancini di riso (o arancine), vanto della cucina siciliana, sono dei piccoli timballi adatti ad essere consumati sia come spuntino che come antipasto, primo piatto o addirittura piatto unico. In Sicilia si trovano ovunque e in ogni momento, sempre caldi e fragranti nelle molte friggitorie: di città in città spesso cambiano forma e dimensioni, assumendo fattezze ovali, a pera o rotonde, a seconda del ripieno. Si possono contare circa 100 varianti: dalla più classica al ragù e al prosciutto, a quelle più originali come al pistacchio e al nero di seppia! 
 Noi oggi vi presentiamo le due classiche intramontabili, al ragù di carne di maiale e piselli e al prosciutto e mozzarella; voi quale preferite?',
@@ -672,19 +672,19 @@ Intanto pulite la zucca e tagliatela a cubetti. Aggiungetela nella casseruola e 
 Avrete ottenuto una crema piuttosto liscia, ma per renderla vellutata come da manuale dovete setacciarla passandola attraverso un colino a maglie strette. Distribuitela infine nei piatti, guarnite con la restante panna e gustate la vostra vellutata di zucca ben calda!',
 'zuppa_vellutata_di_zucca_quadrato','Vellutata di zucca','Vellutata di zucca');
 
-CREATE TABLE Commento
+CREATE TABLE commento
 (
-Id_Commento integer auto_increment PRIMARY KEY,
+Id_commento integer auto_increment PRIMARY KEY,
 Testo varchar(150) not null,
 Data datetime not null,
-Id_Utente integer,
-Id_Ricetta integer,
+Id_utente integer,
+Id_ricetta integer,
 CONSTRAINT uq_comment UNIQUE (Testo,Data),
-FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
+FOREIGN KEY (Id_utente) REFERENCES utente(Id_utente) ON DELETE CASCADE,
+FOREIGN KEY (Id_ricetta) REFERENCES ricetta(Id_ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO Commento(Testo,Data,Id_Utente,Id_Ricetta) VALUES
+INSERT INTO commento(Testo,Data,Id_utente,Id_ricetta) VALUES
 ('Consiglio a tutti questa ricetta semplice e buonissima',CURRENT_TIMESTAMP,1,3),
 ('Questa ricetta è un evergreen',CURRENT_TIMESTAMP,1,5),
 ('Buonissimissimo',CURRENT_TIMESTAMP,1,2),
@@ -694,7 +694,7 @@ INSERT INTO Commento(Testo,Data,Id_Utente,Id_Ricetta) VALUES
 ('Impegnativi per un principiante ma buoni',CURRENT_TIMESTAMP,2,14),
 ('Con questi arancini ho stupito tutti i miei amici xd',CURRENT_TIMESTAMP,3,1),
 ('Il miglior tiramisù di sempre',CURRENT_TIMESTAMP,3,8),
-('Ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,3,2),
+('ricetta esposta in modo chiaro, come sempre',CURRENT_TIMESTAMP,3,2),
 ('Grazie, ho stupito tutti i miei amici',CURRENT_TIMESTAMP,4,4),
 ('Questa ricetta è davvero interessante, la proverò senz''altro',CURRENT_TIMESTAMP,5,6),
 ('Tiramisù fantastico',CURRENT_TIMESTAMP,5,8),
@@ -705,16 +705,16 @@ INSERT INTO Commento(Testo,Data,Id_Utente,Id_Ricetta) VALUES
 ('Questo piatto mi è riuscita benissimo, grazie',CURRENT_TIMESTAMP,10,7);
 
 
-CREATE TABLE Follow
+CREATE TABLE follow
 (
-Id_Utente1 integer,
-Id_Utente2 integer,
-PRIMARY KEY(Id_Utente1,Id_Utente2),
-FOREIGN KEY (Id_Utente1) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_Utente2) REFERENCES Utente(Id_Utente) ON DELETE CASCADE
+Id_utente1 integer,
+Id_utente2 integer,
+PRIMARY KEY(Id_utente1,Id_utente2),
+FOREIGN KEY (Id_utente1) REFERENCES utente(Id_utente) ON DELETE CASCADE,
+FOREIGN KEY (Id_utente2) REFERENCES utente(Id_utente) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO Follow(Id_Utente1,Id_Utente2) VALUES
+INSERT INTO follow(Id_utente1,Id_utente2) VALUES
 (1,2),
 (1,3),
 (1,7),
@@ -737,17 +737,17 @@ INSERT INTO Follow(Id_Utente1,Id_Utente2) VALUES
 (10,5);
 
 
-CREATE TABLE Voto
+CREATE TABLE voto
 (
-Id_Utente integer,
-Id_Ricetta integer,
-Voto decimal(2,1),
-PRIMARY KEY(Id_Utente,Id_Ricetta),
-FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
+Id_utente integer,
+Id_ricetta integer,
+voto decimal(2,1),
+PRIMARY KEY(Id_utente,Id_ricetta),
+FOREIGN KEY (Id_utente) REFERENCES utente(Id_utente) ON DELETE CASCADE,
+FOREIGN KEY (Id_ricetta) REFERENCES ricetta(Id_ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO Voto(Id_Utente,Id_Ricetta,Voto) VALUES
+INSERT INTO voto(Id_utente,Id_ricetta,voto) VALUES
 (1,1,4),
 (1,3,5),
 (1,5,4),
@@ -777,16 +777,16 @@ INSERT INTO Voto(Id_Utente,Id_Ricetta,Voto) VALUES
 (3,8,5),
 (3,19,3);
 
-CREATE TABLE Preferiti
+CREATE TABLE preferiti
 (
-Id_Utente integer,
-Id_Ricetta integer,
-PRIMARY KEY(Id_Utente,Id_Ricetta),
-FOREIGN KEY (Id_Utente) REFERENCES Utente(Id_Utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_Ricetta) REFERENCES Ricetta(Id_Ricetta) ON DELETE CASCADE
+Id_utente integer,
+Id_ricetta integer,
+PRIMARY KEY(Id_utente,Id_ricetta),
+FOREIGN KEY (Id_utente) REFERENCES utente(Id_utente) ON DELETE CASCADE,
+FOREIGN KEY (Id_ricetta) REFERENCES ricetta(Id_ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO Preferiti(Id_Utente,Id_Ricetta) VALUES
+INSERT INTO preferiti(Id_utente,Id_ricetta) VALUES
 (1,3),
 (1,2),
 (2,1),
