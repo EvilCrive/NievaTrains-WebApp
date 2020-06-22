@@ -902,11 +902,13 @@ cursor: pointer;
 .rats .fa-heart{
   padding: 10px;
   font-size: 2em;
-  color: black;
   cursor: pointer;
 }
-.fa-heart:hover{
+#selected{
   color: orange;
+}
+#unselected{
+  color: black;
 }
 .rats p{
   padding: 10px;
