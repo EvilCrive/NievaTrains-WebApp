@@ -253,27 +253,23 @@ body{
 }
 #intro{
   /*max-*/width: 100%;
-  /*background-color: rgba(246,173,123,0.2);*/
   margin: auto;
-  border-left: 4px solid rgba(246,173,123,1);
-
 }
 h2 {
-	margin-top: 10px;
   margin-bottom: 20px;
 }
 #intro h2{
-  padding: 5px;
-  font-size: 1.6em;
+  padding: 10px;
+  font-size: 2em;
   float: left;
-  padding: 10px 10px;
+  padding: 15px 15px;
   background-color: #fff;
   width: auto;
   min-width: 30%;
   max-width: 50%;
-  /*width: 30%;*/
   margin-bottom: 0;
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  border-left: 4px solid rgba(246,173,123,1);
 }
 /*paragrafi*/
 .row{
@@ -868,7 +864,6 @@ display: flex;
 .rating-box{
   display: block;
   float: right;
-  top: 0;
 }
 .ratings{
   width: auto;
@@ -883,10 +878,12 @@ cursor: pointer;
 }
 .rate{
   list-style: none;
+  float: left;
 }
 
 .rats{
   float: left;
+  margin-left: 30px;
 }
 
 #valuta{
