@@ -493,6 +493,7 @@ display: flex;
   border-bottom: 3px solid #f6ad7b;
   font-size: 1em;
   padding: 5px;
+  min-width: 50px;
 }
 
 #search button {
