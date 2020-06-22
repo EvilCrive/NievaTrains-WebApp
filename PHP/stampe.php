@@ -11,9 +11,9 @@ function stampaRicette($results) {
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
 		$var.= '		<a href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
-		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'" width="600" height="400">'."\n";
-		$var.= '		</a>'."\n";
+		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'">'."\n";
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].'</div>'."\n";
+		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
 		
@@ -120,7 +120,7 @@ if($voto){
 	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 }
 $var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
-$var.=	'<input name="ricetta" hidden value='.$ricetta.'/><button id="valuta" class="button1"> Valuta </button></form>';
+$var.=	'<input name="ricetta" hidden value='.$ricetta.' /><button id="valuta" class="button1"> Valuta </button></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID,$bool) {
@@ -197,8 +197,9 @@ function stampaUtenti($results) {
 		$var.= '	<div class="gallery">'."\n";
 		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'."\n";
 		$var.= '			<img id="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
-		$var.= '		</a>'."\n";
+		
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</div>'."\n";
+		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
 		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
