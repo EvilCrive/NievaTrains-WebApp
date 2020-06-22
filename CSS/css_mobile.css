@@ -8,7 +8,7 @@
   height: 50px;
 }
 #hrow_1{
-    min-width: 360px;
+    min-width: 380px;
 }
 #hamburger{
   float: right;
@@ -18,9 +18,7 @@
 #logo_head{
   margin:10px 0;
 }
-.logo_head_mobile{
-  width: 60%;
-}
+
 #user_logo{
   height: 70%;
   width: auto;
