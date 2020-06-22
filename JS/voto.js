@@ -20,8 +20,8 @@ for(let i=0; i<stars.length; i++){
 
   stars[i].addEventListener("click", function(){
     index=i;
-    document.getElementById("rating-value").textContent=index+1;
-  })
+    document.getElementById("rating-value").value=index+1;
+ })
   stars[i].addEventListener("mouseout", function(){
     for(let j=0; j<stars.length; j++){
       stars[j].classList.remove("fa-star");
