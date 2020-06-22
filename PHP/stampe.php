@@ -124,7 +124,7 @@ $var.=	'<input name="ricetta" hidden value='.$ricetta.'/><button id="valuta" cla
 return $var;
 }
 function stampaPreferiti($results,$ID,$bool) {
-	$var='<p>Preferiti</p><a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
+	$var='<a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
 	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
 	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
 	return $var;
