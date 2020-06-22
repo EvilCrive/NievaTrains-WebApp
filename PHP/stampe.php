@@ -120,13 +120,13 @@ if($voto){
 	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 }
 $var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
-$var.=	'<input name="ricetta" hidden value='.$ricetta.'></input><button id="valuta" class="button1"> Valuta </button></form>';
+$var.=	'<input name="ricetta" hidden value='.$ricetta.'/><button id="valuta" class="button1"> Valuta </button></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID,$bool) {
 	$var='<p>Preferiti</p><a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
-	if($bool)	$var.='<i class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</i></a>';
-	else		$var.='<i class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</i></a>';
+	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
+	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
 	return $var;
 }
 function stampaInformazioni($results) {
