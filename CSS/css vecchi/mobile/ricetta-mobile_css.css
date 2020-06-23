@@ -55,32 +55,32 @@
   border-right: 4px solid rgba(246,173,123,1);
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
-#col_sx{
+.col_sx{
   float: left;
   width: 30%;
 }
 
-#col_dx{
+.col_dx{
   float: left;
   width: 70%;
 }
 
-#col_dx ul {
+.col_dx ul {
   list-style-type: none;
   margin: 20px;
 }
 
-#col_dx ul li {
+.col_dx ul li {
   padding: 5px;
   font-size: 1.2em;
 }
 
-#col_sx ul {
+.col_sx ul {
   margin:20px;
   padding-left: 30px;
 }
 
-#col_sx ul li {
+.col_sx ul li {
   padding: 5px;
   font-size: 1.2em;
 }

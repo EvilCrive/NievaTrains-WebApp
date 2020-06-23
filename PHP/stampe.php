@@ -11,7 +11,7 @@ function stampaRicette($results) {
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
 		$var.= '		<a href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
-		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'">'."\n";
+		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'"/>'."\n";
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].'</div>'."\n";
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
@@ -30,7 +30,7 @@ function stampaRicette($results) {
 function stampaSpeciale($result) {
 
 	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
-	$var.= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'">';
+	$var.= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
 	$var.='</a>';
 	$var.= '<div id="textGiorno">';
 	$var.= '	<h2>'.$result["Macro_Categoria"].'</h2>';
@@ -195,7 +195,7 @@ function stampaUtenti($results) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'."\n";
+		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'"/>'."\n";
 		$var.= '			<img id="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
 		
 		$var.= '	<div class="desc">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</div>'."\n";

@@ -83,13 +83,17 @@
   left:auto;
   right: 0;
 }
+#mySidenav{
+  left:auto;
+  right: 0;
+}
 /*zona consigliate*/
 .responsive {
   width: 49.99999%;
   margin: 6px 0;
 }
 /*prova*/
-#col_sx{
+.col_sx{
   width: 100%
 }
 .button1{

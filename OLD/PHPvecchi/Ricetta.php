@@ -86,11 +86,11 @@ $risultati=$result[0];
 			<button class="button1 prefe"><?php stampaPreferiti($ConnessioneAttiva,1); ?></button>
 	</div>
 	<div class="row clear">
-			<div id="col_sx">
+			<div class="col_sx">
 			<!--php Immagine-->
 				<img id="img_ricetta" <?php echo 'src="../Database/Ricette/'.$risultati["Nome_Immagine"].'.jpg" alt="'.$risultati["Descrizione_Immagine"].'"'?> />
 			</div>
-			<div id="col_dx">
+			<div class="col_dx">
 				<ul>
 					<?php stampaInformazioni($ConnessioneAttiva,1);?>
 				</ul>
@@ -102,12 +102,12 @@ $risultati=$result[0];
 		<p><?php echo $risultati["Introduzione"];?></p>
 	</div>
 	<div class="row clear">
-			<div id="col_sx">
+			<div class="col_sx">
 				<h3> Ingredienti : </h3>
 				<!--php Ingredienti-->
 				<?php stampaIngredienti($ConnessioneAttiva,1);?>
 			</div>
-			<div id="col_dx">
+			<div class="col_dx">
 				<h3>Passo Passo</h3>
 				<!--php passopasso-->
 				<p><?php stampaPasso($ConnessioneAttiva,1);?></p>

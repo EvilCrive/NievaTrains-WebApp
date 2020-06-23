@@ -32,7 +32,7 @@ cursor: pointer;
   padding: 0;
 }
 html{
-  font-family: Verdana, sans-serif; /*Verdana, Arial, Helvetica*/
+  font-family: Verdana, sans-serif; 
   max-width: 1800px;
   vertical-align: middle;
   margin: auto;
@@ -380,31 +380,31 @@ i{
 .likes {
    margin-left: 20px;
 }
-#col_sx{
+.col_sx{
   float: left;
   width: 30%;
   min-width: 100px;
 }
-#col_dx{
+.col_dx{
   width: 70%;
   min-width: 240px;
 }
-#col_dx ul {
+.col_dx ul {
   list-style-type: none;
   overflow: hidden;
   margin: 20px;
   list-style-position: inside;
 }
-#col_dx ul li {
+.col_dx ul li {
 	display: block;
   padding: 5px;
   font-size: 1.2em;
 }
-#col_sx ul {
+.col_sx ul {
   margin:20px;
   padding-left: 30px;
 }
-#col_sx ul li {
+.col_sx ul li {
   padding: 5px;
   font-size: 1.2em;
 }
