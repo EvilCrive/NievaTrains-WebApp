@@ -218,10 +218,10 @@ function stampaEditbio(){
 	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio"></textarea><button class="button">Modifica BIO</button></form>';
 }
 function stampafollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en">Follow</button></span></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
 }
 function stampaunfollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input hidden name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en">Unfollow</button></span></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input hidden name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Unfollow</button></span></form>';
 }
 
 
