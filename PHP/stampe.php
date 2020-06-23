@@ -160,7 +160,7 @@ function stampaCommenti($results) {
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
 				if($_SESSION['id']===$results[$i]["Id_Utente"]){
-					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina"><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden></input><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden ></input></form>';
+					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden /></form>';
 				}
 			}
 		}
