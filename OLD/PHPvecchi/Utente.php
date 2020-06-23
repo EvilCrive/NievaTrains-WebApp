@@ -21,7 +21,7 @@ $risultati=$result[0];
 	<!-- Keyword principali del sito -->
 	<meta name="keywords" content="OrangeTango, utenti, matteo, brosolo, informazioni, redazione" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	<meta charset="UTF-8" />
+	 
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
 	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>

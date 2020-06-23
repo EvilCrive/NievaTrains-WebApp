@@ -23,7 +23,7 @@ $risultati=$result[0];
 	<!-- Keyword principali del sito -->
 	<meta name="keywords" content="OrangeTango,<?php echo $risultati["Nome"];?>" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	<meta charset="UTF-8" />
+	 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
