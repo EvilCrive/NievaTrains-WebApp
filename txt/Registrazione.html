@@ -1,6 +1,5 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>
 	<!-- Specifico il charset -->
@@ -15,9 +14,9 @@
 	<meta name="keywords" content="OrangeTango, account, login, registrazione" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
-
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
+	<link media="screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 	<script src="../JS/validate.js"></script>
 	<script src="../JS/img_user.js"></script>
@@ -31,12 +30,12 @@
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
-						<li><a href="../PHP/Index.php">Home</a></li>
+						<li><span xml:lang="en"><a href="../PHP/Index.php">Home</a></span></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Antipasti">Antipasti</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Primi">Primi</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Secondi">Secondi</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Dolci">Dolci</a></li>
-						<li><a href="../PHP/About.php">About</a></li>
+						<li><span xml:lang="en"><a href="../PHP/About.php">About</a></span></li>
 					</ul>
 			</div>
 			%%utente
@@ -51,12 +50,12 @@
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="../PHP/Index.php" target="_top">Home</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
-					<li class="stayright"><a href="../PHP/About.php" target="_top">About</a></li>
+					<li tabindex="1"><span xml:lang="en"><a href="../PHP/Index.php" target="_top">Home</a></span></li>
+					<li tabindex="2"><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
+					<li tabindex="3"><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
+					<li tabindex="4"><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
+					<li tabindex="5"><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
+					<li tabindex="6" class="stayright"><span xml:lang="en"><a href="../PHP/About.php" target="_top">About</a></span></li>
 				<ul>
 			</div>
 		</div>
@@ -64,7 +63,7 @@
 		<div id="breadcrumb">
 			<ul>
 				<li>Ti trovi in: <span xml:lang="en"><a href="../PHP/Index.php">Home</a></span> -&gt; <a href="../PHP/Registrazione.php">Registrazione &amp; Login</a></li>
-				<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
+				<li tabindex="7" class="stayright"><a href="#content">Vai al Contenuto</a></li>
 			</ul>
 		</div>
 		<!--END TOP OF THE PAGE-->
@@ -77,11 +76,11 @@
 		<div id="boxwrapper">
 		<form method="POST" action="../PHP/form.php" onsubmit="return ValidateLogIn()" name="loginform">
 			<div class="Box">
-				<h3>Log In</h3>
-					<p>Email</p>
+				<h3><span xml:lang="en">Log In</span></h3>
+					<p><span xml:lang="en">Email</span></p>
 					<input class="inputbar" type="email" name="email" id="email" placeholder="Email Address">
 					<div id="error_mail_login" hidden></div>
-					<p>Password</p>
+					<p><span xml:lang="en">Password</span></p>
 					<input class="inputbar" type="password" name="password" id="password" placeholder="Password">
 					<div id="error_password_login" hidden></div>
 					<input class="button" name="button" type="submit" value="Accedi">	
@@ -90,7 +89,7 @@
 		<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()" name="signupform">
 			<div class="Box">
 					<h3>Registrazione</h3>
-					<p>Email</p>
+					<p><span xml:lang="en">Email</span></p>
 					<input class="inputbar" type="email" name="email" id="email" placeholder="Email Address">
 					<div id="error_mail_signup" hidden></div>
 					<p>Nome</p>
@@ -99,13 +98,13 @@
 					<p>Cognome</p>
 					<input class="inputbar" type="text" name="Cognome" id="Cognome" placeholder="Cognome">
 					<div id="error_surname" hidden></div>
-					<p>Username</p>
+					<p><span xml:lang="en">Username</span></p>
 					<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
 					<div id="error_username" hidden></div>
-					<p>Password</p>
+					<p><span xml:lang="en">Password</span></p>
 					<input class="inputbar" type="password" name="password" id="password" placeholder="Password">
 					<div id="error_password_signup" hidden></div>
-					<p>Conferma Password</p>
+					<p>Conferma <span xml:lang="en">Password</span></p>
 					<input class="inputbar" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
 					<div id="error_confirmpassword"></div>
 					<div id="scegli immagine">Scegli la tua immagine<p><img width="50px" height="50px" id="imga" src="../immagini/utente/immagineA.jpg" alt="A" ><img width="50px" height="50px" id="imgb" src="../immagini/utente/immagineB.jpg" alt="B"><img width="50px" height="50px" id="imgc" src="../immagini/utente/immagineC.jpg" alt="C"></p></div>
@@ -134,7 +133,7 @@
 		<div id="validity">
 			<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
 			<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
-			<p><a href="../PHP/Admin_panel.php">AdminPanel</a></p>
+			<p><span xml:lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
 		</div>
 	</div>
 </body>

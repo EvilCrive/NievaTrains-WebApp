@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>
 	<!-- Specifico il charset -->
@@ -14,9 +14,9 @@
 	<meta name="keywords" content="OrangeTango, informazioni, secondi, pesci" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	<meta charset="UTF-8" />
-
-	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
+	<link media="screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 
 </head>
@@ -29,12 +29,12 @@
 				<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<ul>
-						<li><a href="../PHP/Index.php">Home</a></li>
+						<li><span xml:lang="en"><a href="../PHP/Index.php">Home</a></span></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
 						<li><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
-						<li><a href="../PHP/About.php">About</a></li>
+						<li><span xml:lang="en"><a href="../PHP/About.php">About</a></span></li>
 					</ul>
 				</div>
 				%%utente
@@ -49,12 +49,12 @@
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li><a href="../PHP/Index.php" target="_top">Home</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
-					<li class="active"><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
-					<li><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
-					<li class="stayright"><a href="../PHP/About.php" target="_top">About</a></li>
+					<li tabindex="1"><span xml:lang="en"><a href="../PHP/Index.php" target="_top">Home</a></span></li>
+					<li tabindex="2"><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
+					<li tabindex="3"><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
+					<li tabindex="4" class="active"><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
+					<li tabindex="5"><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
+					<li tabindex="6" class="stayright"><span xml:lang="en"><a href="../PHP/About.php" target="_top">About</a></span></li>
 				<ul>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 			<div id="breadcrumb">
 				<ul>
 					<li>Ti trovi in: <span xml:lang="en"><a href="../PHP/Index.php">Home</a></span> -&gt; <a href="../PHP/Intermedia.php?Categoria=Secondi">Secondi</a> -&gt; <a href="../PHP/Intermedia.php?Categoria=Pesce">Pesce</a></li>
-					<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
+					<li tabindex="7" class="stayright"><a href="#content">Vai al Contenuto</a></li>
 				</ul>
 			</div>
 	<!--END TOP OF THE PAGE-->
@@ -75,7 +75,7 @@
 		<div class="row clear">
 			<h3>Qualcosa in più:</h3>
 			<p>Con il termine pesce, inteso in senso alimentare, si comprendono gli alimenti derivanti dalla pesca, comprendenti sia l'eterogeneo gruppo dei pesci, sia tutti gli animali marini o di acqua dolce, selvatici o di allevamento, quali ad esempio molluschi (calamari, totani, polpi, seppie, moscardini), crostacei (gamberi, scampi, aragoste, astici, granchi e granseole, canocchie) e tutte le forme, parti e prodotti commestibili di tali animali spesso denominati frutti di mare, se da esso derivanti.</p>
-			<p>Per la normativa europea dal gruppo, definito Prodotti della pesca, si escludono i molluschi bivalvi vivi (mitili e vongole), gasteropodi marini vivi, echinodermi vivi (ricci di mare), tunicati vivi (ascidie come l'uovo di mare o Microcosmus sulcatus) e tutti i mammiferi, rettili e anfibi, che costituiscono categorie differenti.</p>
+			<p>Per la normativa europea dal gruppo, definito prodotti della pesca, si escludono i molluschi bivalvi vivi (mitili e vongole), gasteropodi marini vivi, echinodermi vivi (ricci di mare), tunicati vivi (ascidie come l'uovo di mare o Microcosmus sulcatus) e tutti i mammiferi, rettili e anfibi, che costituiscono categorie differenti.</p>
 		</div>
 		<h3>Ricette Simili:</h3>
 			%%Ricette
@@ -98,7 +98,7 @@
 	<div id="validity">
 		<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
 		<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
-		<p><a href="../PHP/Admin_panel.php">AdminPanel</a></p>
+		<p><span xml:lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
 	</div>
 </div>
 </body>
