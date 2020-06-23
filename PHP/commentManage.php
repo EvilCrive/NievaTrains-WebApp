@@ -11,7 +11,7 @@ if(isset($_POST['button'])){
     $query = "DELETE FROM commento WHERE Id_Commento='$comm';";
     $ConnessioneAttiva->exeQuery($query);
     $idricetta=$_POST['idricetta'];
-    header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta");
+    header("refresh:0; url=../PHP/Ricetta.php?Id_ricetta=$idricetta");
   }
 }
 else{
@@ -22,9 +22,9 @@ else{
     $idutente=$_SESSION['id'];
     $idricetta=$_POST['idricetta'];
     $date=date("Y-m-d H:i:s");
-    $query = "INSERT INTO commento (Testo,Data,Id_Utente,Id_Ricetta) VALUES('$commento','$date','$idutente','$idricetta');";
+    $query = "INSERT INTO commento (Testo,Data,Id_Utente,Id_ricetta) VALUES('$commento','$date','$idutente','$idricetta');";
     $ConnessioneAttiva->exeQuery($query);
-    header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta#commentreturn");
+    header("refresh:0; url=../PHP/Ricetta.php?Id_ricetta=$idricetta#commentreturn");
   }
   
 }

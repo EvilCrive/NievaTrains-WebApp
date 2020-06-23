@@ -18,8 +18,8 @@ if(isset($_GET["Id_Utente"])) {
 		from utente AS U JOIN follow AS F ON U.Id_Utente=F.Id_Utente2
 		WHERE F.Id_Utente1=$ID;");
 //getquery preferite(id)
-	$preferite=$connessione->getQuery("SELECT R.Id_Ricetta, R.Nome, R.Introduzione, R.Nome_Immagine, R.Descrizione_Immagine
-			FROM preferiti AS P JOIN ricetta AS R ON P.Id_Ricetta=R.Id_Ricetta
+	$preferite=$connessione->getQuery("SELECT R.Id_ricetta, R.Nome, R.Introduzione, R.Nome_Immagine, R.Descrizione_Immagine
+			FROM preferiti AS P JOIN ricetta AS R ON P.Id_ricetta=R.Id_ricetta
 			WHERE P.Id_Utente=$ID;");
 //file html	
 	$finale = file_get_contents("../txt/Utente.html");

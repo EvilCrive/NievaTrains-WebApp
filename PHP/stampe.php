@@ -10,9 +10,9 @@ function stampaRicette($results) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
+		$var.= '		<a href="Ricetta.php?Id_ricetta='.$results[$i]["Id_ricetta"].'">'."\n";
 		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'"/>'."\n";
-		$var.= '	<div class="desc">'.$results[$i]["Nome"].'</div>'."\n";
+		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].'</p></div>'."\n";
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
@@ -29,7 +29,7 @@ function stampaRicette($results) {
 }
 function stampaSpeciale($result) {
 
-	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
+	$var='<a href="Ricetta.php?Id_ricetta='.$result["Id_ricetta"].'">';
 	$var.= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
 	$var.='</a>';
 	$var.= '<div id="textGiorno">';
@@ -119,8 +119,8 @@ $var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="pos
 if($voto){
 	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 }
-$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden />';
-$var.=	'<input name="ricetta" hidden value='.$ricetta.' /><button id="valuta" class="button1"> Valuta </button></form>';
+$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" type="hidden" />';
+$var.=	'<input name="ricetta" type="hidden" value="'.$ricetta.'" /><button id="valuta" class="button1"> Valuta </button></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID,$bool) {
@@ -160,14 +160,14 @@ function stampaCommenti($results) {
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
 				if($_SESSION['id']===$results[$i]["Id_Utente"]){
-					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden /></form>';
+					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_ricetta"].'" type="hidden" /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" type="hidden" /></form>';
 				}
 			}
 		}
 		$var.='  	<a href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].'</a>'."\n";
 		$var.= '    <span class="data">'.$results[$i]["Data"].'</span>'."\n";
 		$var.= '  </div>'."\n";
-		$var.= '	<p>'.$results[$i]["Testo"]."\n";
+		$var.= '	<p>'.$results[$i]["Testo"].'</p>'."\n";
 		$var.= '	</li>'."\n";
 	
 	}
@@ -198,7 +198,7 @@ function stampaUtenti($results) {
 		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'"/>'."\n";
 		$var.= '			<img id="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
 		
-		$var.= '	<div class="desc">'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</div>'."\n";
+		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</p></div>'."\n";
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
@@ -215,13 +215,13 @@ function stampaUtenti($results) {
 }
 
 function stampaEditbio(){
-	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio" /><button class="button">Modifica BIO</button></form>';
+	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio" /></textarea><button class="button">Modifica BIO</button></form>';
 }
 function stampafollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input type="hidden" name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
 }
 function stampaunfollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input hidden name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Unfollow</button></span></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input type="hidden" name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Unfollow</button></span></form>';
 }
 
 

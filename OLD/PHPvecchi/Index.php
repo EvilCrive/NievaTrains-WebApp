@@ -98,7 +98,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 
 			<?php 
 			$result=$ConnessioneAttiva->getQuery("SELECT R.Descrizione_Immagine, R.Nome_Immagine, R.Nome,count(V.Voto) AS Numero_Voti
-				FROM Ricetta AS R JOIN Voto AS V ON R.Id_Ricetta=V.Id_Ricetta
+				FROM Ricetta AS R JOIN Voto AS V ON R.Id_ricetta=V.Id_ricetta
 				GROUP BY R.Nome
 				ORDER BY Numero_Voti DESC;");
 			stampaRicerca($result);
