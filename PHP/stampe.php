@@ -119,14 +119,14 @@ $var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="pos
 if($voto){
 	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 }
-$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
+$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden />';
 $var.=	'<input name="ricetta" hidden value='.$ricetta.' /><button id="valuta" class="button1"> Valuta </button></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID,$bool) {
 	$var='<a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
-	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
-	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
+	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
+	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
 	return $var;
 }
 function stampaInformazioni($results) {
@@ -160,7 +160,7 @@ function stampaCommenti($results) {
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
 				if($_SESSION['id']===$results[$i]["Id_Utente"]){
-					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina"><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden></input><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden ></input></form>';
+					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" hidden /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" hidden /></form>';
 				}
 			}
 		}
