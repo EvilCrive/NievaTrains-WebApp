@@ -42,6 +42,6 @@ class DBAccess{
 		catch(Exception $e){
 		}		
 	}
-
+}
 
 ?>

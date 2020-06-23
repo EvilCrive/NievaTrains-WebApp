@@ -119,14 +119,14 @@ $var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="pos
 if($voto){
 	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 }
-$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden></input>';
+$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" hidden />';
 $var.=	'<input name="ricetta" hidden value='.$ricetta.' /><button id="valuta" class="button1"> Valuta </button></form>';
 return $var;
 }
 function stampaPreferiti($results,$ID,$bool) {
 	$var='<a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
-	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
-	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp'.$results[0]["count(*)"].'</p></a>';
+	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
+	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
 	return $var;
 }
 function stampaInformazioni($results) {
@@ -215,7 +215,7 @@ function stampaUtenti($results) {
 }
 
 function stampaEditbio(){
-	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio"></textarea><button class="button">Modifica BIO</button></form>';
+	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio" /><button class="button">Modifica BIO</button></form>';
 }
 function stampafollow($user){
 	return '<form action="../PHP/userManage.php" method="post"><input hidden name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
