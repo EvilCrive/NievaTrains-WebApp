@@ -19,7 +19,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	 
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px), only screen and (max-device-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="handheld,screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="js/menu_hamburger_utente.js"></script>
 </style>
 
