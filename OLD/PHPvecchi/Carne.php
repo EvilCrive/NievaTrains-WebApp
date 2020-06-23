@@ -66,7 +66,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 		<!--breadcrumb-->
 			<div id="breadcrumb">
 				<ul>
-					<li>Ti trovi in: <span xml:lang="en"><a href="./home.html">Home</a></span> -&gt; Secondi -&gt; Carne</li>
+					<li>Ti trovi in: <span xml:lang="en" lang="en"><a href="./home.html">Home</a></span> -&gt; Secondi -&gt; Carne</li>
 					<li class="stayright"><a href="#">Vai al Contenuto</a></li>
 				</ul>
 			</div>

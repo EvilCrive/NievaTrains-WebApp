@@ -30,15 +30,15 @@ try{
 		$errors.='<h2>Sembra tu abbia un problema riguardante';
 		if($_GET['errore']==="utenti"){
 			$errors.=' gli utenti';
-			$errors.='</h2><a href="../PHP/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+			$errors.='</h2><a href="../PHP/Index.php"> Torna alla <span xml:lang="en" lang="en">Home</span></a></div></div>';
 		}
 		if($_GET['errore']==="categorie"){
 			$errors.=" le categorie";
-			$errors.='</h2><a href="../PHP/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+			$errors.='</h2><a href="../PHP/Ricerca.php">Vai a tutte le ricette</a></div></div>';
 		}
 		if($_GET['errore']==="ricette"){
 			$errors.=" le ricette";
-			$errors.='</h2><a href="../PHP/Index.php"> Torna alla <span xml:lang="en">Home</span></a></div></div>';
+			$errors.='</h2><a href="../PHP/Ricerca.php">Vai a tutte le ricerche</a></div></div>';
 		}
 		
 		$finale=str_replace("%%errorivari",$errors,$finale);
