@@ -107,7 +107,7 @@ $risultati=$result[0];
       <h2>Ricette Preferite </h2>
 		<?php 
 		$result=$ConnessioneAttiva->getQuery("SELECT R.Nome, R.Introduzione, R.Nome_Immagine, R.Descrizione_Immagine
-			FROM Preferiti AS P JOIN Ricetta AS R ON P.Id_ricetta=R.Id_ricetta
+			FROM Preferiti AS P JOIN Ricetta AS R ON P.Id_Ricetta=R.Id_Ricetta
 			WHERE P.Id_Utente=1;");
 		stampaRicerca($result);
 		?>

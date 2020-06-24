@@ -8,7 +8,7 @@ try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 
 	//getquery consigliate
-	$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_ricetta, Macro_Categoria, Nome
+	$consigliate=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Id_Ricetta, Macro_Categoria, Nome
 									FROM ricetta 
 									GROUP BY Nome
 									LIMIT 8;");

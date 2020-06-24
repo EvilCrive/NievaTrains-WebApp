@@ -10,7 +10,7 @@ function stampaRicette($results) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a href="Ricetta.php?Id_ricetta='.$results[$i]["Id_ricetta"].'">'."\n";
+		$var.= '		<a href="Ricetta.php?Id_Ricetta='.$results[$i]["Id_Ricetta"].'">'."\n";
 		$var.= '		<img src="../immagini/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'"/>'."\n";
 		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].'</p></div>'."\n";
 		$var.= '		</a>'."\n";
@@ -29,7 +29,7 @@ function stampaRicette($results) {
 }
 function stampaSpeciale($result) {
 
-	$var='<a href="Ricetta.php?Id_ricetta='.$result["Id_ricetta"].'">';
+	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
 	$var.= '<img src="../immagini/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
 	$var.='</a>';
 	$var.= '<div id="textGiorno">';
@@ -160,7 +160,7 @@ function stampaCommenti($results) {
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
 				if($_SESSION['id']===$results[$i]["Id_Utente"]){
-					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_ricetta"].'" type="hidden" /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" type="hidden" /></form>';
+					$var.= '<form action="commentManage.php" method="post"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" type="hidden" /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" type="hidden" /></form>';
 				}
 			}
 		}

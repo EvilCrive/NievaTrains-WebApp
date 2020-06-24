@@ -26,17 +26,17 @@ function stampaRicerca($result) {
 	}
 	
 function stampaVoto($Connessione, $ID) {
-	$result=$Connessione->getQuery("SELECT Voto FROM Ricetta WHERE Id_ricetta=$ID;");
+	$result=$Connessione->getQuery("SELECT Voto FROM Ricetta WHERE Id_Ricetta=$ID;");
 	echo $result[0]["Voto"];
 }
 function stampaPreferiti($Connessione, $ID) {
-	$result=$Connessione->getQuery("SELECT count(*) FROM Preferiti WHERE Id_ricetta=$ID;");
+	$result=$Connessione->getQuery("SELECT count(*) FROM Preferiti WHERE Id_Ricetta=$ID;");
 	echo $result[0]["count(*)"];
 }
 function stampaInformazioni($Connessione, $ID) {
 	$result=$Connessione->getQuery("SELECT Calorie, Dose, Costo, Difficoltà, Tempo_Preparazione
 		FROM Ricetta
-		WHERE Id_ricetta=$ID;");
+		WHERE Id_Ricetta=$ID;");
 		echo '<li><i>€ Difficoltà : '.$result[0]["Difficoltà"].'</i></li>'."\n";
 		echo '<li><i>€ Preparazione : '.$result[0]["Tempo_Preparazione"].' minuti</i></li>'."\n";
 		echo '<li><i>€ Dosi per : '.$result[0]["Dose"].' persone</i></li>'."\n";
@@ -44,15 +44,15 @@ function stampaInformazioni($Connessione, $ID) {
 		echo '<li><i>€ Calorie : '.$result[0]["Calorie"].'</i></li>'."\n";
 }
 function stampaIngredienti($Connessione, $ID) { 
-	$result=$Connessione->getQuery("SELECT Ingredienti FROM Ricetta WHERE Id_ricetta=$ID;");
+	$result=$Connessione->getQuery("SELECT Ingredienti FROM Ricetta WHERE Id_Ricetta=$ID;");
 	echo $result[0]["Ingredienti"];
 }
 function stampaPasso($Connessione, $ID){
-	$result=$Connessione->getQuery("SELECT Passo_Passo FROM Ricetta WHERE Id_ricetta=$ID;");
+	$result=$Connessione->getQuery("SELECT Passo_Passo FROM Ricetta WHERE Id_Ricetta=$ID;");
 	echo $result[0]["Passo_Passo"];
 }
 function stampaCommenti($Connessione, $ID) {
-	$result=$Connessione->getQuery("SELECT U.Nome, U.Cognome, U.Nome_Immagine, C.Testo, C.Data, C.Numero_Like FROM Commento as C JOIN Utente AS U ON C.Id_Utente=U.Id_Utente WHERE C.Id_ricetta=$ID;");
+	$result=$Connessione->getQuery("SELECT U.Nome, U.Cognome, U.Nome_Immagine, C.Testo, C.Data, C.Numero_Like FROM Commento as C JOIN Utente AS U ON C.Id_Utente=U.Id_Utente WHERE C.Id_Ricetta=$ID;");
 	$nrisultati=sizeof($result);
 	for ($i=0; $i<$nrisultati; $i++){
 		echo '<li class="comment">'."\n";
