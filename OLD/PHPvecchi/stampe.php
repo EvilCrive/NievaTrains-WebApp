@@ -10,7 +10,7 @@ function stampaRicerca($result) {
 		echo '<div class="responsive">'."\n";
 		echo '	<div class="gallery">'."\n";
 		echo '		<a target="_blank" href="'.$result[$i]["Nome_Immagine"].'.jpg">'."\n";
-		echo '		<img src="../Database/Ricette/'.$result[$i]["Nome_Immagine"].'.jpg" alt="'.$result[$i]["Descrizione_Immagine"].'" width="600" height="400">'."\n";
+		echo '		<img src="../immagini/Ricette/'.$result[$i]["Nome_Immagine"].'.jpg" alt="'.$result[$i]["Descrizione_Immagine"].'" width="600" height="400">'."\n";
 		echo '		</a>'."\n";
 		echo '	<div class="desc">'.$result[$i]["Nome"].'</div>'."\n";
 		echo '	</div>'."\n";

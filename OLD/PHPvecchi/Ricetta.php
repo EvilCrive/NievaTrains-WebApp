@@ -88,7 +88,7 @@ $risultati=$result[0];
 	<div class="row clear">
 			<div class="col_sx">
 			<!--php Immagine-->
-				<img id="img_ricetta" <?php echo 'src="../Database/Ricette/'.$risultati["Nome_Immagine"].'.jpg" alt="'.$risultati["Descrizione_Immagine"].'"'?> />
+				<img id="img_ricetta" <?php echo 'src="../immagini/Ricette/'.$risultati["Nome_Immagine"].'.jpg" alt="'.$risultati["Descrizione_Immagine"].'"'?> />
 			</div>
 			<div class="col_dx">
 				<ul>

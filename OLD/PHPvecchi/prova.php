@@ -21,7 +21,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 		echo '<div class="responsive">';
 		echo '	<div class="gallery">';
 		echo '		<a target="_blank" href="img_forest.jpg">';
-		echo '		<img src="../Database/Ricette/'.$tmp["Nome_Immagine"].'jpg" alt="'.$tmp["Descrizione_Immagine"].'" width="600" height="400">';
+		echo '		<img src="../immagini/Ricette/'.$tmp["Nome_Immagine"].'jpg" alt="'.$tmp["Descrizione_Immagine"].'" width="600" height="400">';
 		echo '		</a>';
 		echo '	<div class="desc">'.$tmp["Nome"].'</div>';
 		echo '	</div>';

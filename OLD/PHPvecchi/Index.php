@@ -79,7 +79,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 </div>
 
 	<div id="ricettaGiorno">
-		      	<img src="../Database/Ricette/immagini base/antipasti_crocchette.jpg" alt="Crocchette di patate">
+		      	<img src="../immagini/Ricette/immagini base/antipasti_crocchette.jpg" alt="Crocchette di patate">
 					<div id="textGiorno">
 						<h2>Antipasti</h2>
 						<p>Crocchette di Patate</p>

@@ -11,7 +11,7 @@ function stampaRicette($results) {
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
 		$var.= '		<a href="Ricetta.php?Id_ricetta='.$results[$i]["Id_ricetta"].'">'."\n";
-		$var.= '		<img src="../Database/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'"/>'."\n";
+		$var.= '		<img src="../immagini/Ricette/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Descrizione_Immagine"].'"/>'."\n";
 		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].'</p></div>'."\n";
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
@@ -30,7 +30,7 @@ function stampaRicette($results) {
 function stampaSpeciale($result) {
 
 	$var='<a href="Ricetta.php?Id_ricetta='.$result["Id_ricetta"].'">';
-	$var.= '<img src="../Database/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
+	$var.= '<img src="../immagini/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
 	$var.='</a>';
 	$var.= '<div id="textGiorno">';
 	$var.= '	<h2>'.$result["Macro_Categoria"].'</h2>';
@@ -84,7 +84,7 @@ function stampaImmagineUtente($results) {
 	return '<img id="userImg" src="../immagini/Utente/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
 function stampaImmagineRicetta($results) {
-	return '<img id="img_ricetta" src="../Database/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+	return '<img id="img_ricetta" src="../immagini/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
 
 function stampaFollowers($results) {
