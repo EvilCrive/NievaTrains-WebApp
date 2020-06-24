@@ -1,6 +1,83 @@
-
 <?php
 require_once "connection.php";
+
+
+//--------------------Breadcrumb--------------------
+function stampaBreadcrumb($results) {
+	$var= '<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Macro_Categoria"].'</a>';
+	if($results[0]["Categoria"]!=$results[0]["Macro_Categoria"]) $var.= ' -&gt; '.'<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Categoria"].'</a>  ';
+	$var.='-&gt; '.$results[0]["Nome"];
+	return $var;
+}
+
+
+//--------------------Consigliate--------------------
+
+function stampaSpeciale($result) {
+	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
+	$var.= '<img src="../immagini/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
+	$var.='</a>';
+	$var.= '<div id="textGiorno">';
+	$var.= '	<h2>'.$result["Macro_Categoria"].'</h2>';
+	$var.= '	<p>'.$result["Nome"].'</p>';
+	$var.= '</div>';
+	return $var;
+}
+
+
+//--------------------Ricerca--------------------
+
+function stampaHeaderRicerca($results,$stringa,$bool) {
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var='<div id="infoBox" class="clear row">';
+	$var.= '<div id="ricercatext">';
+	if(!$stringa=="") {	
+		if($bool)	$var.= '	<h3>Risultato ricerca utenti: </h3>';
+		else	$var.= '	<h3>Risultato ricerca ricette:</h3>';
+		$var.= '	<p>"'.$stringa.'"</p> ';
+	}
+	elseif($bool)	$var.= '	<h3>Tutti gli utenti</h3>';
+	else	$var.= '	<h3>Tutte le ricette</h3>';
+	$var.= '</div>';
+	$var.= '<div id="nrisultati">';
+	if($bool)	$var.= '	<p>'.$nrisultati.' utenti trovati </p>';
+	else	$var.= '	<p>'.$nrisultati.' ricette trovate </p>';
+	$var.= '</div>';
+	$var.='</div>';
+	return $var;
+}
+
+function stampaInfoBox($testo){
+	$var='<div id="infoBox" class="clear row">';
+	$var.='	<h2>Non ci sono '.$testo.' corrispondenti ai parametri di ricerca</h2>';
+	$var.='</div>';
+	return $var;
+}
+
+function stampaUtenti($results) {
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var= '<div class="rowconsigliate clear">'."\n";
+	$contatore=1;
+	for ($i=0; $i<$nrisultati; $i++){
+		$var.= '<div class="responsive">'."\n";
+		$var.= '	<div class="gallery">'."\n";
+		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'"/>'."\n";
+		$var.= '			<img id="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
+		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</p></div>'."\n";
+		$var.= '		</a>'."\n";
+		$var.= '	</div>'."\n";
+		$var.= '</div>'."\n";
+		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
+			$var.= '</div>'."\n";
+			$var.= '<div class="rowconsigliate clear">'."\n";
+		}
+	$contatore++;
+	}
+	$var.= '</div>'."\n";
+	return $var;
+}
 
 function stampaRicette($results) {
 	if($results)	$nrisultati=sizeof($results);
@@ -16,7 +93,6 @@ function stampaRicette($results) {
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
-		
 		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
 			$var.= '</div>'."\n";
 			$var.= '<div class="rowconsigliate clear">'."\n";
@@ -27,127 +103,40 @@ function stampaRicette($results) {
 	
 	return $var;
 }
-function stampaSpeciale($result) {
 
-	$var='<a href="Ricetta.php?Id_Ricetta='.$result["Id_Ricetta"].'">';
-	$var.= '<img src="../immagini/Ricette/'.$result["Nome_Immagine"].'.jpg" alt="'.$result["Descrizione_Immagine"].'"/>';
-	$var.='</a>';
-	$var.= '<div id="textGiorno">';
-	$var.= '	<h2>'.$result["Macro_Categoria"].'</h2>';
-	$var.= '	<p>'.$result["Nome"].'</p>';
-	$var.= '</div>';
 
-	return $var;
-}
+//--------------------Ricetta--------------------
 
-function stampaHeaderRicerca($results,$stringa,$bool) {
-	if($results)	$nrisultati=sizeof($results);
-	else	$nrisultati=0;
-	$var='<div id="infoBox" class="clear row">';
-	$var.= '<div id="ricercatext">';
-	if(!$stringa=="") {
-		
-	if($bool){
-		$var.= '	<h3>Risultato ricerca utenti: </h3>';
-	}else{
-		$var.= '	<h3>Risultato ricerca ricette:</h3>';
-	}
-	
-	
-		$var.= '	<p>"'.$stringa.'"</p> ';
-	}
-	elseif($bool){
-		$var.= '	<h3>Tutti gli utenti</h3>';
-	}else{
-		$var.= '	<h3>Tutte le ricette</h3>';
-	}
-
-	$var.= '</div>';
-	$var.= '<div id="nrisultati">';
-	if($bool){
-		$var.= '	<p>'.$nrisultati.' utenti trovati </p>';
-	}else{
-		$var.= '	<p>'.$nrisultati.' ricette trovate </p>';
-	}
-	$var.= '</div>';
-	$var.='</div>';
-	return $var;
-}
-
-function stampaUsername($results) {
-	return $results[0]["Username"];
-}
-function stampaNome($results) {
-	return $results[0]["Nome"];
-}
-function stampaImmagineUtente($results) {
-	return '<img id="userImg" src="../immagini/Utente/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
-}
-function stampaImmagineRicetta($results) {
-	return '<img id="img_ricetta" src="../immagini/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
-}
-
-function stampaFollowers($results) {
-	if($results)	$nrisultati=sizeof($results);
-	else	$nrisultati=0;
-	$var='';
-	for($i=0; $i<$nrisultati; $i++) { 
-		$var.= '<a href="Utente.php?Id_Utente='.$results[$i]["Id_Utente2"].'"><button class="button2">'.$results[$i]["Username"].'</button></a>'."\n";
-	}
-	
-	return $var;
-}
-function stampaNomeCognomeUsernameBio($results) {
-    $var= '	<h2>'.$results[0]["Nome"].' '.$results[0]["Cognome"].'</h2>';
-    $var.= '	<p>@'.$results[0]["Username"].'</p>';
-    $var.= '	<form>';
-	$var.= '		<p>'.$results[0]["Bio"].'</p>';
-	$var.= '	</form>';
-	
-	return $var;
-}
-function stampaBreadcrumb($results) {
-	$var= '<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Macro_Categoria"].'</a>';
-	if($results[0]["Categoria"]!=$results[0]["Macro_Categoria"]) $var.= ' -&gt; '.'<a href="../PHP/Intermedia.php?Categoria='.$results[0]["Macro_Categoria"].'">'.$results[0]["Categoria"].'</a>  ';
-	$var.='-&gt; '.$results[0]["Nome"];
-	
-	return $var;
-}
-function stampaVoto($results,$voto,$ricetta) {
-$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post" onsubmit="return Alertunlogged()">';
-	//
-if($voto){
-	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
-}
-$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" type="hidden" />';
-$var.=	'<input name="ricetta" type="hidden" value="'.$ricetta.'" /><button id="valuta" class="button1"> Valuta </button></form>';
-return $var;
-}
-function stampaPreferiti($results,$ID,$bool) {
-	$var='<a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
-	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
-	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
-	return $var;
-}
 function stampaInformazioni($results) {
 	$var= '<li><span class="infoRic"> Difficoltà :</span> '.$results[0]["Difficoltà"].'</li>'."\n";
 	$var.= '<li><span class="infoRic"> Preparazione :</span> '.$results[0]["Tempo_Preparazione"].' minuti</li>'."\n";
 	$var.= '<li><span class="infoRic"> Dosi per :</span> '.$results[0]["Dose"].' persone</li>'."\n";
 	$var.= '<li><span class="infoRic"> Costo : </span>'.$results[0]["Costo"].'</li>'."\n";
 	$var.= '<li><span class="infoRic"> Calorie : </span>'.$results[0]["Calorie"].'</li>'."\n";
-	
 	return $var;
 }
+
 function stampaIntroduzione($results) {
 	return '<p>&nbsp;'.$results[0]["Introduzione"].'</p>';
 }
+
 function stampaRicettaEstesa($results) {
 	return $results[0]["Preparazione"];
 }
+
 function stampaPassoPasso($results){
 	$stringa=$results[0]["Passo_Passo"];
 	return trasformaStringaInLista($stringa);
 }
+
+function stampaIngredienti($results) { 	
+	$stringa=$results[0]["Ingredienti"];
+	return trasformaStringaInLista($stringa);
+}
+
+
+//--------------------Commenti--------------------
+
 function stampaCommenti($results) {
 	if($results)	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
@@ -155,7 +144,6 @@ function stampaCommenti($results) {
 	$var='';
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<li class="comment">'."\n";
-		
 		$var.= '	<div class="info">'."\n";
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
@@ -169,63 +157,62 @@ function stampaCommenti($results) {
 		$var.= '  </div>'."\n";
 		$var.= '	<p>'.$results[$i]["Testo"].'</p>'."\n";
 		$var.= '	</li>'."\n";
-	
 	}
-	
 	return $var;
 }
 
-function stampaInfoBox($testo){
-	$var='<div id="infoBox" class="clear row">';
-	$var.='	<h2>Non ci sono '.$testo.' corrispondenti ai parametri di ricerca</h2>';
-	$var.='</div>';
-	
+
+//--------------------Voti e Preferiti--------------------
+
+function stampaVoto($results,$voto,$ricetta) {
+	$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post" onsubmit="return Alertunlogged()">';
+	if($voto[0]["ROUND(AVG(Voto),1)"])	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
+	$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" type="hidden" />';
+	$var.=	'<input name="ricetta" type="hidden" value="'.$ricetta.'" /><button id="valuta" class="button1"> Valuta </button></form>';
 	return $var;
 }
 
-function stampaIngredienti($results) { 	
-	$stringa=$results[0]["Ingredienti"];
-	return trasformaStringaInLista($stringa);
+function stampaPreferiti($results,$ID,$bool) {
+	$var='<a href="../PHP/preferitiManage.php?idricetta='.$ID.'">';
+	if($bool)	$var.='<p class="fa fa-heart" id="selected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
+	else		$var.='<p class="fa fa-heart" id="unselected" onclick="return Alertunlogged()">&nbsp;'.$results[0]["count(*)"].'</p></a>';
+	return $var;
 }
-function stampaUtenti($results) {
+
+
+//--------------------Profilo--------------------
+
+function stampaFollowers($results) {
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
-	$var= '<div class="rowconsigliate clear">'."\n";
-	$contatore=1;
-	for ($i=0; $i<$nrisultati; $i++){
-		$var.= '<div class="responsive">'."\n";
-		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'"/>'."\n";
-		$var.= '			<img id="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
-		
-		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</p></div>'."\n";
-		$var.= '		</a>'."\n";
-		$var.= '	</div>'."\n";
-		$var.= '</div>'."\n";
-		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
-			$var.= '</div>'."\n";
-			$var.= '<div class="rowconsigliate clear">'."\n";
-		}
-	$contatore++;
+	$var='';
+	for($i=0; $i<$nrisultati; $i++) { 
+		$var.= '<a href="Utente.php?Id_Utente='.$results[$i]["Id_Utente2"].'"><button class="button2">'.$results[$i]["Username"].'</button></a>'."\n";
 	}
-	$var.= '</div>'."\n";
-	
 	return $var;
+}
 
+function stampaNomeCognomeUsernameBio($results) {
+    $var= '	<h2>'.$results[0]["Nome"].' '.$results[0]["Cognome"].'</h2>';
+    $var.= '	<p>@'.$results[0]["Username"].'</p>';
+	$var.= '		<p>'.$results[0]["Bio"].'</p>';	
+	return $var;
 }
 
 function stampaEditbio(){
 	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio" /></textarea><button class="button">Modifica BIO</button></form>';
 }
+
 function stampafollow($user){
 	return '<form action="../PHP/userManage.php" method="post"><input type="hidden" name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
 }
+
 function stampaunfollow($user){
 	return '<form action="../PHP/userManage.php" method="post"><input type="hidden" name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Unfollow</button></span></form>';
 }
 
 
-
+//--------------------AdminPanel--------------------
 
 function stampadeleteUtenti($results){
 	if($results)	$nrisultati=sizeof($results);
@@ -254,6 +241,8 @@ function stampadeleteCommenti($results){
 }
 
 
+//--------------------Ausiliarie--------------------
+
 function trasformaStringaInLista($stringa){
 	$aux=explode("\n",$stringa);
 	$var='';
@@ -266,15 +255,23 @@ function trasformaStringaInLista($stringa){
 	return $var; 
 }
 
-function trasformaStringaInParagrafi($stringa){
-	$aux=explode("\n",$stringa);
-	$var='';
-  	foreach ($aux as $element) {	
-  	$var.='<p>'.$element.'</p>';
-  	}
-	return $var; 
+function stampaUsername($results) {
+	return $results[0]["Username"];
+}
+
+function stampaNome($results) {
+	return $results[0]["Nome"];
+}
+
+function stampaImmagineUtente($results) {
+	return '<img id="userImg" src="../immagini/Utente/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+}
+
+function stampaImmagineRicetta($results) {
+	return '<img id="img_ricetta" src="../immagini/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
 
 ?>
+
 
 
