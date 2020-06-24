@@ -42,7 +42,7 @@ try{
 				$bool=0;
 				if(!isset($_GET['id']))		header( "refresh:0; url=../PHP/Index.php" );
 				if(!isset($_GET['name']))	header( "refresh:0; url=../PHP/Index.php" );
-				$elimina='<a href="../PHP/Admin_panel.php?delete=2&name='.$_GET['name'].'&id='.$_GET['id'].'"><button class=button>ELIMINA</button></a>';
+				$elimina='<a href="../PHP/Admin_panel.php?delete=2&name='.$_GET['name'].'&id='.$_GET['id'].'"class=button>ELIMINA</a>';
 				$elimina.='<a href="../PHP/Admin_panel.php?operation=';
 
 				if($_GET['name']==="utente"){
@@ -55,7 +55,7 @@ try{
 					$var="il commento";
 					$elimina.=2;
 				}
-				$elimina.='"><button class="button">TORNA INDIETRO</button></a>';
+				$elimina.='" class="button">TORNA INDIETRO</a>';
 				$finale=str_replace("%%title","Elimina ".$var,$finale);
 				$finale=str_replace("%%eliminawhat",$elimina,$finale);
 
