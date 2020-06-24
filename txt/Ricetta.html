@@ -106,7 +106,7 @@
 				%%PassoPasso
 			</div>
 	</div>
-	<div class="row">
+	<div class="row" id="ricettaestesa">
 		<h3> Ricetta Estesa </h3>
 		<p>%%RicettaEstesa</p>
 	</div>
@@ -118,7 +118,7 @@
 	<ul class="comment-section" id="commentreturn">
 	<!--php commenti-->
 	%%Commenti
-		<li class="write-new" >
+		<li id="write-new">
 			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 			
 				<textarea rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
 				<input rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
@@ -133,7 +133,7 @@
 	</ul>
 </div><!--RICETTE CORRELATE -->
 
-	<h3>Ricette della stessa categoria :</h3>
+	<h3 id="ricettasamecategoria">Ricette della stessa categoria :</h3>
 	%%Ricette
 
 </div>

@@ -77,6 +77,16 @@ h1, h2, h3, h4, h5, h6 {
     page-break-inside: avoid;
 }
 
+/*header */
+#user_logo, #hamburger {
+    display: none;
+}
+
+/* about */
+#startcontatti{
+    page-break-before: always;
+}
+
 /* pagina ricerca */
 #infoBox{
     page-break-before: always;
@@ -97,7 +107,24 @@ form{
 }
 
 /*ricetta */
-
+#img_ricetta{
+    height: 18em;
+    width: auto;
+}
+#ricettaestesa{
+    page-break-before: always;
+    font-size: small;
+    page-break-after: always;
+}
+#write-new{
+    display: none;
+}
+.eliminacommenti{
+    display: none;
+}
+#ricettasamecategoria{
+    page-break-before: always;
+}
 .rating-box{
     display:none;
 }
