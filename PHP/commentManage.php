@@ -27,11 +27,10 @@ try{
       $ConnessioneAttiva->exeQuery($query);
       header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta#commentreturn");
     }
-  
   }
 }catch(Exception $eccezione){
 	echo $eccezione;
-	$connessione->closeConnection();
 }
+$connessione->closeConnection();
 ?>
 
