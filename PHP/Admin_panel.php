@@ -6,6 +6,7 @@ session_start();
 $connessione=new DBAccess();
 try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	// $bool serve per selezionare l'html da prendere
 	$bool=1;
 	
 	//quando admin e' loggato
@@ -131,6 +132,6 @@ try{
 	echo $finale;
 }catch(Exception $eccezione){
 	echo $eccezione;
-	$connessione->closeConnection();
 }
+$connessione->closeConnection();
 ?>

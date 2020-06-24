@@ -23,9 +23,10 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	 
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="handheld,screen and (max-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->
@@ -79,7 +80,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 </div>
 
 	<div id="ricettaGiorno">
-		      	<img src="../Database/Ricette/immagini base/antipasti_crocchette.jpg" alt="Crocchette di patate">
+		      	<img src="../immagini/Ricette/immagini base/antipasti_crocchette.jpg" alt="Crocchette di patate">
 					<div id="textGiorno">
 						<h2>Antipasti</h2>
 						<p>Crocchette di Patate</p>
@@ -98,7 +99,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 
 			<?php 
 			$result=$ConnessioneAttiva->getQuery("SELECT R.Descrizione_Immagine, R.Nome_Immagine, R.Nome,count(V.Voto) AS Numero_Voti
-				FROM Ricetta AS R JOIN Voto AS V ON R.Id_ricetta=V.Id_ricetta
+				FROM Ricetta AS R JOIN Voto AS V ON R.Id_Ricetta=V.Id_Ricetta
 				GROUP BY R.Nome
 				ORDER BY Numero_Voti DESC;");
 			stampaRicerca($result);

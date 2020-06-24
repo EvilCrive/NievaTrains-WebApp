@@ -19,6 +19,7 @@
 	<link media="screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js" type="text/javascript"></script>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->
@@ -37,11 +38,12 @@
 						<li><span xml:lang="en" lang="en"><a href="../PHP/About.php">About</a></span></li>
 					</ul>
 			</div>
+			%%utente
 			<img id="hamburger" src="../immagini/hamburger.png" alt="menu hamburger" onclick="openNav()"/>
 				<a href="../PHP/Index.php"><img id="logo_head" src="../immagini/logo.png" alt="logo orange tango"/></a>
-				<img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/>
+				%%user
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca ricette e utenti" name="stringaCercata" />
+					<input type="text" placeholder="Cerca ricette e utenti" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
 				</form>
 			</div>
@@ -90,7 +92,7 @@
 			<div id="validity">
 				<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
 				<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
-				<p><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
+				<p id="entrataAdminpanel"><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
 			</div>
 		</div>
 </body>

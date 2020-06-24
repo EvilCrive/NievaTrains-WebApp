@@ -5,7 +5,7 @@ require_once "stampeOggetti.php";
 $ConnessioneAttiva = new DBAccess();
 $var=$ConnessioneAttiva->openConnectionlocal();
 
-$result=$ConnessioneAttiva->getQuery("SELECT * FROM Ricetta WHERE Id_ricetta='1';");
+$result=$ConnessioneAttiva->getQuery("SELECT * FROM Ricetta WHERE Id_Ricetta='1';");
 $risultati=$result[0];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -27,9 +27,10 @@ $risultati=$result[0];
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="handheld,screen and (max-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->
@@ -88,7 +89,7 @@ $risultati=$result[0];
 	<div class="row clear">
 			<div class="col_sx">
 			<!--php Immagine-->
-				<img id="img_ricetta" <?php echo 'src="../Database/Ricette/'.$risultati["Nome_Immagine"].'.jpg" alt="'.$risultati["Descrizione_Immagine"].'"'?> />
+				<img id="img_ricetta" <?php echo 'src="../immagini/Ricette/'.$risultati["Nome_Immagine"].'.jpg" alt="'.$risultati["Descrizione_Immagine"].'"'?> />
 			</div>
 			<div class="col_dx">
 				<ul>

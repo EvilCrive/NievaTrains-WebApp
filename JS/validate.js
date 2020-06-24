@@ -1,34 +1,22 @@
 function ValidateLogIn(){
-  var login_error=document.getElementById('errors_login');
   var mail=document.forms["loginform"]["email"];
-  var password=document.forms["loginform"]["password"];
   var errore_mail="";
-  var errore_password="";
-
-    //controllo mail
-    var mail=document.forms["loginform"]["email"];
-    var errore_mail="";
-    if(!validateEmail(mail.value)){
-      errore_mail="L'e-mail non e' valida."
-    }else{
-      errore_mail="";
-    }
-    document.getElementById("error_mail_login").textContent=errore_mail;
-    document.getElementById("error_mail_login").style.color="red";
-    document.getElementById("error_mail_login").hidden=false;
-  
-  //controllo password
-  if(!validatePassword(password.value)){
-    errore_password="La password non e' valida";
+  //controllo mail
+  var mail=document.forms["loginform"]["email"];
+  var errore_mail="";
+  if(!validateEmail(mail.value)){
+    errore_mail="L'e-mail non e' valida."
+  }else{
+    errore_mail="";
   }
-  document.getElementById("error_password_login").textContent=errore_password;
-  document.getElementById("error_password_login").style.color="red";
-  document.getElementById("error_password_login").hidden=false;
-  if(errore_password=="" && errore_mail==""){
+  document.getElementById("error_mail_login").textContent=errore_mail;
+  document.getElementById("error_mail_login").style.color="red";
+  document.getElementById("error_mail_login").hidden=false;
+
+  if(errore_mail==""){
     return true;
   }
   return false;
-
 }
 
 

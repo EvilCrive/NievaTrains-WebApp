@@ -50,7 +50,7 @@ INSERT INTO admins(User,Pin) VALUES
 
 CREATE TABLE ricetta
 (
-Id_ricetta integer auto_increment PRIMARY KEY,
+Id_Ricetta integer auto_increment PRIMARY KEY,
 Macro_Categoria varchar(20) not null,
 Categoria varchar(20) not null,
 Nome varchar(30) not null,
@@ -678,13 +678,13 @@ Id_commento integer auto_increment PRIMARY KEY,
 Testo varchar(150) not null,
 Data datetime not null,
 Id_utente integer,
-Id_ricetta integer,
+Id_Ricetta integer,
 CONSTRAINT uq_comment UNIQUE (Testo,Data),
 FOREIGN KEY (Id_utente) REFERENCES utente(Id_utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_ricetta) REFERENCES ricetta(Id_ricetta) ON DELETE CASCADE
+FOREIGN KEY (Id_Ricetta) REFERENCES ricetta(Id_Ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO commento(Testo,Data,Id_utente,Id_ricetta) VALUES
+INSERT INTO commento(Testo,Data,Id_utente,Id_Ricetta) VALUES
 ('Consiglio a tutti questa ricetta semplice e buonissima',CURRENT_TIMESTAMP,1,3),
 ('Questa ricetta è un evergreen',CURRENT_TIMESTAMP,1,5),
 ('Buonissimissimo',CURRENT_TIMESTAMP,1,2),
@@ -740,14 +740,14 @@ INSERT INTO follow(Id_utente1,Id_utente2) VALUES
 CREATE TABLE voto
 (
 Id_utente integer,
-Id_ricetta integer,
+Id_Ricetta integer,
 voto decimal(2,1),
-PRIMARY KEY(Id_utente,Id_ricetta),
+PRIMARY KEY(Id_utente,Id_Ricetta),
 FOREIGN KEY (Id_utente) REFERENCES utente(Id_utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_ricetta) REFERENCES ricetta(Id_ricetta) ON DELETE CASCADE
+FOREIGN KEY (Id_Ricetta) REFERENCES ricetta(Id_Ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO voto(Id_utente,Id_ricetta,voto) VALUES
+INSERT INTO voto(Id_utente,Id_Ricetta,voto) VALUES
 (1,1,4),
 (1,3,5),
 (1,5,4),
@@ -780,13 +780,13 @@ INSERT INTO voto(Id_utente,Id_ricetta,voto) VALUES
 CREATE TABLE preferiti
 (
 Id_utente integer,
-Id_ricetta integer,
-PRIMARY KEY(Id_utente,Id_ricetta),
+Id_Ricetta integer,
+PRIMARY KEY(Id_utente,Id_Ricetta),
 FOREIGN KEY (Id_utente) REFERENCES utente(Id_utente) ON DELETE CASCADE,
-FOREIGN KEY (Id_ricetta) REFERENCES ricetta(Id_ricetta) ON DELETE CASCADE
+FOREIGN KEY (Id_Ricetta) REFERENCES ricetta(Id_Ricetta) ON DELETE CASCADE
 )ENGINE=InnoDB;
 
-INSERT INTO preferiti(Id_utente,Id_ricetta) VALUES
+INSERT INTO preferiti(Id_utente,Id_Ricetta) VALUES
 (1,3),
 (1,2),
 (2,1),
