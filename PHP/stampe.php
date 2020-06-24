@@ -217,9 +217,9 @@ function stampadeleteUtenti($results){
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) { 
-		$var.= '<p class="onemidem">'.$results[$i]["Username"].'<a href="../PHP/Admin_panel.php?delete=1&name=utente&id='.$results[$i]["Id_Utente"].'"><button class="button3">X</button></a></p>'."\n";
+		$var.= '<p class="onemidem">'.$results[$i]["Username"].'<a href="../PHP/Admin_panel.php?delete=1&name=utente&id='.$results[$i]["Id_Utente"].'" class="button3">X</a></p>'."\n";
 	}
-	$var.='<a href="../PHP/Admin_panel.php"><button class="button">TORNA INDIETRO</button></a>';
+	$var.='<a href="../PHP/Admin_panel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 
@@ -232,9 +232,9 @@ function stampadeleteCommenti($results){
 		$var.='<p class="onemidem">'.$results[$i]["Id_Commento"].")  ".$results[$i]["Testo"].'</p>';
 		$var.='<p class="oneem">Utente: '.$results[$i]["Username"].'</p><p>Data: '.$results[$i]["Data"].'</p>';
 		$var.='<p class="oneem">Ricetta: '.$results[$i]["Nome"].'</p>';
-		$var.='<p><a href="../PHP/Admin_panel.php?delete=1&name=commento&id='.$results[$i]["Id_Commento"].'"><button class="button">ELIMINA IL COMMENTO</button></a></p></div>'."\n";
+		$var.='<p><a href="../PHP/Admin_panel.php?delete=1&name=commento&id='.$results[$i]["Id_Commento"].'" class="button">ELIMINA IL COMMENTO</a></p></div>'."\n";
 	}
-	$var.='<a href="../PHP/Admin_panel.php"><button class="button">TORNA INDIETRO</button></a>';
+	$var.='<a href="../PHP/Admin_panel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 
