@@ -102,19 +102,18 @@ try{
 			session_destroy();
 			session_start();
 			$_SESSION['adminlogged']=true;
-		}
 	}
 
 	//prima che l'admin provi a loggarsi
 	if($bool){
 		$finale = file_get_contents("../txt/admin_panel_login.html");
+		if(!isset($_SESSION['adminlogged'])){
+			$finale=str_replace("%%erroriadminlogin","<p>LOGIN ERRATI</p>",$finale);
+		}
 	}
 	//sidemenu user
-	$divusermenu="";
-	$ref="";
 	if(isset($_SESSION['login'])){
-		if($_SESSION['login'])	$divusermenu='<div id="myUserSideNav" class="sidenav"><a href="javascript:void(0)" class="closebtn" onclick="closeUserNav()">&times;</a><ul><li><a href="../PHP/userManage.php?request=1">Profilo</a></li><li><a href="../PHP/userManage.php?request=2">Logout</a></li></ul></div>';
-		else	$divusermenu="";
+		$divusermenu='<div id="myUserSideNav" class="sidenav"><a href="javascript:void(0)" class="closebtn" onclick="closeUserNav()">&times;</a><ul><li><a href="../PHP/userManage.php?request=1">Profilo</a></li><li><a href="../PHP/userManage.php?request=2">Logout</a></li></ul></div>';
 	}else{
 		$divusermenu="";
 	}
@@ -122,7 +121,6 @@ try{
 		$ref='<a href="Registrazione.php"><img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/></a>';
 	}else{
 		$ref='<img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/>';
-		
 	}
 
 	$finale=str_replace("%%user",$ref,$finale);

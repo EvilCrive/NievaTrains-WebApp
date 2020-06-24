@@ -2,16 +2,16 @@
 require_once "connection.php";
 require_once "stampe.php";
 session_start();
-$ConnessioneAttiva = new DBAccess();
+$connessione = new DBAccess();
 try{
   if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
-  $var=$ConnessioneAttiva->openConnectionlocal();
+  $var=$connessione->openConnectionlocal();
 
   if(isset($_POST['button'])){
     if($_POST['button']=="Elimina"){
       $comm=$_POST['idcommento'];
       $query = "DELETE FROM commento WHERE Id_Commento='$comm';";
-      $ConnessioneAttiva->exeQuery($query);
+      $connessione->exeQuery($query);
       $idricetta=$_POST['idricetta'];
       header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta");
     }
@@ -24,7 +24,7 @@ try{
       $idricetta=$_POST['idricetta'];
       $date=date("Y-m-d H:i:s");
       $query = "INSERT INTO commento (Testo,Data,Id_Utente,Id_Ricetta) VALUES('$commento','$date','$idutente','$idricetta');";
-      $ConnessioneAttiva->exeQuery($query);
+      $connessione->exeQuery($query);
       header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta#commentreturn");
     }
   }

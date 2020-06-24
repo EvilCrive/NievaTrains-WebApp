@@ -36,7 +36,7 @@ try{
             $bio=$_POST['bio'];
             $iduser=$_SESSION['id'];
             $query="UPDATE utente SET Bio='$bio' WHERE Id_Utente='$iduser'";
-            $ConnessioneAttiva->exeQuery($query);
+            $connessione->exeQuery($query);
             header("refresh:0; url=../PHP/Utente.php?Id_Utente=$iduser");
         }
         if(isset($_POST['follow'])){
@@ -44,7 +44,7 @@ try{
             $id2=$_POST['follow'];
             $iduser=$_SESSION['id'];
             $query="INSERT INTO follow (Id_Utente1, Id_Utente2) VALUES ('$iduser','$id2')";
-            $ConnessioneAttiva->exeQuery($query);
+            $connessione->exeQuery($query);
             header("refresh:0; url=../PHP/Utente.php?Id_Utente=$id2");    
         }
         if(isset($_POST['unfollow'])){
@@ -52,7 +52,7 @@ try{
             $id2=$_POST['unfollow'];
             $iduser=$_SESSION['id'];
             $query="DELETE FROM follow WHERE Id_Utente1='$iduser' AND Id_Utente2='$id2'";
-            $ConnessioneAttiva->exeQuery($query);
+            $connessione->exeQuery($query);
             header("refresh:0; url=../PHP/Utente.php?Id_Utente=$id2");
         }
 

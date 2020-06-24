@@ -1,9 +1,9 @@
 <?php
 require_once "connection.php";
-$ConnessioneAttiva = new DBAccess();
+$connessione = new DBAccess();
 session_start();
 try{
-	if(!$ConnessioneAttiva->openConnectionLocal()) throw new Exception("No connection");
+	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
 	$_SESSION['first']=true;
 	$_SESSION['errors']="";
 	$password=$_POST['password'];
@@ -31,7 +31,7 @@ try{
 	if($tmp){
 		//registrazione
 		$controlquery="SELECT Username,Mail from utente WHERE Mail='$email' OR Username='$username';";
-		if($ConnessioneAttiva->getQuery($controlquery)){
+		if($connessione->getQuery($controlquery)){
 			//controllo per utenti gia' iscritti	
 			header("refresh:0; url=../PHP/Registrazione.php#errors");
 			$_SESSION['fail']="Questo utente e' gia' registrato.";
@@ -44,13 +44,13 @@ try{
 				$thumb=$username;
 				$descr="Immagine profilo di ".$nome." ".$cognome;
 				$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password,Bio,Nome_Immagine,Nome_Thumbnail,Descrizione_Immagine) VALUES('$nome','$cognome','$username','$email','$password','$bio','$img','$thumb','$descr');";
-				$ConnessioneAttiva->exeQuery($query);
+				$connessione->exeQuery($query);
 				if(isset($_SESSION['adminlogged'])){
 					$_SESSION=array();
 					session_destroy();
 					session_start();
 				}
-				$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
+				$_SESSION['id'] = $connessione->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
 				$_SESSION['nome'] = $nome;
 				$_SESSION['cognome'] = $cognome;
 				$_SESSION['email'] = $email;
@@ -69,7 +69,7 @@ try{
 	}else{
 		//login
 		$query = "SELECT* from utente WHERE Mail='$email' AND Password='$password';";
-		$r=$ConnessioneAttiva->getQuery($query);
+		$r=$connessione->getQuery($query);
 		if(!$r){
 			header("refresh:0; url=./Registrazione.php#errors");
 			$_SESSION['fail']="Email o Password sbagliati.";
@@ -80,11 +80,11 @@ try{
 				session_destroy();
 				session_start();
 			}
-			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
-			$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome from utente WHERE Mail='$email'");
-			$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome from utente WHERE Mail='$email'");
+			$_SESSION['id'] = $connessione->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
+			$_SESSION['nome'] = $connessione->getQuery("SELECT Nome from utente WHERE Mail='$email'");
+			$_SESSION['cognome'] = $connessione->getQuery("SELECT Cognome from utente WHERE Mail='$email'");
 			$_SESSION['email'] = $email;
-			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username from utente WHERE Mail='$email'");
+			$_SESSION['username'] = $connessione->getQuery("SELECT Username from utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
 			$_SESSION['justlogged']=true;
@@ -92,9 +92,9 @@ try{
 			header("refresh:0; url=./Registrazione.php#errors");
 		}
 	}		
-	$ConnessioneAttiva->closeConnection();
+	$connessione->closeConnection();
 }catch(Exception $eccezione){
 	echo $eccezione;
-	$ConnessioneAttiva->closeConnection();
+	$connessione->closeConnection();
 }	
 ?>

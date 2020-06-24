@@ -1,8 +1,8 @@
 <?php
 require_once "connection.php";
 require_once "stampe.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 ?>
 
 
@@ -74,7 +74,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 <div id="content">
 <?php
 	$stringa=$_POST["stringaCercata"];
-	$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome like '%$stringa%' OR Categoria='$stringa';");
+	$result=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Nome like '%$stringa%' OR Categoria='$stringa';");
 
  	$nrisultati=sizeof($result);
  ?>

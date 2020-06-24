@@ -1,8 +1,8 @@
 <?php
 require_once "connection.php";
 require_once "stampe.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -85,7 +85,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	</div>
 			<h3>Ricette:</h3>
 			<?php 
-			$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='Dolci';");
+			$result=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='Dolci';");
 			stampaRicerca($result);
 			?>
 </div>

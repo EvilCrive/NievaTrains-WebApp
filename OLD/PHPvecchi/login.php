@@ -1,7 +1,7 @@
 <?php
 require_once "connection.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 $password=$_POST['password'];
 $email=$_POST['email'];
 echo $password, " ", $email, " ";
@@ -13,13 +13,13 @@ echo $password, " ", $email, " ";
 			
 			$query = "SELECT* from utente WHERE Mail='$email' AND Password='$password';";
 			
-			$r=$ConnessioneAttiva->getQuery($query);
+			$r=$connessione->getQuery($query);
 			session_start();
-			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
-			$_SESSION['nome'] = $ConnessioneAttiva->getQuery("SELECT Nome from utente WHERE Mail='$email'");
-			$_SESSION['cognome'] = $ConnessioneAttiva->getQuery("SELECT Cognome from utente WHERE Mail='$email'");
+			$_SESSION['id'] = $connessione->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
+			$_SESSION['nome'] = $connessione->getQuery("SELECT Nome from utente WHERE Mail='$email'");
+			$_SESSION['cognome'] = $connessione->getQuery("SELECT Cognome from utente WHERE Mail='$email'");
 			$_SESSION['email'] = $email;
-			$_SESSION['username'] = $ConnessioneAttiva->getQuery("SELECT Username from utente WHERE Mail='$email'");
+			$_SESSION['username'] = $connessione->getQuery("SELECT Username from utente WHERE Mail='$email'");
 			$_SESSION['password'] = $password;
 			$_SESSION['login'] = true;
 			
