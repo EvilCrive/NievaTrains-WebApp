@@ -102,13 +102,18 @@ try{
 			session_destroy();
 			session_start();
 			$_SESSION['adminlogged']=true;
+		}else{
+			$finale = file_get_contents("../txt/admin_panel_login.html");
+			$finale=str_replace("%%erroriadminlogin",'<p class='.'"errors"'.'>LOGIN ERRATI</p>',$finale);
+			$bool=0;
+		}
 	}
 
 	//prima che l'admin provi a loggarsi
 	if($bool){
 		$finale = file_get_contents("../txt/admin_panel_login.html");
 		if(!isset($_SESSION['adminlogged'])){
-			$finale=str_replace("%%erroriadminlogin","<p>LOGIN ERRATI</p>",$finale);
+			$finale=str_replace("%%erroriadminlogin","",$finale);
 		}
 	}
 	//sidemenu user

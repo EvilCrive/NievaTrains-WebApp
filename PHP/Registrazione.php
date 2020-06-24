@@ -33,11 +33,4 @@ if($divusermenu===""){
 $finale=str_replace("%%user",$ref,$finale);
 $finale=str_replace("%%utente",$divusermenu,$finale);
 echo $finale;
-if(isset($_GET['notlogged'])){
-	echo '<script>alert("Non sei loggato")</script>';
-}
-if($b!==""){
-	echo '<script>alert("'.$b.'")</script>';
-}
-
 ?>
