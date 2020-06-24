@@ -30,8 +30,8 @@ function stampaSpeciale($result) {
 function stampaHeaderRicerca($results,$stringa,$bool) {
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
-	$var='<div id="infoBox" class="clear row">';
-	$var.= '<div id="ricercatext">';
+	$var='<div class="infoBox clear row">';
+	$var.= '<div class="ricercatext">';
 	if(!$stringa=="") {	
 		if($bool)	$var.= '	<h3>Risultato ricerca utenti: </h3>';
 		else	$var.= '	<h3>Risultato ricerca ricette:</h3>';
@@ -40,17 +40,10 @@ function stampaHeaderRicerca($results,$stringa,$bool) {
 	elseif($bool)	$var.= '	<h3>Tutti gli utenti</h3>';
 	else	$var.= '	<h3>Tutte le ricette</h3>';
 	$var.= '</div>';
-	$var.= '<div id="nrisultati">';
+	$var.= '<div class="nrisultati">';
 	if($bool)	$var.= '	<p>'.$nrisultati.' utenti trovati </p>';
 	else	$var.= '	<p>'.$nrisultati.' ricette trovate </p>';
 	$var.= '</div>';
-	$var.='</div>';
-	return $var;
-}
-
-function stampaInfoBox($testo){
-	$var='<div id="infoBox" class="clear row">';
-	$var.='	<h2>Non ci sono '.$testo.' corrispondenti ai parametri di ricerca</h2>';
 	$var.='</div>';
 	return $var;
 }
@@ -161,7 +154,12 @@ function stampaCommenti($results) {
 	return $var;
 }
 
-
+function stampaInfoBox($testo){
+	$var='<div class="infoBox clear row">';
+	$var.='	<h2>Non ci sono '.$testo.' corrispondenti ai parametri di ricerca</h2>';
+	$var.='</div>';
+	return $var;
+}
 //--------------------Voti e Preferiti--------------------
 
 function stampaVoto($results,$voto,$ricetta) {

@@ -120,8 +120,8 @@
 	%%Commenti
 		<li class="write-new" >
 			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 			
-				<textarea rows="auto" cols="auto" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input rows="auto" cols="auto" name="idricetta" value="%%idricetta" type="hidden"/>
+				<textarea rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
 				<textarea placeholder="Lascia un commento qui..." name="comment"></textarea>
 					<div>
 						   <button type="submit">Invia</button>
@@ -158,6 +158,6 @@
 				<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
 				<p id="entrataAdminpanel"><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
 			</div>
-		</div>
+		<!--</div>-->
 </body>
 </html>

@@ -431,7 +431,7 @@ textarea:focus{
   border: 3px solid rgba(246,173,123,1);
 }
 /*ricerca*/
-#infoBox{
+.infoBox{
   padding: 15px;
   display: block;
 	max-width: 1400px;
@@ -440,12 +440,12 @@ textarea:focus{
   margin-top: 20px;
   font-size: 1.5em;
 }
-#ricercatext p{
+.ricercatext p{
   vertical-align: top;
   font-size: 1.3em;
   padding-left: 1em;
 }
-#nrisultati p{
+.nrisultati p{
 	font-size: 0.8em;
 
 }
@@ -637,7 +637,7 @@ display: flex;
   background-color: #fff;
   padding-left: 20px;
 }
-#userImg{
+.userImg{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -852,7 +852,18 @@ display: flex;
 	color: #ec7421;;
 }
 
-
+#imga{
+	height: 50px;
+	width: 50px;
+}
+#imgb{
+	height: 50px;
+	width: 50px;
+}
+#imgc{
+	height: 50px;
+	width: 50px;
+}
 
 
 
