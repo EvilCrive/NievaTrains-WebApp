@@ -200,7 +200,7 @@ function stampaNomeCognomeUsernameBio($results) {
 }
 
 function stampaEditbio(){
-	return '<form action="../PHP/userManage.php" method="post"><textarea name="bio" /></textarea><button class="button">Modifica BIO</button></form>';
+	return '<form action="../PHP/userManage.php" id="editbioform" method="post"><textarea name="bio" /></textarea><button class="button">Modifica BIO</button></form>';
 }
 
 function stampafollow($user){

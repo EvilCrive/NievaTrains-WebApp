@@ -77,22 +77,40 @@ h1, h2, h3, h4, h5, h6 {
     page-break-inside: avoid;
 }
 
-#tuttericettesito{
-    page-break-after: always;
+/* pagina ricerca */
+#infoBox{
+    page-break-before: always;
 }
 
-/* pagina ricerca */
+/* registrazione */
 
+form{
+    page-break-inside: avoid;
+    padding: 3em;
+}
+/*intermedia */
+#ricetteintermedia{
+    page-break-before: always;
+}
+#sottocategoriaData{
+    page-break-before: always;
+}
 
+/*ricetta */
 
-
-
-
-
-
-
-
-
+.rating-box{
+    display:none;
+}
+/* profilo */
+#editbioform{
+    display: none;
+}
+#ricettepreferiteutente{
+    page-break-before: always;
+}
+.card{
+    padding: 1.5em;
+}
 /* Displaying link color and link behaviour */
 a:link, a:visited, a {
     background: transparent;
@@ -120,13 +138,19 @@ a:link, a:visited, a {
 
 /* LAST PAGE */
 
-#footer{
-    padding-top: 10em;
-}
-
 .funzionalitaBox p{
     text-indent: 1em;
     margin-left: 1em;
     display: list-item;
     list-style:disc outside none;
+}
+#flex-funzionalita{
+    padding-bottom: 10em;
+}
+#footer{
+    padding-top: 2em;
+    page-break-inside: avoid;
+}
+#tuttericettesito {
+    page-break-after: always;
 }
