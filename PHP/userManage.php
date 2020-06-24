@@ -58,7 +58,7 @@ try{
 
 
     }else{
-        //se non sei loggato di reindirizza alla pagina di registrazione
+        //se non sei loggato ti reindirizza alla pagina di registrazione
         header("refresh:0; url=../PHP/Registrazione.php?notlogged");
     }
 }catch(Exception $eccezione){

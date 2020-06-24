@@ -62,7 +62,7 @@ function stampaUtenti($results) {
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
-		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
+		if($contatore%4===0) {
 			$var.= '</div>'."\n";
 			$var.= '<div class="rowconsigliate clear">'."\n";
 		}
@@ -86,7 +86,7 @@ function stampaRicette($results) {
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
-		if($contatore%4===0) { //da controllare il caso in cui sono multipli di 4
+		if($contatore%4===0) { 
 			$var.= '</div>'."\n";
 			$var.= '<div class="rowconsigliate clear">'."\n";
 		}
