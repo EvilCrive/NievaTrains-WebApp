@@ -23,6 +23,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	<script src="js/menu_hamburger_utente.js"></script>
 </style>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->

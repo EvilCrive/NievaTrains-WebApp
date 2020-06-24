@@ -40,12 +40,26 @@ h2, h3, h4 {
     font-size: 14pt;
     margin-top: 25px;
 }
+/* IMG */
+
+img { 
+    page-break-inside:avoid;   
+    page-break-after:avoid; 
+    height: 4em;
+    width: auto;
+}
+.gallery img{
+    width:8em;
+    height:auto;
+    page-break-before: avoid;
+}
+#ricettaGiorno img{
+    width: 25em;
+    height: auto;
+}
 
 /*page breaks*/
    
-a {
-    page-break-inside:avoid
-}
 blockquote {
     page-break-inside: avoid;
 }
@@ -54,23 +68,65 @@ h1, h2, h3, h4, h5, h6 {
     page-break-after:avoid; 
     page-break-inside:avoid 
 }
-    
-img { 
-    page-break-inside:avoid;   
-    page-break-after:avoid; 
-    height: 80px;
-    width: auto;
+
+#ricettaGiorno{
+    page-break-after: always;
 }
 
+.responsive{
+    page-break-inside: avoid;
+}
 
+#tuttericettesito{
+    page-break-after: always;
+}
+
+/* pagina ricerca */
+
+
+
+
+
+
+
+
+
+
+
+/* Displaying link color and link behaviour */
+a:link, a:visited, a {
+    background: transparent;
+    color: #520;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+    }
+    
+    a {
+        page-break-inside:avoid;
+    }
 
 /*
  *   esclusioni
  */
-.topnav, #search {
+.topnav{
     display: none;
 }
 
-#mySidenav, #myUserSideNav{
+#search, #mySidenav, #myUserSideNav, #entrataAdminpanel, #tornasu{
     display: none;
+}
+
+
+/* LAST PAGE */
+
+#footer{
+    padding-top: 10em;
+}
+
+.funzionalitaBox p{
+    text-indent: 1em;
+    margin-left: 1em;
+    display: list-item;
+    list-style:disc outside none;
 }

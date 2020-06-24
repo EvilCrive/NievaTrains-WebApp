@@ -9,6 +9,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 
 <head>
   <title>prova</title>
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<h1>prova</h1>
