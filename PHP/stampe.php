@@ -43,8 +43,8 @@ function stampaSpeciale($result) {
 function stampaHeaderRicerca($results,$stringa,$bool) {
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
-	$var='<div id="infoBox" class="clear row">';
-	$var.= '<div id="ricercatext">';
+	$var='<div class="infoBox clear row">';
+	$var.= '<div class="ricercatext">';
 	if(!$stringa=="") {
 		
 	if($bool){
@@ -63,7 +63,7 @@ function stampaHeaderRicerca($results,$stringa,$bool) {
 	}
 
 	$var.= '</div>';
-	$var.= '<div id="nrisultati">';
+	$var.= '<div class="nrisultati">';
 	if($bool){
 		$var.= '	<p>'.$nrisultati.' utenti trovati </p>';
 	}else{
@@ -81,7 +81,7 @@ function stampaNome($results) {
 	return $results[0]["Nome"];
 }
 function stampaImmagineUtente($results) {
-	return '<img id="userImg" src="../immagini/Utente/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
+	return '<img class="userImg" src="../immagini/Utente/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
 }
 function stampaImmagineRicetta($results) {
 	return '<img id="img_ricetta" src="../Database/Ricette/'.$results[0]["Nome_Immagine"].'.jpg" alt="'.$results[0]["Nome_Thumbnail"].'"/>';
@@ -176,7 +176,7 @@ function stampaCommenti($results) {
 }
 
 function stampaInfoBox($testo){
-	$var='<div id="infoBox" class="clear row">';
+	$var='<div class="infoBox clear row">';
 	$var.='	<h2>Non ci sono '.$testo.' corrispondenti ai parametri di ricerca</h2>';
 	$var.='</div>';
 	
@@ -195,8 +195,8 @@ function stampaUtenti($results) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.= '<div class="responsive">'."\n";
 		$var.= '	<div class="gallery">'."\n";
-		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'"/>'."\n";
-		$var.= '			<img id="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
+		$var.= '		<a target="_blank" href="Utente.php?Id_Utente='.$results[$i]["Id_Utente"].'">'."\n";
+		$var.= '			<img class="userImg" src="../immagini/Utente/'.$results[$i]["Nome_Immagine"].'.jpg" alt="'.$results[$i]["Nome_Thumbnail"].'"/>';
 		
 		$var.= '	<div class="desc"><p>'.$results[$i]["Nome"].' '.$results[$i]["Cognome"].' - @'.$results[$i]["Username"].'</p></div>'."\n";
 		$var.= '		</a>'."\n";

@@ -1,23 +1,23 @@
-#infoBox{
+.infoBox{
 	max-width: 1400px;
 	height: auto;
 	margin: auto;
 	padding-bottom: 20px;
 }
-#ricercatext{
+.ricercatext{
 	margin-top: 30px;
 }
-#ricercatext h2{
+.ricercatext h2{
 	font-size: 2em;
 	display: inline-block;
 }
 
-#ricercatext p{
+.ricercatext p{
 	font-size: 1.5em;
 	display: inline-block;
 	padding-left: 1em;
 }
-#nrisultati p{
+.nrisultati p{
 	font-size: 0.8em;
 	padding-left: 1em;
 }

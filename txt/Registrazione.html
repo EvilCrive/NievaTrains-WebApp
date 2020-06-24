@@ -77,44 +77,40 @@
 		<form method="POST" action="../PHP/form.php" onsubmit="return ValidateLogIn()" name="loginform">
 			<div class="Box">
 				<h3><span xml:lang="en" lang="en">Log In</span></h3>
-				<form>
 					<p><span xml:lang="en" lang="en">Email</span></p>
-					<input class="inputbar" type="email" name="email" id="email" placeholder="Email Address">
-					<div id="error_mail_login" type="hidden"></div>
+					<input class="inputbar email" type="email" name="email" placeholder="Email Address">
+					<div id="error_mail_login" hidden></div>
 					<p><span xml:lang="en" lang="en">Password</span></p>
-					<input class="inputbar" type="password" name="password" id="password" placeholder="Password">
-					<div id="error_password_login" type="hidden"></div>
+					<input class="inputbar password" type="password" name="password" placeholder="Password">
+					<div id="error_password_login" hidden></div>
 					<input class="button" name="button" type="submit" value="Accedi">	
-				<form>
 			</div>
 		</form>
 		<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()" name="signupform">
 			<div class="Box">
 					<h3>Registrazione</h3>
-					<form>
 					<p><span xml:lang="en" lang="en">Email</span></p>
-					<input class="inputbar" type="email" name="email" id="email" placeholder="Email Address">
-					<div id="error_mail_signup" type="hidden"></div>
+					<input class="inputbar email" type="email" name="email" placeholder="Email Address">
+					<div id="error_mail_signup" hidden></div>
 					<p>Nome</p>
 					<input class="inputbar" type="text" name="Nome" id="Nome" placeholder="Nome">
-					<div id="error_name" type="hidden"></div>
+					<div id="error_name" hidden></div>
 					<p>Cognome</p>
 					<input class="inputbar" type="text" name="Cognome" id="Cognome" placeholder="Cognome">
-					<div id="error_surname" type="hidden"></div>
+					<div id="error_surname" hidden></div>
 					<p><span xml:lang="en" lang="en">Username</span></p>
 					<input class="inputbar" type="text" name="Username" id="Username" placeholder="User Name">
-					<div id="error_username" type="hidden"></div>
+					<div id="error_username" hidden></div>
 					<p><span xml:lang="en" lang="en">Password</span></p>
-					<input class="inputbar" type="password" name="password" id="password" placeholder="Password">
-					<div id="error_password_signup" type="hidden"></div>
+					<input class="inputbar password" type="password" name="password" placeholder="Password">
+					<div id="error_password_signup" hidden></div>
 					<p>Conferma <span xml:lang="en" lang="en">Password</span></p>
 					<input class="inputbar" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
 					<div id="error_confirmpassword"></div>
-					<div id="scegli immagine">Scegli la tua immagine<p><img width="50px" height="50px" id="imga" src="../immagini/utente/immagineA.jpg" alt="A" /><img width="50px" height="50px" id="imgb" src="../immagini/utente/immagineB.jpg" alt="B" /><img width="50px" height="50px" id="imgc" src="../immagini/utente/immagineC.jpg" alt="C"/></p></div>
+					<div id="scegli_immagine">Scegli la tua immagine<p><img  id="imga" src="../immagini/utente/immagineA.jpg" alt="A" /><img  id="imgb" src="../immagini/utente/immagineB.jpg" alt="B" /><img  id="imgc" src="../immagini/utente/immagineC.jpg" alt="C"/></p></div>
 					<p id="imgscelta">Hai scelto l'immagine:</p>
-					<textarea rows="auto" cols="auto" name ="selectimg" hidden="hidden"></textarea>
+					<textarea rows="5" cols="300" name ="selectimg" hidden="hidden"></textarea>
 					<input type="submit" name="button" class="button" id="proc" value="Registrati">
-					<form>
 			</div>
 		</form>
 		<div id="errors"><p>%b</p></div> <!--errori lato server -->
