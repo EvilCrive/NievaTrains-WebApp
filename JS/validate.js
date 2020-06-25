@@ -1,8 +1,11 @@
 function ValidateLogIn(){
+  alert("mail");
   var mail=document.forms["loginform"]["email"];
   var errore_mail="";
   //controllo mail
   var mail=document.forms["loginform"]["email"];
+
+
   var errore_mail="";
   if(!validateEmail(mail.value)){
     errore_mail="L'e-mail non e' valida."
@@ -21,7 +24,6 @@ function ValidateLogIn(){
 
 
 function ValidateSignUp(){
-
   //controllo mail
   var mail=document.forms["signupform"]["email"];
   var errore_mail="";

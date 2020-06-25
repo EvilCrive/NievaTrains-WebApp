@@ -21,7 +21,7 @@
 	<script src="../JS/menu_hamburger_utente.js" type="text/javascript"></script>
 	<script src="../JS/validate.js" type="text/javascript"></script>
 	<script src="../JS/img_user.js" type="text/javascript"></script>
-<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
+	<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
 </head>
 <body>
 	<!--header-->
@@ -75,7 +75,7 @@
 	<!--START PAGE CONTENT-->
 	<div id="content">
 		<div id="boxwrapper">
-		<form method="post" action="../PHP/form.php" onsubmit="return ValidateLogIn()">
+		<form method="post" action="../PHP/form.php" onsubmit="return ValidateLogIn()" id="loginform">
 			<div class="Box">
 			<fieldset>
 				<h3><span xml:lang="en" lang="en">Log In</span></h3>
@@ -89,9 +89,9 @@
 			</fieldset>
 			</div>
 		</form>
-		<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()">
-		<fieldset>
-			<div class="Box">
+		<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()" id="signupform">
+			<fieldset>
+				<div class="Box">
 					<h3>Registrazione</h3>
 					<p><span xml:lang="en" lang="en">Email</span></p>
 					<input class="inputbar email" type="text" name="email" value="Email Address" />
@@ -115,7 +115,7 @@
 					<p id="imgscelta">Hai scelto l'immagine:</p>
 					<textarea rows="5" cols="300" name ="selectimg" class="hidden"></textarea>
 					<input type="submit" name="button" class="button" id="proc" value="Registrati" />
-			</div>
+				</div>
 			</fieldset>
 		</form>
 		<div id="errors"><p>%b</p></div> <!--errori lato server -->
