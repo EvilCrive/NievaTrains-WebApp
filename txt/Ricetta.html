@@ -124,9 +124,9 @@
 		<li id="write-new">
 			<form action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 	
 			<fieldset>			
-				<textarea rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input name="idricetta" value="%%idricetta" type="hidden"/>
-				<textarea rows="5" cols="300" value="Lascia un commento qui..." name="comment"></textarea>
+				<textarea rows="5" cols="300" id="controlLogged" class="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input name="idricetta" value="%%idricetta" class="hidden"/>
+				<textarea rows="5" cols="300" name="comment"></textarea>
 					<div>
 						   <button type="submit">Invia</button>
 						   <p id="commentRequired" class="errors"></p>

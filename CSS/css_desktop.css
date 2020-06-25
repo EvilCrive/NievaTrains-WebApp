@@ -926,3 +926,6 @@ cursor: pointer;
   float: left;
 }
 
+.hidden{
+	display: none;
+}
