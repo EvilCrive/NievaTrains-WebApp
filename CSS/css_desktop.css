@@ -1,5 +1,6 @@
 a{
-	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
 #adminpanel{
@@ -256,6 +257,7 @@ body{
   margin: auto;
 }
 h2 {
+	margin-top:10px;
   margin-bottom: 20px;
 }
 #intro h2{
@@ -294,6 +296,7 @@ h4{
 	width: 100%;
   margin-top: 20px;
   margin-left:20px;
+  margin-bottom:20px;
   font-size: 1em;
 }
 .row p{
@@ -490,6 +493,7 @@ display: flex;
   font-size: 1em;
   padding: 5px;
   min-width: 50px;
+  margin: 0px;
 }
 
 #search button {
@@ -577,7 +581,7 @@ display: flex;
 .Box input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
-.Box input[type=email]{
+.Box input[type=text]{
   border:none;
   border-bottom: 2px solid #adadad;
   border-radius: 5px;
@@ -587,7 +591,7 @@ display: flex;
   margin-bottom: 10px;
 }
 
-.Box input[type=email]:focus{
+.Box input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
 .Box input[type=password]{
@@ -927,10 +931,24 @@ cursor: pointer;
 }
 
 fieldset{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
 	border: 0;
   padding: 0;
   margin: 0;
   min-width: 0;
+  width: 100%;
+}
+#fakefieldset{
+		display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+    width: 100%;
 }
 
 .hidden{

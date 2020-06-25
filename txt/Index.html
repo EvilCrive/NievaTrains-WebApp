@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>
 	<!-- Specifico il charset -->
@@ -44,8 +44,10 @@
 				%%user
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
 				<fieldset>
+				<div class="searchwrapper">
 		 			<input  type="text" value="Cerca ricette e utenti" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
+				</div>
 				</fieldset>
 				</form>
 		</div>
@@ -81,8 +83,10 @@
 		<div id="searchwrapper">
 			<form id="search" action="../PHP/Ricerca.php" method="post">
 			<fieldset>
+			<div id="fakefieldset">
 				<input type="text" value="Cerca ricette e utenti" name="stringaCercata" />
 				<button class="button" name="cerca">Cerca</button>
+			</div>
 			</fieldset>
 			</form>
 		</div>
