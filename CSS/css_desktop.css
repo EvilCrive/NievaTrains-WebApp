@@ -985,6 +985,7 @@ cursor: pointer;
 }
 
 #valuta{
+  margin-top:0;
   margin-left: 10px;
   padding: 10px;
   text-align: center;
