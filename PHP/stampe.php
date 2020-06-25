@@ -32,7 +32,7 @@ function stampaHeaderRicerca($results,$stringa,$bool) {
 	else	$nrisultati=0;
 	$var='<div class="infoBox clear row">';
 	$var.= '<div class="ricercatext">';
-	if(!$stringa=="") {	
+	if(!$stringa=="") {
 		if($bool)	$var.= '	<h3>Risultato ricerca utenti: </h3>';
 		else	$var.= '	<h3>Risultato ricerca ricette:</h3>';
 		$var.= '	<p>"'.$stringa.'"</p> ';
@@ -86,14 +86,14 @@ function stampaRicette($results) {
 		$var.= '		</a>'."\n";
 		$var.= '	</div>'."\n";
 		$var.= '</div>'."\n";
-		if($contatore%4===0) { 
+		if($contatore%4===0) {
 			$var.= '</div>'."\n";
 			$var.= '<div class="rowconsigliate clear">'."\n";
 		}
 	$contatore++;
 	}
 	$var.= '</div>'."\n";
-	
+
 	return $var;
 }
 
@@ -122,7 +122,7 @@ function stampaPassoPasso($results){
 	return trasformaStringaInLista($stringa);
 }
 
-function stampaIngredienti($results) { 	
+function stampaIngredienti($results) {
 	$stringa=$results[0]["Ingredienti"];
 	return trasformaStringaInLista($stringa);
 }
@@ -184,7 +184,7 @@ function stampaFollowers($results) {
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
 	$var='';
-	for($i=0; $i<$nrisultati; $i++) { 
+	for($i=0; $i<$nrisultati; $i++) {
 		$var.= '<a href="Utente.php?Id_Utente='.$results[$i]["Id_Utente2"].'"><button class="button2">'.$results[$i]["Username"].'</button></a>'."\n";
 	}
 	return $var;
@@ -193,7 +193,7 @@ function stampaFollowers($results) {
 function stampaNomeCognomeUsernameBio($results) {
     $var= '	<h2>'.$results[0]["Nome"].' '.$results[0]["Cognome"].'</h2>';
     $var.= '	<p>@'.$results[0]["Username"].'</p>';
-	$var.= '		<p>'.$results[0]["Bio"].'</p>';	
+	$var.= '		<p>'.$results[0]["Bio"].'</p>';
 	return $var;
 }
 
@@ -216,7 +216,7 @@ function stampadeleteUtenti($results){
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
 	$var='';
-	for($i=0; $i<$nrisultati; $i++) { 
+	for($i=0; $i<$nrisultati; $i++) {
 		$var.= '<p class="onemidem">'.$results[$i]["Username"].'<a href="../PHP/Admin_panel.php?delete=1&name=utente&id='.$results[$i]["Id_Utente"].'" class="button3">X</a></p>'."\n";
 	}
 	$var.='<a href="../PHP/Admin_panel.php" class="button">TORNA INDIETRO</a>';
@@ -227,7 +227,7 @@ function stampadeleteCommenti($results){
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
 	$var='';
-	for($i=0; $i<$nrisultati; $i++) { 
+	for($i=0; $i<$nrisultati; $i++) {
 		$var.= '<div class="orangebord">';
 		$var.='<p class="onemidem">'.$results[$i]["Id_Commento"].")  ".$results[$i]["Testo"].'</p>';
 		$var.='<p class="oneem">Utente: '.$results[$i]["Username"].'</p><p>Data: '.$results[$i]["Data"].'</p>';
@@ -250,7 +250,7 @@ function trasformaStringaInLista($stringa){
 		else	$var.='<li>'.$element.'</li>';
   	}
 	$var.='</ul>';
-	return $var; 
+	return $var;
 }
 
 function stampaUsername($results) {
@@ -270,6 +270,3 @@ function stampaImmagineRicetta($results) {
 }
 
 ?>
-
-
-
