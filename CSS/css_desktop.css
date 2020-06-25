@@ -1,5 +1,6 @@
 a{
-	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
 #adminpanel{
@@ -256,6 +257,7 @@ body{
   margin: auto;
 }
 h2 {
+	margin-top:10px;
   margin-bottom: 20px;
 }
 #intro h2{
@@ -294,6 +296,7 @@ h4{
 	width: 100%;
   margin-top: 20px;
   margin-left:20px;
+  margin-bottom:20px;
   font-size: 1em;
 }
 .row p{
