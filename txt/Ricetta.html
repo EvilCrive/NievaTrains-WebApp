@@ -23,7 +23,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
 </head>
 <body>
 	<!--header-->
@@ -47,19 +47,21 @@
 				<a href="../PHP/Index.php"><img id="logo_head" class="logo_head_mobile" src="../immagini/logo.png" alt="logo orange tango"/></a>
 				%%user
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca ricette e utenti" name="stringaCercata" />
+				<fieldset>
+		 			<input aria-label="Cerca ricette e utenti" type="text" placeholder="Cerca ricette e utenti" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
+				<fieldset>
 				</form>
 			</div>
 				<!--seconda riga header-->
 		  <div id="hrow_2">
 				<ul id="menuList">
-					<li tabindex="1"><span xml:lang="en" lang="en"><a href="../PHP/Index.php" target="_top">Home</a></span></li>
-					<li tabindex="2"><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
-					<li tabindex="3"><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
-					<li tabindex="4"><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
-					<li tabindex="5"><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
-					<li tabindex="6" class="stayright"><span xml:lang="en" lang="en"><a href="../PHP/About.php" target="_top">About</a></span></li>
+					<li ><span xml:lang="en" lang="en"><a href="../PHP/Index.php" target="_top">Home</a></span></li>
+					<li ><a href="../PHP/Intermedia.php?Categoria=Antipasti" target="_top">Antipasti</a></li>
+					<li ><a href="../PHP/Intermedia.php?Categoria=Primi" target="_top">Primi</a></li>
+					<li ><a href="../PHP/Intermedia.php?Categoria=Secondi" target="_top">Secondi</a></li>
+					<li ><a href="../PHP/Intermedia.php?Categoria=Dolci" target="_top">Dolci</a></li>
+					<li class="stayright"><span xml:lang="en" lang="en"><a href="../PHP/About.php" target="_top">About</a></span></li>
 				</ul>
 			</div>
 		</div>
@@ -67,7 +69,7 @@
 		<div id="breadcrumb">
 			<ul>
 				<li>Ti trovi in: <span xml:lang="en" lang="en"><a href="../PHP/Index.php">Home</a></span> -&gt; %%Breadcrumb</li>
-				<li tabindex="7" class="stayright"><a href="#content">Vai al Contenuto</a></li>
+				<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
 			</ul>
 		</div>
 
@@ -79,7 +81,7 @@
 	<!--php Nome, Likes(voto), Preferiti-->
 		<h2 class="maintitle">%%Titolo</h2>
 		%%Voto
-		<div class="pref">%%Preferiti</div>
+		<div class="rats">%%Preferiti</div>
 	</div>
 	<div class="row clear">
 			<div class="col_sx">
@@ -119,17 +121,19 @@
 	<!--php commenti-->
 	%%Commenti
 		<li id="write-new">
-			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 			
-				<textarea rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
-				<textarea placeholder="Lascia un commento qui..." name="comment"></textarea>
+			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 	
+			<fieldset>			
+				<textarea aria-label="controllo login" rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input aria-label="inserisci commento" rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
+				<textarea aria-label="commento" placeholder="Lascia un commento qui..." name="comment"></textarea>
 					<div>
 						   <button type="submit">Invia</button>
 						   <p id="commentRequired" class="errors"></p>
    					</div>
+			<fieldset>
 			</form>
 		</li>
-		
+
 	</ul>
 </div><!--RICETTE CORRELATE -->
 

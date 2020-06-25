@@ -100,3 +100,39 @@
   display: block;
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 675px) {
+  #intro h2{
+    font-size: 1.8em;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .rating-box {
+    width: 100%;
+  }
+  .rating-box p{
+    font-size: 1.4em;
+    margin-left: 0;
+    padding-left: 5px;
+  }
+  .ratings{
+    width: 100%;
+    margin-left: 0;
+  }
+  .rating-box .ratings .fa{
+  font-size: 2.5em;
+  }
+  #valuta{
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .rats{
+    margin-left: 0px;
+  }
+  .rating-box .button1{
+    float: left;
+    padding-left: 5px;
+  }
+}
