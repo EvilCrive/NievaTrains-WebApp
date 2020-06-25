@@ -77,18 +77,20 @@
 		</div>
 	<div id="content">
 		<div id="boxwrapper">
-			<form method="post" action="../PHP/Admin_panel.php" name="adminform">
+			<form method="post" action="../PHP/Admin_panel.php" id="adminform">
+				<fieldset>
 				<div class="Box">
 					<h3><span xml:lang="en" lang="en">ADMIN Log In</span></h3>
-					<fieldset>
+					
 						<p class="onemidem"><span xml:lang="en" lang="en">User</span></p>
 						<input class="inputbar" type="text" name="user" id="user" value="User" />
 						<p class="onemidem">PIN</p>
 						<input class="inputbar" type="password" name="pin" id="pin" value="PIN" />
 						<input class="button" name="button" type="submit" value="Accedi" />	
 						%%erroriadminlogin
-					</fieldset>
+					
 				</div>
+				</fieldset>
 			</form>
 		</div>
 		

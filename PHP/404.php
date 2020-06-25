@@ -6,11 +6,9 @@ session_start();
 $connessione=new DBAccess();
 try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
-
 	//file html	
 	$finale = file_get_contents("../txt/404.html");
 	//sidemenu user
-
 	if(isset($_SESSION['login'])){
 		$divusermenu='<div id="myUserSideNav" class="sidenav"><a href="javascript:void(0)" class="closebtn" onclick="closeUserNav()">&times;</a><ul><li><a href="../PHP/userManage.php?request=1">Profilo</a></li><li><a href="../PHP/userManage.php?request=2">Logout</a></li></ul></div>';
 	}else	$divusermenu="";

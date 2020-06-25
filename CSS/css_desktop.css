@@ -1,30 +1,3 @@
-a{
-	padding-top: 5px;
-	padding-bottom: 10px;
-}
-
-#adminpanel{
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-  max-width: 700px;
-  min-width: 360px;
-  margin: 0 auto;
-  border: 5px solid rgb(246,173,123);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #fff;
-  padding: 30px;
-}
-#hamburger, #user_logo{
-cursor: pointer;
-}
-
-#adminpanel p{
-  padding: 15px 0px;
-}
-#adminpanel li{
-  list-style-type: none;
-}
 /*GENERALE*/
 
 * {
@@ -50,6 +23,37 @@ body{
   clear: both;
   display: table;
 }
+
+a{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+#adminpanel{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  max-width: 700px;
+  min-width: 360px;
+  margin: 0 auto;
+  border: 5px solid rgb(246,173,123);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fff;
+  padding: 30px;
+}
+
+#hamburger, #user_logo{
+  cursor: pointer;
+}
+
+#adminpanel p{
+  padding: 15px 0px;
+}
+
+#adminpanel li{
+  list-style-type: none;
+}
+
 /*HEADER*/
 #hrow_1{
   z-index: 1;
@@ -59,7 +63,6 @@ body{
   max-width: 1800px;
   height: 70px;
   border-bottom: 5px solid #f6ad7b;
-
 }
 #hamburger{
   display: inline-block;
@@ -68,13 +71,16 @@ body{
   margin-left: 0.5em;
   max-width: 50px;
 }
+
 /*dropdownmenu*/
 #mySidenav{
   left: 0;
 }
+
 #myUserSideNav{
   right: 0;
 }
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -86,6 +92,7 @@ body{
   transition: 0.5s;
   padding-top: 40px;
 }
+
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -94,12 +101,15 @@ body{
   display: block;
   transition: 0.3s;
 }
+
 .sidenav a:hover {
   color: rgba(246,173,123,1);
 }
+
 .sidenav li:hover {
   border-left: 3px solid rgba(246,173,123,1);
 }
+
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -107,11 +117,13 @@ body{
   font-size: 36px;
   margin-left: 50px;
 }
+
 /*fine dropdown*/
 #logo_head{
   height: 50px;
   margin-bottom: 5px;
 }
+
 #user_logo{
   display: block;
   float: right;
@@ -120,11 +132,13 @@ body{
   margin-top: 10px;
   max-width: 35px;
 }
+
 .topnav{
   display: block;
   float: right;
   padding-top: 0px;
 }
+
 .button{
   background-color: white;
   border: 2px solid #f6ad7b;
@@ -139,9 +153,11 @@ body{
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
 .button:hover{
   background-color: #f6ad7b
 }
+
 .topnav input[type=text] {
   padding: 9px;
   margin-bottom: 0px;
@@ -151,18 +167,22 @@ body{
   border-bottom: none;
   border-right: 1px solid #ccc;
 }
+
 #hrow_2{
   padding-top:70px;
 }
+
 #menuList {
     list-style-type: none;
     overflow: hidden;
     background-color: #f6ad7b;
 }
+
 #menuList li {
     float: left;
 
 }
+
 #menuList li a {
     display: inline-block;
     color: black;
@@ -172,6 +192,7 @@ body{
     font-weight: bolder;
 
 }
+
 #menuList li a:hover {
 	background-color: #fff;
 	border-bottom-style: solid;
@@ -179,18 +200,21 @@ body{
 	border-radius: 4px;
 	border-color: rgba(246,173,123);
 	transition-duration: 0.1s;
-
 }
+
 #menuList li.stayright{
   float: right;
 }
+
 #breadcrumb ul{
   background-color: rgba(246,173,123,0.4);
   list-style-type: none;
 }
+
 #breadcrumb li.stayright{
   float: right;
 }
+
 #breadcrumb li {
   display: inline-block;
   color: black;
@@ -198,17 +222,19 @@ body{
   padding: 5px;
   text-decoration: none;
 }
+
 /*FOOTER*/
 #logo_freccia{
   height: 30px;
   width: auto;
   padding: 8px;
-  border: 4px solid rgba(246,173,123,0.4);
+  border: 4px solid black;
   border-radius: 10px;
   bottom: 2em;
   right: 2em;
   position: fixed;
 }
+
 #footer{
   overflow: hidden;
   padding-bottom: 15px;
@@ -220,6 +246,7 @@ body{
   max-width: 1800px;
   margin-top: 200px;
 }
+
 #LogoFooter{
   float: left;
   overflow: hidden;
@@ -228,14 +255,17 @@ body{
   margin-left: 10px;
   display: block;
 }
+
 #footer ul{
   display: inline-block;
   list-style: none;
   text-align: center;
 }
+
 #footer ul li{
   margin: 5px;
 }
+
 #validity{
   float: right;
   width: 250px;
@@ -252,14 +282,17 @@ body{
   color:#000!important;
   background-color: #f6f5f3!important;/*#f1f1f1!important*/;
 }
+
 #intro{
   /*max-*/width: 100%;
   margin: auto;
 }
+
 h2 {
 	margin-top:10px;
   margin-bottom: 20px;
 }
+
 #intro h2{
   padding: 10px;
   font-size: 2em;
@@ -273,6 +306,7 @@ h2 {
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   border-left: 4px solid rgba(246,173,123,1);
 }
+
 /*paragrafi*/
 .row{
   width: 100%;
@@ -286,6 +320,7 @@ h2 {
   border-right: 4px solid rgba(246,173,123,1);
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
+
 h3{
 	width: 100%;
   margin-left:20px;
@@ -299,9 +334,11 @@ h4{
   margin-bottom:20px;
   font-size: 1em;
 }
+
 .row p{
   padding: 20px;
 }
+
 .row ul{
   list-style-type: none;
   margin-left: 20px;
@@ -311,9 +348,11 @@ h4{
 .row li{
   padding: 2px;
 }
+
 i{
     word-wrap: break-word;
 }
+
 .grassetto{
   font-weight: bold;
 }
@@ -326,41 +365,50 @@ i{
 	display: flex;
   	flex-wrap: wrap;
 }
+
 .gallery {
   /*border: 1px solid #ccc;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .gallery:hover {
  	box-shadow: 0 4px 8px 0 rgba(246,173,123,0.8), 0 6px 20px 0 rgba(246,173,123,1);
 }
+
 .gallery a{
   background-color: #fff;
 }
+
 .gallery img {
   width: 100%;
   height: auto;
 }
+
 .desc {
   padding: 15px;
   text-align: center;
   background-color: #fff;
 }
+
 .responsive {
   padding: 10px 10px;
   float: left;
   width: 25%;
 }
+
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
     margin: 6px 0;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
   }
 }
+
 /*ricetta*/
 .button1 {
   max-width: 20%;
@@ -375,47 +423,57 @@ i{
   cursor: pointer;
   float: right;
 }
+
 .button1:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: rgba(56,52,40,0.8);
   color:white;
 }
+
 .likes {
    margin-left: 20px;
 }
+
 .col_sx{
   float: left;
   width: 30%;
   min-width: 100px;
 }
+
 .col_dx{
   width: 70%;
   min-width: 240px;
 }
+
 .col_dx ul {
   list-style-type: none;
   overflow: hidden;
   margin: 20px;
   list-style-position: inside;
 }
+
 .col_dx ul li {
 	display: block;
   padding: 5px;
   font-size: 1.2em;
 }
+
 .col_sx ul {
   margin:20px;
   padding-left: 30px;
 }
+
 .col_sx ul li {
   padding: 5px;
   font-size: 1.2em;
 }
+
 #img_ricetta{
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 textarea {
   width: 100%;
   height: 100px;
@@ -430,9 +488,11 @@ textarea {
   transition: 0.5s;
   outline: none;
 }
+
 textarea:focus{
   border: 3px solid rgba(246,173,123,1);
 }
+
 /*ricerca*/
 .infoBox{
   padding: 15px;
@@ -443,11 +503,13 @@ textarea:focus{
   margin-top: 20px;
   font-size: 1.5em;
 }
+
 .ricercatext p{
   vertical-align: top;
   font-size: 1.3em;
   padding-left: 1em;
 }
+
 .nrisultati p{
 	font-size: 0.8em;
 
@@ -460,10 +522,12 @@ textarea:focus{
   width: 950px;
   margin: 20px auto;
 }
+
 #ricettaGiorno img{
   height: 600px;
   width: auto;
 }
+
 #textGiorno{
   position: absolute;
   font-size: 150%;
@@ -472,11 +536,13 @@ textarea:focus{
   /*margin: 0 auto;*/
   margin-left: 20%;
 }
+
 #textGiorno h2, #textGiorno p{
   padding: 10px 20px;
   margin: 7px;
   background-color: rgba(0,0,0,0.7);
 }
+
 #search {
 display: flex;
   width: 80%;
@@ -485,6 +551,7 @@ display: flex;
   height: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #search input[type="text"] {
   flex-grow: 1;
   border-left: 3px solid #f6ad7b;
@@ -524,13 +591,16 @@ display: flex;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .funzionalitaBox:hover{
   color: white;
   background-color: #444;
 }
+
 .funzionalitaBox p{
   margin-top: 10%;
 }
+
 /*registrazione*/
 #imga, #imgb, #imgc {
   width: 50px;
@@ -542,9 +612,11 @@ display: flex;
   margin-left: 0px;
   font-size: 2em;
 }
+
 #boxwrapper p{
   padding: 15px 0px;
 }
+
 #boxwrapper{
   display: flex;
   justify-content: center;
@@ -557,6 +629,7 @@ display: flex;
   background-color: #fff;
   padding: 30px;
 }
+
 .Box{
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -581,6 +654,7 @@ display: flex;
 .Box input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
+
 .Box input[type=text]{
   border:none;
   border-bottom: 2px solid #adadad;
@@ -594,6 +668,7 @@ display: flex;
 .Box input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
+
 .Box input[type=password]{
   border:none;
   border-bottom: 2px solid #adadad;
@@ -607,9 +682,11 @@ display: flex;
 .Box input[type=password]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
+
 .button{
   margin-top: 15px;
 }
+
 .errors{
 	text-align: center;
 	color: red;
@@ -627,17 +704,20 @@ display: flex;
   padding: 20px;
   background-color: #fff;
 }
+
 .leftcolumn {
   float: left;
   width: 30%;
   background-color: #fff;
 }
+
 .rightcolumn {
   float: left;
   width: 70%;
   background-color: #fff;
   padding-left: 20px;
 }
+
 .userImg{
   display: block;
   margin-left: auto;
@@ -648,6 +728,7 @@ display: flex;
   padding: 20px;
   /* border: 2px solid black; */
 }
+
 .button2 {
   width: 100%;
   background-color: rgba(246,173,123,1);
@@ -663,9 +744,11 @@ display: flex;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
+
 .button2:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 .button3{
   float: right;
   margin: 0em;
@@ -684,7 +767,6 @@ display: flex;
   cursor: pointer;
 }
 
-
 .card {
   background-color: white;
   padding: 20px;
@@ -694,6 +776,7 @@ display: flex;
 #bio{
   height: 300px;
 }
+
 /*modifiche*/
 .smallFont{
   list-style-type: none;
@@ -708,6 +791,7 @@ display: flex;
     margin-top: 20px;
     padding: 10px;
 }
+
 .comment{
     display: flex;
     border-radius: 3px;
@@ -716,6 +800,7 @@ display: flex;
     flex-wrap: wrap;
 	color:  #505050;
 }
+
 .data{
   font-size: 0.75em;
 }
@@ -725,6 +810,7 @@ display: flex;
     width: auto;
 	order: 3;
 }
+
 .comment .info a{	/* User name */
     display: block;
     text-decoration: none;
@@ -744,11 +830,13 @@ display: flex;
     position: relative;
     word-wrap: break-word;
 }
+
 .comment p{
     order: 1;
     background-color:  rgba(246,173,123,0.2);
 	border-left: 3px solid rgba(246,173,123,1);
 }
+
 .comment p:after{
     width: 12px;
     height: 12px;
@@ -760,16 +848,18 @@ display: flex;
 .orangebord{
   border-top: 1px solid orange;
 }
+
 .oneem{
   font-size: 1em;
 }
+
 .onemidem{
   font-size: 1.5em;
 }
+
 .onetrequarteem{
   font-size: 1.75em;
 }
-
 /* Comment form */
 
 #write-new{
@@ -777,6 +867,7 @@ display: flex;
     width: 90%;
     height: 200px;;
 }
+
 #write-new textarea{
     color:  #444;
     font: inherit;
@@ -790,17 +881,13 @@ display: flex;
     min-height: 80px;
     padding: 15px 20px;
 }
+
 #write-new textarea:focus{
     border: 3px solid rgba(246,173,123,1);
 }
+
 #write-new button{
     float:right;
-    background-color:  rgba(246,173,123,1);
-    box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 2px;
-    border: 0;
-    color: #505050;
-    font-weight: bold;
     cursor: pointer;
     padding: 10px 25px;
     margin-top: 18px;
@@ -869,27 +956,24 @@ display: flex;
 	width: 50px;
 }
 
-
-
-
-
 /* voti */
-
 .rating-box{
   display: block;
   float: right;
 }
+
 .ratings{
   width: auto;
   height: auto;
   float: left;
 }
+
 .rating-box .ratings .fa{
 font-size: 2.5em;
 color: orange;
 cursor: pointer;
-
 }
+
 .rate{
   list-style: none;
   float: left;
@@ -901,9 +985,10 @@ cursor: pointer;
 }
 
 #valuta{
-  margin-left: 30px;
+  margin-left: 10px;
   padding: 10px;
   text-align: center;
+  float:right;
 }
 
 .rating-box p{
@@ -918,12 +1003,15 @@ cursor: pointer;
   font-size: 2em;
   cursor: pointer;
 }
+
 #selected{
   color: orange;
 }
+
 #unselected{
   color: black;
 }
+
 .pref p{
   padding: 10px;
   font-size: 1.5em;
@@ -940,6 +1028,7 @@ fieldset{
   min-width: 0;
   width: 100%;
 }
+
 #fakefieldset{
 		display: flex;
 	flex-wrap: nowrap;
