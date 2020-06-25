@@ -849,7 +849,10 @@ display: flex;
 }
 
 .infoRic{
-	color: #ec7421;;
+	color: black;
+	background-color: rgba(246,173,123,0.2);
+	border-left: 4px solid #f6ad7b;
+	padding-left: 10px;
 }
 
 #imga{
@@ -926,13 +929,12 @@ cursor: pointer;
   float: left;
 }
 
-
-/*fieldset{
+fieldset{
 	border: 0;
   padding: 0;
   margin: 0;
   min-width: 0;
-}*/
+}
 
 .hidden{
 	display: none;
