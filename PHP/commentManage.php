@@ -13,7 +13,7 @@ try{
       $query = "DELETE FROM commento WHERE Id_Commento='$comm';";
       $connessione->exeQuery($query);
       $idricetta=$_POST['idricetta'];
-      header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta");
+      header("refresh:0; url=../PHP/Ricetta.php?Id_Ricetta=$idricetta#commentreturn");
     }
   }else{
     if(!isset($_SESSION['login'])){

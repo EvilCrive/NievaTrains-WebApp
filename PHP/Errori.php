@@ -40,12 +40,8 @@ try{
 	}
 	$finale=str_replace("%%user",$ref,$finale);
 	$finale=str_replace("%%utente",$divusermenu,$finale);
-	//sostituzioni:
-	// %%Ricette(correlate)
 	//echo dell'html finale
-    
     echo $finale;
-
 }catch(Exception $eccezione){
     echo $eccezione;
 }

@@ -34,8 +34,7 @@ try{
 		$finale=str_replace("%%user",$ref,$finale);
 		$finale=str_replace("%%utente",$divusermenu,$finale);
 		//sostituzioni:
-		// %%Ricette(correlate)
-			$finale=str_replace("%%Ricette",stampaRicette($consigliate),$finale);
+		$finale=str_replace("%%Ricette",stampaRicette($consigliate),$finale);
 
 		//echo dell'html finale
 			echo $finale;
