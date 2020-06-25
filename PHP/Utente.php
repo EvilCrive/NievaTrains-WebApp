@@ -40,7 +40,6 @@ try{
 		}
 		$finale=str_replace("%%user",$ref,$finale);
 		$finale=str_replace("%%utente",$divusermenu,$finale);
-		//sostituzioni:
 		$finale=str_replace("%%Nome",stampaUsername($utente),$finale); 
 		$finale=str_replace("%%Immagine",stampaImmagineUtente($utente),$finale);
 		if(isset($_SESSION['login'])){

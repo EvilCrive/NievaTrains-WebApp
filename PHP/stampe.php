@@ -168,7 +168,7 @@ function stampaVoto($results,$voto,$ricetta) {
 	$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post" onsubmit="return Alertunlogged()">';
 	if($voto[0]["ROUND(AVG(Voto),1)"])	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
 	$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><fieldset><input name="voto" id="rating-value" class="hidden" />';
-	$var.=	'<input name="ricetta" class="hidden" value="'.$ricetta.'" /><button id="valuta" class="button1"> Valuta </button></fieldset></form>';
+	$var.=	'<input name="ricetta" class="hidden" value="'.$ricetta.'" /><button id="valuta" class="button"> Valuta </button></fieldset></form>';
 	return $var;
 }
 
