@@ -33,7 +33,7 @@ try{
 		$controlquery="SELECT Username,Mail from utente WHERE Mail='$email' OR Username='$username';";
 		if($connessione->getQuery($controlquery)){
 			//controllo per utenti gia' iscritti	
-			header("refresh:0; url=../PHP/Registrazione.php#errors");
+			header("refresh:0; url=../PHP/Registrazione.php#error");
 			$_SESSION['fail']="Questo utente e' gia' registrato.";
 		}else{
 			if(!$errors) {	
@@ -59,9 +59,9 @@ try{
 				$_SESSION['login'] = true;
 				$_SESSION['justlogged']=true;
 				$_SESSION['fail']="";
-				header( "refresh:0; url=../PHP/Registrazione.php#errors" ); 	
+				header( "refresh:0; url=../PHP/Registrazione.php#error" ); 	
 			}else{
-				header("refresh:0; url=../PHP/Registrazione.php#errors");
+				header("refresh:0; url=../PHP/Registrazione.php#error");
 				$_SESSION['fail']="Ci sono stati errori, che sono sfuggiti ai controlli client side.(qualche campo non e' valido): "."\n";
 				$_SESSION['fail'].=$errors;
 			}
@@ -71,7 +71,7 @@ try{
 		$query = "SELECT* from utente WHERE Mail='$email' AND Password='$password';";
 		$r=$connessione->getQuery($query);
 		if(!$r){
-			header("refresh:0; url=./Registrazione.php#errors");
+			header("refresh:0; url=./Registrazione.php#error");
 			$_SESSION['fail']="Email o Password sbagliati.";
 			$_SESSION['errors']=$errors;
 		}else{
@@ -89,7 +89,7 @@ try{
 			$_SESSION['login'] = true;
 			$_SESSION['justlogged']=true;
 			$_SESSION['fail']="";
-			header("refresh:0; url=./Registrazione.php#errors");
+			header("refresh:0; url=./Registrazione.php#error");
 		}
 	}		
 	$connessione->closeConnection();
