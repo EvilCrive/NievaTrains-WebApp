@@ -20,12 +20,3 @@ function Alertunlogged(){
     return false;
   }
 }
-
-function editDelete(num){
-  var nome="editdeletecomment"+num;
-  if(document.getElementById(nome).hidden==true){
-    document.getElementById(nome).hidden=false;
-  }else{
-    document.getElementById(nome).hidden=true;
-  }
-}
