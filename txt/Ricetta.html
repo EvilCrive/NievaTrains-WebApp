@@ -23,7 +23,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
 </head>
 <body>
 	<!--header-->
@@ -47,8 +47,10 @@
 				<a href="../PHP/Index.php"><img id="logo_head" class="logo_head_mobile" src="../immagini/logo.png" alt="logo orange tango"/></a>
 				%%user
 				<form class="topnav" action="../PHP/Ricerca.php" method="post">
-		 			<input type="text" placeholder="Cerca ricette e utenti" name="stringaCercata" />
+				<fieldset>
+		 			<input aria-label="Cerca ricette e utenti" type="text" placeholder="Cerca ricette e utenti" name="stringaCercata" />
 					<button class="button" name="cerca">Cerca</button>
+				<fieldset>
 				</form>
 			</div>
 				<!--seconda riga header-->
@@ -119,14 +121,16 @@
 	<!--php commenti-->
 	%%Commenti
 		<li id="write-new">
-			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 			
-				<textarea rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
-				<textarea placeholder="Lascia un commento qui..." name="comment"></textarea>
+			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()"> 	
+			<fieldset>			
+				<textarea aria-label="controllo login" rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input aria-label="inserisci commento" rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
+				<textarea aria-label="commento" placeholder="Lascia un commento qui..." name="comment"></textarea>
 					<div>
 						   <button type="submit">Invia</button>
 						   <p id="commentRequired" class="errors"></p>
    					</div>
+			<fieldset>
 			</form>
 		</li>
 		

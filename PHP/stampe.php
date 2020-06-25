@@ -141,7 +141,7 @@ function stampaCommenti($results) {
 		if(isset($_SESSION['login'])){
 			if($_SESSION['login']){
 				if($_SESSION['id']===$results[$i]["Id_Utente"]){
-					$var.= '<form action="commentManage.php" method="post" class="eliminacommenti"><input type="submit" name="button" class="button" value="Elimina" /><input name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" type="hidden" /><input name="idcommento" value="'.$results[$i]["Id_Commento"].'" type="hidden" /></form>';
+					$var.= '<form action="commentManage.php" method="post" class="eliminacommenti"><fieldset><input aria-label="Elimina commento" type="submit" name="button" class="button" value="Elimina" /><input aria-label="ricetta" name="idricetta" value="'.$results[$i]["Id_Ricetta"].'" type="hidden" /><input aria-label="commento" name="idcommento" value="'.$results[$i]["Id_Commento"].'" type="hidden" /><fieldset></form>';
 				}
 			}
 		}
@@ -165,8 +165,8 @@ function stampaInfoBox($testo){
 function stampaVoto($results,$voto,$ricetta) {
 	$var= '	<form action="../PHP/preferitiManage.php" class="rating-box" method="post" onsubmit="return Alertunlogged()">';
 	if($voto[0]["ROUND(AVG(Voto),1)"])	$var.=' <p>Voto Medio : '.$voto[0]["ROUND(AVG(Voto),1)"].'/ 5 </p>';
-	$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input name="voto" id="rating-value" type="hidden" />';
-	$var.=	'<input name="ricetta" type="hidden" value="'.$ricetta.'" /><button id="valuta" class="button1"> Valuta </button></form>';
+	$var.=	'<ul class="ratings"><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li><li class="fa fa-star-o"></li></ul><input aria-label="voto" name="voto" id="rating-value" type="hidden" />';
+	$var.=	'<input aria-label="ricetta" name="ricetta" type="hidden" value="'.$ricetta.'" /><button id="valuta" class="button1"> Valuta </button></form>';
 	return $var;
 }
 
@@ -198,15 +198,15 @@ function stampaNomeCognomeUsernameBio($results) {
 }
 
 function stampaEditbio(){
-	return '<form action="../PHP/userManage.php" id="editbioform" method="post"><textarea name="bio" /></textarea><button class="button">Modifica BIO</button></form>';
+	return '<form action="../PHP/userManage.php" id="editbioform" method="post"><textarea aria-label="modifica bio" name="bio" /></textarea><button class="button">Modifica BIO</button></form>';
 }
 
 function stampafollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input type="hidden" name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input aria-label="segui utente" type="hidden" name="follow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Follow</button></span></form>';
 }
 
 function stampaunfollow($user){
-	return '<form action="../PHP/userManage.php" method="post"><input type="hidden" name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Unfollow</button></span></form>';
+	return '<form action="../PHP/userManage.php" method="post"><input aria-label="smetti di seguire utente" type="hidden" name="unfollow" value="'.$user.'"></input><button class="button" name="submit"><span xml:lang="en" lang="en">Unfollow</button></span></form>';
 }
 
 
