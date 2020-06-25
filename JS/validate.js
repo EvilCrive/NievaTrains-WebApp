@@ -2,16 +2,13 @@ function ValidateLogIn(){
   var mail=document.forms["loginform"]["email"];
   var errore_mail="";
   //controllo mail
-  var mail=document.forms["loginform"]["email"];
-  var errore_mail="";
   if(!validateEmail(mail.value)){
     errore_mail="L'e-mail non e' valida."
   }else{
     errore_mail="";
   }
   document.getElementById("error_mail_login").textContent=errore_mail;
-  document.getElementById("error_mail_login").style.color="red";
-  document.getElementById("error_mail_login").hidden=false;
+  document.getElementById("error_mail_login").classList.add("errors");
 
   if(errore_mail==""){
     return true;
@@ -21,7 +18,6 @@ function ValidateLogIn(){
 
 
 function ValidateSignUp(){
-
   //controllo mail
   var mail=document.forms["signupform"]["email"];
   var errore_mail="";
@@ -31,8 +27,7 @@ function ValidateSignUp(){
     errore_mail="";
   }
   document.getElementById("error_mail_signup").textContent=errore_mail;
-  document.getElementById("error_mail_signup").style.color="red";
-  document.getElementById("error_mail_signup").hidden=false;
+  document.getElementById("error_mail_signup").classList.add("errors");
 
   //controllo nome
   var name=document.forms["signupform"]["Nome"];
@@ -47,8 +42,7 @@ function ValidateSignUp(){
     error_name="Il nome e' troppo lungo.";
   }
   document.getElementById("error_name").textContent=error_name;
-  document.getElementById("error_name").style.color="red";
-  document.getElementById("error_name").hidden=false;
+  document.getElementById("error_name").classList.add("errors");
 
   //controllo cognome
   var surname=document.forms["signupform"]["Cognome"];
@@ -63,8 +57,7 @@ function ValidateSignUp(){
     error_surname="Il cognome e' troppo lungo.";
   }
   document.getElementById("error_surname").textContent=error_surname;
-  document.getElementById("error_surname").style.color="red";
-  document.getElementById("error_surname").hidden=false;
+  document.getElementById("error_surname").classList.add("errors");
 
   //controllo username
   var username=document.forms["signupform"]["Username"];
@@ -79,8 +72,7 @@ function ValidateSignUp(){
     error_username="L'username e' troppo lungo.";
   }
   document.getElementById("error_username").textContent=error_username;
-  document.getElementById("error_username").style.color="red";
-  document.getElementById("error_username").hidden=false;
+  document.getElementById("error_username").classList.add("errors");
 
   //controllo password
   var password=document.forms["signupform"]["password"];
@@ -95,8 +87,7 @@ function ValidateSignUp(){
     errore_password="La password e' troppo lunga.";
   }
   document.getElementById("error_password_signup").textContent=errore_password;
-  document.getElementById("error_password_signup").style.color="red";
-  document.getElementById("error_password_signup").hidden=false;
+  document.getElementById("error_password_signup").classList.add("errors");
   
   //controllo conferma password
   var errore_confirmpassword="";
@@ -104,8 +95,7 @@ function ValidateSignUp(){
     errore_confirmpassword="Le password sono diverse!";
   }
   document.getElementById("error_confirmpassword").textContent=errore_confirmpassword;
-  document.getElementById("error_confirmpassword").style.color="red";
-  document.getElementById("error_confirmpassword").hidden=false;
+  document.getElementById("error_confirmpassword").classList.add("errors");
   
   //controllo finale
   if(errore_mail==="" && error_name==="" && error_surname==="" && error_username==="" && errore_password==="" && errore_confirmpassword===""){

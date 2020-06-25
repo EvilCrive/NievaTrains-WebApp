@@ -17,7 +17,7 @@ try{
     }
   }else{
     if(!isset($_SESSION['login'])){
-    echo "non sei loggato";
+    //echo "non sei loggato";
     }else{
      $commento=$_POST['comment'];
       $idutente=$_SESSION['id'];
