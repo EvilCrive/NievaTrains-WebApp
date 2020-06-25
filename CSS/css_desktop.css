@@ -606,12 +606,9 @@ display: flex;
 .button{
   margin-top: 15px;
 }
-#errors p{
+.errors{
 	text-align: center;
 	color: red;
-}
-.errors{
-  color: red;
 }
 
 .selected{
