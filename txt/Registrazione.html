@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>
 	<!-- Specifico il charset -->
@@ -77,7 +77,7 @@
 		<div id="boxwrapper">
 		<form method="post" action="../PHP/form.php" onsubmit="return ValidateLogIn()" id="loginform">
 			<div class="Box">
-			<fieldset>
+			
 				<h3><span xml:lang="en" lang="en">Log In</span></h3>
 					<p><span xml:lang="en" lang="en">Email</span></p>
 					<input  class="inputbar email" type="text" name="email" value="Email Address" />
@@ -86,8 +86,9 @@
 					<input class="inputbar password" type="password" name="password" value="Password" />
 					<div id="error_password_login" class="hidden"></div>
 					<input class="button" name="button" type="submit" value="Accedi" />	
-			</fieldset>
+			
 			</div>
+			</fieldset>
 		</form>
 		<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()" id="signupform">
 			<fieldset>
@@ -115,7 +116,8 @@
 					<p id="imgscelta">Hai scelto l'immagine:</p>
 					<textarea rows="5" cols="300" name ="selectimg" class="hidden"></textarea>
 					<input type="submit" name="button" class="button" id="proc" value="Registrati" />
-				</div>
+					
+			</div>
 			</fieldset>
 		</form>
 		<div id="errors"><p>%b</p></div> <!--errori lato server -->
