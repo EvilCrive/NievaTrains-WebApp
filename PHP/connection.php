@@ -19,29 +19,28 @@ class DBAccess{
 		if ($this->connection) mysqli_close($this->connection);
     }
 	
-	public function getQuery($query) {
-		$result =$this->connection->query($query);
-        if(!$result) {
-            throw new Exception("errore getquery");
-        }
-        $lista_return = [];
-        if($result->num_rows > 0) {
-          while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-              array_push($lista_return,$row);
-            }
-            return $lista_return;
-        }
-        else
-            return null;
-    }
-	public function exeQuery($query) {
+	public function getQuery($query){
+		try{
+			$result =$this->connection->query($query);
+        	if(!$result)	throw new Exception("errore getquery");
+        	$lista_return = [];
+        	if($result->num_rows > 0) {
+				while($row = $result->fetch_array(MYSQLI_ASSOC)){	
+					array_push($lista_return,$row);
+				}
+        		return $lista_return;
+        	}else{
+				return null;
+			}
+		}catch(Exception $e){echo $e;}
+	}
+
+	public function exeQuery($query){
 		try{
 			$result=$this->connection->query($query);
 			if(!$result) throw new Exception("errore executeQuery");
-		}
-		catch(Exception $e){
-		}		
-	}
+		}catch(Exception $e){echo $e;}		
+	}	
 }
 
 ?>

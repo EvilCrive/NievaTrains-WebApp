@@ -1,7 +1,7 @@
 <?php
 require_once "connection.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 $username=$_POST['Username'];
 $password=$_POST['Password'];
 $nome=$_POST['Nome'];
@@ -18,10 +18,10 @@ echo $username," ", $password, " ", $nome, " ", $cognome, " ", $email;
 			$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password) VALUES('$nome','$cognome','$username','$email','$password');";
 			
 
-			$ConnessioneAttiva->exeQuery($query);
+			$connessione->exeQuery($query);
 			echo "Fantastico!","La tua iscrizione è avvenuta con successo. Tra qualche secondo ti mando alla Home.";
 			session_start();
-			$_SESSION['id'] = $ConnessioneAttiva->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
+			$_SESSION['id'] = $connessione->getQuery("SELECT Id_Utente AS ID from utente WHERE Mail='$email'")[0]['ID'];
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome'] = $cognome;
 			$_SESSION['email'] = $email;

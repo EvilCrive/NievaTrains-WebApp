@@ -16,13 +16,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" type="image/x-icon" href="../immagini/favicon.ico" />
 	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="screen and (max-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js" type="text/javascript"></script>
 	<script src="../JS/comment.js" type="text/javascript"></script>
 	<script src="../JS/voto.js" type="text/javascript"></script>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->
@@ -78,7 +79,7 @@
 	<!--php Nome, Likes(voto), Preferiti-->
 		<h2 class="maintitle">%%Titolo</h2>
 		%%Voto
-		<div class="rats">%%Preferiti</div>
+		<div class="pref">%%Preferiti</div>
 	</div>
 	<div class="row clear">
 			<div class="col_sx">
@@ -105,7 +106,7 @@
 				%%PassoPasso
 			</div>
 	</div>
-	<div class="row">
+	<div class="row" id="ricettaestesa">
 		<h3> Ricetta Estesa </h3>
 		<p>%%RicettaEstesa</p>
 	</div>
@@ -117,10 +118,10 @@
 	<ul class="comment-section" id="commentreturn">
 	<!--php commenti-->
 	%%Commenti
-		<li class="write-new" >
+		<li id="write-new">
 			<form name="commentform" action="../PHP/commentManage.php" method="post" onsubmit="return ValidateComment()">
-				<textarea rows="auto" cols="auto" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input rows="auto" cols="auto" name="idricetta" value="%%idricetta" type="hidden"/>
+				<textarea rows="5" cols="300" id="controlLogged" hidden="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input rows="5" cols="300" name="idricetta" value="%%idricetta" type="hidden"/>
 				<textarea placeholder="Lascia un commento qui..." name="comment"></textarea>
 					<div>
 						   <button type="submit">Invia</button>
@@ -132,7 +133,7 @@
 	</ul>
 </div><!--RICETTE CORRELATE -->
 
-	<h3>Ricette della stessa categoria :</h3>
+	<h3 id="ricettasamecategoria">Ricette della stessa categoria :</h3>
 	%%Ricette
 
 </div>
@@ -155,7 +156,7 @@
 			<div id="validity">
 				<img id="htmlvalid" src="../immagini/valid-xhtml10.png" alt="HTML valido" />
 				<img id="cssvalid" src="../immagini/vcss-blue.gif" alt="CSS3 valido" />
-				<p><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
+				<p id="entrataAdminpanel"><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
 			</div>
 		</div>
 </body>

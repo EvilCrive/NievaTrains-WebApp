@@ -6,6 +6,7 @@ session_start();
 $connessione=new DBAccess();
 try{
 	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	// $bool serve per selezionare l'html da prendere
 	$bool=1;
 	
 	//quando admin e' loggato
@@ -41,7 +42,7 @@ try{
 				$bool=0;
 				if(!isset($_GET['id']))		header( "refresh:0; url=../PHP/Index.php" );
 				if(!isset($_GET['name']))	header( "refresh:0; url=../PHP/Index.php" );
-				$elimina='<a href="../PHP/Admin_panel.php?delete=2&name='.$_GET['name'].'&id='.$_GET['id'].'"><button class=button>ELIMINA</button></a>';
+				$elimina='<a href="../PHP/Admin_panel.php?delete=2&name='.$_GET['name'].'&id='.$_GET['id'].'"class=button>ELIMINA</a>';
 				$elimina.='<a href="../PHP/Admin_panel.php?operation=';
 
 				if($_GET['name']==="utente"){
@@ -54,7 +55,7 @@ try{
 					$var="il commento";
 					$elimina.=2;
 				}
-				$elimina.='"><button class="button">TORNA INDIETRO</button></a>';
+				$elimina.='" class="button">TORNA INDIETRO</a>';
 				$finale=str_replace("%%title","Elimina ".$var,$finale);
 				$finale=str_replace("%%eliminawhat",$elimina,$finale);
 
@@ -101,19 +102,23 @@ try{
 			session_destroy();
 			session_start();
 			$_SESSION['adminlogged']=true;
+		}else{
+			$finale = file_get_contents("../txt/admin_panel_login.html");
+			$finale=str_replace("%%erroriadminlogin",'<p class='.'"errors"'.'>LOGIN ERRATI</p>',$finale);
+			$bool=0;
 		}
 	}
 
 	//prima che l'admin provi a loggarsi
 	if($bool){
 		$finale = file_get_contents("../txt/admin_panel_login.html");
+		if(!isset($_SESSION['adminlogged'])){
+			$finale=str_replace("%%erroriadminlogin","",$finale);
+		}
 	}
 	//sidemenu user
-	$divusermenu="";
-	$ref="";
 	if(isset($_SESSION['login'])){
-		if($_SESSION['login'])	$divusermenu='<div id="myUserSideNav" class="sidenav"><a href="javascript:void(0)" class="closebtn" onclick="closeUserNav()">&times;</a><ul><li><a href="../PHP/userManage.php?request=1">Profilo</a></li><li><a href="../PHP/userManage.php?request=2">Logout</a></li></ul></div>';
-		else	$divusermenu="";
+		$divusermenu='<div id="myUserSideNav" class="sidenav"><a href="javascript:void(0)" class="closebtn" onclick="closeUserNav()">&times;</a><ul><li><a href="../PHP/userManage.php?request=1">Profilo</a></li><li><a href="../PHP/userManage.php?request=2">Logout</a></li></ul></div>';
 	}else{
 		$divusermenu="";
 	}
@@ -121,7 +126,6 @@ try{
 		$ref='<a href="Registrazione.php"><img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/></a>';
 	}else{
 		$ref='<img id="user_logo" src="../immagini/account.png" alt="user logo" onclick="openUserNav()"/>';
-		
 	}
 
 	$finale=str_replace("%%user",$ref,$finale);
@@ -131,6 +135,6 @@ try{
 	echo $finale;
 }catch(Exception $eccezione){
 	echo $eccezione;
-	$connessione->closeConnection();
 }
+$connessione->closeConnection();
 ?>

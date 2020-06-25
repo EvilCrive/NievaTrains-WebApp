@@ -1,8 +1,8 @@
 <?php
 require_once "connection.php";
 require_once "stampe.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -23,9 +23,10 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	 
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="handheld,screen and (max-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->
@@ -97,7 +98,7 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 	    </div>
 			<h3>Ricette:</h3>
 			<?php 
-			$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='Secondi';");
+			$result=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta WHERE Macro_Categoria='Secondi';");
 			stampaRicerca($result);
 			?>
     </div>

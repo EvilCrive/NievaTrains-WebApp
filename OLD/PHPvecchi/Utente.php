@@ -1,9 +1,9 @@
 <?php
 require_once "connection.php";
 require_once "stampe.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
-$result=$ConnessioneAttiva->getQuery("SELECT * from utente WHERE Id_Utente=1;");
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
+$result=$connessione->getQuery("SELECT * from utente WHERE Id_Utente=1;");
 $risultati=$result[0];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -24,9 +24,10 @@ $risultati=$result[0];
 	 
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="handheld,screen and (max-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 
@@ -88,7 +89,7 @@ $risultati=$result[0];
     </div>
     <div class="card">
       <h2>Lista Followers</h2>
-	  <?php stampaFollowers($ConnessioneAttiva,$risultati["Id_Utente"]);?>
+	  <?php stampaFollowers($connessione,$risultati["Id_Utente"]);?>
 	  	<a href="#">Vedi tutti...</a>
   	</div>
   </div>
@@ -106,7 +107,7 @@ $risultati=$result[0];
     <div class="card">
       <h2>Ricette Preferite </h2>
 		<?php 
-		$result=$ConnessioneAttiva->getQuery("SELECT R.Nome, R.Introduzione, R.Nome_Immagine, R.Descrizione_Immagine
+		$result=$connessione->getQuery("SELECT R.Nome, R.Introduzione, R.Nome_Immagine, R.Descrizione_Immagine
 			FROM Preferiti AS P JOIN Ricetta AS R ON P.Id_Ricetta=R.Id_Ricetta
 			WHERE P.Id_Utente=1;");
 		stampaRicerca($result);

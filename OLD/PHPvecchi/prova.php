@@ -1,7 +1,7 @@
 <?php
 require_once "connection.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -9,12 +9,13 @@ $var=$ConnessioneAttiva->openConnectionlocal();
 
 <head>
   <title>prova</title>
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<h1>prova</h1>
   <?php
     if($var) {
-		$result=$ConnessioneAttiva->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta;");
+		$result=$connessione->getQuery("SELECT Descrizione_Immagine, Nome_Immagine, Nome FROM ricetta;");
 		$nresults=sizeof($result);
 		echo $nresults;
 		$tmp=$result[1];

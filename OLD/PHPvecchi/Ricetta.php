@@ -2,10 +2,10 @@
 //redirect se il parametro di ricerca della query in GET non è settato
 require_once "connection.php";
 require_once "stampeOggetti.php";
-$ConnessioneAttiva = new DBAccess();
-$var=$ConnessioneAttiva->openConnectionlocal();
+$connessione = new DBAccess();
+$var=$connessione->openConnectionlocal();
 
-$result=$ConnessioneAttiva->getQuery("SELECT * FROM Ricetta WHERE Id_Ricetta='1';");
+$result=$connessione->getQuery("SELECT * FROM Ricetta WHERE Id_Ricetta='1';");
 $risultati=$result[0];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -27,9 +27,10 @@ $risultati=$result[0];
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link media="handheld,screen" rel="stylesheet" type="text/css" href="../CSS/css_desktop.css" />
-	<link media="handheld,screen and (max-width:720px)  " rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
+	<link media="handheld,screen and (max-width:720px)" rel="stylesheet" type="text/css" href="../CSS/css_mobile.css"/>
 	<script src="../JS/menu_hamburger_utente.js"></script>
 
+<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" >
 </head>
 <body>
 	<!--header-->
@@ -83,7 +84,7 @@ $risultati=$result[0];
 	<!--php Nome, Likes(voto), Preferiti-->
 		<h2 class="maintitle"><?php echo $risultati["Nome"];?></h2>
 			<button class="button1 likes"><?php echo $risultati["Voto"];?></button>
-			<button class="button1 prefe"><?php stampaPreferiti($ConnessioneAttiva,1); ?></button>
+			<button class="button1 prefe"><?php stampaPreferiti($connessione,1); ?></button>
 	</div>
 	<div class="row clear">
 			<div class="col_sx">
@@ -92,7 +93,7 @@ $risultati=$result[0];
 			</div>
 			<div class="col_dx">
 				<ul>
-					<?php stampaInformazioni($ConnessioneAttiva,1);?>
+					<?php stampaInformazioni($connessione,1);?>
 				</ul>
 			</div>
 	</div>
@@ -105,12 +106,12 @@ $risultati=$result[0];
 			<div class="col_sx">
 				<h3> Ingredienti : </h3>
 				<!--php Ingredienti-->
-				<?php stampaIngredienti($ConnessioneAttiva,1);?>
+				<?php stampaIngredienti($connessione,1);?>
 			</div>
 			<div class="col_dx">
 				<h3>Passo Passo</h3>
 				<!--php passopasso-->
-				<p><?php stampaPasso($ConnessioneAttiva,1);?></p>
+				<p><?php stampaPasso($connessione,1);?></p>
 			</div>
 	</div>
 	<div class="row">
@@ -125,7 +126,7 @@ $risultati=$result[0];
 <h3>Commenti:</h3>
 	<ul class="comment-section">
 	<!--php commenti-->
-	<?php stampaCommenti($ConnessioneAttiva,1)?>
+	<?php stampaCommenti($connessione,1)?>
 			<li class="write-new">
 					<form action="#" method="post">
 							<textarea placeholder="Lascia un commento qui..." name="comment"></textarea>
@@ -144,7 +145,7 @@ $risultati=$result[0];
 	stampa correlate
 	-->
 	<?php
-	$stessaCategoria=$ConnessioneAttiva->getQuery("SELECT * FROM Ricetta WHERE Categoria='Antipasti';");
+	$stessaCategoria=$connessione->getQuery("SELECT * FROM Ricetta WHERE Categoria='Antipasti';");
 	stampaRicerca($stessaCategoria);
 	?>
 

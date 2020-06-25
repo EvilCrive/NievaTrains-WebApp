@@ -1,0 +1,199 @@
+<<<<<<< HEAD:CSS/css vecchi/mobile/ricerca-mobile_css.css
+.infoBox{
+	max-width: 1400px;
+	height: auto;
+	margin: auto;
+	padding-bottom: 20px;
+}
+.ricercatext{
+	margin-top: 30px;
+}
+.ricercatext h2{
+	font-size: 2em;
+	display: inline-block;
+}
+
+.ricercatext p{
+	font-size: 1.5em;
+	display: inline-block;
+	padding-left: 1em;
+}
+.nrisultati p{
+	font-size: 0.8em;
+	padding-left: 1em;
+}
+.row{
+	max-width: 1400px;
+	height: auto;
+	margin: auto;
+	display: flex;
+  	flex-wrap: wrap;
+}
+.gallery {
+  /*border: 1px solid #ccc;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallery:hover {
+ box-shadow: 0 4px 8px 0 rgba(246,173,123,0.8), 0 6px 20px 0 rgba(246,173,123,1);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 10px 10px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center{
+	text-align: center;
+	margin-top: 20px;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: rgba(246,173,123,1);
+  color: #fff;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: rgba(246,173,123,0.5);
+}
+=======
+#infoBox{
+	max-width: 1400px;
+	height: auto;
+	margin: auto;
+	padding-bottom: 20px;
+}
+#ricercatext{
+	margin-top: 30px;
+}
+#ricercatext h2{
+	font-size: 2em;
+	display: inline-block;
+}
+
+#ricercatext p{
+	font-size: 1.5em;
+	display: inline-block;
+	padding-left: 1em;
+}
+#nrisultati p{
+	font-size: 0.8em;
+	padding-left: 1em;
+}
+.row{
+	max-width: 1400px;
+	height: auto;
+	margin: auto;
+	display: flex;
+  	flex-wrap: wrap;
+}
+.gallery {
+  /*border: 1px solid #ccc;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallery:hover {
+ box-shadow: 0 4px 8px 0 rgba(246,173,123,0.8), 0 6px 20px 0 rgba(246,173,123,1);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 10px 10px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center{
+	text-align: center;
+	margin-top: 20px;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: rgba(246,173,123,1);
+  color: #fff;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: rgba(246,173,123,0.5);
+}
+>>>>>>> b46e4764d1f2c04896a138713f7a0f1a7e7469d1:OLD/css vecchi/mobile/ricerca-mobile_css.css
