@@ -1,4 +1,5 @@
-# Descrizione iniziale
+# Progetto TecWeb_19/20
+## Descrizione iniziale
 * Utenti:
 	* Persone interessate ai treni (Appassionati, gente che ci lavora, curiosi)
 	* Maschi e femmine (soprattutto maschi)
@@ -14,7 +15,7 @@
 	* Ricerca (Utenti, Treni)
 	* Pagine create (Utente esperto)
 
-# Descrizione varie parti
+## Descrizione varie parti
 ```bash
 HTML
 ```
@@ -62,7 +63,7 @@ SQL
 * Utenti 		(id, nome, cognome, nome_utente, password, email, bio, is_user_type, immagine)
 * Preferiti 	(id_utente, id_treno)
 
-# Descrizione Files e Cartelle:
+## Descrizione Files e Cartelle:
 * Cartelle:
 	* css,html, php,js, database
 	* resources (immagini)
