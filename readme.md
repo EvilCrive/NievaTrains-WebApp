@@ -14,7 +14,7 @@
 	* Ricerca (Utenti, Treni)
 	* Pagine create (Utente esperto)
 
-## Descrizione varie parti
+# Descrizione varie parti
 ```bash
 HTML
 ```
@@ -62,19 +62,17 @@ SQL
 * Utenti 		(id, nome, cognome, nome_utente, password, email, bio, is_user_type, immagine)
 * Preferiti 	(id_utente, id_treno)
 
-
-### DA FARE:
-* Mockup Treno e 404 e Admin Panel e Utente Esperto
-* DB
-* Cartelle
-
-#### FILES e CARTELLE:
+# Descrizione Files e Cartelle:
 * Cartelle:
-	* css,html, php,js, database;
-	* resources (immagini);
-	* mockups;
-	* relazione.
-
+	* css,html, php,js, database
+	* resources (immagini)
+	* mockups
+	* relazione
 * Altri file:
 	* index.php
 	* .htaccess
+
+## DA FARE:
+* Mockup Treno e 404 e Admin Panel e Utente Esperto
+* DB
+* Cartelle
