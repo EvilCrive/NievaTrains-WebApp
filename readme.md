@@ -1,3 +1,4 @@
+#Descrizione iniziale
 Utenti:
 	Persone interessate ai treni (Appassionati, gente che ci lavora, curiosi)
 	maschi e femmine (soprattutto maschi)
@@ -13,7 +14,10 @@ Funzionalità:
 	Ricerca (Utenti, Treni)
 	Pagine create (Utente esperto)
 -------------------------------------------------------------------------------------------------------------------
---HTML--
+##Descrizione varie parti
+```bash
+HTML
+```
 Homepage
 About
 Ricerca (get: categoria, stringa)
@@ -28,7 +32,9 @@ Login
 Registrazione
 404
 
---PHP(pagine)--
+```bash
+PHP(pagine)
+```
 Homepage
 Ricerca
 Utente
@@ -40,24 +46,30 @@ Singolo treno
 Admin Panel
 Login Registrazione
 
---PHP(metodi)--
+```bash
+PHP(metodi)
+```
 
---JS--
+```bash
+JS
+```
 
---SQL--
+```bash
+SQL
+```
 Treno 		(id, categoria, nome, marca, descrizione, immagine, tipo, veloctià, preferiti, autore)
 Commenti 	(id, testo, autore, data, id_treno, id_utente)
 Utenti 		(id, nome, cognome, nome_utente, password, email, bio, is_user_type, immagine)
 Preferiti 	(id_utente, id_treno)
 
-###############################################################################################################
 
-DA FARE:
+###DA FARE:
+
 -Mockup Treno e 404 e Admin Panel e Utente Esperto
 -DB
 -Cartelle
 
-###############################################################################################################
+####FILES e CARTELLE:
 
 Cartelle:
 -css,html, php,js, database;
