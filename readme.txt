@@ -24,7 +24,8 @@ Elettrico
 Maglev
 Treno (get: id_treno)
 Admin Panel
-Login Registrazione
+Login 
+Registrazione
 404
 
 --PHP(pagine)--
@@ -48,3 +49,8 @@ Treno 		(id, categoria, nome, marca, descrizione, immagine, tipo, veloctià, pre
 Commenti 	(id, testo, autore, data, id_treno, id_utente)
 Utenti 		(id, nome, cognome, nome_utente, password, email, bio, is_user_type, immagine)
 Preferiti 	(id_utente, id_treno)
+###############################################################################################################
+DA FARE:
+-Mockup Treno e 404
+-DB
+-Cartelle
