@@ -1,7 +1,7 @@
 # Descrizione iniziale
 * Utenti:
-	Persone interessate ai treni (Appassionati, gente che ci lavora, curiosi)
-	maschi e femmine (soprattutto maschi)
+	** Persone interessate ai treni (Appassionati, gente che ci lavora, curiosi)
+	** maschi e femmine (soprattutto maschi)
 	fascia di età (soprattutto da indagare)
 	sito di nicchia
 	Tipi di utente: Utente non registrato, Utente base, Utente esperto, Admin
