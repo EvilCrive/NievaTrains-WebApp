@@ -1,11 +1,11 @@
 # Descrizione iniziale
-Utenti:
+* Utenti:
 	Persone interessate ai treni (Appassionati, gente che ci lavora, curiosi)
 	maschi e femmine (soprattutto maschi)
 	fascia di età (soprattutto da indagare)
 	sito di nicchia
 	Tipi di utente: Utente non registrato, Utente base, Utente esperto, Admin
-Funzionalità:
+* Funzionalità:
 	Mostrare caratteristiche treni
 	Inserimento, modifica e rimozione (Commenti, Bio dell'utente)
 	Social (Utenti)
@@ -64,13 +64,11 @@ Preferiti 	(id_utente, id_treno)
 
 
 ### DA FARE:
-
 -Mockup Treno e 404 e Admin Panel e Utente Esperto
 -DB
 -Cartelle
 
 #### FILES e CARTELLE:
-
 Cartelle:
 -css,html, php,js, database;
 -resources (immagini);
