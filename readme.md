@@ -1,4 +1,4 @@
-#Descrizione iniziale
+# Descrizione iniziale
 Utenti:
 	Persone interessate ai treni (Appassionati, gente che ci lavora, curiosi)
 	maschi e femmine (soprattutto maschi)
@@ -14,7 +14,7 @@ Funzionalità:
 	Ricerca (Utenti, Treni)
 	Pagine create (Utente esperto)
 
-##Descrizione varie parti
+## Descrizione varie parti
 ```bash
 HTML
 ```
@@ -63,13 +63,13 @@ Utenti 		(id, nome, cognome, nome_utente, password, email, bio, is_user_type, im
 Preferiti 	(id_utente, id_treno)
 
 
-###DA FARE:
+### DA FARE:
 
 -Mockup Treno e 404 e Admin Panel e Utente Esperto
 -DB
 -Cartelle
 
-####FILES e CARTELLE:
+#### FILES e CARTELLE:
 
 Cartelle:
 -css,html, php,js, database;
