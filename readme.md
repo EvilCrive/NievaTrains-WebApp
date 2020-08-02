@@ -49,8 +49,22 @@ Treno 		(id, categoria, nome, marca, descrizione, immagine, tipo, veloctià, pre
 Commenti 	(id, testo, autore, data, id_treno, id_utente)
 Utenti 		(id, nome, cognome, nome_utente, password, email, bio, is_user_type, immagine)
 Preferiti 	(id_utente, id_treno)
+
 ###############################################################################################################
+
 DA FARE:
--Mockup Treno e 404
+-Mockup Treno e 404 e Admin Panel e Utente Esperto
 -DB
 -Cartelle
+
+###############################################################################################################
+
+Cartelle:
+-css,html, php,js, database;
+-resources (immagini);
+-mockups;
+-relazione.
+
+Altri file:
+-index.php
+-.htaccess
