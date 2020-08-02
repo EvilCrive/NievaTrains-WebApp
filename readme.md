@@ -13,7 +13,7 @@ Funzionalità:
 	Preferiti treni
 	Ricerca (Utenti, Treni)
 	Pagine create (Utente esperto)
--------------------------------------------------------------------------------------------------------------------
+
 ##Descrizione varie parti
 ```bash
 HTML
