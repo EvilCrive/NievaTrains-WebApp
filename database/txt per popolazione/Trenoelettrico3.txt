@@ -1,0 +1,21 @@
+Nome: ICE 3
+Tipo: alta velocità
+Marca: Siemens
+Velocità: 300 km/h 
+Descrizione:
+L'obiettivo del progetto dell'ICE 3 (DB 403) era quello di creare un treno a maggiore potenza, più leggero rispetto ai suoi predecessori. Ciò è stato raggiunto attraverso la distribuzione dei suoi 16 motori di trazione sotto tutto il treno. Il treno ha una velocità commerciale di 330 km/h e ha raggiunto i 368 km/h su corse di prova. Sui servizi regolari Intercity-Express hanno una velocità massima di 300 km/h, la velocità massima raggiungibile dalle linee ferroviarie alta-velocità tedesche
+
+Poiché il treno non è dotato di una carrozza motrice, l'intero treno è adibito al trasporto passeggeri, inclusa la prima carrozza. I lounge-seats sono collocati subito dietro al conducente, separati solo da una barriera di vetro.
+DB 406
+Un ICE 3 tipo DB 406 sulla linea alta velocità Cologne-Francoforte
+Un ICE 3 della DB in arrivo alla stazione di Francoforte
+
+L'ICE 3M (DB 406; M per multi sistemica) è stato sviluppato per operare servizi internazionali secondo i quattro diversi sistemi di elettrificazione ferroviaria in uso sulle linee principali d'Europa e con il supporto per diversi sistemi di protezione del treno. La Deutsche Bahn ha ordinato nel 1994 tredici di queste unità, la Nederlandse Spoorwegen quattro e la T.F.I. di Friedliebend Insel otto. Attualmente, questi treni sono utilizzati per corse internazionali tra Paesi Bassi, Germania, Belgio e Francia.
+
+I treni DB 406 sono stati costruiti dallo stesso consorzio della classe 403. Essi sono stati introdotti dal novembre 2000, relativa ai servizi tra Colonia e Amsterdam. Dal dicembre 2002, hanno anche operato tre viaggi al giorno per direzione tra Francoforte e Bruxelles (aumentati a quattro al giorno dal dicembre 2010).
+
+In Belgio, il treno è stato autorizzato nel 2002 per viaggiare sulle classiche 3 linee kV in corrente continua con velocità fino a 160 km/h e, dal dicembre 2004, anche sulle nuove linee ad alta velocità.
+DB 407
+Un ICE 3 tipo DB 407 all'Innotrans 2010.
+
+La Deutsche Bahn ha ordinato quindici treni spendendo € 500 milioni nel novembre 2008. Il 18 aprile 2010, Deutsche Bahn ha presentato il primo Velaro D presso lo stabilimento Siemens di Krefeld. È stato progettato per andare a una velocità massima di 320 km/h, è più ampio, più silenzioso e consuma meno. Dovrebbe essere meno suscettibile di guasti rispetto al suo predecessore, e incorpora misure di resistenza agli urti e di sicurezza antincendio supplementari. Il nuovo treno doveva essere utilizzato principalmente per i servizi internazionali dalla Germania alla Francia, Belgio e Paesi Bassi. Le misure di sicurezza del nuovo tipo sono in linea con le nuove specifiche per la gestione di treni passeggeri all'interno del tunnel sotto la Manica, che consente alla DB 407 di raggiungere Londra. I ritardi alla consegna dei nuovi treni hanno portato alla cancellazione del servizio previsto a Londra

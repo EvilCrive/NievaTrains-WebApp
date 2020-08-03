@@ -1,0 +1,13 @@
+Nome: British Rail 18000
+Marca: 	Brown, Boveri & Cie
+Tipo: inter city
+Velocità: 145 km/h
+Descrizione:
+
+1479/5000
+La GWR scelse una locomotiva a turbina a gas perché, all'epoca, non era disponibile una locomotiva diesel a unità singola di potenza sufficiente. La locomotiva a vapore di classe King poteva erogare circa 2.500 cavalli (1.900 kW) alla rotaia. Le locomotive diesel LMS avevano motori di soli 1.600 CV (1.200 kW). Dopo aver consentito perdite di trasmissione, questo sarebbe sceso a circa 1.300 CV (970 kW) sulla rotaia, quindi sarebbero necessari due diesel per abbinare un re.
+
+Il numero 18000 era della disposizione delle ruote A1A-A1A e la sua turbina a gas era stata valutata a 2500 CV (1.900 kW). Aveva una velocità massima di 90 miglia orarie (145 km / h) e pesava 115 tonnellate lunghe (117 t; 129 tonnellate corte). Era dipinto con una livrea nera BR, con una striscia d'argento intorno al centro del corpo e numeri d'argento.
+Dettagli tecnici
+Turbina a gas
+La turbina a gas era una macchina industriale Brown Boveri. Era di un tipo che ora sarebbe chiamato un motore a turboalbero ma differiva dai moderni motori a turboalbero a turbina libera per avere una sola turbina per azionare sia il compressore che l'albero di uscita. L'enfasi era sul risparmio di carburante, quindi aveva uno scambiatore di calore (per recuperare il calore residuo dallo scarico) ed era progettato per funzionare con olio combustibile pesante a basso costo (era anche in grado di bruciare olio leggero ma questo era destinato solo a scopi di avvio). Questo era lo stesso carburante utilizzato nelle locomotive a vapore alimentate a petrolio. Dopo aver lasciato lo scambiatore di calore, l'aria preriscaldata entrava in una grande camera di combustione verticale, dove il carburante veniva iniettato e bruciato.

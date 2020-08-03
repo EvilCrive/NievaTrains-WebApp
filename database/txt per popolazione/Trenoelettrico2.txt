@@ -1,0 +1,32 @@
+Nome: British Rail Class 395
+Tipo: alta velocità
+Marca: Hitachi
+Velocità: 225 km/h
+Descrizione:
+Un servizio regolare completo è iniziato il 13 dicembre 2009. [2] I servizi iniziali includevano un servizio di mezz'ora a nord del Kent da e per St Pancras, Londra, via Stratford, Ebbsfleet, Gravesend, Strood, Rochester, Chatham, Gillingham, Rainham e Sittingbourne a Faversham, un servizio di mezz'ora per East Kent via Stratford , Ebbsfleet, Ashford con un treno che prosegue per Margate via Canterbury West, Ramsgate e Broadstairs, con l'altro per Dover via Folkestone West e Folkestone Central. [48] Sette milioni di viaggi furono compiuti nel primo anno di attività [49]
+
+L'introduzione dei treni ebbe generalmente successo, con una buona affidabilità e dati sulla soddisfazione dei passeggeri: i nuovi servizi ad alta velocità causarono anche un aumento del numero di passeggeri superiore a quello già sperimentato sulla rete del Kent [50]. Al momento dell'introduzione, i viaggi programmati per Londra da Ebbsfleet sono stati ridotti da 51 a 18 minuti, mentre i treni che utilizzano l'intera lunghezza dell'Alta velocità 1 (a partire da Ashford) hanno ridotto i viaggi programmati di circa 45 minuti. [51] Tuttavia, il servizio è stato criticato in quanto di scarsa utilità per molti pendolari di Londra perché i treni terminano a St Pancras. Inoltre, il cambiamento nei modelli di servizio per accogliere i treni ad alta velocità ha comportato un rallentamento di alcuni servizi non ad alta velocità nel Kent [52].
+
+Nel maggio 2011 è iniziato un servizio limitato da Maidstone West via Strood e Gravesend. [53] seguito nel settembre 2011 da un servizio limitato da Sandwich via Deal a London St Pancras, parzialmente finanziato dal Kent County Council. [54] Nel 2013, quattro anni dopo l'inizio del servizio, il numero totale di passeggeri era di dieci milioni e la puntualità era del 92,6% (rispetto al 90,1% a livello nazionale) [55].
+
+Dal 2015, i treni effettuavano un percorso circolare, dove uno dei treni per Faversham attraverso le città di Medway continua come servizio semi-veloce per Ramsgate. Da qui passa poi tutte le stazioni via Sandwich and Deal a Dover Priory, dove diventa poi Dover Priory a St Pancras International tramite Ashford International. Un altro servizio operava nella direzione opposta.
+
+Nel 2016, a causa di danni alla linea tra Folkestone Central e Dover Priory alla vigilia di Natale 2015, i servizi ad alta velocità diretti in senso orario sono terminati a Ramsgate e a Folkestone Central in senso antiorario. Esisteva un servizio navetta tra Dover Priory e Ramsgate che utilizzava i treni della linea principale (375/3 Electrostars) mentre venivano effettuate le riparazioni.
+
+I servizi off-peak e week-end sono generalmente formati da 6 autobus ad eccezione del servizio Margate via Ashford International e Canterbury West che a volte sono formati da 12 autobus.
+Design
+Vedi anche: Hitachi A-train
+Classe sud-est ad alta velocità 395 n. 395018 a St Pancras International
+Il cono di naso su un 395 è aperto per accoppiamento
+
+La serie 400 Mini Shinkansen [56] e il design A Train di Hitachi costituiscono la base del design di classe 395. [8] Dalla serie 400 la classe eredita la stessa carrozza da 6 auto da 20 m con porte a un terzo e due terzi lungo la carrozza. [Nota 4] Entrambi sono progettati per operazioni ad alta velocità su linee di nuova costruzione, nonché a livello inferiore velocità su linee legacy convenzionali. [57] A differenza della serie 400 con corpo in acciaio, la Classe 395 ha il suo carbody (pareti, tetto, pavimento) formato da pannelli del corpo in alluminio estruso a doppia parete saldati ad attrito, una tecnologia che Hitachi considera parte delle specifiche della sua famiglia di treni A-Train. [ 8] [58]
+
+Il treno è composto da sei unità, con tutti gli assi sulle quattro auto centrali alimentate. Le auto esterne non sono alimentate, ma montano i pantografi (dando una formazione DPT1 + MS1 + MS2 + MS3 + MS4 + DPT2. [Nota 1]). I carrelli sono sostenibili, con carrelli alimentati e non alimentati che condividono un design comune per semplificare la manutenzione. [58] Ogni unità da 6 auto può lavorare in più con un altro, creando treni per 12 auto. L'accoppiamento è automatizzato ed è progettato per richiedere meno di 60 secondi. [58] [59]
+
+Per affidabilità, le porte dei passeggeri utilizzano un sistema pneumatico scorrevole relativamente semplice già in uso e in sviluppo da diversi decenni sui treni Shinkansen. [4] [60] L'impianto frenante è stato fornito da Faiveley. [61] Circa il 40% dell'attrezzatura del treno in valore è stata fornita da fornitori europei.
+
+Ci sono 340 posti per treno a 6 posti, in classe standard [2 + 2], con 12 posti aggiuntivi ribaltabili in una zona per sedie a rotelle. Vi sono due bagni per unità, uno dei quali è attrezzato per l'accesso ai disabili. [5]
+
+I treni soddisfano gli standard del gruppo ferroviario del Regno Unito (RGS) e le specifiche tecniche dell'Unione europea per l'interoperabilità (STI) per la resistenza agli urti e gli standard del Regno Unito o dell'UE per il comportamento portante la struttura, la resistenza del materiale, l'aerodinamica, il rumore e la resistenza al fuoco. [62 ]
+
+Ogni treno ha un sistema di gestione dei treni (TMS), che comprende sistemi di monitoraggio delle apparecchiature, comunicazioni, aria condizionata, ecc. E controllo delle apparecchiature, incluso il funzionamento selettivo delle porte (SDO). Il sistema SDO utilizza il GPS e l'integrazione della velocità del treno per stimare la posizione. [63]

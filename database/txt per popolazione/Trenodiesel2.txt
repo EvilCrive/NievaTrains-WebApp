@@ -1,0 +1,21 @@
+Nome: GE AC6000CW
+Tipo: long distance
+Marca: GE Transportation
+Velocità: 121 km/h
+Descrizione:
+
+2669/5000
+L'AC6000CW è stato progettato al culmine di una corsa di potenza tra i due principali produttori di locomotive, la divisione elettro-motiva di La Grange, Illinois, e GE Transportation di Erie, in Pennsylvania, all'inizio della metà degli anni '90. L'obiettivo era di 6.000 cavalli (4.500 kW).
+
+GE ha collaborato con Deutz-MWM della Germania nel 1994 per progettare e costruire il motore 7HDL da 6.250 cavalli (4.660 chilowatt) per le locomotive. La prima locomotiva costruita fu la "Green Machine" GE 6000, soprannominata per il suo schema di vernice verde. I primi modelli di produzione furono costruiti anche nel 1995: CSX Transportation 600-602 e Union Pacific Railroad 7000-7009. Dopo che i test furono completati da GE, furono rilasciati ai rispettivi proprietari alla fine del 1996.
+Union Pacific Railroad 7391, un esempio dei 106 "Convertibili" costruiti per Union Pacific Railroad con il motore 7FDL
+
+Le locomotive iniziali soffrivano di vari problemi meccanici, il più grave dei quali era il motore stesso. Ci sono stati importanti problemi di vibrazione che sono stati risolti aumentando la massa del motore per abbassare la frequenza di risonanza. Ciò a sua volta ha causato problemi con i turbocompressori gemelli. Questi problemi hanno portato GE a respingere la produzione completa del nuovo modello fino al 1998. Cambiamenti come materiali più rigidi e aumento dello spessore delle pareti del motore (per aumentare la massa) erano in atto alla produzione completa.
+
+GE ha costruito 106 AC6000CW per Union Pacific con il più vecchio e collaudato motore 7FDL, valutato per 4.400 CV (3.300 kW). Inizialmente, queste unità dovevano essere convertite nel motore 7HDL da 6.250 CV (4.660 kW) dopo che i problemi erano stati risolti con il motore, ma ciò non si è mai verificato. GE considera queste unità come AC6000CW "Convertibili", mentre UP le classifica come C6044AC o AC4460CW.
+
+L'AC6000CW ha terminato la produzione nel 2001, sebbene la serie 75xx di Union Pacific rimanga in uso quotidianamente a partire dal 2010, principalmente sui treni di roccia e ghiaia in Texas. Union Pacific designa queste unità come C60AC, CSX come CW60AC e CW60AH.
+
+CSX Transportation ha potenziato molte delle loro unità AC6000CW dai motori 16-7HDL a GEVO-16 per renderle più affidabili e rispettose dell'ambiente. Queste unità sono in grado di gestire 5.800 CV (4.300 kW) ma hanno una potenza nominale di 4.600 CV (3.400 kW) e sono classificate come CW46AH.
+
+Il 21 giugno 2001, tutti e otto gli GE AC6000 della ferrovia australiana BHP Billiton si sono uniti per stabilire il record mondiale per il treno più pesante e più lungo. Trasportarono 99.734 tonnellate (98.159 tonnellate lunghe; 109.938 tonnellate corte) e 682 carri per 275 chilometri (171 miglia) tra la miniera Yandi e Port Hedland. Il treno era lungo 7,3 chilometri (4.536 miglia) e trasportava 82.000 tonnellate (81.000 tonnellate lunghe; 90.000 tonnellate corte) di minerale di ferro. [3] Il record è ancora valido.

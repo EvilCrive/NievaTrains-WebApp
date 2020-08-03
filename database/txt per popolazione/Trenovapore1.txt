@@ -1,0 +1,23 @@
+Nome: Union Pacific FEF Series
+Categoria: Locomotiva a vapore
+Marca: American Locomotive Company (ALCO)
+immagine: x
+tipo: Lunga e media distanza
+veloctià: 190 km/h
+descrizione:
+La serie FEF Union Pacific comprende tre tipi di locomotive a vapore "Northern" 4-8-4 costruite dalla American Locomotive Company (ALCO) tra il 1937 e il 1944 e gestite dalla Union Pacific Railroad fino al 1959.
+
+Le 45 locomotive furono le ultime locomotive a vapore costruite per la Union Pacific. Rappresentavano l'epitome dello sviluppo della locomotiva a vapore a doppio servizio; fondi e ricerca si stavano concentrando nello sviluppo di locomotive diesel-elettriche. Progettati per bruciare carbone, furono convertiti per funzionare con olio combustibile nel 1946. [1] Hanno trainato una varietà di treni passeggeri, come Overland Limited, Los Angeles Limited, Portland Rose e Challenger [2], fino a quando le locomotive diesel-elettriche non hanno assunto il servizio passeggeri. Molte locomotive della serie FEF sono state successivamente riassegnate al servizio di trasporto merci negli ultimi anni della loro carriera.
+
+Oggi sopravvivono quattro locomotive della serie FEF, tra cui il n. 844, che rimane in condizioni operative e ora funziona nel servizio di escursioni. Oggi l'844 è una delle locomotive di servizio più antiche dell'Unione del Pacifico [3] e l'unica locomotiva a vapore mai ritirata da una ferrovia di classe nordamericana I. [4]
+
+origini
+Alla fine degli anni '30, i carichi di treni in aumento iniziarono a superare i limiti del 4-8-2 che erano il pilastro delle operazioni passeggeri UP. Un giorno, nel 1937, con la business car del Presidente della UP William William Jeffer nella parte posteriore, una Classe 7-8-2 "7000" dimostrò la mancanza di energia fumante insita nel tipo. Anche quando il treno era in attesa di soccorso, un telegramma fu inviato ad ALCO a Schenectady in cerca di qualcosa di meglio. Il risultato fu una superba classe di 45 locomotive che potevano funzionare a 100 mph e produrre tra 4.000 e 5.000 cavalli di potenza a timone.
+FEF-1
+
+Le prime venti locomotive, numerate tra 800 e 819, furono consegnate da ALCO nel 1937. Gli "800" nel loro insieme seguirono - come Northumbrian 108 anni prima - la disposizione più semplice possibile di avere solo due cilindri esterni. Il montaggio dei dispositivi di movimento laterale di ALCO sulle ruote accoppiate principali ha facilitato la negoziazione delle curve. Gli accessori complicati hanno spesso rovinato la semplicità di base di così tante locomotive statunitensi, ma UP ha resistito alla maggior parte di essi, dando vita ad un aspetto elegante e ordinato. Nonostante si muovesse frequentemente a velocità superiori a 161 km / h, le forze e le sollecitazioni sul giunto e sulle bielle erano mantenute entro limiti accettabili. Vi furono quindi risultati eccellenti e molti rapporti della classe raggiunsero il limite di progettazione di 110 mph (177 km / h).
+FEF-2
+
+Il secondo lotto di quindici fu consegnato nel 1939. Questi presentarono numerosi miglioramenti, tra cui cilindri più grandi, migliore sforzo di trazione, ruote motrici più alte e deflettori di fumo sui lati della scatola di fumo. Il cambiamento più grande, tuttavia, fu la fornitura di un "piedistallo" a quattordici ruote o di un "centopiedi" al posto dei dodici a ruote delle prime venti locomotive. Pertanto, le prime locomotive divennero note come "FEF-1", mentre queste erano note come "FEF-2".
+FEF-3
+Ad eccezione dell'uso di alcuni materiali sostitutivi, il lotto finale di dieci era quasi identico al FEF-2. Dopo la seconda guerra mondiale, le forniture di carbone furono colpite da una serie di scioperi. Al fine di salvaguardare le operazioni, UP ha convertito gli 800 in combustione di petrolio e un serbatoio da 6.000 galloni statunitensi (23.000 l; 5.000 imp gal) è stato installato nello spazio del bunker. Altrimenti, sono state necessarie poche modifiche per garantire anni di servizio principale. Queste furono le ultime locomotive a vapore consegnate per UP. Come molte locomotive a vapore di "epoca tarda", il loro progetto finale fu interrotto dall'avvento delle locomotive diesel, i nuovi monarchi delle rotaie. Un ex manager del Programma Pacific Pacific di Steam una volta ha commentato la serie FEF, affermando che "sebbene si affermi che le serie UP FEF sono state progettate per funzionare in sicurezza a 120 mph (190 km / h), nessuno sa davvero quanto velocemente potrebbe finire 4-8-4 ".

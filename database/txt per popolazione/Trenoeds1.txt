@@ -1,0 +1,10 @@
+Nome: SCMaglev
+Tipo: Altissima velocità
+Velocità: 590 km/h
+Marca: Railway Technical Research Institute
+Descrizione:
+Il treno utilizza magneti superconduttori e sospensioni elettrodinamiche, al contrario del Transrapid, che utilizza convenzionali elettromagneti e sospensioni elettromagnetiche di tipo attrattivo. Il "Superconducting Maglev Shinkansen" sviluppato dalla Central Japan Railway Co. ("JR Central") e Kawasaki Heavy Industries è quindi attualmente il treno più veloce del mondo. La proposta del Chūō Shinkansen è stata approvata il 27 maggio 2011, la costruzione è iniziata nel 2012 e nel 2027 Tokyo e Nagoya verranno collegate dal maglev in quaranta minuti; il completamento del tracciato fino a Osaka avverrà verso il 2040, e Tokyo sarà unita con Osaka in un'ora e sette minuti; il tracciato di test entrerà a far parte della linea. Il treno che presterà servizio è una diretta derivazione del JR-Maglev e si chiama Shinkansen Serie L0, costruito da un consorzio formato dalla Mitsubishi Heavy Industries e dalla Nippon Sharyo. Il treno sarà a guida automatica, senza macchinista a bordo.
+
+Per frenare si usano due sistemi: il primo, quello principale, è un sistema magnetico che inverte la polarità dei magneti, facendo decelerare il treno; il secondo è un sistema di aerofreni di derivazione aeronautica, che agiscono grazie all'attrito con l'aria.
+
+Il treno si solleva di circa 10 millimetri da terra per l'azione di magneti posti sulla "rotaia guida" e di altri magneti superconduttori posti lungo tutto il treno, in una speciale lega di niobio e titanio raffreddata a -269 °C da elio liquido. 

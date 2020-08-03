@@ -1,0 +1,20 @@
+Nome: British Rail Class 374
+Tipo: alta velocità
+Marca: Siemens
+Velocità: 	320 km/h
+Descrizione:
+La British Rail Class 374, denominata anche Eurostar e320, è un tipo di treno passeggeri multiplo elettrico utilizzato sui servizi Eurostar attraverso il tunnel sotto la Manica per servire destinazioni oltre le rotte principali per Parigi e Bruxelles. Hanno iniziato a gestire i servizi passeggeri nel novembre 2015. [2] I treni, di proprietà di Eurostar International Limited, sono versioni a sedici pullman della Siemens Velaro. Ogni treno è lungo 400 m (1.300 piedi). I treni sono progettati per essere conformi alle specifiche tecniche di interoperabilità (STI) e l'ordine originale per dieci serie è stato successivamente aumentato a diciassette serie nel novembre 2014. [3]
+
+La flotta esistente di Eurostar International di treni "Eurostar e300" classe 373, introdotta nel 1994 all'apertura del tunnel sotto la Manica, non può essere utilizzata sul sistema di elettrificazione OHLE (15 kV AC over line line) utilizzato in Germania, la maggior parte non può essere utilizzata su 1,5 kV DC sistema di elettrificazione della linea aerea (OHLE) utilizzato nei Paesi Bassi e non dispongono di spazio sufficiente per installare la segnalazione ERTMS. Di conseguenza, Eurostar non può eseguire le sue unità di Classe 373 sui servizi per questi paesi e la Classe 374 è stata progettata e costruita per aiutare a risolvere questo problema e consentire a Eurostar di eseguire servizi in queste località. La classe 374 ha sostituito la maggior parte delle classi 373 a giugno 2018, con la maggior parte dei treni della classe 373 demoliti nel Regno Unito dopo che questi nuovi treni sono stati messi in servizio.
+
+Quando i treni vengono utilizzati in Gran Bretagna, possono viaggiare solo sull'alta velocità 1, costruita per ospitare treni più grandi dall'Europa continentale, che presentano un indicatore di carico più grande, a differenza della rete ferroviaria britannica nazionale.
+
+Sviluppo
+Mock up in mostra nei giardini di Kensington a Londra nel 2010
+
+Le EMU ad alta velocità di Siemens Velaro derivano dall'ICE 3 utilizzato per la prima volta da Deutsche Bahn (DB) nel 2000. Le varianti includono DB Classe 407, destinata a servizi internazionali anche attraverso il tunnel sotto la Manica. [4]
+
+Nel 2009, Eurostar ha annunciato un progetto da £ 700 milioni per aggiornare la sua flotta, con circa £ 550 milioni per i nuovi treni in grado di operare lontano dalla rete centrale di Londra-Parigi / Bruxelles. [5] Nell'ottobre 2010, Eurostar ha annunciato la scelta di Siemens, con l'utilizzo della piattaforma Velaro. Il Velaro e320, chiamato a causa dei piani per operare a 320 km / h (200 mph), sarebbe lungo 16 auto, per soddisfare le specifiche di sicurezza del tunnel sotto la Manica ma avrebbe distribuito trazione con l'attrezzatura di trazione lungo la lunghezza del treno, non concentrato in auto a motore ad ogni estremità. [6]
+Contenzioso Alstom
+
+La nomina di Siemens lo vide entrare nel mercato francese dell'alta velocità, poiché fino a quel momento tutti gli operatori ad alta velocità delle filiali francesi e francesi utilizzavano i derivati ​​TGV prodotti da Alstom. [7] Alstom ha tentato un'azione legale per prevenire il contratto, sostenendo che i set Siemens avrebbero violato le regole di sicurezza del tunnel sotto la Manica, [8] ma questo è stato gettato fuori dal tribunale. [9] Alstom ha affermato che "perseguirà opzioni legali alternative per mantenere la sua posizione" e il 4 novembre 2010 ha presentato una denuncia alla Commissione europea in merito alla procedura di gara, che ha poi chiesto al governo britannico un "chiarimento" [10]. Alstom ha quindi annunciato di aver avviato un'azione legale contro Eurostar presso l'Alta Corte di Londra. [11] Nel luglio 2011, l'Alta Corte ha respinto l'affermazione di Alstom secondo cui la procedura di gara era "inefficace" [12] e nell'aprile 2012 Alstom ha dichiarato che avrebbe annullato le azioni giudiziarie pendenti contro Eurostar [13].

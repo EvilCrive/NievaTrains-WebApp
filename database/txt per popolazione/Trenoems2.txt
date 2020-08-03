@@ -1,0 +1,15 @@
+Nome: Transrapid
+Marca:  Deutsche Bundesbahn
+Tipo: alta velocità 
+Velocità: 500 km/h 
+Descrizione:
+Il Transrapid usa la tecnologia a sospensione elettromagnetica (EMS).
+
+Il motore lineare sincrono utilizzato dal Transrapid viene utilizzato per muovere il treno e per frenarlo. Funziona come un motore rotativo elettrico in cui lo statore è stato aperto e disteso lungo la rotaia. All'interno delle bobine le correnti alternate generano un campo magnetico che muove il treno senza contatto fisico con la rotaia. Ogni rotaia è in grado di portare treni in un solo senso, rendendo gli scontri fra treni che viaggiano in senso opposto impossibili e limitando la possibilità di collisione ad eventuali tamponamenti.
+
+Il sistema maglev non ha assi di trasmissione, ruote o pantografo. Il treno non rotola bensì lèvita. Il sistema elettronico garantisce che la distanza dalla rotaia rimanga costante (10 millimetri). Per stazionare sopra la rotaia il maglev richiede meno energia di quella richiesta dal sistema di aria condizionata del treno. Il sistema di livellamento e tutta l'elettronica a bordo vengono alimentate dalle oscillazioni armoniche del campo magnetico dello statore lineare. Queste oscillazioni non possono essere utilizzate come sistema di propulsione. In caso di mancata alimentazione della rotaia il Transrapid utilizza le batterie di riserva installate a bordo della motrice per mantenere il treno in levitazione e muoverlo. 
+Costi di costruzione
+
+Costruire una linea maglev è più economico che costruire una linea convenzionale ad alta velocità dato che i maggiori componenti sono prodotti prefabbricati ed assemblati in loco, non necessitando di tutti gli accorgimenti necessari ad una linea ad alta velocità, ottenendo così il risultato di un costo inferiore mediamente tra il 20 ed il 50% rispetto ad una linea ad alta velocità. Di contro un locomotore maglev è molto più costoso di un locomotore classico e in sostanza i costi di costruzione complessivi o si equivalgono o rendono il maglev più costoso.
+Costi di mantenimento
+Sebbene il maglev costi di più nella costruzione delle infrastrutture, consente di risparmiare in costi di esercizio e di manutenzione essendo il metodo di trasporto più efficiente di un treno standard. Bisogna notare che non esistono applicazioni reali che permettano di stimare i costi di manutenzione e esercizio. Le attuali considerazioni si basano su simulazioni basate sul progetto della linea di Shanghai. 

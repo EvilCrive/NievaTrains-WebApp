@@ -1,0 +1,18 @@
+Nome: EMD DDA40X
+Tipo: long distance
+Marca: 	General Motors Electro-Motive Division (EMD)
+Velocità: 121 km/h
+Descrizione:
+Nel 1969, Union Pacific stava ritirando l'ultima delle loro locomotive elettriche a turbina a gas. Union Pacific aveva ordinato alle DD35 e alle DD35A EMD di sostituire le turbine e la DDA40X rappresentava un ulteriore sviluppo.
+
+Il primo DDA40X, UP # 6900, fu consegnato nell'aprile 1969, in tempo per partecipare alle celebrazioni del centenario del completamento della Prima Transcontinental Railroad alla guida della "Gold Spike Limited"; arrivò a Salt Lake City, nello Utah, la mattina del 10 maggio 1969. Altre quarantasei furono costruite tra giugno 1969 e settembre 1971, numerate da 6901 a 6946.
+
+Il DDA40X è lungo 30 metri. I telai furono fabbricati dalla John Mohr Company di Chicago, perché erano troppo grandi per la fabbrica EMD. L'uso di più di un motore primo in una singola locomotiva non era nuovo; le serie E erano popolari locomotive a doppio motore e Baldwin aveva prodotto (ma non venduto) una locomotiva con quattro motori diesel.
+
+La "X" nel numero di modello stava per sperimentale, poiché i Centennial DDA40X erano banchi di prova per la tecnologia che sarebbe andata in futuri prodotti EMD. UP utilizzava spesso queste locomotive per il trasporto di carichi pesanti. Ogni unità ha percorso con successo circa 2 milioni di miglia (3,2 milioni di chilometri) prima di ritirarsi dal servizio delle entrate nel 1985. I sistemi di controllo elettronici modulari successivamente utilizzati nei modelli EMD Dash-2 sono stati inizialmente utilizzati sulla DDA40X e sulla 4245 HP SD45X. Tutte le unità DDA40X includevano un nuovo circuito di prova del carico, le cui resistenze di frenatura dinamica consentivano alle unità di caricare la prova senza una scatola di prova del carico a terra.
+
+La DDA40X era dotata di cabine larghe simili a quelle delle unità della calandra F45 e FP45. Queste cabine erano superficialmente simili alla cabina comfort canadese introdotta dalla Canadian National nel 1973, sebbene senza i rinforzi strutturali delle future cabine a naso largo [3].
+
+Altri esperimenti sono stati condotti durante la vita di servizio di queste locomotive. Alcune unità sono state dotate di sirene antiaerea Federal Signal Thunderbolt per avvertire il personale di bordo quando si allontanano dai passaggi a livello, ma i risultati sono stati inconcludenti. Un altro dei test ha incluso componenti elettrici modulari, che hanno avuto successo. Ciò ha reso più facile la diagnosi dei problemi elettrici. Queste modifiche sono state utilizzate in tutte le future locomotive costruite da EMD. La marcia era di 59:18, permettendo 80 miglia orarie sui treni merci.
+
+Nonostante le eccellenti prestazioni e l'efficienza relativamente buona, queste unità sono costose da mantenere, il che alla fine ha spinto l'Unione Pacific a iniziare a ritirarle nel 1984. Tutte sono state ritirate nel 1986. Undici unità DDA40X sono conservate da vari musei, mentre un'altra unità sopravvive come fonte di pezzi di ricambio per altre locomotive. UP 6936, l'unica unità operativa, è di proprietà di Union Pacific ed è utilizzata nel servizio di escursioni.
