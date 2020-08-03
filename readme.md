@@ -74,6 +74,5 @@ SQL
 	* .htaccess
 
 ## DA FARE:
-* Mockup Treno e 404 e Admin Panel e Utente Esperto
 * DB
-* Cartelle
+* html statici
