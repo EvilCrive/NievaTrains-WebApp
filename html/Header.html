@@ -1,1 +1,30 @@
-header
+<header>
+	<div id="hrow1">
+		<img id="logoTop" src="../resources/train.png" alt="Logo Nieva Trains"/>
+		<h1>Nieva Trains</h1>
+		<form id="searchTop" action="../PHP/Ricerca.php" method="post">
+			<fieldset>
+			<select name="categorie" id="sceltaCategorie" form="searchTop">
+				<option value="1">Treni</option>
+				<option value="2">Utenti</option>
+			</select>
+			<div class="searchwrapper">
+		 		<input  type="text" value="Cerca" name="stringaCercata" />
+				<button class="button" name="cerca">Cerca</button>
+			</div>
+			</fieldset>
+		<img id="utenteTop" src="../resources/user.png" alt="Area riservata"/>
+		</form>
+	</div>
+	<div id="hrow2">
+		<ul id="menuList">
+			<li id="spec">Categorie:</li>
+			<li><span xml:lang="en" lang="en"><a href="#" >Home</a></span></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" >Vapore</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Primi" >Combustione</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Secondi" >Elettrici</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Dolci" >Maglev</a></li>
+			<li class="stayright"><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
+		</ul>
+	</div>
+</header>
