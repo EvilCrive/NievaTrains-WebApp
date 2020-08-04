@@ -75,4 +75,15 @@ SQL
 
 ## DA FARE:
 * DB
-* html statici
+* html statici:
+	* Homepage
+	* About
+	* Ricerca (get: categoria, stringa)
+	* Utente (get: id_utente)
+	* Maglev
+	* Treno (get: id_treno)
+	* Admin Panel (tutti)
+	* Login 
+	* Registrazione
+	* 404
+* CSS generale
