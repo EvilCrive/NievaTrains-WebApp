@@ -1,20 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
+
+<head>
+	<!-- Titolo -->
+	<title> Admin Panel - OrangeTango</title>
+	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+</head>
+<body>
 <header>
 	<div id="hrow1">
-		<img id="logoTop" src="../resources/train.png" alt="Logo Nieva Trains"/>
-		<h1>Nieva Trains</h1>
-		<form id="searchTop" action="../PHP/Ricerca.php" method="post">
-			<fieldset>
-			<select name="categorie" id="sceltaCategorie" form="searchTop">
-				<option value="1">Treni</option>
-				<option value="2">Utenti</option>
-			</select>
-			<div class="searchwrapper">
-		 		<input  type="text" value="Cerca" name="stringaCercata" />
-				<button class="button" name="cerca">Cerca</button>
-			</div>
-			</fieldset>
-		<img id="utenteTop" src="../resources/user.png" alt="Area riservata"/>
-		</form>
+		<div id="headerLeft">
+			<img id="logo" src="../resources/train.png" alt="Logo Nieva Trains"/>
+			<h1 id="title">Nieva Trains</h1>
+		</div>
+		<div id="headerCenter">
+			<form id="searchTop" action="../PHP/Ricerca.php" method="post">	
+				<select name="categorie" id="sceltaCategorie" form="searchTop">
+					<option value="1">Treni</option>
+					<option value="2">Utenti</option>
+				</select>
+				<input  type="text" value="Cerca" name="stringaCercata" />
+				<button class="button" name="cerca">Cerca</button>	
+			</form>
+		</div>
+		<div id="headerRight">
+			<img id="utenteTop" src="../resources/user.png" alt="Area riservata"/>
+		</div>
 	</div>
 	<div id="hrow2">
 		<ul id="menuList">
@@ -28,3 +40,5 @@
 		</ul>
 	</div>
 </header>
+
+

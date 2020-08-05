@@ -1,0 +1,150 @@
+/*
+Colori utilizzati:
+#f6f5f3
+#1a1e23
+#a8c1dc
+background-color: red;
+*/
+
+/*All pages*/
+* {
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 0;
+}
+html {
+  font-family: Verdana, sans-serif;
+  max-width: 1800px;
+  vertical-align: middle;
+  margin: auto;
+}
+body {
+	height: 100%;
+	min-height: 100%;
+	background-color: #f6f5f3!important;
+	color: white;
+}
+.clear::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Header 1*/
+#hrow1 {
+	width: 100%;
+	background-color: #1a1e23;
+	border-bottom-style: solid;
+    border-bottom-width: 5px;
+	border-bottom-color: #a8c1dc;
+}
+#headerCenter {
+	display: inline-block;
+	text-align: center;
+	width: 60%;
+}
+#headerLeft {
+	display: inline-block;
+	width: 19%;
+}
+#headerRight {
+	display: inline-block;
+	width: 19%;
+}
+#hrow1 h1 {
+	display: inline;
+	font-size: 1em; /*per i legacy browser*/
+	font-size: 1.7vw; 
+}
+#searchTop {
+	display: inline-block;
+}
+#logo {
+	height: 50px;
+	cursor: pointer;
+}
+#utenteTop {
+	height: 50px;
+	cursor: pointer;
+	display: float;
+	float: right;
+}
+
+/*Header 2*/
+#hrow2 {
+	width: 100%;
+	background-color: #1a1e23;
+}
+#hrow2 ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#menuList li {
+	float: left;
+}
+#menuList li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+#spec {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px;
+  background-color: #a8c1dc;
+}
+/*FOOTER*/
+footer{
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  top: 100%;
+  width: 100%;
+  max-width: 1800px;
+  margin-top: 200px;
+  background-color: #1a1e23;
+}
+#validity {
+	display: inline-block;
+	float: left;
+}
+#footerCenter {
+	display: inline-block;
+}
+#torna_su {
+	display: inline-block;
+	float: right;
+}
+
+#Logo{
+  float: left;
+  overflow: hidden;
+  height: 50px;
+  width: 250px;
+  margin-left: 10px;
+  display: block;
+}
+#footer ul{
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  text-decoration: none;	
+}
+#footer ul li{
+  margin: 5px;
+}
+#validity img{
+	display: block;
+} 
+
+
+
+
+
+
