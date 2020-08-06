@@ -1,1 +1,101 @@
-treno
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
+
+<head>
+	<!-- Titolo -->
+	<title> Admin Panel - OrangeTango</title>
+	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+</head>
+<body>
+<header>
+	<div id="hrow1">
+		<div id="headerLeft">
+			<img id="logo" src="../resources/train.png" alt="Logo Nieva Trains"/>
+			<h1 id="title">Nieva Trains</h1>
+		</div>
+		<div id="headerCenter">
+			<form id="searchTop" action="../PHP/Ricerca.php" method="post">	
+				<select name="categorie" id="sceltaCategorie" form="searchTop">
+					<option value="1">Treni</option>
+					<option value="2">Utenti</option>
+				</select>
+				<input  type="text" value="Cerca" name="stringaCercata" />
+				<button class="button" name="cerca">Cerca</button>	
+			</form>
+		</div>
+		<div id="headerRight">
+			<img id="utenteTop" src="../resources/user.png" alt="Area riservata"/>
+		</div>
+	</div>
+	<div id="hrow2">
+		<ul id="menuList">
+			<li id="spec">Categorie:</li>
+			<li><span xml:lang="en" lang="en"><a href="#" >Home</a></span></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" >Vapore</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Primi" >Combustione</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Secondi" >Elettrici</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Dolci" >Maglev</a></li>
+			<li class="stayright"><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
+		</ul>
+	</div>
+	<div id="breadcrumb">
+	</div>
+</header>
+##header##
+<main>
+	<div id="trainHeader">
+		<h1>Nome treno bellissimo</h1>
+		<p>10 preferiti</p>
+		<img />
+		<p>by Aldo Baglio</p>
+		<button>Modifica</button>
+	</div>
+	
+	<img />
+	
+	<h2>Scheda Tecnica</h2>
+	<div id="schedaTecninca">
+		<ul>
+			<li>Categoria: a</li>
+			<li>Marca: a</li>
+			<li>Tipo: a</li>
+			<li>Velocit****à****: a</li>
+			<li>Nome: a</li>
+		<ul>
+	</div>
+	
+	<h2>Descrizione</h2>
+	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur semper mi nec cursus. Ut pretium ullamcorper sem, ac auctor purus pellentesque quis. Aenean bibendum ullamcorper efficitur. Nullam vitae rhoncus ante. Suspendisse leo turpis, consectetur eu ultrices vel, interdum non eros. Vestibulum eget ipsum libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam at arcu sed metus aliquet pretium.
+	Quisque mattis, dui elementum lacinia posuere, augue elit aliquam erat, ac egestas mauris justo eget est. Vivamus vel feugiat est. In suscipit pretium felis, eu venenatis nunc consequat ut. Nulla interdum semper ipsum quis hendrerit. In leo libero, iaculis sit amet mattis ut, sagittis posuere urna. Etiam eu tellus eu massa finibus laoreet vitae eu nisl. Donec risus erat, efficitur et feugiat in, fermentum non diam.
+	</p>
+	
+	<h3>Commenti:</h3>
+	<div id="commenti">
+		<!--copiare progetto vecchio-->
+	</div>
+</main>
+##footer##
+<footer>
+	<div id="validity">
+		<img id="htmlvalid" src="../resources/valid-xhtml10.png" alt="HTML valido" />
+		<img id="cssvalid" src="../resources/vcss-blue.gif" alt="CSS3 valido" />
+		<p id="entrataAdminpanel"><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
+	</div>
+	<div id="footerCenter">
+		<div id="LogoFooter">
+			<img src="../resources/train.png"  id="logo" />
+			<h1>Nieva Trains</h1>
+		</div>
+		<p>&copy; 2020 Nieva Trains S.p.a.</p>
+		<ul>
+			<li><a href="http://www.facebook.com" lang="en">Facebook</a></li>
+			<li><a href="https://www.instagram.com/?hl=it" lang="en">Instagram</a></li>
+			<li><a href="../PHP/About.php" lang="en">About</a></li>
+		</ul>
+	</div>
+	<div id="torna_su">
+		<p><a>Torna su</a></p>
+	</div>
+</footer>
+</body>
