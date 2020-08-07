@@ -1,1 +1,80 @@
-Login
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
+
+<head>
+	<!-- Titolo -->
+	<title> Admin Panel - OrangeTango</title>
+	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+</head>
+<body>
+<header>
+	<div id="hrow1">
+		<div id="headerLeft">
+			<img id="logo" src="../resources/train.png" alt="Logo Nieva Trains"/>
+			<h1 id="title">Nieva Trains</h1>
+		</div>
+		<div id="headerCenter">
+			<form id="searchTop" action="../PHP/Ricerca.php" method="post">	
+				<select name="categorie" id="sceltaCategorie" form="searchTop">
+					<option value="1">Treni</option>
+					<option value="2">Utenti</option>
+				</select>
+				<input  type="text" value="Cerca" name="stringaCercata" />
+				<button class="button" name="cerca">Cerca</button>	
+			</form>
+		</div>
+		<div id="headerRight">
+			<img id="utenteTop" src="../resources/user.png" alt="Area riservata"/>
+		</div>
+	</div>
+	<div id="hrow2">
+		<ul id="menuList">
+			<li id="spec">Categorie:</li>
+			<li><span xml:lang="en" lang="en"><a href="#" >Home</a></span></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" >Vapore</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Primi" >Combustione</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Secondi" >Elettrici</a></li>
+			<li><a href="../PHP/Intermedia.php?Categoria=Dolci" >Maglev</a></li>
+			<li class="stayright"><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
+		</ul>
+	</div>
+	<div id="breadcrumb">
+	</div>
+</header>
+##header##
+<main>
+    <h1>Accedi:</h1>
+		<div class="LoginSignupBox">
+			<p><span xml:lang="en" lang="en">Email</span></p>
+			<input  class="inputbar" type="email" name="email" placeholder="Email" />
+			<p><span xml:lang="en" lang="en">Password</span></p>
+			<input class="inputbar" type="password" name="password" placeholder="Password"/>
+			<div id="errori_login"></div>
+            <input class="button" name="button" type="submit" value="Accedi" />	
+		</div>
+</main>
+##footer##
+<footer>
+	<div id="validity">
+		<img id="htmlvalid" src="../resources/valid-xhtml10.png" alt="HTML valido" />
+		<img id="cssvalid" src="../resources/vcss-blue.gif" alt="CSS3 valido" />
+		<p id="entrataAdminpanel"><span xml:lang="en" lang="en"><a href="../PHP/Admin_panel.php">AdminPanel</a></span></p>
+	</div>
+	<div id="footerCenter">
+		<div id="LogoFooter">
+			<img src="../resources/train.png"  id="logo" />
+			<h1>Nieva Trains</h1>
+		</div>
+		<p>&copy; 2020 Nieva Trains S.p.a.</p>
+		<ul>
+			<li><a href="http://www.facebook.com" lang="en">Facebook</a></li>
+			<li><a href="https://www.instagram.com/?hl=it" lang="en">Instagram</a></li>
+			<li><a href="../PHP/About.php" lang="en">About</a></li>
+		</ul>
+	</div>
+	<div id="torna_su">
+		<p><a>Torna su</a></p>
+	</div>
+</footer>
+</body>

@@ -31,6 +31,7 @@ body {
 }
 
 /*Header 1*/
+
 #hrow1 {
 	width: 100%;
 	background-color: #1a1e23;
@@ -71,6 +72,7 @@ body {
 }
 
 /*Header 2*/
+
 #hrow2 {
 	width: 100%;
 	background-color: #1a1e23;
@@ -98,7 +100,9 @@ body {
   padding: 16px;
   background-color: #a8c1dc;
 }
+
 /*FOOTER*/
+
 footer{
   overflow: hidden;
   padding-bottom: 15px;
@@ -121,7 +125,6 @@ footer{
 	display: inline-block;
 	float: right;
 }
-
 #Logo{
   float: left;
   overflow: hidden;
@@ -144,7 +147,57 @@ footer{
 } 
 
 
+/* Login e registrazione */
 
+.LoginSignupBox{
+  display: inline-block;
+  border: 5px solid lightblue;
+  border-radius: 10px;
 
+}
+.inputbar{
+  width: 90%;
+}
+.LoginSignupBox input[type=text]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.LoginSignupBox input[type=text]:focus{
+    border-bottom: 2px solid rgb(246,173,123);
+}
+
+.LoginSignupBox input[type=text]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.LoginSignupBox input[type=text]:focus{
+    border-bottom: 2px solid rgb(246,173,123);
+}
+
+.LoginSignupBox input[type=password]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.LoginSignupBox input[type=password]:focus{
+    border-bottom: 2px solid rgb(246,173,123);
+}
 
 
