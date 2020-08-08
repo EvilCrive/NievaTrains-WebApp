@@ -7,6 +7,7 @@ background-color: red;
 */
 
 /*All pages*/
+
 * {
   box-sizing: border-box;
   margin: 0em;
@@ -29,8 +30,20 @@ body {
   clear: both;
   display: table;
 }
+.button{
+  background-color: white;
+  border: 2px solid #f6ad7b;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #f6ad7b
+}
 
-/*Header 1*/
+/*HEADER 1*/
 
 #hrow1 {
 	width: 100%;
@@ -71,7 +84,7 @@ body {
 	float: right;
 }
 
-/*Header 2*/
+/*HEADER 2*/
 
 #hrow2 {
 	width: 100%;
@@ -115,14 +128,14 @@ footer{
   background-color: #1a1e23;
 }
 #validity {
-	display: inline-block;
+	display: block;
 	float: left;
 }
 #footerCenter {
-	display: inline-block;
+	display: block;
 }
 #torna_su {
-	display: inline-block;
+	display: block;
 	float: right;
 }
 #Logo{
@@ -146,8 +159,7 @@ footer{
 	display: block;
 } 
 
-
-/* Login e registrazione */
+/* LOGIN E REGISTRAZIONE */
 
 .LoginSignupBox{
   display: inline-block;
@@ -167,11 +179,9 @@ footer{
   height: 30px;
   margin-bottom: 10px;
 }
-
 .LoginSignupBox input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
-
 .LoginSignupBox input[type=text]{
   border:none;
   border-bottom: 2px solid #adadad;
@@ -181,11 +191,9 @@ footer{
   height: 30px;
   margin-bottom: 10px;
 }
-
 .LoginSignupBox input[type=text]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
-
 .LoginSignupBox input[type=password]{
   border:none;
   border-bottom: 2px solid #adadad;
@@ -195,9 +203,30 @@ footer{
   height: 30px;
   margin-bottom: 10px;
 }
-
 .LoginSignupBox input[type=password]:focus{
     border-bottom: 2px solid rgb(246,173,123);
 }
 
+/* ADMIN PANEL */
 
+.AdminPanelBox{
+  width: 100%;
+}
+
+/* RICERCA */
+
+#SearchBox{ width: 100%;}
+.SearchBarBox{ width: 100%;}
+#SceltaCategorieRicerca{ width: 100%;}
+.rowconsigliate{
+	max-width: 1400px;
+	height: auto;
+	margin: auto;
+	display: flex;
+  flex-wrap: wrap;
+}
+.clear{}
+
+.desc ul{
+  list-style-type: none;
+}

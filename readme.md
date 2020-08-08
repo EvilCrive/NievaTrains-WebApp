@@ -87,3 +87,5 @@ SQL
 	* Registrazione
 	* 404
 * CSS generale
+    * da guardare button, button:hover, loginsignupbox, adminpanelbox, 
+    * searchbox, searchbarbox, sceltacategoriericerca, rowconsigliate,clear,responsive,gallery,desc
