@@ -90,3 +90,4 @@ SQL
 * CSS generale
     * da guardare button, button:hover, loginsignupbox, adminpanelbox, 
     * searchbox, searchbarbox, sceltacategoriericerca, rowconsigliate,clear,responsive,gallery,desc
+* mancano script js nei meta dell' head
