@@ -74,6 +74,7 @@ SQL
 	* .htaccess
 
 ## DA FARE:
+* 404, titoli e meta
 * DB
 * html statici:
 	* Homepage
