@@ -14,8 +14,8 @@
   * Registrazione
   * 404
 * CSS generale
-  * da guardare button, button:hover, loginsignupbox, adminpanelbox, 
-  * searchbox, searchbarbox, sceltacategoriericerca, rowconsigliate,clear,responsive,gallery,desc
+  * Matteo: css generali di AdminPanel(x2), Registrazione/LogIn, Ricerca, Treno, Utente
+  * Francesco: Header e footer, BoxTrain
 * JS
   * mancano script js nei meta dell' head
   * registrazione e login
