@@ -42,16 +42,17 @@ p {
   display: table;
 }
 .button{
-  background-color: white;
-  border: 2px solid #f6ad7b;
-  color: black;
+  border: 2px solid lightblue;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  margin: 10px auto;
+  padding: 7px;
+  border-radius: 5px;
 }
 .button:hover{
-  background-color: #f6ad7b;
+  background-color: lightblue;
 }
 
 /*HEADER 1*/
@@ -179,78 +180,6 @@ footer{
 	display: block;
 }
 
-/* LOGIN E REGISTRAZIONE */
-
-.LoginSignupBox{
-  display: inline-block;
-  border: 5px solid lightblue;
-  border-radius: 10px;
-
-}
-.inputbar{
-  width: 90%;
-}
-.LoginSignupBox input[type=text]{
-  border:none;
-  border-bottom: 2px solid #adadad;
-  border-radius: 5px;
-  outline: none;
-  font-size: 15px;
-  height: 30px;
-  margin-bottom: 10px;
-}
-.LoginSignupBox input[type=text]:focus{
-    border-bottom: 2px solid rgb(246,173,123);
-}
-.LoginSignupBox input[type=text]{
-  border:none;
-  border-bottom: 2px solid #adadad;
-  border-radius: 5px;
-  outline: none;
-  font-size: 15px;
-  height: 30px;
-  margin-bottom: 10px;
-}
-.LoginSignupBox input[type=text]:focus{
-    border-bottom: 2px solid rgb(246,173,123);
-}
-.LoginSignupBox input[type=password]{
-  border:none;
-  border-bottom: 2px solid #adadad;
-  border-radius: 5px;
-  outline: none;
-  font-size: 15px;
-  height: 30px;
-  margin-bottom: 10px;
-}
-.LoginSignupBox input[type=password]:focus{
-    border-bottom: 2px solid rgb(246,173,123);
-}
-
-/* ADMIN PANEL */
-
-.AdminPanelBox{
-  width: 100%;
-}
-
-/* RICERCA */
-
-#SearchBox{ width: 100%;}
-.SearchBarBox{ width: 100%;}
-#SceltaCategorieRicerca{ width: 100%;}
-.rowconsigliate{
-	max-width: 1400px;
-	height: auto;
-	margin: auto;
-	display: flex;
-  flex-wrap: wrap;
-}
-.clear{}
-
-.desc ul{
-  list-style-type: none;
-}
-
 /* ABOUT */
 
 #aboutList {
@@ -280,21 +209,83 @@ footer{
 	padding: 10px;
 }
 
-/* HOME [da copiare l'home vecchia]*/
+/* HOME */
 
 #wrapperHome {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	margin: 1em 5em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
-#wrapperHome > div {
-	text-align: center;
-	min-height: 150px;
-	max-width: 150px;
-	flex-basis: 0px;
-	margin: 1em;
-	background-color: #5383e8;
+.HomeBox {
+  margin: 20px;
+  padding: 30px;
+  width: 300px;
+  height: 250px;
+  background-color: #ab;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px 50px;
+}
+
+.HomeBox:hover{
+  background-color: lightblue;
+}
+
+/* LOGIN E REGISTRAZIONE */
+
+.LoginSignupBox{
+	width: 100%;
+	max-width: 300px;
 	padding: 10px;
+  display: inline-block;
+  border: 5px solid lightblue;
+  border-radius: 15px 50px;
+}
+.inputbar{
+  width: 90%;
+}
+.LoginSignupBox input[type=text], .LoginSignupBox input[type=password], .LoginSignupBox input[type=email]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.LoginSignupBox input[type=text]:focus, .LoginSignupBox input[type=password]:focus, .LoginSignupBox input[type=email]:focus{
+    border-bottom: 2px solid lightblue;
+}
+
+
+/* ADMIN PANEL */
+
+.AdminPanelBox {
+  display: inline-block;
+}
+.AdminPanelBox ul{
+	list-style: none;
+
+}
+
+/* RICERCA */
+
+#SearchBox{ width: 100%;}
+.SearchBarBox{ width: 100%;}
+#SceltaCategorieRicerca{ width: 100%;}
+.rowconsigliate{
+	max-width: 1400px;
+	height: auto;
+	margin: auto;
+	display: flex;
+  flex-wrap: wrap;
+}
+.clear{}
+
+.desc ul{
+  list-style-type: none;
 }
