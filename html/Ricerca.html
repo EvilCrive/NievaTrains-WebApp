@@ -13,19 +13,20 @@
 <body>
 ##header##
 <main>
-    <div id="SearchBox">
-		<div class="SearchBarBox">
+		<div id="searchBarBox">
 			<form id="searchTop" action="../PHP/Ricerca.php" method="post">	
-				<select name="categorie" id="sceltaCategorieRicerca" form="searchTop">
+				<select id="sceltaCategorieRicerca" name="categorie" form="searchTop">
 					<option value="1">Treni</option>
 					<option value="2">Utenti</option>
 				</select>
-				<input  type="text" value="Cerca" name="stringaCercata" />
+				<input id="ricercaInput" type="text" value="Cerca" name="stringaCercata" />
 				<button class="button" name="cerca">Cerca</button>	
 			</form>
         </div>
-        <div class="ResultsRicerca"></div>
-    </div>
+		<h1 id="outputRicerca">Risultati ricerca per treno matto tra gli utenti</h1>
+        <div id="ResultsRicerca">
+		
+		</div>
            
 </main>
 ##footer##
