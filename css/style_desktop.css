@@ -20,6 +20,9 @@ html {
   margin: auto;
 
 }
+.hidden{
+	display: none;
+}
 body {
 	height: 100%;
 	min-height: 100%;
@@ -46,10 +49,12 @@ p {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  cursor: pointer;
-  margin: 10px auto;
+  padding: 5px 13px;
+  margin: 6px 2px;
+  /*margin: 10px auto;*/
   padding: 7px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .button:hover{
   background-color: lightblue;
@@ -356,4 +361,128 @@ width: 100%;
 /* TRENO */
 #trainHeader h1, #pref{
 	display: inline-block;
+}
+#schedaTecnica {
+	width: 70%;
+	margin: auto;
+	padding: 10px;
+	border: 3px solid lightblue;
+	border-radius: 15px 50px;
+}
+#schedaTecnica ul {
+	list-style: none;
+}
+#schedaTecnica ul li {
+	padding: 3px;
+}
+#descrizione {
+	padding-bottom: 10px;
+	border-bottom: 3px solid lightblue;
+}
+
+/****commenti da cambiare****/
+.comment-section{
+    list-style: none;
+    max-width: 1400px;
+    width: 90%;
+    margin: 50px auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.comment{
+    display: flex;
+    border-radius: 3px;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+	color:  #505050;
+}
+
+.data{
+  font-size: 0.75em;
+}
+.comment .info{
+    width: 100%;
+	order: 3;
+}
+.eliminacommenti fieldset .button {
+	float: right;
+}
+.comment .info a{	
+    display: block;
+    text-decoration: none;
+    color: #656c71;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0 3px 0;
+}
+
+.comment p{
+    line-height: 1.5em;
+    padding: 18px 22px;
+    width: 100%;
+    position: relative;
+    word-wrap: break-word;
+}
+.comment p{
+    order: 1;
+    background-color:  lightblue;
+}
+.comment p:after{
+    width: 12px;
+    height: 12px;
+    top: initial;
+    left: 28px;
+    bottom: -6px;
+}
+#write-new{
+    margin: 50px auto 0;
+    width: 90%;
+    height: 200px;;
+}
+#write-new textarea{
+    color:  #444;
+    font: inherit;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid #cecece;
+    background-color:  #fefefe;
+    box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.06);
+    overflow: auto;
+    width:100%;
+    min-height: 80px;
+    padding: 15px 20px;
+}
+#write-new textarea:focus{
+    border: 3px solid lightblue;
+}
+#write-new .button{
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 18px;
+}
+
+
+fieldset{
+	border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  width:100%;
+}
+#deleteButton{
+	float: right;
+	width: 50%;
+}
+#commenti {
+	text-align: left;
+}
+#confirmComment{
+	display: block;
+}
+.commentInfo {
+	float: left;
 }
