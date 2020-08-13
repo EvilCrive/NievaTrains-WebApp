@@ -10,10 +10,11 @@ background-color: red;
 
 * {
   box-sizing: border-box;
-  margin: 0em;
+  margin: 0;
   padding: 0;
 }
 html {
+  height: 100%;
   font-family: Verdana, sans-serif;
   max-width: 1800px;
   vertical-align: middle;
@@ -24,8 +25,7 @@ html {
 	display: none;
 }
 body {
-	height: 100%;
-	min-height: 100%;
+  height: 100%;
 	background-color: #f6f5f3!important;
 	color: #292929;
 	text-align: center;
@@ -44,6 +44,15 @@ p {
   clear: both;
   display: table;
 }
+
+#container{
+  min-height: 100%;
+}
+#main{
+  overflow: auto;
+  padding-bottom: 200px;
+}
+
 .button{
   border: 2px solid lightblue;
   text-align: center;
@@ -61,128 +70,175 @@ p {
 }
 
 /*HEADER 1*/
-
+header{
+  width: 100%;
+  max-width: 1800px;
+  position: fixed;
+}
 #hrow1 {
 	width: 100%;
-	background-color: #232f46/*#1a1e23*/;
-  padding: 10px 10px;
-	/*border-bottom-style: solid;
-  border-bottom-width: 5px;
-	border-bottom-color: #5383e8 #a8c1dc;*/
-  overflow: hidden;
-}
-#headerCenter {
-	display: inline-block;
-	text-align: center;
-	width: 60%;
-}
-#headerLeft {
-	display: inline-block;
-	width: 19%;
-  text-align: center;
-  padding-bottom: 20px;
-}
-#headerLeft #title{
-    font-size: 1.5em;
-
-}
-
-#headerRight {
-	display: inline-block;
-	width: 19%;
-}
-#hrow1 h1 {
-	display: inline;
-	font-size: 1em; /*per i legacy browser*/
-	font-size: 1.7vw;
-}
-#searchTop {
-	display: inline-block;
+	background-color: #232f46;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
 }
 #logo {
-	height: 50px;
+  max-width: 300px;
+	max-height: 60px;
 	cursor: pointer;
 }
 #utenteTop {
-	height: 50px;
+  max-width: 60px;
+	max-height: 60px;
 	cursor: pointer;
-	display: float;
-	float: right;
+}
+
+#search{
+  float: right;
+}
+
+select{
+  margin: 0 10px;
+  padding: 10px;
+  float: left;
+  border-radius: 40px;
+  font-size: 16px;
+}
+
+.search-box{
+  width: 300px;
+  background: white;
+  border-radius: 40px;
+  height: 40px;
+  padding: 10px;
+  float: right;
+}
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float:left;
+  padding: 0;
+  color: black;
+  font-size: 18px;
+  line-height: 10px;
 }
 
 /*HEADER 2*/
 
 #hrow2 {
 	width: 100%;
+  height: auto;
 	background-color: #294173/*#1a1e23*/;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #hrow2 ul{
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
 	overflow: hidden;
 }
-#menuList li {
+.menuList li {
 	float: left;
+  font-size: 16px;
 }
-#menuList li a {
+.menuList li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 16px;
+  padding: 16px 30px;
   text-decoration: none;
 }
+.menuList li a:hover {
+  background-color: rgba(83,131,232,0.8);
+  transition: 0.4s;
+}
 #spec {
+  background-color: #294173/*#a8c1dc*/;
   display: block;
-  color: black;
+  font-weight: bold;
+  color: white;
   text-align: center;
-  padding: 16px;
-  background-color: #5383e8/*#a8c1dc*/;
+  padding: 16px 20px;
+  text-decoration: none;
+}
+#stayLeft{
+  float: left;
+}
+#stayRight{
+  float: right;
 }
 
 /*FOOTER*/
 
 footer{
   overflow: hidden;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  text-align: center;
-  top: 100%;
-  width: 100%;
+  position: relative;
+  height: 300px;
   max-width: 1800px;
-  margin-top: 200px;
-  background-color: #1a1e23;
+  width: 100%;
+  margin-top: -300px;
+  clear: both;
+  background-color: #232f46;
+  color: white;
+}
+#main-content{
+  display: flex;
+}
+#main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+}
+.left .content p{
+  text-align: justify;
+}
+.center .social{
+  margin: 20px 0 20px 0;
+}
+.center .social a{
+  padding: 0 10px;
+}
+.center .social a span{
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: #a8c1dc;
+  color: black;
+}
+.center .social a span:hover{
+  background-color: white;
+}
+.right .content span {
+  margin: 10px;
 }
 #validity {
 	display: block;
-	float: left;
-}
-#footerCenter {
-	display: block;
-}
-#torna_su {
-	display: block;
 	float: right;
 }
-#Logo{
-  float: left;
-  overflow: hidden;
-  height: 50px;
-  width: 250px;
+#torna_su {
+	margin: 10px;
+}
+#LogoFooter{
+  margin: 10px;
+}
+#about{
+  float:left;
   margin-left: 10px;
-  display: block;
-}
-#footer ul{
-  display: inline-block;
-  list-style-type: none;
-  text-align: center;
-  text-decoration: none;
-}
-#footer ul li{
-  margin: 5px;
-}
-#validity img{
-	display: block;
 }
 
 /* ABOUT */
@@ -307,7 +363,7 @@ width: 100%;
 	background-color: #f6f5f3;
   border-bottom: 2px solid #adadad;
   border-radius: 5px;
-	
+
 }
 
 #searchTop .button {
@@ -362,6 +418,7 @@ width: 100%;
 #trainHeader h1, #pref{
 	display: inline-block;
 }
+
 #schedaTecnica {
 	width: 70%;
 	margin: auto;
@@ -486,3 +543,4 @@ fieldset{
 .commentInfo {
 	float: left;
 }
+
