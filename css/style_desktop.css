@@ -339,13 +339,19 @@ footer{
 /* RICERCA */
 #searchTop {
 width: 100%;
+}
 
+.long{
+  width: 400px;
 }
 
 #searchBarBox {
 	width: 100%;
+  background-color: #232f46;
+  padding: 20px;
 }
 
+/*
 #sceltaCategorieRicerca {
 	display: inline-block;
 	width: 5%;
@@ -376,9 +382,8 @@ width: 100%;
 
 #outputRicerca {
 	padding-bottom: 15px;
-	border-bottom: 3px solid lightblue;
 }
-
+*/
 /* UTENTE */
 .topUtente {
 	text-align:left;
@@ -456,7 +461,7 @@ width: 100%;
     margin-bottom: 35px;
     margin-top: 20px;
     flex-wrap: wrap;
-	color:  #505050;
+	   color: #505050;
 }
 
 .data{
@@ -469,7 +474,7 @@ width: 100%;
 .eliminacommenti fieldset .button {
 	float: right;
 }
-.comment .info a{	
+.comment .info a{
     display: block;
     text-decoration: none;
     color: #656c71;
@@ -547,3 +552,78 @@ fieldset{
 	float: left;
 }
 
+/* Ricerca Treni */
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.card{
+  width: 30%;
+  background: #fff;
+  border: 3px solid #294173;
+  border-radius: 0 20px 20px 0;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.card-header{
+  /*background-image: url(treno_vapore.jpg);
+  background-size: 100% 100%;*/
+  color: #fff;
+  float:left;
+  max-width: 200px;
+  max-height: 200px;
+  /*#a8c1dc
+  #1a1e23*/
+}
+.card-body{
+  padding: 20px 20px;
+  text-align: left;
+  font-size: 18px;
+
+}
+.card-body ul{
+  list-style: none;
+}
+.card-body ul li{
+  text-align: center;
+  padding-bottom: 3px;
+}
+.card-body .btn{
+  display: block;
+  float: right;
+  color: #fff;
+  text-align: center;
+  background: #294173;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius: 16px;
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0,0,0,0.25);
+}
+
+.img-left{
+  height: 200px;
+  width: 200px;
+}
+@media screen and (max-width: 1000px){
+  .card{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 620px){
+  .container{
+    width: 100%;
+  }
+  .heading{
+    padding: 20px;
+    font-size: 20px;
+  }
+  .card{
+    width: 80%;
+  }
+}
