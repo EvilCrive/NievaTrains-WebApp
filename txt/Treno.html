@@ -15,7 +15,7 @@
 <main>
 	<div id="trainHeader">
 		<h1>##NomeT##</h1>
-		<p id="pref">10 preferiti</p>
+		<p id="pref">##LikeT## preferiti</p>
 		<p >by ##NomeA##</p>
 		<img />
 		<button class="button">Modifica</button>
@@ -26,11 +26,8 @@
 	<h2>Scheda Tecnica</h2>
 	<div id="schedaTecnica">
 		<ul>
-			<li>Categoria: ##CatT##</li>
-			<li>Marca: ##MarcaT##</li>
-			<li>Tipo: ##TipoT##</li>
-			<li>Velocità: ##VelT##</li>
-			<li>Nome: ##NomeT##</li>
+			##SchedaT##
+
 		<ul>
 	</div>
 	
@@ -40,7 +37,22 @@
 	</div>
 	<h3>Commenti:</h3>
 	<div id="commenti">
+	<ul class="comment-section" id="commentreturn">
 	##Commenti##
+			<li id="write-new">
+			<form action="../PHP/commentManage.php" method="post" id="commentform" onsubmit="return ValidateComment()">
+			<fieldset>
+				<textarea rows="5" cols="300" id="controlLogged" class="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input name="idricetta" value="%%idricetta" class="hidden"/>
+				<textarea rows="5" cols="300" name="comment"></textarea>
+				<div id="confirmComment">
+					   <button class="button" type="submit">Invia</button>
+					   <p id="commentRequired" class="errors"></p>
+   				</div>
+			</fieldset>
+			</form>
+		</li>
+	</ul>
 	</div>
 </main>
 ##footer##
