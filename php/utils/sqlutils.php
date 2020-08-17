@@ -1,29 +1,12 @@
 <?php
 require_once "connection.php";
-
+//Utenti
 function getInfoUtente($id, $connessione) {
-	return $connessione->getQuery("SELECT Nome, Cognome, Username FROM utenti WHERE Id_Utente=$id");
+	return $connessione->getQuery("SELECT * FROM utenti WHERE Id_Utente=$id");
 }
-function getEmail($id, $connessione) {
-	return $connessione->getQuery("SELECT Mail FROM utenti WHERE Id_Utente=$id");
-}
-function getBio($id, $connessione) {
-	return $connessione->getQuery("SELECT Bio FROM utenti WHERE Id_Utente=$id");
-}
-function getNomeT($id, $connessione) {
-	return $connessione->getQuery("SELECT Nome FROM treni WHERE Id_Treno=$id");
-}
-function getUsernameA($id, $connessione) {
-	return $connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
-}
-function getSchedaT($id, $connessione) {
-	return $connessione->getQuery("SELECT Nome, Categoria, Costruttore, Tipo, Velocità_Max, Anni_Costruzione FROM treni WHERE Id_Treno=$id");
-}
-function getDescT($id, $connessione) {
-	return $connessione->getQuery("SELECT Descrizione FROM treni WHERE Id_Treno=$id");
-}
-function getImgT($id, $connessione) {
-	return $connessione->getQuery("SELECT Immagine FROM treni WHERE Id_Treno=$id");
+//treni
+function getInfoTreno($id, $connessione) {
+	return $connessione->getQuery("SELECT * FROM treni WHERE Id_Treno=$id");
 }
 /////////////////////////////////////////////////////
 function getTrainBoxAutore($id, $connessione) {
@@ -45,11 +28,8 @@ function getCommenti($id, $connessione) {
 function getPreferiti($id, $connessione) {
 	return $connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id");
 }
-function getImmagineUtente($id, $connessione) {
-	return $connessione->getQuery("SELECT Immagine FROM utenti WHERE Id_Utente=$id");
-}
-function getImmagineTreno($id, $connessione) {
-	return $connessione->getQuery("SELECT Immagine FROM treni WHERE Id_Treno=$id");
+function getUsernameA($id, $connessione) {
+	return $connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
 }
 ?>
 

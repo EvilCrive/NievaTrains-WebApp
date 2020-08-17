@@ -13,20 +13,15 @@ try {
 	else throw new Exception("No get");
 	//query al db
 	$queryInfoU=getInfoUtente($id, $connessione);
-	$queryEmail=getEmail($id, $connessione);
-	$queryBio=getBio($id, $connessione);
 	$queryRisultati=getTrainBoxAutore($id, $connessione);
-	$nPreferiti=getPreferiti($id, $connessione);
-	$queryImmagine=getImmagineUtente($id, $connessione);
 	//generazione variabili di sostituzione
 	$divusermenu;
 	$ref;
 	$infoU=stampaInfoUtente($queryInfoU);
-	$email=stampaEmail($queryEmail);
-	$bio=stampaBio($queryBio);
+	$email=stampaEmail($queryInfoU);
+	$bio=stampaBio($queryInfoU);
 	$risultati=stampaTrainBox($queryRisultati);
-	$preferiti=stampaPreferiti($nPreferiti);
-	$immagine=stampaImmagine($queryImmagine);
+	$immagine=stampaImmagine($queryInfoU);
 	//importazione txt
 	$final = file_get_contents("../txt/Utente.html");
 	$header=file_get_contents("../txt/Header.html");
@@ -35,7 +30,7 @@ try {
 	$final=str_replace("%%user",$divusermenu,$final);	
 	$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##ImmagineUtente##",$immagine,$final);
-	$final=str_replace("##LikeT##",$preferiti,$final);	
+	
 	$final=str_replace("##InfoUtente##",$infoU,$final);
 	$final=str_replace("##Email##",$email,$final);
 	$final=str_replace("##Bio##",$bio,$final);	

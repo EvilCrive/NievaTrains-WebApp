@@ -12,26 +12,26 @@ try {
 	if(isset($_GET["Id_Treno"])) $id=$_GET["Id_Treno"];
 	else throw new Exception("No get");
 	//query al db
-	$queryNomeT=getNomeT($id, $connessione);
+	$queryInfoTreno=getInfoTreno($id, $connessione);
 	$queryNomeA=getUsernameA($id, $connessione);
-	$querySchedaT=getSchedaT($id, $connessione);
-	$queryDescT=getDescT($id, $connessione);
 	$queryCommenti=getCommenti($id, $connessione);
-	$queryImmagine=getImmagineTreno($id, $connessione);
+	$nPreferiti=getPreferiti($id, $connessione);
 	//generazione variabili di sostituzione
 	$divusermenu;
 	$ref;
-	$NomeT=stampaNomeT($queryNomeT);
+	$preferiti=stampaPreferiti($nPreferiti);
+	$NomeT=stampaNomeT($queryInfoTreno);
 	$NomeA=stampaUsernameA($queryNomeA);
-	$SchedaT=stampaSchedaT($querySchedaT);
-	$DescT=stampaDescT($queryDescT);
+	$SchedaT=stampaSchedaT($queryInfoTreno);
+	$DescT=stampaDescT($queryInfoTreno);
 	$Commenti=stampaCommenti($queryCommenti);
-	$immagine=stampaImmagine($queryImmagine);
+	$immagine=stampaImmagine($queryInfoTreno);
 	//importazione txt
 	$final = file_get_contents("../txt/Treno.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
+	$final=str_replace("##LikeT##",$preferiti,$final);
 	$final=str_replace("%%user",$divusermenu,$final);	
 	$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##ImmagineTreno##",$immagine,$final);
