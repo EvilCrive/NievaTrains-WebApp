@@ -23,15 +23,17 @@
 		<div class="LoginSignupBox">
 			<p>Nome</p>
 			<input  class="inputbar" type="text" name="nome" placeholder="Nome" />
-			<p>Cognome</p>
+			<p>Categoria</p>
             <input class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
-            <p><span xml:lang="en" lang="en">Email</span></p>
+            <p>Costruttore</p>
             <input  class="inputbar" type="email" name="email" placeholder="Email" />
-            <p><span xml:lang="en" lang="en">Username</span></p>
+            <p>Tipo</p>
             <input class="inputbar" type="text" name="username" placeholder="Username"/>
-			<p><span xml:lang="en" lang="en">Password</span></p>
+			<p>Velocità massima</p>
             <input class="inputbar" type="password" name="password" placeholder="Password"/>
-            <p><span xml:lang="en" lang="en">Conferma Password</span></p>
+            <p>Anni di costruzione</p>
+			<input class="inputbar" type="password" name="password" placeholder="Password"/>
+            <p>Descrizione</p>
 			<input class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
 			<div id="errori_registrazione"></div>
             <input class="button" name="button" type="submit" value="Registrati" />	

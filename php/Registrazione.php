@@ -1,13 +1,16 @@
 <?php
 //importazione librerie
-require_once "connection.php";
-require_once "funzioni.php";
-require_once "sqlutils.php";
+require_once "utils/connection.php";
+require_once "utils/funzioni.php";
+require_once "utils/sqlutils.php";
 //inizializzazione session
 
 //connessione al db
 $connessione=new DBAccess();
 try {
+	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	//query al db
+	
 	//generazione variabili di sostituzione
 	$divusermenu;
 	$ref;

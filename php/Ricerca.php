@@ -1,19 +1,26 @@
 <?php
 //importazione librerie
-require_once "connection.php";
-require_once "funzioni.php";
-require_once "sqlutils.php";
+require_once "utils/connection.php";
+require_once "utils/funzioni.php";
+require_once "utils/sqlutils.php";
 //inizializzazione session
 
 //connessione al db
 $connessione=new DBAccess();
 try {
+	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	if(isset($_GET["stringaCercata"])) $stringa=$_GET["stringaCercata"];
+	else throw new Exception("No get");
+	//query al db
+	$queryRisultato=getTrainBoxRicerca($stringa, $connessione);
+	//OR $queryRisultato=getUtentiBoxRicerca($stringa, $connessione);
 	//generazione variabili di sostituzione
 	$divusermenu;
 	$ref;
-	$Stringa;
-	$CatRicerca;
-	$risultato;
+	$Stringa=$StringaCercata; //da get
+	$CatRicerca=$CategoriaCercata; //da get
+	$risultato=stampaTrainBox($queryRisultato);
+	//OR $risultato=stampaUtentiBox;
 	//importazione txt
 	$final=file_get_contents("../txt/Ricerca.html");
 	$header=file_get_contents("../txt/Header.html");

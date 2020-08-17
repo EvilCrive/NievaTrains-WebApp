@@ -11,6 +11,7 @@ SET FOREIGN_KEY_CHECKS=1
 
 CREATE TABLE Treni(
 	Id_Treno integer auto_increment PRIMARY KEY,
+	Id_Autore integer not null,
 	Categoria varchar(20) not null,
 	Nome varchar(50) not null,
 	Costruttore varchar(50) not null,

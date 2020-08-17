@@ -3,7 +3,7 @@ class DBAccess{
 	const HOST_DB='localhost';
 	const user='root';
 	const pass='';
-	const db_name='Nieva';
+	const db_name='trains';
 	
 	private $connection=null;
 	

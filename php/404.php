@@ -7,8 +7,10 @@ require_once "utils/sqlutils.php";
 
 //connessione al db
 $connessione=new DBAccess();
-
 try {
+	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	//query al db
+	
 	//generazione variabili di sostituzione
 	$divusermenu;
 	$ref;

@@ -1,10 +1,7 @@
 <?php
 require_once "connection.php";
-require_once "sqlutils.php";
 
-function stampaHeader(){}
-function stampaFooter(){}
-function stampaRicerca(){}
+function stampaPreferiti(){}
 
 function stampaInfoUtente($getParam) {
 	$queryRes=getInfoUtente($getParam);
@@ -20,8 +17,29 @@ function stampaBio($getParam) {
 	$queryRes=getBio($getParam);
 	return $queryRes;
 }
+
+function stampaNomeT($getParam) {
+	$queryRes=getNomeT($getParam);	
+	return $queryRes;
+}
+function stampaUsernameA($getParam) {
+	$queryRes=getUsernameA($getParam);
+	return $queryRes;
+}
+
+function stampaDescT($getParam) {
+	$queryRes=getDescT($getParam);
+	return $queryRes;
+}
+function stampaImgT($getParam) {
+	$queryRes=getImgT($getParam);
+	return $queryResr;
+}
+
+
+////////////////////////////////////////////////
 function stampaTrainBox($getParam) {
-	$queryRes=getTrainBox($getParam);
+	$queryRes=getTrainBoxRicerca($getParam);
 	
 	$var='<div class="row">';
 	
@@ -46,32 +64,31 @@ function stampaTrainBox($getParam) {
 	
 	return $var;
 }
-function stampaNomeT($getParam) {
-	$queryRes=getNomeT($getParam);	
-	return $queryRes;
-}
-function stampaNomeA($getParam) {
-	$queryRes=getNomeA($getParam);
-	return $queryRes;
-}
-function stampaSchedaT($getParam) {
-	$queryRes=getSchedaT($getParam);
+function stampaUtentiBox($getParam) {
+	$queryRes=getUtentiBoxRicerca($getParam);
 	
-	$var='<li>Categoria: '.$queryRes["Categoria"].'</li>'."\n";
-	$var.='<li>Marca: '.$queryRes["Marca"].'</li>'."\n";
-	$var.='<li>Tipo: '.$queryRes["Tipo"].'</li>'."\n";
-	$var.='<li>Velocità: '.$queryRes["Velocità"].'</li>'."\n";
-	$var.='<li>Nome: '.$queryRes["Nome"].'</li>'."\n";
+	$var='<div class="row">';
+	
+	for(i){
+		$var.='	<div class="card">'."\n";
+		$var.='		<div class="card-header">'."\n";
+		$var.='			<img class="img-left" src="'.$queryRes[i]["Immagine"].'" alt="">'."\n";
+		$var.='		</div>'."\n";
+		$var.='		<div class="card-body">'."\n";
+		$var.='			<ul>'."\n";
+		$var.='				<li>Nome: '.$queryRes[i]["Nome"].'</li>'."\n";
+		$var.='				<li>Tipo: '.$queryRes[i]["Cognome"].'</li>'."\n";
+		$var.='				<li>Marca: '.$queryRes[i]["Username"].'</li>'."\n";
+		$var.='				<li>Autore: '.$queryRes[i]["Email"].'</li>'."\n";
+		$var.='			</ul>'."\n";
+		$var.='			<a href="../PHP/Treni.php?Id_Utente='.$queryRes[i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
+		$var.='		</div>'."\n";
+		$var.='	</div>'."\n";
+	}
+	
+	$var.='</div>'."\n";; 
 	
 	return $var;
-}
-function stampaDescT($getParam) {
-	$queryRes=getDescT($getParam);
-	return $queryRes;
-}
-function stampaImgT($getParam) {
-	$queryRes=getImgT($getParam);
-	return $queryResr;
 }
 function stampaCommenti($getParam) {
 	$queryRes=getCommenti($getParam)
@@ -96,8 +113,22 @@ function stampaCommenti($getParam) {
 	}
 	return $var
 }
-function stampaCatRicerca($getParam) {
-	$queryRes=getCatRicerca($getParam);
-	return $queryRes;
+function stampaSchedaT($getParam) {
+	$queryRes=getSchedaT($getParam);
+	$var='<li>Nome: '.$queryRes["Nome"].'</li>'."\n";
+	$var.='<li>Marca: '.$queryRes["Marca"].'</li>'."\n";
+	$var.='<li>Categoria: '.$queryRes["Categoria"].'</li>'."\n";
+	$var.='<li>Tipo: '.$queryRes["Tipo"].'</li>'."\n";
+	$var.='<li>Velocità: '.$queryRes["Velocità"].'</li>'."\n";
+
+	return $var;
 }
+function stampaPreferiti($nPreferiti) {
+	if($nPreferiti===1) return "1 Like";
+	else return $nPreferiti." Likes";
+}
+function stampaImmagine($queryImmagine) {
+	return "../resources/".$queryImmagine.".jpg";
+}
+
 ?>
