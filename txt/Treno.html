@@ -14,16 +14,14 @@
 ##header##
 <main>
 <div id="breadcrumb">
-	<ul>
-		<li>Ti trovi in: <span xml:lang="en" lang="en"><a href="#">Home</a></span> -&gt; <a href="#">##CategoriaT##</a> -&gt; <a href="#">##NomeT##</a></li>
-		<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
-	</ul>
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./##CategoriaTLink##.php">##CategoriaTLink##</a> -&gt; ##NomeT##</p>
 </div>
 	<div id="trainHeader">
 		<h1>##NomeT##</h1>
 		<p id="pref">##LikeT##</p>
 		<p >by ##NomeA##</p>
-		<img class="userImg" src="##ImmagineTreno##" alt=""/>
+		<button>elimina Treno</button>
+		<img class="userImg" src="./##ImmagineTreno##.jpg" alt=""/>
 		<button class="button">Modifica</button>
 	</div>
 	
@@ -49,7 +47,7 @@
 			<form action="../PHP/commentManage.php" method="post" id="commentform" onsubmit="return ValidateComment()">
 			<fieldset>
 				<textarea rows="5" cols="300" id="controlLogged" class="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input name="idricetta" value="%%idricetta" class="hidden"/>
+				<input name="idtreno" value="##CategoriaT##" class="hidden"/>
 				<textarea rows="5" cols="300" name="comment"></textarea>
 				<div id="confirmComment">
 					   <button class="button" type="submit">Invia</button>

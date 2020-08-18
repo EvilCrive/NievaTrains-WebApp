@@ -2,29 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>
-	<title> Pagina Utente - NievaTrains</title>
+	<title>##NomeU## - Pagina Utente - NievaTrains</title>
     <meta charset="utf-8" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	 <meta name="keywords" content="NievaTrains, treni, trasporti, enciclopedia, contatti, utente " />
 	<meta name="description" content="Pagina personale dell'utente, con le sue informazioni salvate " />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
 </head>
 <body>
 ##header##
 <main>
 <div id="breadcrumb">
-	<ul>
-		<li>Ti trovi in: <span xml:lang="en" lang="en"><a href="#">Home</a></span> -&gt; <a href="#">Utente</a> -&gt; <a href="#">##NomeU##</a></li>
-		<li class="stayright"><a href="#content">Vai al Contenuto</a></li>
-	</ul>
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./Utente.php">Utenti</a> -&gt; <a href="#">##NomeU##</a></p>
 </div>
 <div class="topUtente clear">
   <div class="leftCol">
-		<img class="userImg" src="##ImmagineUtente##" alt=""/>
+		<img class="userImg" src="./##ImmagineUtente##.jpg" alt=""/>
   </div>
   <div class="rightCol">
 		<h1>##InfoUtente##</h1>
+		<button>elimina utente</button>
 		<p>##Email##</p>
 		<p>##Bio##</p>
 		<!--<form action="../PHP/userManage.php" id="editbioform" method="post">

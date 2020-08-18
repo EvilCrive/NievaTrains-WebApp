@@ -8,7 +8,7 @@ require_once "utils/sqlutils.php";
 //connessione al db
 $connessione=new DBAccess();
 try {
-	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	if(!$connessione->openConnection()) throw new Exception("No connection");
 	if(isset($_GET["Id_Treno"])) $id=$_GET["Id_Treno"];
 	else throw new Exception("No get");
 	//query al db
@@ -17,8 +17,8 @@ try {
 	$queryCommenti=getCommenti($id, $connessione);
 	$nPreferiti=getPreferiti($id, $connessione);
 	//generazione variabili di sostituzione
-	$divusermenu;
-	$ref;
+	//$divusermenu;
+	//$ref;
 	$preferiti=stampaPreferiti($nPreferiti);
 	$NomeT=stampaNomeT($queryInfoTreno);
 	$NomeA=stampaUsernameA($queryNomeA);
@@ -32,8 +32,8 @@ try {
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
 	$final=str_replace("##LikeT##",$preferiti,$final);
-	$final=str_replace("%%user",$divusermenu,$final);	
-	$final=str_replace("%%user",$ref,$final);	
+	//$final=str_replace("%%user",$divusermenu,$final);	
+	//$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##ImmagineTreno##",$immagine,$final);
 	$final=str_replace("##NomeT##",$NomeT,$final);
 	$final=str_replace("##NomeA##",$NomeA,$final);
