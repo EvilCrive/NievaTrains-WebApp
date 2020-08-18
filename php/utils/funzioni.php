@@ -1,61 +1,58 @@
 <?php
 require_once "connection.php";
 
-function stampaPreferiti(){}
+function stampaInfoUtente($queryRes) {
 
-function stampaInfoUtente($getParam) {
-	$queryRes=getInfoUtente($getParam);
 	
-	$var=$queryRes["Nome"]." ".$queryRes["Cognome"]." (@".$queryRes["Username"].")";	
+	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
 	return $var;
 }
-function stampaEmail($getParam) {
-	$queryRes=getEmail($getParam);
-	return $queryRes;
+function stampaEmail($queryRes) {
+
+	return $queryRes[0]["Mail"];
 }
-function stampaBio($getParam) {
-	$queryRes=getBio($getParam);
-	return $queryRes;
+function stampaBio($queryRes) {
+
+	return $queryRes[0]["Bio"];
 }
 
-function stampaNomeT($getParam) {
-	$queryRes=getNomeT($getParam);	
-	return $queryRes;
+function stampaNomeT($queryRes) {
+
+	return $queryRes[0]["Nome"];
 }
-function stampaUsernameA($getParam) {
-	$queryRes=getUsernameA($getParam);
-	return $queryRes;
+function stampaUsernameA($queryRes) {
+
+	return $queryRes[0]["Username"];
 }
 
-function stampaDescT($getParam) {
-	$queryRes=getDescT($getParam);
-	return $queryRes;
+function stampaDescT($queryRes) {
+
+	return $queryRes[0]["Descrizione"];
 }
-function stampaImgT($getParam) {
-	$queryRes=getImgT($getParam);
-	return $queryResr;
+function stampaImgT($queryRes) {
+
+	return $queryResr[0]["Immagine"];
 }
 
 
 ////////////////////////////////////////////////
-function stampaTrainBox($getParam) {
-	$queryRes=getTrainBoxRicerca($getParam);
-	
+function stampaTrainBox($queryRes) {
+	$nrisultati=sizeof($queryRes);
 	$var='<div class="row">';
 	
-	for(i){
+	for ($i=0; $i<$nrisultati; $i++){
 		$var.='	<div class="card">'."\n";
 		$var.='		<div class="card-header">'."\n";
-		$var.='			<img class="img-left" src="'.$queryRes[i]["Immagine"].'" alt="">'."\n";
+		$var.='			<img class="img-left" src="'.$queryRes[$i]["Immagine"].'" alt="">'."\n";
 		$var.='		</div>'."\n";
 		$var.='		<div class="card-body">'."\n";
 		$var.='			<ul>'."\n";
-		$var.='				<li>Nome: '.$queryRes[i]["Nome"].'</li>'."\n";
-		$var.='				<li>Tipo: '.$queryRes[i]["Categoria"].'</li>'."\n";
-		$var.='				<li>Marca: '.$queryRes[i]["Costruttore"].'</li>'."\n";
-		$var.='				<li>Autore: '.$queryRes[i]["Autore"].'</li>'."\n";
+		$var.='				<li>Nome: '.$queryRes[$i]["Nome"].'</li>'."\n";
+		$var.='				<li>Tipo: '.$queryRes[$i]["Categoria"].'</li>'."\n";
+		$var.='				<li>Marca: '.$queryRes[$i]["Costruttore"].'</li>'."\n";
+		$var.='				<li>Autore: '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Treni.php?Id_Treno='.$queryRes[i]["Id_Treno"].'" class="btn">Read more</a>'."\n";
+		$var.='			<a href="../PHP/Treni.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}
@@ -64,24 +61,23 @@ function stampaTrainBox($getParam) {
 	
 	return $var;
 }
-function stampaUtentiBox($getParam) {
-	$queryRes=getUtentiBoxRicerca($getParam);
-	
+function stampaUtentiBox($queryRes) {
+	$nrisultati=sizeof($queryRes);
 	$var='<div class="row">';
 	
-	for(i){
+	for($i=0; $i<$nrisultati; $i++){
 		$var.='	<div class="card">'."\n";
 		$var.='		<div class="card-header">'."\n";
-		$var.='			<img class="img-left" src="'.$queryRes[i]["Immagine"].'" alt="">'."\n";
+		$var.='			<img class="img-left" src="'.$queryRes[$i]["Immagine"].'" alt="">'."\n";
 		$var.='		</div>'."\n";
 		$var.='		<div class="card-body">'."\n";
 		$var.='			<ul>'."\n";
-		$var.='				<li>Nome: '.$queryRes[i]["Nome"].'</li>'."\n";
-		$var.='				<li>Tipo: '.$queryRes[i]["Cognome"].'</li>'."\n";
-		$var.='				<li>Marca: '.$queryRes[i]["Username"].'</li>'."\n";
-		$var.='				<li>Autore: '.$queryRes[i]["Email"].'</li>'."\n";
+		$var.='				<li>Nome: '.$queryRes[$i]["Nome"].'</li>'."\n";
+		$var.='				<li>Tipo: '.$queryRes[$i]["Cognome"].'</li>'."\n";
+		$var.='				<li>Marca: '.$queryRes[$i]["Username"].'</li>'."\n";
+		$var.='				<li>Autore: '.$queryRes[$i]["Email"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Treni.php?Id_Utente='.$queryRes[i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
+		$var.='			<a href="../PHP/Treni.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}
@@ -90,45 +86,44 @@ function stampaUtentiBox($getParam) {
 	
 	return $var;
 }
-function stampaCommenti($getParam) {
-	$queryRes=getCommenti($getParam)
+function stampaCommenti($queryRes) {
+	$nrisultati=sizeof($queryRes);
 	$var="";
-	for(i) {
-	$var.='<li class="comment">'
-	$var.='		<div class="info">'
-	$var.='			<form action="commentManage.php" method="post" class="eliminacommenti">'
-	$var.='				<fieldset id="deleteButton">'
-	$var.='						<input type="submit" name="button" class="button" value="Elimina" />'
-	$var.='						<input  name="idricetta" value="xd" class="hidden" />'
-	$var.='						<input name="idcommento" value="xd" class="hidden" />'
-	$var.='					</fieldset>'
-	$var.='					</form>'
-	$var.='			<div class="commentInfo">'
-	$var.='				<a href="#">'.$queryRes[i]["Username"].'</a>'
-	$var.='				<span class="data">'.$queryRes[i]["Data"].'</span>'
-	$var.='			</div>'
-	$var.='		</div>'
-	$var.='		<p>'.$queryRes[i]["Testo"].'</p>'
-	$var.='</li>'
+	for($i=0; $i<$nrisultati; $i++) {
+	$var.='<li class="comment">';
+	$var.='		<div class="info">';
+	$var.='			<form action="commentManage.php" method="post" class="eliminacommenti">';
+	$var.='				<fieldset id="deleteButton">';
+	$var.='						<input type="submit" name="button" class="button" value="Elimina" />';
+	$var.='						<input  name="idricetta" value="xd" class="hidden" />';
+	$var.='						<input name="idcommento" value="xd" class="hidden" />';
+	$var.='					</fieldset>';
+	$var.='					</form>';
+	$var.='			<div class="commentInfo">';
+	$var.='				<a href="#">'.$queryRes[$i]["Username"].'</a>';
+	$var.='				<span class="data">'.$queryRes[$i]["Data"].'</span>';
+	$var.='			</div>';
+	$var.='		</div>';
+	$var.='		<p>'.$queryRes[$i]["Testo"].'</p>';
+	$var.='</li>';
 	}
-	return $var
+	return $var;
 }
-function stampaSchedaT($getParam) {
-	$queryRes=getSchedaT($getParam);
-	$var='<li>Nome: '.$queryRes["Nome"].'</li>'."\n";
-	$var.='<li>Marca: '.$queryRes["Marca"].'</li>'."\n";
-	$var.='<li>Categoria: '.$queryRes["Categoria"].'</li>'."\n";
-	$var.='<li>Tipo: '.$queryRes["Tipo"].'</li>'."\n";
-	$var.='<li>Velocità: '.$queryRes["Velocità"].'</li>'."\n";
+function stampaSchedaT($queryRes) {
+	$var='<li>Nome: '.$queryRes[0]["Nome"].'</li>'."\n";
+	$var.='<li>Marca: '.$queryRes[0]["Costruttore"].'</li>'."\n";
+	$var.='<li>Categoria: '.$queryRes[0]["Categoria"].'</li>'."\n";
+	$var.='<li>Tipo: '.$queryRes[0]["Tipo"].'</li>'."\n";
+	$var.='<li>Velocità: '.$queryRes[0]["Velocità_Max"].'</li>'."\n";
 
 	return $var;
 }
 function stampaPreferiti($nPreferiti) {
-	if($nPreferiti===1) return "1 Like";
-	else return $nPreferiti." Likes";
+	if($nPreferiti[0]==1) return "1 Like";
+	else return $nPreferiti[0]." Likes";
 }
 function stampaImmagine($queryImmagine) {
-	return "../resources/".$queryImmagine.".jpg";
+	return "../resources/".$queryImmagine[0]["Immagine"].".jpg";
 }
 
 ?>

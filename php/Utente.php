@@ -8,15 +8,15 @@ require_once "utils/sqlutils.php";
 //connessione al db
 $connessione=new DBAccess();
 try {
-	if(!$connessione->openConnectionLocal()) throw new Exception("No connection");
+	if(!$connessione->openConnection()) throw new Exception("No connection");
 	if(isset($_GET["Id_Utente"])) $id=$_GET["Id_Utente"];
 	else throw new Exception("No get");
 	//query al db
 	$queryInfoU=getInfoUtente($id, $connessione);
 	$queryRisultati=getTrainBoxAutore($id, $connessione);
 	//generazione variabili di sostituzione
-	$divusermenu;
-	$ref;
+	//$divusermenu;
+	//$ref;
 	$infoU=stampaInfoUtente($queryInfoU);
 	$email=stampaEmail($queryInfoU);
 	$bio=stampaBio($queryInfoU);
@@ -27,8 +27,8 @@ try {
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
-	$final=str_replace("%%user",$divusermenu,$final);	
-	$final=str_replace("%%user",$ref,$final);	
+	//$final=str_replace("%%user",$divusermenu,$final);	
+	//$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##ImmagineUtente##",$immagine,$final);
 	
 	$final=str_replace("##InfoUtente##",$infoU,$final);

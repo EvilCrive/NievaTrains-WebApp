@@ -10,8 +10,7 @@ function getInfoTreno($id, $connessione) {
 }
 /////////////////////////////////////////////////////
 function getTrainBoxAutore($id, $connessione) {
-	return $connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni
-	WHERE T.Id_Autore=$id"); 
+	return $connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON T.Id_Autore=U.Id_Utente WHERE T.Id_Autore=$id"); 
 }
 function getTrainBoxRicerca($stringa, $connessione) {//
 	return $connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON U.Id_Utente=T.Id_Autore
@@ -26,7 +25,8 @@ function getCommenti($id, $connessione) {
 	WHERE C.Id_Treno=$id"); 
 }
 function getPreferiti($id, $connessione) {
-	return $connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id");
+	$var=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id"); 
+	return $var[0]['count(*)'];
 }
 function getUsernameA($id, $connessione) {
 	return $connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
