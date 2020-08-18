@@ -73,9 +73,10 @@ p {
 header{
   width: 100%;
   max-width: 1800px;
-  position: fixed;
+  
 }
 #hrow1 {
+	position: fixed;
 	width: 100%;
 	background-color: #232f46;
   display: flex;
@@ -130,11 +131,16 @@ select{
 }
 
 /*HEADER 2*/
+#breadc {
+	background-color: lightblue;
+	text-align: left;
+}
 
 #hrow2 {
+
 	width: 100%;
   height: auto;
-	background-color: #294173/*#1a1e23*/;
+	background-color: #294173 /*#1a1e23*/;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -551,7 +557,6 @@ fieldset{
 .commentInfo {
 	float: left;
 }
-
 /* Ricerca Treni */
 .row{
   display: flex;
@@ -627,3 +632,4 @@ fieldset{
     width: 80%;
   }
 }
+
