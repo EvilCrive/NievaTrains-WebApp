@@ -8,7 +8,7 @@
 	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, registrazione" />
 	<meta name="description" content="Pagina di Registrazione per creare il proprio acount NievaTrains" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
 </head>
 <body>
 ##header##
@@ -21,9 +21,9 @@
 </div>
     <h1>Crea il tuo NievaTrains Account:</h1>
 	<div class="LoginSignupBox">
-	<p>Nome</p>
+	<label for="nome">Nome</label>
 	<input  class="inputbar" type="text" name="nome" placeholder="Nome" />
-	<p>Categoria</p>
+	<label for="categorie">Categoria</label>
         	<select id="sceltaCategorie" name="categorie" form="searchTop">
 			<option value="1">Elettrico</option>
 			<option value="2">Vapore</option>
@@ -32,23 +32,23 @@
 			<option value="5">Diesel</option>
 			<option value="6">Turbina a Gas</option>
 		</select>
-        <p>Costruttore</p>
-        <input  class="inputbar" type="email" name="email" placeholder="Costruttore" />
-        <p>Tipo</p>
-        	<select id="sceltaCategorie" name="categorie" form="searchTop">
+        <label for="costruttore">Costruttore</label>
+        <input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
+        <label for="tipo">Tipo</label>
+        	<select id="sceltaCategorie" name="tipo" form="searchTop">
 			<option value="1">Alta velocità</option>
 			<option value="2">Lunga percorrenza</option>
 			<option value="3">Prototipo</option>
 			<option value="4">Intercity</option>
 			<option value="5">Trasporto locale</option>
 		</select>
-	<p>Velocità massima (km/h)</p>
-        <input class="inputbar" type="password" name="password" placeholder="Velocità Massima"/>
-        <p>Anni di costruzione</p>
-	<input class="inputbar" type="password" name="password" placeholder="Anni di costruzione"/>
-        <p>Descrizione</p>
+	<label for="vel">Velocità massima (km/h)</label>
+        <input class="inputbar" type="text" name="vel" placeholder="Velocità Massima"/>
+        <label for="anni">Anni di costruzione</label>
+	<input class="inputbar" type="text" name="anni" placeholder="Anni di costruzione"/>
+        <label for="descrizione">Descrizione</label>
 	<textarea rows="5" cols="300" name="descrizione"></textarea>
-	    <p>Scegli un immagine</p>
+	    <label for="myfile">Scegli un immagine</label>
 	    <input type="file" id="myfile" name="myfile">
 	<div id="errori_registrazione"></div>
         <input class="button" name="button" type="submit" value="Conferma" />	
