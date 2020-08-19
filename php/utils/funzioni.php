@@ -2,35 +2,28 @@
 require_once "connection.php";
 
 function stampaInfoUtente($queryRes) {
-
-	
 	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
 	return $var;
 }
 function stampaEmail($queryRes) {
-
 	return $queryRes[0]["Mail"];
 }
 function stampaBio($queryRes) {
-
 	return $queryRes[0]["Bio"];
 }
-
 function stampaNomeT($queryRes) {
-
+	return $queryRes[0]["Nome"];
+}
+function stampaNomeU($queryRes) {
 	return $queryRes[0]["Nome"];
 }
 function stampaUsernameA($queryRes) {
-
-	return $queryRes[0]["Username"];
+	return $queryRes;
 }
-
 function stampaDescT($queryRes) {
-
 	return $queryRes[0]["Descrizione"];
 }
 function stampaImgT($queryRes) {
-
 	return $queryResr[0]["Immagine"];
 }
 
@@ -119,8 +112,8 @@ function stampaSchedaT($queryRes) {
 	return $var;
 }
 function stampaPreferiti($nPreferiti) {
-	if($nPreferiti[0]==1) return "1 Like";
-	else return $nPreferiti[0]." Likes";
+	if($nPreferiti==1) return "1 Like";
+	else return $nPreferiti." Likes";
 }
 function stampaImmagine($queryImmagine) {
 	return "../resources/".$queryImmagine[0]["Immagine"].".jpg";

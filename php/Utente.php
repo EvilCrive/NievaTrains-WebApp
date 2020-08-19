@@ -17,6 +17,7 @@ try {
 	//generazione variabili di sostituzione
 	//$divusermenu;
 	//$ref;
+	$nomeU=stampaNomeU($queryInfoU);
 	$infoU=stampaInfoUtente($queryInfoU);
 	$email=stampaEmail($queryInfoU);
 	$bio=stampaBio($queryInfoU);
@@ -30,7 +31,7 @@ try {
 	//$final=str_replace("%%user",$divusermenu,$final);	
 	//$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##ImmagineUtente##",$immagine,$final);
-	
+	$final=str_replace("##NomeU##",$nomeU,$final);
 	$final=str_replace("##InfoUtente##",$infoU,$final);
 	$final=str_replace("##Email##",$email,$final);
 	$final=str_replace("##Bio##",$bio,$final);	
