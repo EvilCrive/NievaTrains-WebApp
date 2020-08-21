@@ -1,0 +1,56 @@
+@import url("style_desktop.css");
+
+#hrow1 {
+	display: inline-block;
+}
+#logo {
+  margin-bottom: 10px;
+}
+#utenteTop{
+  margin-top: 20px;
+}
+#hrow2{
+  display:inline-block;
+}
+.stayLeft, .stayRight{
+  width: inherit;
+}
+.menuList li {
+  float: none;
+}
+.menuList li a {
+  display: block;
+}
+.stayRight li a {
+  background-color: #232f46;
+}
+
+@media screen and (max-width: 440px) {
+  .search-box{
+    width: auto;
+  }
+  select{
+    margin: 10px;
+  }
+}
+
+footer{
+  height: auto;
+}
+#main-content{
+  display: inline-block;
+}
+
+#hamburger{
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+}
+
+/*#myLinks{
+	display: none;
+}
+#myLinks2{
+	display: none;
+}
+*/
