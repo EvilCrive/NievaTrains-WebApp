@@ -16,18 +16,21 @@ try {
 	$queryNomeA=getUsernameA($id, $connessione);
 	$queryCommenti=getCommenti($id, $connessione);
 	$nPreferiti=getPreferiti($id, $connessione);
-	//generazione variabili di sostituzione
-	//$divusermenu;
-	//$ref;
-	
+
 	//importazione txt
 	$final = file_get_contents("../txt/Treno.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
+
 	//sostituzione variabili di sostituzione
-	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).'<button class="button">Like</button>',$final);
-	//$final=str_replace("%%user",$divusermenu,$final);	
-	//$final=str_replace("%%user",$ref,$final);	
+	$buttonPreferiti='<form action="../PHP/utils/operationsTreno.php" method="post"><fieldset><label for="Like"><input class="button" name="like" type="submit" value="';
+	if(isset($_SESSION['userType'])){
+		if(boolLiked($_SESSION['id'],$id,$connessione))	$buttonPreferiti.="Unlike";
+		else	$buttonPreferiti.="Like";
+	}else	$buttonPreferiti.="Like";
+	$buttonPreferiti.='" /></label><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
+	
+	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).$buttonPreferiti,$final);
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);	
 	

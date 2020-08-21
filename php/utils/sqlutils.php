@@ -33,6 +33,16 @@ function getUserUserName($email, $connessione){
 function getUserUserType($email, $connessione){
 	return $connessione->getQuery("SELECT Is_User_Type from utenti WHERE Mail='$email'")[0]['Is_User_Type'];
 }
+
+function boolLiked($iduser,$idtreno,$connessione){
+	return $connessione->getQuery("SELECT * from preferiti WHERE Id_Utente='$iduser' AND Id_Treno='$idtreno'");
+}
+function removeLike($iduser,$idtreno,$connessione){
+	return $connessione->exeQuery("DELETE FROM preferiti WHERE Id_Utente=$iduser AND Id_Treno=$idtreno");
+}
+function addLike($iduser,$idtreno,$connessione){
+	return $connessione->exeQuery("INSERT INTO preferiti (Id_Utente, Id_Treno) VALUES($iduser,$idtreno)");
+}
 //treni
 function getInfoTrenoLimit($connessione) { //2
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON T.Id_Autore=U.Id_Utente LIMIT 6");
