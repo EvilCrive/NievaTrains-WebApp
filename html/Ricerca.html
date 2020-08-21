@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
-<head>	 
+<head>
 	<title> Ricerca - NievaTrains</title>
     <meta charset="utf-8" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
@@ -13,134 +13,94 @@
 <body>
 ##header##
 <main>
-    <div id="SearchBox">
-		<div class="SearchBarBox">
-			<form id="searchTop" action="../PHP/Ricerca.php" method="post">	
-				<select name="categorie" id="sceltaCategorieRicerca" form="searchTop">
-					<option value="1">Treni</option>
-					<option value="2">Utenti</option>
-				</select>
-				<input  type="text" value="Cerca" name="stringaCercata" />
-				<button class="button" name="cerca">Cerca</button>	
-			</form>
-        </div>
-        <div class="ResultsRicerca"></div>
+		<div id="searchBarBox">
+				<form id="searchTop" action="../PHP/Ricerca.php" method="post">
+					<select id="sceltaCategorie" name="categorie" form="searchTop">
+						<option value="1">Treni</option>
+						<option value="2">Utenti</option>
+					</select>
+					<div class="search-box long">
+						<input class="search-txt" type="text" value="Cerca" name="stringaCercata" />
+						<a class="search-btn" href="#"><img id="search" src="../resources/search.png"/></a>
+					</div>
+				</form>
     </div>
-           
+		<h1 id="outputRicerca">Risultati ricerca per treno matto tra gli utenti</h1>
+    <div id="ResultsRicerca">
+			<div class="row">
+				<div class="card">
+					<div class="card-header">
+						<img class="img-left" src="../resources/treno_vapore.jpg" alt="treno vapore">
+					</div>
+					<div class="card-body">
+						<ul>
+							<li>Nome: Treno Bello</li>
+							<li>Tipo: Treno a Vapore</li>
+							<li>Marca: FIAT</li>
+							<li>Autore: Crive</li>
+						</ul>
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<img class="img-left" src="../resources/treno_vapore.jpg" alt="treno vapore">
+					</div>
+					<div class="card-body">
+						<ul>
+							<li>Nome</li>
+							<li>Tipo</li>
+							<li>Marca</li>
+							<li>Autore</li>
+						</ul>
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<img class="img-left" src="../resources/treno_vapore.jpg" alt="treno vapore">
+					</div>
+					<div class="card-body">
+						<ul>
+							<li>Nome</li>
+							<li>Tipo</li>
+							<li>Marca</li>
+							<li>Autore</li>
+						</ul>
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<img class="img-left" src="../resources/treno_vapore.jpg" alt="treno vapore">
+					</div>
+					<div class="card-body">
+						<ul>
+							<li>Nome</li>
+							<li>Tipo</li>
+							<li>Marca</li>
+							<li>Autore</li>
+						</ul>
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<img class="img-left" src="../resources/treno_vapore.jpg" alt="treno vapore">
+					</div>
+					<div class="card-body">
+						<ul>
+							<li>Nome</li>
+							<li>Tipo</li>
+							<li>Marca</li>
+							<li>Autore</li>
+						</ul>
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+		</div>
+	</div>
 </main>
 ##footer##
 </body>
-
-
-
-<div hidden>
- <!-- esempio  -->
- <div class="rowconsigliate clear">
-    <div class="responsive">
-        <div class="gallery">
-            <a href=""><img src="../resources/prova.png" alt=""/></a>
-            <div class="desc">
-                <ul>
-                    <li>Nome Treno</li>
-                    <li>Tipo</li>
-                    <li>Marca</li>
-                    <li>Autore</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a href=""><img src="../resources/prova.png" alt=""/></a>
-            <div class="desc">
-                <ul>
-                    <li>Nome Treno</li>
-                    <li>Tipo</li>
-                    <li>Marca</li>
-                    <li>Autore</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a href=""><img src="../resources/prova.png" alt=""/></a>
-            <div class="desc">
-                <ul>
-                    <li>Nome Treno</li>
-                    <li>Tipo</li>
-                    <li>Marca</li>
-                    <li>Autore</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a href=""><img src="../resources/prova.png" alt=""/></a>
-            <div class="desc">
-                <ul>
-                    <li>Nome Treno</li>
-                    <li>Tipo</li>
-                    <li>Marca</li>
-                    <li>Autore</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="rowconsigliate clear">
-<div class="responsive">
-    <div class="gallery">
-        <a href=""><img src="../resources/prova.png" alt=""/></a>
-        <div class="desc">
-            <ul>
-                <li>Nome Treno</li>
-                <li>Tipo</li>
-                <li>Marca</li>
-                <li>Autore</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="responsive">
-    <div class="gallery">
-        <a href=""><img src="../resources/prova.png" alt=""/></a>
-        <div class="desc">
-            <ul>
-                <li>Nome Treno</li>
-                <li>Tipo</li>
-                <li>Marca</li>
-                <li>Autore</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="responsive">
-    <div class="gallery">
-        <a href=""><img src="../resources/prova.png" alt=""/></a>
-        <div class="desc">
-            <ul>
-                <li>Nome Treno</li>
-                <li>Tipo</li>
-                <li>Marca</li>
-                <li>Autore</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="responsive">
-    <div class="gallery">
-        <a href=""><img src="../resources/prova.png" alt=""/></a>
-        <div class="desc">
-            <ul>
-                <li>Nome Treno</li>
-                <li>Tipo</li>
-                <li>Marca</li>
-                <li>Autore</li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
-</div>
+</html>

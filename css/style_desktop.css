@@ -10,167 +10,319 @@ background-color: red;
 
 * {
   box-sizing: border-box;
-  margin: 0em;
+  margin: 0;
   padding: 0;
 }
 html {
+  height: 100%;
   font-family: Verdana, sans-serif;
   max-width: 1800px;
   vertical-align: middle;
   margin: auto;
+
+}
+label{
+	display: block;
+	padding: 10px;
+}
+.hidden{
+	display: none;
 }
 body {
-	height: 100%;
-	min-height: 100%;
-	background-color: red/*#f6f5f3!important*/;
-	color: white;
+  height: 100%;
+	background-color: #f6f5f3!important;
+	color: #292929;
+	text-align: center;
+}
+h1, h2, h3 {
+	padding: 4px;
+	margin:15px;
+	text-align: center;
+}
+
+p {
+	padding: 10px;
 }
 .clear::after {
   content: "";
   clear: both;
   display: table;
 }
+
+#container{
+  min-height: 100%;
+}
+#main{
+  overflow: auto;
+  padding-bottom: 200px;
+}
+
 .button{
-  background-color: white;
-  border: 2px solid #f6ad7b;
-  color: black;
+  border: 2px solid lightblue;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  padding: 5px 13px;
+  margin: 6px 2px;
+  /*margin: 10px auto;*/
+  padding: 7px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .button:hover{
-  background-color: #f6ad7b
+  background-color: lightblue;
 }
 
 /*HEADER 1*/
-
+header{
+  width: 100%;
+  max-width: 1800px;
+  
+}
 #hrow1 {
+	max-width: 1800px;
+	position: fixed;
 	width: 100%;
-	background-color: #1a1e23;
-	border-bottom-style: solid;
-    border-bottom-width: 5px;
-	border-bottom-color: #a8c1dc;
-}
-#headerCenter {
-	display: inline-block;
-	text-align: center;
-	width: 60%;
-}
-#headerLeft {
-	display: inline-block;
-	width: 19%;
-}
-#headerRight {
-	display: inline-block;
-	width: 19%;
-}
-#hrow1 h1 {
-	display: inline;
-	font-size: 1em; /*per i legacy browser*/
-	font-size: 1.7vw; 
-}
-#searchTop {
-	display: inline-block;
+	background-color: #232f46;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
 }
 #logo {
-	height: 50px;
+  max-width: 300px;
+	max-height: 60px;
 	cursor: pointer;
 }
 #utenteTop {
-	height: 50px;
+  max-width: 60px;
+	max-height: 60px;
 	cursor: pointer;
-	display: float;
-	float: right;
+}
+#search{
+  float: right;
+}
+
+select{
+	vertical-align: middle;
+	margin-right: 10px;
+  padding: 10px;
+	display: inline-block;
+  border-radius: 40px;
+  font-size: 15px;
+  height: 40px;
+}
+
+.search-box{
+	vertical-align: middle;
+  width: 300px;
+  background: white;
+  border-radius: 40px;
+  height: 40px;
+  padding: 10px;
+	display: inline-block;
+}
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float:left;
+  padding: 0;
+  color: black;
+  font-size: 18px;
+  line-height: 10px;
 }
 
 /*HEADER 2*/
+#breadcrumb {
+	background-color: lightblue;
+	text-align: left;
+}
 
 #hrow2 {
+	padding-top:120px;
 	width: 100%;
-	background-color: #1a1e23;
+  height: auto;
+	background-color: #294173 /*#1a1e23*/;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #hrow2 ul{
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
 	overflow: hidden;
 }
-#menuList li {
+.menuList li {
 	float: left;
+  font-size: 16px;
 }
-#menuList li a {
+.menuList li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 16px;
+  padding: 16px 30px;
   text-decoration: none;
 }
+.menuList li a:hover {
+  background-color: rgba(83,131,232,0.8);
+  transition: 0.4s;
+}
 #spec {
+  background-color: #294173/*#a8c1dc*/;
   display: block;
-  color: black;
+  font-weight: bold;
+  color: white;
   text-align: center;
-  padding: 16px;
-  background-color: #a8c1dc;
+  padding: 16px 20px;
+  text-decoration: none;
+}
+#stayLeft{
+  float: left;
+}
+#stayRight{
+  float: right;
 }
 
 /*FOOTER*/
 
 footer{
-  overflow: hidden;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  text-align: center;
-  top: 100%;
-  width: 100%;
+  overflow: hidden;	
+  position: relative;
+  height: 300px;
   max-width: 1800px;
-  margin-top: 200px;
-  background-color: #1a1e23;
+  width: 100%;
+
+  clear: both;
+  background-color: #232f46;
+  color: white;
+}
+#main-content{
+  display: flex;
+}
+#main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+}
+.left .content p{
+  text-align: justify;
+}
+.center .social{
+  margin: 20px 0 20px 0;
+}
+.center .social a{
+  padding: 0 10px;
+}
+.center .social a span{
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: #a8c1dc;
+  color: black;
+}
+.center .social a span:hover{
+  background-color: white;
+}
+.right .content span {
+  margin: 10px;
 }
 #validity {
 	display: block;
-	float: left;
-}
-#footerCenter {
-	display: block;
-}
-#torna_su {
-	display: block;
 	float: right;
 }
-#Logo{
-  float: left;
-  overflow: hidden;
-  height: 50px;
-  width: 250px;
+#torna_su {
+	margin: 10px;
+}
+#LogoFooter{
+  margin: 10px;
+}
+#about{
+  float:left;
   margin-left: 10px;
-  display: block;
 }
-#footer ul{
-  display: inline-block;
-  list-style-type: none;
+
+/* ABOUT */
+
+#aboutList {
+	/*text-align: left;*/
+	margin: 10px;
+	list-style-type: none;
+}
+#aboutList li{
+	padding: 2px;
+}
+
+/* CATEGORIA */
+
+#wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 1em 5em;
+}
+
+#wrapper > div {
+	min-width: 300px;
+	max-width: 400px;
+	margin: 1em;
+	background-color: #5383e8;
+	border-radius: 15px 50px;
+	padding: 10px;
+}
+
+/* HOME */
+
+#wrapperHome {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.HomeBox {
+  margin: 20px;
+  padding: 30px;
+  width: 300px;
+  height: 250px;
+  background-color: #ab;
   text-align: center;
-  text-decoration: none;	
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px 50px;
 }
-#footer ul li{
-  margin: 5px;
+
+.HomeBox:hover{
+  background-color: lightblue;
 }
-#validity img{
-	display: block;
-} 
 
 /* LOGIN E REGISTRAZIONE */
 
 .LoginSignupBox{
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
   display: inline-block;
   border: 5px solid lightblue;
-  border-radius: 10px;
-
+  border-radius: 15px 50px;
 }
 .inputbar{
   width: 90%;
 }
-.LoginSignupBox input[type=text]{
+.LoginSignupBox input[type=text], .LoginSignupBox input[type=password], .LoginSignupBox input[type=email]{
   border:none;
   border-bottom: 2px solid #adadad;
   border-radius: 5px;
@@ -179,54 +331,366 @@ footer{
   height: 30px;
   margin-bottom: 10px;
 }
-.LoginSignupBox input[type=text]:focus{
-    border-bottom: 2px solid rgb(246,173,123);
+.LoginSignupBox input[type=text]:focus, .LoginSignupBox input[type=password]:focus, .LoginSignupBox input[type=email]:focus{
+    border-bottom: 2px solid lightblue;
 }
-.LoginSignupBox input[type=text]{
-  border:none;
-  border-bottom: 2px solid #adadad;
-  border-radius: 5px;
-  outline: none;
-  font-size: 15px;
-  height: 30px;
-  margin-bottom: 10px;
-}
-.LoginSignupBox input[type=text]:focus{
-    border-bottom: 2px solid rgb(246,173,123);
-}
-.LoginSignupBox input[type=password]{
-  border:none;
-  border-bottom: 2px solid #adadad;
-  border-radius: 5px;
-  outline: none;
-  font-size: 15px;
-  height: 30px;
-  margin-bottom: 10px;
-}
-.LoginSignupBox input[type=password]:focus{
-    border-bottom: 2px solid rgb(246,173,123);
-}
+
 
 /* ADMIN PANEL */
 
-.AdminPanelBox{
-  width: 100%;
+.AdminPanelBox {
+  display: inline-block;
+}
+.AdminPanelBox ul{
+	list-style: none;
+
 }
 
 /* RICERCA */
-
-#SearchBox{ width: 100%;}
-.SearchBarBox{ width: 100%;}
-#SceltaCategorieRicerca{ width: 100%;}
-.rowconsigliate{
-	max-width: 1400px;
-	height: auto;
-	margin: auto;
-	display: flex;
-  flex-wrap: wrap;
+#searchTop {
+width: 100%;
 }
-.clear{}
 
-.desc ul{
-  list-style-type: none;
+.long{
+  width: 400px;
+}
+
+#searchBarBox {
+	width: 100%;
+  background-color: #232f46;
+  padding: 20px;
+}
+
+/*
+#sceltaCategorieRicerca {
+	display: inline-block;
+	width: 5%;
+	margin: 10px auto;
+	padding: 15px;
+		border: none;
+		background-color: #f6f5f3;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+}
+
+#ricercaInput {
+	display: inline-block;
+	width: 30%;
+	margin: 10px auto;
+	padding: 15px;
+	border: none;
+	background-color: #f6f5f3;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+
+}
+
+#searchTop .button {
+	display: inline-block;
+		padding: 15px;
+}
+
+#outputRicerca {
+	padding-bottom: 15px;
+}
+*/
+/* UTENTE */
+.topUtente {
+	text-align:left;
+	  max-width: 1400px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.leftCol {
+	  padding: 20px;
+  margin-top: 20px;
+    float: left;
+  width: 30%;
+  height:100%;
+
+}
+
+.rightCol {
+	  padding: 20px;
+  margin-top: 20px;
+    float: left;
+  width: 70%;
+  padding-left: 20px;
+}
+.rightCol h1{
+		text-align:left!important;
+}
+.userImg{
+	background-color: lightblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  max-width: 80%;
+  padding: 20px;
+  /* border: 2px solid black; */
+}
+/* TRENO */
+#trainHeader h1, #pref{
+	display: inline-block;
+}
+
+#schedaTecnica {
+	width: 70%;
+	margin: auto;
+	padding: 10px;
+	border: 3px solid lightblue;
+	border-radius: 15px 50px;
+}
+#schedaTecnica ul {
+	list-style: none;
+}
+#schedaTecnica ul li {
+	padding: 3px;
+}
+#descrizione {
+	padding-bottom: 10px;
+	border-bottom: 3px solid lightblue;
+}
+
+/****commenti da cambiare****/
+.comment-section{
+    list-style: none;
+    max-width: 1400px;
+    width: 90%;
+    margin: 50px auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.comment{
+    display: flex;
+    border-radius: 3px;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+	   color: #505050;
+}
+
+.data{
+  font-size: 0.75em;
+}
+.comment .info{
+    width: 100%;
+	order: 3;
+}
+.eliminacommenti fieldset .button {
+	float: right;
+}
+.comment .info a{
+    display: block;
+    text-decoration: none;
+    color: #656c71;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0 3px 0;
+}
+
+.comment p{
+    line-height: 1.5em;
+    padding: 18px 22px;
+    width: 100%;
+    position: relative;
+    word-wrap: break-word;
+}
+.comment p{
+    order: 1;
+    background-color:  lightblue;
+}
+.comment p:after{
+    width: 12px;
+    height: 12px;
+    top: initial;
+    left: 28px;
+    bottom: -6px;
+}
+#write-new{
+    margin: 50px auto 0;
+    width: 90%;
+    height: 200px;;
+}
+#write-new textarea{
+    color:  #444;
+    font: inherit;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid #cecece;
+    background-color:  #fefefe;
+    box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.06);
+    overflow: auto;
+    width:100%;
+    min-height: 80px;
+    padding: 15px 20px;
+}
+#write-new textarea:focus{
+    border: 3px solid lightblue;
+}
+#write-new .button{
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 18px;
+}
+
+
+fieldset{
+	border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  width:100%;
+}
+#deleteButton{
+	float: right;
+	width: 50%;
+}
+#commenti {
+	text-align: left;
+}
+#confirmComment{
+	display: block;
+}
+.commentInfo {
+	float: left;
+}
+/* Ricerca Treni */
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.card{
+  width: 30%;
+  background: #fff;
+  border: 3px solid #294173;
+  border-radius: 0 20px 20px 0;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.card-header{
+  /*background-image: url(treno_vapore.jpg);
+  background-size: 100% 100%;*/
+  color: #fff;
+  float:left;
+  max-width: 200px;
+  max-height: 200px;
+  /*#a8c1dc
+  #1a1e23*/
+}
+.card-body{
+  padding: 20px 20px;
+  text-align: left;
+  font-size: 18px;
+
+}
+.card-body ul{
+  list-style: none;
+}
+.card-body ul li{
+  text-align: center;
+  padding-bottom: 3px;
+}
+.card-body .btn{
+  display: block;
+  float: right;
+  color: #fff;
+  text-align: center;
+  background: #294173;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius: 16px;
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0,0,0,0.25);
+}
+
+.img-left{
+  height: 200px;
+  width: 200px;
+}
+@media screen and (max-width: 1000px){
+  .card{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 620px){
+  .container{
+    width: 100%;
+  }
+  .heading{
+    padding: 20px;
+    font-size: 20px;
+  }
+  .card{
+    width: 80%;
+  }
+}
+/*AGGIUNTA PAGINA*/
+.inputbar{
+  width: 90%;
+}
+.AggiuntaTreno input[type=text], .AggiuntaTreno input[type=password], .AggiuntaTreno input[type=email]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.AggiuntaTreno {
+	text-align: left;
+	width: 90%;
+	margin: auto;
+}
+.AggiuntaTreno input[type=text]:focus, .AggiuntaTreno input[type=password]:focus, .AggiuntaTreno input[type=email]:focus{
+    border-bottom: 2px solid lightblue;
+}
+
+.AggiuntaTreno label {
+	text-align: left;
+}
+.AggiuntaTreno .inputbar{
+	display: block;
+	width: 30%;
+}
+.AggiuntaTreno textarea{
+	width: 50%;
+}
+.AggiuntaTreno .button {
+	display: block;
+}
+.sceltaAggiunta{
+	  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 2.5em;
+  margin-bottom: 10px;
+}
+.sceltaDesc {
+	  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.sceltaAggiunta:focus, .sceltaDesc:focus {
+	border-bottom: 2px solid lightblue;
+}
+input[type=file]{
+	padding: 10px;
 }

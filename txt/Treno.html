@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
+
+<head>	 
+	<title> ##NomeT## - NievaTrains</title>
+    <meta charset="utf-8" />
+	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, treno" />
+	<meta name="description" content="Pagina del treno interessato, con tutte le informazioni disponibili a riguardo" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+</head>
+<body>
+##header##
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./##CategoriaTLink##.php">##CategoriaTLink##</a> -&gt; ##NomeT##</p>
+</div>
+	<div id="trainHeader">
+		<h1>##NomeT##</h1>
+		<p id="pref">##LikeT##</p>
+		<p >by ##NomeA##</p>
+		<button>elimina Treno</button>
+		<img class="userImg" src="./##ImmagineTreno##.jpg" alt=""/>
+		<button class="button">Modifica</button>
+	</div>
+	
+	<img />
+	
+	<h2>Scheda Tecnica</h2>
+	<div id="schedaTecnica">
+		<ul>
+			##SchedaT##
+
+		<ul>
+	</div>
+	
+	<h2>Descrizione</h2>
+	<div id="descrizione">
+		<p> ##DescT## </p>
+	</div>
+	<h3>Commenti:</h3>
+	<div id="commenti">
+	<ul class="comment-section" id="commentreturn">
+	##Commenti##
+			<li id="write-new">
+			<form action="../PHP/commentManage.php" method="post" id="commentform" onsubmit="return ValidateComment()">
+			<fieldset>
+				<textarea rows="5" cols="300" id="controlLogged" class="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input name="idtreno" value="##CategoriaT##" class="hidden"/>
+				<textarea rows="5" cols="300" name="comment"></textarea>
+				<div id="confirmComment">
+					   <button class="button" type="submit">Invia</button>
+					   <p id="commentRequired" class="errors"></p>
+   				</div>
+			</fieldset>
+			</form>
+		</li>
+	</ul>
+	</div>
+</div>
+##footer##
+</body>
+</html>

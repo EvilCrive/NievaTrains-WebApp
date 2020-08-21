@@ -2,25 +2,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>
-	<title> Pagina Utente - NievaTrains</title>
+	<title>##NomeU## - Pagina Utente - NievaTrains</title>
     <meta charset="utf-8" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	 <meta name="keywords" content="NievaTrains, treni, trasporti, enciclopedia, contatti, utente " />
 	<meta name="description" content="Pagina personale dell'utente, con le sue informazioni salvate " />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
 </head>
 <body>
 ##header##
-<main>
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./Utente.php">Utenti</a> -&gt; <a href="#">##NomeU##</a></p>
+</div>
 <div class="topUtente clear">
   <div class="leftCol">
-		<img class="userImg" src="../immagini/Utente/'.$results[0]" alt="'.$results[0]["/>
+		<img class="userImg" src="./##ImmagineUtente##.jpg" alt=""/>
   </div>
   <div class="rightCol">
-		<h1>Aldo Baglio (@Dioss)</h1>
-		<p>assdfasd@gmail.com</p>
-		<p>Bio esketit</p>
+		<h1>##InfoUtente##</h1>
+		<button>elimina utente</button>
+		<p>##Email##</p>
+		<p>##Bio##</p>
 		<!--<form action="../PHP/userManage.php" id="editbioform" method="post">
 			<fieldset><textarea rows="5" cols="300" name="bio"></textarea>
 			<button class="button">Modifica BIO</button></fieldset>
@@ -29,12 +34,9 @@
 </div>
 <h2>Autore di:</h2>
 <div class="trainBoxWrapper">
-
+##TrainBox##
 </div>
-</main>
+</div>
 ##footer##
-
-
-
-
 </body>
+</html>

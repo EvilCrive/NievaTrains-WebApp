@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
+
+<head>	 
+	<title> Ricerca - NievaTrains</title>
+    <meta charset="utf-8" />
+	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, ricerca " />
+	<meta name="description" content="Pagina di ricerca, per cercare i treni oppure gli utenti" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+</head>
+<body>
+##header##
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; Ricerca</p>
+</div>
+		<div id="searchBarBox">
+			<form id="searchTop" action="../php/Ricerca.php" method="post">	
+				<select id="sceltaCategorieRicerca" name="categorie" form="searchTop">
+					<option value="1">Treni</option>
+					<option value="2">Utenti</option>
+				</select>
+				<input id="ricercaInput" type="text" value="Cerca" name="stringaCercata" />
+				<button class="button" name="cerca">Cerca</button>	
+			</form>
+        </div>
+		<h1 id="outputRicerca">Risultati ricerca per ##Stringa## matto tra ##CatRicerca##</h1>
+        <div id="ResultsRicerca">
+##TrainBox##
+		</div>
+           
+</div>
+##footer##
+</body>
+</html>
+
+
