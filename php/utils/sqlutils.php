@@ -54,7 +54,7 @@ function getTrainBoxRicerca($stringa, $connessione) { //4//
 	return $var;
 }
 function getUtentiBoxRicerca($stringa, $connessione) { //5
-	$var=$connessione->getQuery("SELECT Id_Utente, Email, Nome, Username, Cognome, Immagine FROM utenti
+	$var=$connessione->getQuery("SELECT Id_Utente, Mail, Nome, Username, Cognome, Immagine FROM utenti AS T
 	WHERE T.Nome LIKE '%$stringa%' OR T.Cognome LIKE '%$stringa%' OR T.Username LIKE '%$stringa%'"); 
 	return $var;
 }

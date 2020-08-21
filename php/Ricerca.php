@@ -11,7 +11,7 @@ try {
 	if(!$connessione->openConnection()) throw new Exception("No connection");
 	if(isset($_GET["stringaCercata"])) $stringa=$_GET["stringaCercata"];
 	else $stringa="";
-	if(isset($_GET["categoriaCercata"])) $CatRicerca=$_GET["categoriaCercata"];
+	if(isset($_GET["CategoriaCercata"])) $CatRicerca=$_GET["CategoriaCercata"];
 	else $CatRicerca="Treni";
 	//query al db
 	if($CatRicerca=="Utenti") $queryRisultato=getUtentiBoxRicerca($stringa, $connessione);
@@ -19,7 +19,6 @@ try {
 	//generazione variabili di sostituzione
 	//$divusermenu;
 	//$ref;
-
 	//OR $risultato=stampaUtentiBox;
 	//importazione txt
 	$final=file_get_contents("../txt/Ricerca.html");
@@ -33,7 +32,10 @@ try {
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);
 
-if($queryRisultato) $final=str_replace("##TrainBox##",stampaTrainBox($queryRisultato),$final);	
+if($queryRisultato){
+	if($CatRicerca=="Utenti")	$final=str_replace("##TrainBox##",stampaUtentiBox($queryRisultato),$final);
+	else	$final=str_replace("##TrainBox##",stampaTrainBox($queryRisultato),$final);
+}
 else $final=str_replace("##TrainBox##","<p>Spiacenti ma non ci sono risultati corrispondenti ai criteri di ricerca</p>",$final);
 	
 	echo $final;

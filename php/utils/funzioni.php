@@ -68,7 +68,7 @@ function stampaUtentiBox($queryRes) {
 		$var.='				<li>Nome: '.$queryRes[$i]["Nome"].'</li>'."\n";
 		$var.='				<li>Tipo: '.$queryRes[$i]["Cognome"].'</li>'."\n";
 		$var.='				<li>Marca: '.$queryRes[$i]["Username"].'</li>'."\n";
-		$var.='				<li>Autore: '.$queryRes[$i]["Email"].'</li>'."\n";
+		$var.='				<li>Autore: '.$queryRes[$i]["Mail"].'</li>'."\n";
 		$var.='			</ul>'."\n";
 		$var.='			<a href="../PHP/Treni.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";
