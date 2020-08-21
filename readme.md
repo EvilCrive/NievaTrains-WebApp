@@ -22,5 +22,5 @@
   * controllo input
   * creazione pagine
   * menu utente a lato
-  * admin, treno, aggiungitreno, utente esperto, ricerca
+  * admin, treno, aggiungitreno, 
   

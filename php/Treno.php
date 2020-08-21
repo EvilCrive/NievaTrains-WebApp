@@ -25,12 +25,18 @@ try {
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
-	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti),$final);
+	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).'<button class="button">Like</button>',$final);
 	//$final=str_replace("%%user",$divusermenu,$final);	
 	//$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);	
 	
+if((isset($_SESSION['userType'])) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
+	$buttonsOperazioni='<button class="button">Elimina Treno</button>';
+	$buttonsOperazioni.= '<button class="button">Modifica</button>';
+	$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);	
+}else	$final=str_replace("%%operazionitreno","",$final);	
+
 if($queryInfoTreno) {
 	$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
 	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
