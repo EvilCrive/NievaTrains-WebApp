@@ -9,36 +9,39 @@
 	<meta name="description" content="Pagina contenente contatti e informazioni sui creatori di NievaTrains" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+	<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
+	<script src="../js/menu_hamburger.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
 	<div id="hrow1">
 			<img id="logo" src="../resources/logo_nieva.png" alt="Logo Nieva Trains"/>
-			<div>
-				<form id="searchTop" action="../PHP/Ricerca.php" method="post">
-					<select id="sceltaCategorie" name="categorie" form="searchTop">
-						<option value="1">Treni</option>
-						<option value="2">Utenti</option>
-					</select>
-					<div class="search-box">
-						<input class="search-txt" type="text" value="Cerca" name="stringaCercata" />
-						<a class="search-btn" href="#"><img id="search" src="../resources/search.png"/></a>
-					</div>
-				</form>
-			</div>
-			<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/>
+			<img id="hamburger" src="../resources/hamburger.png" onclick="buttonclick()" />
+				<div id="myLinks" class="menuOff">
+					<form id="searchTop" action="../PHP/Ricerca.php" method="post">
+						<select id="sceltaCategorie" name="categorie" form="searchTop">
+							<option value="1">Treni</option>
+							<option value="2">Utenti</option>
+						</select>
+						<div class="search-box">
+							<input class="search-txt" type="text" value="Cerca" name="stringaCercata" />
+							<a class="search-btn" href="#"><img id="search" src="../resources/search.png"/></a>
+						</div>
+					</form>
+				</div>
+				<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/>
 	</div>
 	<div id="hrow2">
-		<ul id="stayLeft" class="menuList">
-			<li id="spec">Categorie:</li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" >Vapore</a></li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Primi" >Combustione</a></li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Secondi" >Elettrici</a></li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Dolci" >Maglev</a></li>
-		</ul>
-		<ul id="stayRight" class="menuList">
-			<li><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
-		</ul>
+			<ul id="myLinks2" class="stayLeft menuList menuOff">
+				<li id="spec">Categorie:</li>
+				<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" >Vapore</a></li>
+				<li><a href="../PHP/Intermedia.php?Categoria=Primi" >Combustione</a></li>
+				<li><a href="../PHP/Intermedia.php?Categoria=Secondi" >Elettrici</a></li>
+				<li><a href="../PHP/Intermedia.php?Categoria=Dolci" >Maglev</a></li>
+			</ul>
+			<ul class="stayRight menuList">
+				<li><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
+			</ul>
 	</div>
 </header>
 <div id="container">

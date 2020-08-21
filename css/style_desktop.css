@@ -88,10 +88,17 @@ header{
 	max-height: 60px;
 	cursor: pointer;
 }
+#hamburger{
+  max-width: 50px;
+  max-height: 50px;
+  display: none;
+}
 #utenteTop {
   max-width: 60px;
 	max-height: 60px;
 	cursor: pointer;
+  display: inline-block;
+  float:right;
 }
 
 #search{
@@ -129,6 +136,12 @@ select{
   line-height: 10px;
 }
 
+/*#myLinks{
+	display: block;
+}
+#myLinks2{
+	display: block;
+}*/
 /*HEADER 2*/
 
 #hrow2 {
@@ -168,10 +181,10 @@ select{
   padding: 16px 20px;
   text-decoration: none;
 }
-#stayLeft{
+.stayLeft{
   float: left;
 }
-#stayRight{
+.stayRight{
   float: right;
 }
 
@@ -352,17 +365,6 @@ width: 100%;
 }
 
 /*
-#sceltaCategorieRicerca {
-	display: inline-block;
-	width: 5%;
-	margin: 10px auto;
-	padding: 15px;
-		border: none;
-		background-color: #f6f5f3;
-  border-bottom: 2px solid #adadad;
-  border-radius: 5px;
-}
-
 #ricercaInput {
 	display: inline-block;
 	width: 30%;
@@ -626,4 +628,51 @@ fieldset{
   .card{
     width: 80%;
   }
+}
+
+
+/*404*/
+.parent-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.text-content{
+  text-align: center;
+}
+
+.text-content h1{
+  font-size: 2.5em;
+  margin: 20px;
+}
+
+.text-content h2{
+  font-size: 1.7em;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.text-content a{
+  text-decoration: none;
+  color: black;
+  border: 2px solid #294173;
+  padding: 12px 24px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.text-content a:hover{
+  background: #294173;
+  color: white;
+}
+
+#img-404{
+  margin-top: 50px;
+  width: 40%;
 }
