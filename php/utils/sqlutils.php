@@ -5,6 +5,34 @@ function getInfoUtente($id, $connessione) { //1
 	$var=$connessione->getQuery("SELECT * FROM utenti WHERE Id_Utente=$id");
 	return $var;
 }
+
+function checkUtente($mail,$user, $connessione){
+	return $connessione->getQuery("SELECT Username,Mail from utenti WHERE Mail=$mail OR Username=$user");
+}
+function insertUtente($nome,$cognome,$username,$email,$password,$bio,$immagine, $connessione){
+	$usertype=0;
+	$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password,Bio,Is_User_Type,Immagine) VALUES($nome,$cognome,$username,$email,$password,$bio,$usertype,$immagine);";
+	return $connessione->exeQuery($query);			
+}
+function getUserID($email, $connessione){
+	return $connessione->getQuery("SELECT Id_Utente AS ID from utenti WHERE Mail='$email'")[0]['ID'];
+}
+function checkLoginUtente($email,$password, $connessione){
+	$query = "SELECT* from utenti WHERE Mail='$email' AND Password='$password';";
+	return $connessione->getQuery($query);
+}
+function getUserNome($email, $connessione){
+	return $connessione->getQuery("SELECT Nome from utenti WHERE Mail='$email'")[0]['Nome'];
+}
+function getUserCognome($email, $connessione){
+	return $connessione->getQuery("SELECT Cognome from utenti WHERE Mail='$email'")[0]['Cognome'];
+}
+function getUserUserName($email, $connessione){
+	return $connessione->getQuery("SELECT Username from utenti WHERE Mail='$email'")[0]['Username'];
+}
+function getUserUserType($email, $connessione){
+	return $connessione->getQuery("SELECT Is_User_Type from utenti WHERE Mail='$email'")[0]['Is_User_Type'];
+}
 //treni
 function getInfoTrenoLimit($connessione) { //2
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON T.Id_Autore=U.Id_Utente LIMIT 6");

@@ -1,4 +1,5 @@
 <?php
+
 //importazione librerie
 require_once "utils/connection.php";
 require_once "utils/funzioni.php";

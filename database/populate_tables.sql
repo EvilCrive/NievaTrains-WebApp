@@ -211,7 +211,7 @@ INSERT INTO Preferiti(Id_Utente,Id_Treno) VALUES
 (10,5),(10,9),(10,11);
 
 INSERT INTO Proposte(Id_Utente,Id_Treno) VALUES
-();
+(1,2);
 
 INSERT INTO Admins(User,Pin) VALUES
 ('admin','admin');

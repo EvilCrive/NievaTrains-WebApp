@@ -17,12 +17,16 @@
 </div>
     <h1>Accedi:</h1>
 		<div class="LoginSignupBox">
-			<p><span xml:lang="en" lang="en">Email</span></p>
-			<input  class="inputbar" type="email" name="email" placeholder="Email" />
-			<p><span xml:lang="en" lang="en">Password</span></p>
-			<input class="inputbar" type="password" name="password" placeholder="Password"/>
-			<div id="errori_login"></div>
-            <input class="button" name="button" type="submit" value="Accedi" />	
+			<form action="../PHP/form.php" method="post" onsubmit="return ValidateLogIn()" id="loginform">
+				<fieldset>
+					<label for="email">Email</label>
+					<input  class="inputbar" type="email" name="email" placeholder="Email" />
+					<label for="password">Password</label>
+					<input class="inputbar" type="password" name="password" placeholder="Password"/>
+					<input class="button" name="button" type="submit" value="Accedi" />	
+					<div id="errori_login"></div>
+				</fieldset>
+			</form>
 		</div>
 </div>
 ##footer##
