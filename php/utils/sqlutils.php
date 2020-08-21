@@ -58,6 +58,7 @@ function getTrainBoxAutore($id, $connessione) { //3
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON T.Id_Autore=U.Id_Utente WHERE T.Id_Autore=$id"); 
 	return $var;
 }
+
 function getTrainBoxRicerca($stringa, $connessione) { //4//
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON U.Id_Utente=T.Id_Autore
 	WHERE T.Nome LIKE '%$stringa%' OR T.Categoria LIKE '%$stringa%' OR T.Costruttore LIKE '%$stringa%';"); 
@@ -72,6 +73,35 @@ function getCommenti($id, $connessione) { //6
 	$var=$connessione->getQuery("SELECT C.Id_Treno, C.Id_Utente, U.Id_Utente, U.Username, C.Testo, C.Data FROM commenti AS C JOIN utenti AS U ON U.Id_Utente=C.Id_Utente
 	WHERE C.Id_Treno=$id"); 
 	return $var;
+}
+
+function stampaInfoUtente($queryRes) {
+	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
+	return $var;
+}
+function stampaEmail($queryRes) {
+	return $queryRes[0]["Mail"];
+}
+function stampaBio($queryRes) {
+	return $queryRes[0]["Bio"];
+}
+function stampaNomeT($queryRes) {
+	return $queryRes[0]["Nome"];
+}
+function stampaNomeU($queryRes) {
+	return $queryRes[0]["Nome"];
+}
+function stampaUsernameA($queryRes) {
+	return $queryRes;
+}
+function stampaDescT($queryRes) {
+	return $queryRes[0]["Descrizione"];
+}
+function stampaImgT($queryRes) {
+	return $queryRes[0]["Immagine"];
+}
+function stampaCategoriaT($query){
+	return $query[0]["Categoria"];
 }
 //////////////////////////////////////////////////
 function getPreferiti($id, $connessione) {

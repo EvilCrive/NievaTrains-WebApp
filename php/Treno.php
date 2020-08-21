@@ -23,36 +23,37 @@ try {
 	$footer=file_get_contents("../txt/Footer.html");
 
 	//sostituzione variabili di sostituzione
-	$buttonPreferiti='<form action="../PHP/utils/operationsTreno.php" method="post"><fieldset><label for="Like"><input class="button" name="like" type="submit" value="';
+	$buttonPreferiti='<form action="../PHP/utils/operationsTreno.php" method="post" name="likesForm"><fieldset><label for="Like"><input class="button" name="like" type="submit" value="';
 	if(isset($_SESSION['userType'])){
 		if(boolLiked($_SESSION['id'],$id,$connessione))	$buttonPreferiti.="Unlike";
 		else	$buttonPreferiti.="Like";
 	}else	$buttonPreferiti.="Like";
 	$buttonPreferiti.='" /></label><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
-	
+
 	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).$buttonPreferiti,$final);
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);	
 	
-if((isset($_SESSION['userType'])) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
-	$buttonsOperazioni='<button class="button">Elimina Treno</button>';
-	$buttonsOperazioni.= '<button class="button">Modifica</button>';
-	$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);	
-}else	$final=str_replace("%%operazionitreno","",$final);	
+	if((isset($_SESSION['userType'])) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
+		$buttonsOperazioni ='<form action="../PHP/utils/operationsTreno.php" method="post" name="removemodifyForm"><fieldset>';
+		$buttonsOperazioni.='<label for="EliminaTreno"><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></label>';
+		$buttonsOperazioni.='<label for="ModificaTreno"><input class="button" name="modificaTreno" type="submit" value="Modifica"/></label></fieldset></form>';
+		$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);	
+	}else	$final=str_replace("%%operazionitreno","",$final);	
 
-if($queryInfoTreno) {
-	$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
-	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
-	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
-	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
-}else throw new Exception("Wrong ID");
+	if($queryInfoTreno) {
+		$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
+		$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
+		$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
+		$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
+		$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);
+	}else throw new Exception("Wrong ID");
 
-if($queryNomeA) $final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
-else throw new Exception("Errore nel DB, manca l'autore di una pagina");
+	if($queryNomeA) $final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
+	else throw new Exception("Errore nel DB, manca l'autore di una pagina");
 	
-if($queryCommenti) $final=str_replace("##Commenti##",stampaCommenti($queryCommenti),$final);
-else $final=str_replace("##Commenti##","",$final);
-	
+	if($queryCommenti) $final=str_replace("##Commenti##",stampaCommenti($queryCommenti),$final);
+	else $final=str_replace("##Commenti##","",$final);
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni

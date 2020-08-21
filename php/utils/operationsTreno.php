@@ -18,9 +18,21 @@ try{
                 //already liked
                 removeLike($iduser,$idtreno,$connessione);
             }else{
+                //ora si mette il like
                 addLike($iduser,$idtreno,$connessione);
             }
             header("refresh:0 url=../Treno.php?Id_Treno=$idtreno");
+        }
+
+        //da fare
+        if(isset($_POST['modificaTreno'])){
+            print_r($_POST);
+        }
+        if(isset($_POST['eliminaTreno'])){
+            print_r($_POST);
+        }
+        if(isset($_POST['eliminaCommento'])){
+
         }
     }
 }catch(Exception $exc){
