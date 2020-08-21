@@ -20,7 +20,10 @@ try {
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
 	$errori="";
-	if(isset($_SESSION['fail']))	$errori=$_SESSION['fail'];
+	if(isset($_SESSION['fail'])){
+		$errori=$_SESSION['fail'];
+		$_SESSION['fail']="";
+	}
 	$final=str_replace("%%errors",$errori,$final);
 
 	$final=str_replace("##header##",$header,$final);

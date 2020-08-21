@@ -33,7 +33,7 @@ try {
 if($queryInfoU){
 	$final=str_replace("##ImmagineUtente##",stampaImmagine($queryInfoU),$final);
 	$final=str_replace("##NomeU##",stampaNomeU($queryInfoU),$final);
-	$final=str_replace("##InfoUtente##",stampaInfoUtente($queryInfoU);,$final);
+	$final=str_replace("##InfoUtente##",stampaInfoUtente($queryInfoU),$final);
 	$final=str_replace("##Email##",stampaEmail($queryInfoU),$final);
 	$final=str_replace("##Bio##",stampaBio($queryInfoU),$final);
 }

@@ -45,7 +45,7 @@ function stampaTrainBox($queryRes) {
 		$var.='				<li>Marca: '.$queryRes[$i]["Costruttore"].'</li>'."\n";
 		$var.='				<li>Autore: '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Treni.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn">Read more</a>'."\n";
+		$var.='			<a href="../PHP/Treno.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}

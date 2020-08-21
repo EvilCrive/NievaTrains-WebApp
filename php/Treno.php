@@ -36,10 +36,10 @@ if($queryInfoTreno) {
 	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
 	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
 	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
-}else new throw Exception("Wrong ID");
+}else throw new Exception("Wrong ID");
 
 if($queryNomeA) $final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
-else new throw Exception("Errore nel DB, manca l'autore di una pagina");
+else throw new Exception("Errore nel DB, manca l'autore di una pagina");
 	
 if($queryCommenti) $final=str_replace("##Commenti##",stampaCommenti($queryCommenti),$final);
 else $final=str_replace("##Commenti##","",$final);
