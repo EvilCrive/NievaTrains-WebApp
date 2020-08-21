@@ -19,34 +19,36 @@ try {
 	//generazione variabili di sostituzione
 	//$divusermenu;
 	//$ref;
-	$preferiti=stampaPreferiti($nPreferiti);
-	$NomeT=stampaNomeT($queryInfoTreno);
-	$NomeA=stampaUsernameA($queryNomeA);
-	$SchedaT=stampaSchedaT($queryInfoTreno);
-	$DescT=stampaDescT($queryInfoTreno);
-	$Commenti=stampaCommenti($queryCommenti);
-	$immagine=stampaImmagine($queryInfoTreno);
+	
 	//importazione txt
 	$final = file_get_contents("../txt/Treno.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
-	$final=str_replace("##LikeT##",$preferiti,$final);
+	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti),$final);
 	//$final=str_replace("%%user",$divusermenu,$final);	
 	//$final=str_replace("%%user",$ref,$final);	
-	$final=str_replace("##ImmagineTreno##",$immagine,$final);
-	$final=str_replace("##NomeT##",$NomeT,$final);
-	$final=str_replace("##NomeA##",$NomeA,$final);
-	$final=str_replace("##SchedaT##",$SchedaT,$final);	
-	$final=str_replace("##DescT##",$DescT,$final);	
-	$final=str_replace("##Commenti##",$Commenti,$final);
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);	
+	
+if($queryInfoTreno) {
+	$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
+	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
+	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
+	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
+}else new throw Exception("Wrong ID");
+
+if($queryNomeA) $final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
+else new throw Exception("Errore nel DB, manca l'autore di una pagina");
+	
+if($queryCommenti) $final=str_replace("##Commenti##",stampaCommenti($queryCommenti),$final);
+else $final=str_replace("##Commenti##","",$final);
 	
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni
-	echo $eccezione;
+	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");
+	else echo $eccezione;
 }
 //chiusura connessione
 $connessione->closeConnection();

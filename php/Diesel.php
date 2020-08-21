@@ -15,7 +15,7 @@ try {
 	//$divusermenu;
 	//$ref;
 	//importazione txt
-	$final = file_get_contents("../txt/Combustione.html");
+	$final = file_get_contents("../txt/Diesel.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
