@@ -17,12 +17,7 @@ try {
 	//generazione variabili di sostituzione
 	//$divusermenu;
 	//$ref;
-	$nomeU=stampaNomeU($queryInfoU);
-	$infoU=stampaInfoUtente($queryInfoU);
-	$email=stampaEmail($queryInfoU);
-	$bio=stampaBio($queryInfoU);
-	$risultati=stampaTrainBox($queryRisultati);
-	$immagine=stampaImmagine($queryInfoU);
+
 	//importazione txt
 	$final = file_get_contents("../txt/Utente.html");
 	$header=file_get_contents("../txt/Header.html");
@@ -30,19 +25,28 @@ try {
 	//sostituzione variabili di sostituzione
 	//$final=str_replace("%%user",$divusermenu,$final);	
 	//$final=str_replace("%%user",$ref,$final);	
-	$final=str_replace("##ImmagineUtente##",$immagine,$final);
-	$final=str_replace("##NomeU##",$nomeU,$final);
-	$final=str_replace("##InfoUtente##",$infoU,$final);
-	$final=str_replace("##Email##",$email,$final);
-	$final=str_replace("##Bio##",$bio,$final);	
-	$final=str_replace("##TrainBox##",$risultati,$final);	
+	
+	
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);	
+	$final=str_replace("##footer##",$footer,$final);
+
+if($queryInfoU){
+	$final=str_replace("##ImmagineUtente##",stampaImmagine($queryInfoU),$final);
+	$final=str_replace("##NomeU##",stampaNomeU($queryInfoU),$final);
+	$final=str_replace("##InfoUtente##",stampaInfoUtente($queryInfoU);,$final);
+	$final=str_replace("##Email##",stampaEmail($queryInfoU),$final);
+	$final=str_replace("##Bio##",stampaBio($queryInfoU),$final);
+}
+else throw new Exception("Wrong ID");
+
+if($queryRisultati) $final=str_replace("##TrainBox##",stampaTrainBox($queryRisultati),$final);
+else $final=str_replace("##TrainBox##","<p>Questo utente non ha pubblicato pagine in Nieva Trains</p>",$final);
 	
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni
-	echo $eccezione;
+	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");
+	else echo $eccezione;
 }
 //chiusura connessione
 $connessione->closeConnection();
