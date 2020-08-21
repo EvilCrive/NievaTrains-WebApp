@@ -1,7 +1,5 @@
 Una locomotiva a vapore è un veicolo ferroviario azionato da un motore a vapore e destinato alla trazione ferroviaria di vagoni merci o carrozze passeggeri. Fu inventata da diversi tecnologi (tra cui Richard Trevithick e George Stephenson) all'inizio del XIX secolo, la locomotiva a vapore rivoluzionò il sistema dei trasporti su rotaia permettendo il passaggio da quelli a trazione animale a quelli a trazione meccanica.
 
-Sostituita da altri sistemi di trazione nel XX secolo (la trazione elettrica e la trazione motori endotermica) a causa della bassa potenza e del modesto rendimento, la trazione a vapore resta fondamentale nello sviluppo della tecnologia anche per il contributo nella termodinamica.
-
 Nella tecnica ferroviaria si definisce "locomotiva" l'insieme della motrice e del tender[Nota 1]. Qualora le scorte di acqua e di combustibile non vengano trasportate su un veicolo apposito ma sulla macchina, il mezzo viene denominato locomotiva-tender (o locotender)
 Una locomotiva a vapore è una macchina termica ad alta pressione che utilizza il ciclo Rankine in un Motore a combustione esterna, che impiega la combustione nel Generatore di vapore per produrre vapore acqueo con cui è alimentata e azionare quindi un motore a vapore[Nota 3]. Il moto alternativo da esso generato viene trasmesso con il Meccanismo biella-manovella, alle ruote e da esse trasformato nel Moto circolare che serve a far avanzare la locomotiva.
 

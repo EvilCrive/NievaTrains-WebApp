@@ -1,16 +1,18 @@
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP TABLE IF EXISTS Treni;
-DROP TABLE IF EXISTS Utenti;
-DROP TABLE IF EXISTS Commenti;
-DROP TABLE IF EXISTS Preferiti;
-DROP TABLE IF EXISTS Proposte;
 DROP TABLE IF EXISTS Admins;
+DROP TABLE IF EXISTS Proposte;
+DROP TABLE IF EXISTS Preferiti;
+DROP TABLE IF EXISTS Commenti;
+DROP TABLE IF EXISTS Utenti;
+DROP TABLE IF EXISTS Treni;
 
-SET FOREIGN_KEY_CHECKS=1
+
+SET FOREIGN_KEY_CHECKS=1;
 
 CREATE TABLE Treni(
 	Id_Treno integer auto_increment PRIMARY KEY,
+	Id_Autore integer not null,
 	Categoria varchar(20) not null,
 	Nome varchar(50) not null,
 	Costruttore varchar(50) not null,

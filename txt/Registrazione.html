@@ -8,28 +8,38 @@
 	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, registrazione" />
 	<meta name="description" content="Pagina di Registrazione per creare il proprio acount NievaTrains" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
 </head>
 <body>
 ##header##
-<main>
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; Registrazione</p>
+</div>
     <h1>Crea il tuo NievaTrains Account:</h1>
 		<div class="LoginSignupBox">
-			<p>Nome</p>
-			<input  class="inputbar" type="text" name="nome" placeholder="Nome" />
-			<p>Cognome</p>
-            <input class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
-            <p><span xml:lang="en" lang="en">Email</span></p>
-            <input  class="inputbar" type="email" name="email" placeholder="Email" />
-            <p><span xml:lang="en" lang="en">Username</span></p>
-            <input class="inputbar" type="text" name="username" placeholder="Username"/>
-			<p><span xml:lang="en" lang="en">Password</span></p>
-            <input class="inputbar" type="password" name="password" placeholder="Password"/>
-            <p><span xml:lang="en" lang="en">Conferma Password</span></p>
-			<input class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
+			<form action="../PHP/form.php" method="post" onsubmit="return ValidateSignUp()" id="signupform">
+				<fieldset>
+					<label for="nome">Nome</label>
+					<input  class="inputbar" type="text" name="nome" placeholder="Nome" />
+					<label for="cognome">Cognome</label>
+            		<input class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
+            		<label for="email">Email</label>
+            		<input  class="inputbar" type="email" name="email" placeholder="Email" />
+            		<label for="username">Username</label>
+            		<input class="inputbar" type="text" name="username" placeholder="Username"/>
+	    			<label for="password">Password</label>
+            		<input class="inputbar" type="password" name="password" placeholder="Password"/>
+            		<label for="conferma_password">Conferma Password</label>
+	    			<input class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
+	    			<label for="myfile">Immagine</label>
+	    			<input type="file" id="myfile" name="myfile">
+            		<input class="button" name="button" type="submit" value="Registrati" />	
+				</fieldset>
+			</form>
 			<div id="errori_registrazione"></div>
-            <input class="button" name="button" type="submit" value="Registrati" />	
 		</div>
-</main>
+</div>
 ##footer##
 </body>
+</html>

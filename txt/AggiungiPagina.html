@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
+
+<head>	 
+	<title> Registrazione - NievaTrains</title>
+    <meta charset="utf-8" />
+	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, registrazione" />
+	<meta name="description" content="Pagina di Registrazione per creare il proprio acount NievaTrains" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+</head>
+<body>
+##header##
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./Treno.php">Treno</a> -&gt; Aggiungi Treno</p>
+</div>
+    <h1>Aggiungi una nuova pagina a Nieva Trains:</h1>
+
+	<div class="AggiuntaTreno">
+	<form action="../PHP/uploadPagina.php" method="post" onsubmit="return ValidateSignUp()" id="uploadform">
+			<label for="nome">Nome</label>
+					<input class="inputbar" type="text" name="nome" placeholder="Nome" />
+					<label for="categorie">Categoria</label>
+					<select class="sceltaAggiunta" name="categorie" form="searchTop">
+						<option value="1">Elettrico</option>
+						<option value="2">Vapore</option>
+						<option value="3">Maglev EDS</option>
+						<option value="4">Maglev EMS</option>
+						<option value="5">Diesel</option>
+						<option value="6">Turbina a Gas</option>
+					</select> 
+					<label for="costruttore">Costruttore</label>
+					<input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
+					<label for="tipo">Tipo</label>
+					<select class="sceltaAggiunta" name="tipo" form="searchTop">
+						<option value="1">Alta velocità</option>
+						<option value="2">Lunga percorrenza</option>
+						<option value="3">Prototipo</option>
+						<option value="4">Intercity</option>
+						<option value="5">Trasporto locale</option>
+					</select>
+					<label for="vel">Velocità massima (km/h)</label>
+					<input class="inputbar" type="text" name="vel" placeholder="Velocità Massima"/>
+					<label for="anni">Anni di costruzione</label>
+				<input class="inputbar" type="text" name="anni" placeholder="Anni di costruzione"/>
+					<label for="descrizione">Descrizione</label>
+				<textarea class="sceltaDesc" rows="5" cols="300" name="descrizione"></textarea>
+					<label for="myfile">Scegli un immagine</label>
+					<input type="file" id="myfileupload" name="myfileupload">
+				<input class="button" name="button" type="submit" value="Conferma" />	
+		</fieldset>
+	</form>
+	<div id="errori_registrazione"></div>
+	</div>
+</div>
+##footer##
+</body>
+</html>

@@ -21,6 +21,10 @@ html {
   margin: auto;
 
 }
+label{
+	display: block;
+	padding: 10px;
+}
 .hidden{
 	display: none;
 }
@@ -73,9 +77,11 @@ p {
 header{
   width: 100%;
   max-width: 1800px;
-  position: fixed;
+
 }
 #hrow1 {
+	max-width: 1800px;
+	position: fixed;
 	width: 100%;
 	background-color: #232f46;
   display: flex;
@@ -100,7 +106,6 @@ header{
   display: inline-block;
   float:right;
 }
-
 #search{
   float: right;
 }
@@ -143,11 +148,16 @@ select{
 	display: block;
 }*/
 /*HEADER 2*/
+#breadcrumb {
+	background-color: lightblue;
+	text-align: left;
+}
 
 #hrow2 {
+	padding-top:120px;
 	width: 100%;
   height: auto;
-	background-color: #294173/*#1a1e23*/;
+	background-color: #294173 /*#1a1e23*/;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -196,7 +206,7 @@ footer{
   height: 300px;
   max-width: 1800px;
   width: 100%;
-  margin-top: -300px;
+
   clear: both;
   background-color: #232f46;
   color: white;
@@ -350,7 +360,7 @@ footer{
 }
 
 /* RICERCA */
-#searchTop {
+#searchTop, #searchPage {
 width: 100%;
 }
 
@@ -553,7 +563,6 @@ fieldset{
 .commentInfo {
 	float: left;
 }
-
 /* Ricerca Treni */
 .row{
   display: flex;
@@ -675,4 +684,62 @@ fieldset{
 #img-404{
   margin-top: 50px;
   width: 40%;
+}
+/*AGGIUNTA PAGINA*/
+.inputbar{
+  width: 90%;
+}
+.AggiuntaTreno input[type=text], .AggiuntaTreno input[type=password], .AggiuntaTreno input[type=email]{
+  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.AggiuntaTreno {
+	text-align: left;
+	width: 90%;
+	margin: auto;
+}
+.AggiuntaTreno input[type=text]:focus, .AggiuntaTreno input[type=password]:focus, .AggiuntaTreno input[type=email]:focus{
+    border-bottom: 2px solid lightblue;
+}
+
+.AggiuntaTreno label {
+	text-align: left;
+}
+.AggiuntaTreno .inputbar{
+	display: block;
+	width: 30%;
+}
+.AggiuntaTreno textarea{
+	width: 50%;
+}
+.AggiuntaTreno .button {
+	display: block;
+}
+.sceltaAggiunta{
+	  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 2.5em;
+  margin-bottom: 10px;
+}
+.sceltaDesc {
+	  border:none;
+  border-bottom: 2px solid #adadad;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.sceltaAggiunta:focus, .sceltaDesc:focus {
+	border-bottom: 2px solid lightblue;
+}
+input[type=file]{
+	padding: 10px;
 }

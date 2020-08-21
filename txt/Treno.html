@@ -8,16 +8,20 @@
 	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, treno" />
 	<meta name="description" content="Pagina del treno interessato, con tutte le informazioni disponibili a riguardo" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
 </head>
 <body>
 ##header##
-<main>
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./##CategoriaTLink##.php">##CategoriaTLink##</a> -&gt; ##NomeT##</p>
+</div>
 	<div id="trainHeader">
 		<h1>##NomeT##</h1>
-		<p id="pref">10 preferiti</p>
+		<p id="pref">##LikeT##</p>
 		<p >by ##NomeA##</p>
-		<img />
+		<button class="button">elimina Treno</button>
+		<img class="userImg" src="./##ImmagineTreno##.jpg" alt=""/>
 		<button class="button">Modifica</button>
 	</div>
 	
@@ -26,11 +30,8 @@
 	<h2>Scheda Tecnica</h2>
 	<div id="schedaTecnica">
 		<ul>
-			<li>Categoria: ##CatT##</li>
-			<li>Marca: ##MarcaT##</li>
-			<li>Tipo: ##TipoT##</li>
-			<li>Velocità: ##VelT##</li>
-			<li>Nome: ##NomeT##</li>
+			##SchedaT##
+
 		<ul>
 	</div>
 	
@@ -40,8 +41,24 @@
 	</div>
 	<h3>Commenti:</h3>
 	<div id="commenti">
+	<ul class="comment-section" id="commentreturn">
 	##Commenti##
+			<li id="write-new">
+			<form action="../PHP/commentManage.php" method="post" id="commentform" onsubmit="return ValidateComment()">
+			<fieldset>
+				<textarea rows="5" cols="300" id="controlLogged" class="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
+				<input name="idtreno" value="##CategoriaT##" class="hidden"/>
+				<textarea rows="5" cols="300" name="comment"></textarea>
+				<div id="confirmComment">
+					   <button class="button" type="submit">Invia</button>
+					   <p id="commentRequired" class="errors"></p>
+   				</div>
+			</fieldset>
+			</form>
+		</li>
+	</ul>
 	</div>
-</main>
+</div>
 ##footer##
 </body>
+</html>

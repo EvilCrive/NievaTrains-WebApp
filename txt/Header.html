@@ -1,50 +1,31 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
-
-<head>
-		<title> About - NievaTrains</title>
-	<meta charset="utf-8" />
-	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	<meta name="keywords" content="treni, trasporti, enciclopedia, contatti, about" />
-	<meta name="description" content="Pagina contenente contatti e informazioni sui creatori di NievaTrains" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
-</head>
-<body>
 <header>
 	<div id="hrow1">
-			<img id="logo" src="../resources/logo_nieva.png" alt="Logo Nieva Trains"/>
+			<img id="logo" src="../resources/logo_nieva.png" href="../php/Index.php" alt="Logo Nieva Trains"/>
 			<div>
-				<form id="searchTop" action="../PHP/Ricerca.php" method="post">
-					<select id="sceltaCategorie" name="categorie" form="searchTop">
-						<option value="1">Treni</option>
-						<option value="2">Utenti</option>
+				<form id="searchHeader" action="../php/Ricerca.php" method="get">
+					<select id="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
+						<option value="Treni">Treni</option>
+						<option value="Utenti">Utenti</option>
 					</select>
 					<div class="search-box">
-						<input class="search-txt" type="text" value="Cerca" name="stringaCercata" />
-						<a class="search-btn" href="#"><img id="search" src="../resources/search.png"/></a>
+						<input class="search-txt" type="text" value="Cerca" name="stringaCercata" form="searchHeader"/>
+						<button class="search-btn" form="searchHeader"><img id="search" src="../resources/search.png"/></button>
 					</div>
 				</form>
 			</div>
-			<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/>
+			<img id="utenteTop" href="../php/LogIn.php" src="../resources/conductor.png" alt="Area riservata"/>
 	</div>
 	<div id="hrow2">
 		<ul id="stayLeft" class="menuList">
 			<li id="spec">Categorie:</li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Antipasti" >Vapore</a></li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Primi" >Combustione</a></li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Secondi" >Elettrici</a></li>
-			<li><a href="../PHP/Intermedia.php?Categoria=Dolci" >Maglev</a></li>
+			<li><a href="../php/Steam.php" >Vapore</a></li>
+			<li><a href="../php/Diesel.php" >Diesel</a></li>
+			<li><a href="../php/Electric.php" >Elettrici</a></li>
+			<li><a href="../php/Maglev.php">Maglev</a></li>
 		</ul>
 		<ul id="stayRight" class="menuList">
-			<li><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
+			<li><span xml:lang="en" lang="en"><a href="../php/About.php" >About</a></span></li>
 		</ul>
 	</div>
 </header>
-<div id="container">
-		<div id="main">
 
-		</div>
-	</div>
-</body>
-</html>

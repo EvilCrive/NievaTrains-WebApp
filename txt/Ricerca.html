@@ -8,29 +8,34 @@
 	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, ricerca " />
 	<meta name="description" content="Pagina di ricerca, per cercare i treni oppure gli utenti" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
+	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
 </head>
 <body>
 ##header##
-<main>
+<div id="content">
+<div id="breadcrumb">
+		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; Ricerca</p>
+</div>
 		<div id="searchBarBox">
-			<form id="searchTop" action="../PHP/Ricerca.php" method="post">	
-				<select id="sceltaCategorieRicerca" name="categorie" form="searchTop">
-					<option value="1">Treni</option>
-					<option value="2">Utenti</option>
+			<form id="searchPage" action="../php/Ricerca.php" method="get">	
+				<select id="sceltaCategorieRicerca" name="CategoriaCercata" form="searchPage">
+					<option value="Treni">Treni</option>
+					<option value="Utenti">Utenti</option>
 				</select>
-				<input id="ricercaInput" type="text" value="Cerca" name="stringaCercata" />
-				<button class="button" name="cerca">Cerca</button>	
+				<div class="search-box">
+				<input class="search-txt" type="text" value="Cerca" form="searchPage" name="stringaCercata" />
+				</div>
+				<button class="button" form="searchPage">Cerca</button>	
 			</form>
         </div>
-		<h1 id="outputRicerca">Risultati ricerca per ##Stringa## matto tra ##CatRicerca##</h1>
+		<h1 id="outputRicerca">Risultati ricerca per "##Stringa##" tra "##CatRicerca##"</h1>
         <div id="ResultsRicerca">
 ##TrainBox##
 		</div>
            
-</main>
+</div>
 ##footer##
 </body>
-
+</html>
 
 
