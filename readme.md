@@ -19,5 +19,6 @@
   * mancano script js nei meta dell' head
   * registrazione e login
 * PHP
-  * registrazione e login
+  * controllo input
   * creazione pagine
+  

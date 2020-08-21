@@ -1,11 +1,11 @@
 <?php
-session_start();
+
 //importazione librerie
 require_once "utils/connection.php";
 require_once "utils/funzioni.php";
 require_once "utils/sqlutils.php";
 //inizializzazione session
-
+session_start();
 //connessione al db
 $connessione=new DBAccess();
 try {
@@ -23,7 +23,7 @@ try {
 	$errori="";
 	if(isset($_SESSION['fail']))	$errori=$_SESSION['fail'];
 	$final=str_replace("%%errors",$errori,$final);
-	
+
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);		
 	
