@@ -1,4 +1,5 @@
 <?php
+session_start();
 //importazione librerie
 require_once "utils/connection.php";
 require_once "utils/funzioni.php";
@@ -19,11 +20,12 @@ try {
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
-	//$final=str_replace("%%user",$divusermenu,$final);
-	//$final=str_replace("%%user",$ref,$final);	
+	$errori="";
+	if(isset($_SESSION['fail']))	$errori=$_SESSION['fail'];
+	$final=str_replace("%%errors",$errori,$final);
+
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);		
-	
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni

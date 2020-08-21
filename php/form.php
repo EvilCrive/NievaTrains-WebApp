@@ -12,30 +12,30 @@ try{
     $errors="";
         //errori login
 	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL))     $errors.="Email non valida";
-    if (!preg_match('/^[a-z0-9]{6,12}$/i',$password))   $errors.=", Password non valida";
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL))     $errors.="<li>Email non valida</li>";
+    if (!preg_match('/^[a-z0-9]{6,12}$/i',$password))   $errors.="<li>Password non valida</li>";
     
     if($_POST['button']=="Registrati"){
         //errori registrazione
         $nome=$_POST['nome'];
 		$cognome=$_POST['cognome'];
 		$username=$_POST['username'];
-		if (!preg_match('/^[a-z0-9]{6,12}$/i',$username))       $errors.="- Username non valido";
-		if (!preg_match('/^[a-z0-9]{3,12}$/i',$nome))           $errors.="- Nome non valido";
-		if (!preg_match('/^[a-z0-9]{3,12}$/i',$cognome))        $errors.="- Cognome non valido";
-        if (!($_POST['confirmpassword']==$_POST['password']))   $errors.="- Password e confermaPassword sbagliate";
+		if (!preg_match('/^[a-z0-9]{6,12}$/i',$username))       $errors.="<li>Username non valido</li>";
+		if (!preg_match('/^[a-z0-9]{3,12}$/i',$nome))           $errors.="<li>Nome non valido</li>";
+		if (!preg_match('/^[a-z0-9]{3,12}$/i',$cognome))        $errors.="<li>Cognome non valido</li>";
+        if (!($_POST['confirmpassword']==$_POST['password']))   $errors.="<li>Password e confermaPassword sbagliate</li>";
         
         //REGISTRAZIONE
         //controllo utenti gia' iscritti
         if(checkUtente($email,$username, $connessione)){
             $_SESSION['fail']="Questo utente e' gia' registrato.";
-            header("refresh:0; url=../PHP/Registrazione.php");
+            header("refresh:0; url=../PHP/Registrazione.php#errori_registrazione");
             die();
         }
         //controllo errori
         if($errors){
-            header("refresh:0; url=../PHP/Registrazione.php");
-            $_SESSION['fail']="Ci sono stati errori, che sono sfuggiti ai controlli client side.(qualche campo non e' valido): "."\n".$errors;
+            header("refresh:0; url=../PHP/Registrazione.php#errori_registrazione");
+            $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
             die();
         }
         //inserimento utente nel db/ vera registrazione
@@ -57,14 +57,20 @@ try{
         $_SESSION['password'] = $password;
         $_SESSION['userType'] = 0;
         //ritorna a registrazione, da loggato
-        header( "refresh:0; url=../PHP/Registrazione.php" ); 	
+        header( "refresh:0; url=../PHP/Registrazione.php#errori_registrazione" ); 	
     }
     if($_POST['button']=="Accedi"){
         //LOGIN
         if(!checkLoginUtente($email,$password, $connessione)){
-            header("refresh:0; url=../PHP/LogIn.php");
+            header("refresh:0; url=../PHP/LogIn.php#errori_login");
             $_SESSION['fail']="Email o Password sbagliati.";
         }else{
+            //controllo errori
+            if($errors){
+                header("refresh:0; url=../PHP/LogIn.php#errori_login");
+                $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
+                die();
+            }
             //admin part
             if(isset($_SESSION['adminlogged'])){
 				$_SESSION=array();
@@ -78,7 +84,7 @@ try{
 			$_SESSION['username'] = getUserUsername($email, $connessione);
 			$_SESSION['password'] = $password;
             $_SESSION['userType'] = getUserUserType($email, $connessione);
-            header("refresh:0; url=../PHP/LogIn.php");
+            header("refresh:0; url=../PHP/LogIn.php#errori_login");
         }
     }
 }catch(Exception $eccezione){

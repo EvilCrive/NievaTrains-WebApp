@@ -335,6 +335,14 @@ footer{
     border-bottom: 2px solid lightblue;
 }
 
+#errori_login {
+  list-style-type: none;
+  color: red;
+}
+#errori_registrazione {
+  list-style-type: none;
+  color: red;
+}
 
 /* ADMIN PANEL */
 
