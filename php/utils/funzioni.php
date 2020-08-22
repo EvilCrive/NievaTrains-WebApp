@@ -1,31 +1,6 @@
 <?php
 require_once "connection.php";
 
-function stampaInfoUtente($queryRes) {
-	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
-	return $var;
-}
-function stampaEmail($queryRes) {
-	return $queryRes[0]["Mail"];
-}
-function stampaBio($queryRes) {
-	return $queryRes[0]["Bio"];
-}
-function stampaNomeT($queryRes) {
-	return $queryRes[0]["Nome"];
-}
-function stampaNomeU($queryRes) {
-	return $queryRes[0]["Nome"];
-}
-function stampaUsernameA($queryRes) {
-	return $queryRes;
-}
-function stampaDescT($queryRes) {
-	return $queryRes[0]["Descrizione"];
-}
-function stampaImgT($queryRes) {
-	return $queryResr[0]["Immagine"];
-}
 
 
 ////////////////////////////////////////////////
@@ -45,7 +20,7 @@ function stampaTrainBox($queryRes) {
 		$var.='				<li>Marca: '.$queryRes[$i]["Costruttore"].'</li>'."\n";
 		$var.='				<li>Autore: '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Treni.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn">Read more</a>'."\n";
+		$var.='			<a href="../PHP/Treno.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}
@@ -68,7 +43,7 @@ function stampaUtentiBox($queryRes) {
 		$var.='				<li>Nome: '.$queryRes[$i]["Nome"].'</li>'."\n";
 		$var.='				<li>Tipo: '.$queryRes[$i]["Cognome"].'</li>'."\n";
 		$var.='				<li>Marca: '.$queryRes[$i]["Username"].'</li>'."\n";
-		$var.='				<li>Autore: '.$queryRes[$i]["Email"].'</li>'."\n";
+		$var.='				<li>Autore: '.$queryRes[$i]["Mail"].'</li>'."\n";
 		$var.='			</ul>'."\n";
 		$var.='			<a href="../PHP/Treni.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";

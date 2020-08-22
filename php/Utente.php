@@ -4,7 +4,7 @@ require_once "utils/connection.php";
 require_once "utils/funzioni.php";
 require_once "utils/sqlutils.php";
 //inizializzazione session
-
+session_start();
 //connessione al db
 $connessione=new DBAccess();
 try {
@@ -30,19 +30,27 @@ try {
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);
 
-if($queryInfoU){
-	$final=str_replace("##ImmagineUtente##",stampaImmagine($queryInfoU),$final);
-	$final=str_replace("##NomeU##",stampaNomeU($queryInfoU),$final);
-	$final=str_replace("##InfoUtente##",stampaInfoUtente($queryInfoU),$final);
-	$final=str_replace("##Email##",stampaEmail($queryInfoU),$final);
-	$final=str_replace("##Bio##",stampaBio($queryInfoU),$final);
-}
-else throw new Exception("Wrong ID");
 
-if($queryRisultati) $final=str_replace("##TrainBox##",stampaTrainBox($queryRisultati),$final);
-else $final=str_replace("##TrainBox##","<p>Questo utente non ha pubblicato pagine in Nieva Trains</p>",$final);
-	
+	if($queryInfoU){
+		$final=str_replace("##ImmagineUtente##",stampaImmagine($queryInfoU),$final);
+		$final=str_replace("##NomeU##",stampaNomeU($queryInfoU),$final);
+		$final=str_replace("##InfoUtente##",stampaInfoUtente($queryInfoU),$final);
+		if((isset($_SESSION['userType'])) && ($id==$_SESSION['id'])){
+			$final=str_replace("##Email##",stampaEmail($queryInfoU),$final);
+			$final=str_replace("%%modificabio","<button>Modifica Bio</button>",$final);
+		}else{
+			$final=str_replace("##Email##","",$final);
+			$final=str_replace("%%modificabio","",$final);
+		}
+		$final=str_replace("##Bio##",stampaBio($queryInfoU),$final);
+		
+	}
+	else throw new Exception("Wrong ID");
+	if($queryRisultati) $final=str_replace("##TrainBox##",stampaTrainBox($queryRisultati),$final);
+	else $final=str_replace("##TrainBox##","<p>Questo utente non ha pubblicato pagine in Nieva Trains</p>",$final);
+
 	echo $final;
+	echo $_SESSION['userType'];
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");

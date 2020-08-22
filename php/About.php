@@ -1,10 +1,11 @@
 <?php
+
 //importazione librerie
 require_once "utils/connection.php";
 require_once "utils/funzioni.php";
 require_once "utils/sqlutils.php";
 //inizializzazione session
-
+session_start();
 //connessione al db
 $connessione=new DBAccess();
 try {
