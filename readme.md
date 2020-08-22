@@ -17,7 +17,6 @@
   * aggiungi treno
   * modifica treno
   * 
-  * modifica bio
   * commenti
   * 
   * ricerca (eds, edm)

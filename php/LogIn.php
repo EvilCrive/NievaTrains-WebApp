@@ -25,7 +25,8 @@ try {
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);	
 	if(isset($_SESSION['userType'])){
-		header("refresh:0 url=../../");	
+		$id=$_SESSION['id'];
+		header("refresh:0 url=Utente.php?Id_Utente=$id");	
 		die();
 	}
 	echo $final;

@@ -27,6 +27,7 @@ try{
         if(isset($_POST['modificaTreno'])){
             //modifica treno 
         }
+
         if(isset($_POST['eliminaTreno'])){
             $idtreno=$_POST['idtreno'];
             $iduser=$_SESSION['id'];
@@ -35,10 +36,10 @@ try{
         if(isset($_POST['eliminaCommento'])){
             $treno=$_POST['idtreno'];
             removeCommento($_SESSION['id'],$treno,$connessione);
-            header("refresh:0 url=../Treno.php?Id_Treno=$treno");
-            
+            header("refresh:0 url=../Treno.php?Id_Treno=$treno"); 
         }
 
+        //user page
         if(isset($_POST['modificaBio'])){
             $id=$_SESSION['id'];
             if(getUserBio($id,$connessione)!==$_POST['bioTesto']){
