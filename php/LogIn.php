@@ -27,8 +27,13 @@ try {
 	$final=str_replace("%%errors",$errori,$final);
 
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);		
+	$final=str_replace("##footer##",$footer,$final);	
+	if(isset($_SESSION['userType'])){
+		header("refresh:0 url=../../");	
+		die();
+	}
 	echo $final;
+	
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	echo $eccezione;

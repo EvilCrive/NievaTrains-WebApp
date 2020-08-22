@@ -5,7 +5,6 @@ function getInfoUtente($id, $connessione) { //1
 	$var=$connessione->getQuery("SELECT * FROM utenti WHERE Id_Utente=$id");
 	return $var;
 }
-
 function checkUtente($mail,$user, $connessione){
 	return $connessione->getQuery("SELECT Username,Mail from utenti WHERE Mail=$mail OR Username=$user");
 }
@@ -33,7 +32,6 @@ function getUserUserName($email, $connessione){
 function getUserUserType($email, $connessione){
 	return $connessione->getQuery("SELECT Is_User_Type from utenti WHERE Mail='$email'")[0]['Is_User_Type'];
 }
-
 function boolLiked($iduser,$idtreno,$connessione){
 	return $connessione->getQuery("SELECT * from preferiti WHERE Id_Utente='$iduser' AND Id_Treno='$idtreno'");
 }
@@ -43,13 +41,36 @@ function removeLike($iduser,$idtreno,$connessione){
 function addLike($iduser,$idtreno,$connessione){
 	return $connessione->exeQuery("INSERT INTO preferiti (Id_Utente, Id_Treno) VALUES($iduser,$idtreno)");
 }
+function stampaInfoUtente($queryRes) {
+	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
+	return $var;
+}
+function stampaEmail($queryRes) {
+	return $queryRes[0]["Mail"];
+}
+function stampaBio($queryRes) {
+	return $queryRes[0]["Bio"];
+}
+function stampaNomeU($queryRes) {
+	return $queryRes[0]["Nome"];
+}
+function stampaUsernameA($queryRes) {
+	return $queryRes;
+}
+function getUsernameA($id, $connessione) {
+	$var=$connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
+	return $var[0]['Username'];
+}
+
+
 //treni
+
+
 function getInfoTrenoLimit($connessione) { //2
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON T.Id_Autore=U.Id_Utente LIMIT 6");
 	//if($var=null) throw new Exception("bad query");
 	return $var;
 }
-
 function getInfoTreno($id, $connessione) { //2
 	$var=$connessione->getQuery("SELECT * FROM treni WHERE Id_Treno=$id");
 	return $var;
@@ -58,7 +79,6 @@ function getTrainBoxAutore($id, $connessione) { //3
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON T.Id_Autore=U.Id_Utente WHERE T.Id_Autore=$id"); 
 	return $var;
 }
-
 function getTrainBoxRicerca($stringa, $connessione) { //4//
 	$var=$connessione->getQuery("SELECT T.Id_Autore, U.Id_Utente, T.Id_Treno, U.Username, T.Nome, T.Categoria, T.Costruttore, T.Immagine FROM treni AS T JOIN utenti AS U ON U.Id_Utente=T.Id_Autore
 	WHERE T.Nome LIKE '%$stringa%' OR T.Categoria LIKE '%$stringa%' OR T.Costruttore LIKE '%$stringa%';"); 
@@ -74,25 +94,8 @@ function getCommenti($id, $connessione) { //6
 	WHERE C.Id_Treno=$id"); 
 	return $var;
 }
-
-function stampaInfoUtente($queryRes) {
-	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
-	return $var;
-}
-function stampaEmail($queryRes) {
-	return $queryRes[0]["Mail"];
-}
-function stampaBio($queryRes) {
-	return $queryRes[0]["Bio"];
-}
 function stampaNomeT($queryRes) {
 	return $queryRes[0]["Nome"];
-}
-function stampaNomeU($queryRes) {
-	return $queryRes[0]["Nome"];
-}
-function stampaUsernameA($queryRes) {
-	return $queryRes;
 }
 function stampaDescT($queryRes) {
 	return $queryRes[0]["Descrizione"];
@@ -103,15 +106,14 @@ function stampaImgT($queryRes) {
 function stampaCategoriaT($query){
 	return $query[0]["Categoria"];
 }
-//////////////////////////////////////////////////
 function getPreferiti($id, $connessione) {
 	$var=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id"); 
 	return $var[0]['count(*)'];
 }
-function getUsernameA($id, $connessione) {
-	$var=$connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
-	return $var[0]['Username'];
+function removeTreno($utente,$treno,$connessione){
+	return $connessione->exeQuery("DELETE FROM treni WHERE Id_Treno='$treno' AND Id_Autore='$utente'");
 }
+
 ?>
 
 

@@ -1,26 +1,20 @@
 # Progetto tecwebz
 ## DA FARE:
 * da ricontrollare keywords e descriptions
-* 404, About
-* DB
-* html statici:
-  * About
-  * Ricerca (get: categoria, stringa)
-  * Utente (get: id_utente)
-  * Treno (get: id_treno)
-  * Admin Panel (tutti)
-  * 404
-  * utente esperto
-  * creazione treno
 * CSS generale
   * Matteo: css generali di AdminPanel(x2), Registrazione/LogIn, Ricerca, Treno, Utente
   * Francesco: Header e footer, BoxTrain
+  * problema commenti quando scrolli
+  * like
 * JS
   * mancano script js nei meta dell' head
   * registrazione e login
 * PHP
+  * admin
   * controllo input
-  * creazione pagine
-  * menu utente a lato
-  * admin, treno, aggiungitreno, menu laterale
-  
+  * menu utente
+  * aggiungi treno
+  * modifica treno
+  * modifica bio
+  * commenti
+  * ricerca (eds, edm)

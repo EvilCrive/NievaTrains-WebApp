@@ -1,6 +1,6 @@
 <?php
-require_once "utils/connection.php";
-require_once "utils/sqlutils.php";
+require_once "connection.php";
+require_once "sqlutils.php";
 $connessione=new DBAccess();
 session_start();
 
@@ -29,12 +29,12 @@ try{
         //controllo utenti gia' iscritti
         if(checkUtente($email,$username, $connessione)){
             $_SESSION['fail']="Questo utente e' gia' registrato.";
-            header("refresh:0; url=../PHP/Registrazione.php#errori_registrazione");
+            header("refresh:0; url=../Registrazione.php#errori_registrazione");
             die();
         }
         //controllo errori
         if($errors){
-            header("refresh:0; url=../PHP/Registrazione.php#errori_registrazione");
+            header("refresh:0; url=../Registrazione.php#errori_registrazione");
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
             die();
         }
@@ -57,17 +57,17 @@ try{
         $_SESSION['password'] = $password;
         $_SESSION['userType'] = 0;
         //ritorna a registrazione, da loggato
-        header( "refresh:0; url=../PHP/Registrazione.php#errori_registrazione" ); 	
+        header( "refresh:0; url=../Registrazione.php" ); 	
     }
     if($_POST['button']=="Accedi"){
         //LOGIN
         if(!checkLoginUtente($email,$password, $connessione)){
-            header("refresh:0; url=../PHP/LogIn.php#errori_login");
+            header("refresh:0; url=../LogIn.php#errori_login");
             $_SESSION['fail']="Email o Password sbagliati.";
         }else{
             //controllo errori
             if($errors){
-                header("refresh:0; url=../PHP/LogIn.php#errori_login");
+                header("refresh:0; url=../LogIn.php#errori_login");
                 $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
                 die();
             }
@@ -84,7 +84,7 @@ try{
 			$_SESSION['username'] = getUserUsername($email, $connessione);
 			$_SESSION['password'] = $password;
             $_SESSION['userType'] = getUserUserType($email, $connessione);
-            header("refresh:0; url=../PHP/LogIn.php#errori_login");
+            header("refresh:0; url=../LogIn.php");
         }
     }
 }catch(Exception $eccezione){

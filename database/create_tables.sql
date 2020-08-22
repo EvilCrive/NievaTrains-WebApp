@@ -46,16 +46,7 @@ CREATE TABLE Commenti(
 ) ENGINE=InnoDB;
 
 
-
 CREATE TABLE Preferiti(
-	Id_Utente integer,
-	Id_Treno integer,
-	PRIMARY KEY(Id_Utente,Id_Treno),
-	FOREIGN KEY (Id_Utente) REFERENCES Utenti(Id_Utente) ON DELETE CASCADE,
-	FOREIGN KEY (Id_Treno) REFERENCES Treni(Id_Treno) ON DELETE CASCADE
-) ENGINE=InnoDB;
-
-CREATE TABLE Proposte(
 	Id_Utente integer,
 	Id_Treno integer,
 	PRIMARY KEY(Id_Utente,Id_Treno),

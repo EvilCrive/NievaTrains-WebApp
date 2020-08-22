@@ -167,9 +167,9 @@ Basati su un brevetto del 1934, i progetti per l''attuale Transrapid iniziarono 
 Nel 2002, la prima implementazione commerciale è stato completato - il Maglev Train Shanghai , che collega la città della rete di trasporto rapido di Shanghai 30,5 km (18.95 mi) a Shanghai Pudong International Airport . Il sistema Transrapid non è ancora stato implementato su una linea intercity a lunga distanza.','immagine');
 
 INSERT INTO Utenti(Nome,Cognome,Username,Mail,Password,Bio,Is_User_Type,Immagine) VALUES
-('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Prendo una valigia leggera e salgo sul treno, carrozza meraviglia, lato finestrino, vicino all’imprevedibile',0,'immagine'),
-('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Trent''anni come macchinista e ancora mi emoziono quando salgo in carrozza',0,'inmmagine'),
-('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Dirigente Trenitalia da sette mesi, appassionata di treni da sempre',0,'immagine'),
+('Giacomo','Poretti','Giacomino','gporetti@gmail.com','Qwerty123','Prendo una valigia leggera e salgo sul treno, carrozza meraviglia, lato finestrino, vicino all’imprevedibile',1,'immagine'),
+('Davide','Carlet','Davidone','dcarlet@gmail.com','asd55AS','Trent''anni come macchinista e ancora mi emoziono quando salgo in carrozza',1,'inmmagine'),
+('Chiara','Perin','chiaraperin','cperin@gmail.com','Chiara4563','Dirigente Trenitalia da sette mesi, appassionata di treni da sempre',1,'immagine'),
 ('Pippo','Franco','pippofranco','pfranco@gmail.com','Pippo123','Conduttore televisivo di fama internazionale, dedico i miei ultimi anni alla mia più grande passione',0,'immagine'),
 ('Giorgio','Andrea','giorgioandrea','gandrea@gmail.com','Giorgino123','Le ferrovie sono qualcosa di sorprendentemente silenzioso, quando non ci passa sopra il treno',0,'immagine'),
 ('Stefania','Rossi','stefaniarossi','srossi@gmail.com','bghH67','La vita è il treno, non la stazione ferroviaria',0,'immagine'),
@@ -209,9 +209,6 @@ INSERT INTO Preferiti(Id_Utente,Id_Treno) VALUES
 (8,1),(8,8),(8,10),(8,12),
 (9,2),(9,7),
 (10,5),(10,9),(10,11);
-
-INSERT INTO Proposte(Id_Utente,Id_Treno) VALUES
-(1,2);
 
 INSERT INTO Admins(User,Pin) VALUES
 ('admin','admin');

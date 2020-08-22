@@ -26,10 +26,12 @@ try{
 
         //da fare
         if(isset($_POST['modificaTreno'])){
-            print_r($_POST);
+            //modifica treno 
         }
         if(isset($_POST['eliminaTreno'])){
-            print_r($_POST);
+            $idtreno=$_POST['idtreno'];
+            $iduser=$_SESSION['id'];
+            removeTreno($iduser,$idtreno,$connessione);
         }
         if(isset($_POST['eliminaCommento'])){
 

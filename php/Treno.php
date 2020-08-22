@@ -34,10 +34,10 @@ try {
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);	
 	
-	if((isset($_SESSION['userType'])) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
+	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
 		$buttonsOperazioni ='<form action="../PHP/utils/operationsTreno.php" method="post" name="removemodifyForm"><fieldset>';
 		$buttonsOperazioni.='<label for="EliminaTreno"><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></label>';
-		$buttonsOperazioni.='<label for="ModificaTreno"><input class="button" name="modificaTreno" type="submit" value="Modifica"/></label></fieldset></form>';
+		$buttonsOperazioni.='<label for="ModificaTreno"><input class="button" name="modificaTreno" type="submit" value="Modifica"/></label><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
 		$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);	
 	}else	$final=str_replace("%%operazionitreno","",$final);	
 

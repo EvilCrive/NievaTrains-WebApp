@@ -1,9 +1,6 @@
 <?php
 require_once "connection.php";
 
-
-
-////////////////////////////////////////////////
 function stampaTrainBox($queryRes) {
 	$nrisultati=sizeof($queryRes);
 	$var='<div class="row">';
