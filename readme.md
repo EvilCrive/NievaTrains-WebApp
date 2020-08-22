@@ -11,10 +11,14 @@
   * registrazione e login
 * PHP
   * admin
+  * 
   * controllo input
   * menu utente
   * aggiungi treno
   * modifica treno
+  * 
   * modifica bio
   * commenti
+  * 
   * ricerca (eds, edm)
+  * immagini profilo e treno

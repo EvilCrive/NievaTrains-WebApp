@@ -23,7 +23,6 @@ try{
             }
             header("refresh:0 url=../Treno.php?Id_Treno=$idtreno");
         }
-
         //da fare
         if(isset($_POST['modificaTreno'])){
             //modifica treno 
@@ -34,6 +33,20 @@ try{
             removeTreno($iduser,$idtreno,$connessione);
         }
         if(isset($_POST['eliminaCommento'])){
+            $treno=$_POST['idtreno'];
+            removeCommento($_SESSION['id'],$treno,$connessione);
+            header("refresh:0 url=../Treno.php?Id_Treno=$treno");
+            
+        }
+
+        if(isset($_POST['modificaBio'])){
+            $id=$_SESSION['id'];
+            if(getUserBio($id,$connessione)!==$_POST['bioTesto']){
+                updateBio($id,$_POST['bioTesto'],$connessione);
+            }
+            header("refresh:0 url=../Utente.php?Id_Utente=$id");
+        }
+        if(isset($_POST['creaTreno'])){
 
         }
     }

@@ -11,10 +11,6 @@ try {
 	if(!$connessione->openConnection()) throw new Exception("No connection");
 	//query al db
 	
-	//generazione variabili di sostituzione
-	//$divusermenu;
-	//$ref;
-	//importazione txt
 	$final = file_get_contents("../txt/Login.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");

@@ -57,13 +57,14 @@ function stampaCommenti($queryRes) {
 	for($i=0; $i<$nrisultati; $i++) {
 	$var.='<li class="comment">';
 	$var.='		<div class="info">';
-	$var.='			<form action="commentManage.php" method="post" class="eliminacommenti">';
-	$var.='				<fieldset id="deleteButton">';
-	$var.='						<input type="submit" name="button" class="button" value="Elimina" />';
-	$var.='						<input  name="idricetta" value="xd" class="hidden" />';
-	$var.='						<input name="idcommento" value="xd" class="hidden" />';
-	$var.='					</fieldset>';
-	$var.='					</form>';
+	if(isset($_SESSION['userType']) && ($_SESSION['id']==$queryRes[$i]["Id_Utente"])){
+		$var.=' <form action="utils/operations.php" method="post" class="eliminacommenti">';
+		$var.='		<fieldset id="deleteButton">';
+		$var.='			<input name="eliminaCommento" type="submit" class="button" value="Elimina"/>';
+		$var.='			<input name="idtreno" value="'.$queryRes[$i]["Id_Treno"].'" class="hidden" />';
+		$var.='		</fieldset>';
+		$var.='</form>';
+	}	
 	$var.='			<div class="commentInfo">';
 	$var.='				<a href="#">'.$queryRes[$i]["Username"].'</a>';
 	$var.='				<span class="data">'.$queryRes[$i]["Data"].'</span>';

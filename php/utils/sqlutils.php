@@ -61,6 +61,12 @@ function getUsernameA($id, $connessione) {
 	$var=$connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
 	return $var[0]['Username'];
 }
+function getUserBio($id,$connessione){
+	return $connessione->getQuery("SELECT Bio FROM utenti WHERE Id_Utente='$id'")[0]["Bio"];
+}
+function updateBio($id,$bio,$connessione){
+	return $connessione->exeQuery("UPDATE utenti SET Bio='$bio' WHERE Id_Utente='$id'");
+}
 
 
 //treni
@@ -112,6 +118,9 @@ function getPreferiti($id, $connessione) {
 }
 function removeTreno($utente,$treno,$connessione){
 	return $connessione->exeQuery("DELETE FROM treni WHERE Id_Treno='$treno' AND Id_Autore='$utente'");
+}
+function removeCommento($user, $treno, $connessione){
+	return $connessione->exeQuery("DELETE FROM commenti WHERE Id_Utente='$user' AND Id_Treno='$treno'");
 }
 
 ?>
