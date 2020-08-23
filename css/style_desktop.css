@@ -781,3 +781,14 @@ input[type=file]{
 .vediTreniCat {
 	padding: 10px;
 }
+.imgCat{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.imgTrain{
+	margin: 15px;
+	width: 200px;
+	height: 200px;
+}
