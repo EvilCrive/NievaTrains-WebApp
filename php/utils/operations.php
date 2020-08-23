@@ -15,7 +15,7 @@ try{
             $idtreno=$_POST['idtreno'];
             $iduser=$_SESSION['id'];
             if(boolLiked($iduser,$idtreno,$connessione)){
-                //already liked
+                //e' gia' preferito da te, quindi lo rimuovo
                 removeLike($iduser,$idtreno,$connessione);
             }else{
                 //ora si mette il like
@@ -23,7 +23,6 @@ try{
             }
             header("refresh:0 url=../Treno.php?Id_Treno=$idtreno");
         }
-        //da fare
         if(isset($_POST['modificaTreno'])){
             //modifica treno 
         }
@@ -34,11 +33,20 @@ try{
         }
         if(isset($_POST['eliminaCommento'])){
             $treno=$_POST['idtreno'];
-            removeCommento($_SESSION['id'],$treno,$connessione);
-            header("refresh:0 url=../Treno.php?Id_Treno=$treno");
-            
+            $data=$_POST['dataCommento'];
+            removeCommento($_SESSION['id'],$treno,$data,$connessione);
+            header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
+        }
+        if(isset($_POST['aggiungiCommento'])){
+            $id=$_SESSION['id'];
+            $treno=$_POST['idtreno'];
+            $testoCommento=$_POST['testoCommento'];
+            //controlli input commenti da fare
+            addCommento($id,$treno,$testoCommento,$connessione);
+            header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
         }
 
+        //user page
         if(isset($_POST['modificaBio'])){
             $id=$_SESSION['id'];
             if(getUserBio($id,$connessione)!==$_POST['bioTesto']){
@@ -46,8 +54,18 @@ try{
             }
             header("refresh:0 url=../Utente.php?Id_Utente=$id");
         }
-        if(isset($_POST['creaTreno'])){
-
+        if(isset($_POST['logout'])){
+            $_SESSION['fail']="";
+            $_SESSION['id'] = "";
+            $_SESSION['nome'] = "";
+            $_SESSION['cognome'] = "";
+            $_SESSION['email'] = "";
+            $_SESSION['username'] = "";
+            $_SESSION['password'] = "";
+            $_SESSION['userType'] = "";
+            $_SESSION=array();
+            session_destroy();
+            header("refresh:0; url=../../PHP/Index.php");
         }
     }
 }catch(Exception $exc){

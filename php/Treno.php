@@ -11,6 +11,7 @@ try {
 	if(!$connessione->openConnection()) throw new Exception("No connection");
 	if(isset($_GET["Id_Treno"])) $id=$_GET["Id_Treno"];
 	else throw new Exception("No get");
+
 	//query al db
 	$queryInfoTreno=getInfoTreno($id, $connessione);
 	$queryNomeA=getUsernameA($id, $connessione);
@@ -22,38 +23,37 @@ try {
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 
-	//sostituzione variabili di sostituzione
+	//generazione variabili di sostituzione
+	$buttonsOperazioni="";
+	$commenti="";
+	if(!$queryInfoTreno)	throw new Exception("Wrong ID");
+	if(!$queryNomeA)	throw new Exception("Errore nel DB, manca l'autore di una pagina");
+	if($queryCommenti) $commenti=stampaCommenti($queryCommenti);
 	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="Like"><input class="button" name="like" type="submit" value="';
 	if(isset($_SESSION['userType'])){
 		if(boolLiked($_SESSION['id'],$id,$connessione))	$buttonPreferiti.="Unlike";
 		else	$buttonPreferiti.="Like";
 	}else	$buttonPreferiti.="Like";
 	$buttonPreferiti.='" /></label><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
-
-	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).$buttonPreferiti,$final);
-	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);	
-	
 	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
 		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" method="post" name="removemodifyForm"><fieldset>';
 		$buttonsOperazioni.='<label for="EliminaTreno"><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></label>';
 		$buttonsOperazioni.='<label for="ModificaTreno"><input class="button" name="modificaTreno" type="submit" value="Modifica"/></label><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
-		$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);	
-	}else	$final=str_replace("%%operazionitreno","",$final);	
+	}
 
-	if($queryInfoTreno) {
-		$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
-		$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
-		$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
-		$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
-		$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);
-	}else throw new Exception("Wrong ID");
-
-	if($queryNomeA) $final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
-	else throw new Exception("Errore nel DB, manca l'autore di una pagina");
-	
-	if($queryCommenti) $final=str_replace("##Commenti##",stampaCommenti($queryCommenti),$final);
-	else $final=str_replace("##Commenti##","",$final);
+	//sostituzione variabili di sostituzione
+	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).$buttonPreferiti,$final);
+	$final=str_replace("##header##",$header,$final);
+	$final=str_replace("##footer##",$footer,$final);	
+	$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);
+	$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
+	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
+	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
+	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
+	$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);	
+	$final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
+	$final=str_replace("##Commenti##",$commenti,$final);
+	$final=str_replace("##NumeroT##",$id,$final);
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni

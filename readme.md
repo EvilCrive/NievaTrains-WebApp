@@ -12,13 +12,11 @@
 * PHP
   * admin
   * 
-  * controllo input
-  * menu utente
-  * aggiungi treno
-  * modifica treno
+  * controlli input commenti
+  * controllo input email
+  * controllo input bio
+  * xss
   * 
-  * modifica bio
-  * commenti
+  * aggiungi/modifica treno
   * 
-  * ricerca (eds, edm)
   * immagini profilo e treno

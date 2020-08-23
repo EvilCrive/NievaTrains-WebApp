@@ -62,6 +62,7 @@ function stampaCommenti($queryRes) {
 		$var.='		<fieldset id="deleteButton">';
 		$var.='			<input name="eliminaCommento" type="submit" class="button" value="Elimina"/>';
 		$var.='			<input name="idtreno" value="'.$queryRes[$i]["Id_Treno"].'" class="hidden" />';
+		$var.='			<input name="dataCommento" value="'.$queryRes[$i]["Data"].'" class="hidden" />';
 		$var.='		</fieldset>';
 		$var.='</form>';
 	}	
