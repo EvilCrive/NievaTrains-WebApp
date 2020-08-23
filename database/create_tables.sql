@@ -18,7 +18,7 @@ CREATE TABLE Treni(
 	Costruttore varchar(50) not null,
 	Tipo varchar(30) not null,
 	Velocità_Max smallint not null,
-	Anni_Costruzione varchar(20),
+	Anno_Costruzione varchar(20),
 	Descrizione varchar(6000),
 	Immagine varchar(60) not null
 ) ENGINE=InnoDB;

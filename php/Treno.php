@@ -29,16 +29,16 @@ try {
 	if(!$queryInfoTreno)	throw new Exception("Wrong ID");
 	if(!$queryNomeA)	throw new Exception("Errore nel DB, manca l'autore di una pagina");
 	if($queryCommenti) $commenti=stampaCommenti($queryCommenti);
-	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="Like"><input class="button" name="like" type="submit" value="';
+	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="like"></label><input class="button" name="like" type="submit" value="';
 	if(isset($_SESSION['userType'])){
 		if(boolLiked($_SESSION['id'],$id,$connessione))	$buttonPreferiti.="Unlike";
 		else	$buttonPreferiti.="Like";
 	}else	$buttonPreferiti.="Like";
-	$buttonPreferiti.='" /></label><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
+	$buttonPreferiti.='" /><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
 	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
 		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" method="post" name="removemodifyForm"><fieldset>';
-		$buttonsOperazioni.='<label for="EliminaTreno"><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></label>';
-		$buttonsOperazioni.='<label for="ModificaTreno"><input class="button" name="modificaTreno" type="submit" value="Modifica"/></label><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
+		$buttonsOperazioni.='<label for="eliminaTreno"></label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/>';
+		$buttonsOperazioni.='<label for="modificaTreno"></label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
 	}
 
 	//sostituzione variabili di sostituzione
@@ -55,6 +55,7 @@ try {
 	$final=str_replace("##Commenti##",$commenti,$final);
 	$final=str_replace("##NumeroT##",$id,$final);
 	echo $final;
+	
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");

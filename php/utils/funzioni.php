@@ -1,6 +1,5 @@
 <?php
 require_once "connection.php";
-
 function stampaTrainBox($queryRes) {
 	$nrisultati=sizeof($queryRes);
 	$var='<div class="row">';
@@ -90,7 +89,7 @@ function stampaPreferiti($nPreferiti) {
 	else return $nPreferiti." Likes";
 }
 function stampaImmagine($queryImmagine) {
-	return "../resources/".$queryImmagine[0]["Immagine"].".jpg";
+	return "../uploads/".$queryImmagine[0]["Immagine"];
 }
 function stampaInfoUtente($queryRes) {
 	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
