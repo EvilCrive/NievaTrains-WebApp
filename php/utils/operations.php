@@ -15,7 +15,7 @@ try{
             $idtreno=$_POST['idtreno'];
             $iduser=$_SESSION['id'];
             if(boolLiked($iduser,$idtreno,$connessione)){
-                //already liked
+                //e' gia' preferito da te, quindi lo rimuovo
                 removeLike($iduser,$idtreno,$connessione);
             }else{
                 //ora si mette il like
@@ -23,11 +23,9 @@ try{
             }
             header("refresh:0 url=../Treno.php?Id_Treno=$idtreno");
         }
-        //da fare
         if(isset($_POST['modificaTreno'])){
             //modifica treno 
         }
-
         if(isset($_POST['eliminaTreno'])){
             $idtreno=$_POST['idtreno'];
             $iduser=$_SESSION['id'];
@@ -35,8 +33,17 @@ try{
         }
         if(isset($_POST['eliminaCommento'])){
             $treno=$_POST['idtreno'];
-            removeCommento($_SESSION['id'],$treno,$connessione);
-            header("refresh:0 url=../Treno.php?Id_Treno=$treno"); 
+            $data=$_POST['dataCommento'];
+            removeCommento($_SESSION['id'],$treno,$data,$connessione);
+            header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
+        }
+        if(isset($_POST['aggiungiCommento'])){
+            $id=$_SESSION['id'];
+            $treno=$_POST['idtreno'];
+            $testoCommento=$_POST['testoCommento'];
+            //controlli input commenti da fare
+            addCommento($id,$treno,$testoCommento,$connessione);
+            header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
         }
 
         //user page

@@ -43,13 +43,12 @@
 	<ul class="comment-section" id="commentreturn">
 	##Commenti##
 			<li id="write-new">
-			<form action="../PHP/commentManage.php" method="post" id="commentform" onsubmit="return ValidateComment()">
+			<form action="../PHP/utils/operations.php" method="post" id="commentform" onsubmit="return ValidateComment()">
 			<fieldset>
-				<textarea rows="5" cols="300" id="controlLogged" class="hidden">%%login</textarea>  <!-- controllo JS per vedere se sei loggato prima di commentare -->
-				<input name="idtreno" value="##CategoriaT##" class="hidden"/>
-				<textarea rows="5" cols="300" name="comment"></textarea>
+				<input name="idtreno" value="##NumeroT##" class="hidden"/>
+				<textarea rows="5" cols="300" name="testoCommento"></textarea>
 				<div id="confirmComment">
-					   <button class="button" type="submit">Invia</button>
+					   <button class="button" name="aggiungiCommento" type="submit">Invia</button>
 					   <p id="commentRequired" class="errors"></p>
    				</div>
 			</fieldset>

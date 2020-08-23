@@ -119,10 +119,13 @@ function getPreferiti($id, $connessione) {
 function removeTreno($utente,$treno,$connessione){
 	return $connessione->exeQuery("DELETE FROM treni WHERE Id_Treno='$treno' AND Id_Autore='$utente'");
 }
-function removeCommento($user, $treno, $connessione){
-	return $connessione->exeQuery("DELETE FROM commenti WHERE Id_Utente='$user' AND Id_Treno='$treno'");
+function removeCommento($user, $treno,$data,$connessione){
+	return $connessione->exeQuery("DELETE FROM commenti WHERE Id_Utente='$user' AND Id_Treno='$treno' AND Data='$data'");
 }
-
+function addCommento($user,$treno,$testo,$connessione){
+	$data=date("Y-m-d H:i:s");
+	return $connessione->exeQuery("INSERT INTO commenti (Testo, Data, Id_Utente, Id_Treno) VALUES ('$testo','$data',$user,$treno)");
+}
 ?>
 
 

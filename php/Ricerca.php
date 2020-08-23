@@ -22,6 +22,8 @@ try {
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
+	//$final=str_replace("%%user",$divusermenu,$final);
+	//$final=str_replace("%%user",$ref,$final);	
 	$final=str_replace("##Stringa##",$stringa,$final);
 	$final=str_replace("##CatRicerca##",$CatRicerca,$final);	
 	$final=str_replace("##header##",$header,$final);
