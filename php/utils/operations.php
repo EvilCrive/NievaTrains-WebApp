@@ -41,8 +41,10 @@ try{
             $id=$_SESSION['id'];
             $treno=$_POST['idtreno'];
             $testoCommento=$_POST['testoCommento'];
-            //controlli input commenti da fare
-            addCommento($id,$treno,$testoCommento,$connessione);
+            $testoCommento=strip_tags($testoCommento);
+            $errors="";
+            if (!preg_match('/^[a-z0-9]{3,500}$/i',$testoCommento))        $errors.="<li>Commento non valido</li>";
+            else    addCommento($id,$treno,$testoCommento,$connessione);
             header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
         }
 
@@ -50,6 +52,7 @@ try{
         if(isset($_POST['modificaBio'])){
             $id=$_SESSION['id'];
             if(getUserBio($id,$connessione)!==$_POST['bioTesto']){
+                $_POST['bioTesto']=strip_tags($_POST['bioTesto']);
                 updateBio($id,$_POST['bioTesto'],$connessione);
             }
             header("refresh:0 url=../Utente.php?Id_Utente=$id");

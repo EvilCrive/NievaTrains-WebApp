@@ -9,13 +9,12 @@
 * JS
   * mancano script js nei meta dell' head
   * registrazione e login
+  * input commenti login/signup aggiungi treno 
 * PHP
   * admin
   * 
-  * controlli input commenti
-  * controllo input email
-  * controllo input bio
-  * xss
+  * controlli immagine
+  * immagine profilo
   * 
   * aggiungi/modifica treno
   * 
