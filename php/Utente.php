@@ -30,12 +30,12 @@ try {
 	if((isset($_SESSION['userType'])) && ($id==$_SESSION['id'])){
 		$email="EMAIL: ".stampaEmail($queryInfoU);
 		//form per modifica bio
-		$modificaBio='<form action="utils/operations.php" method="post" name="modificaBioform"><fieldset><label><textarea rows="5" cols="50" name="bioTesto" >'.getUserBio($id,$connessione).'</textarea></label><label><input class="button" name="modificaBio" value="Modifica Bio" type="submit" /></label></fieldset></form>';
+		$modificaBio='<form action="utils/operations.php" method="post" name="modificaBioform"><fieldset><label for="bioTesto"></label><textarea rows="5" cols="50" name="bioTesto" >'.getUserBio($id,$connessione).'</textarea><label for="modificaBio"></label><input class="button" name="modificaBio" value="Modifica Bio" type="submit"/></fieldset></form>';
 		if($_SESSION['userType']=="1"){
 			// button per creare nuovo treno
-			$creaPagina='<form action="utils/uploadPagina.php" method="post" name="addTrenoform"><fieldset><label><input class="button" name="creaTreno" type="submit" value="Crea Treno"/></label></fieldset></form>';
+			$creaPagina='<form action="utils/uploadPagina.php" method="post" name="addTrenoform"><fieldset><label for="creaTreno"></label><input class="button" name="creaTreno" type="submit" value="Crea Treno"/></fieldset></form>';
 		}
-		$logout='<form action="utils/operations.php" method="post" name="logoutForm"><fieldset><label><input class="button" name="logout" type="submit" value="Logout"/></label></fieldset></form>';
+		$logout='<form action="utils/operations.php" method="post" name="logoutForm"><fieldset><label for="logout"></label><input class="button" name="logout" type="submit" value="Logout"/></fieldset></form>';
 	}	
 	if($queryRisultati) $trainbox=stampaTrainBox($queryRisultati);
 	else $trainbox="<p>Questo utente non ha pubblicato pagine in Nieva Trains</p>";
@@ -55,7 +55,7 @@ try {
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni
-	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");
+	if($eccezione="No get" || $eccezione="Wrong ID") echo "e";
 	else echo $eccezione;
 }
 //chiusura connessione

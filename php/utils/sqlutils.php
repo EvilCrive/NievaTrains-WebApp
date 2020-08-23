@@ -10,7 +10,7 @@ function checkUtente($mail,$user, $connessione){
 }
 function insertUtente($nome,$cognome,$username,$email,$password,$bio,$immagine, $connessione){
 	$usertype=0;
-	$query = "INSERT INTO utente (Nome,Cognome,Username,Mail,Password,Bio,Is_User_Type,Immagine) VALUES($nome,$cognome,$username,$email,$password,$bio,$usertype,$immagine);";
+	$query = "INSERT INTO utenti (Nome,Cognome,Username,Mail,Password,Bio,Is_User_Type,Immagine) VALUES($nome,$cognome,$username,$email,$password,$bio,$usertype,$immagine);";
 	return $connessione->exeQuery($query);			
 }
 function getUserID($email, $connessione){
@@ -110,6 +110,10 @@ function removeCommento($user, $treno,$data,$connessione){
 function addCommento($user,$treno,$testo,$connessione){
 	$data=date("Y-m-d H:i:s");
 	return $connessione->exeQuery("INSERT INTO commenti (Testo, Data, Id_Utente, Id_Treno) VALUES ('$testo','$data',$user,$treno)");
+}
+
+function addTreno($array,$connessione){
+	print_r($array);
 }
 ?>
 

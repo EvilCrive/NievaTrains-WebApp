@@ -8,7 +8,7 @@ function stampaTrainBox($queryRes) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.='	<div class="card">'."\n";
 		$var.='		<div class="card-header">'."\n";
-		$var.='			<img class="img-left" src="'.$queryRes[$i]["Immagine"].'" alt="">'."\n";
+		$var.='			<img class="img-left" src="../uploads/'.$queryRes[$i]["Immagine"].'" alt="">'."\n";
 		$var.='		</div>'."\n";
 		$var.='		<div class="card-body">'."\n";
 		$var.='			<ul>'."\n";
@@ -33,7 +33,7 @@ function stampaUtentiBox($queryRes) {
 	for($i=0; $i<$nrisultati; $i++){
 		$var.='	<div class="card">'."\n";
 		$var.='		<div class="card-header">'."\n";
-		$var.='			<img class="img-left" src="'.$queryRes[$i]["Immagine"].'" alt="">'."\n";
+		$var.='			<img class="img-left" src="../uploads/'.$queryRes[$i]["Immagine"].'" alt="">'."\n";
 		$var.='		</div>'."\n";
 		$var.='		<div class="card-body">'."\n";
 		$var.='			<ul>'."\n";

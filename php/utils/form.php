@@ -23,59 +23,54 @@ try{
 		if (!preg_match('/^[a-z0-9]{6,12}$/i',$username))       $errors.="<li>Username non valido</li>";
 		if (!preg_match('/^[a-z0-9]{3,12}$/i',$nome))           $errors.="<li>Nome non valido</li>";
 		if (!preg_match('/^[a-z0-9]{3,12}$/i',$cognome))        $errors.="<li>Cognome non valido</li>";
-        if (!($_POST['confirmpassword']==$_POST['password']))   $errors.="<li>Password e confermaPassword sbagliate</li>";
+        if (($_POST['conferma_password']!=$_POST['password']))   $errors.="<li>Password e confermaPassword sbagliate</li>";
         
         //REGISTRAZIONE
         //controllo utenti gia' iscritti
         if(checkUtente($email,$username, $connessione)){
-            $_SESSION['fail']="Questo utente e' gia' registrato.";
-            header("refresh:0; url=../Registrazione.php#errori_registrazione");
-            die();
+            $errors.="Questo utente e' gia' registrato.";
         }
         //controllo errori
         if($errors){
             header("refresh:0; url=../Registrazione.php#errori_registrazione");
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
-            die();
-        }
-        //inserimento utente nel db/ vera registrazione
+        }else{
+            //inserimento utente nel db/ vera registrazione
             //immagine
             $img="immagine";
-        $bio="Io sono".$nome." ".$cognome." (@".$username.") ";
-        insertUtente($nome,$cognome,$username,$email,$password,$bio,$img, $connessione);
-        //admin part
-        if(isset($_SESSION['adminlogged'])){
-            $_SESSION=array();
-            session_destroy();
-            session_start();
-        }
-        $_SESSION['id'] = getUserID($email, $connessione);
-        $_SESSION['nome'] = $nome;
-        $_SESSION['cognome'] = $cognome;
-        $_SESSION['email'] = $email;
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        $_SESSION['userType'] = 0;
-        //ritorna a registrazione, da loggato
-        header( "refresh:0; url=../Registrazione.php" ); 	
+            $bio="Io sono".$nome." ".$cognome." (@".$username.") ";
+            insertUtente($nome,$cognome,$username,$email,$password,$bio,$img, $connessione);
+            //admin part
+            if(isset($_SESSION['adminlogged'])){
+                $_SESSION=array();
+                session_destroy();
+            }
+            $_SESSION['id'] = getUserID($email, $connessione);
+            $_SESSION['nome'] = $nome;
+            $_SESSION['cognome'] = $cognome;
+            $_SESSION['email'] = $email;
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['userType'] = 0;
+            //ritorna a registrazione, da loggato
+            header( "refresh:0; url=../Registrazione.php" ); 
+        }	
     }
     if($_POST['button']=="Accedi"){
         //LOGIN
         if(!checkLoginUtente($email,$password, $connessione)){
             header("refresh:0; url=../LogIn.php#errori_login");
-            $_SESSION['fail']="Email o Password sbagliati.";
+            $errors.="Email o Password sbagliati.";
+        }
+        //controllo errori
+        if($errors){
+            header("refresh:0; url=../LogIn.php#errori_login");
+            $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
         }else{
-            //controllo errori
-            if($errors){
-                header("refresh:0; url=../LogIn.php#errori_login");
-                $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
-                die();
-            }
-            //admin part
+        //admin part
             if(isset($_SESSION['adminlogged'])){
 				$_SESSION=array();
 				session_destroy();
-				session_start();
 			}
             $_SESSION['id'] = getUserID($email, $connessione);
 			$_SESSION['nome'] =getUserNome($email, $connessione); 

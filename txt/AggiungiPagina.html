@@ -21,11 +21,11 @@
     <h1>Aggiungi una nuova pagina a Nieva Trains:</h1>
 
 	<div class="AggiuntaTreno">
-	<form action="../PHP/uploadPagina.php" method="post" onsubmit="return ValidateSignUp()" id="uploadform">
+	<form action="CreaTreno.php" method="post" enctype="multipart/form-data" onsubmit="return ValidateSignUp()" id="uploadform">
 			<label for="nome">Nome</label>
 					<input class="inputbar" type="text" name="nome" placeholder="Nome" />
 					<label for="categorie">Categoria</label>
-					<select class="sceltaAggiunta" name="categorie" form="searchTop">
+					<select class="sceltaAggiunta" name="categorie">
 						<option value="1">Elettrico</option>
 						<option value="2">Vapore</option>
 						<option value="3">Maglev EDS</option>
@@ -36,15 +36,15 @@
 					<label for="costruttore">Costruttore</label>
 					<input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
 					<label for="tipo">Tipo</label>
-					<select class="sceltaAggiunta" name="tipo" form="searchTop">
+					<select class="sceltaAggiunta" name="tipo">
 						<option value="1">Alta velocità</option>
-						<option value="2">Lunga percorrenza</option>
+						<option value="2">Lunga Percorrenza</option>
 						<option value="3">Prototipo</option>
 						<option value="4">Intercity</option>
-						<option value="5">Trasporto locale</option>
+						<option value="5">Trasporto Locale</option>
 					</select>
-					<label for="vel">Velocità massima (km/h)</label>
-					<input class="inputbar" type="text" name="vel" placeholder="Velocità Massima"/>
+					<label for="velocità">Velocità massima (km/h)</label>
+					<input class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
 					<label for="anni">Anni di costruzione</label>
 				<input class="inputbar" type="text" name="anni" placeholder="Anni di costruzione"/>
 					<label for="descrizione">Descrizione</label>
