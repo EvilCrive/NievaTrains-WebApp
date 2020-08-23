@@ -1,19 +1,19 @@
 <header>
 	<div id="hrow1">
-			<img id="logo" src="../resources/logo_nieva.png" href="../php/Index.php" alt="Logo Nieva Trains"/>
+			<a href="../php/Index.php"><img id="logo" src="../resources/logo_nieva.png" alt="Logo Nieva Trains"/></a>
 			<div>
 				<form id="searchHeader" action="../php/Ricerca.php" method="get">
-					<select id="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
+					<select class="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
 						<option value="Treni">Treni</option>
 						<option value="Utenti">Utenti</option>
 					</select>
 					<div class="search-box">
-						<input class="search-txt" type="text" value="Cerca" name="stringaCercata" form="searchHeader"/>
+						<input class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
 						<button class="search-btn" form="searchHeader"><img id="search" src="../resources/search.png"/></button>
 					</div>
 				</form>
 			</div>
-			<img id="utenteTop" href="../php/LogIn.php" src="../resources/conductor.png" alt="Area riservata"/>
+			<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>
 	</div>
 	<div id="hrow2">
 		<ul id="stayLeft" class="menuList">

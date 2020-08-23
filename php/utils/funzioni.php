@@ -92,5 +92,20 @@ function stampaPreferiti($nPreferiti) {
 function stampaImmagine($queryImmagine) {
 	return "../resources/".$queryImmagine[0]["Immagine"].".jpg";
 }
-
+function stampaInfoUtente($queryRes) {
+	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
+	return $var;
+}
+function stampaEmail($queryRes) {
+	return $queryRes[0]["Mail"];
+}
+function stampaBio($queryRes) {
+	return $queryRes[0]["Bio"];
+}
+function stampaNomeU($queryRes) {
+	return $queryRes[0]["Nome"];
+}
+function stampaUsernameA($queryRes) {
+	return '<a href="../php/Utente.php?Id_Utente='.$queryRes["Id_Utente"].'">'.$queryRes["Username"].'</a>';
+}
 ?>

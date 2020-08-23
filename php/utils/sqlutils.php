@@ -41,25 +41,10 @@ function removeLike($iduser,$idtreno,$connessione){
 function addLike($iduser,$idtreno,$connessione){
 	return $connessione->exeQuery("INSERT INTO preferiti (Id_Utente, Id_Treno) VALUES($iduser,$idtreno)");
 }
-function stampaInfoUtente($queryRes) {
-	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
-	return $var;
-}
-function stampaEmail($queryRes) {
-	return $queryRes[0]["Mail"];
-}
-function stampaBio($queryRes) {
-	return $queryRes[0]["Bio"];
-}
-function stampaNomeU($queryRes) {
-	return $queryRes[0]["Nome"];
-}
-function stampaUsernameA($queryRes) {
-	return $queryRes;
-}
+
 function getUsernameA($id, $connessione) {
 	$var=$connessione->getQuery("SELECT U.Id_Utente, T.Id_Autore, T.Id_Treno, U.Username FROM utenti AS U JOIN treni AS T WHERE U.Id_Utente=T.Id_Autore AND T.Id_Treno=$id");
-	return $var[0]['Username'];
+	return $var[0];
 }
 function getUserBio($id,$connessione){
 	return $connessione->getQuery("SELECT Bio FROM utenti WHERE Id_Utente='$id'")[0]["Bio"];

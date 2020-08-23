@@ -89,6 +89,12 @@ header{
   align-items: center;
   padding: 30px 20px;
 }
+.search-btn {
+	border: 0;
+	background-color:white;
+	float: right;
+}
+.search-btn:hover{cursor:pointer;}
 #logo {
   max-width: 300px;
 	max-height: 60px;
@@ -183,7 +189,7 @@ select{
   transition: 0.4s;
 }
 #spec {
-  background-color: #294173/*#a8c1dc*/;
+  background-color: #232f46;
   display: block;
   font-weight: bold;
   color: white;
@@ -200,16 +206,28 @@ select{
 
 /*FOOTER*/
 
-footer{
-  overflow: hidden;
+/*footer{
   position: relative;
   height: 300px;
-  max-width: 1800px;
-  width: 100%;
 
   clear: both;
   background-color: #232f46;
   color: white;
+}*/
+footer{
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #232f46;
+  color: white;
+  top: 100%;
+  width: 100%;
+  max-width: 1800px;
+  margin-top: 200px;
+}
+footer a{
+	color:orange;
 }
 #main-content{
   display: flex;
@@ -287,7 +305,7 @@ footer{
 	margin: 1em 5em;
 }
 
-#wrapper > div {
+.cat {
 	min-width: 300px;
 	max-width: 400px;
 	margin: 1em;
@@ -399,11 +417,11 @@ width: 100%;
 	display: inline-block;
 		padding: 15px;
 }
-
-#outputRicerca {
-	padding-bottom: 15px;
-}
 */
+h1#outputRicerca {
+	margin: 40px;
+}
+
 /* UTENTE */
 .topUtente {
 	text-align:left;
@@ -646,7 +664,9 @@ fieldset{
     width: 80%;
   }
 }
-
+p {
+	line-height:1.5em;
+}
 
 /*404*/
 .parent-content{
@@ -737,6 +757,13 @@ fieldset{
   height: 2.5em;
   margin-bottom: 10px;
 }
+.sceltaCategorie{
+		  border:none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  height: 2.5em;
+}
 .sceltaDesc {
 	  border:none;
   border-bottom: 2px solid #adadad;
@@ -749,5 +776,8 @@ fieldset{
 	border-bottom: 2px solid lightblue;
 }
 input[type=file]{
+	padding: 10px;
+}
+.vediTreniCat {
 	padding: 10px;
 }
