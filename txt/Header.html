@@ -1,31 +1,34 @@
 <header>
 	<div id="hrow1">
-			<a href="../php/Index.php"><img id="logo" src="../resources/logo_nieva.png" alt="Logo Nieva Trains"/></a>
-			<div>
-				<form id="searchHeader" action="../php/Ricerca.php" method="get">
-					<select class="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
-						<option value="Treni">Treni</option>
-						<option value="Utenti">Utenti</option>
-					</select>
-					<div class="search-box">
-						<input class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
-						<button class="search-btn" form="searchHeader"><img id="search" src="../resources/search.png"/></button>
-					</div>
-				</form>
-			</div>
+	<img id="logo" src="../resources/logo_nieva.png" alt="Logo Nieva Trains"/>
+			<img id="hamburger" src="../resources/hamburger.png" onclick="buttonclick()" />
+				<div id="myLinks" class="menuOff">
+					<form id="searchHeader" action="../php/Ricerca.php" method="get">
+						<select id="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
+							<option value="1">Treni</option>
+							<option value="2">Utenti</option>
+						</select>
+						<div class="search-box">
+							<input class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
+							<button class="search-btn" form="searchHeader"><img id="search" src="../resources/search.png"/></button>
+						</div>
+					</form>
+				</div>
 			<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>
 	</div>
-	<div id="hrow2">
-		<ul id="stayLeft" class="menuList">
+	<div id="hrow2"  class="menuOff">
+	<div id="myLinks2">
+			<ul class="stayLeft menuList">
 			<li id="spec">Categorie:</li>
 			<li><a href="../php/Steam.php" >Vapore</a></li>
 			<li><a href="../php/Diesel.php" >Diesel</a></li>
 			<li><a href="../php/Electric.php" >Elettrici</a></li>
 			<li><a href="../php/Maglev.php">Maglev</a></li>
-		</ul>
-		<ul id="stayRight" class="menuList">
-			<li><span xml:lang="en" lang="en"><a href="../php/About.php" >About</a></span></li>
-		</ul>
+			</ul>
+			<ul class="stayRight menuList">
+				<li><span xml:lang="en" lang="en"><a href="../PHP/About.php" >About</a></span></li>
+			</ul>
+			</div>
 	</div>
 </header>
 
