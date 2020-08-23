@@ -17,8 +17,6 @@
   * controllo input bio
   * xss
   * 
-  * menu utente
   * aggiungi/modifica treno
-  * ricerca (eds, edm)
   * 
   * immagini profilo e treno

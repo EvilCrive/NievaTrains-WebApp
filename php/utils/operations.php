@@ -54,8 +54,18 @@ try{
             }
             header("refresh:0 url=../Utente.php?Id_Utente=$id");
         }
-        if(isset($_POST['creaTreno'])){
-
+        if(isset($_POST['logout'])){
+            $_SESSION['fail']="";
+            $_SESSION['id'] = "";
+            $_SESSION['nome'] = "";
+            $_SESSION['cognome'] = "";
+            $_SESSION['email'] = "";
+            $_SESSION['username'] = "";
+            $_SESSION['password'] = "";
+            $_SESSION['userType'] = "";
+            $_SESSION=array();
+            session_destroy();
+            header("refresh:0; url=../../PHP/Index.php");
         }
     }
 }catch(Exception $exc){
