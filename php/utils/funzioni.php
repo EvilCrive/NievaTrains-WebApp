@@ -119,7 +119,18 @@ function stampaImgT($queryRes) {
 function stampaCategoriaT($query){
 	return $query[0]["Categoria"];
 }
-
+function stampaIdAutoreT($query){
+	return $query[0]["Id_Autore"];
+}
+function stampaCostruttoreT($query){
+	return $query[0]["Costruttore"];
+}
+function stampaVelocitaT($query){
+	return $query[0]["Velocità_Max"];
+}
+function stampaAnnoT($query){
+	return $query[0]["Anno_Costruzione"];
+}
 function controlloUploadImmagineUtenti($files,$errors){
 	$target_file="";
 	if($files['myfile']['error']!==4){
