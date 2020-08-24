@@ -7,3 +7,9 @@ function buttonclick() {
     x.style.display = "none";
   }
 }
+
+function openMenuUser(){
+  if(document.getElementById("menuUser").style.display==="block"){
+    document.getElementById("menuUser").style.display="none";
+  }else document.getElementById("menuUser").style.display="block";
+}

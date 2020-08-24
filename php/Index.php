@@ -20,7 +20,7 @@ try {
 	$final=str_replace("##TrainBox##",$trainbox,$final);	
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);		
-	
+	$final=functionMenuUser($_SESSION,$final);
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni

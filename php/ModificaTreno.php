@@ -45,6 +45,7 @@ try {
             $final=str_replace("%%idtreno",$treno,$final);
             //check finale errori
             if($errors)	header("refresh:0 url=ModificaTreno.php#errori_newtreno");
+            $final=functionMenuUser($_SESSION,$final);
 		    echo $final;	
 	}else	die();//header("refresh:0 url=../PHP/Index.php");
 }catch(Exception $eccezione){

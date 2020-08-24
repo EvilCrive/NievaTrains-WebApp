@@ -317,5 +317,19 @@ function controlliLogin($post,$errors,$connessione){
 	if(!checkLoginUtente($email,$password, $connessione))	$errors.="Email o Password sbagliati.";
 	return $errors;
 }
+function functionMenuUser($session,$final){
+	if(isset($session['id'])){
+		$var='
+		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>
+		<div id="menuUser" class="hidden">
+			<ul>
+				<li><a href="../PHP/Utente.php?Id_Utente='.$session['id'].'">Pagina Utente</a></li>
+				<li><a href="../PHP/utils/operations.php?logout">Logout</a></li>
+			</ul>
+		</div>';
+	
+	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
+	return $final=str_replace("##user##",$var,$final);
+}
 
 ?>

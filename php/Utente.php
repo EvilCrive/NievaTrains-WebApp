@@ -52,10 +52,11 @@ try {
 	$final=str_replace("##Bio##","BIO: ".stampaBio($queryInfoU),$final);
 	$final=str_replace("##TrainBox##",$trainbox,$final);
 	$final=str_replace("%%logout",$logout,$final);
+	$final=functionMenuUser($_SESSION,$final);
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni
-	if($eccezione="No get" || $eccezione="Wrong ID") echo "e";
+	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0 url=../PHP/Index.php");
 	else echo $eccezione;
 }
 //chiusura connessione

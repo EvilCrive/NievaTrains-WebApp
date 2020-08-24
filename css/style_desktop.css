@@ -209,6 +209,14 @@ select{
   float: right;
 }
 
+#menuUser{
+  background-color: #232f46;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 16px 20px;
+  text-decoration: none;
+}
 /*FOOTER*/
 
 /*footer{
@@ -397,7 +405,7 @@ footer a{
   color: red;
   text-align: justify;
 }
-#errori_newtreno ol{
+.errori_newtreno ol{
   list-style-type: none;
   color: black;
   text-align: justify;
@@ -459,12 +467,11 @@ h1#outputRicerca {
 }
 
 .leftCol {
-	  padding: 20px;
+	padding: 20px;
   margin-top: 20px;
-    float: left;
+  float: left;
   width: 30%;
   height:100%;
-
 }
 
 .rightCol {
