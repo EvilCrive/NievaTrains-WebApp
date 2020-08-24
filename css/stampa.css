@@ -1,0 +1,224 @@
+header{
+	display: none;
+}
+
+footer{
+	display: none;
+}
+
+#breadcrumb{
+	display: none;
+}
+
+.button {
+	display: none;
+}
+
+@page{
+	size: 210mm 297mm;
+	margin: 30mm;
+}
+
+main{
+	width: auto; 
+    float: none;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 13pt;
+	background: #fff !important;
+	color: #000;
+}
+
+#content p {
+	line-height: 150%;
+}
+
+li{
+	margin: 5px 0px 5px 5px;
+}
+
+a{
+	margin: 5px 0px 5px 0px;
+}
+
+
+a[href]:after{content: "(" attr(href) ")"}
+
+h1, h2, h3, h4, h5, h6 { 
+    page-break-after:avoid; 
+    page-break-inside:avoid 
+}
+
+/* HOME */
+
+/*
+#wrapperHome {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+  page-break-after: always;
+}
+
+.HomeBox {
+  margin: 20px;
+  padding: 30px;
+  width: 250px;
+  height: 150px;
+  background-color: #ab;
+  text-align: center;
+  border-radius: 15px 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  page-break-inside: avoid;
+}
+
+.HomeBox p{
+	line-height: 150%;
+}
+*/
+
+.HomeBox {
+	margin-bottom: 15px;
+}
+
+/* IMG */
+
+img{ 
+    page-break-inside:avoid;   
+    page-break-after:avoid; 
+    height: 6em;
+    width: auto;
+}
+
+.trainbox img{
+    width: 25em;
+    height: auto;
+}
+
+/* LOGIN/REGISTRAZIONE */
+
+.LoginSignupBox .inputbar {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.LoginSignupBox .button {
+	display: none;
+}
+
+
+/* ADMIN */
+
+.AdminPanelBox .button {
+	display: inline;
+}
+
+
+/* CATEGORIA */
+
+.cat {
+	page-break-inside: avoid;
+}
+
+.imgCat {
+	display: none;
+}
+
+#searchBarBox {
+  display: none;
+}
+
+/* TRENO */
+
+#trainHeader p {
+	display: none;
+}
+
+#trainHeader .trainImg {
+	display: none;
+}
+
+#trainHeader .button {
+	display: none;
+}
+
+#trainHeader form {
+	display: none;
+}
+
+.comment {
+	page-break-inside: avoid;
+}
+
+#write-new {
+	display: none;
+}
+
+
+
+/* TRAINBOX */
+
+/*.card{
+	page-break-inside: avoid;
+  	width: 100%;
+  	background: #fff;
+  	border: 2px solid;
+  	border-radius: 0 20px 20px 0;
+  	margin-bottom: 50px;
+}
+.card-header{
+ 	color: #fff;
+  	float:left;
+  	max-width: 200px;
+  	max-height: 200px;
+}
+.card-body{
+  	padding: 16px 20px;
+  	text-align: left;
+  	font-size: 18px;
+
+}
+.card-body ul{
+  	list-style: none;
+}
+.card-body ul li{
+  	text-align: center;
+  	padding-bottom: 3px;
+}
+.card-body .btn{
+
+  	text-align: left;
+  	background: #294173;
+  	padding: 10px 5px;
+}*/
+
+.img-left{
+  	/*height: 200px;
+  	width: 200px;*/
+  	display: none;
+}
+
+.card {
+	margin-bottom: 40px;
+	page-break-inside: avoid;
+}
+
+/* UTENTE */
+
+.userImg {
+	display: none;
+}
+
+.leftCol form {
+	display: none;
+}
+
+.rightCol form {
+	display: none;
+}
+
+#editbioform{
+    display: none;
+}
