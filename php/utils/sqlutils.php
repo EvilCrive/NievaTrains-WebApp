@@ -112,8 +112,9 @@ function addCommento($user,$treno,$testo,$connessione){
 	return $connessione->exeQuery("INSERT INTO commenti (Testo, Data, Id_Utente, Id_Treno) VALUES ('$testo','$data',$user,$treno)");
 }
 
-function addTreno($array,$connessione){
-	print_r($array);
+function addTreno($array,$file,$connessione){
+	$id=$_SESSION['id'];$nome=$_POST['nome'];$categorie=$_POST['categorie'];$costruttore=$_POST['costruttore'];$tipo=$_POST['tipo'];$velocita=$_POST['velocita'];$anni=$_POST['anni'];$descrizione=$_POST['descrizione']; 
+	return $connessione->exeQuery("INSERT INTO treni (Id_Autore,Categoria,Nome,Costruttore,Tipo,Velocità_Max,Anno_Costruzione, Descrizione, Immagine) VALUES('$id','$categorie','$nome','$costruttore','$tipo','$velocita','$anni','$descrizione','$file')");
 }
 ?>
 

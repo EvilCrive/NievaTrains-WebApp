@@ -10,11 +10,9 @@ $connessione=new DBAccess();
 try {
 	if(!$connessione->openConnection()) throw new Exception("No connection");
 	//query al db
-
 	//upload file e form
+	$errors="";
 	if(isset($_POST['button'])){
-		$errors="";
-		$_SESSION['fail']="";
 		//controlli info treno
 		$categorie=$_POST['categorie'];//1 a 6
 		switch($categorie){
@@ -55,54 +53,37 @@ try {
 				$_POST['tipo']="Trasporto Locale";
 			break;
 		}
-		if (!preg_match('/^[a-z]{3,12}$/i',$_POST['categorie']))        $errors.="<li>Categorie non valido</li>";
-		if (!preg_match('/^[a-z]{3,12}$/i',$_POST['tipo']))        $errors.="<li>Tipo non valido</li>";
 		if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
 		if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
-		if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valido</li>";
-		if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anni non valido</li>";
-		if (!preg_match('/^[a-z0-9]{3,6000}$/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valido</li>";
-	
-		$_SESSION['fail'].=$errors;
-		if(isset($_FILES['myfileupload'])){
-			$uploadOk=1;
+		if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
+		if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
+		if (!preg_match('/[a-z0-9]{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
+		if($_FILES['myfileupload']['error']!==4){
 			$tipoFile=$_FILES['myfileupload']['type'];
 			$tipoFile=str_replace("image/","",$tipoFile);
-			$target_file = $nome.".".$tipoFile;
+			$target_file = $_POST['nome'].".".$tipoFile;
 			//controlli 
   			$check = getimagesize($_FILES["myfileupload"]["tmp_name"]);
-  			if($check !== false) {
-    			echo "File is an image - " . $check["mime"] . ".";
-    			$uploadOk = 1;
-  			} else {
-    			echo "File is not an image.";
-    			$uploadOk = 0;
+  			if($check == false) {
+    			$errors.="<li>File non e' un'immagine.</li>";
 			}
 			if (file_exists($target_file)) {
-				echo "Sorry, file already exists.";
-				$uploadOk = 0;
+				$errors.="<li>File esiste già.</li>";
 			}
-			if ($_FILES["myfileuload"]["size"] > 500000) {
-				echo "Sorry, your file is too large.";
-				$uploadOk = 0;
+			if ($_FILES["myfileupload"]["size"] > 500000) {
+				$errors.="<li>File troppo grande (in MB).</li>";
 			}  
-			// Allow certain file formats
-			if(($tipo != "jpg") || ($tipo != "jpeg") || ($tipo != "png")) {
-				echo "Sorry, only JPG.";
-				$uploadOk = 0;
+			if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
+				$errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
 			}
-			// Check if $uploadOk is set to 0 by an error
-			if ($uploadOk == 0) {
-				echo "Sorry, your file was not uploaded.";
-			  // if everything is ok, try to upload file
-			} else {
+			if (!$errors) {
 				if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/".$target_file)){
-					addTreno($_POST,$connessione);
+					addTreno($_POST,"Treni/".$target_file,$connessione);
 				} else {
-					echo "Sorry, there was an error uploading your file.";
+					$errors.="<li>Errore di uploading del file.</li>";
 				}
   			}
-		}
+		}else	$errors.="<li>Aggiungi un file come immagine del treno.</li>";
 	}
 	//importazione txt
 	$final = file_get_contents("../txt/AggiungiPagina.html");
@@ -110,8 +91,9 @@ try {
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);		
-	
+	$final=str_replace("##footer##",$footer,$final);
+	$final=str_replace("##Errori##",$errors,$final);
+	if($errors)	header("refresh:0 url=CreaTreno.php#errori_registrazione");
 	echo $final;	
 }catch(Exception $eccezione){
 	//gestione eccezioni

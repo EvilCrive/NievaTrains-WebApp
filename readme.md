@@ -12,10 +12,5 @@
   * input commenti login/signup aggiungi treno 
 * PHP
   * admin
-  * 
-  * controlli immagine
-  * immagine profilo
-  * 
-  * aggiungi/modifica treno
-  * 
-  * immagini profilo e treno
+  * controlli immagine e js
+  * modifica treno

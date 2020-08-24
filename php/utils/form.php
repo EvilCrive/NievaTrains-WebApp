@@ -31,13 +31,38 @@ try{
             $errors.="Questo utente e' gia' registrato.";
         }
         //controllo errori
+
+      //immagine
+        if($_FILES['myfile']['error']!==4){
+            $tipoFile=$_FILES['myfile']['type'];
+            $tipoFile=str_replace("image/","",$tipoFile);
+            $target_file=$username.".".$tipoFile;
+            //controlli
+            $check = getimagesize($_FILES["myfile"]["tmp_name"]);
+            if($check == false) {
+              $errors.="<li>File non e' un'immagine.</li>";
+            }
+            if (file_exists($target_file)) {
+              $errors.="<li>File esiste già.</li>";
+            }
+            if ($_FILES["myfile"]["size"] > 500000) {
+              $errors.="<li>File troppo grande (in MB).</li>";
+            }  
+            if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
+              $errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
+            }
+            if(!$errors){
+                if (!move_uploaded_file($_FILES['myfile']['tmp_name'], "../uploads/Utenti/".$target_file)){
+                    $errors.="<li>Errore di uploading del file immagine.</li>";
+                }
+            }
+        }else{
+            $errors.="<li>File assente</li>";
+        }
         if($errors){
             header("refresh:0; url=../Registrazione.php#errori_registrazione");
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
         }else{
-            //inserimento utente nel db/ vera registrazione
-            //immagine
-            $img="immagine";
             $bio="Io sono".$nome." ".$cognome." (@".$username.") ";
             insertUtente($nome,$cognome,$username,$email,$password,$bio,$img, $connessione);
             //admin part
