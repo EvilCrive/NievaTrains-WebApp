@@ -368,15 +368,26 @@ footer a{
     border-bottom: 2px solid lightblue;
 }
 
-#errori_login {
+#errori_login ul{
   list-style-type: none;
   color: red;
+  text-align: justify;
 }
-#errori_registrazione {
+#errori_login ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
+#errori_registrazione ul{
   list-style-type: none;
   color: red;
+  text-align: justify;
 }
-
+#errori_registrazione ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
 /* ADMIN PANEL */
 
 .AdminPanelBox {

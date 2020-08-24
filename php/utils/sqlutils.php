@@ -10,7 +10,7 @@ function checkUtente($mail,$user, $connessione){
 }
 function insertUtente($nome,$cognome,$username,$email,$password,$bio,$immagine, $connessione){
 	$usertype=0;
-	$query = "INSERT INTO utenti (Nome,Cognome,Username,Mail,Password,Bio,Is_User_Type,Immagine) VALUES($nome,$cognome,$username,$email,$password,$bio,$usertype,$immagine);";
+	$query = "INSERT INTO utenti (Nome,Cognome,Username,Mail,Password,Bio,Is_User_Type,Immagine) VALUES('$nome','$cognome','$username','$email','$password','$bio','$usertype','$immagine');";
 	return $connessione->exeQuery($query);			
 }
 function getUserID($email, $connessione){
