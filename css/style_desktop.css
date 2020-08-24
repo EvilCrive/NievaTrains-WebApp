@@ -152,7 +152,7 @@ select{
 /*#myLinks{
 	display: block;
 }*/
-#myLinks2{
+#hrow2{
 	width: 100%;
 }
 /*HEADER 2*/
@@ -800,4 +800,20 @@ input[type=file]{
 .userImg{
 	width: 300px;
 	height: 300px;
+}
+/*header da mostrare*/
+#hrow3{
+	display: none;
+	padding-top:83px;
+	width: 100%;
+	height: auto;
+	background-color: #294173 /*#1a1e23*/;
+	align-items: center;
+}
+#hrow3 ul{
+	list-style: none;
+}
+#hrow3 li{
+	float: none;
+	display: block;
 }
