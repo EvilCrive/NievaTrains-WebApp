@@ -88,7 +88,7 @@ function ValidateSignup(){
 }
 function ValidateComment(){
     var testo=document.forms["commentform"]["testoCommento"];
-    if (/^[a-z0-9]{3,500}$/i.test(testo)) return true;
+    if (!/^\w{3,500}$/.test(testo)) return true;
     else{
         document.getElementById("commentRequired").textContent="Commento non valido!(min 3 caratteri, max 500)";
         return false;

@@ -41,6 +41,9 @@ class DBAccess{
 			if(!$result) throw new Exception("errore execute query");
 		}catch(Exception $e){echo $e;}		
 	}	
+	public function error(){
+		$this->connection->error;
+	}
 }
 
 ?>
