@@ -86,7 +86,7 @@ try {
 		}else	$errors.="<li>Aggiungi un file come immagine del treno.</li>";
 	}
 	//importazione txt
-	$final = file_get_contents("../txt/AggiungiPagina.html");
+	$final = file_get_contents("../txt/CreaTreno.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione

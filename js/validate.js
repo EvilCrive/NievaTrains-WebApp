@@ -1,0 +1,5 @@
+validateCreazioneTreno
+validateLogin
+validateSignup
+validateComment
+validateModificaTreno
