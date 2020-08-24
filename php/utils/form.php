@@ -22,8 +22,8 @@ try{
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
         }else{
             //tutto ok; procediamo alla creazione account
-            $bio="Io sono".$nome." ".$cognome." (@".$username.") ";
-            insertUtente($nome,$cognome,$username,$email,$password,$bio,"Utenti/".$target_file, $connessione);
+            $_POST['bio']="Io sono ".$_POST['nome']." ".$_POST['cognome']." (@".$_POST['username'].") ";
+            insertUtente($_POST['nome'],$_POST['cognome'],$_POST['username'],$email,$_POST['username'],$_POST['bio'],"Utenti/".$target_file, $connessione);
             //admin part
             if(isset($_SESSION['adminlogged'])){
                 $_SESSION=array();

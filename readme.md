@@ -5,9 +5,8 @@
 * CSS
   * buttons form
 * JS
-  * modifica treno
   * (menu utente)
 * PHP
   * admin
-  * (ratio img)
-  * modifica treno
+* SQL
+  * problema con add/modify descrizione
