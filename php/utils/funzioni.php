@@ -109,6 +109,18 @@ function stampaNomeU($queryRes) {
 function stampaUsernameA($queryRes) {
 	return '<a href="../php/Utente.php?Id_Utente='.$queryRes["Id_Utente"].'">'.$queryRes["Username"].'</a>';
 }
+function stampaNomeT($queryRes) {	
+	return $queryRes[0]["Nome"];	
+}	
+function stampaDescT($queryRes) {	
+	return $queryRes[0]["Descrizione"];	
+}	
+function stampaImgT($queryRes) {	
+	return $queryRes[0]["Immagine"];	
+}	
+function stampaCategoriaT($query){	
+	return $query[0]["Categoria"];	
+}		
 
 function stampaIdAutoreT($query){
 	return $query[0]["Id_Autore"];
