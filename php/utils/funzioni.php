@@ -80,7 +80,7 @@ function stampaSchedaT($queryRes) {
 	$var.='<li>Marca: '.$queryRes[0]["Costruttore"].'</li>'."\n";
 	$var.='<li>Categoria: '.$queryRes[0]["Categoria"].'</li>'."\n";
 	$var.='<li>Tipo: '.$queryRes[0]["Tipo"].'</li>'."\n";
-	$var.='<li>Velocità: '.$queryRes[0]["Velocità_Max"].'</li>'."\n";
+	$var.='<li>Velocità: '.$queryRes[0]["Velocità_Max"].' Km/h</li>'."\n";
 
 	return $var;
 }

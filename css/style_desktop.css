@@ -151,10 +151,10 @@ select{
 
 /*#myLinks{
 	display: block;
-}
-#myLinks2{
-	display: block;
 }*/
+#myLinks2{
+	width: 100%;
+}
 /*HEADER 2*/
 #breadcrumb {
 	background-color: lightblue;
@@ -788,9 +788,16 @@ input[type=file]{
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
-.imgTrain{
+.imgTrainCat{
 	margin: 15px;
 	width: 200px;
 	height: 200px;
+}
+.trainImg{
+	width: 800px;
+	height: 450px;
+}
+.userImg{
+	width: 300px;
+	height: 300px;
 }
