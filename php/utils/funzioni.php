@@ -41,7 +41,7 @@ function stampaUtentiBox($queryRes) {
 		$var.='				<li>Marca: '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='				<li>Autore: '.$queryRes[$i]["Mail"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Treni.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
+		$var.='			<a href="../PHP/Utente.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn">Read more</a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}
@@ -66,7 +66,7 @@ function stampaCommenti($queryRes) {
 		$var.='</form>';
 	}	
 	$var.='			<div class="commentInfo">';
-	$var.='				<a href="#">'.$queryRes[$i]["Username"].'</a>';
+	$var.='				<a href="../php/Utente.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'">'.$queryRes[$i]["Username"].'</a>';
 	$var.='				<span class="data">'.$queryRes[$i]["Data"].'</span>';
 	$var.='			</div>';
 	$var.='		</div>';
@@ -92,7 +92,9 @@ function stampaImmagine($queryImmagine) {
 	return "../uploads/".$queryImmagine[0]["Immagine"];
 }
 function stampaInfoUtente($queryRes) {
-	$var=$queryRes[0]["Nome"]." ".$queryRes[0]["Cognome"]." (@".$queryRes[0]["Username"].")";	
+	if($queryRes[0]["Is_User_Type"]==1) $tmp='"blue"> Utente Esperto';
+	else $tmp='"red"> Utente Base';
+	$var=$queryRes[0]["Nome"].' '.$queryRes[0]["Cognome"].' (@'.$queryRes[0]["Username"].'),<span class='.$tmp.'</span>';	
 	return $var;
 }
 function stampaEmail($queryRes) {
@@ -107,7 +109,31 @@ function stampaNomeU($queryRes) {
 function stampaUsernameA($queryRes) {
 	return '<a href="../php/Utente.php?Id_Utente='.$queryRes["Id_Utente"].'">'.$queryRes["Username"].'</a>';
 }
+function stampaNomeT($queryRes) {	
+	return $queryRes[0]["Nome"];	
+}	
+function stampaDescT($queryRes) {	
+	return $queryRes[0]["Descrizione"];	
+}	
+function stampaImgT($queryRes) {	
+	return $queryRes[0]["Immagine"];	
+}	
+function stampaCategoriaT($query){	
+	return $query[0]["Categoria"];	
+}		
 
+function stampaIdAutoreT($query){
+	return $query[0]["Id_Autore"];
+}
+function stampaCostruttoreT($query){
+	return $query[0]["Costruttore"];
+}
+function stampaVelocitaT($query){
+	return $query[0]["Velocità_Max"];
+}
+function stampaAnnoT($query){
+	return $query[0]["Anno_Costruzione"];
+}
 function controlloUploadImmagineUtenti($files,$errors){
 	$target_file="";
 	if($files['myfile']['error']!==4){

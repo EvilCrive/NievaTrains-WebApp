@@ -848,3 +848,9 @@ input[type=file]{
 	float: none;
 	display: block;
 }
+.blue{
+	color: blue;
+}
+.red{
+	color: red;
+}

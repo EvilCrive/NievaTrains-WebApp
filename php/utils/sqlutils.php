@@ -86,30 +86,6 @@ function getCommenti($id, $connessione) { //6
 	return $var;
 }
 
-function stampaNomeT($queryRes) {
-	return $queryRes[0]["Nome"];
-}
-function stampaDescT($queryRes) {
-	return $queryRes[0]["Descrizione"];
-}
-function stampaImgT($queryRes) {
-	return $queryRes[0]["Immagine"];
-}
-function stampaCategoriaT($query){
-	return $query[0]["Categoria"];
-}
-function stampaIdAutoreT($query){
-	return $query[0]["Id_Autore"];
-}
-function stampaCostruttoreT($query){
-	return $query[0]["Costruttore"];
-}
-function stampaVelocitaT($query){
-	return $query[0]["Velocità_Max"];
-}
-function stampaAnnoT($query){
-	return $query[0]["Anno_Costruzione"];
-}
 function getPreferiti($id, $connessione) {
 	$var=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id"); 
 	return $var[0]['count(*)'];
