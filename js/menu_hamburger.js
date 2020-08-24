@@ -9,11 +9,7 @@ function buttonclick() {
 }
 
 function openMenuUser(){
-  if(document.getElementById("menuUser").style.display==="block"){
-    document.getElementById("menuUser").style.display="none";
-  }else document.getElementById("menuUser").style.display="block";
+  if(document.getElementById("menuUser").classList.contains("hidden")){
+    document.getElementById("menuUser").classList.remove("hidden");
+  }else document.getElementById("menuUser").classList.add("hidden")
 }
-document.addEventListener("DOMContentLoaded", function(){
-  
-document.getElementById("prova123").addEventListener("onclick",openMenuUser());
-})

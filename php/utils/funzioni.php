@@ -319,12 +319,15 @@ function controlliLogin($post,$errors,$connessione){
 }
 function functionMenuUser($session,$final){
 	$id="";
+	$xd="hidden";
 	if(isset($session['id'])){
+		$xd="";
 		$var='
 		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
 		$id=$session['id'];
 	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
 	$final=str_replace("%%user",$id,$final);
+	$final=str_replace("%%u%%",$xd,$final);
 	return $final=str_replace("##user##",$var,$final);
 }
 
