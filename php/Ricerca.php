@@ -28,12 +28,11 @@ try {
 	$final=str_replace("##CatRicerca##",$CatRicerca,$final);	
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);
-
-if($queryRisultato){
-	if($CatRicerca=="Utenti")	$final=str_replace("##TrainBox##",stampaUtentiBox($queryRisultato),$final);
-	else	$final=str_replace("##TrainBox##",stampaTrainBox($queryRisultato),$final);
-}
-else $final=str_replace("##TrainBox##","<p>Spiacenti ma non ci sono risultati corrispondenti ai criteri di ricerca</p>",$final);
+	$final=functionMenuUser($_SESSION,$final);
+	if($queryRisultato){
+		if($CatRicerca=="Utenti")	$final=str_replace("##TrainBox##",stampaUtentiBox($queryRisultato),$final);
+		else	$final=str_replace("##TrainBox##",stampaTrainBox($queryRisultato),$final);
+	}else $final=str_replace("##TrainBox##","<p>Spiacenti ma non ci sono risultati corrispondenti ai criteri di ricerca</p>",$final);
 	
 	echo $final;
 }catch(Exception $eccezione){

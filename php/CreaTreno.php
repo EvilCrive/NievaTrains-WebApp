@@ -26,6 +26,7 @@ try {
 		$final=str_replace("##footer##",$footer,$final);
 		$final=str_replace("##Errori##",$errors,$final);
 		if($errors)	header("refresh:0 url=CreaTreno.php#errori_newtreno");
+		$final=functionMenuUser($_SESSION,$final);
 		echo $final;
 	}else	header("refresh:0 url=../PHP/Index.php");	
 }catch(Exception $eccezione){

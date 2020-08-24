@@ -57,7 +57,7 @@ try{
             }
             header("refresh:0 url=../Utente.php?Id_Utente=$id");
         }
-        if(isset($_POST['logout'])){
+        if(isset($_POST['logout']) || isset($_GET['logout'])){
             $_SESSION['fail']="";
             $_SESSION['id'] = "";
             $_SESSION['nome'] = "";

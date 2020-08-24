@@ -16,8 +16,8 @@ try {
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);	
-	
+	$final=str_replace("##footer##",$footer,$final);
+	$final=functionMenuUser($_SESSION,$final);
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni
@@ -26,3 +26,8 @@ try {
 //chiusura connessione
 $connessione->closeConnection();
 ?>
+
+
+
+
+
