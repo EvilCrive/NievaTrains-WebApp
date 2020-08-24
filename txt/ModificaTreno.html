@@ -22,9 +22,9 @@
     <h1>Aggiungi una nuova pagina a Nieva Trains:</h1>
 
 	<div class="AggiuntaTreno">
-	<form action="CreaTreno.php" method="post" enctype="multipart/form-data" onsubmit="return ValidateCreazioneTreno()" id="addTrenoform">
+	<form action="ModificaTreno.php" method="post" onsubmit="return ValidateModificaTreno()" id="modifyTrenoform">
 			<label for="nome">Nome</label>
-					<input class="inputbar" type="text" name="nome" placeholder="Nome" />
+					<input class="inputbar" type="text" name="nome" placeholder="Nome" value=%%nome />
 					<label for="categorie">Categoria</label>
 					<select class="sceltaAggiunta" name="categorie">
 						<option value="1">Elettrico</option>
@@ -34,8 +34,8 @@
 						<option value="5">Diesel</option>
 						<option value="6">Turbina a Gas</option>
 					</select> 
-					<label for="costruttore">Costruttore</label>
-					<input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
+					<label for="costruttore" >Costruttore</label>
+					<input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" value=%%costruttore />
 					<label for="tipo">Tipo</label>
 					<select class="sceltaAggiunta" name="tipo">
 						<option value="1">Alta velocità</option>
@@ -45,17 +45,17 @@
 						<option value="5">Trasporto Locale</option>
 					</select>
 					<label for="velocita">Velocità massima (km/h)</label>
-					<input class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
+					<input class="inputbar" type="text" name="velocita" placeholder="Velocità Massima" value=%%velocita />
 					<label for="anni">Anno di costruzione</label>
-				<input class="inputbar" type="text" name="anni" placeholder="Anno di costruzione"/>
+					<input class="inputbar" type="text" name="anni" placeholder="Anno di costruzione" value=%%anno />
 					<label for="descrizione">Descrizione</label>
-				<textarea class="sceltaDesc" rows="5" cols="300" name="descrizione"></textarea>
-					<label for="myfile">Scegli un immagine</label>
-					<input type="file" id="myfileupload" name="myfileupload">
+					<textarea class="sceltaDesc" rows="5" cols="300" name="descrizione">%%descrizione</textarea>
+					<input name="idtreno" hidden value=%%idtreno />
 				<input class="button" name="button" type="submit" value="Conferma" />	
 		</fieldset>
 	</form>
 	<div id="errori_newtreno" name="errori_php">##Errori##</div>
+
 </div>
 </div>
 ##footer##

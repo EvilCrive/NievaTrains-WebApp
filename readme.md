@@ -5,7 +5,6 @@
 * CSS
   * buttons form
 * JS
-  * aggiungi treno 
   * modifica treno
   * (menu utente)
 * PHP
