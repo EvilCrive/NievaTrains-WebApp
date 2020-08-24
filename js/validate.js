@@ -119,9 +119,9 @@ function ValidateCreazioneTreno(){
         errors=errors.concat("<li>Descrizione non valida<ol><li>Descrizione troppo corta, almeno 10 caratteri</li></ol></li>");
     }
     if(errors!==""){
-        document.getElementById("errori_newtreno")[1].innerHTML='<ul>'+errors+'</ul>';
+        document.getElementById("errori_newtreno").innerHTML='<ul>'+errors+'</ul>';
         return false;
-    }else   return true;
+    }else  return true;
 }
 //validateModificaTreno
 
