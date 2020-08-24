@@ -13,14 +13,14 @@ SET FOREIGN_KEY_CHECKS=1;
 CREATE TABLE Treni(
 	Id_Treno integer auto_increment PRIMARY KEY,
 	Id_Autore integer not null,
-	Categoria varchar(20) not null,
+	Categoria varchar(50) not null,
 	Nome varchar(50) not null unique,
 	Costruttore varchar(50) not null,
-	Tipo varchar(30) not null,
+	Tipo varchar(50) not null,
 	Velocità_Max smallint not null,
-	Anno_Costruzione varchar(20),
+	Anno_Costruzione varchar(4),
 	Descrizione varchar(6000),
-	Immagine varchar(60) not null
+	Immagine varchar(50) not null
 ) ENGINE=InnoDB;
 
 CREATE TABLE Utenti(

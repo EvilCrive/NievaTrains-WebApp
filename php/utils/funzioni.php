@@ -185,7 +185,7 @@ function controlNuploadAddTreno($post,$files){
 	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['costruttore']))        $errors.="<li>Costruttore non valido</li>";
 	if (!preg_match('/^[0-9]{1,3}$/i',$post['velocita']))        $errors.="<li>Velocità non valida</li>";
 	if (!preg_match('/^[0-9]{4}$/i',$post['anni']))        $errors.="<li>Anno non valido</li>";
-	if (!preg_match('/[a-z0-9]{10,}/i',$post['descrizione']))        $errors.="<li>Descrizione non valida</li>";
+	if (!preg_match('/.{10,}/i',$post['descrizione']))        $errors.="<li>Descrizione non valida</li>";
 	if($files['myfileupload']['error']!==4){
 		$tipoFile=$files['myfileupload']['type'];
 		$tipoFile=str_replace("image/","",$tipoFile);
@@ -212,6 +212,7 @@ function controlNuploadAddTreno($post,$files){
 			}
 		  }
 	}else	$errors.="<li>Aggiungi un file come immagine del treno.</li>";
+	return $errors;
 }
 
 function controlliSignup($post,$errors,$connessione){

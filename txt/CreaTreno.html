@@ -22,7 +22,7 @@
     <h1>Aggiungi una nuova pagina a Nieva Trains:</h1>
 
 	<div class="AggiuntaTreno">
-	<form action="CreaTreno.php" method="post" enctype="multipart/form-data" onsubmit="return ValidateCreazioneTreno()" id="uploadform">
+	<form action="CreaTreno.php" method="post" enctype="multipart/form-data" onsubmit="return ValidateCreazioneTreno()" id="addTrenoform">
 			<label for="nome">Nome</label>
 					<input class="inputbar" type="text" name="nome" placeholder="Nome" />
 					<label for="categorie">Categoria</label>
@@ -44,7 +44,7 @@
 						<option value="4">Intercity</option>
 						<option value="5">Trasporto Locale</option>
 					</select>
-					<label for="velocità">Velocità massima (km/h)</label>
+					<label for="velocita">Velocità massima (km/h)</label>
 					<input class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
 					<label for="anni">Anno di costruzione</label>
 				<input class="inputbar" type="text" name="anni" placeholder="Anno di costruzione"/>
@@ -55,8 +55,9 @@
 				<input class="button" name="button" type="submit" value="Conferma" />	
 		</fieldset>
 	</form>
-	<div id="errori_registrazione"><ul>##Errori##</ul></div>
-	</div>
+	<div class="errori_newtreno" name="errori_php"><ul>##Errori##</ul></div>
+	<div class="errori_newtreno" name="errori_js"></div>	
+</div>
 </div>
 ##footer##
 </body>
