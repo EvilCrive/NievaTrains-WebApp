@@ -5,11 +5,10 @@
 * CSS
   * buttons form
 * JS
-  * registrazione
-  * login
-  * commenti 
   * aggiungi treno 
+  * modifica treno
+  * (menu utente)
 * PHP
   * admin
-  * ratio img
+  * (ratio img)
   * modifica treno

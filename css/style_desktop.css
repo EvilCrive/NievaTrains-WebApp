@@ -369,7 +369,7 @@ footer a{
 }
 
 #errori_login ul{
-  list-style-type: none;
+  list-style-type: disc;
   color: red;
   text-align: justify;
 }
@@ -379,11 +379,21 @@ footer a{
   text-align: justify;
 }
 #errori_registrazione ul{
-  list-style-type: none;
+  list-style-type: disc;
   color: red;
   text-align: justify;
 }
 #errori_registrazione ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
+.errori_newtreno ul{
+  list-style-type: disc;
+  color: red;
+  text-align: justify;
+}
+.errori_newtreno ol{
   list-style-type: none;
   color: black;
   text-align: justify;

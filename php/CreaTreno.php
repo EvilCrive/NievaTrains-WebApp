@@ -14,7 +14,7 @@ try {
 	$errors="";
 	if(isset($_POST['button'])){
 		$array=$_FILES;
-		controlNuploadAddTreno($_POST,$array);	
+		$errors=controlNuploadAddTreno($_POST,$array);	
 	}
 	//importazione txt
 	$final = file_get_contents("../txt/CreaTreno.html");

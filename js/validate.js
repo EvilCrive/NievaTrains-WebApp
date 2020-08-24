@@ -94,7 +94,35 @@ function ValidateComment(){
         return false;
     }
 }
-//validateCreazioneTreno
+function ValidateCreazioneTreno(){
+    var array=document.forms["addTrenoform"];
+    var errors="";
+    //controllo nome
+    if(!(/^\w{4,50}$/.test(array["nome"].value))){
+        errors=errors.concat("<li>Nome non valido<ol><li>4-50 caratteri, alfanumerici</li></ol></li>");
+    }
+    //controllo costruttore
+    if(!(/^\w{4,50}$/.test(array["costruttore"].value))){
+        errors=errors.concat("<li>Costruttore non valido<ol><li>4-50 caratteri, alfanumerici</li></ol></li>");
+    }
+    //controllo velocita
+    if(!(/^[0-9]{1,3}$/.test(array["velocita"].value))){
+        errors=errors.concat("<li>Velocita' non valida<ol><li>numero da 1 a 3 cifre</li></ol></li>");
+    }
+    //controllo anno 
+    
+    if(!(/^[0-9]{4}$/.test(array["anni"].value))){
+        errors=errors.concat("<li>Anno non valido<ol><li>Numero da 4 cifre</li></ol></li>");
+    }
+    //controllo descrizione
+    if(!(/^.{10,}$/.test(array["descrizione"].value))){
+        errors=errors.concat("<li>Descrizione non valida<ol><li>Descrizione troppo corta, almeno 10 caratteri</li></ol></li>");
+    }
+    if(errors!==""){
+        document.getElementsByClassName("errori_newtreno")[1].innerHTML='<ul>'+errors+'</ul>';
+        return false;
+    }else   return true;
+}
 //validateModificaTreno
 
 function validateEmail(mail){
