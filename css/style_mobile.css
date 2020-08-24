@@ -8,7 +8,9 @@
   width: 70%;
   float: left;
 }
-
+.leftCol {
+width: 100%
+}
 #utenteTop{
   /*margin-top: 20px;*/
   float: right;
