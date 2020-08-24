@@ -1,18 +1,21 @@
 @import url("style_desktop.css");
-
-#hrow1 {
-	display: inline-block;
+#hrow1{
+	padding: 10px;
+	justify-content: normal;
 }
 #logo {
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  width: 70%;
+  float: left;
 }
+
 #utenteTop{
-  margin-top: 20px;
-  float: none;
+  /*margin-top: 20px;*/
+  float: right;
 }
-#hrow2{
+/*#hrow2{
   display:inline-block;
-}
+}*/
 .stayLeft, .stayRight{
   width: inherit;
 }
@@ -31,7 +34,7 @@
     width: auto;
   }
   select{
-    margin: 10px;
+    margin: 20px;
   }
 }
 
@@ -47,11 +50,18 @@ footer{
 	float: right;
 	margin-top: 10px;
 }
+/*header da mostrare*/
+#showDesktopSearch, #hrow2{
+	display: none
+}
+#hrow3{
+	padding-top:83px;
+	width: 100%;
+	height: auto;
+	background-color: #294173 /*#1a1e23*/;
 
-/*#myLinks{
-	display: none;
+	align-items: center;
 }
-#myLinks2{
-	display: none;
+#sceltaCategorie {
+	margin: 10px;
 }
-*/
