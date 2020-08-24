@@ -65,3 +65,9 @@ footer{
 #sceltaCategorie {
 	margin: 10px;
 }
+#breadcrumb{
+	display:none;
+}
+h1{
+	padding-top:100px;
+}
