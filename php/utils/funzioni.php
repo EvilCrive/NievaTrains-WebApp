@@ -107,4 +107,139 @@ function stampaNomeU($queryRes) {
 function stampaUsernameA($queryRes) {
 	return '<a href="../php/Utente.php?Id_Utente='.$queryRes["Id_Utente"].'">'.$queryRes["Username"].'</a>';
 }
+
+
+function controlloUploadImmagineUtenti($files,$errors){
+	$target_file="";
+	if($files['myfile']['error']!==4){
+		$tipoFile=$files['myfile']['type'];
+		$tipoFile=str_replace("image/","",$tipoFile);
+		$target_file=$files['user'].".".$tipoFile;
+		//controlli
+		$check = getimagesize($files["myfile"]["tmp_name"]);
+		if($check == false) {
+		  $errors.="<li>File non e' un'immagine.</li>";
+		}
+		if (file_exists($target_file)) {
+		  $errors.="<li>File esiste già.</li>";
+		}
+		if ($files["myfile"]["size"] > 500000) {
+		  $errors.="<li>File troppo grande (in MB).</li>";
+		}  
+		if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
+		  $errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
+		}
+		if(!$errors){
+			if (!move_uploaded_file($files['myfile']['tmp_name'], "../../uploads/Utenti/".$target_file)){
+				$errors.="<li>Errore di uploading del file immagine.</li>";
+				
+			}
+		}
+	}else{
+		$errors.="<li>File assente</li>";
+	}
+	return $target_file;
+}
+function controlNuploadAddTreno($post,$files){
+	$errors="";
+	$categorie=$post['categorie'];
+	switch($categorie){
+		case "1":
+			$post['categorie']="Elettrico";
+		break;
+		case "2":
+			$post['categorie']="Vapore";
+		break;
+		case "3":
+			$post['categorie']="Maglev EDS";
+		break;
+		case "4":
+			$post['categorie']="Maglev EMS";
+		break;
+		case "5":
+			$post['categorie']="Diesel";
+		break;
+		case "6":
+			$post['categorie']="Turbina a Gas";
+		break;
+	}
+	$tipo=$post['tipo'];//1 a 6
+	switch($tipo){
+		case "1":
+			$post['tipo']="Alta velocità";
+		break;
+		case "2":
+			$post['tipo']="Lunga Percorrenza";
+		break;
+		case "3":
+			$post['tipo']="Prototipo";
+		break;
+		case "4":
+			$post['tipo']="Intercity";
+		break;
+		case "5":
+			$post['tipo']="Trasporto Locale";
+		break;
+	}
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['nome']))        $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['costruttore']))        $errors.="<li>Costruttore non valido</li>";
+	if (!preg_match('/^[0-9]{1,3}$/i',$post['velocita']))        $errors.="<li>Velocità non valida</li>";
+	if (!preg_match('/^[0-9]{4}$/i',$post['anni']))        $errors.="<li>Anno non valido</li>";
+	if (!preg_match('/[a-z0-9]{10,}/i',$post['descrizione']))        $errors.="<li>Descrizione non valida</li>";
+	if($files['myfileupload']['error']!==4){
+		$tipoFile=$files['myfileupload']['type'];
+		$tipoFile=str_replace("image/","",$tipoFile);
+		$target_file = $post['nome'].".".$tipoFile;
+		//controlli 
+		  $check = getimagesize($files["myfileupload"]["tmp_name"]);
+		  if($check == false) {
+			$errors.="<li>File non e' un'immagine.</li>";
+		}
+		if (file_exists($target_file)) {
+			$errors.="<li>File esiste già.</li>";
+		}
+		if ($files["myfileupload"]["size"] > 500000) {
+			$errors.="<li>File troppo grande (in MB).</li>";
+		}  
+		if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
+			$errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
+		}
+		if (!$errors) {
+			if (move_uploaded_file($files['myfileupload']['tmp_name'], "../uploads/".$target_file)){
+				addTreno($post,"Treni/".$target_file,$connessione);
+			} else {
+				$errors.="<li>Errore di uploading del file.</li>";
+			}
+		  }
+	}else	$errors.="<li>Aggiungi un file come immagine del treno.</li>";
+}
+
+function controlliSignup($post,$errors,$connessione){
+	$email=$post['email'];
+	$nome=$post['nome'];
+	$cognome=$post['cognome'];
+	$username=$post['username'];
+	$password=$post['password'];
+	$conferma_password=$post['conferma_password'];
+
+	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL))     	$errors.="<li>Email non valida</li>";
+    if (!preg_match('/^[a-z0-9]{6,12}$/i',$password))   	$errors.="<li>Password non valida</li>";
+	if (!preg_match('/^[a-z0-9]{6,12}$/i',$username))       $errors.="<li>Username non valido</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$nome))           $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$cognome))        $errors.="<li>Cognome non valido</li>";
+	if (($_POST['conferma_password']!=$_POST['password']))	$errors.="<li>Password e confermaPassword sbagliate</li>";
+	if(checkUtente($email,$username, $connessione))			$errors.="Questo utente e' gia' registrato.";
+	return $errors;
+}
+function controlliLogin($post,$errors,$connessione){
+	$email=$post['email'];
+	$password=$post['password'];
+	$email=filter_var($email,FILTER_SANITIZE_EMAIL);
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL))     $errors.="<li>Email non valida</li>";
+	if (!preg_match('/^[a-z0-9]{6,12}$/i',$password))   $errors.="<li>Password non valida</li>";
+	if(!checkLoginUtente($email,$password, $connessione))	$errors.="Email o Password sbagliati.";
+	return $errors;
+}
+
 ?>

@@ -20,15 +20,13 @@ try {
 		$errori=$_SESSION['fail'];
 		$_SESSION['fail']="";
 	}
-	$final=str_replace("%%errors",$errori,$final);
-
-	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);	
 	if(isset($_SESSION['userType'])){
 		$id=$_SESSION['id'];
 		header("refresh:0 url=Utente.php?Id_Utente=$id");	
-		die();
 	}
+	$final=str_replace("%%errors",$errori,$final);
+	$final=str_replace("##header##",$header,$final);
+	$final=str_replace("##footer##",$footer,$final);	
 	echo $final;
 	
 }catch(Exception $eccezione){
