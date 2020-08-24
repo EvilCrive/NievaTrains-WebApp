@@ -236,7 +236,7 @@ function controlliLogin($post,$errors,$connessione){
 	$email=$post['email'];
 	$password=$post['password'];
 	$email=filter_var($email,FILTER_SANITIZE_EMAIL);
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL))     $errors.="<li>Email non valida</li>";
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL) || (!preg_match('/^(\w)+@(\w{3,10})+.(\w{2,3})$/',$email)))     $errors.="<li>Email non valida</li>";
 	if (!preg_match('/^[a-z0-9]{6,12}$/i',$password))   $errors.="<li>Password non valida</li>";
 	if(!checkLoginUtente($email,$password, $connessione))	$errors.="Email o Password sbagliati.";
 	return $errors;
