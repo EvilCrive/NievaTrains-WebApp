@@ -140,7 +140,7 @@ function controlloUploadImmagineUtenti($files,$errors){
 	}
 	return $target_file;
 }
-function controlNuploadAddTreno($post,$files){
+function controlNuploadAddTreno($post,$files,$connessione){
 	$errors="";
 	$categorie=$post['categorie'];
 	switch($categorie){
@@ -212,6 +212,56 @@ function controlNuploadAddTreno($post,$files){
 			}
 		  }
 	}else	$errors.="<li>Aggiungi un file come immagine del treno.</li>";
+	return $errors;
+}
+
+function controlNmodifyTreno($post,$connessione){
+	$errors="";
+	$categorie=$post['categorie'];
+	switch($categorie){
+		case "1":
+			$post['categorie']="Elettrico";
+		break;
+		case "2":
+			$post['categorie']="Vapore";
+		break;
+		case "3":
+			$post['categorie']="Maglev EDS";
+		break;
+		case "4":
+			$post['categorie']="Maglev EMS";
+		break;
+		case "5":
+			$post['categorie']="Diesel";
+		break;
+		case "6":
+			$post['categorie']="Turbina a Gas";
+		break;
+	}
+	$tipo=$post['tipo'];//1 a 6
+	switch($tipo){
+		case "1":
+			$post['tipo']="Alta velocità";
+		break;
+		case "2":
+			$post['tipo']="Lunga Percorrenza";
+		break;
+		case "3":
+			$post['tipo']="Prototipo";
+		break;
+		case "4":
+			$post['tipo']="Intercity";
+		break;
+		case "5":
+			$post['tipo']="Trasporto Locale";
+		break;
+	}
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['nome']))        $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['costruttore']))        $errors.="<li>Costruttore non valido</li>";
+	if (!preg_match('/^[0-9]{1,3}$/i',$post['velocita']))        $errors.="<li>Velocità non valida</li>";
+	if (!preg_match('/^[0-9]{4}$/i',$post['anni']))        $errors.="<li>Anno non valido</li>";
+	if (!preg_match('/.{10,}/i',$post['descrizione']))        $errors.="<li>Descrizione non valida</li>";
+	if(!$errori)	updateTreno($post,$connessione);
 	return $errors;
 }
 

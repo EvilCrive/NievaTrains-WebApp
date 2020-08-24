@@ -50,11 +50,12 @@
 					<input class="inputbar" type="text" name="anni" placeholder="Anno di costruzione" value=%%anno />
 					<label for="descrizione">Descrizione</label>
 					<textarea class="sceltaDesc" rows="5" cols="300" name="descrizione">%%descrizione</textarea>
+					<input name="idtreno" hidden value=%%idtreno />
 				<input class="button" name="button" type="submit" value="Conferma" />	
 		</fieldset>
 	</form>
-	<div class="errori_newtreno" name="errori_php"><ul>##Errori##</ul></div>
-	<div class="errori_newtreno" name="errori_js"></div>	
+	<div id="errori_newtreno" name="errori_php">##Errori##</div>
+
 </div>
 </div>
 ##footer##

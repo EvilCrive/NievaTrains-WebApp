@@ -97,8 +97,17 @@ function stampaImgT($queryRes) {
 function stampaCategoriaT($query){
 	return $query[0]["Categoria"];
 }
-function getIdAutoreT($query){
+function stampaIdAutoreT($query){
 	return $query[0]["Id_Autore"];
+}
+function stampaCostruttoreT($query){
+	return $query[0]["Costruttore"];
+}
+function stampaVelocitaT($query){
+	return $query[0]["Velocità_Max"];
+}
+function stampaAnnoT($query){
+	return $query[0]["Anno_Costruzione"];
 }
 function getPreferiti($id, $connessione) {
 	$var=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id"); 
@@ -118,6 +127,13 @@ function addCommento($user,$treno,$testo,$connessione){
 function addTreno($array,$file,$connessione){
 	$id=$_SESSION['id'];$nome=$_POST['nome'];$categorie=$_POST['categorie'];$costruttore=$_POST['costruttore'];$tipo=$_POST['tipo'];$velocita=$_POST['velocita'];$anni=$_POST['anni'];$descrizione=$_POST['descrizione']; 
 	return $connessione->exeQuery("INSERT INTO treni (Id_Autore,Categoria,Nome,Costruttore,Tipo,Velocità_Max,Anno_Costruzione, Descrizione, Immagine) VALUES('$id','$categorie','$nome','$costruttore','$tipo','$velocita','$anni','$descrizione','$file')");
+}
+
+function updateTreno($array,$connessione){
+	$idtreno=$_POST['idtreno'];$iduser=$_SESSION['id'];$nome=$_POST['nome'];$categorie=$_POST['categorie'];$costruttore=$_POST['costruttore'];$tipo=$_POST['tipo'];$velocita=$_POST['velocita'];$anni=$_POST['anni'];$descrizione=$_POST['descrizione']; 
+	return $connessione->exeQuery("UPDATE treni SET Id_Autore='$iduser', Categoria='$categorie', Nome='$nome', Costruttore='$costruttore', Tipo='$tipo', Velocità_Max='$velocita', Anno_Costruzione='$anni', Descrizione='$descrizione' WHERE Id_Treno='$idtreno'");
+	//Id_Autore,Categoria,Nome,Costruttore,Tipo,Velocità_Max,Anno_Costruzione, Descrizione
+
 }
 ?>
 
