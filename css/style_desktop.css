@@ -207,12 +207,15 @@ select{
 }
 
 #menuUser{
-  background-color: #232f46;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  padding: 16px 20px;
-  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  width: 30%;
+  display: block;
+  float: right;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 10px;
+  max-width: 35px;
 }
 /*FOOTER*/
 
