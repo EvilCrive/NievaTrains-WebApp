@@ -318,12 +318,13 @@ function controlliLogin($post,$errors,$connessione){
 	return $errors;
 }
 function functionMenuUser($session,$final){
+	$id="";
 	if(isset($session['id'])){
 		$var='
-		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>
-';
-	
+		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
+		$id=$session['id'];
 	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
+	$final=str_replace("%%user",$id,$final);
 	return $final=str_replace("##user##",$var,$final);
 }
 

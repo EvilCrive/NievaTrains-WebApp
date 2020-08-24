@@ -13,3 +13,7 @@ function openMenuUser(){
     document.getElementById("menuUser").style.display="none";
   }else document.getElementById("menuUser").style.display="block";
 }
+document.addEventListener("DOMContentLoaded", function(){
+  
+document.getElementById("prova123").addEventListener("onclick",openMenuUser());
+})

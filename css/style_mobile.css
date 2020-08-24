@@ -31,6 +31,11 @@ width: 100%
   background-color: #232f46;
 }
 
+#menuUser{
+  background-color: #232f46;
+  margin-top: 75px;
+}
+
 @media screen and (max-width: 440px) {
   .search-box{
     width: auto;
