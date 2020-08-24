@@ -36,9 +36,10 @@ try {
 	}else	$buttonPreferiti.="Like";
 	$buttonPreferiti.='" /><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
 	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
-		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" method="post" name="removemodifyForm"><fieldset>';
-		$buttonsOperazioni.='<label for="eliminaTreno"></label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/>';
-		$buttonsOperazioni.='<label for="modificaTreno"></label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
+		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" method="post" name="removeForm"><fieldset>';
+		$buttonsOperazioni.='<label for="eliminaTreno"></label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></fieldset></form>';
+
+		$buttonsOperazioni.='<form action="../PHP/ModificaTreno.php" method="post" name="modifyForm"><fieldset><label for="modificaTreno"></label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
 	}
 
 	//sostituzione variabili di sostituzione

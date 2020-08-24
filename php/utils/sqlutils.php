@@ -97,6 +97,9 @@ function stampaImgT($queryRes) {
 function stampaCategoriaT($query){
 	return $query[0]["Categoria"];
 }
+function getIdAutoreT($query){
+	return $query[0]["Id_Autore"];
+}
 function getPreferiti($id, $connessione) {
 	$var=$connessione->getQuery("SELECT count(*) FROM preferiti WHERE Id_Treno=$id"); 
 	return $var[0]['count(*)'];
