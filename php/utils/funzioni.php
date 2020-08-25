@@ -17,7 +17,7 @@ function stampaTrainBox($queryRes) {
 		$var.='		<div class="card-body">'."\n";
 		$var.='			<ul>'."\n";
 		$var.='				<li>Nome: '.$queryRes[$i]["Nome"].'</li>'."\n";
-		$var.='				<li>Tipo: '.$queryRes[$i]["Categoria"].'</li>'."\n";
+		$var.='				<li>Categoria: '.$queryRes[$i]["Categoria"].'</li>'."\n";
 		$var.='				<li>Marca: '.$queryRes[$i]["Costruttore"].'</li>'."\n";
 		$var.='				<li>Autore: '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='			</ul>'."\n";
