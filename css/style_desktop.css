@@ -847,7 +847,6 @@ input[type=file]{
 }
 /*header da mostrare*/
 #hrow3{
-	display: none;
 	padding-top:83px;
 	width: 100%;
 	height: auto;

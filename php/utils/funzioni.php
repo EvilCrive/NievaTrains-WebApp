@@ -134,6 +134,7 @@ function stampaVelocitaT($query){
 function stampaAnnoT($query){
 	return $query[0]["Anno_Costruzione"];
 }
+
 function controlloUploadImmagineUtenti($files,$errors){
 	$target_file="";
 	if($files['myfile']['error']!==4){

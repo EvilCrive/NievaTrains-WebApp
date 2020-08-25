@@ -1,15 +1,16 @@
 function buttonclick() {
   var x = document.getElementById("hrow3");
-  var y = document.getElementById("content");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  if (x.classList.contains("hidden")) {
+    x.classList.remove("hidden");
   } else {
-    x.style.display = "none";
+    x.classList.add("hidden");
   }
 }
 
 function openMenuUser(){
   if(document.getElementById("menuUser").classList.contains("hidden")){
     document.getElementById("menuUser").classList.remove("hidden");
-  }else document.getElementById("menuUser").classList.add("hidden")
+  }else{
+    document.getElementById("menuUser").classList.add("hidden");
+  }
 }
