@@ -9,4 +9,4 @@
 * PHP
   * admin
 * SQL
-  * problema con add/modify descrizione
+  * problema con add/modify reindirizzamento

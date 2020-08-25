@@ -11,6 +11,16 @@ try {
 	if(!$connessione->openConnection()) throw new Exception("No connection");
 	//query al db
 	
+	if(isset($_POST['button'])){
+		if(isset($_SESSION['userType'])){
+			$_SESSION=array();
+			session_destroy();
+		}
+		$_SESSION['admin']=$_POST['user'];
+		$_SESSION['pin']=$_POST['pin'];
+	}
+
+
 	//importazione txt
 	$final = file_get_contents("../txt/AdminPanel_Login.html");
 	$header=file_get_contents("../txt/Header.html");

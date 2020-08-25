@@ -203,8 +203,8 @@ function controlNuploadAddTreno($connessione){
 			$_POST['tipo']="Trasporto Locale";
 		break;
 	}
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
+	if (!preg_match('/^[a-z0-9 ]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9 ()&]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
 	if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
 	if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
 	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
@@ -227,7 +227,7 @@ function controlNuploadAddTreno($connessione){
 			$errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
 		}
 		if (!$errors) {
-			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/".$target_file)){
+			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/Treni".$target_file)){
 				addTreno($_POST,"Treni/".$target_file,$connessione);
 			} else {
 				$errors.="<li>Errore di uploading del file.</li>";
@@ -275,12 +275,14 @@ function controlNmodifyTreno($connessione){
 			$_POST['tipo']="Trasporto Locale";
 		break;
 	}
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
+
+	if (!preg_match('/^[a-z0-9 ]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9 ()&]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
 	if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
 	if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
 	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
 	if(!$errori)	updateTreno($connessione);
+
 	return $errors;
 }
 
@@ -317,7 +319,7 @@ function functionMenuUser($final){
 	if(isset($_SESSION['id'])){
 		$xd="";
 		$var='
-		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
+		<a href="#"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/></a>';
 		$id=$_SESSION['id'];
 	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
 	$final=str_replace("%%user",$id,$final);
