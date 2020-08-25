@@ -18,6 +18,9 @@ class DBAccess{
 	public function closeConnection() {
 		if ($this->connection) mysqli_close($this->connection);
     }
+	public function getConnection() {
+		return $this->connection;
+	}
 	
 	public function getQuery($query){
 		try{
@@ -38,8 +41,10 @@ class DBAccess{
 	public function exeQuery($query){
 		try{
 			$result=$this->connection->query($query);
-			if(!$result) throw new Exception("errore execute query");
-		}catch(Exception $e){echo $e;}		
+			if(!$result) throw new Exception("errore execute query in the db");
+		}catch(Exception $e){
+			echo $e;
+		}		
 	}	
 }
 

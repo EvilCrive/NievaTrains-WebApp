@@ -55,7 +55,7 @@ try {
 	$final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
 	$final=str_replace("##Commenti##",$commenti,$final);
 	$final=str_replace("##NumeroT##",$id,$final);
-	$final=functionMenuUser($_SESSION,$final);
+	$final=functionMenuUser($final);
 	echo $final;
 	
 }catch(Exception $eccezione){

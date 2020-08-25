@@ -165,56 +165,53 @@ function controlloUploadImmagineUtenti($files,$errors){
 	}
 	return $target_file;
 }
-function controlNuploadAddTreno($post,$files,$connessione){
+function controlNuploadAddTreno($files,$connessione){
 	$errors="";
-	$categorie=$post['categorie'];
+	$categorie=$_POST['categorie'];
 	switch($categorie){
 		case "1":
-			$post['categorie']="Elettrico";
+			$_POST['categorie']="Elettrico";
 		break;
 		case "2":
-			$post['categorie']="Vapore";
+			$_POST['categorie']="Vapore";
 		break;
 		case "3":
-			$post['categorie']="Maglev EDS";
+			$_POST['categorie']="Maglev EDS";
 		break;
 		case "4":
-			$post['categorie']="Maglev EMS";
+			$_POST['categorie']="Maglev EMS";
 		break;
 		case "5":
-			$post['categorie']="Diesel";
-		break;
-		case "6":
-			$post['categorie']="Turbina a Gas";
+			$_POST['categorie']="Diesel";
 		break;
 	}
-	$tipo=$post['tipo'];//1 a 6
+	$tipo=$_POST['tipo'];//1 a 6
 	switch($tipo){
 		case "1":
-			$post['tipo']="Alta velocità";
+			$_POST['tipo']="Alta velocità";
 		break;
 		case "2":
-			$post['tipo']="Lunga Percorrenza";
+			$_POST['tipo']="Lunga Percorrenza";
 		break;
 		case "3":
-			$post['tipo']="Prototipo";
+			$_POST['tipo']="Prototipo";
 		break;
 		case "4":
-			$post['tipo']="Intercity";
+			$_POST['tipo']="Intercity";
 		break;
 		case "5":
-			$post['tipo']="Trasporto Locale";
+			$_POST['tipo']="Trasporto Locale";
 		break;
 	}
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['nome']))        $errors.="<li>Nome non valido</li>";
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['costruttore']))        $errors.="<li>Costruttore non valido</li>";
-	if (!preg_match('/^[0-9]{1,3}$/i',$post['velocita']))        $errors.="<li>Velocità non valida</li>";
-	if (!preg_match('/^[0-9]{4}$/i',$post['anni']))        $errors.="<li>Anno non valido</li>";
-	if (!preg_match('/.{10,}/i',$post['descrizione']))        $errors.="<li>Descrizione non valida</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
+	if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
+	if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
+	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
 	if($files['myfileupload']['error']!==4){
 		$tipoFile=$files['myfileupload']['type'];
 		$tipoFile=str_replace("image/","",$tipoFile);
-		$target_file = $post['nome'].".".$tipoFile;
+		$target_file = $_POST['nome'].".".$tipoFile;
 		//controlli 
 		  $check = getimagesize($files["myfileupload"]["tmp_name"]);
 		  if($check == false) {
@@ -231,7 +228,7 @@ function controlNuploadAddTreno($post,$files,$connessione){
 		}
 		if (!$errors) {
 			if (move_uploaded_file($files['myfileupload']['tmp_name'], "../uploads/".$target_file)){
-				addTreno($post,"Treni/".$target_file,$connessione);
+				addTreno($_POST,"Treni/".$target_file,$connessione);
 			} else {
 				$errors.="<li>Errore di uploading del file.</li>";
 			}
@@ -240,63 +237,60 @@ function controlNuploadAddTreno($post,$files,$connessione){
 	return $errors;
 }
 
-function controlNmodifyTreno($post,$connessione){
+function controlNmodifyTreno($connessione){
 	$errors="";
-	$categorie=$post['categorie'];
+	$categorie=$_POST['categorie'];
 	switch($categorie){
 		case "1":
-			$post['categorie']="Elettrico";
+			$_POST['categorie']="Elettrico";
 		break;
 		case "2":
-			$post['categorie']="Vapore";
+			$_POST['categorie']="Vapore";
 		break;
 		case "3":
-			$post['categorie']="Maglev EDS";
+			$_POST['categorie']="Maglev EDS";
 		break;
 		case "4":
-			$post['categorie']="Maglev EMS";
+			$_POST['categorie']="Maglev EMS";
 		break;
 		case "5":
-			$post['categorie']="Diesel";
-		break;
-		case "6":
-			$post['categorie']="Turbina a Gas";
+			$_POST['categorie']="Diesel";
 		break;
 	}
-	$tipo=$post['tipo'];//1 a 6
+	$tipo=$_POST['tipo'];
 	switch($tipo){
 		case "1":
-			$post['tipo']="Alta velocità";
+			$_POST['tipo']="Alta velocità";
 		break;
 		case "2":
-			$post['tipo']="Lunga Percorrenza";
+			$_POST['tipo']="Lunga Percorrenza";
 		break;
 		case "3":
-			$post['tipo']="Prototipo";
+			$_POST['tipo']="Prototipo";
 		break;
 		case "4":
-			$post['tipo']="Intercity";
+			$_POST['tipo']="Intercity";
 		break;
 		case "5":
-			$post['tipo']="Trasporto Locale";
+			$_POST['tipo']="Trasporto Locale";
 		break;
 	}
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['nome']))        $errors.="<li>Nome non valido</li>";
-	if (!preg_match('/^[a-z0-9]{3,12}$/i',$post['costruttore']))        $errors.="<li>Costruttore non valido</li>";
-	if (!preg_match('/^[0-9]{1,3}$/i',$post['velocita']))        $errors.="<li>Velocità non valida</li>";
-	if (!preg_match('/^[0-9]{4}$/i',$post['anni']))        $errors.="<li>Anno non valido</li>";
-	if (!preg_match('/.{10,}/i',$post['descrizione']))        $errors.="<li>Descrizione non valida</li>";
-	if(!$errori)	updateTreno($post,$connessione);
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['nome']))        $errors.="<li>Nome non valido</li>";
+	if (!preg_match('/^[a-z0-9]{3,12}$/i',$_POST['costruttore']))        $errors.="<li>Costruttore non valido</li>";
+	if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
+	if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
+	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
+	if(!$errori)	updateTreno($connessione);
 	return $errors;
 }
 
-function controlliSignup($post,$errors,$connessione){
-	$email=$post['email'];
-	$nome=$post['nome'];
-	$cognome=$post['cognome'];
-	$username=$post['username'];
-	$password=$post['password'];
-	$conferma_password=$post['conferma_password'];
+function controlliSignup($errors,$connessione){
+	$email=$_POST['email'];
+	$nome=$_POST['nome'];
+	$cognome=$_POST['cognome'];
+	$username=$_POST['username'];
+	$password=$_POST['password'];
+	$conferma_password=$_POST['conferma_password'];
 
 	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL))     	$errors.="<li>Email non valida</li>";
@@ -308,23 +302,23 @@ function controlliSignup($post,$errors,$connessione){
 	if(checkUtente($email,$username, $connessione))			$errors.="Questo utente e' gia' registrato.";
 	return $errors;
 }
-function controlliLogin($post,$errors,$connessione){
-	$email=$post['email'];
-	$password=$post['password'];
+function controlliLogin($errors,$connessione){
+	$email=$_POST['email'];
+	$password=$_POST['password'];
 	$email=filter_var($email,FILTER_SANITIZE_EMAIL);
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL) || (!preg_match('/^(\w)+@(\w{3,10})+.(\w{2,3})$/',$email)))     $errors.="<li>Email non valida</li>";
 	if (!preg_match('/^[a-z0-9]{6,12}$/i',$password))   $errors.="<li>Password non valida</li>";
 	if(!checkLoginUtente($email,$password, $connessione))	$errors.="Email o Password sbagliati.";
 	return $errors;
 }
-function functionMenuUser($session,$final){
+function functionMenuUser($final){
 	$id="";
 	$xd="hidden";
-	if(isset($session['id'])){
+	if(isset($_SESSION['id'])){
 		$xd="";
 		$var='
 		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
-		$id=$session['id'];
+		$id=$_SESSION['id'];
 	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
 	$final=str_replace("%%user",$id,$final);
 	$final=str_replace("%%u%%",$xd,$final);

@@ -15,7 +15,7 @@ try {
 	if(isset($_SESSION['userType']) && ($_SESSION['userType']==1)){
 		if(isset($_POST['button'])){
 			$array=$_FILES;
-			$errors=controlNuploadAddTreno($_POST,$array,$connessione);	
+			$errors=controlNuploadAddTreno($array,$connessione);	
 		}
 		//importazione txt
 		$final = file_get_contents("../txt/CreaTreno.html");
@@ -26,7 +26,7 @@ try {
 		$final=str_replace("##footer##",$footer,$final);
 		$final=str_replace("##Errori##",$errors,$final);
 		if($errors)	header("refresh:0 url=CreaTreno.php#errori_newtreno");
-		$final=functionMenuUser($_SESSION,$final);
+		$final=functionMenuUser($final);
 		echo $final;
 	}else	header("refresh:0 url=../PHP/Index.php");	
 }catch(Exception $eccezione){
