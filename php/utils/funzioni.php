@@ -392,7 +392,10 @@ function stampaListaUtenti4AP($results,$op){
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) {
-		if($op=="ELIMINA" || $results[$i]["Is_User_Type"])	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP='.$_GET['AdminOP'].'&utente='.$results[$i]["Id_Utente"].'" class="button">X</a></p>';
+		if($op=="ELIMINA" || $results[$i]["Is_User_Type"])	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP='.$_GET['AdminOP'].'&utente='.$results[$i]["Id_Utente"].'" class="button">';
+		if($op=="PROMUOVI")	$var.='+</a></p>';
+		if($op=="ELIMINA")	$var.='X</a></p>';
+		if($op=="DEMUOVI")	$var.='-</a></p>';
 	}
 	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
@@ -425,11 +428,11 @@ function stampaDeleteTreno($id,$connessione){
 function stampaListaCommenti4AP($results){
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
-	$var='<div>';
+	$var='<div><ul>';
 	for($i=0; $i<$nrisultati; $i++) {
-		$var.= '<p>'.stampaCommento($results[$i]).'<a href="../PHP/AdminPanel.php?AdminOP=4&commento='.$results[$i]["Id_Commento"].'" class="button">X</a></p>';
+		$var.= stampaCommento($results[$i]).'<a href="../PHP/AdminPanel.php?AdminOP=4&commento='.$results[$i]["Id_Commento"].'" class="button">X</a>';
 	}
-	$var.='</div><a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	$var.='</ul></div><a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function getInfoCommento($id,$connessione){
