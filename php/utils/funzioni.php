@@ -366,7 +366,7 @@ function functionMenuUser($final){
 	if(isset($_SESSION['id'])){
 		$xd="";
 		$var='
-		<a href="#"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/></a>';
+		<img id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
 		$id=$_SESSION['id'];
 	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
 	$final=str_replace("%%user",$id,$final);

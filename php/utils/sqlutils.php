@@ -152,7 +152,7 @@ function getAllTreni($connessione){
 	return $connessione->getQuery("SELECT * from treni");
 }
 function getAllCommenti($connessione){
-	return $connessione->getQuery("SELECT C.Id_Uten, C.Id_Commento, U.Username, C.Data, C.Testo from commenti AS C JOIN utenti AS U WHERE U.Id_Utente=C.Id_Utente");
+	return $connessione->getQuery("SELECT C.Id_Utente, C.Id_Commento, U.Username, C.Data, C.Testo from commenti AS C JOIN utenti AS U WHERE U.Id_Utente=C.Id_Utente");
 }
 function deleteCommento($id,$connessione){
 	return $connessione->exeQuery("DELETE FROM commenti WHERE Id_Commento='$id'");
