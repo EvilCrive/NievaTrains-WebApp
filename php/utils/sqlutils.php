@@ -28,7 +28,7 @@ function boolLiked($iduser,$idtreno,$connessione){
 	return $connessione->getQuery("SELECT * from preferiti WHERE Id_Utente='$iduser' AND Id_Treno='$idtreno'");
 }
 
-//check e add utente
+//check e add e remove utente
 
 function checkUtente($mail,$user, $connessione){
 	return $connessione->getQuery("SELECT Username,Mail from utenti WHERE Mail=$mail OR Username=$user");
@@ -121,6 +121,9 @@ function addCommento($user,$treno,$testo,$connessione){
 function removeTreno($utente,$treno,$connessione){
 	return $connessione->exeQuery("DELETE FROM treni WHERE Id_Treno='$treno' AND Id_Autore='$utente'");
 }
+function deleteTreno($treno,$connessione){
+	return $connessione->exeQuery("DELETE FROM treni WHERE Id_Treno='$treno'");
+}
 function addTreno($file,$connessione){
 	$id=$_SESSION['id'];$nome=$_POST['nome'];$categorie=$_POST['categorie'];$costruttore=$_POST['costruttore'];$tipo=$_POST['tipo'];$velocita=$_POST['velocita'];$anni=$_POST['anni'];$descrizione=mysqli_real_escape_string($connessione->getConnection(),$_POST['descrizione']); 
 	return $connessione->exeQuery("INSERT INTO treni (Id_Autore,Categoria,Nome,Costruttore,Tipo,Velocità_Max,Anno_Costruzione, Descrizione, Immagine) VALUES('$id','$categorie','$nome','$costruttore','$tipo','$velocita','$anni','$descrizione','$file')");
@@ -134,9 +137,26 @@ function updateTreno($connessione){
 //adminpanel
 function correctAdmin($connessione){
 	return	$connessione->getQuery("SELECT * FROM admins WHERE User='".$_POST['user']."' AND Pin='".$_POST['pin']."'");
-	
 }
-
+function getAllUtenti($connessione){
+	return $connessione->getQuery("SELECT Nome,Cognome,Username,Id_Utente,Is_User_Type FROM utenti");
+}
+function deleteUtente($id,$connessione){
+	return $connessione->exeQuery("DELETE FROM utenti WHERE Id_Utente='$id'");
+}
+function promuoviUtente($id,$connessione){
+	$query=$connessione->exeQuery("UPDATE utenti SET Is_User_Type=1 WHERE Id_Utente='$id'");
+	return $query;
+}
+function getAllTreni($connessione){
+	return $connessione->getQuery("SELECT * from treni");
+}
+function getAllCommenti($connessione){
+	return $connessione->getQuery("SELECT C.Id_Uten, C.Id_Commento, U.Username, C.Data, C.Testo from commenti AS C JOIN utenti AS U WHERE U.Id_Utente=C.Id_Utente");
+}
+function deleteCommento($id,$connessione){
+	return $connessione->exeQuery("DELETE FROM commenti WHERE Id_Commento='$id'");
+}
 ?>
 
 

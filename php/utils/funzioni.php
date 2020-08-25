@@ -85,12 +85,26 @@ function stampaCommenti($queryRes) {
 	}
 	return $var;
 }
+function stampaCommento($queryRes) {
+	$var="";
+	$var.='<li class="comment">';
+	$var.='		<div class="info">';
+	$var.='			<div class="commentInfo">';
+	$var.='				<a href="../php/Utente.php?Id_Utente='.$queryRes["Id_Utente"].'">'.$queryRes["Username"].'</a>';
+	$var.='				<span class="data">'.$queryRes["Data"].'</span>';
+	$var.='			</div>';
+	$var.='		</div>';
+	$var.='		<p>'.$queryRes["Testo"].'</p>';
+	$var.='</li>';
+	return $var;
+}
 
 
 //STAMPE TRENI E UTENTI
 
 
 function stampaSchedaT($queryRes) {
+	$var="";
 	$var='<li>Nome: '.$queryRes[0]["Nome"].'</li>'."\n";
 	$var.='<li>Marca: '.$queryRes[0]["Costruttore"].'</li>'."\n";
 	$var.='<li>Categoria: '.$queryRes[0]["Categoria"].'</li>'."\n";
@@ -371,7 +385,60 @@ function checkAdmin($connessione,$errors){
 	if(!preg_match('/^\w{3,}$/',$pin))		$errors.="<li>Errore USER:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>";
 	if(!correctAdmin($connessione))			$errors.="<li>Errore Login: <ol><li>User o PIN sbagliati.</li></ol></li>";
 	return $errors;
-
+}
+function stampaListaUtenti4AP($results,$op){
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var='';
+	for($i=0; $i<$nrisultati; $i++) {
+		if($op=="ELIMINA" || $results[$i]["Is_User_Type"])	$var.= '<p>'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP='.$_GET['AdminOP'].'&utente='.$results[$i]["Id_Utente"].'" class="button">X</a></p>';
+	}
+	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	return $var;
+}
+function stampaDeleteUtente($id,$connessione){
+	$results=getInfoUtente($id,$connessione);
+	$var="<p>Vuoi eliminare il seguente Utente:</p><p>".$results[0]['Nome']." ".$results[0]['Cognome']." (@".$results[0]['Username'].')</p><a href="AdminPanel.php?AdminOP=2&utente='.$id.'&delete" class="button">Conferma</a>';
+	return $var;
+}
+function stampaPromuoviUtente($id,$connessione){
+	$results=getInfoUtente($id,$connessione);
+	$var="<p>Vuoi promuovere a esperto il seguente Utente:</p><p>".$results[0]['Nome']." ".$results[0]['Cognome']." (@".$results[0]['Username'].')</p><a href="AdminPanel.php?AdminOP=1&utente='.$id.'&promuovi" class="button">Conferma</a>';
+	return $var;
+}
+function stampaListaTreni4AP($results){
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var='';
+	for($i=0; $i<$nrisultati; $i++) {
+		$var.= '<p>'.$results[$i]["Nome"].'<a href="../PHP/AdminPanel.php?AdminOP=3&treno='.$results[$i]["Id_Treno"].'" class="button">X</a></p>';
+	}
+	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	return $var;
+}
+function stampaDeleteTreno($id,$connessione){
+	$results=getInfoTreno($id,$connessione);
+	$var="<p>Vuoi eliminare il seguente Treno:</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=3&treno='.$results[0]["Id_Treno"].'&delete" class="button">Conferma</a>';
+	return $var;
+}
+function stampaListaCommenti4AP($results){
+	if($results)	$nrisultati=sizeof($results);
+	else	$nrisultati=0;
+	$var='';
+	for($i=0; $i<$nrisultati; $i++) {
+		$var.= '<p>'.stampaCommento($results[$i]).'</p><a href="../PHP/AdminPanel.php?AdminOP=4&commento='.$results[$i]["Id_Commento"].'" class="button">X</a>';
+	}
+	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	return $var;
+}
+function getInfoCommento($id,$connessione){
+	return $connessione->getQuery("SELECT * FROM commenti WHERE Id_Commento='$id'");
+}
+function stampaDeleteCommento($id,$connessione){
+	$results=getInfoCommento($id,$connessione);
+	$var="<p>Vuoi eliminare il seguente Commento:</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=4&commento='.$results[0]["Id_Commento"].'&delete" class="button">Conferma</a>';
+	return $var;
+	
 }
 
 ?>
