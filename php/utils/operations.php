@@ -46,17 +46,6 @@ try{
             else    addCommento($id,$treno,$testoCommento,$connessione);
             header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
         }
-
-        //user page
-        if(isset($_POST['modificaBio'])){
-            $id=$_SESSION['id'];
-            if(getUserBio($id,$connessione)!==$_POST['bioTesto']){
-                $_POST['bioTesto']=strip_tags($_POST['bioTesto']);
-                updateBio($id,$_POST['bioTesto'],$connessione);
-            }
-            header("refresh:0 url=../Utente.php?Id_Utente=$id");
-        }
-    }
         if(isset($_POST['logout']) || isset($_GET['logout'])){
             $_SESSION['fail']="";
             $_SESSION['id'] = "";
@@ -69,7 +58,17 @@ try{
             $_SESSION=array();
             session_destroy();
             header("refresh:0; url=../../PHP/Index.php");
-        }else   header("refresh:0; url=../LogIn.php");
+        }
+        //user page
+        if(isset($_POST['modificaBio'])){
+            $id=$_SESSION['id'];
+            if(getUserBio($id,$connessione)!==$_POST['bioTesto']){
+                $_POST['bioTesto']=strip_tags($_POST['bioTesto']);
+                updateBio($id,$_POST['bioTesto'],$connessione);
+            }
+            header("refresh:0 url=../Utente.php?Id_Utente=$id");
+        }
+    }
 }catch(Exception $exc){
     echo $exc;
 }
