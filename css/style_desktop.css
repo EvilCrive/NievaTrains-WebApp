@@ -127,12 +127,12 @@ select{
   width: 19rem;
   background: #FFF;
   border-radius: 2.5rem;
-  height: 2.2rem;
   padding: 0.6rem;
 	display: inline-block;
 }
 .search-txt{
-  border: none;
+	border: none;
+margin: 2px;
   background: none;
   outline: none;
   float:left;
