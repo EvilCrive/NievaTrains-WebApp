@@ -1,5 +1,10 @@
 <?php
 require_once "connection.php";
+
+
+//RICERCA
+
+
 function stampaTrainBox($queryRes) {
 	$nrisultati=sizeof($queryRes);
 	$var='<div class="row">';
@@ -50,6 +55,11 @@ function stampaUtentiBox($queryRes) {
 	
 	return $var;
 }
+
+
+//COMMENTI
+
+
 function stampaCommenti($queryRes) {
 	$nrisultati=sizeof($queryRes);
 	$var="";
@@ -75,6 +85,11 @@ function stampaCommenti($queryRes) {
 	}
 	return $var;
 }
+
+
+//STAMPE TRENI E UTENTI
+
+
 function stampaSchedaT($queryRes) {
 	$var='<li>Nome: '.$queryRes[0]["Nome"].'</li>'."\n";
 	$var.='<li>Marca: '.$queryRes[0]["Costruttore"].'</li>'."\n";
@@ -121,7 +136,6 @@ function stampaImgT($queryRes) {
 function stampaCategoriaT($query){	
 	return $query[0]["Categoria"];	
 }		
-
 function stampaIdAutoreT($query){
 	return $query[0]["Id_Autore"];
 }
@@ -134,37 +148,11 @@ function stampaVelocitaT($query){
 function stampaAnnoT($query){
 	return $query[0]["Anno_Costruzione"];
 }
-function controlloUploadImmagineUtenti($errors){
-	$target_file="";
-	if($_FILES['myfile']['error']!==4){
-		$tipoFile=$_FILES['myfile']['type'];
-		$tipoFile=str_replace("image/","",$tipoFile);
-		$target_file=$_FILES['user'].".".$tipoFile;
-		//controlli
-		$check = getimagesize($_FILES["myfile"]["tmp_name"]);
-		if($check == false) {
-		  $errors.="<li>File non e' un'immagine.</li>";
-		}
-		if (file_exists($target_file)) {
-		  $errors.="<li>File esiste già.</li>";
-		}
-		if ($_FILES["myfile"]["size"] > 500000) {
-		  $errors.="<li>File troppo grande (in MB).</li>";
-		}  
-		if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
-		  $errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
-		}
-		if(!$errors){
-			if (!move_uploaded_file($_FILES['myfile']['tmp_name'], "../../uploads/Utenti/".$target_file)){
-				$errors.="<li>Errore di uploading del file immagine.</li>";
-				
-			}
-		}
-	}else{
-		$errors.="<li>File assente</li>";
-	}
-	return $target_file;
-}
+
+
+//ADD-MODIFY TRENO
+
+
 function controlNuploadAddTreno($connessione){
 	$errors="";
 	$categorie=$_POST['categorie'];
@@ -239,7 +227,6 @@ function controlNuploadAddTreno($connessione){
 	}else	$errors.="<li>Aggiungi un file come immagine del treno.</li>";
 	return $errors;
 }
-
 function controlNmodifyTreno($connessione){
 	$errors="";
 	$categorie=$_POST['categorie'];
@@ -292,6 +279,41 @@ function controlNmodifyTreno($connessione){
 	return $errors;
 }
 
+
+//CONTROLLI SIGNUP/LOGIN
+
+
+function controlloUploadImmagineUtenti($errors){
+	$target_file="";
+	if($_FILES['myfile']['error']!==4){
+		$tipoFile=$_FILES['myfile']['type'];
+		$tipoFile=str_replace("image/","",$tipoFile);
+		$target_file=$_FILES['user'].".".$tipoFile;
+		//controlli
+		$check = getimagesize($_FILES["myfile"]["tmp_name"]);
+		if($check == false) {
+		  $errors.="<li>File non e' un'immagine.</li>";
+		}
+		if (file_exists($target_file)) {
+		  $errors.="<li>File esiste già.</li>";
+		}
+		if ($_FILES["myfile"]["size"] > 500000) {
+		  $errors.="<li>File troppo grande (in MB).</li>";
+		}  
+		if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
+		  $errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
+		}
+		if(!$errors){
+			if (!move_uploaded_file($_FILES['myfile']['tmp_name'], "../../uploads/Utenti/".$target_file)){
+				$errors.="<li>Errore di uploading del file immagine.</li>";
+				
+			}
+		}
+	}else{
+		$errors.="<li>File assente</li>";
+	}
+	return $target_file;
+}
 function controlliSignup($errors,$connessione){
 	$email=$_POST['email'];
 	$nome=$_POST['nome'];
@@ -319,6 +341,11 @@ function controlliLogin($errors,$connessione){
 	if(!checkLoginUtente($email,$password, $connessione))	$errors.="Email o Password sbagliati.";
 	return $errors;
 }
+
+
+// menu utente (header)
+
+
 function functionMenuUser($final){
 	$id="";
 	$xd="hidden";
@@ -331,6 +358,20 @@ function functionMenuUser($final){
 	$final=str_replace("%%user",$id,$final);
 	$final=str_replace("%%u%%",$xd,$final);
 	return $final=str_replace("##user##",$var,$final);
+}
+
+
+//ADMIN PANEL
+
+
+function checkAdmin($connessione,$errors){
+	$user=$_POST['user'];
+	$pin=$_POST['pin'];
+	if(!preg_match('/^\w{3,}$/',$user))	$errors.="<li>Errore USER:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>";
+	if(!preg_match('/^\w{3,}$/',$pin))		$errors.="<li>Errore USER:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>";
+	if(!correctAdmin($connessione))			$errors.="<li>Errore Login: <ol><li>User o PIN sbagliati.</li></ol></li>";
+	return $errors;
+
 }
 
 ?>

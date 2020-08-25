@@ -28,6 +28,7 @@ try{
             if(isset($_SESSION['admin'])){
                 $_SESSION=array();
                 session_destroy();
+                session_start();
             }
             $_SESSION['id'] = getUserID($email, $connessione);
             $_SESSION['nome'] = $_POST['nome'];
@@ -50,7 +51,8 @@ try{
             //admin part
             if(isset($_SESSION['admin'])){
 				$_SESSION=array();
-				session_destroy();
+                session_destroy();
+                session_start();
             }
             //tutto ok; procediamo ad accedere nell'account NievaTrains corretto
             $_SESSION['id'] = getUserID($email, $connessione);

@@ -132,8 +132,10 @@ function updateTreno($connessione){
 
 
 //adminpanel
-
-
+function correctAdmin($connessione){
+	return	$connessione->getQuery("SELECT * FROM admins WHERE User='".$_POST['user']."' AND Pin='".$_POST['pin']."'");
+	
+}
 
 ?>
 

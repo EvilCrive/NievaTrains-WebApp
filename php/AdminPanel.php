@@ -13,16 +13,13 @@ try {
 	$var="";
 	$errors="";
 	$final="";
+	$bool=1;
 	if(isset($_POST['button'])){
+		$bool=0;
 		$final = file_get_contents("../txt/AdminPanel_Login.html");
-		if(isset($_SESSION['userType'])){
-			$_SESSION=array();
-			session_destroy();
-		}
+		if(isset($_SESSION['userType']))	$_SESSION=array();
 		$admin=$_POST['user'];
 		$pin=$_POST['pin'];
-		if(!preg_match('/^\w{3,}$/',$admin))	$errors.="<li>Errore USER:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>";
-		if(!preg_match('/^\w{3,}$/',$pin))		$errors.="<li>Errore USER:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>";
 		$errors=checkAdmin($connessione,$errors);
 		if(!$errors){
 			$_SESSION['admin']=$_POST['user'];
@@ -34,9 +31,25 @@ try {
 		}
 	}
 	if(isset($_SESSION['admin'])){
-		print_r($_SESSION);
-	}else{$final = file_get_contents("../txt/AdminPanel_Login.html");}
-
+		$bool=0;
+		if(isset($_GET['AdminOP'])){
+			if($_GET['AdminOP']==1){
+				//Elimina Commenti
+				$final = file_get_contents("../txt/AdminPanel_Operations.html");
+			}
+			else if($_GET['AdminOP']==2){
+				//Promuovi Utenti 
+			}
+			else if($_GET['AdminOP']==3){
+				//Elimina Treno
+			}
+			else if($_GET['AdminOP']==4){
+				//Elimina Utenti
+			}
+			else echo "4";
+		}else	$final = file_get_contents("../txt/AdminPanel_Pannello.html");
+	}
+	if($bool===1)	$final = file_get_contents("../txt/AdminPanel_Login.html");
 
 	//importazione txt
 	$header=file_get_contents("../txt/Header.html");
