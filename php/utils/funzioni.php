@@ -123,7 +123,7 @@ function stampaImmagine($queryImmagine) {
 function stampaInfoUtente($queryRes) {
 	if($queryRes[0]["Is_User_Type"]==1) $tmp='"blue"> Utente Esperto';
 	else $tmp='"red"> Utente Base';
-	$var="<p>".$queryRes[0]["Nome"].' '.$queryRes[0]["Cognome"].' (@'.$queryRes[0]["Username"].')</p><p class='.$tmp.'</p>';	
+	$var=$queryRes[0]["Nome"].' '.$queryRes[0]["Cognome"].' (@'.$queryRes[0]["Username"].')<span class='.$tmp.'</span>';	
 	return $var;
 }
 function stampaEmail($queryRes) {

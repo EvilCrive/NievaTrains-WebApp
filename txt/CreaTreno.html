@@ -27,8 +27,8 @@
 	<form action="CreaTreno.php" method="post" enctype="multipart/form-data" onsubmit="return ValidateCreazioneTreno()" id="addTrenoform">
 			<label for="nome">Nome</label>
 					<input class="inputbar" type="text" name="nome" placeholder="Nome" />
-					<label for="categorie">Categoria</label>
-					<select class="sceltaAggiunta" name="categorie">
+					<label for="categorieMod">Categoria</label>
+					<select id="categorieMod" class="sceltaAggiunta" name="categorie">
 						<option value="1">Elettrico</option>
 						<option value="2">Vapore</option>
 						<option value="3">Maglev EDS</option>
@@ -36,9 +36,9 @@
 						<option value="5">Diesel</option>
 					</select> 
 					<label for="costruttore">Costruttore</label>
-					<input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
+					<input id="costruttore" class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
 					<label for="tipo">Tipo</label>
-					<select class="sceltaAggiunta" name="tipo">
+					<select id="tipo" class="sceltaAggiunta" name="tipo">
 						<option value="1">Alta velocità</option>
 						<option value="2">Lunga Percorrenza</option>
 						<option value="3">Prototipo</option>
@@ -46,13 +46,13 @@
 						<option value="5">Trasporto Locale</option>
 					</select>
 					<label for="velocita">Velocità massima (km/h)</label>
-					<input class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
+					<input id="velocita" class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
 					<label for="anni">Anno di costruzione</label>
-				<input class="inputbar" type="text" name="anni" placeholder="Anno di costruzione"/>
+				<input id="anni" class="inputbar" type="text" name="anni" placeholder="Anno di costruzione"/>
 					<label for="descrizione">Descrizione</label>
-				<textarea class="sceltaDesc" rows="5" cols="300" name="descrizione"></textarea>
+				<textarea id="descrizione" class="sceltaDesc" rows="5" cols="300" name="descrizione"></textarea>
 					<label for="myfile">Scegli un immagine</label>
-					<input type="file" id="myfileupload" name="myfileupload">
+					<input type="file" id="myfile" name="myfileupload">
 				<input class="button" name="button" type="submit" value="Conferma" />	
 		</fieldset>
 	</form>

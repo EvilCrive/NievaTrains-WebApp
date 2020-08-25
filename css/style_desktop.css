@@ -93,7 +93,7 @@ header{
 	float: right;
 }
 .search-btn:hover{cursor:pointer;}
-#logo {
+.logo {
   max-width: 18rem;
 	max-height: 3.8rem;
 	cursor: pointer;
@@ -110,7 +110,7 @@ header{
   display: block;
   float:right;
 }
-#search{
+.search{
   float: right;
 }
 select{

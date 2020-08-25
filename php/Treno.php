@@ -29,7 +29,7 @@ try {
 	if(!$queryInfoTreno)	throw new Exception("Wrong ID");
 	if(!$queryNomeA)	throw new Exception("Errore nel DB, manca l'autore di una pagina");
 	if($queryCommenti) $commenti=stampaCommenti($queryCommenti);
-	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="like" class="hidden"></label><input class="button" name="like" type="submit" value="';
+	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="like" class="hidden"></label><input class="button" id="like" name="like" type="submit" value="';
 	if(isset($_SESSION['userType'])){
 		if(boolLiked($_SESSION['id'],$id,$connessione))	$buttonPreferiti.="Unlike";
 		else	$buttonPreferiti.="Like";
