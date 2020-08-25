@@ -25,7 +25,7 @@ try{
             $_POST['bio']="Io sono ".$_POST['nome']." ".$_POST['cognome']." (@".$_POST['username'].") ";
             insertUtente($_POST['nome'],$_POST['cognome'],$_POST['username'],$email,$_POST['username'],$_POST['bio'],"Utenti/".$target_file, $connessione);
             //admin part
-            if(isset($_SESSION['adminlogged'])){
+            if(isset($_SESSION['admin'])){
                 $_SESSION=array();
                 session_destroy();
             }
@@ -48,7 +48,7 @@ try{
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
         }else{
             //admin part
-            if(isset($_SESSION['adminlogged'])){
+            if(isset($_SESSION['admin'])){
 				$_SESSION=array();
 				session_destroy();
             }
