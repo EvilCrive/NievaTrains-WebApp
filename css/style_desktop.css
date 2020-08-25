@@ -6,7 +6,9 @@ Colori utilizzati:
 background-color: red;
 */
 
+
 /*All pages*/
+
 
 .utenteAction{
 	display: inline-block;
@@ -42,7 +44,6 @@ h1, h2, h3 {
 	padding-left: 0px;
 	text-align: center;
 }
-
 p {
 	padding: 10px;
 }
@@ -51,7 +52,6 @@ p {
   clear: both;
   display: table;
 }
-
 #container{
   min-height: 100%;
 }
@@ -59,7 +59,6 @@ p {
   overflow: auto;
   padding-bottom: 200px;
 }
-
 .button{
   border: 2px solid lightblue;
   text-align: center;
@@ -76,7 +75,10 @@ p {
   background-color: lightblue;
 }
 
+
 /*HEADER 1*/
+
+
 header{
 
   width: 100%;
@@ -120,7 +122,6 @@ header{
 #search{
   float: right;
 }
-
 select{
 	vertical-align: middle;
 	margin-right: 10px;
@@ -130,7 +131,6 @@ select{
   font-size: 15px;
   height: 40px;
 }
-
 .search-box{
 	vertical-align: middle;
   width: 300px;
@@ -140,7 +140,6 @@ select{
   padding: 10px;
 	display: inline-block;
 }
-
 .search-txt{
   border: none;
   background: none;
@@ -151,19 +150,21 @@ select{
   font-size: 18px;
   line-height: 10px;
 }
-
 /*#myLinks{
 	display: block;
 }*/
 #hrow2{
 	width: 100%;
 }
+
+
 /*HEADER 2*/
+
+
 #breadcrumb {
 	background-color: lightblue;
 	text-align: left;
 }
-
 #hrow2 {
 	padding-top:120px;
 	width: 100%;
@@ -208,7 +209,6 @@ select{
 .stayRight{
   float: right;
 }
-
 #menuUser{
   color: white;
   background-color:#294173;
@@ -222,7 +222,10 @@ select{
 #menuUser ul{
   list-style-type: none;
 }
+
+
 /*FOOTER*/
+
 
 /*footer{
   position: relative;
@@ -303,7 +306,9 @@ footer a{
   margin-left: 10px;
 }
 
+
 /* ABOUT */
+
 
 #aboutList {
 	/*text-align: left;*/
@@ -314,7 +319,9 @@ footer a{
 	padding: 2px;
 }
 
+
 /* CATEGORIA */
+
 
 #wrapper {
 	display: flex;
@@ -322,7 +329,6 @@ footer a{
 	justify-content: center;
 	margin: 1em 5em;
 }
-
 .cat {
 	min-width: 300px;
 	max-width: 400px;
@@ -336,7 +342,9 @@ footer a{
 	color: orange;
 }
 
+
 /* HOME */
+
 
 #wrapperHome {
   display: flex;
@@ -346,7 +354,6 @@ footer a{
   margin: 0 auto;
   margin-top: 30px;
 }
-
 .HomeBox {
   margin: 20px;
   padding: 30px;
@@ -356,12 +363,13 @@ footer a{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px 50px;
 }
-
 .HomeBox:hover{
   background-color: lightblue;
 }
 
+
 /* LOGIN E REGISTRAZIONE */
+
 
 .LoginSignupBox{
 	width: 100%;
@@ -371,7 +379,6 @@ footer a{
   border: 5px solid lightblue;
   border-radius: 15px 50px;
 }
-
 .LoginSignupBox input[type=text], .LoginSignupBox input[type=password], .LoginSignupBox input[type=email]{
   border:none;
   border-bottom: 2px solid #adadad;
@@ -384,9 +391,8 @@ footer a{
 .LoginSignupBox input[type=text]:focus, .LoginSignupBox input[type=password]:focus, .LoginSignupBox input[type=email]:focus{
     border-bottom: 2px solid lightblue;
 }
-
 #errori_login ul{
-  list-style-type: disc;
+  list-style-type: none;
   color: red;
   text-align: justify;
 }
@@ -396,7 +402,7 @@ footer a{
   text-align: justify;
 }
 #errori_registrazione ul{
-  list-style-type: disc;
+  list-style-type: none;
   color: red;
   text-align: justify;
 }
@@ -405,17 +411,10 @@ footer a{
   color: black;
   text-align: justify;
 }
-#errori_newtreno ul{
-  list-style-type: disc;
-  color: red;
-  text-align: justify;
-}
-.errori_newtreno ol{
-  list-style-type: none;
-  color: black;
-  text-align: justify;
-}
+
+
 /* ADMIN PANEL */
+
 
 .AdminPanelBox {
   display: inline-block;
@@ -424,12 +423,24 @@ footer a{
 	list-style: none;
 
 }
+#errori_adminlogin ul{
+  list-style-type: none;
+  color: red;
+  text-align: justify;
+}
+#errori_adminlogin ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
+
 
 /* RICERCA */
+
+
 #searchTop, #searchPage {
 width: 100%;
 }
-
 .long{
   width: 400px;
 }
@@ -462,7 +473,10 @@ h1#outputRicerca {
 	margin: 40px;
 }
 
+
 /* UTENTE */
+
+
 .topUtente {
 	display: flex;
 	flex-wrap: wrap;
@@ -472,7 +486,6 @@ h1#outputRicerca {
   padding: 20px;
   justify-content: center;
 }
-
 .leftCol {
 	padding: 20px;
   margin-top: 20px;
@@ -481,7 +494,6 @@ h1#outputRicerca {
   height:100%;
   min-width: 250px;
 }
-
 .rightCol {
 	  padding: 20px;
   margin-top: 20px;
@@ -504,11 +516,14 @@ h1#outputRicerca {
   padding: 20px;
   /* border: 2px solid black; */
 }
+
+
 /* TRENO */
+
+
 #trainHeader h1, #pref{
 	display: inline-block;
 }
-
 #schedaTecnica {
 	width: 70%;
 	margin: auto;
@@ -527,7 +542,10 @@ h1#outputRicerca {
 	border-bottom: 3px solid lightblue;
 }
 
+
 /****commenti da cambiare****/
+
+
 .comment-section{
     list-style: none;
     max-width: 1400px;
@@ -536,7 +554,6 @@ h1#outputRicerca {
     margin-top: 20px;
     padding: 10px;
 }
-
 .comment{
     display: flex;
     border-radius: 3px;
@@ -545,7 +562,6 @@ h1#outputRicerca {
     flex-wrap: wrap;
 	   color: #505050;
 }
-
 .data{
   font-size: 0.75em;
 }
@@ -566,7 +582,6 @@ h1#outputRicerca {
     white-space: nowrap;
     padding: 15px 0 3px 0;
 }
-
 .comment p{
     line-height: 1.5em;
     padding: 18px 22px;
@@ -611,8 +626,6 @@ h1#outputRicerca {
     padding: 10px 25px;
     margin-top: 18px;
 }
-
-
 fieldset{
 	border: 0;
   padding: 0;
@@ -631,9 +644,13 @@ fieldset{
 	display: block;
 }
 .commentInfo {
-	float: left;
+  float: left;
 }
+
+
 /* Ricerca Treni */
+
+
 .row{
   display: flex;
   flex-direction: row;
@@ -662,7 +679,6 @@ fieldset{
   padding: 20px 20px;
   text-align: left;
   font-size: 18px;
-
 }
 .card-body ul{
   list-style: none;
@@ -686,7 +702,6 @@ fieldset{
   transform: scale(1.02);
 
 }
-
 .img-left{
   height: 200px;
   width: 200px;
@@ -712,29 +727,28 @@ p {
 	line-height:1.5em;
 }
 
+
 /*404*/
+
+
 .parent-content{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 500px;
 }
-
 .text-content{
   text-align: center;
 }
-
 .text-content h1{
   font-size: 2.5em;
   margin: 20px;
 }
-
 .text-content h2{
   font-size: 1.7em;
   text-transform: uppercase;
   margin: 20px;
 }
-
 .text-content a{
   text-decoration: none;
   color: black;
@@ -747,17 +761,29 @@ p {
   text-transform: uppercase;
   transition: 0.4s;
 }
-
 .text-content a:hover{
   background: #294173;
   color: white;
 }
-
 #img-404{
   margin-top: 50px;
   width: 40%;
 }
+
+
 /*AGGIUNTA PAGINA*/
+
+
+#errori_newtreno ul{
+  list-style-type: none;
+  color: red;
+  text-align: justify;
+}
+#errori_newtreno ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
 .inputbar{
   width: 90%;
 }
@@ -778,7 +804,6 @@ p {
 .AggiuntaTreno input[type=text]:focus, .AggiuntaTreno input[type=password]:focus, .AggiuntaTreno input[type=email]:focus{
     border-bottom: 2px solid lightblue;
 }
-
 .AggiuntaTreno label {
 	text-align: left;
 }
@@ -845,7 +870,11 @@ input[type=file]{
 	width: 300px;
 	height: 300px;
 }
+
+
 /*header da mostrare*/
+
+
 #hrow3{
 	padding-top:83px;
 	width: 100%;

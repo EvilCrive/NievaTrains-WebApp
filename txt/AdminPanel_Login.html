@@ -10,8 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
 	<link media="screen" rel="stylesheet" type="text/css" href="../CSS/style_desktop.css" />
-		<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
+	<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
 	<script src="../js/menus.js" type="text/javascript"></script>
+	<script src="../js/validate.js" type="text/javascript"></script>
 </head>
 <body>
 ##header##
@@ -22,7 +23,7 @@
     <h1>Admin Panel</h1>
     <h2>Accedi:</h2>
 		<div class="LoginSignupBox">
-			<form id="adminForm" method="post" action="AdminPanel.php" onsubmit="ValidateAdminForm()">
+			<form id="adminForm" method="post" action="AdminPanel.php" onsubmit="return ValidateAdminForm()">
 				<fieldset>
 					<label for="user"><span xml:lang="en" lang="en">User</span></label>
 					<input  class="inputbar" type="text" name="user" placeholder="User" />
