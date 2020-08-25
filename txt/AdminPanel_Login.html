@@ -22,12 +22,16 @@
     <h1>Admin Panel</h1>
     <h2>Accedi:</h2>
 		<div class="LoginSignupBox">
-			<p><span xml:lang="en" lang="en">User</span></p>
-			<input  class="inputbar" type="text" name="user" placeholder="User" />
-			<p><span xml:lang="en" lang="en">Pin</span></p>
-			<input class="inputbar" type="password" name="pin" placeholder="Pin"/>
-			<div id="errori_login"></div>
-            <input class="button" name="button" type="submit" value="Accedi" />	
+			<form id="adminForm" method="post" action="AdminPanel.php" onsubmit="ValidateAdminForm()">
+				<fieldset>
+					<label for="user"><span xml:lang="en" lang="en">User</span></label>
+					<input  class="inputbar" type="text" name="user" placeholder="User" />
+					<label for="pin"><span xml:lang="en" lang="en">Pin</span></label>
+					<input class="inputbar" type="password" name="pin" placeholder="Pin"/>
+					<div id="errori_adminlogin"></div>
+					<input class="button" name="button" type="submit" value="Accedi" />	
+				</fieldset>
+			</form>
 		</div>
 </div>
 ##footer##
