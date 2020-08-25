@@ -13,10 +13,10 @@ try{
     if($_POST['button']=="Registrati"){
         //REGISTRAZIONE
         //controllo errori
-        $errors=controlliSignup($_POST,$errors,$connessione);
+        $errors=controlliSignup($errors,$connessione);
         //controllo errori immagine
-        $array=$_FILES;$array['user']=$_POST['username'];
-        $target_file=controlloUploadImmagineUtenti($array,$errors);
+        $_FILES['user']=$_POST['username'];
+        $target_file=controlloUploadImmagineUtenti($errors);
         if($errors){
             header("refresh:0; url=../Registrazione.php#errori_registrazione");
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
@@ -42,7 +42,7 @@ try{
     if($_POST['button']=="Accedi"){
         //LOGIN
         //controllo errori
-        $errors=controlliLogin($_POST,$errors,$connessione);
+        $errors=controlliLogin($errors,$connessione);
         if($errors){
             header("refresh:0; url=../LogIn.php#errori_login");
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";

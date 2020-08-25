@@ -20,7 +20,8 @@ try {
 	if(isset($_SESSION['userType']) && ($_SESSION['userType']==1) && $iduser==$_SESSION['id']){
             if(isset($_POST['button'])){
                 //modifica treno
-                updateTreno($_POST,$connessione);
+                controlNmodifyTreno($connessione);
+
             }
             //queryDB
             $nome=stampaNomeT($infotreno);
@@ -45,7 +46,7 @@ try {
             $final=str_replace("%%idtreno",$treno,$final);
             //check finale errori
             if($errors)	header("refresh:0 url=ModificaTreno.php#errori_newtreno");
-            $final=functionMenuUser($_SESSION,$final);
+            $final=functionMenuUser($final);
 		    echo $final;	
 	}else	die();//header("refresh:0 url=../PHP/Index.php");
 }catch(Exception $eccezione){

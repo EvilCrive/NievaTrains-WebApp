@@ -52,7 +52,7 @@ try {
 	$final=str_replace("##Bio##","BIO: ".stampaBio($queryInfoU),$final);
 	$final=str_replace("##TrainBox##",$trainbox,$final);
 	$final=str_replace("%%logout",$logout,$final);
-	$final=functionMenuUser($_SESSION,$final);
+	$final=functionMenuUser($final);
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni

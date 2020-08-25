@@ -28,7 +28,7 @@ try {
 	$final=str_replace("##CatRicerca##",$CatRicerca,$final);	
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);
-	$final=functionMenuUser($_SESSION,$final);
+	$final=functionMenuUser($final);
 	if($queryRisultato){
 		if($CatRicerca=="Utenti")	$final=str_replace("##TrainBox##",stampaUtentiBox($queryRisultato),$final);
 		else	$final=str_replace("##TrainBox##",stampaTrainBox($queryRisultato),$final);
