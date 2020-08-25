@@ -87,6 +87,11 @@ try {
 			}
 			else if($_GET['AdminOP']==5){
 				//Logout
+				$_SESSION['admin']="";
+				$_SESSION['pin']="";
+				$_SESSION=array();
+				session_destroy();
+				header("refresh:0; url=../../PHP/Index.php");
 				$adminop='';
 			}
 			else{

@@ -3,6 +3,7 @@
 * VALIDAZIONE
   * da ricontrollare keywords e descriptions
 * CSS
+<<<<<<< HEAD
   * stampa
 * JS
   * (menu utente)
@@ -12,3 +13,4 @@
   * problema con add/modify reindirizzamento
 * PHP
   * check generale
+
