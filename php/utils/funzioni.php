@@ -213,7 +213,8 @@ function controlNuploadAddTreno($connessione){
 	if($_FILES['myfileupload']['error']!==4){
 		$tipoFile=$_FILES['myfileupload']['type'];
 		$tipoFile=str_replace("image/","",$tipoFile);
-		$target_file = $_POST['nome'].".".$tipoFile;
+
+		$target_file = trim($_POST['nome']).".".$tipoFile;
 		//controlli 
 		  $check = getimagesize($_FILES["myfileupload"]["tmp_name"]);
 		  if($check == false) {
@@ -302,7 +303,7 @@ function controlloUploadImmagineUtenti($errors){
 	if($_FILES['myfile']['error']!==4){
 		$tipoFile=$_FILES['myfile']['type'];
 		$tipoFile=str_replace("image/","",$tipoFile);
-		$target_file=$_FILES['user'].".".$tipoFile;
+		$target_file=trim($_FILES['user']).".".$tipoFile;
 		//controlli
 		$check = getimagesize($_FILES["myfile"]["tmp_name"]);
 		if($check == false) {
