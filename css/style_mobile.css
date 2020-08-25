@@ -1,10 +1,9 @@
 @import url("style_desktop.css");
 #hrow1{
-	padding: 10px;
+	padding: 0.6rem;
 	justify-content: normal;
 }
 #logo {
-  /*margin-bottom: 10px;*/
   width: 70%;
   float: left;
 }
@@ -12,12 +11,8 @@
 width: 100%
 }
 #utenteTop{
-  /*margin-top: 20px;*/
   float: right;
 }
-/*#hrow2{
-  display:inline-block;
-}*/
 .stayLeft, .stayRight{
   width: inherit;
 }
@@ -33,7 +28,7 @@ width: 100%
 
 #menuUser{
   background-color: #232f46;
-  margin-top: 75px;
+  margin-top: 4.7rem;
 }
 
 @media screen and (max-width: 440px) {
@@ -41,7 +36,7 @@ width: 100%
     width: auto;
   }
   select{
-    margin: 20px;
+    margin: 1.2rem;
   }
 }
 
@@ -55,14 +50,14 @@ footer{
 #hamburger{
 	display: block;
 	float: right;
-	margin-top: 10px;
+	margin-top: 0.6rem;
 }
 /*header da mostrare*/
 #showDesktopSearch, #hrow2{
 	display: none
 }
 #hrow3{
-	padding-top:83px;
+	padding-top:5.19rem;
 	width: 100%;
 	height: auto;
 	background-color: #294173 /*#1a1e23*/;
@@ -70,11 +65,11 @@ footer{
 	align-items: center;
 }
 #sceltaCategorie {
-	margin: 10px;
+	margin: 0.6rem;
 }
 #breadcrumb{
 	display:none;
 }
 h1{
-	padding-top:100px;
+	padding-top:6.25rem;
 }
