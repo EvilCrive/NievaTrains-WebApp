@@ -23,9 +23,7 @@ try {
 	//generazione variabili di sostituzione
 	$modificaBio="";
 	$creaPagina="";
-	$email="";
 	$trainbox="";
-	$logout="";
 	if(!$queryInfoU)	throw new Exception("Wrong ID");
 	if((isset($_SESSION['userType'])) && ($id==$_SESSION['id'])){
 		$email="EMAIL: ".stampaEmail($queryInfoU);
@@ -35,7 +33,6 @@ try {
 			// button per creare nuovo treno
 			$creaPagina='<form action="CreaTreno.php" method="post" class="utenteAction"name="addTrenoform"><fieldset><label class="hidden" for="creaTreno"></label><input class="button" name="creaTreno" type="submit" value="Crea Treno"/></fieldset></form>';
 		}
-		$logout='<form action="utils/operations.php" method="post" class="utenteAction" name="logoutForm"><fieldset><label class="hidden" for="logout"></label><input class="button" name="logout" type="submit" value="Logout"/></fieldset></form>';
 	}	
 	if($queryRisultati) $trainbox=stampaTrainBox($queryRisultati);
 	else $trainbox="<p>Questo utente non ha pubblicato pagine in Nieva Trains</p>";
@@ -43,7 +40,6 @@ try {
 	//sostituzione variabili di sostituzione
 	$final=str_replace("##header##",$header,$final);
 	$final=str_replace("##footer##",$footer,$final);
-	$final=str_replace("##Email##",$email,$final);
 	$final=str_replace("%%modificabio",$modificaBio,$final);
 	$final=str_replace("%%creapagina",$creaPagina,$final);
 	$final=str_replace("##ImmagineUtente##",stampaImmagine($queryInfoU),$final);
@@ -51,7 +47,6 @@ try {
 	$final=str_replace("##InfoUtente##",stampaInfoUtente($queryInfoU),$final);
 	$final=str_replace("##Bio##","BIO: ".stampaBio($queryInfoU),$final);
 	$final=str_replace("##TrainBox##",$trainbox,$final);
-	$final=str_replace("%%logout",$logout,$final);
 	$final=functionMenuUser($final);
 	echo $final;
 }catch(Exception $eccezione){
