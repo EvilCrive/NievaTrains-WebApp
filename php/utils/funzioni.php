@@ -114,8 +114,8 @@ function stampaSchedaT($queryRes) {
 	return $var;
 }
 function stampaPreferiti($nPreferiti) {
-	if($nPreferiti==1) return "1 Like";
-	else return $nPreferiti." Likes";
+	if($nPreferiti==1) return "1 Like </p>";
+	else return $nPreferiti." Likes </p>";
 }
 function stampaImmagine($queryImmagine) {
 	return "../uploads/".$queryImmagine[0]["Immagine"];

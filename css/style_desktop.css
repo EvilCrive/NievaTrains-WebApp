@@ -499,6 +499,9 @@ h1#outputRicerca {
 
 
 #trainHeader h1, #pref{
+	display: block;
+}
+.trenoBts {
 	display: inline-block;
 }
 #schedaTecnica {
@@ -841,6 +844,7 @@ input[type=file]{
 	height: 25rem;
 }
 .trainImg{
+	margin-top: 3rem;
 	width: 50rem;
 	height: 28rem;
 }
