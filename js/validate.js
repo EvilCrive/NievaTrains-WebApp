@@ -127,11 +127,11 @@ function ValidateModificaTreno(){
     var array=document.forms["modifyTrenoform"];
     var errors="";
     //controllo nome
-    if(!(/^\w{4,50}$/.test(array["nome"].value))){
+    if(!(/^[a-zA-z0-9 ]{4,50}$/.test(array["nome"].value))){
         errors=errors.concat("<li>Nome non valido<ol><li>4-50 caratteri, alfanumerici</li></ol></li>");
     }
     //controllo costruttore
-    if(!(/^\w{4,50}$/.test(array["costruttore"].value))){
+    if(!(/^[a-zA-z0-9 ()&]{4,50}$/.test(array["costruttore"].value))){
         errors=errors.concat("<li>Costruttore non valido<ol><li>4-50 caratteri, alfanumerici</li></ol></li>");
     }
     //controllo velocita
