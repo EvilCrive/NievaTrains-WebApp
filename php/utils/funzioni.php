@@ -134,28 +134,28 @@ function stampaVelocitaT($query){
 function stampaAnnoT($query){
 	return $query[0]["Anno_Costruzione"];
 }
-function controlloUploadImmagineUtenti($files,$errors){
+function controlloUploadImmagineUtenti($errors){
 	$target_file="";
-	if($files['myfile']['error']!==4){
-		$tipoFile=$files['myfile']['type'];
+	if($_FILES['myfile']['error']!==4){
+		$tipoFile=$_FILES['myfile']['type'];
 		$tipoFile=str_replace("image/","",$tipoFile);
-		$target_file=$files['user'].".".$tipoFile;
+		$target_file=$_FILES['user'].".".$tipoFile;
 		//controlli
-		$check = getimagesize($files["myfile"]["tmp_name"]);
+		$check = getimagesize($_FILES["myfile"]["tmp_name"]);
 		if($check == false) {
 		  $errors.="<li>File non e' un'immagine.</li>";
 		}
 		if (file_exists($target_file)) {
 		  $errors.="<li>File esiste già.</li>";
 		}
-		if ($files["myfile"]["size"] > 500000) {
+		if ($_FILES["myfile"]["size"] > 500000) {
 		  $errors.="<li>File troppo grande (in MB).</li>";
 		}  
 		if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
 		  $errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
 		}
 		if(!$errors){
-			if (!move_uploaded_file($files['myfile']['tmp_name'], "../../uploads/Utenti/".$target_file)){
+			if (!move_uploaded_file($_FILES['myfile']['tmp_name'], "../../uploads/Utenti/".$target_file)){
 				$errors.="<li>Errore di uploading del file immagine.</li>";
 				
 			}
@@ -165,7 +165,7 @@ function controlloUploadImmagineUtenti($files,$errors){
 	}
 	return $target_file;
 }
-function controlNuploadAddTreno($files,$connessione){
+function controlNuploadAddTreno($connessione){
 	$errors="";
 	$categorie=$_POST['categorie'];
 	switch($categorie){
@@ -208,26 +208,26 @@ function controlNuploadAddTreno($files,$connessione){
 	if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
 	if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
 	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
-	if($files['myfileupload']['error']!==4){
-		$tipoFile=$files['myfileupload']['type'];
+	if($_FILES['myfileupload']['error']!==4){
+		$tipoFile=$_FILES['myfileupload']['type'];
 		$tipoFile=str_replace("image/","",$tipoFile);
 		$target_file = $_POST['nome'].".".$tipoFile;
 		//controlli 
-		  $check = getimagesize($files["myfileupload"]["tmp_name"]);
+		  $check = getimagesize($_FILES["myfileupload"]["tmp_name"]);
 		  if($check == false) {
 			$errors.="<li>File non e' un'immagine.</li>";
 		}
 		if (file_exists($target_file)) {
 			$errors.="<li>File esiste già.</li>";
 		}
-		if ($files["myfileupload"]["size"] > 500000) {
+		if ($_FILES["myfileupload"]["size"] > 500000) {
 			$errors.="<li>File troppo grande (in MB).</li>";
 		}  
 		if(($tipoFile != "jpg") && ($tipoFile != "jpeg") && ($tipoFile != "png")) {
 			$errors.="<li>Formato sbagliato, solo JPG JPEG PNG accettati.</li>";
 		}
 		if (!$errors) {
-			if (move_uploaded_file($files['myfileupload']['tmp_name'], "../uploads/".$target_file)){
+			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/".$target_file)){
 				addTreno($_POST,"Treni/".$target_file,$connessione);
 			} else {
 				$errors.="<li>Errore di uploading del file.</li>";

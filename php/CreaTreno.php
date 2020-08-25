@@ -15,7 +15,7 @@ try {
 	if(isset($_SESSION['userType']) && ($_SESSION['userType']==1)){
 		if(isset($_POST['button'])){
 			$array=$_FILES;
-			$errors=controlNuploadAddTreno($array,$connessione);	
+			$errors=controlNuploadAddTreno($connessione);	
 		}
 		//importazione txt
 		$final = file_get_contents("../txt/CreaTreno.html");
