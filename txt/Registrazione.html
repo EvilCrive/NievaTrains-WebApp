@@ -25,19 +25,19 @@
 			<form action="../PHP/utils/form.php" method="post" onsubmit="return ValidateSignup()" id="signupform" enctype="multipart/form-data">
 				<fieldset>
 					<label for="nome">Nome</label>
-					<input  class="inputbar" type="text" name="nome" placeholder="Nome" />
+					<input id="nome" class="inputbar" type="text" name="nome" placeholder="Nome" />
 					<label for="cognome">Cognome</label>
-            		<input class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
+            		<input id="cognome" class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
             		<label for="email">Email</label>
-            		<input  class="inputbar" type="email" name="email" placeholder="Email" />
+            		<input id="email" class="inputbar" type="email" name="email" placeholder="Email" />
             		<label for="username">Username</label>
-            		<input class="inputbar" type="text" name="username" placeholder="Username"/>
+            		<input id="username" class="inputbar" type="text" name="username" placeholder="Username"/>
 	    			<label for="password">Password</label>
-            		<input class="inputbar" type="password" name="password" placeholder="Password"/>
+            		<input id="password" class="inputbar" type="password" name="password" placeholder="Password"/>
             		<label for="conferma_password">Conferma Password</label>
-	    			<input class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
+	    			<input id="conferma_password" class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
 	    			<label for="myfile">Immagine</label>
-	    			<input type="file" id="myfile" name="myfile">
+	    			<input id="myfile" type="file" name="myfile">
             		<input class="button" name="button" type="submit" value="Registrati" />	
 				</fieldset>
 			</form>
