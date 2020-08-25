@@ -27,7 +27,7 @@ try{
             //modifica treno 
         }
         if(isset($_POST['eliminaTreno'])){
-            $idtreno=$_POST['idtreno'];
+            $idtreno=$_POST['idtreno'];//non identificato
             $iduser=$_SESSION['id'];
             removeTreno($iduser,$idtreno,$connessione);
         }

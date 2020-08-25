@@ -14,7 +14,6 @@ try {
 	$errors="";
 	if(isset($_SESSION['userType']) && ($_SESSION['userType']==1)){
 		if(isset($_POST['button'])){
-			$array=$_FILES;
 			$errors=controlNuploadAddTreno($connessione);	
 		}
 		//importazione txt

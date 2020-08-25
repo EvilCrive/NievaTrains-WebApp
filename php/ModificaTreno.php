@@ -20,7 +20,8 @@ try {
 	if(isset($_SESSION['userType']) && ($_SESSION['userType']==1) && $iduser==$_SESSION['id']){
             if(isset($_POST['button'])){
                 //modifica treno
-                updateTreno($_POST,$connessione);
+                controlNmodifyTreno($connessione);
+
             }
             //queryDB
             $nome=stampaNomeT($infotreno);

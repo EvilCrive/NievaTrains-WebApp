@@ -228,7 +228,10 @@ function controlNuploadAddTreno($connessione){
 		}
 		if (!$errors) {
 			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/Treni".$target_file)){
-				addTreno($_POST,"Treni/".$target_file,$connessione);
+				addTreno("Treni/".$target_file,$connessione);
+
+				header("refresh:0; url=../PHP/Utente.php?Id_Utente=".$_SESSION['id']);
+				//refresh treno add $_SESSION['id']
 			} else {
 				$errors.="<li>Errore di uploading del file.</li>";
 			}
@@ -281,8 +284,11 @@ function controlNmodifyTreno($connessione){
 	if (!preg_match('/^[0-9]{1,3}$/i',$_POST['velocita']))        $errors.="<li>Velocità non valida</li>";
 	if (!preg_match('/^[0-9]{4}$/i',$_POST['anni']))        $errors.="<li>Anno non valido</li>";
 	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
-	if(!$errori)	updateTreno($connessione);
-
+	if(!$errori){
+		updateTreno($connessione);
+		header("refresh:0; url=../PHP/Treno.php?Id_Treno=".$_POST['idtreno']);
+		//refresh modifica treno $_POST['idtreno']
+	}
 	return $errors;
 }
 
