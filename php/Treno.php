@@ -37,8 +37,7 @@ try {
 	$buttonPreferiti.='" /><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
 	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
 		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" class="trenoBts" method="post" name="removeForm"><fieldset>';
-		$buttonsOperazioni.='<label class="hidden" for="eliminaTreno"></label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></fieldset></form>';
-
+		$buttonsOperazioni.='<label class="hidden" for="eliminaTreno"></label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/><input hidden  name="idtreno" value="'.$id.'"></fieldset></form>';
 		$buttonsOperazioni.='<form action="../PHP/ModificaTreno.php" class="trenoBts" method="post" name="modifyForm"><fieldset><label class="hidden" for="modificaTreno"></label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
 	}
 
