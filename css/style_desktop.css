@@ -202,12 +202,13 @@ select{
   float: right;
 }
 #menuUser{
+	z-index:3;
   color: #FFF;
+  position: fixed;
+  border-left: 4px solid #ADD8E6;
   background-color:#294173;
   width: 10%;
-  float: right;
-  margin-right: 0;
-  margin-left: auto;
+	right:0;
   text-align: right;
   min-width: 7.8rem;
 }
