@@ -123,7 +123,7 @@ function stampaImmagine($queryImmagine) {
 function stampaInfoUtente($queryRes) {
 	if($queryRes[0]["Is_User_Type"]==1) $tmp='"blue"> Utente Esperto';
 	else $tmp='"red"> Utente Base';
-	$var=$queryRes[0]["Nome"].' '.$queryRes[0]["Cognome"].' (@'.$queryRes[0]["Username"].'),<span class='.$tmp.'</span>';	
+	$var="<p>".$queryRes[0]["Nome"].' '.$queryRes[0]["Cognome"].' (@'.$queryRes[0]["Username"].')</p><p class='.$tmp.'</p>';	
 	return $var;
 }
 function stampaEmail($queryRes) {
@@ -391,7 +391,7 @@ function stampaListaUtenti4AP($results,$op){
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) {
-		if($op=="ELIMINA" || $results[$i]["Is_User_Type"])	$var.= '<p>'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP='.$_GET['AdminOP'].'&utente='.$results[$i]["Id_Utente"].'" class="button">X</a></p>';
+		if($op=="ELIMINA" || $results[$i]["Is_User_Type"])	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP='.$_GET['AdminOP'].'&utente='.$results[$i]["Id_Utente"].'" class="button">X</a></p>';
 	}
 	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
@@ -411,24 +411,24 @@ function stampaListaTreni4AP($results){
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) {
-		$var.= '<p>'.$results[$i]["Nome"].'<a href="../PHP/AdminPanel.php?AdminOP=3&treno='.$results[$i]["Id_Treno"].'" class="button">X</a></p>';
+		$var.= '<p class="card-body">'.$results[$i]["Nome"].'<a href="../PHP/AdminPanel.php?AdminOP=3&treno='.$results[$i]["Id_Treno"].'" class="button">X</a></p>';
 	}
 	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function stampaDeleteTreno($id,$connessione){
 	$results=getInfoTreno($id,$connessione);
-	$var="<p>Vuoi eliminare il seguente Treno:</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=3&treno='.$results[0]["Id_Treno"].'&delete" class="button">Conferma</a>';
+	$var="<p>Vuoi eliminare il seguente Treno:</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=3&treno='.$results[0]["Id_Treno"].'&delete" class="button stayRight">Conferma</a>';
 	return $var;
 }
 function stampaListaCommenti4AP($results){
 	if($results)	$nrisultati=sizeof($results);
 	else	$nrisultati=0;
-	$var='';
+	$var='<div>';
 	for($i=0; $i<$nrisultati; $i++) {
-		$var.= '<p>'.stampaCommento($results[$i]).'</p><a href="../PHP/AdminPanel.php?AdminOP=4&commento='.$results[$i]["Id_Commento"].'" class="button">X</a>';
+		$var.= '<p>'.stampaCommento($results[$i]).'<a href="../PHP/AdminPanel.php?AdminOP=4&commento='.$results[$i]["Id_Commento"].'" class="button">X</a></p>';
 	}
-	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	$var.='</div><a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function getInfoCommento($id,$connessione){
