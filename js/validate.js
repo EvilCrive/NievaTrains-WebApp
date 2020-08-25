@@ -155,6 +155,13 @@ function ValidateModificaTreno(){
 function ValidateAdminForm(){
     var user=document.forms["adminForm"]["user"];
     var pin=document.forms["adminForm"]["pin"];
+    var errors="";
+    if(!(/^\w{3,}$/.test(user.value)))  errors=errors.concat("<li>Errore USER:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>");
+    if(!(/^\w{3,}$/.test(pin.value)))   errors=errors.concat("<li>Errore PIN:<ol><li>Minimo 3 caratteri, alfanumerici</li></ol></li>");
+    if(errors!==""){
+        document.getElementById("errori_adminlogin").innerHTML='<ul>'+errors+'</ul>';
+        return false;
+    }else   return true;
 }
 function validateEmail(mail){
     if (/^(\w)+@(\w{3,10})+.(\w{2,3})$/.test(mail)) return true;

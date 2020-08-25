@@ -1,4 +1,6 @@
+
 /*All pages*/
+
 
 .utenteAction{
 	display: inline-block;
@@ -34,7 +36,6 @@ h1, h2, h3 {
 	padding-left: 0;
 	text-align: center;
 }
-
 p {
 	padding: 0.7rem;
 }
@@ -43,7 +44,6 @@ p {
   clear: both;
   display: table;
 }
-
 #container{
   min-height: 100%;
 }
@@ -51,7 +51,6 @@ p {
   overflow: auto;
   padding-bottom: 12.5rem;
 }
-
 .button{
   border: 2px solid #ADD8E6;
   text-align: center;
@@ -67,7 +66,10 @@ p {
   background-color: #ADD8E6;
 }
 
+
 /*HEADER 1*/
+
+
 header{
 
   width: 100%;
@@ -111,7 +113,6 @@ header{
 #search{
   float: right;
 }
-
 select{
 	vertical-align: middle;
 	margin-right: 0.6rem;
@@ -130,7 +131,6 @@ select{
   padding: 0.6rem;
 	display: inline-block;
 }
-
 .search-txt{
   border: none;
   background: none;
@@ -141,16 +141,21 @@ select{
   font-size: 1rem;
   line-height: 0.6rem;
 }
-
 /*#myLinks{
 	display: block;
 }*/
+
+#hrow2{
+	width: 100%;
+}
+
 /*HEADER 2*/
+
+
 #breadcrumb {
 	background-color: #ADD8E6;
 	text-align: left;
 }
-
 #hrow2 {
 	padding-top:8rem;
 	width: 100%;
@@ -196,7 +201,6 @@ select{
 .stayRight{
   float: right;
 }
-
 #menuUser{
   color: #FFF;
   background-color:#294173;
@@ -210,6 +214,8 @@ select{
 #menuUser ul{
   list-style-type: none;
 }
+
+
 /*FOOTER*/
 
 footer{
@@ -283,7 +289,9 @@ footer a{
   margin-left: 0.6rem;
 }
 
+
 /* ABOUT */
+
 
 #aboutList {
 	/*text-align: left;*/
@@ -294,7 +302,9 @@ footer a{
 	padding: 2px;
 }
 
+
 /* CATEGORIA */
+
 
 #wrapper {
 	display: flex;
@@ -302,7 +312,6 @@ footer a{
 	justify-content: center;
 	margin: 1em 5em;
 }
-
 .cat {
 	min-width: 18.8rem;
 	max-width: 25rem;
@@ -316,7 +325,9 @@ footer a{
 	color: #FFA500;
 }
 
+
 /* HOME */
+
 
 #wrapperHome {
   display: flex;
@@ -326,7 +337,6 @@ footer a{
   margin: 0 auto;
   margin-top: 2.2rem;
 }
-
 .HomeBox {
   margin: 1.2rem;
   padding: 2.2rem;
@@ -336,12 +346,13 @@ footer a{
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.38rem 1.2rem 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem 3.1rem;
 }
-
 .HomeBox:hover{
   background-color: #ADD8E6;
 }
 
+
 /* LOGIN E REGISTRAZIONE */
+
 
 .LoginSignupBox{
 	width: 100%;
@@ -351,7 +362,6 @@ footer a{
   border: 5px solid #ADD8E6;
   border-radius: 1rem 3.1rem;
 }
-
 .LoginSignupBox input[type=text], .LoginSignupBox input[type=password], .LoginSignupBox input[type=email]{
   border:none;
   border-bottom: 2px solid #adadad;
@@ -364,12 +374,13 @@ footer a{
 .LoginSignupBox input[type=text]:focus, .LoginSignupBox input[type=password]:focus, .LoginSignupBox input[type=email]:focus{
     border-bottom: 2px solid #ADD8E6;
 }
-
 #errori_login ul{
-  list-style-type: disc;
+
+  list-style-type: none;
   color: #FF0000;
   text-align: justify;
 }
+
 #errori_login ol{
   list-style-type: none;
   color: #000;
@@ -386,16 +397,19 @@ footer a{
   text-align: justify;
 }
 #errori_newtreno ul{
-  list-style-type: disc;
+  list-style-type: none;
   color: #FF0000;
   text-align: justify;
 }
-.errori_newtreno ol{
+#errori_registrazione ol{
   list-style-type: none;
   color: #000;
   text-align: justify;
 }
+
+
 /* ADMIN PANEL */
+
 
 .AdminPanelBox {
   display: inline-block;
@@ -404,12 +418,24 @@ footer a{
 	list-style: none;
 
 }
+#errori_adminlogin ul{
+  list-style-type: none;
+  color: red;
+  text-align: justify;
+}
+#errori_adminlogin ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
+
 
 /* RICERCA */
+
+
 #searchTop, #searchPage {
 width: 100%;
 }
-
 .long{
   width: 25rem;
 }
@@ -424,7 +450,10 @@ h1#outputRicerca {
 	margin: 2.5rem;
 }
 
+
 /* UTENTE */
+
+
 .topUtente {
 	display: flex;
 	flex-wrap: wrap;
@@ -434,7 +463,6 @@ h1#outputRicerca {
   padding: 1.2rem;
   justify-content: center;
 }
-
 .leftCol {
 	padding: 1.2rem;
   margin-top: 1.2rem;
@@ -443,7 +471,6 @@ h1#outputRicerca {
   height:100%;
   min-width: 16rem;
 }
-
 .rightCol {
 	  padding: 1.2rem;
   margin-top: 1.2rem;
@@ -465,11 +492,14 @@ h1#outputRicerca {
   min-width: 12.5rem;
   padding: 1.2rem;
 }
+
+
 /* TRENO */
+
+
 #trainHeader h1, #pref{
 	display: inline-block;
 }
-
 #schedaTecnica {
 	width: 70%;
 	margin: auto;
@@ -488,7 +518,10 @@ h1#outputRicerca {
 	border-bottom: 3px solid #ADD8E6;
 }
 
+
 /****commenti da cambiare****/
+
+
 .comment-section{
     list-style: none;
     max-width: 87.5rem;
@@ -497,7 +530,6 @@ h1#outputRicerca {
     margin-top: 1.2rem;
     padding: 0.6rem;
 }
-
 .comment{
     display: flex;
     border-radius: 3px;
@@ -506,7 +538,6 @@ h1#outputRicerca {
     flex-wrap: wrap;
 	   color: #505050;
 }
-
 .data{
   font-size: 0.75em;
 }
@@ -527,7 +558,6 @@ h1#outputRicerca {
     white-space: nowrap;
     padding: 1rem 0 3px 0;
 }
-
 .comment p{
     line-height: 1.5em;
     padding: 1rem 1.3rem;
@@ -572,8 +602,6 @@ h1#outputRicerca {
     padding: 0.6rem 1.6rem;
     margin-top: 1rem;
 }
-
-
 fieldset{
 	border: 0;
   padding: 0;
@@ -592,9 +620,13 @@ fieldset{
 	display: block;
 }
 .commentInfo {
-	float: left;
+  float: left;
 }
+
+
 /* Ricerca Treni */
+
+
 .row{
   display: flex;
   flex-direction: row;
@@ -647,7 +679,6 @@ fieldset{
   transform: scale(1.02);
 
 }
-
 .img-left{
   height: 12.5rem;
   width: 12.5rem;
@@ -673,29 +704,28 @@ p {
 	line-height:1.5em;
 }
 
+
 /*404*/
+
+
 .parent-content{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 31.2rem;
 }
-
 .text-content{
   text-align: center;
 }
-
 .text-content h1{
   font-size: 2.5em;
   margin: 1.25rem;
 }
-
 .text-content h2{
   font-size: 1.7em;
   text-transform: uppercase;
   margin: 1.25rem;
 }
-
 .text-content a{
   text-decoration: none;
   color: #000;
@@ -708,17 +738,29 @@ p {
   text-transform: uppercase;
   transition: 0.4s;
 }
-
 .text-content a:hover{
   background: #294173;
   color: #FFF;
 }
-
 #img-404{
   margin-top: 3.1rem;
   width: 40%;
 }
+
+
 /*AGGIUNTA PAGINA*/
+
+
+#errori_newtreno ul{
+  list-style-type: none;
+  color: red;
+  text-align: justify;
+}
+#errori_newtreno ol{
+  list-style-type: none;
+  color: black;
+  text-align: justify;
+}
 .inputbar{
   width: 90%;
 }
@@ -739,7 +781,6 @@ p {
 .AggiuntaTreno input[type=text]:focus, .AggiuntaTreno input[type=password]:focus, .AggiuntaTreno input[type=email]:focus{
     border-bottom: 2px solid #ADD8E6;
 }
-
 .AggiuntaTreno label {
 	text-align: left;
 }
@@ -806,7 +847,11 @@ input[type=file]{
 	width: 18.8rem;
 	height: 18.8rem;
 }
+
+
 /*header da mostrare*/
+
+
 #hrow3{
 	padding-top:58.2rem;
 	width: 100%;

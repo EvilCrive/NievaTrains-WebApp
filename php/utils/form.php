@@ -25,9 +25,10 @@ try{
             $_POST['bio']="Io sono ".$_POST['nome']." ".$_POST['cognome']." (@".$_POST['username'].") ";
             insertUtente($_POST['nome'],$_POST['cognome'],$_POST['username'],$email,$_POST['username'],$_POST['bio'],"Utenti/".$target_file, $connessione);
             //admin part
-            if(isset($_SESSION['adminlogged'])){
+            if(isset($_SESSION['admin'])){
                 $_SESSION=array();
                 session_destroy();
+                session_start();
             }
             $_SESSION['id'] = getUserID($email, $connessione);
             $_SESSION['nome'] = $_POST['nome'];
@@ -48,9 +49,10 @@ try{
             $_SESSION['fail']="<ul>Errori: ".$errors."</ul>";
         }else{
             //admin part
-            if(isset($_SESSION['adminlogged'])){
+            if(isset($_SESSION['admin'])){
 				$_SESSION=array();
-				session_destroy();
+                session_destroy();
+                session_start();
             }
             //tutto ok; procediamo ad accedere nell'account NievaTrains corretto
             $_SESSION['id'] = getUserID($email, $connessione);
