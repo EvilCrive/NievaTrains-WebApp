@@ -42,6 +42,7 @@ class DBAccess{
 		try{
 			$result=$this->connection->query($query);
 			if(!$result) throw new Exception("errore execute query in the db");
+			return $result;
 		}catch(Exception $e){
 			echo $e;
 		}		

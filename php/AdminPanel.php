@@ -33,20 +33,66 @@ try {
 	if(isset($_SESSION['admin'])){
 		$bool=0;
 		if(isset($_GET['AdminOP'])){
+			$adminop="";
+			$final = file_get_contents("../txt/AdminPanel_Operations.html");
 			if($_GET['AdminOP']==1){
-				//Elimina Commenti
-				$final = file_get_contents("../txt/AdminPanel_Operations.html");
+				if(isset($_GET['utente'])){
+					$iduser=$_GET['utente'];
+					if(isset($_GET['promuovi'])){
+						if(promuoviUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+					}else	$adminop=stampaPromuoviUtente($iduser,$connessione);
+				}else{
+					$listautenti=getAllUtenti($connessione);
+					$adminop=stampaListaUtenti4AP($listautenti,"PROMUOVI");
+				}
 			}
 			else if($_GET['AdminOP']==2){
-				//Promuovi Utenti 
+				if(isset($_GET['utente'])){
+					$iduser=$_GET['utente'];
+					if(isset($_GET['delete'])){
+						if(deleteUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+					}else	$adminop=stampaDeleteUtente($iduser,$connessione);
+				}else{
+					$listautenti=getAllUtenti($connessione);
+					$adminop=stampaListaUtenti4AP($listautenti,"ELIMINA");
+				}
 			}
 			else if($_GET['AdminOP']==3){
 				//Elimina Treno
+				if(isset($_GET['treno'])){
+					$idtreno=$_GET['treno'];
+					if(isset($_GET['delete'])){
+						if(deleteTreno($idtreno,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+					}else	$adminop=stampaDeleteTreno($idtreno,$connessione);
+				}else{
+					$listatreni=getAllTreni($connessione);
+					$adminop=stampaListaTreni4AP($listatreni);
+				}
 			}
 			else if($_GET['AdminOP']==4){
-				//Elimina Utenti
+				//Elimina Commenti
+				if(isset($_GET['commento'])){
+					$idcommento=$_GET['commento'];
+					if(isset($_GET['delete'])){
+						if(deleteCommento($idcommento,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+					}else	$adminop=stampaDeleteCommento($idcommento,$connessione);
+				}else{
+					$listacommenti=getAllCommenti($connessione);
+					$adminop=stampaListaCommenti4AP($listacommenti);
+				}
 			}
-			else echo "4";
+			else if($_GET['AdminOP']==5){
+				//Logout
+				$adminop='';
+			}
+			else{
+				$adminop='<p>Non esiste questa operazione. </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
+			}
+			$final=str_replace("%%adminoperation%%",$adminop,$final);
 		}else	$final = file_get_contents("../txt/AdminPanel_Pannello.html");
 	}
 	if($bool===1)	$final = file_get_contents("../txt/AdminPanel_Login.html");

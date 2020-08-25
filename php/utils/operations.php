@@ -8,7 +8,6 @@ try{
     if(!(isset($_SESSION['userType']))){
         //non sei loggato
         header("refresh:0; url=../LogIn.php");
-        die();
     }else{
         if(isset($_POST['like'])){
             //voto
@@ -57,6 +56,7 @@ try{
             }
             header("refresh:0 url=../Utente.php?Id_Utente=$id");
         }
+    }
         if(isset($_POST['logout']) || isset($_GET['logout'])){
             $_SESSION['fail']="";
             $_SESSION['id'] = "";
@@ -69,8 +69,7 @@ try{
             $_SESSION=array();
             session_destroy();
             header("refresh:0; url=../../PHP/Index.php");
-        }
-    }
+        }else   header("refresh:0; url=../LogIn.php");
 }catch(Exception $exc){
     echo $exc;
 }
