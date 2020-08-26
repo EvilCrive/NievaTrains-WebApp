@@ -428,7 +428,7 @@ function stampaListaTreni4AP($results){
 }
 function stampaDeleteTreno($id,$connessione){
 	$results=getInfoTreno($id,$connessione);
-	$var="<p>Vuoi eliminare il seguente Treno:</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=2&treno='.$results[0]["Id_Treno"].'&delete" class="button stayRight">Conferma</a><a href="../PHP/AdminPanel.php?AdminOP=2" class="button">TORNA INDIETRO</a>';
+	$var="<p>Vuoi eliminare il seguente Treno:</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=2&treno='.$results[0]["Id_Treno"].'&delete" class="button">Conferma</a><a href="../PHP/AdminPanel.php?AdminOP=2" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function stampaListaCommenti4AP($results){
