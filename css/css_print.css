@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #aboutList a[href]:after{content: "(" attr(href) ")"}
 
-a[href="mailto:abc@example.com"]{
+a[href="mailto:treni@nieva.com"]{
 	display: inline;
 }
 
