@@ -36,30 +36,52 @@ try {
 			$adminop="";
 			$final = file_get_contents("../txt/AdminPanel_Operations.html");
 			if($_GET['AdminOP']==1){
-				if(isset($_GET['utente'])){
-					$iduser=$_GET['utente'];
-					if(isset($_GET['promuovi'])){
-						if(promuoviUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-					}else	$adminop=stampaPromuoviUtente($iduser,$connessione);
+				$listautenti=getAllUtenti($connessione);
+				if(isset($_GET['operation'])){
+					if($_GET['operation']==1){
+						if(isset($_GET['utente'])){
+							$iduser=$_GET['utente'];
+							if(isset($_GET['promozione'])){
+								if(promozioneUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+							}else	$adminop=stampaPromozioneUtente($iduser,$connessione);
+						}
+						else	$adminop=stampaListaUtenti4AP($listautenti,"PROMOZIONE");
+					}
+					else if($_GET['operation']==2){
+						if(isset($_GET['utente'])){
+							$iduser=$_GET['utente'];
+							if(isset($_GET['declassazione'])){
+								if(declassazioneUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+							}else	$adminop=stampaDeclassazioneUtente($iduser,$connessione);
+						}
+						else	$adminop=stampaListaUtenti4AP($listautenti,"DECLASSAZIONE");
+					}
+					else if($_GET['operation']==3){
+						if(isset($_GET['utente'])){
+							$iduser=$_GET['utente'];
+							if(isset($_GET['elimina'])){
+								if(deleteUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+							}else	$adminop=stampaDeleteUtente($iduser,$connessione);
+						}
+						else $adminop=stampaListaUtenti4AP($listautenti,"ELIMINA");
+					}
+					else{
+						$adminop='<p>Non esiste questa operazione. </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
+					}
 				}else{
-					$listautenti=getAllUtenti($connessione);
-					$adminop=stampaListaUtenti4AP($listautenti,"PROMUOVI");
+					$adminop='<h3>Operazioni disponibili:</h3><ul>
+					<li><a href="AdminPanel.php?AdminOP=1&operation=1" class="button">Promozione Utenti</a></li>
+					<li><a href="AdminPanel.php?AdminOP=1&operation=2" class="button">Declassazione Utente</a></li>
+					<li><a href="AdminPanel.php?AdminOP=1&operation=3" class="button">Elimina Utente</a></li>
+					<li><a href="AdminPanel.php" class="button">Torna Indietro</a></li></ul>';
 				}
+					
+				//}
 			}
 			else if($_GET['AdminOP']==2){
-				if(isset($_GET['utente'])){
-					$iduser=$_GET['utente'];
-					if(isset($_GET['delete'])){
-						if(deleteUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-					}else	$adminop=stampaDeleteUtente($iduser,$connessione);
-				}else{
-					$listautenti=getAllUtenti($connessione);
-					$adminop=stampaListaUtenti4AP($listautenti,"ELIMINA");
-				}
-			}
-			else if($_GET['AdminOP']==3){
 				//Elimina Treno
 				if(isset($_GET['treno'])){
 					$idtreno=$_GET['treno'];
@@ -72,7 +94,7 @@ try {
 					$adminop=stampaListaTreni4AP($listatreni);
 				}
 			}
-			else if($_GET['AdminOP']==4){
+			else if($_GET['AdminOP']==3){
 				//Elimina Commenti
 				if(isset($_GET['commento'])){
 					$idcommento=$_GET['commento'];
@@ -85,7 +107,7 @@ try {
 					$adminop=stampaListaCommenti4AP($listacommenti);
 				}
 			}
-			else if($_GET['AdminOP']==5){
+			else if($_GET['AdminOP']==4){
 				//Logout
 				$_SESSION['admin']="";
 				$_SESSION['pin']="";
