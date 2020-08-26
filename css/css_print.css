@@ -1,0 +1,268 @@
+header{
+	display: none;
+}
+#hrow1{
+	display: none;
+}
+#hrow2{
+	display: none;
+}
+#hrow3{
+	display: none;
+}
+#hamburger{
+	display: none;
+}
+footer{
+	display: none;
+}
+
+#breadcrumb{
+	display: none;
+}
+
+.button {
+	display: none;
+}
+
+@page{
+	size: 210mm 297mm;
+	margin: 30mm;
+}
+
+main{
+	width: auto; 
+    float: none;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 13pt;
+	background: #fff !important;
+	color: #000;
+}
+
+#content p {
+	line-height: 150%;
+}
+
+li{
+	list-style-type: none;
+	margin: 5px 0px 5px 5px;
+}
+
+a{
+	display: none;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    page-break-after:avoid; 
+    page-break-inside:avoid 
+}
+
+/* ABOUT */
+
+#aboutList a {
+	display: inline;
+}
+
+#aboutList a[href]:after{content: "(" attr(href) ")"}
+
+a[href="mailto:abc@example.com"]{
+	display: inline;
+}
+
+a[href="tel:+39049314567"]{
+	display: inline;
+}
+
+
+/* HOME */
+
+
+#wrapperHome {
+
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+.HomeBox {
+  margin:10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  page-break-inside: avoid;
+}
+.HomeBox p{
+	line-height: 150%;
+}
+.HomeBox {
+	margin-bottom: 15px;
+}
+
+/* IMG */
+
+img{ 
+    page-break-inside:avoid;   
+    page-break-after:avoid; 
+    height: 6em;
+    width: auto;
+}
+
+.trainbox img{
+    width: 25em;
+    height: auto;
+}
+
+/* LOGIN/REGISTRAZIONE */
+
+.LoginSignupBox .inputbar {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.LoginSignupBox .button {
+	display: none;
+}
+
+
+/* ADMIN */
+
+.AdminPanelBox .button {
+	display: inline;
+}
+
+
+/* CATEGORIA */
+
+.cat {
+	page-break-inside: avoid;
+}
+
+.imgCat {
+	display: none;
+}
+
+#searchBarBox {
+  display: none;
+}
+
+/* TRENO */
+
+#trainHeader p {
+	display: none;
+}
+
+#trainHeader .trainImg {
+	display: none;
+}
+
+#trainHeader .button {
+	display: none;
+}
+
+#trainHeader form {
+	display: none;
+}
+
+.comment {
+	page-break-inside: avoid;
+}
+
+#write-new {
+	display: none;
+}
+
+
+
+/* TRAINBOX */
+#ResultsRicerca .row{
+	display: block;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.card{
+	page-break-inside: avoid;
+  	width: 45%;
+  	background: #fff;
+  	border: 2px solid;
+  	border-radius: 0 20px 20px 0;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+#ResultsRicerca .card{
+	page-break-inside: avoid;
+  	width: 100%;
+  	background: #fff;
+  	border: 2px solid;
+  	border-radius: 0 20px 20px 0;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+.card-header{
+ 	color: #fff;
+  	float:left;
+  	max-width: 100px;
+  	max-height: 100px;
+}
+.card-body{
+  	padding: 5px 5px;
+  	text-align: left;
+  	font-size: 10px;
+
+}
+#ResultsRicerca .card-body{
+	padding: 5px 5px;
+	text-align: right;
+	font-size: 16px;
+}
+.card-body ul{
+  	list-style: none;
+}
+.card-body ul li{
+  	text-align: center;
+  	padding-bottom: 3px;
+}
+.card-body .btn{
+
+  	text-align: left;
+  	background: #294173;
+  	padding: 10px 5px;
+}
+
+.img-left{
+  	height: 100px;
+  	width: 100px;
+}
+
+#ResultsRicerca .img-left{
+	height: 140px;
+	width: 140px;
+}
+
+/* UTENTE */
+
+.userImg {
+	display: none;
+}
+
+.leftCol form {
+	display: none;
+}
+
+.rightCol form {
+	display: none;
+}
+
+#editbioform{
+    display: none;
+}
