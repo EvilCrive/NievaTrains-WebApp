@@ -42,8 +42,8 @@ try {
 						if(isset($_GET['utente'])){
 							$iduser=$_GET['utente'];
 							if(isset($_GET['promozione'])){
-								if(promozioneUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+								if(promozioneUtente($iduser,$connessione))	$adminop='<p>Operazione completata&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
+								else	$adminop='<p>Operazione fallita&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
 							}else	$adminop=stampaPromozioneUtente($iduser,$connessione);
 						}
 						else	$adminop=stampaListaUtenti4AP($listautenti,"PROMOZIONE");
@@ -52,8 +52,8 @@ try {
 						if(isset($_GET['utente'])){
 							$iduser=$_GET['utente'];
 							if(isset($_GET['declassazione'])){
-								if(declassazioneUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+								if(declassazioneUtente($iduser,$connessione))	$adminop='<p>Operazione completata&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
+								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
 							}else	$adminop=stampaDeclassazioneUtente($iduser,$connessione);
 						}
 						else	$adminop=stampaListaUtenti4AP($listautenti,"DECLASSAZIONE");
@@ -62,23 +62,23 @@ try {
 						if(isset($_GET['utente'])){
 							$iduser=$_GET['utente'];
 							if(isset($_GET['elimina'])){
-								if(deleteUtente($iduser,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-								else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+								if(deleteUtente($iduser,$connessione))	$adminop='<p>Operazione completata&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
+								else	$adminop='<p>Operazione fallita&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
 							}else	$adminop=stampaDeleteUtente($iduser,$connessione);
 						}
 						else $adminop=stampaListaUtenti4AP($listautenti,"ELIMINA");
 					}
 					else{
-						$adminop='<p>Non esiste questa operazione. </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
+						$adminop='<p>Non esiste questa operazione&period; </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
 					}
 				}else{
-					$adminop='<h3>Operazioni disponibili:</h3><ul>
+					$adminop='<h3>Operazioni disponibili&colon;</h3><ul>
 					<li><a href="AdminPanel.php?AdminOP=1&operation=1" class="button">Promozione Utenti</a></li>
 					<li><a href="AdminPanel.php?AdminOP=1&operation=2" class="button">Declassazione Utente</a></li>
 					<li><a href="AdminPanel.php?AdminOP=1&operation=3" class="button">Elimina Utente</a></li>
 					<li><a href="AdminPanel.php" class="button">Torna Indietro</a></li></ul>';
 				}
-					
+
 				//}
 			}
 			else if($_GET['AdminOP']==2){
@@ -86,8 +86,8 @@ try {
 				if(isset($_GET['treno'])){
 					$idtreno=$_GET['treno'];
 					if(isset($_GET['delete'])){
-						if(deleteTreno($idtreno,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+						if(deleteTreno($idtreno,$connessione))	$adminop='<p>Operazione completata&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
+						else	$adminop='<p>Operazione fallita&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
 					}else	$adminop=stampaDeleteTreno($idtreno,$connessione);
 				}else{
 					$listatreni=getAllTreni($connessione);
@@ -99,8 +99,8 @@ try {
 				if(isset($_GET['commento'])){
 					$idcommento=$_GET['commento'];
 					if(isset($_GET['delete'])){
-						if(deleteCommento($idcommento,$connessione))	$adminop='<p>Operazione completata. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
-						else	$adminop='<p>Operazione fallita. </p><a href="AdminPanel.php" class="button">Torna all Admin Panel</a>';
+						if(deleteCommento($idcommento,$connessione))	$adminop='<p>Operazione completata&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
+						else	$adminop='<p>Operazione fallita&period; </p><a href="AdminPanel.php" class="button">Torna all <span xml:lang="en" lang="en">Admin Panel</span></a>';
 					}else	$adminop=stampaDeleteCommento($idcommento,$connessione);
 				}else{
 					$listacommenti=getAllCommenti($connessione);
@@ -117,7 +117,7 @@ try {
 				$adminop='';
 			}
 			else{
-				$adminop='<p>Non esiste questa operazione. </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
+				$adminop='<p>Non esiste questa operazione&period; </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
 			}
 			$final=str_replace("%%adminoperation%%",$adminop,$final);
 		}else	$final = file_get_contents("../txt/AdminPanel_Pannello.html");
@@ -130,7 +130,7 @@ try {
 	//sostituzione variabili di sostituzione
 
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);		
+	$final=str_replace("##footer##",$footer,$final);
 	$final=functionMenuUser($final);
 	echo $final;
 }catch(Exception $eccezione){

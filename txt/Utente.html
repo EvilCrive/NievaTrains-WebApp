@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
-
-<head>
-	<title>##NomeU## - Pagina Utente - NievaTrains</title>
+	<head>
+		<title>##NomeU## &ndash; Pagina Utente &ndash; NievaTrains</title>
     <meta charset="utf-8" />
-	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	 <meta name="keywords" content="NievaTrains, treni, trasporti, enciclopedia, contatti, utente " />
-	<meta name="description" content="Pagina personale dell'utente, con le sue informazioni salvate " />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
-	<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
-	<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
-	<script src="../js/menus.js" type="text/javascript"></script>
-</head>
-<body>
-##header##
-<div id="content">
-<div id="breadcrumb">
-		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./Utente.php">Utenti</a> -&gt; <a href="#">##NomeU##</a></p>
-</div>
-<div class="topUtente clear">
-  <div class="leftCol">
-		<img class="userImg" src="./##ImmagineUtente##" alt=""/>
-	</div>
-  <div class="rightCol">
-		<h1>##InfoUtente##</h1>
-		%%creapagina
-		<p>
-			##Bio##
-		</p>
-		%%modificabio
-		
-		
-		
-  </div>
-</div>
-<h2>Autore di:</h2>
-<div class="trainBoxWrapper">
-##TrainBox##
-</div>
-</div>
-##footer##
-</body>
+		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	 	<meta name="keywords" content="NievaTrains, treni, trasporti, enciclopedia, contatti, utente " />
+		<meta name="description" content="Pagina personale dell'utente, con le sue informazioni salvate " />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+		<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+		<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
+		<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
+		<script src="../js/menus.js"></script>
+	</head>
+	<body>
+		##header##
+		<div id="content">
+			<div id="breadcrumb">
+				<p>Ti trovi in&colon; <span xml:lang="en" lang="en"><a href="../php/Index.php">Home</a></span> &ndash;&gt; <a href="../php/Utente.php">Utenti</a> &ndash;&gt; ##NomeU##</p>
+			</div>
+			<div class="topUtente clear">
+  			<div class="leftCol">
+					<img class="userImg" src="./##ImmagineUtente##" alt=""/>
+				</div>
+  			<div class="rightCol">
+					<h1>##InfoUtente##</h1>
+						%%creapagina
+						<p>
+							##Bio##
+						</p>
+						%%modificabio
+  			</div>
+			</div>
+			<h2>Autore di&colon;</h2>
+			<div class="trainBoxWrapper">
+				##TrainBox##
+			</div>
+		</div>
+		##footer##
+	</body>
 </html>
