@@ -12,7 +12,7 @@ function stampaTrainBox($queryRes) {
 	for ($i=0; $i<$nrisultati; $i++){
 		$var.='	<div class="card">'."\n";
 		$var.='		<div class="card-header">'."\n";
-		$var.='			<img class="img-left" src="../uploads/'.$queryRes[$i]["Immagine"].'" alt="">"\n"';
+		$var.='			<img class="img-left" src="../uploads/'.$queryRes[$i]["Immagine"].'" alt="">';
 		$var.='		</div>'."\n";
 		$var.='		<div class="card-body">'."\n";
 		$var.='			<ul>'."\n";
@@ -367,7 +367,7 @@ function functionMenuUser($final){
 	if(isset($_SESSION['id'])){
 		$xd="";
 		$var='
-		<img id="utenteTop" tabindex="0" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
+		<img id="utenteTop" tabindex="0" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()" alt=""/>';
 		$id=$_SESSION['id'];
 	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" tabindex="0" src="../resources/conductor.png" alt="Area riservata"/></a>';
 	$final=str_replace("%%user",$id,$final);
