@@ -44,19 +44,19 @@ try {
 	//sostituzione variabili di sostituzione
 	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).$buttonPreferiti,$final);
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);	
+	$final=str_replace("##footer##",$footer,$final);
 	$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);
 	$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
 	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
 	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
 	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
-	$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);	
+	$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);
 	$final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
 	$final=str_replace("##Commenti##",$commenti,$final);
 	$final=str_replace("##NumeroT##",$id,$final);
 	$final=functionMenuUser($final);
 	echo $final;
-	
+
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");

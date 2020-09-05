@@ -114,8 +114,8 @@ function stampaSchedaT($queryRes) {
 	return $var;
 }
 function stampaPreferiti($nPreferiti) {
-	if($nPreferiti==1) return "1 <span xml:lang='en' lang='en'>Like</span></p>";
-	else return $nPreferiti."<span xml:lang='en' lang='en'>Likes</span></p>";
+	if($nPreferiti==1) return "1<span xml:lang='en' lang='en'>Like</span>";
+	else return $nPreferiti."<span xml:lang='en' lang='en'>Likes</span>";
 }
 function stampaImmagine($queryImmagine) {
 	return "../uploads/".$queryImmagine[0]["Immagine"];

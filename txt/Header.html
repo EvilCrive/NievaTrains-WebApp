@@ -4,13 +4,13 @@
 			<img id="hamburger" src="../resources/hamburger.png" onclick="buttonclick()" alt="hamburger menu" aria-label="menu"/>
 				<div id="showDesktopSearch" class="menuOff">
 					<form id="searchHeader" action="../php/Ricerca.php" method="get">
-						<select class="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
-							<option value="Treni">Treni</option>
-							<option value="Utenti">Utenti</option>
-						</select>
+							<select class="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
+								<option value="Treni">Treni</option>
+								<option value="Utenti">Utenti</option>
+							</select>
 						<div class="search-box">
-							<input class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
-							<button class="search-btn" form="searchHeader"><img class="search" src="../resources/search.png" alt=""/></button>
+								<input id="search-bar" class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
+								<button class="search-btn" form="searchHeader" aria-label="Ricerca"><img class="search" src="../resources/search.png" alt=""/></button>
 						</div>
 					</form>
 				</div>
@@ -30,13 +30,17 @@
 	</div>
 	<div id="hrow3" class="hidden">
 		<form id="searchHeader2" action="../php/Ricerca.php" method="get">
-			<select class="sceltaCategorie" name="CategoriaCercata" form="searchHeader2">
-				<option value="Treni">Treni</option>
-				<option value="Utenti">Utenti</option>
-			</select>
+
+				<select class="sceltaCategorie" name="CategoriaCercata" form="searchHeader2">
+					<option value="Treni">Treni</option>
+					<option value="Utenti">Utenti</option>
+				</select>
+
 			<div class="search-box">
-				<input class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader2"/>
-				<button class="search-btn" form="searchHeader2"><img class="search" src="../resources/search.png" alt=""/></button>
+
+					<input class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader2"/>
+					<button class="search-btn" form="searchHeader2" aria-label="Ricerca"><img class="search" src="../resources/search.png" alt=""/></button>
+
 			</div>
 		</form>
 		<ul class="menuList">

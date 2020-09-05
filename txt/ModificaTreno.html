@@ -25,9 +25,9 @@
 				<form action="ModificaTreno.php" method="post" onsubmit="return ValidateModificaTreno()" id="modifyTrenoform">
 					<fieldset>
 					<label for="nome">Nome</label>
-					<input class="inputbar" type="text" name="nome" placeholder="Nome" value=%%nome />
+					<input id="nome" class="inputbar" type="text" name="nome" placeholder="Nome" value=%%nome />
 					<label for="categorieMod">Categoria</label>
-					<select id="cateogireMod" class="sceltaAggiunta" name="categorie">
+					<select id="categorieMod" class="sceltaAggiunta" name="categorie">
 						<option value="1">Elettrico</option>
 						<option value="2">Vapore</option>
 						<option value="3">Maglev EDS</option>
@@ -35,7 +35,7 @@
 						<option value="5">Diesel</option>
 					</select>
 					<label for="costruttore">Costruttore</label>
-					<input  class="inputbar" type="text" name="costruttore" placeholder="Costruttore" value=%%costruttore />
+					<input id="costruttore" class="inputbar" type="text" name="costruttore" placeholder="Costruttore" value=%%costruttore />
 					<label for="tipo">Tipo</label>
 					<select id="tipo" class="sceltaAggiunta" name="tipo">
 						<option value="1">Alta velocità</option>
