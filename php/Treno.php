@@ -37,27 +37,26 @@ try {
 	$buttonPreferiti.='" /><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
 	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
 		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" class="trenoBts" method="post" name="removeForm"><fieldset>';
-		$buttonsOperazioni.='<label class="screenreader" for="eliminaTreno">elimina il treno</label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></fieldset></form>';
-
+		$buttonsOperazioni.='<label class="screenreader" for="eliminaTreno">elimina il treno</label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/><input hidden  name="idtreno" value="'.$id.'"></fieldset></form>';
 		$buttonsOperazioni.='<form action="../PHP/ModificaTreno.php" class="trenoBts" method="post" name="modifyForm"><fieldset><label class="screenreader" for="modificaTreno">modifica il treno</label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
 	}
 
 	//sostituzione variabili di sostituzione
 	$final=str_replace("##LikeT##",stampaPreferiti($nPreferiti).$buttonPreferiti,$final);
 	$final=str_replace("##header##",$header,$final);
-	$final=str_replace("##footer##",$footer,$final);	
+	$final=str_replace("##footer##",$footer,$final);
 	$final=str_replace("%%operazionitreno",$buttonsOperazioni,$final);
 	$final=str_replace("##ImmagineTreno##",stampaImmagine($queryInfoTreno),$final);
 	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
 	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
 	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
-	$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);	
+	$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);
 	$final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
 	$final=str_replace("##Commenti##",$commenti,$final);
 	$final=str_replace("##NumeroT##",$id,$final);
 	$final=functionMenuUser($final);
 	echo $final;
-	
+
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0; url=../php/Ricerca.php");

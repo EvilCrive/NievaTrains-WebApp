@@ -18,6 +18,7 @@ html {
   margin: auto;
 
 }
+
 label{
 	display: block;
 	padding: 1rem;
@@ -891,3 +892,4 @@ input[type=file]{
 	font-size: 1.5rem;
 	display: block;
 }
+

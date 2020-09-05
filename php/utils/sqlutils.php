@@ -28,7 +28,9 @@ function boolLiked($iduser,$idtreno,$connessione){
 	return $connessione->getQuery("SELECT * from preferiti WHERE Id_Utente='$iduser' AND Id_Treno='$idtreno'");
 }
 
+
 //check e add e remove utente
+
 
 function checkUtente($mail,$user, $connessione){
 	return $connessione->getQuery("SELECT Username,Mail from utenti WHERE Mail=$mail OR Username=$user");
@@ -113,6 +115,11 @@ function addCommento($user,$treno,$testo,$connessione){
 	$data=date("Y-m-d H:i:s");
 	return $connessione->exeQuery("INSERT INTO commenti (Testo, Data, Id_Utente, Id_Treno) VALUES ('$testo','$data',$user,$treno)");
 }
+function getInfoCommento($id,$connessione){
+	return $connessione->getQuery(
+	"SELECT C.Id_Utente, C.Id_Commento, U.Id_Utente, U.Username, C.Testo, C.Data FROM commenti AS C JOIN utenti AS U ON U.Id_Utente=C.Id_Utente
+	WHERE C.Id_Commento=$id");
+}
 
 
 //add-remove-modify treno
@@ -135,6 +142,8 @@ function updateTreno($connessione){
 
 
 //adminpanel
+
+
 function correctAdmin($connessione){
 	return	$connessione->getQuery("SELECT * FROM admins WHERE User='".$_POST['user']."' AND Pin='".$_POST['pin']."'");
 }
@@ -144,8 +153,12 @@ function getAllUtenti($connessione){
 function deleteUtente($id,$connessione){
 	return $connessione->exeQuery("DELETE FROM utenti WHERE Id_Utente='$id'");
 }
-function promuoviUtente($id,$connessione){
+function promozioneUtente($id,$connessione){
 	$query=$connessione->exeQuery("UPDATE utenti SET Is_User_Type=1 WHERE Id_Utente='$id'");
+	return $query;
+}
+function declassazioneUtente($id,$connessione){
+	$query=$connessione->exeQuery("UPDATE utenti SET Is_User_Type=0 WHERE Id_Utente='$id'");
 	return $query;
 }
 function getAllTreni($connessione){
@@ -157,6 +170,8 @@ function getAllCommenti($connessione){
 function deleteCommento($id,$connessione){
 	return $connessione->exeQuery("DELETE FROM commenti WHERE Id_Commento='$id'");
 }
+
+
 ?>
 
 

@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
-
-<head>	 
-	<title> Ricerca - NievaTrains</title>
+	<head>
+		<title> Ricerca &ndash; NievaTrains</title>
     <meta charset="utf-8" />
-	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, ricerca " />
-	<meta name="description" content="Pagina di ricerca, per cercare i treni oppure gli utenti" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
-	<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
-	<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
-	<script src="../js/menus.js" type="text/javascript"></script>
-</head>
-<body>
-##header##
-<div id="content">
-<div id="breadcrumb">
-		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; Ricerca</p>
-</div>
-		<div id="searchBarBox">
-			<form id="searchPage" action="../php/Ricerca.php" method="get">	
-				<select tabindex="0" id="sceltaCategorieRicerca" name="CategoriaCercata" form="searchPage">
-					<option value="Treni">Treni</option>
-					<option value="Utenti">Utenti</option>
-				</select>
-				<div class="search-box">
-				<input tabindex="0" class="search-txt" type="text" placeholder="Cerca" form="searchPage" name="stringaCercata" />
-				</div>
-				<button class="button" form="searchPage">Cerca</button>	
-			</form>
-        </div>
-		<h1 id="outputRicerca">Risultati ricerca per "##Stringa##" tra "##CatRicerca##"</h1>
-        <div id="ResultsRicerca">
-##TrainBox##
+		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	 	<meta name="keywords" content="treni, trasporti, enciclopedia, contatti, ricerca " />
+		<meta name="description" content="Pagina di ricerca, per cercare i treni oppure gli utenti" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+		<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+		<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
+		<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
+		<script src="../js/menus.js"></script>
+	</head>
+	<body>
+		##header##
+		<div id="content">
+			<div id="breadcrumb">
+				<p>Ti trovi in&colon; <span xml:lang="en" lang="en"><a href="../php/Index.php">Home</a></span> &ndash;&gt; Ricerca</p>
+			</div>
+			<div id="searchBarBox">
+				<form id="searchPage" action="../php/Ricerca.php" method="get">
+					<select id="sceltaCategorieRicerca" name="CategoriaCercata" form="searchPage">
+						<option value="Treni">Treni</option>
+						<option value="Utenti">Utenti</option>
+					</select>
+					<div class="search-box">
+						<input class="search-txt" type="text" placeholder="Cerca" form="searchPage" name="stringaCercata" />
+					</div>
+					<button class="button" form="searchPage">Cerca</button>
+				</form>
+      </div>
+			<h1 id="outputRicerca">Risultati ricerca per "##Stringa##" tra "##CatRicerca##"</h1>
+      <div id="ResultsRicerca">
+				##TrainBox##
+			</div>
 		</div>
-           
-</div>
-##footer##
-</body>
+		##footer##
+	</body>
 </html>
-
-

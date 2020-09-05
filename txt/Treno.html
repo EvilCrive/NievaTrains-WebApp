@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
-
-<head>	 
-	<title> ##NomeT## - NievaTrains</title>
+	<head>
+		<title> ##NomeT## &ndash; NievaTrains</title>
     <meta charset="utf-8" />
-	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, treno" />
-	<meta name="description" content="Pagina del treno interessato, con tutte le informazioni disponibili a riguardo" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
-	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
-	<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
-	<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
-	<script src="../js/menus.js" type="text/javascript"></script>
-	<script src="../js/validate.js" type="text/javascript"></script>
-</head>
-<body>
-##header##
-<div id="content">
-<div id="breadcrumb">
-		<p>Ti trovi in: <span xml:lang="en" lang="en"><a href="./Index.php">Home</a></span> -&gt; <a href="./##CategoriaTLink##.php">##CategoriaTLink##</a> -&gt; ##NomeT##</p>
-</div>
-	<div id="trainHeader">
-		<h1>##NomeT##</h1>
-		<p id="pref">##LikeT##
-		<p>by ##NomeA##</p>
-		<div>
-		%%operazionitreno
+		<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
+	 	<meta name="keywords" content="treni, trasporti, enciclopedia, contatti, treno" />
+		<meta name="description" content="Pagina del treno interessato, con tutte le informazioni disponibili a riguardo" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+		<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
+		<link media="screen and (max-width:770px)" rel="stylesheet" type="text/css" href="../css/style_mobile.css" />
+		<link media="print" rel="stylesheet" type="text/css" href="../CSS/css_print.css" />
+		<script src="../js/menus.js"></script>
+		<script src="../js/validate.js"></script>
+	</head>
+	<body>
+		##header##
+		<div id="content">
+			<div id="breadcrumb">
+				<p>Ti trovi in&colon; <span xml:lang="en" lang="en"><a href="../php/Index.php">Home</a></span> &ndash;&gt; <a href="./##CategoriaTLink##.php">##CategoriaTLink##</a> &ndash;&gt; ##NomeT##</p>
+			</div>
+			<div id="trainHeader">
+				<h1>##NomeT##</h1>
+				<div id="pref">##LikeT##</div>
+				<p><span xml:lang="en" lang="en">by</span> ##NomeA##</p>
+				<div>
+					%%operazionitreno
+				</div>
+				<img class="trainImg" src="./##ImmagineTreno##" alt=""/>
+			</div>
+			<h2>Scheda Tecnica</h2>
+			<div id="schedaTecnica">
+				<ul>
+					##SchedaT##
+				</ul>
+			</div>
+			<h2>Descrizione</h2>
+			<div id="descrizione">
+				<p> ##DescT## </p>
+			</div>
+			<h3>Commenti&colon;</h3>
+			<div id="commenti">
+				<ul class="comment-section" id="commentreturn">
+					##Commenti##
+					<li id="write-new">
+					<form action="../PHP/utils/operations.php" method="post" id="commentform" onsubmit="return ValidateComment()">
+						<fieldset>
+							<input name="idtreno" value="##NumeroT##" class="hidden"/>
+							<textarea rows="5" cols="300" name="testoCommento"></textarea>
+							<div id="confirmComment">
+					   		<button class="button" name="aggiungiCommento" type="submit">Invia</button>
+					   		<p id="commentRequired" class="errors"></p>
+   						</div>
+						</fieldset>
+					</form>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<img class="trainImg" src="./##ImmagineTreno##" alt="immagine rappresentante il treno"/>
-		
-	</div>
-	
-	<h2>Scheda Tecnica</h2>
-	<div id="schedaTecnica">
-		<ul>
-			##SchedaT##
-		</ul>
-	</div>
-	
-	<h2>Descrizione</h2>
-	<div id="descrizione">
-		<p> ##DescT## </p>
-	</div>
-	<h3>Commenti:</h3>
-	<div id="commenti">
-	<ul class="comment-section" id="commentreturn">
-	##Commenti##
-			<li id="write-new">
-			<form action="../PHP/utils/operations.php" method="post" id="commentform" onsubmit="return ValidateComment()">
-			<fieldset>
-				<input name="idtreno" value="##NumeroT##" class="hidden"/>
-				<textarea rows="5" cols="300" name="testoCommento"></textarea>
-				<div id="confirmComment">
-					   <button class="button" name="aggiungiCommento" type="submit">Invia</button>
-					   <p id="commentRequired" class="errors"></p>
-   				</div>
-			</fieldset>
-			</form>
-		</li>
-	</ul>
-	</div>
-</div>
-##footer##
-</body>
+		##footer##
+	</body>
 </html>

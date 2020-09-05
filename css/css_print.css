@@ -49,16 +49,30 @@ li{
 }
 
 a{
-	margin: 5px 0px 5px 0px;
 	display: none;
 }
-
-
 
 h1, h2, h3, h4, h5, h6 { 
     page-break-after:avoid; 
     page-break-inside:avoid 
 }
+
+/* ABOUT */
+
+#aboutList a {
+	display: inline;
+}
+
+#aboutList a[href]:after{content: "(" attr(href) ")"}
+
+a[href="mailto:treni@nieva.com"]{
+	display: inline;
+}
+
+a[href="tel:+39049314567"]{
+	display: inline;
+}
+
 
 /* HOME */
 

@@ -1,18 +1,19 @@
 <header>
 	<div id="hrow1">
-	<a tabindex="0" class="stayRight" href="../php/Index.php"><img class="logo" src="../resources/logo_nieva.png" alt="Logo NievaTrains"/></a>
-			<img tabindex="0" id="hamburger" src="../resources/hamburger.png" onclick="buttonclick()" alt="Apri menu">
+
+	<a tabindex="0" class="stayRight" href="../php/Index.php"><img class="logo" src="../resources/logo_nieva.png" alt="Logo Nieva Trains"/></a>
+			<img tabindex="0" id="hamburger" src="../resources/hamburger.png" onclick="buttonclick()" alt="hamburger menu" aria-label="menu"/>
 				<div id="showDesktopSearch" class="menuOff">
 					<form id="searchHeader" action="../php/Ricerca.php" method="get">
 					<label for="sceltaCatH1" class="screenreader">scelta categoria di ricerca</label>
-						<select tabindex="0" class="sceltaCategorie" name="CategoriaCercata" form="searchHeader" id="sceltaCatH1">
-							<option value="Treni">Treni</option>
-							<option value="Utenti">Utenti</option>
-						</select>
+							<select tabindex="0" class="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
+								<option value="Treni">Treni</option>
+								<option value="Utenti">Utenti</option>
+							</select>
 						<div class="search-box">
 							<label for="searchH1" class="screenreader">barra di ricerca</label>
-							<input tabindex="0" class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader" id="searchH1"/>
-							<button class="search-btn" form="searchHeader"><img class="search" src="../resources/search.png" alt="conferma ricerca"/></button>
+								<input tabindex="0" id="search-bar" class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
+								<button class="search-btn" form="searchHeader" aria-label="Ricerca"><img class="search" src="../resources/search.png" alt=""/></button>
 						</div>
 					</form>
 				</div>
@@ -21,7 +22,7 @@
 	<nav role="navigation">
 	<div id="hrow2" class="menuOff">
 			<ul class="stayLeft menuList" role="menubar">
-			<li id="spec">Categorie:</li>
+			<li id="spec">Categorie&colon;</li>
 			<li role="menuitem"><a tabindex="0"  href="../php/Steam.php" >Vapore</a></li>
 			<li role="menuitem"><a tabindex="0" href="../php/Diesel.php" >Diesel</a></li>
 			<li role="menuitem"><a tabindex="0" href="../php/Electric.php" >Elettrici</a></li>
@@ -41,7 +42,7 @@
 			<div class="search-box">
 				<label for="searchH2" class="screenreader">barra di ricerca</label>
 				<input tabindex="0" class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader2" id="searchH2"/>
-				<button class="search-btn" form="searchHeader2"><img class="search" src="../resources/search.png" alt="conferma ricerca"/></button>
+				<button class="search-btn" form="searchHeader2" aria-label="Ricerca"><img class="search" src="../resources/search.png" alt="conferma ricerca"/></button>
 			</div>
 		</form>
 		<ul class="menuList" role="menubar">
@@ -55,8 +56,8 @@
 	</div>
 	<div id="menuUser" class="hidden %%u%%">
 		<ul class="menuList" role="menu">
-			<li role="menuitem"><a tabindex="0" href="../PHP/Utente.php?Id_Utente=%%user">UserPage</a></li>
-			<li role="menuitem"><a tabindex="0" href="../PHP/utils/operations.php?logout">Logout</a></li>
+			<li role="menuitem"><a tabindex="0" href="../PHP/Utente.php?Id_Utente=%%user" xml:lang="en" lang="en">UserPage</a></li>
+			<li role="menuitem"><a tabindex="0" href="../PHP/utils/operations.php?logout" xml:lang="en" lang="en">Logout</a></li>
 		</ul>
 	</div>
 	</nav>
