@@ -66,7 +66,17 @@ p {
 .button:hover{
   background-color: #ADD8E6;
 }
-
+.button2{
+  border: 2px solid #ADD8E6;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  margin: 0.4rem 2px;
+  padding: 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 /*HEADER 1*/
 
