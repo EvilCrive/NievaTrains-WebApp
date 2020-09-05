@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
 	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, registrazione" />
-	<meta name="description" content="Pagina di Registrazione per creare il proprio acount NievaTrains" />
+	<meta name="description" content="Pagina di Registrazione per creare il proprio account NievaTrains" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
 	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
@@ -26,20 +26,20 @@
 			<form action="../PHP/utils/form.php" method="post" onsubmit="return ValidateSignup()" id="signupform" enctype="multipart/form-data">
 				<fieldset>
 					<label for="nome">Nome</label>
-					<input id="nome" class="inputbar" type="text" name="nome" placeholder="Nome" />
+					<input tabindex="0"21" id="nome" class="inputbar" type="text" name="nome" placeholder="Nome" />
 					<label for="cognome">Cognome</label>
-            		<input id="cognome" class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
+            		<input tabindex="0"22" id="cognome" class="inputbar" type="text" name="cognome" placeholder="Cognome"/>
             		<label for="email">Email</label>
-            		<input id="email" class="inputbar" type="email" name="email" placeholder="Email" />
+            		<input tabindex="0"23" id="email" class="inputbar" type="email" name="email" placeholder="Email" />
             		<label for="username">Username</label>
-            		<input id="username" class="inputbar" type="text" name="username" placeholder="Username"/>
+            		<input tabindex="0"24" id="username" class="inputbar" type="text" name="username" placeholder="Username"/>
 	    			<label for="password">Password</label>
-            		<input id="password" class="inputbar" type="password" name="password" placeholder="Password"/>
+            		<input tabindex="0"25" id="password" class="inputbar" type="password" name="password" placeholder="Password"/>
             		<label for="conferma_password">Conferma Password</label>
-	    			<input id="conferma_password" class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
+	    			<input tabindex="0"26" id="conferma_password" class="inputbar" type="password" name="conferma_password" placeholder="Conferma Password"/>
 	    			<label for="myfile">Immagine</label>
-	    			<input id="myfile" type="file" name="myfile">
-            		<input class="button" name="button" type="submit" value="Registrati" />	
+	    			<input tabindex="0"27" id="myfile" type="file" name="myfile">
+            		<input tabindex="0"28" class="button" name="button" type="submit" value="Registrati" />	
 				</fieldset>
 			</form>
 			<div id="errori_registrazione">%%errors</div>

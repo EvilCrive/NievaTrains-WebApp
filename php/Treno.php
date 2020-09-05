@@ -29,7 +29,7 @@ try {
 	if(!$queryInfoTreno)	throw new Exception("Wrong ID");
 	if(!$queryNomeA)	throw new Exception("Errore nel DB, manca l'autore di una pagina");
 	if($queryCommenti) $commenti=stampaCommenti($queryCommenti);
-	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="like" class="hidden"></label><input class="button" id="like" name="like" type="submit" value="';
+	$buttonPreferiti='<form action="../PHP/utils/operations.php" method="post" name="likesForm"><fieldset><label for="like" class="screenreader">bottone per mettere o togliere il like</label><input class="button" id="like" name="like" type="submit" value="';
 	if(isset($_SESSION['userType'])){
 		if(boolLiked($_SESSION['id'],$id,$connessione))	$buttonPreferiti.="Unlike";
 		else	$buttonPreferiti.="Like";
@@ -37,9 +37,9 @@ try {
 	$buttonPreferiti.='" /><input name="idtreno" value="'.$id.'" hidden /></fieldset></form>';
 	if((isset($_SESSION['userType'])) && ($_SESSION['userType']==1) && ($queryInfoTreno[0]["Id_Autore"]==$_SESSION['id'])){
 		$buttonsOperazioni ='<form action="../PHP/utils/operations.php" class="trenoBts" method="post" name="removeForm"><fieldset>';
-		$buttonsOperazioni.='<label class="hidden" for="eliminaTreno"></label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></fieldset></form>';
+		$buttonsOperazioni.='<label class="screenreader" for="eliminaTreno">elimina il treno</label><input class="button" name="eliminaTreno" type="submit" value="EliminaTreno"/></fieldset></form>';
 
-		$buttonsOperazioni.='<form action="../PHP/ModificaTreno.php" class="trenoBts" method="post" name="modifyForm"><fieldset><label class="hidden" for="modificaTreno"></label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
+		$buttonsOperazioni.='<form action="../PHP/ModificaTreno.php" class="trenoBts" method="post" name="modifyForm"><fieldset><label class="screenreader" for="modificaTreno">modifica il treno</label><input class="button" name="modificaTreno" type="submit" value="Modifica"/><input name="idtreno" value="'.$id.'" hidden/></fieldset></form>';
 	}
 
 	//sostituzione variabili di sostituzione

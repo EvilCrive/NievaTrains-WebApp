@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it-IT" lang="it-IT">
 
 <head>	 
-	<title> Registrazione - NievaTrains</title>
+	<title> Inserisci Treno - NievaTrains</title>
     <meta charset="utf-8" />
 	<meta name="author" content="Alberto Crivellari, Matteo Brosolo, Francesco Bugno, Marco Barbaresco" />
-	 <meta name="keywords" content="treni, trasporti, enciclopedia, contatti, registrazione" />
-	<meta name="description" content="Pagina di Registrazione per creare il proprio acount NievaTrains" />
+	 <meta name="keywords" content="treni, trasporti, enciclopedia" />
+	<meta name="description" content="Pagina di creazione per creare un nuovo treno in NievaTrains" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
 	<link media="screen" rel="stylesheet" type="text/css" href="../css/style_desktop.css" />
@@ -26,9 +26,9 @@
 	<div class="AggiuntaTreno">
 	<form action="CreaTreno.php" method="post" enctype="multipart/form-data" onsubmit="return ValidateCreazioneTreno()" id="addTrenoform">
 			<label for="nome">Nome</label>
-					<input class="inputbar" type="text" name="nome" placeholder="Nome" />
+					<input tabindex="0" class="inputbar" type="text" name="nome" placeholder="Nome" />
 					<label for="categorieMod">Categoria</label>
-					<select id="categorieMod" class="sceltaAggiunta" name="categorie">
+					<select tabindex="0" id="categorieMod" class="sceltaAggiunta" name="categorie">
 						<option value="1">Elettrico</option>
 						<option value="2">Vapore</option>
 						<option value="3">Maglev EDS</option>
@@ -36,9 +36,9 @@
 						<option value="5">Diesel</option>
 					</select> 
 					<label for="costruttore">Costruttore</label>
-					<input id="costruttore" class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
+					<input tabindex="0" id="costruttore" class="inputbar" type="text" name="costruttore" placeholder="Costruttore" />
 					<label for="tipo">Tipo</label>
-					<select id="tipo" class="sceltaAggiunta" name="tipo">
+					<select tabindex="0" id="tipo" class="sceltaAggiunta" name="tipo">
 						<option value="1">Alta velocità</option>
 						<option value="2">Lunga Percorrenza</option>
 						<option value="3">Prototipo</option>
@@ -46,14 +46,14 @@
 						<option value="5">Trasporto Locale</option>
 					</select>
 					<label for="velocita">Velocità massima (km/h)</label>
-					<input id="velocita" class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
+					<input tabindex="0" id="velocita" class="inputbar" type="text" name="velocita" placeholder="Velocità Massima"/>
 					<label for="anni">Anno di costruzione</label>
-				<input id="anni" class="inputbar" type="text" name="anni" placeholder="Anno di costruzione"/>
+				<input tabindex="0" id="anni" class="inputbar" type="text" name="anni" placeholder="Anno di costruzione"/>
 					<label for="descrizione">Descrizione</label>
-				<textarea id="descrizione" class="sceltaDesc" rows="5" cols="300" name="descrizione"></textarea>
+				<textarea tabindex="0" id="descrizione" class="sceltaDesc" rows="5" cols="300" name="descrizione"></textarea>
 					<label for="myfile">Scegli un immagine</label>
-					<input type="file" id="myfile" name="myfileupload">
-				<input class="button" name="button" type="submit" value="Conferma" />	
+					<input tabindex="0" type="file" id="myfile" name="myfileupload">
+				<input tabindex="0" class="button" name="button" type="submit" value="Conferma" />	
 		</fieldset>
 	</form>
 	<div id="errori_newtreno">##Errori##</div>
