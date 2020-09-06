@@ -31,7 +31,7 @@ try {
 		$modificaBio='<form action="utils/operations.php" method="post" name="modificaBioform"><fieldset><label for="bioTesto" class="screenreader">testo bio</label><textarea rows="5" cols="50" id="bioTesto" name="bioTesto" >'.getUserBio($id,$connessione).'</textarea><label for="modificaBio" class="screenreader">bottone di modifica bio</label><input class="button" name="modificaBio" id="modificaBio" value="Modifica Bio" type="submit"/></fieldset></form>';
 		if($_SESSION['userType']=="1"){
 			// button per creare nuovo treno
-			$creaPagina='<form action="CreaTreno.php" method="post" class="utenteAction"name="addTrenoform"><fieldset><label class="screenreader" for="creaTreno">bottone per creare un treno</label><input id="creaTreno" class="button" name="creaTreno" type="submit" value="Crea Treno"/></fieldset></form>';
+			$creaPagina='<form action="CreaTreno.php" method="post" class="utenteAction" name="addTrenoform"><fieldset><label class="screenreader" for="creaTreno">bottone per creare un treno</label><input id="creaTreno" class="button" name="creaTreno" type="submit" value="Crea Treno"/></fieldset></form>';
 		}
 	}
 	if($queryRisultati) $trainbox=stampaTrainBox($queryRisultati);

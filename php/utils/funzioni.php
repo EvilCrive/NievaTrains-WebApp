@@ -367,9 +367,9 @@ function functionMenuUser($final){
 	if(isset($_SESSION['id'])){
 		$xd="";
 		$var='
-		<img id="utenteTop" tabindex="0" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()" alt=""/>';
+		<img tabindex="0" id="utenteTop" src="../resources/conductor.png" alt="Area riservata" onclick="openMenuUser()"/>';
 		$id=$_SESSION['id'];
-	}else	$var='<a href="../php/LogIn.php"><img id="utenteTop" tabindex="0" src="../resources/conductor.png" alt="Area riservata"/></a>';
+	}else	$var='<a href="../php/LogIn.php" tabindex="0"><img id="utenteTop" src="../resources/conductor.png" alt="Area riservata"/></a>';
 	$final=str_replace("%%user",$id,$final);
 	$final=str_replace("%%u%%",$xd,$final);
 	return $final=str_replace("##user##",$var,$final);
@@ -436,7 +436,7 @@ function stampaListaCommenti4AP($results){
 	else	$nrisultati=0;
 	$var='<div><ul>';
 	for($i=0; $i<$nrisultati; $i++) {
-		$var.= stampaCommento($results[$i]).'<a href="../PHP/AdminPanel.php?AdminOP=3&commento='.$results[$i]["Id_Commento"].'" class="button" aria-label="Close" aria-hidden="true">X</a>';
+		$var.= stampaCommento($results[$i]).'<li><a href="../PHP/AdminPanel.php?AdminOP=3&commento='.$results[$i]["Id_Commento"].'" class="button" aria-label="Close" aria-hidden="true">X</a></li>';
 	}
 	$var.='</ul></div><a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;

@@ -6,20 +6,20 @@
 				<div id="showDesktopSearch" class="menuOff">
 					<form id="searchHeader" action="../php/Ricerca.php" method="get">
 					<label for="sceltaCatH1" class="screenreader">scelta categoria di ricerca</label>
-							<select tabindex="0" class="sceltaCategorie" name="CategoriaCercata" form="searchHeader">
+							<select tabindex="0" class="sceltaCategorie" name="CategoriaCercata" form="searchHeader" id="sceltaCatH1">
 								<option value="Treni">Treni</option>
 								<option value="Utenti">Utenti</option>
 							</select>
 						<div class="search-box">
 								<label for="searchH1" class="screenreader">barra di ricerca</label>
-								<input tabindex="0" id="search-bar" class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader"/>
+								<input tabindex="0" class="search-txt" type="text" placeholder="Cerca" name="stringaCercata" form="searchHeader" id="searchH1"/>
 								<button class="search-btn" form="searchHeader" aria-label="Ricerca"><img class="search" src="../resources/search.png" alt=""/></button>
 						</div>
 					</form>
 				</div>
 				##user##
 			</div>
-	<nav role="navigation">
+	<nav>
 	<div id="hrow2" class="menuOff">
 			<ul class="stayLeft menuList" role="menubar">
 			<li id="spec">Categorie&colon;</li>

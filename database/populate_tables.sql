@@ -9,7 +9,7 @@ Nel 2009, Eurostar ha annunciato un progetto da £ 700 milioni per aggiornare la
 
 Contenzioso Alstom:
 La nomina di Siemens lo vide entrare nel mercato francese dell''alta velocità, poiché fino a quel momento tutti gli operatori ad alta velocità delle filiali francesi e francesi utilizzavano i derivati ​​TGV prodotti da Alstom. Alstom ha tentato un''azione legale per prevenire il contratto, sostenendo che i set Siemens avrebbero violato le regole di sicurezza del tunnel sotto la Manica, ma questo è stato gettato fuori dal tribunale. Alstom ha affermato che "perseguirà opzioni legali alternative per mantenere la sua posizione" e il 4 novembre 2010 ha presentato una denuncia alla Commissione europea in merito alla procedura di gara, che ha poi chiesto al governo britannico un "chiarimento". Alstom ha quindi annunciato di aver avviato un''azione legale contro Eurostar presso l''Alta Corte di Londra.
-Nel luglio 2011, l''Alta Corte ha respinto l''affermazione di Alstom secondo cui la procedura di gara era "inefficace" e nell''aprile 2012 Alstom ha dichiarato che avrebbe annullato le azioni giudiziarie pendenti contro Eurostar.','Treni/British RailClass374.jpg'),
+Nel luglio 2011, l''Alta Corte ha respinto l''affermazione di Alstom secondo cui la procedura di gara era "inefficace" e nell''aprile 2012 Alstom ha dichiarato che avrebbe annullato le azioni giudiziarie pendenti contro Eurostar.','Treni/BritishRailClass374.jpg'),
 
 
 
@@ -26,7 +26,7 @@ Per affidabilità, le porte dei passeggeri utilizzano un sistema pneumatico scor
 Ci sono 340 posti per treno a 6 posti, in classe standard [2 + 2], con 12 posti aggiuntivi ribaltabili in una zona per sedie a rotelle. Vi sono due bagni per unità, uno dei quali è attrezzato per l''accesso ai disabili.
 
 I treni soddisfano gli standard del gruppo ferroviario del Regno Unito (RGS) e le specifiche tecniche dell''Unione europea per l''interoperabilità (STI) per la resistenza agli urti e gli standard del Regno Unito o dell''UE per il comportamento portante la struttura, la resistenza del materiale, l''aerodinamica, il rumore e la resistenza al fuoco.
-Ogni treno ha un sistema di gestione dei treni (TMS), che comprende sistemi di monitoraggio delle apparecchiature, comunicazioni, aria condizionata, ecc. E controllo delle apparecchiature, incluso il funzionamento selettivo delle porte (SDO). Il sistema SDO utilizza il GPS e l''integrazione della velocità del treno per stimare la posizione.','Treni/British RailClass395.jpg'),
+Ogni treno ha un sistema di gestione dei treni (TMS), che comprende sistemi di monitoraggio delle apparecchiature, comunicazioni, aria condizionata, ecc. E controllo delle apparecchiature, incluso il funzionamento selettivo delle porte (SDO). Il sistema SDO utilizza il GPS e l''integrazione della velocità del treno per stimare la posizione.','Treni/BritishRailClass395.jpg'),
 
 
 
