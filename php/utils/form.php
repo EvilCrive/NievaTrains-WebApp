@@ -23,7 +23,7 @@ try{
         }else{
             //tutto ok; procediamo alla creazione account
             $_POST['bio']="Io sono ".$_POST['nome']." ".$_POST['cognome']." (@".$_POST['username'].") ";
-            insertUtente($_POST['nome'],$_POST['cognome'],$_POST['username'],$email,$_POST['username'],$_POST['bio'],"Utenti/".$target_file, $connessione);
+            insertUtente($_POST['nome'],$_POST['cognome'],$_POST['username'],$email,$_POST['password'],$_POST['bio'],"Utenti/".$target_file, $connessione);
             //admin part
             if(isset($_SESSION['admin'])){
                 $_SESSION=array();

@@ -29,6 +29,7 @@ try{
             $idtreno=$_POST['idtreno'];
             $iduser=$_SESSION['id'];
             removeTreno($iduser,$idtreno,$connessione);
+			header("refresh:0 url=../Utente.php?Id_Utente=$iduser");
         }
         if(isset($_POST['eliminaCommento'])){
             $treno=$_POST['idtreno'];

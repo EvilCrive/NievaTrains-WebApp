@@ -108,13 +108,12 @@ try {
 				}
 			}
 			else if($_GET['AdminOP']==4){
-				//Logout
 				$_SESSION['admin']="";
 				$_SESSION['pin']="";
 				$_SESSION=array();
 				session_destroy();
-				header("refresh:0; url=../../PHP/Index.php");
 				$adminop='';
+				header("refresh:0; url=../php/Index.php");
 			}
 			else{
 				$adminop='<p>Non esiste questa operazione&period; </p><a href="AdminPanel.php" class="button">Torna Indietro</a>';
