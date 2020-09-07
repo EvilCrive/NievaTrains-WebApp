@@ -11,7 +11,7 @@ try {
 	if(!$connessione->openConnection()) throw new Exception("No connection");
 	//query al db
 	
-	$final = file_get_contents("../txt/Login.html");
+	$final = file_get_contents("../txt/LogIn.html");
 	$header=file_get_contents("../txt/Header.html");
 	$footer=file_get_contents("../txt/Footer.html");
 	//sostituzione variabili di sostituzione
