@@ -43,8 +43,8 @@ try{
             $testoCommento=$_POST['testoCommento'];
             $testoCommento=strip_tags($testoCommento);
             $errors="";
-            if (!preg_match('/^[a-z0-9 ]{3,500}$/i',$testoCommento))        $errors.="<li>Commento non valido</li>";
-            else    addCommento($id,$treno,$testoCommento,$connessione);
+            if (!preg_match('/^[A-Za-z0-9 ]{3,500}$/i',$testoCommento))        $errors.="<li>Commento non valido</li>";
+            else addCommento($id,$treno,$testoCommento,$connessione);
             header("refresh:0 url=../Treno.php?Id_Treno=$treno#commentform"); 
         }
         if(isset($_POST['logout']) || isset($_GET['logout'])){
