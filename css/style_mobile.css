@@ -3,12 +3,18 @@
 	padding: 0.6rem;
 	justify-content: normal;
 }
+form#searchPage {
+    padding-top: 6rem;
+}
+.AggiuntaTreno .inputbar{
+	width: 90%;
+}
 #logo {
   width: 70%;
   float: left;
 }
 .leftCol {
-width: 100%
+	width: 100%
 }
 #utenteTop{
   float: right;
@@ -73,10 +79,5 @@ footer{
 h1{
 	padding-top:6.25rem;
 }
-/*qua*/
-#searchBarBox{
-	padding-top:10rem;
-}
-.AggiuntaTreno .inputbar{
-	width: 90%;
-}
+
+
