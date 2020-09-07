@@ -73,12 +73,10 @@ footer{
 h1{
 	padding-top:6.25rem;
 }
-
-@media screen and (max-width: 440px) {
+/*qua*/
 #searchBarBox{
-    padding-top:10rem;
+	padding-top:10rem;
 }
 .AggiuntaTreno .inputbar{
-    width: 90%;
-}
+	width: 90%;
 }
