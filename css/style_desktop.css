@@ -65,6 +65,7 @@ p {
 }
 .button:hover{
   background-color: #294173;
+	color: #fff;
 }
 .button2{
   border: 2px solid #232f46;
@@ -464,7 +465,7 @@ width: 100%;
 
 #searchBarBox {
 	width: 100%;
-	background-color: #294173;
+	background-color: #ADD8E6;
   padding: 1.2rem;
 }
 
