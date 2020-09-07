@@ -150,6 +150,15 @@ function stampaImgT($queryRes) {
 function stampaCategoriaT($query){
 	return $query[0]["Categoria"];
 }
+function stampaCategoriaTLink($query){
+	$categoria=$query[0]["Categoria"];
+	if($categoria=="Elettrico")	return "Electric";
+	else if($categoria=="Locomotiva a vapore")	return "Steam";
+	else if($categoria=="Maglev EMS")	return "Maglev";
+	else if($categoria=="Maglev EDS")	return "Maglev";
+	else if($categoria=="Diesel")	return "Diesel";
+	else	return "404";
+}
 function stampaIdAutoreT($query){
 	return $query[0]["Id_Autore"];
 }

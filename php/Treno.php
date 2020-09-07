@@ -50,7 +50,8 @@ try {
 	$final=str_replace("##NomeT##",stampaNomeT($queryInfoTreno),$final);
 	$final=str_replace("##SchedaT##",stampaSchedaT($queryInfoTreno),$final);
 	$final=str_replace("##DescT##",stampaDescT($queryInfoTreno),$final);
-	$final=str_replace("##CategoriaTLink##",stampaCategoriaT($queryInfoTreno),$final);
+	$final=str_replace("##CategoriaT##",stampaCategoriaT($queryInfoTreno),$final);
+	$final=str_replace("##CategoriaTLink##",stampaCategoriaTLink($queryInfoTreno),$final);
 	$final=str_replace("##NomeA##",stampaUsernameA($queryNomeA),$final);
 	$final=str_replace("##Commenti##",$commenti,$final);
 	$final=str_replace("##NumeroT##",$id,$final);
