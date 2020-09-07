@@ -33,7 +33,7 @@ function boolLiked($iduser,$idtreno,$connessione){
 
 
 function checkUtente($mail,$user, $connessione){
-	return $connessione->getQuery("SELECT Username,Mail from utenti WHERE Mail=$mail OR Username=$user");
+		return $connessione->getQuery("SELECT Username,Mail from utenti WHERE Mail='$mail' OR Username='$user'");
 }
 function insertUtente($nome,$cognome,$username,$email,$password,$bio,$immagine, $connessione){
 	$usertype=0;

@@ -239,7 +239,7 @@ function controlNuploadAddTreno($connessione){
 			$errors.="<li>Formato sbagliato&comma; solo JPG&sol;JPEG&sol;PNG accettati&period;</li>";
 		}
 		if (!$errors) {
-			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../../uploads/Treni".$target_file)){
+			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/Treni/".$target_file)){
 				addTreno("Treni/".$target_file,$connessione);
 
 				header("refresh:0; url=../PHP/Utente.php?Id_Utente=".$_SESSION['id']);
@@ -307,7 +307,7 @@ function controlNmodifyTreno($connessione){
 //CONTROLLI SIGNUP/LOGIN
 
 
-function controlloUploadImmagineUtenti($errors){
+function controlloUploadImmagineUtenti(&$errors){
 	$target_file="";
 	if($_FILES['myfile']['error']!==4){
 		$tipoFile=$_FILES['myfile']['type'];
