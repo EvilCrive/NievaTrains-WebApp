@@ -1,0 +1,44 @@
+A partire dalla struttura in HTML si è cercato di rendere più efficiente la navigazione del sito tramite tab.
+Sono stati inseriti gli attributi "tabindex", per dare un ordine prioritario alle tabulazioni e permettere
+di saltare agevolmente sezioni della pagina tramite ancore.
+
+Tutte le immagini sono state marcate con appositi tag alt.
+
+Inoltre ogni link è reso distinguibile da ogni altro elemento tramite appositi CSS, hover e visited. 
+Al top di ogni pagina è presente una navbar che aiuta il visitatore a navigare nel sito e ad orientarsi in esso,
+evidenziando in ogni momento il nome della pagina in cui ci si trova.
+Un ulteriore aiuto all'utente, viene fornito dal breadcrumb. Esso tiene traccia del percorso
+effettuato tra le pagine del sito, consentendo di tornare facilmente alle pagine visitate pre-cedentemente,
+o comunque fornendo una chiara lettura dello sviluppo del sito.
+
+Nei fogli di stile sono utilizzati unicamente web safe colors mantenendo sempre un alto contrasto tra il
+colore di sfondo ed il colore delle scritte, per non intaccare la leggibilità delle ultime.
+
+Inoltre, per evitare di confondere le persone con problemi visivi, i link vengono sempre rappresentati 
+sottolineati e sempre dello stesso colore, fatta eccezione per le barre di navigazione dove è comunque chiaro
+che le voci che compaiono sono link.
+
+Sono  stati  inseriti  per  ogni  pagina  i  tag  meta:Content-Type,keywords,description,author e language.
+Il tag languages indica che il sito è stato interamente scritto in italiano ma compaiono alcune parole inglesi,
+le quali sono state affiancate dall’attributo: xml:lang=”en”.
+
+Ogni foto di contenuto è stata arricchita di attributi alt e title che descrivono in maniera esaustiva ciò
+che l’immagine ritrae. Per le immagini che sono state ritenute non di contenuto, e che sono così state inserite
+tramite CSS, non è stato previsto l’uso di questi attributi, ritenendo la loro unica funzione quella di 
+abbellimento, non portando informazione utile per la comprensione della pagina.
+Mai sono state utilizzate immagini per riportare il testo, perciò il contenuto informativo rimane accessibile
+anche quando fallisce il caricamento delle immagini o del CSS.
+Ogni campo di un form è stato sempre corredato con una etichetta label e le varie voci sono state sempre raggruppate in fieldset.
+
+Per migliorare l'accessibilità sono state integrate anche le funzionalità di aria-label, aria labelledby,
+aria-current permettendo così una migliore lettura da parte degli screen reader.
+
+Per garantire che il sito sia correttamente visualizzato e che rimanga accessibile sul maggior numero di browser
+possibili si è verificata la validità di tutte le pagine, sia quelle statiche che quelle generate dinamicamente,
+e sono stati effettuati dei test di visualizzazione su molteplici browser.
+
+Per il testing del nostro sito abbiamo utilizzato i validatori online messi a disposizione dal W3C.
+Per la parte di HTML e XML abbiamo utilizzato: https://validator.w3.org/
+Per la parte di CSS abbiamo utilizzato: https://jigsaw.w3.org/css-validator/
+Per il contrasto dei colori abbiamo utilizzato: https://webaim.org/resources/contrastchecker/
+Infine ci siamo serviti di Lighthouse per verificare il corretto funzionamento delle pagine.
