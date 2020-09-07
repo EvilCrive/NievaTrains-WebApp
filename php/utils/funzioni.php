@@ -307,7 +307,7 @@ function controlNmodifyTreno($connessione){
 //CONTROLLI SIGNUP/LOGIN
 
 
-function controlloUploadImmagineUtenti($errors){
+function controlloUploadImmagineUtenti(&$errors){
 	$target_file="";
 	if($_FILES['myfile']['error']!==4){
 		$tipoFile=$_FILES['myfile']['type'];
