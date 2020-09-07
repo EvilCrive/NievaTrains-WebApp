@@ -60,7 +60,7 @@ footer{
 }
 /*header da mostrare*/
 #showDesktopSearch, #hrow2{
-	display: none
+	display: none;
 }
 #hrow3{
 	padding-top:5.19rem;
