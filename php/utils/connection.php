@@ -4,7 +4,12 @@ class DBAccess{
 	const user='root';
 	const pass='';
 	const db_name='trains';
-	
+	/*
+	const HOST_DB='localhost';
+	const user='mbrosolo';
+	const pass='tib3ieShoh8bee8z';
+	const db_name='mbrosolo';
+	*/
 	private $connection=null;
 	
 	public function openConnection() {
