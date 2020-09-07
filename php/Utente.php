@@ -51,7 +51,7 @@ try {
 	echo $final;
 }catch(Exception $eccezione){
 	//gestione eccezioni
-	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0 url=../PHP/Index.php");
+	if($eccezione="No get" || $eccezione="Wrong ID") header("refresh:0 url=../php/Index.php");
 	else echo $eccezione;
 }
 //chiusura connessione

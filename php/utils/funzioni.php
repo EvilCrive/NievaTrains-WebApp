@@ -21,7 +21,7 @@ function stampaTrainBox($queryRes) {
 		$var.='				<li>Marca&colon; '.$queryRes[$i]["Costruttore"].'</li>'."\n";
 		$var.='				<li>Autore&colon; '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Treno.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn"><span xml:lang="en" lang="en">Read more</span></a>'."\n";
+		$var.='			<a href="../php/Treno.php?Id_Treno='.$queryRes[$i]["Id_Treno"].'" class="btn"><span xml:lang="en" lang="en">Read more</span></a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}
@@ -46,7 +46,7 @@ function stampaUtentiBox($queryRes) {
 		$var.='				<li>Marca&colon; '.$queryRes[$i]["Username"].'</li>'."\n";
 		$var.='				<li>Autore&colon; '.$queryRes[$i]["Mail"].'</li>'."\n";
 		$var.='			</ul>'."\n";
-		$var.='			<a href="../PHP/Utente.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn"><span xml:lang="en" lang="en">Read more</span></a>'."\n";
+		$var.='			<a href="../php/Utente.php?Id_Utente='.$queryRes[$i]["Id_Utente"].'" class="btn"><span xml:lang="en" lang="en">Read more</span></a>'."\n";
 		$var.='		</div>'."\n";
 		$var.='	</div>'."\n";
 	}
@@ -242,7 +242,7 @@ function controlNuploadAddTreno($connessione){
 			if (move_uploaded_file($_FILES['myfileupload']['tmp_name'], "../uploads/Treni/".$target_file)){
 				addTreno("Treni/".$target_file,$connessione);
 
-				header("refresh:0; url=../PHP/Utente.php?Id_Utente=".$_SESSION['id']);
+				header("refresh:0; url=../php/Utente.php?Id_Utente=".$_SESSION['id']);
 				//refresh treno add $_SESSION['id']
 			} else {
 				$errors.="<li>Errore di <span xml:lang'en' lang='en'>uploading</span> del <span xml:lang'en' lang='en'>file</span>&period;</li>";
@@ -297,7 +297,7 @@ function controlNmodifyTreno($connessione){
 	if (!preg_match('/.{10,}/i',$_POST['descrizione']))        $errors.="<li>Descrizione non valida</li>";
 	if(!$errori){
 		updateTreno($connessione);
-		header("refresh:0; url=../PHP/Treno.php?Id_Treno=".$_POST['idtreno']);
+		header("refresh:0; url=../php/Treno.php?Id_Treno=".$_POST['idtreno']);
 		//refresh modifica treno $_POST['idtreno']
 	}
 	return $errors;
@@ -403,11 +403,11 @@ function stampaListaUtenti4AP($results,$op){
 	for($i=0; $i<$nrisultati; $i++) {
 		$bool=0;
 		if($results[$i]["Is_User_Type"]==1)	$bool=1;
-		if(($op=="PROMOZIONE") && ($bool==0))	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP=1&operation=1&utente='.$results[$i]["Id_Utente"].'" class="button">+</a></p>';
-		if(($op=="DECLASSAZIONE") && ($bool==1))	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP=1&operation=2&utente='.$results[$i]["Id_Utente"].'" class="button">-</a></p>';
-		if($op=="ELIMINA")		$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../PHP/AdminPanel.php?AdminOP=1&operation=3&utente='.$results[$i]["Id_Utente"].'" class="button">X</a></p>';
+		if(($op=="PROMOZIONE") && ($bool==0))	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../php/AdminPanel.php?AdminOP=1&operation=1&utente='.$results[$i]["Id_Utente"].'" class="button">+</a></p>';
+		if(($op=="DECLASSAZIONE") && ($bool==1))	$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../php/AdminPanel.php?AdminOP=1&operation=2&utente='.$results[$i]["Id_Utente"].'" class="button">-</a></p>';
+		if($op=="ELIMINA")		$var.= '<p class="card-body">'.$results[$i]["Username"].'<a href="../php/AdminPanel.php?AdminOP=1&operation=3&utente='.$results[$i]["Id_Utente"].'" class="button">X</a></p>';
 	}
-	$var.='<a href="../PHP/AdminPanel.php?AdminOP=1" class="button">TORNA INDIETRO</a>';
+	$var.='<a href="../php/AdminPanel.php?AdminOP=1" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function stampaDeleteUtente($id,$connessione){
@@ -430,14 +430,14 @@ function stampaListaTreni4AP($results){
 	else	$nrisultati=0;
 	$var='';
 	for($i=0; $i<$nrisultati; $i++) {
-		$var.= '<p class="card-body">'.$results[$i]["Nome"].'<a href="../PHP/AdminPanel.php?AdminOP=2&treno='.$results[$i]["Id_Treno"].'" class="button" aria-label="Close" aria-hidden="true">X</a></p>';
+		$var.= '<p class="card-body">'.$results[$i]["Nome"].'<a href="../php/AdminPanel.php?AdminOP=2&treno='.$results[$i]["Id_Treno"].'" class="button" aria-label="Close" aria-hidden="true">X</a></p>';
 	}
-	$var.='<a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	$var.='<a href="../php/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function stampaDeleteTreno($id,$connessione){
 	$results=getInfoTreno($id,$connessione);
-	$var="<p>Vuoi eliminare il seguente Treno&colon;</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=2&treno='.$results[0]["Id_Treno"].'&delete" class="button">Conferma</a><a href="../PHP/AdminPanel.php?AdminOP=2" class="button">TORNA INDIETRO</a>';
+	$var="<p>Vuoi eliminare il seguente Treno&colon;</p><ul>".stampaSchedaT($results).'</ul><a href="AdminPanel.php?AdminOP=2&treno='.$results[0]["Id_Treno"].'&delete" class="button">Conferma</a><a href="../php/AdminPanel.php?AdminOP=2" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function stampaListaCommenti4AP($results){
@@ -445,14 +445,14 @@ function stampaListaCommenti4AP($results){
 	else	$nrisultati=0;
 	$var='<div><ul>';
 	for($i=0; $i<$nrisultati; $i++) {
-		$var.= stampaCommento($results[$i]).'<li><a href="../PHP/AdminPanel.php?AdminOP=3&commento='.$results[$i]["Id_Commento"].'" class="button" aria-label="Close" aria-hidden="true">X</a></li>';
+		$var.= stampaCommento($results[$i]).'<li><a href="../php/AdminPanel.php?AdminOP=3&commento='.$results[$i]["Id_Commento"].'" class="button" aria-label="Close" aria-hidden="true">X</a></li>';
 	}
-	$var.='</ul></div><a href="../PHP/AdminPanel.php" class="button">TORNA INDIETRO</a>';
+	$var.='</ul></div><a href="../php/AdminPanel.php" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 function stampaDeleteCommento($id,$connessione){
 	$results=getInfoCommento($id,$connessione);
-	$var="<p>Vuoi eliminare il seguente Commento&colon;</p><ul>".stampaCommento($results[0]).'</ul><a href="AdminPanel.php?AdminOP=3&commento='.$results[0]["Id_Commento"].'&delete" class="button">Conferma</a><a href="../PHP/AdminPanel.php?AdminOP=3" class="button">TORNA INDIETRO</a>';
+	$var="<p>Vuoi eliminare il seguente Commento&colon;</p><ul>".stampaCommento($results[0]).'</ul><a href="AdminPanel.php?AdminOP=3&commento='.$results[0]["Id_Commento"].'&delete" class="button">Conferma</a><a href="../php/AdminPanel.php?AdminOP=3" class="button">TORNA INDIETRO</a>';
 	return $var;
 }
 

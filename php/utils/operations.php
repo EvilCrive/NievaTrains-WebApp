@@ -58,7 +58,7 @@ try{
             $_SESSION['userType'] = "";
             $_SESSION=array();
             session_destroy();
-            header("refresh:0; url=../../PHP/Index.php");
+            header("refresh:0; url=../../php/Index.php");
         }
         //user page
         if(isset($_POST['modificaBio'])){

@@ -27,7 +27,7 @@ try {
 		if($errors)	header("refresh:0 url=CreaTreno.php#errori_newtreno");
 		$final=functionMenuUser($final);
 		echo $final;
-	}else	header("refresh:0 url=../PHP/LogIn.php");	
+	}else	header("refresh:0 url=../php/LogIn.php");	
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	echo $eccezione;

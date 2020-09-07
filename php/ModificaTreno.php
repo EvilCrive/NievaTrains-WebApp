@@ -48,7 +48,7 @@ try {
             if($errors)	header("refresh:0 url=ModificaTreno.php#errori_newtreno");
             $final=functionMenuUser($final);
 		    echo $final;	
-	}else	die();//header("refresh:0 url=../PHP/Index.php");
+	}else	die();//header("refresh:0 url=../php/Index.php");
 }catch(Exception $eccezione){
 	//gestione eccezioni
 	echo $eccezione;
