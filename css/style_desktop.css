@@ -217,7 +217,7 @@ margin: 2px;
 	z-index:3;
   color: #FFF;
   position: fixed;
-  border-left: 4px solid #294173;
+  /*border-left: 4px solid #294173;*/
   background-color:#294173;
   width: 10%;
 	right:0;
@@ -368,7 +368,7 @@ footer a{
   border-radius: 1rem 3.1rem;
 }
 .HomeBox:hover{
-  background-color: #294173;
+  background-color: #ADD8E6;
 }
 
 
@@ -542,6 +542,8 @@ h1#outputRicerca {
 #descrizione {
 	padding-bottom: 0.6rem;
 	border-bottom: 3px solid #294173;
+	width: 80%;
+	margin: auto;
 }
 
 
