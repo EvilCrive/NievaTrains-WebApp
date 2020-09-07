@@ -216,7 +216,7 @@ margin: 2px;
 	z-index:3;
   color: #FFF;
   position: fixed;
-  border-left: 4px solid #ADD8E6;
+  border-left: 4px solid #294173;
   background-color:#294173;
   width: 10%;
 	right:0;
@@ -804,7 +804,7 @@ p {
 	margin: auto;
 }
 .AggiuntaTreno input[type=text]:focus, .AggiuntaTreno input[type=password]:focus, .AggiuntaTreno input[type=email]:focus{
-    border-bottom: 2px solid #ADD8E6;
+    border-bottom: 2px solid #294173;
 }
 .AggiuntaTreno label {
 	text-align: left;
@@ -846,7 +846,7 @@ p {
   margin-bottom: 0.6rem;
 }
 .sceltaAggiunta:focus, .sceltaDesc:focus {
-	border-bottom: 2px solid #ADD8E6;
+	border-bottom: 2px solid #294173;
 }
 input[type=file]{
 	padding: 0.6rem;
